@@ -1,0 +1,501 @@
+customer_id,monthly_income_naira,account_type,tenure_years,region
+C0001,138500,Savings,12.1,Abuja
+C0002,284500,Current,3.1,Ibadan
+C0003,35000,Domiciliary,4.3,Enugu
+C0004,20500,Savings,7.3,Ibadan
+C0005,3500,Savings,2.0,Abuja
+C0006,463000,Savings,0.5,Lagos
+C0007,95000,Savings,0.6,Ibadan
+C0008,130000,Savings,15.7,Lagos
+C0009,25000,Savings,25.0,Lagos
+C0010,707000,Domiciliary,3.9,Lagos
+C0011,441500,Current,12.2,Port Harcourt
+C0012,75500,Domiciliary,6.7,Port Harcourt
+C0013,36500,Savings,1.8,Abuja
+C0014,51000,Savings,1.8,Lagos
+C0015,24500,Savings,6.0,Port Harcourt
+C0016,96500,Current,2.1,Lagos
+C0017,33000,Savings,7.5,Abuja
+C0018,244000,Savings,0.3,Ibadan
+C0019,51000,Savings,2.5,Lagos
+C0020,51500,Savings,1.9,Abuja
+C0021,1184000,Savings,6.8,Abuja
+C0022,27500,Savings,1.2,Kano
+C0023,7000,Savings,2.0,Lagos
+C0024,169500,Savings,9.4,Lagos
+C0025,3000,Savings,4.8,Lagos
+C0026,143000,Savings,3.7,Port Harcourt
+C0027,471000,Savings,6.7,Enugu
+C0028,103500,Savings,5.0,Lagos
+C0029,93500,Savings,5.0,Abuja
+C0030,3000,Savings,1.6,Abuja
+C0031,232000,Savings,5.8,Abuja
+C0032,178000,Savings,13.4,Lagos
+C0033,13000,Savings,2.9,Lagos
+C0034,2209500,Savings,4.7,Lagos
+C0035,12000,Current,5.7,Lagos
+C0036,5500,Current,1.6,Lagos
+C0037,4500,Savings,0.3,Abuja
+C0038,96500,Savings,7.2,Lagos
+C0039,161500,Current,0.9,Lagos
+C0040,192000,Savings,2.5,Lagos
+C0041,52500,Savings,1.4,Lagos
+C0042,24000,Savings,2.1,Lagos
+C0043,374000,Savings,7.4,Lagos
+C0044,21000,Savings,4.2,Lagos
+C0045,12500,Savings,1.3,Abuja
+C0046,945000,Savings,4.1,Port Harcourt
+C0047,124000,Current,1.6,Enugu
+C0048,202000,Current,7.6,Abuja
+C0049,261000,Domiciliary,3.8,Port Harcourt
+C0050,35500,Savings,9.4,Lagos
+C0051,38000,Current,7.0,Ibadan
+C0052,267000,Savings,5.2,Lagos
+C0053,33000,Savings,4.6,Kano
+C0054,161000,Savings,7.9,Lagos
+C0055,79500,Savings,0.6,Lagos
+C0056,12500,Savings,0.9,Abuja
+C0057,459000,Current,3.5,Lagos
+C0058,11000,Savings,0.8,Kano
+C0059,136000,Savings,2.7,Ibadan
+C0060,103000,Savings,0.9,Lagos
+C0061,755500,Savings,1.5,Abuja
+C0062,14500,Savings,0.3,Kano
+C0063,37500,Current,24.4,Enugu
+C0064,78000,Savings,2.6,Enugu
+C0065,124500,Savings,6.7,Abuja
+C0066,390000,Savings,0.4,Lagos
+C0067,154500,Current,6.0,Abuja
+C0068,96000,Savings,5.4,Lagos
+C0069,508500,Domiciliary,2.2,Abuja
+C0070,2993500,Domiciliary,5.5,Ibadan
+C0071,9500,Current,4.4,Ibadan
+C0072,91500,Savings,1.7,Lagos
+C0073,325500,Savings,1.0,Port Harcourt
+C0074,106500,Current,0.8,Lagos
+C0075,998500,Current,2.4,Kano
+C0076,53000,Savings,4.2,Enugu
+C0077,17000,Savings,8.1,Lagos
+C0078,391500,Savings,6.8,Ibadan
+C0079,1000,Savings,1.8,Ibadan
+C0080,42000,Current,4.5,Lagos
+C0081,4686500,Domiciliary,11.6,Port Harcourt
+C0082,96500,Savings,3.8,Lagos
+C0083,167000,Savings,10.7,Lagos
+C0084,19000,Savings,0.7,Enugu
+C0085,89000,Savings,4.2,Kano
+C0086,73000,Savings,5.5,Kano
+C0087,2017500,Current,0.3,Ibadan
+C0088,17500,Savings,14.1,Abuja
+C0089,1000,Savings,6.8,Ibadan
+C0090,181000,Savings,18.6,Abuja
+C0091,1209500,Current,13.5,Port Harcourt
+C0092,29500,Current,1.1,Enugu
+C0093,4500,Savings,4.7,Abuja
+C0094,15500,Savings,2.3,Port Harcourt
+C0095,189500,Savings,5.8,Ibadan
+C0096,36500,Savings,6.6,Lagos
+C0097,99000,Savings,1.9,Ibadan
+C0098,2000,Savings,2.3,Ibadan
+C0099,39000,Savings,2.6,Ibadan
+C0100,341500,Current,1.8,Lagos
+C0101,59500,Savings,0.4,Lagos
+C0102,17000,Savings,1.7,Ibadan
+C0103,529000,Current,5.8,Ibadan
+C0104,475000,Savings,2.8,Lagos
+C0105,42500,Savings,5.0,Abuja
+C0106,27000,Savings,21.4,Lagos
+C0107,770000,Current,0.9,Abuja
+C0108,37000,Savings,2.4,Port Harcourt
+C0109,70500,Savings,11.5,Abuja
+C0110,1834000,Domiciliary,16.1,Lagos
+C0111,126000,Savings,3.2,Lagos
+C0112,40500,Current,5.0,Lagos
+C0113,3500,Savings,0.9,Lagos
+C0114,98000,Savings,22.4,Abuja
+C0115,80000,Current,3.9,Port Harcourt
+C0116,33000,Savings,0.6,Kano
+C0117,429000,Domiciliary,14.7,Abuja
+C0118,11000,Savings,4.3,Lagos
+C0119,6500,Current,11.2,Kano
+C0120,25000,Savings,3.8,Lagos
+C0121,84500,Domiciliary,0.6,Enugu
+C0122,7500,Current,4.7,Port Harcourt
+C0123,12500,Savings,3.4,Lagos
+C0124,21500,Savings,11.1,Lagos
+C0125,79500,Savings,9.5,Port Harcourt
+C0126,25500,Savings,4.2,Lagos
+C0127,415500,Savings,4.7,Ibadan
+C0128,2000,Savings,3.0,Abuja
+C0129,157000,Savings,3.0,Lagos
+C0130,29500,Savings,3.9,Abuja
+C0131,171500,Savings,3.7,Lagos
+C0132,2103500,Domiciliary,6.6,Lagos
+C0133,70500,Current,0.5,Enugu
+C0134,109500,Current,9.8,Lagos
+C0135,316000,Savings,13.1,Lagos
+C0136,8500,Savings,0.4,Lagos
+C0137,237000,Current,1.4,Enugu
+C0138,306000,Current,8.8,Abuja
+C0139,63000,Savings,5.8,Abuja
+C0140,234500,Current,2.1,Port Harcourt
+C0141,98000,Savings,1.9,Enugu
+C0142,22500,Savings,2.5,Abuja
+C0143,9000,Savings,4.0,Port Harcourt
+C0144,404500,Current,5.9,Enugu
+C0145,1524500,Savings,2.9,Ibadan
+C0146,21500,Savings,1.8,Enugu
+C0147,146500,Current,5.8,Lagos
+C0148,10500,Savings,8.0,Abuja
+C0149,36500,Current,1.2,Lagos
+C0150,35000,Savings,1.9,Ibadan
+C0151,12000,Savings,7.1,Abuja
+C0152,70500,Savings,0.3,Lagos
+C0153,415500,Savings,0.8,Enugu
+C0154,203000,Savings,8.9,Abuja
+C0155,34000,Savings,2.0,Port Harcourt
+C0156,853000,Domiciliary,4.8,Enugu
+C0157,116000,Savings,8.7,Abuja
+C0158,1607500,Domiciliary,4.2,Kano
+C0159,9500,Savings,7.3,Kano
+C0160,12141500,Domiciliary,2.9,Abuja
+C0161,60500,Savings,4.4,Abuja
+C0162,11500,Savings,1.3,Lagos
+C0163,14000,Current,2.7,Lagos
+C0164,383000,Savings,12.0,Ibadan
+C0165,366500,Current,15.0,Kano
+C0166,314500,Savings,1.7,Ibadan
+C0167,224500,Savings,5.2,Enugu
+C0168,12500,Savings,9.2,Port Harcourt
+C0169,64500,Savings,1.3,Port Harcourt
+C0170,2000,Current,8.0,Ibadan
+C0171,19000,Savings,1.2,Abuja
+C0172,250000,Savings,1.5,Lagos
+C0173,3500,Savings,2.5,Kano
+C0174,4257000,Savings,1.2,Port Harcourt
+C0175,678000,Domiciliary,4.7,Abuja
+C0176,12500,Savings,3.7,Port Harcourt
+C0177,277500,Domiciliary,0.3,Lagos
+C0178,210000,Savings,16.9,Lagos
+C0179,66500,Savings,0.4,Lagos
+C0180,223000,Domiciliary,1.0,Abuja
+C0181,54000,Savings,3.5,Ibadan
+C0182,81500,Savings,1.7,Lagos
+C0183,210000,Current,7.4,Port Harcourt
+C0184,188500,Savings,4.9,Lagos
+C0185,149500,Savings,2.7,Enugu
+C0186,155000,Savings,0.4,Lagos
+C0187,438000,Savings,3.8,Abuja
+C0188,327500,Savings,7.9,Lagos
+C0189,12500,Savings,12.1,Lagos
+C0190,25500,Savings,0.4,Abuja
+C0191,1021000,Current,3.8,Port Harcourt
+C0192,1211500,Savings,0.9,Lagos
+C0193,229000,Current,12.5,Port Harcourt
+C0194,58000,Savings,9.8,Lagos
+C0195,357000,Savings,3.4,Enugu
+C0196,284000,Current,6.4,Abuja
+C0197,7000,Savings,3.6,Lagos
+C0198,103000,Savings,3.7,Lagos
+C0199,9000,Savings,10.5,Enugu
+C0200,43000,Savings,5.7,Abuja
+C0201,97000,Savings,0.2,Port Harcourt
+C0202,1604500,Savings,4.1,Lagos
+C0203,2500,Savings,3.6,Lagos
+C0204,51000,Savings,2.4,Lagos
+C0205,286500,Savings,1.0,Lagos
+C0206,279500,Domiciliary,7.6,Lagos
+C0207,379000,Savings,3.1,Abuja
+C0208,17500,Current,4.4,Abuja
+C0209,74500,Domiciliary,13.6,Abuja
+C0210,43000,Savings,13.4,Abuja
+C0211,812000,Domiciliary,1.6,Lagos
+C0212,73500,Savings,3.4,Ibadan
+C0213,95000,Savings,1.8,Ibadan
+C0214,126500,Savings,0.4,Lagos
+C0215,10500,Savings,7.8,Lagos
+C0216,218000,Current,5.4,Abuja
+C0217,14500,Savings,5.4,Port Harcourt
+C0218,125000,Savings,0.4,Kano
+C0219,27500,Savings,1.7,Abuja
+C0220,674500,Savings,3.8,Abuja
+C0221,98500,Savings,0.8,Port Harcourt
+C0222,2276000,Current,3.0,Lagos
+C0223,2500,Current,3.7,Lagos
+C0224,900500,Current,2.1,Kano
+C0225,384500,Current,2.3,Ibadan
+C0226,150000,Current,1.3,Lagos
+C0227,3600000,Domiciliary,0.5,Enugu
+C0228,8500,Current,3.0,Enugu
+C0229,131500,Savings,13.4,Kano
+C0230,731500,Domiciliary,1.5,Ibadan
+C0231,253000,Savings,2.1,Port Harcourt
+C0232,49000,Savings,4.9,Abuja
+C0233,270500,Current,0.3,Abuja
+C0234,46500,Current,2.0,Enugu
+C0235,52500,Savings,3.9,Abuja
+C0236,30500,Savings,1.5,Abuja
+C0237,531000,Current,4.5,Lagos
+C0238,155000,Savings,7.0,Lagos
+C0239,6015000,Current,0.7,Kano
+C0240,376500,Savings,6.5,Abuja
+C0241,8000,Savings,8.0,Port Harcourt
+C0242,349500,Current,0.5,Lagos
+C0243,15000,Savings,1.6,Port Harcourt
+C0244,58500,Savings,1.8,Port Harcourt
+C0245,116500,Savings,7.3,Lagos
+C0246,15000,Savings,25.0,Abuja
+C0247,40000,Savings,0.5,Abuja
+C0248,30000,Current,1.8,Lagos
+C0249,116500,Savings,7.5,Port Harcourt
+C0250,81500,Savings,1.6,Port Harcourt
+C0251,77500,Savings,3.8,Ibadan
+C0252,1567500,Domiciliary,0.3,Lagos
+C0253,227000,Current,0.8,Kano
+C0254,189500,Savings,1.5,Port Harcourt
+C0255,570500,Domiciliary,11.8,Kano
+C0256,2030500,Current,1.4,Lagos
+C0257,940000,Savings,0.7,Lagos
+C0258,16000,Current,6.7,Abuja
+C0259,221500,Current,5.6,Lagos
+C0260,333500,Savings,3.0,Ibadan
+C0261,457000,Current,2.6,Lagos
+C0262,73000,Savings,2.8,Kano
+C0263,104000,Savings,0.9,Lagos
+C0264,21000,Savings,10.5,Ibadan
+C0265,50000,Savings,10.6,Lagos
+C0266,13500,Savings,1.7,Port Harcourt
+C0267,765000,Current,4.3,Lagos
+C0268,39000,Savings,23.7,Lagos
+C0269,19500,Savings,0.9,Lagos
+C0270,150500,Savings,3.2,Kano
+C0271,110000,Savings,2.4,Port Harcourt
+C0272,29500,Savings,6.3,Lagos
+C0273,172500,Savings,12.2,Abuja
+C0274,32500,Savings,0.9,Abuja
+C0275,215000,Domiciliary,0.2,Lagos
+C0276,88000,Savings,7.3,Lagos
+C0277,132500,Savings,6.6,Lagos
+C0278,49000,Savings,10.3,Lagos
+C0279,30500,Savings,0.4,Lagos
+C0280,141000,Savings,9.1,Port Harcourt
+C0281,7000,Savings,21.6,Lagos
+C0282,919000,Domiciliary,1.1,Lagos
+C0283,43500,Current,7.3,Kano
+C0284,2899000,Current,1.4,Lagos
+C0285,281500,Savings,0.4,Port Harcourt
+C0286,79000,Savings,0.7,Ibadan
+C0287,34000,Savings,0.4,Port Harcourt
+C0288,218500,Savings,0.6,Lagos
+C0289,199000,Current,2.1,Port Harcourt
+C0290,189000,Savings,0.8,Abuja
+C0291,372000,Current,6.3,Enugu
+C0292,113000,Current,1.6,Lagos
+C0293,617500,Current,5.6,Abuja
+C0294,26000,Savings,4.9,Enugu
+C0295,66000,Savings,4.1,Abuja
+C0296,258000,Savings,0.2,Enugu
+C0297,25500,Savings,2.8,Port Harcourt
+C0298,99000,Current,3.5,Lagos
+C0299,1179500,Domiciliary,9.3,Enugu
+C0300,110000,Savings,8.0,Abuja
+C0301,42500,Current,8.9,Lagos
+C0302,601500,Domiciliary,2.9,Kano
+C0303,14000,Current,0.4,Lagos
+C0304,53000,Current,2.3,Port Harcourt
+C0305,541500,Current,12.7,Abuja
+C0306,25500,Savings,0.9,Port Harcourt
+C0307,141500,Savings,19.5,Ibadan
+C0308,82000,Savings,1.8,Enugu
+C0309,1244500,Domiciliary,5.4,Port Harcourt
+C0310,8500,Savings,12.3,Enugu
+C0311,37500,Savings,3.0,Lagos
+C0312,54000,Current,6.7,Ibadan
+C0313,171500,Savings,4.5,Enugu
+C0314,230500,Savings,6.1,Lagos
+C0315,186500,Savings,2.0,Abuja
+C0316,973000,Savings,5.9,Lagos
+C0317,281500,Savings,1.9,Lagos
+C0318,11000,Savings,0.7,Lagos
+C0319,8500,Savings,0.9,Ibadan
+C0320,38000,Savings,10.0,Ibadan
+C0321,38500,Savings,6.8,Lagos
+C0322,44500,Current,1.0,Kano
+C0323,526000,Domiciliary,4.6,Enugu
+C0324,32500,Savings,3.6,Enugu
+C0325,581500,Savings,3.2,Port Harcourt
+C0326,621000,Current,6.2,Kano
+C0327,97000,Savings,4.7,Abuja
+C0328,39000,Savings,0.5,Ibadan
+C0329,783000,Savings,0.4,Lagos
+C0330,22500,Savings,9.8,Enugu
+C0331,204500,Savings,4.1,Lagos
+C0332,145000,Savings,1.3,Ibadan
+C0333,795000,Domiciliary,0.8,Lagos
+C0334,167500,Domiciliary,0.5,Port Harcourt
+C0335,95500,Savings,7.5,Lagos
+C0336,532000,Current,7.9,Abuja
+C0337,49000,Savings,15.0,Lagos
+C0338,234500,Savings,5.1,Abuja
+C0339,115000,Savings,7.5,Lagos
+C0340,98000,Savings,7.2,Lagos
+C0341,8000,Current,1.8,Lagos
+C0342,91500,Savings,8.3,Ibadan
+C0343,17000,Savings,0.6,Port Harcourt
+C0344,222500,Savings,7.1,Ibadan
+C0345,4715000,Current,1.4,Port Harcourt
+C0346,63500,Savings,4.7,Lagos
+C0347,422500,Savings,9.8,Enugu
+C0348,492500,Savings,1.1,Port Harcourt
+C0349,13500,Savings,8.4,Ibadan
+C0350,299000,Savings,2.3,Abuja
+C0351,54500,Savings,19.2,Lagos
+C0352,44500,Savings,3.4,Ibadan
+C0353,360000,Savings,2.4,Lagos
+C0354,36500,Savings,0.9,Port Harcourt
+C0355,39500,Savings,16.7,Abuja
+C0356,324500,Savings,2.0,Abuja
+C0357,785000,Savings,0.5,Abuja
+C0358,103000,Savings,1.9,Lagos
+C0359,279500,Savings,1.1,Ibadan
+C0360,9000,Savings,1.8,Lagos
+C0361,78000,Savings,6.9,Port Harcourt
+C0362,194000,Savings,0.5,Ibadan
+C0363,23000,Current,1.7,Port Harcourt
+C0364,269000,Current,5.6,Port Harcourt
+C0365,147500,Current,15.0,Enugu
+C0366,148500,Savings,3.0,Ibadan
+C0367,660000,Current,2.9,Lagos
+C0368,754000,Current,9.5,Abuja
+C0369,12500,Current,10.0,Lagos
+C0370,31000,Current,1.1,Lagos
+C0371,225500,Savings,0.7,Abuja
+C0372,56000,Savings,2.0,Ibadan
+C0373,2511000,Current,5.3,Port Harcourt
+C0374,578500,Savings,4.0,Abuja
+C0375,23500,Savings,1.3,Ibadan
+C0376,26500,Current,1.9,Lagos
+C0377,11500,Savings,3.0,Lagos
+C0378,171000,Savings,1.0,Lagos
+C0379,34000,Savings,2.0,Ibadan
+C0380,30000,Savings,1.1,Enugu
+C0381,11500,Savings,5.7,Lagos
+C0382,404000,Current,1.7,Port Harcourt
+C0383,26500,Savings,1.8,Lagos
+C0384,20500,Savings,6.7,Lagos
+C0385,4000,Savings,4.0,Lagos
+C0386,180500,Current,10.6,Abuja
+C0387,135500,Current,8.4,Lagos
+C0388,310500,Savings,10.6,Ibadan
+C0389,1000000,Savings,2.4,Lagos
+C0390,130000,Current,1.3,Ibadan
+C0391,52000,Savings,3.5,Enugu
+C0392,6500,Current,1.3,Abuja
+C0393,110500,Current,6.2,Ibadan
+C0394,165500,Savings,8.9,Lagos
+C0395,141500,Current,1.3,Abuja
+C0396,3500,Savings,25.0,Lagos
+C0397,717500,Current,4.0,Lagos
+C0398,259000,Savings,0.6,Ibadan
+C0399,48500,Savings,0.4,Lagos
+C0400,57500,Current,0.7,Abuja
+C0401,4000,Savings,1.1,Enugu
+C0402,158000,Current,5.5,Enugu
+C0403,52000,Savings,2.2,Lagos
+C0404,14000,Savings,1.2,Kano
+C0405,2445500,Savings,4.8,Ibadan
+C0406,1199000,Savings,2.1,Lagos
+C0407,307000,Current,2.7,Ibadan
+C0408,89000,Savings,0.9,Lagos
+C0409,12000,Savings,4.1,Port Harcourt
+C0410,89500,Savings,8.8,Lagos
+C0411,201500,Savings,8.5,Port Harcourt
+C0412,77000,Savings,0.6,Lagos
+C0413,87000,Savings,0.7,Abuja
+C0414,126000,Savings,1.6,Enugu
+C0415,14000,Savings,8.9,Lagos
+C0416,360500,Savings,2.1,Port Harcourt
+C0417,491000,Current,0.3,Abuja
+C0418,45000,Savings,1.5,Abuja
+C0419,29000,Savings,7.6,Port Harcourt
+C0420,3119000,Current,16.3,Ibadan
+C0421,613500,Current,1.3,Port Harcourt
+C0422,2000,Savings,3.0,Abuja
+C0423,78000,Savings,0.6,Lagos
+C0424,17000,Savings,1.4,Abuja
+C0425,20500,Current,3.5,Lagos
+C0426,29500,Savings,10.6,Lagos
+C0427,99000,Savings,2.4,Lagos
+C0428,74000,Current,11.9,Kano
+C0429,11000,Savings,1.4,Abuja
+C0430,15000,Savings,3.4,Lagos
+C0431,3000,Savings,0.9,Lagos
+C0432,79500,Savings,5.2,Abuja
+C0433,144000,Savings,9.9,Lagos
+C0434,385500,Current,2.0,Ibadan
+C0435,470500,Savings,4.4,Ibadan
+C0436,108500,Savings,6.6,Lagos
+C0437,47000,Savings,5.8,Lagos
+C0438,3221500,Current,1.4,Kano
+C0439,20000,Savings,1.2,Port Harcourt
+C0440,9500,Savings,5.3,Port Harcourt
+C0441,43000,Current,1.0,Lagos
+C0442,127500,Savings,7.0,Lagos
+C0443,867500,Current,2.1,Port Harcourt
+C0444,42000,Current,2.9,Kano
+C0445,6500,Current,9.2,Port Harcourt
+C0446,311500,Savings,0.7,Lagos
+C0447,43500,Savings,4.2,Lagos
+C0448,15500,Savings,2.7,Lagos
+C0449,20500,Savings,0.4,Lagos
+C0450,114500,Current,1.0,Ibadan
+C0451,5000,Savings,1.5,Lagos
+C0452,1067000,Savings,13.4,Ibadan
+C0453,69500,Savings,7.4,Ibadan
+C0454,99500,Current,3.9,Lagos
+C0455,524000,Domiciliary,0.6,Abuja
+C0456,26500,Savings,4.5,Kano
+C0457,101500,Savings,5.8,Abuja
+C0458,79500,Savings,1.3,Lagos
+C0459,203500,Savings,4.7,Lagos
+C0460,5319000,Current,0.4,Enugu
+C0461,15000,Savings,0.9,Port Harcourt
+C0462,82000,Savings,0.5,Enugu
+C0463,3077500,Current,16.6,Ibadan
+C0464,20500,Savings,4.2,Abuja
+C0465,1340000,Savings,13.1,Ibadan
+C0466,105000,Savings,1.2,Port Harcourt
+C0467,508500,Current,6.3,Ibadan
+C0468,233500,Current,0.9,Kano
+C0469,156000,Current,2.4,Kano
+C0470,21000,Savings,1.5,Lagos
+C0471,72000,Savings,4.0,Lagos
+C0472,287000,Current,8.1,Lagos
+C0473,48500,Savings,4.1,Lagos
+C0474,15000,Savings,10.7,Kano
+C0475,18000,Savings,9.6,Lagos
+C0476,964000,Current,1.5,Port Harcourt
+C0477,1304500,Current,4.1,Enugu
+C0478,28000,Current,3.5,Port Harcourt
+C0479,89000,Savings,2.7,Lagos
+C0480,724500,Current,0.6,Port Harcourt
+C0481,150000,Savings,2.5,Kano
+C0482,103000,Savings,1.0,Lagos
+C0483,257000,Savings,0.7,Abuja
+C0484,14500,Savings,2.6,Lagos
+C0485,29500,Savings,8.3,Lagos
+C0486,328500,Domiciliary,1.2,Lagos
+C0487,129000,Savings,1.6,Kano
+C0488,199000,Current,1.2,Lagos
+C0489,107500,Savings,10.4,Lagos
+C0490,11000,Current,4.9,Lagos
+C0491,186500,Savings,3.1,Abuja
+C0492,797000,Savings,2.3,Lagos
+C0493,217500,Savings,1.5,Abuja
+C0494,311500,Savings,7.8,Lagos
+C0495,19500,Savings,3.3,Enugu
+C0496,61000,Savings,1.7,Port Harcourt
+C0497,43500,Savings,3.6,Abuja
+C0498,40000,Savings,1.0,Port Harcourt
+C0499,33000,Current,3.8,Lagos
+C0500,247000,Current,1.6,Port Harcourt

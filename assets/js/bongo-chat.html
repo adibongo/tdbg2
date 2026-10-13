@@ -1,0 +1,543 @@
+<!-- ==========================================================================
+     bongo.ai — the assistant that sits on every page of the site.
+
+     Two files make this work and they are deliberately separated:
+
+       this one   the widget. Static HTML/CSS/JS, no dependencies, no key.
+       chat-api/  a Cloudflare Worker that holds the API key and talks to
+                  Anthropic on the browser's behalf.
+
+     WHY THEY ARE SEPARATE
+
+     This site is static HTML hosted on GitHub Pages, so everything in this
+     file is delivered to the visitor's browser exactly as written. Anyone can
+     read it through View Source. That makes it the wrong place for an API key:
+     keys published this way are found by automated scanners within days and
+     spent by strangers, and no amount of encoding or obfuscation prevents it,
+     because the browser has to be able to undo whatever you did.
+
+     So the key lives on a small server instead, and this file simply asks that
+     server questions. The Worker in chat-api/ is that server.
+
+     GETTING IT RUNNING
+
+     Set ENDPOINT below to your deployed Worker's URL. Until you do, the widget
+     opens into a friendly panel explaining that it has not been configured
+     yet, rather than showing errors. That matters because this repository is
+     public, and many people who clone it will want to read the course without
+     ever setting up a backend of their own.
+     ========================================================================== -->
+<script>
+window.BONGO_CHAT_CONFIG = {
+  // The deployed Worker URL. Empty string = not configured; the widget says so.
+  //   e.g. "https://tdbg-chat.your-subdomain.workers.dev/chat"
+  ENDPOINT: "https://tdbg-chat.badi-933.workers.dev/chat",
+
+  // Cohort gate. The passphrase itself is NOT here — it is a secret on the
+  // Worker. This only decides whether to ask for one.
+  REQUIRE_PASSPHRASE: true,
+
+  // What the panel says before anyone types.
+  GREETING: "I can help with the statistics, the code, and the business " +
+            "judgement around both — including anything on this page. " +
+            "What are you working on?"
+};
+</script>
+
+<style>
+  :root {
+    --bongo-navy: #141B4D;
+    --bongo-navy-lit: #173E63;
+    --bongo-gold: #D99A2B;
+    --bongo-cream: #FBF7EC;
+    --bongo-teal: #3E8C93;
+    --bongo-ink: #14202E;
+    --bongo-slate: #5C6B7A;
+    --bongo-line: #E1E7EE;
+  }
+
+  /* ---------------------------------------------------------- the button -- */
+  .bongo-fab {
+    position: fixed; right: 20px; bottom: 20px; z-index: 2000;
+    width: 60px; height: 60px; padding: 0;
+    border: none; border-radius: 50%; cursor: pointer;
+    background: var(--bongo-navy);
+    box-shadow: 0 6px 22px rgba(20, 27, 77, .30), 0 2px 6px rgba(20, 27, 77, .22);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform .16s ease, box-shadow .16s ease;
+  }
+  .bongo-fab:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(20,27,77,.34); }
+  .bongo-fab:focus-visible { outline: 3px solid var(--bongo-gold); outline-offset: 3px; }
+  .bongo-fab img { width: 40px; height: 40px; display: block; }
+  .bongo-fab .x { display: none; color: #fff; font-size: 26px; line-height: 1; }
+  .bongo-fab[aria-expanded="true"] .x { display: block; }
+  .bongo-fab[aria-expanded="true"] img { display: none; }
+
+  /* A one-time nudge so people notice it exists. Shown once per browser. */
+  .bongo-nudge {
+    position: fixed; right: 90px; bottom: 34px; z-index: 2000;
+    background: var(--bongo-navy); color: #fff; border-radius: 8px;
+    padding: .5rem .75rem; font: 500 .82rem/1.35 "Lato", system-ui, sans-serif;
+    max-width: 210px; box-shadow: 0 6px 18px rgba(20,27,77,.28);
+  }
+  .bongo-nudge::after {
+    content: ""; position: absolute; right: -6px; bottom: 16px;
+    border: 6px solid transparent; border-left-color: var(--bongo-navy);
+    border-right: 0;
+  }
+  .bongo-nudge button {
+    background: none; border: 0; color: #9FC6EA; cursor: pointer;
+    font: 500 .76rem/1 "Lato", system-ui, sans-serif; padding: .3rem 0 0; display: block;
+  }
+
+  /* ----------------------------------------------------------- the panel -- */
+  .bongo-panel {
+    position: fixed; right: 20px; bottom: 92px; z-index: 2001;
+    width: min(420px, calc(100vw - 40px));
+    height: min(620px, calc(100vh - 130px));
+    background: #fff; border: 1px solid var(--bongo-line);
+    border-radius: 14px; overflow: hidden;
+    box-shadow: 0 18px 50px rgba(20, 27, 77, .26);
+    display: none; flex-direction: column;
+  }
+  .bongo-panel[data-open="true"] { display: flex; }
+
+  .bongo-head {
+    background: var(--bongo-navy); color: #fff;
+    padding: .8rem 1rem; display: flex; align-items: center; gap: .6rem;
+    border-bottom: 3px solid var(--bongo-gold);
+  }
+  .bongo-head img { width: 30px; height: 30px; }
+  .bongo-head .t { font: 600 .95rem/1.2 "Lato", system-ui, sans-serif; }
+  .bongo-head .s { font: 400 .74rem/1.3 "Lato", system-ui, sans-serif; color: #A9C4E2; }
+
+  .bongo-log {
+    flex: 1; overflow-y: auto; padding: 1rem;
+    background: var(--bongo-cream);
+    font: 400 .88rem/1.55 "Lato", system-ui, sans-serif; color: var(--bongo-ink);
+  }
+  .bongo-msg { margin: 0 0 .9rem; display: flex; }
+  .bongo-msg .b {
+    padding: .6rem .8rem; border-radius: 11px; max-width: 88%;
+    overflow-wrap: anywhere;
+  }
+  .bongo-msg.me { justify-content: flex-end; }
+  .bongo-msg.me .b { background: var(--bongo-navy); color: #fff; border-bottom-right-radius: 3px; }
+  .bongo-msg.ai .b { background: #fff; border: 1px solid var(--bongo-line); border-bottom-left-radius: 3px; }
+  .bongo-msg.sys .b { background: #FBE9E5; border: 1px solid #E0A79B; color: #7A2E1E; font-size: .84rem; }
+  .bongo-msg .b > *:first-child { margin-top: 0; }
+  .bongo-msg .b > *:last-child { margin-bottom: 0; }
+  .bongo-msg .b p { margin: 0 0 .55rem; }
+  .bongo-msg .b ul, .bongo-msg .b ol { margin: 0 0 .55rem; padding-left: 1.15rem; }
+  .bongo-msg .b code {
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .84em;
+    background: #EEF1F7; padding: .1em .32em; border-radius: 4px;
+  }
+  .bongo-msg.me .b code { background: rgba(255,255,255,.18); }
+  .bongo-msg .b pre {
+    background: #10233B; color: #E8EEF6; padding: .65rem .75rem;
+    border-radius: 8px; overflow-x: auto; margin: 0 0 .55rem;
+  }
+  .bongo-msg .b pre code { background: none; padding: 0; font-size: .82em; color: inherit; }
+  .bongo-msg .b a { color: #0B5E82; }
+  .bongo-msg.me .b a { color: #BEE0FF; }
+
+  .bongo-dots span {
+    display: inline-block; width: 6px; height: 6px; margin-right: 3px;
+    border-radius: 50%; background: var(--bongo-slate);
+    animation: bongo-blink 1.3s infinite both;
+  }
+  .bongo-dots span:nth-child(2) { animation-delay: .18s; }
+  .bongo-dots span:nth-child(3) { animation-delay: .36s; }
+  @keyframes bongo-blink { 0%, 80%, 100% { opacity: .25 } 40% { opacity: 1 } }
+
+  .bongo-foot { border-top: 1px solid var(--bongo-line); padding: .65rem; background: #fff; }
+  .bongo-row { display: flex; gap: .5rem; align-items: flex-end; }
+  .bongo-foot textarea {
+    flex: 1; resize: none; border: 1px solid var(--bongo-line); border-radius: 9px;
+    padding: .55rem .7rem; font: 400 .88rem/1.4 "Lato", system-ui, sans-serif;
+    max-height: 140px; color: var(--bongo-ink); background: #fff;
+  }
+  .bongo-foot textarea:focus-visible { outline: 2px solid var(--bongo-gold); outline-offset: 0; border-color: var(--bongo-gold); }
+  .bongo-send {
+    border: 0; border-radius: 9px; background: var(--bongo-navy); color: #fff;
+    padding: .58rem .85rem; cursor: pointer;
+    font: 600 .84rem/1 "Lato", system-ui, sans-serif;
+  }
+  .bongo-send:disabled { opacity: .45; cursor: not-allowed; }
+  .bongo-send:focus-visible { outline: 3px solid var(--bongo-gold); outline-offset: 2px; }
+  .bongo-note {
+    margin: .45rem .15rem 0; font: 400 .7rem/1.35 "Lato", system-ui, sans-serif;
+    color: var(--bongo-slate); display: flex; justify-content: space-between; gap: .5rem;
+  }
+  .bongo-note button {
+    background: none; border: 0; color: var(--bongo-slate); cursor: pointer;
+    text-decoration: underline; font: inherit; padding: 0;
+  }
+
+  .bongo-gate { padding: 1.1rem; font: 400 .86rem/1.5 "Lato", system-ui, sans-serif; }
+  .bongo-gate h4 { font: 600 .95rem/1.3 "Lato", system-ui, sans-serif; margin: 0 0 .5rem; }
+  .bongo-gate input {
+    width: 100%; border: 1px solid var(--bongo-line); border-radius: 9px;
+    padding: .55rem .7rem; margin: .6rem 0; font: inherit;
+  }
+  .bongo-gate input:focus-visible { outline: 2px solid var(--bongo-gold); border-color: var(--bongo-gold); }
+  .bongo-gate .err { color: #A3341F; margin: .3rem 0 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bongo-fab, .bongo-dots span { transition: none; animation: none; }
+  }
+  @media print { .bongo-fab, .bongo-panel, .bongo-nudge { display: none !important; } }
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  var CFG = window.BONGO_CHAT_CONFIG || {};
+  var KEY_LOG = "bongo.chat.log.v1";
+  var KEY_PASS = "bongo.chat.pass.v1";
+  var KEY_NUDGE = "bongo.chat.nudged.v1";
+  var MAX_TURNS = 24;          // trimmed before sending; the Worker caps too
+  var MAX_CHARS = 4000;
+
+  // Reading and writing localStorage is wrapped in try/catch throughout. In a
+  // private window, or with site data blocked, the browser throws on the
+  // accessor itself rather than politely returning null — so an unguarded call
+  // would stop the whole widget from loading.
+  function get(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } }
+  function set(k, v) { try { window.localStorage.setItem(k, v); } catch (e) {} }
+  function del(k) { try { window.localStorage.removeItem(k); } catch (e) {} }
+
+  var log = [];
+  try { log = JSON.parse(get(KEY_LOG) || "[]") || []; } catch (e) { log = []; }
+  var busy = false, panel, logEl, ta, sendBtn, fab, lastFocus;
+
+  var depth = (location.pathname.indexOf("/sessions/") > -1) ? "../" : "";
+
+  // ------------------------------------------------------------ markdown --
+  //
+  // A small Markdown renderer, written escape-first on purpose.
+  //
+  // The order of operations here is the security-relevant part. Everything the
+  // model sends is first escaped completely, so that any HTML in it becomes
+  // visible text and can no longer do anything. Only afterwards do we turn a
+  // fixed, known list of patterns — bold, code, lists, links — back into real
+  // markup.
+  //
+  // The tempting alternative is to convert Markdown to HTML and then sanitise
+  // the result, and it is how cross-site scripting tends to find its way into
+  // chat widgets: a sanitiser has to anticipate every possible attack, whereas
+  // an escaper only has to handle five characters correctly.
+  function esc(s) {
+    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function md(src) {
+    var blocks = [];
+    // Pull fenced code out first so nothing inside it gets marked up.
+    var s = src.replace(/```(\w*)\n([\s\S]*?)```/g, function (_, lang, code) {
+      blocks.push('<pre><code>' + esc(code.replace(/\n$/, "")) + '</code></pre>');
+      return " BLOCK" + (blocks.length - 1) + " ";
+    });
+
+    s = esc(s);
+    s = s.replace(/`([^`\n]+)`/g, "<code>$1</code>");
+    s = s.replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>");
+    s = s.replace(/(^|[\s(])\*([^*\n]+)\*/g, "$1<em>$2</em>");
+    // Links: only http(s) and relative paths. No javascript:, no data:.
+    s = s.replace(/\[([^\]\n]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]*|[\w./-]+\.html[^)\s]*)\)/g,
+                  '<a href="$2" rel="noopener">$1</a>');
+
+    var out = [], list = null;
+    s.split("\n").forEach(function (line) {
+      var li = line.match(/^\s*[-*]\s+(.*)$/);
+      var ol = line.match(/^\s*(\d+)[.)]\s+(.*)$/);
+      if (li) {
+        if (list !== "ul") { if (list) out.push("</" + list + ">"); out.push("<ul>"); list = "ul"; }
+        out.push("<li>" + li[1] + "</li>");
+      } else if (ol) {
+        if (list !== "ol") { if (list) out.push("</" + list + ">"); out.push("<ol>"); list = "ol"; }
+        out.push("<li>" + ol[2] + "</li>");
+      } else {
+        if (list) { out.push("</" + list + ">"); list = null; }
+        if (line.trim() === "") out.push("");
+        else out.push("<p>" + line + "</p>");
+      }
+    });
+    if (list) out.push("</" + list + ">");
+
+    return out.join("\n").replace(/ BLOCK(\d+) /g, function (_, i) {
+      return blocks[+i];
+    });
+  }
+
+  // -------------------------------------------------------------- render --
+  function bubble(role, html, cls) {
+    var d = document.createElement("div");
+    d.className = "bongo-msg " + (cls || (role === "user" ? "me" : "ai"));
+    var b = document.createElement("div");
+    b.className = "b";
+    b.innerHTML = html;
+    d.appendChild(b);
+    logEl.appendChild(d);
+    logEl.scrollTop = logEl.scrollHeight;
+    return b;
+  }
+
+  function paint() {
+    logEl.innerHTML = "";
+    if (!log.length) {
+      bubble("assistant", md(CFG.GREETING || "How can I help?"));
+      return;
+    }
+    log.forEach(function (m) { bubble(m.role, md(m.content)); });
+  }
+
+  function save() {
+    try { set(KEY_LOG, JSON.stringify(log.slice(-MAX_TURNS))); } catch (e) {}
+  }
+
+  // What page are we on? Sent with each turn so answers can be about the thing
+  // in front of the reader rather than the course in the abstract.
+  function pageContext() {
+    var h1 = document.querySelector("main h1, h1");
+    return {
+      title: (document.title || "").slice(0, 200),
+      heading: h1 ? (h1.textContent || "").trim().slice(0, 200) : "",
+      session: document.body.getAttribute("data-tdbg-session") || "",
+      path: location.pathname.split("/").slice(-1)[0] || "index.html"
+    };
+  }
+
+  // ---------------------------------------------------------------- send --
+  function send(text) {
+    if (busy || !text.trim()) return;
+    if (text.length > MAX_CHARS) {
+      bubble("system", md("That message is longer than " + MAX_CHARS +
+                          " characters. Trim it and try again."), "sys");
+      return;
+    }
+    busy = true;
+    sendBtn.disabled = true;
+    ta.value = "";
+    ta.style.height = "auto";
+
+    log.push({ role: "user", content: text });
+    bubble("user", md(text));
+    save();
+
+    var b = bubble("assistant", '<span class="bongo-dots"><span></span><span></span><span></span></span>');
+    b.setAttribute("aria-live", "polite");
+    var acc = "";
+
+    var headers = { "Content-Type": "application/json" };
+    var pass = get(KEY_PASS);
+    if (pass) headers["X-Bongo-Pass"] = pass;
+
+    fetch(CFG.ENDPOINT, {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify({ messages: log.slice(-MAX_TURNS), page: pageContext() })
+    }).then(function (r) {
+      if (r.status === 401) {
+        // Take the message back out of the transcript before showing the gate
+        // again. It was added optimistically so it would appear the instant it
+        // was sent, but the send did not actually happen -- and leaving it in
+        // means the question is duplicated when the person retypes their
+        // passphrase and asks again.
+        del(KEY_PASS);
+        if (log.length && log[log.length - 1].role === "user") log.pop();
+        save();
+        gate("That passphrase was not accepted. Please check it and try again.");
+        throw new Error("gate");
+      }
+      if (r.status === 429) throw new Error("You have reached the usage limit for now. Try again later.");
+      if (!r.ok) throw new Error("The assistant is unavailable (HTTP " + r.status + ").");
+      if (!r.body) throw new Error("Streaming is not supported in this browser.");
+
+      var reader = r.body.getReader(), dec = new TextDecoder(), buf = "";
+      function pump() {
+        return reader.read().then(function (res) {
+          if (res.done) return;
+          buf += dec.decode(res.value, { stream: true });
+          var lines = buf.split("\n");
+          buf = lines.pop();
+          lines.forEach(function (line) {
+            if (line.indexOf("data: ") !== 0) return;
+            var payload = line.slice(6);
+            if (payload === "[DONE]") return;
+            try {
+              var ev = JSON.parse(payload);
+              if (ev.type === "content_block_delta" && ev.delta && ev.delta.text) {
+                acc += ev.delta.text;
+                b.innerHTML = md(acc);
+                logEl.scrollTop = logEl.scrollHeight;
+              } else if (ev.type === "error") {
+                acc += "\n\n_" + (ev.error && ev.error.message || "stream error") + "_";
+                b.innerHTML = md(acc);
+              }
+            } catch (e) { /* keep-alive or partial frame; ignore */ }
+          });
+          return pump();
+        });
+      }
+      return pump();
+    }).then(function () {
+      if (acc) { log.push({ role: "assistant", content: acc }); save(); }
+      else b.innerHTML = md("_No reply came back. Try again._");
+    }).catch(function (e) {
+      if (e && e.message === "gate") return;
+      b.parentNode.className = "bongo-msg sys";
+      b.innerHTML = md(e && e.message ? e.message : "Something went wrong.");
+    }).then(function () {
+      busy = false;
+      sendBtn.disabled = false;
+      ta.focus();
+    });
+  }
+
+  // ---------------------------------------------------------------- gate --
+  function gate(err) {
+    var body = panel.querySelector(".bongo-body");
+    body.innerHTML =
+      '<div class="bongo-gate">' +
+      '<h4>Cohort access</h4>' +
+      '<p>bongo.ai is available to participants on the programme. Enter the ' +
+      'passphrase from your joining instructions — this browser will ' +
+      'remember it.</p>' +
+      '<input type="password" autocomplete="off" aria-label="Cohort passphrase">' +
+      (err ? '<p class="err">' + esc(err) + "</p>" : "") +
+      '<button class="bongo-send" type="button">Continue</button>' +
+      "</div>";
+    var input = body.querySelector("input");
+    var go = function () {
+      var v = input.value.trim();
+      if (!v) return;
+      set(KEY_PASS, v);
+      mount();
+    };
+    body.querySelector("button").addEventListener("click", go);
+    input.addEventListener("keydown", function (e) { if (e.key === "Enter") go(); });
+    input.focus();
+  }
+
+  // --------------------------------------------------------------- mount --
+  function mount() {
+    var body = panel.querySelector(".bongo-body");
+    body.innerHTML =
+      '<div class="bongo-log" role="log" aria-label="Conversation"></div>' +
+      '<div class="bongo-foot">' +
+      '<div class="bongo-row">' +
+      '<textarea rows="1" placeholder="Ask about anything on this page…" ' +
+      'aria-label="Your question"></textarea>' +
+      '<button class="bongo-send" type="button">Send</button>' +
+      "</div>" +
+      '<p class="bongo-note"><span>Claude can be wrong. Check anything that matters.</span>' +
+      '<button type="button">Clear</button></p>' +
+      "</div>";
+
+    logEl = body.querySelector(".bongo-log");
+    ta = body.querySelector("textarea");
+    sendBtn = body.querySelector(".bongo-send");
+
+    ta.addEventListener("input", function () {
+      ta.style.height = "auto";
+      ta.style.height = Math.min(ta.scrollHeight, 140) + "px";
+    });
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(ta.value); }
+    });
+    sendBtn.addEventListener("click", function () { send(ta.value); });
+    body.querySelector(".bongo-note button").addEventListener("click", function () {
+      log = []; del(KEY_LOG); paint(); ta.focus();
+    });
+
+    paint();
+    ta.focus();
+  }
+
+  function unconfigured() {
+    panel.querySelector(".bongo-body").innerHTML =
+      '<div class="bongo-gate">' +
+      "<h4>Not configured yet</h4>" +
+      "<p>This build of the site has no chat endpoint set, so bongo.ai " +
+      "cannot answer anything.</p>" +
+      "<p>If you are running this course: deploy the Worker in " +
+      "<code>chat-api/</code> and put its URL in <code>ENDPOINT</code> at the " +
+      "top of <code>assets/js/bongo-chat.html</code>. It takes about five " +
+      "minutes and the instructions are in <code>chat-api/README.md</code>.</p>" +
+      "</div>";
+  }
+
+  // ---------------------------------------------------------------- open --
+  function open() {
+    lastFocus = document.activeElement;
+    panel.setAttribute("data-open", "true");
+    fab.setAttribute("aria-expanded", "true");
+    var n = document.querySelector(".bongo-nudge");
+    if (n) n.remove();
+    set(KEY_NUDGE, "1");
+
+    if (!CFG.ENDPOINT) unconfigured();
+    else if (CFG.REQUIRE_PASSPHRASE && !get(KEY_PASS)) gate("");
+    else mount();
+  }
+
+  function close() {
+    panel.setAttribute("data-open", "false");
+    fab.setAttribute("aria-expanded", "false");
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  function boot() {
+    fab = document.createElement("button");
+    fab.className = "bongo-fab";
+    fab.type = "button";
+    fab.setAttribute("aria-expanded", "false");
+    fab.setAttribute("aria-label", "Ask bongo.ai");
+    fab.innerHTML = '<img src="' + depth + 'assets/logo/bongo_ai_hex_mark.svg" alt="">' +
+                    '<span class="x" aria-hidden="true">×</span>';
+
+    panel = document.createElement("div");
+    panel.className = "bongo-panel";
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-label", "bongo.ai assistant");
+    panel.setAttribute("data-open", "false");
+    panel.innerHTML =
+      '<div class="bongo-head">' +
+      '<img src="' + depth + 'assets/logo/bongo_ai_hex_mark.svg" alt="">' +
+      "<div><div class=\"t\">bongo.ai</div>" +
+      '<div class="s">Data, statistics and the judgement around them</div></div>' +
+      "</div><div class=\"bongo-body\" style=\"flex:1;display:flex;flex-direction:column;overflow:hidden\"></div>";
+
+    document.body.appendChild(panel);
+    document.body.appendChild(fab);
+
+    fab.addEventListener("click", function () {
+      panel.getAttribute("data-open") === "true" ? close() : open();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && panel.getAttribute("data-open") === "true") close();
+    });
+
+    // A single nudge, once per browser, so the button is not invisible
+    // furniture. It never comes back after it is dismissed or used.
+    if (!get(KEY_NUDGE)) {
+      var n = document.createElement("div");
+      n.className = "bongo-nudge";
+      n.innerHTML = "Stuck on something? Ask bongo.ai." +
+                    '<button type="button">Dismiss</button>';
+      document.body.appendChild(n);
+      n.querySelector("button").addEventListener("click", function () {
+        n.remove(); set(KEY_NUDGE, "1");
+      });
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else { boot(); }
+})();
+</script>

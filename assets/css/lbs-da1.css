@@ -1,0 +1,124 @@
+/* ===========================================================================
+   LBS brand layer, aligned with the DA-1 · MMBA 11 course site
+   (markanalytics.online/da1-mmba11).
+   Palette: navy #141B4D · LBS blue #0B5E82 · teal #1C7293 · gold #D99A2B
+   Type:    Lato (body) · Source Serif 4 (headings)
+   Loaded after extra.css so it wins without editing the compiled theme.
+   =========================================================================== */
+:root {
+  --lbs-navy: #141B4D;
+  --lbs-blue: #0B5E82;
+  --lbs-teal: #1C7293;
+  --lbs-gold: #D99A2B;
+  --lbs-gold-text: #A8700F;
+  --lbs-ink: #1A2233;
+  --lbs-slate: #5C6B7A;
+  --lbs-mist: #F3F6F9;
+  --lbs-rule: #E1E7EE;
+  --bs-font-sans-serif: "Lato", Calibri, "Segoe UI", sans-serif;
+  --bs-body-font-family: "Lato", Calibri, "Segoe UI", sans-serif;
+}
+
+body { font-family: "Lato", Calibri, "Segoe UI", sans-serif; color: var(--lbs-ink); }
+
+h1, h2, h3, h4, .h1, .h2, .h3, .h4, .navbar-title {
+  font-family: "Source Serif 4", Cambria, Georgia, serif;
+  color: var(--lbs-navy);
+}
+
+/* h2: gold rule beneath, as on DA-1 */
+main.content h2 {
+  border-top: 0 !important;
+  border-bottom: 3px solid var(--lbs-gold);
+  padding-top: 0;
+  padding-bottom: .25rem;
+  margin-top: 2.4rem;
+}
+.hero h2, .hero h1 { border-bottom: 0 !important; }
+
+/* Subtitle: gold, uppercase, tracked */
+.quarto-title .subtitle, p.subtitle {
+  font-family: "Lato", Calibri, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 700;
+  font-size: .92rem !important;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--lbs-gold-text) !important;
+}
+
+/* Navbar */
+.navbar { background-color: var(--lbs-navy) !important; border-bottom: 0 !important; box-shadow: 0 1px 10px rgba(20,27,77,.25); }
+.navbar .nav-link, .navbar .menu-text { color: #8AB2C3; }
+.navbar .nav-link:hover, .navbar .nav-link.active, .navbar .nav-link.active .menu-text { color: #fff; }
+.navbar-title { font-weight: 700; color: #fff !important; }
+.navbar .dropdown-menu { border-top: 3px solid var(--lbs-gold) !important; }
+.navbar .dropdown-item:hover { background: var(--lbs-mist) !important; color: var(--lbs-navy) !important; }
+.navbar-logo { height: 38px !important; }
+
+/* Hero: DA-1 navy panel with the two soft circles */
+.hero {
+  background: var(--lbs-navy) !important;
+  background-image:
+    radial-gradient(circle at 92% 8%, rgba(255,255,255,.07) 0 120px, transparent 121px),
+    radial-gradient(circle at 4% 100%, rgba(28,114,147,.45) 0 140px, transparent 141px) !important;
+  border-radius: 14px !important;
+}
+.hero::after { display: none !important; }
+.hero .lede, .hero p { color: #DCE3EC !important; }
+.hero strong, .hero a { color: var(--lbs-gold) !important; }
+.hero .hero-hex { float: right; width: 170px; margin: 0 0 1rem 1.6rem; filter: drop-shadow(0 8px 18px rgba(0,0,0,.35)); }
+@media (max-width: 767px) { .hero .hero-hex { width: 110px; } }
+.hero-facts .k { color: rgba(255,255,255,.62) !important; }
+
+/* Cards: DA-1 obj-card treatment */
+.day-card { background: var(--lbs-mist) !important; border: 1px solid var(--lbs-rule) !important; border-top-width: 4px !important; }
+.day-card.d1 { border-top-color: var(--lbs-navy) !important; }
+.day-card.d2 { border-top-color: var(--lbs-blue) !important; }
+.day-card.d3 { border-top-color: var(--lbs-teal) !important; }
+.day-card.d4 { border-top-color: var(--lbs-gold) !important; }
+.day-card.d5 { border-top-color: #B5541A !important; }
+.day-card h3 { color: var(--lbs-navy); }
+
+/* Teaching boxes */
+.tdbg-aim  { border-left-color: var(--lbs-navy) !important; }
+.tdbg-lab  { border-left-color: var(--lbs-teal) !important; }
+.tdbg-exec { border-left-color: var(--lbs-blue) !important; }
+.tdbg-salt { border-left-color: var(--lbs-gold) !important; }
+
+/* Code and quotes */
+pre.sourceCode, div.sourceCode { border-left-color: var(--lbs-blue) !important; }
+main.content blockquote { border-left-color: var(--lbs-gold) !important; }
+.panel-tabset > .nav-tabs .nav-link.active { border-bottom-color: var(--lbs-gold) !important; }
+thead th { background: rgba(20,27,77,.05) !important; color: var(--lbs-navy) !important; }
+
+/* Buttons */
+.btn-primary { background: var(--lbs-blue); border-color: var(--lbs-blue); }
+.btn-primary:hover { background: var(--lbs-navy); border-color: var(--lbs-navy); }
+
+/* Footer */
+.nav-footer { background: var(--lbs-navy) !important; color: #C6D0E2 !important; border-top: 3px solid var(--lbs-gold); }
+.nav-footer a { color: #fff !important; }
+
+/* ---------------------------------------------------------------------------
+   Cohort tailoring: "In this room" lens boxes and the cohort page
+   --------------------------------------------------------------------------- */
+.lens-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: .9rem; margin: 1.1rem 0 1.6rem; }
+.lens-card { background: var(--lbs-mist); border: 1px solid var(--lbs-rule); border-top: 4px solid var(--lbs-blue); border-radius: 10px; padding: .9rem 1rem .7rem; }
+.lens-card .lens-k { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--lbs-slate); margin-bottom: .3rem; }
+.lens-card p { font-size: .92rem; margin: 0 0 .4rem; }
+.lens-card .lens-data { font-size: .8rem; color: var(--lbs-slate); }
+.lens-card.lens-e { border-top-color: var(--lbs-navy); }
+.lens-card.lens-p { border-top-color: var(--lbs-gold); }
+.lens-card.lens-f { border-top-color: var(--lbs-blue); }
+.lens-card.lens-c { border-top-color: var(--lbs-teal); }
+.room-note { font-size: .92rem; color: var(--lbs-slate); }
+
+.mix-bar { display: flex; height: 34px; border-radius: 8px; overflow: hidden; margin: .6rem 0 .4rem; }
+.mix-bar span { display: flex; align-items: center; justify-content: center; color: #fff; font-size: .8rem; font-weight: 700; white-space: nowrap; overflow: hidden; }
+.mix-legend { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; font-size: .86rem; color: var(--lbs-slate); }
+.mix-legend i { display: inline-block; width: .8rem; height: .8rem; border-radius: 2px; margin-right: .35rem; vertical-align: -1px; }
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: .8rem; margin: 1rem 0 1.4rem; }
+.stat { background: var(--lbs-mist); border: 1px solid var(--lbs-rule); border-radius: 10px; padding: .8rem 1rem; }
+.stat b { display: block; font-family: "Source Serif 4", Georgia, serif; font-size: 1.8rem; color: var(--lbs-navy); line-height: 1.1; }
+.stat span { font-size: .82rem; color: var(--lbs-slate); }

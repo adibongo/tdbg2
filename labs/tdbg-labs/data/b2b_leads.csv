@@ -1,0 +1,2501 @@
+lead_id,industry,company_size,lead_source,web_visits,requested_demo,emails_opened,days_since_first_touch,converted
+LD00001,Public Sector,SME,Cold outreach,6,1,6,56,0
+LD00002,Oil & Gas,Mid-market,Website,8,1,4,44,1
+LD00003,Oil & Gas,Mid-market,Cold outreach,10,1,4,6,1
+LD00004,Oil & Gas,SME,Cold outreach,6,1,6,108,0
+LD00005,Banking,SME,Cold outreach,5,1,2,14,0
+LD00006,Telecoms,Enterprise,LinkedIn,7,0,5,57,0
+LD00007,Banking,Enterprise,Website,5,0,2,66,0
+LD00008,Banking,SME,Referral,6,0,1,8,0
+LD00009,Banking,SME,Cold outreach,5,0,2,23,0
+LD00010,Banking,Mid-market,Cold outreach,9,1,7,75,1
+LD00011,Telecoms,SME,LinkedIn,9,1,3,25,0
+LD00012,Banking,Mid-market,Website,10,1,4,19,0
+LD00013,Retail,SME,Cold outreach,5,0,3,20,0
+LD00014,Banking,Mid-market,Website,7,0,4,85,0
+LD00015,Banking,Mid-market,Website,4,0,5,1,0
+LD00016,Oil & Gas,SME,LinkedIn,5,0,2,63,0
+LD00017,Banking,Mid-market,Website,7,1,2,109,0
+LD00018,Manufacturing,SME,Website,7,0,2,56,0
+LD00019,Manufacturing,Enterprise,Website,5,0,2,48,0
+LD00020,Public Sector,SME,Website,6,1,0,108,0
+LD00021,Public Sector,SME,Website,6,0,3,113,0
+LD00022,Retail,Enterprise,Website,4,0,2,48,0
+LD00023,Public Sector,Mid-market,Cold outreach,5,0,1,41,0
+LD00024,Banking,SME,Website,10,0,4,92,0
+LD00025,Telecoms,SME,LinkedIn,8,1,1,106,0
+LD00026,Manufacturing,SME,LinkedIn,4,0,3,28,0
+LD00027,Oil & Gas,Mid-market,Cold outreach,5,0,2,96,0
+LD00028,Oil & Gas,SME,Cold outreach,4,1,4,19,1
+LD00029,Telecoms,Enterprise,Website,2,1,2,55,1
+LD00030,Banking,SME,LinkedIn,4,0,4,57,0
+LD00031,Banking,SME,Referral,3,0,4,54,1
+LD00032,Banking,Enterprise,Website,3,1,6,99,0
+LD00033,Telecoms,Mid-market,Event,7,1,2,112,0
+LD00034,Public Sector,SME,Website,7,0,2,12,1
+LD00035,Oil & Gas,Mid-market,Referral,5,0,1,25,0
+LD00036,Public Sector,SME,Cold outreach,5,1,3,108,0
+LD00037,Retail,Enterprise,Cold outreach,3,0,1,69,0
+LD00038,Retail,Mid-market,LinkedIn,3,0,3,13,0
+LD00039,Banking,Enterprise,Website,5,0,2,98,1
+LD00040,Oil & Gas,SME,Website,13,0,4,10,0
+LD00041,Retail,SME,LinkedIn,6,0,4,21,0
+LD00042,Oil & Gas,Enterprise,Website,5,1,4,27,1
+LD00043,Telecoms,Mid-market,Cold outreach,11,0,2,60,0
+LD00044,Public Sector,SME,LinkedIn,5,0,2,42,0
+LD00045,Public Sector,Enterprise,Cold outreach,7,0,4,47,0
+LD00046,Banking,SME,LinkedIn,7,0,3,36,0
+LD00047,Public Sector,Enterprise,Event,4,0,8,17,0
+LD00048,Manufacturing,SME,Cold outreach,7,0,1,12,0
+LD00049,Manufacturing,SME,Event,7,0,3,13,0
+LD00050,Public Sector,SME,Cold outreach,5,0,3,102,0
+LD00051,Manufacturing,Enterprise,Website,11,0,4,9,1
+LD00052,Manufacturing,Mid-market,Website,8,0,4,23,0
+LD00053,Public Sector,SME,LinkedIn,9,1,3,80,1
+LD00054,Banking,SME,Referral,9,0,1,106,0
+LD00055,Public Sector,Mid-market,LinkedIn,8,0,3,14,0
+LD00056,Manufacturing,SME,LinkedIn,7,0,2,70,0
+LD00057,Banking,Mid-market,LinkedIn,12,1,3,77,0
+LD00058,Manufacturing,Mid-market,Website,1,0,2,84,0
+LD00059,Telecoms,Enterprise,Event,4,0,3,115,0
+LD00060,Banking,SME,Event,13,1,7,92,1
+LD00061,Retail,SME,Website,9,0,3,80,1
+LD00062,Oil & Gas,SME,Website,3,0,3,64,0
+LD00063,Retail,Mid-market,Referral,8,0,0,78,1
+LD00064,Manufacturing,SME,Referral,6,0,9,70,0
+LD00065,Retail,Mid-market,LinkedIn,9,0,1,39,1
+LD00066,Manufacturing,Enterprise,Cold outreach,3,0,6,27,1
+LD00067,Retail,SME,Cold outreach,3,0,6,69,0
+LD00068,Manufacturing,SME,Event,7,0,3,11,1
+LD00069,Retail,Mid-market,Cold outreach,4,0,6,59,0
+LD00070,Public Sector,SME,Website,9,1,3,55,0
+LD00071,Telecoms,Mid-market,Cold outreach,2,0,3,35,0
+LD00072,Retail,Enterprise,Cold outreach,2,0,2,91,0
+LD00073,Telecoms,SME,Cold outreach,2,0,2,81,0
+LD00074,Banking,Mid-market,Website,7,0,4,14,0
+LD00075,Manufacturing,SME,LinkedIn,10,0,4,7,0
+LD00076,Retail,Mid-market,Website,5,0,1,35,0
+LD00077,Manufacturing,SME,Referral,6,0,4,65,0
+LD00078,Public Sector,SME,Website,3,0,6,82,0
+LD00079,Public Sector,SME,Website,7,0,5,56,0
+LD00080,Retail,SME,Website,8,0,7,27,0
+LD00081,Oil & Gas,SME,Website,2,0,2,113,0
+LD00082,Oil & Gas,Mid-market,LinkedIn,12,0,3,60,0
+LD00083,Telecoms,SME,LinkedIn,8,0,3,101,0
+LD00084,Telecoms,SME,Website,9,0,1,14,0
+LD00085,Retail,SME,Referral,7,0,2,77,0
+LD00086,Manufacturing,Enterprise,Website,7,0,4,72,0
+LD00087,Manufacturing,Enterprise,LinkedIn,1,0,7,9,0
+LD00088,Telecoms,SME,LinkedIn,3,1,4,97,0
+LD00089,Banking,SME,Event,10,0,3,30,0
+LD00090,Manufacturing,Mid-market,Website,5,1,2,8,1
+LD00091,Retail,Mid-market,Cold outreach,3,0,3,85,0
+LD00092,Public Sector,SME,Referral,6,0,8,70,1
+LD00093,Oil & Gas,Mid-market,Cold outreach,4,0,1,40,0
+LD00094,Manufacturing,Mid-market,Website,8,0,8,35,0
+LD00095,Manufacturing,SME,Event,7,0,1,64,0
+LD00096,Retail,SME,Website,4,0,6,98,0
+LD00097,Public Sector,SME,Website,11,0,1,58,0
+LD00098,Telecoms,Mid-market,Website,7,0,2,19,0
+LD00099,Oil & Gas,SME,Website,6,0,3,22,0
+LD00100,Manufacturing,Mid-market,Cold outreach,4,0,1,58,0
+LD00101,Banking,Mid-market,Website,4,0,4,20,0
+LD00102,Public Sector,Enterprise,Cold outreach,4,0,4,8,1
+LD00103,Telecoms,SME,Event,6,0,4,116,0
+LD00104,Banking,Mid-market,Event,6,0,7,18,1
+LD00105,Public Sector,SME,Event,11,0,2,18,1
+LD00106,Telecoms,Enterprise,Event,5,1,6,66,1
+LD00107,Oil & Gas,SME,Event,10,1,1,52,0
+LD00108,Retail,SME,Website,7,0,7,3,0
+LD00109,Telecoms,SME,Referral,4,1,6,52,0
+LD00110,Banking,SME,LinkedIn,2,0,1,108,0
+LD00111,Retail,Enterprise,Website,9,0,3,70,0
+LD00112,Oil & Gas,SME,LinkedIn,6,0,3,75,0
+LD00113,Telecoms,Enterprise,LinkedIn,4,0,2,80,0
+LD00114,Telecoms,Enterprise,Website,3,0,3,62,0
+LD00115,Oil & Gas,SME,Cold outreach,9,1,3,34,0
+LD00116,Telecoms,Mid-market,LinkedIn,8,0,3,7,0
+LD00117,Banking,Enterprise,LinkedIn,8,1,4,13,0
+LD00118,Public Sector,SME,Website,7,0,4,20,1
+LD00119,Retail,SME,Website,7,0,4,77,0
+LD00120,Banking,Mid-market,Cold outreach,5,0,4,36,0
+LD00121,Public Sector,Enterprise,Website,9,0,2,74,0
+LD00122,Banking,Enterprise,LinkedIn,7,0,3,53,1
+LD00123,Retail,Mid-market,Website,6,1,2,53,0
+LD00124,Public Sector,Mid-market,LinkedIn,6,0,4,63,0
+LD00125,Retail,Mid-market,Website,7,0,4,57,0
+LD00126,Retail,SME,Event,6,0,5,60,0
+LD00127,Manufacturing,Mid-market,Website,6,0,4,24,0
+LD00128,Banking,SME,Referral,5,0,2,75,0
+LD00129,Telecoms,SME,Cold outreach,6,0,2,68,0
+LD00130,Retail,Enterprise,LinkedIn,3,0,2,16,0
+LD00131,Oil & Gas,SME,Referral,7,0,4,60,0
+LD00132,Public Sector,Mid-market,Website,7,0,2,106,0
+LD00133,Public Sector,SME,LinkedIn,2,0,2,106,0
+LD00134,Banking,Mid-market,Cold outreach,7,0,2,111,0
+LD00135,Telecoms,SME,Website,11,0,3,66,0
+LD00136,Telecoms,SME,Event,4,0,5,105,0
+LD00137,Oil & Gas,SME,LinkedIn,1,0,2,66,0
+LD00138,Telecoms,SME,Event,4,1,1,115,0
+LD00139,Oil & Gas,Mid-market,Referral,3,0,3,117,0
+LD00140,Oil & Gas,Enterprise,Website,8,0,3,53,0
+LD00141,Manufacturing,SME,Website,6,0,2,2,0
+LD00142,Telecoms,Mid-market,Website,5,0,1,82,0
+LD00143,Public Sector,Mid-market,LinkedIn,11,1,6,15,0
+LD00144,Telecoms,SME,Website,6,0,1,36,0
+LD00145,Oil & Gas,Mid-market,Cold outreach,7,0,7,98,0
+LD00146,Oil & Gas,Mid-market,Cold outreach,8,0,4,8,0
+LD00147,Public Sector,SME,Event,3,0,5,31,0
+LD00148,Banking,SME,Event,12,0,3,41,1
+LD00149,Telecoms,Mid-market,Cold outreach,4,1,2,108,1
+LD00150,Manufacturing,Mid-market,Event,3,0,3,35,1
+LD00151,Manufacturing,Mid-market,Referral,2,0,0,41,0
+LD00152,Oil & Gas,Enterprise,Event,4,0,1,11,0
+LD00153,Manufacturing,SME,Referral,5,1,1,83,1
+LD00154,Manufacturing,Enterprise,Event,5,0,3,86,0
+LD00155,Retail,SME,Website,5,0,6,111,0
+LD00156,Telecoms,SME,Website,7,0,3,63,0
+LD00157,Retail,SME,Website,3,0,3,68,0
+LD00158,Manufacturing,SME,Cold outreach,8,0,1,92,0
+LD00159,Manufacturing,SME,Referral,5,0,8,75,1
+LD00160,Oil & Gas,SME,Event,3,0,3,80,0
+LD00161,Retail,Enterprise,Event,7,0,2,47,0
+LD00162,Banking,Enterprise,Website,4,0,3,90,0
+LD00163,Telecoms,Enterprise,Website,6,0,1,113,0
+LD00164,Oil & Gas,Enterprise,LinkedIn,9,0,1,36,0
+LD00165,Manufacturing,Mid-market,Cold outreach,6,1,7,10,0
+LD00166,Oil & Gas,Enterprise,LinkedIn,6,0,1,55,0
+LD00167,Retail,SME,Event,6,1,1,69,1
+LD00168,Manufacturing,SME,LinkedIn,7,0,4,18,0
+LD00169,Public Sector,SME,Website,7,0,1,20,0
+LD00170,Public Sector,Mid-market,Event,5,1,5,97,0
+LD00171,Telecoms,SME,Cold outreach,6,0,4,118,0
+LD00172,Banking,SME,Referral,6,0,2,104,1
+LD00173,Manufacturing,SME,Website,5,0,2,52,0
+LD00174,Banking,Enterprise,Website,7,0,3,25,1
+LD00175,Retail,Mid-market,Event,4,1,5,19,1
+LD00176,Oil & Gas,Mid-market,Website,3,1,3,54,0
+LD00177,Oil & Gas,Enterprise,Cold outreach,10,0,4,11,0
+LD00178,Telecoms,SME,Event,8,0,0,56,0
+LD00179,Retail,Mid-market,Cold outreach,6,0,2,12,0
+LD00180,Oil & Gas,Enterprise,Referral,5,0,5,60,0
+LD00181,Telecoms,SME,LinkedIn,4,0,5,65,0
+LD00182,Telecoms,Mid-market,Referral,5,1,3,65,1
+LD00183,Retail,Mid-market,Website,8,0,1,19,1
+LD00184,Public Sector,SME,Referral,7,0,8,111,0
+LD00185,Public Sector,SME,Event,8,1,3,65,1
+LD00186,Manufacturing,Mid-market,Cold outreach,9,0,0,94,0
+LD00187,Manufacturing,Enterprise,Website,10,0,4,73,1
+LD00188,Oil & Gas,Enterprise,Event,5,0,6,37,0
+LD00189,Public Sector,Mid-market,Event,9,0,2,23,0
+LD00190,Public Sector,SME,LinkedIn,2,0,2,72,0
+LD00191,Oil & Gas,Enterprise,Website,4,0,5,107,0
+LD00192,Public Sector,Mid-market,Website,5,1,3,16,0
+LD00193,Oil & Gas,SME,Website,10,0,3,102,0
+LD00194,Oil & Gas,SME,Event,1,0,3,6,0
+LD00195,Retail,Mid-market,Referral,11,0,3,6,0
+LD00196,Retail,SME,Website,5,0,2,26,0
+LD00197,Retail,Mid-market,Event,5,1,2,53,1
+LD00198,Telecoms,SME,Website,4,0,3,59,0
+LD00199,Telecoms,Enterprise,LinkedIn,7,0,2,112,0
+LD00200,Retail,Mid-market,Cold outreach,4,0,3,107,0
+LD00201,Manufacturing,SME,Website,5,1,1,1,0
+LD00202,Retail,SME,Website,8,0,3,18,0
+LD00203,Telecoms,SME,LinkedIn,4,0,2,50,0
+LD00204,Retail,Enterprise,Event,7,0,5,113,0
+LD00205,Telecoms,SME,Website,8,0,5,61,0
+LD00206,Manufacturing,Enterprise,Cold outreach,5,0,2,70,0
+LD00207,Manufacturing,Mid-market,Website,3,0,4,16,0
+LD00208,Telecoms,Mid-market,Event,5,0,1,37,0
+LD00209,Public Sector,Enterprise,Cold outreach,9,0,6,88,0
+LD00210,Banking,SME,Cold outreach,6,0,5,84,0
+LD00211,Banking,SME,Website,3,0,3,98,0
+LD00212,Manufacturing,Mid-market,Event,10,0,2,83,0
+LD00213,Oil & Gas,SME,Website,6,1,3,22,1
+LD00214,Oil & Gas,SME,Cold outreach,3,0,3,51,0
+LD00215,Public Sector,Mid-market,Website,2,0,4,104,0
+LD00216,Manufacturing,SME,Event,5,0,2,110,0
+LD00217,Telecoms,Mid-market,Cold outreach,10,1,6,41,0
+LD00218,Manufacturing,SME,LinkedIn,2,0,5,67,0
+LD00219,Public Sector,Enterprise,Referral,3,0,3,94,0
+LD00220,Public Sector,Enterprise,Cold outreach,3,0,7,109,0
+LD00221,Retail,SME,Event,6,0,3,34,0
+LD00222,Banking,SME,LinkedIn,5,0,4,32,0
+LD00223,Retail,Mid-market,Event,7,0,1,77,0
+LD00224,Telecoms,SME,Cold outreach,3,0,3,68,0
+LD00225,Oil & Gas,SME,LinkedIn,10,0,4,52,0
+LD00226,Oil & Gas,Mid-market,Referral,6,0,2,31,0
+LD00227,Oil & Gas,Mid-market,Website,6,0,2,75,0
+LD00228,Retail,Mid-market,Referral,4,0,2,67,0
+LD00229,Banking,Enterprise,Event,11,0,2,37,0
+LD00230,Banking,SME,Cold outreach,3,0,1,106,0
+LD00231,Banking,Enterprise,Cold outreach,6,1,3,22,0
+LD00232,Telecoms,Enterprise,LinkedIn,7,0,2,100,0
+LD00233,Banking,Enterprise,Website,8,0,2,5,0
+LD00234,Public Sector,Mid-market,Cold outreach,2,0,2,9,0
+LD00235,Banking,Mid-market,LinkedIn,6,0,4,77,0
+LD00236,Telecoms,Mid-market,Website,6,0,6,38,0
+LD00237,Banking,SME,Referral,2,0,5,51,0
+LD00238,Public Sector,Mid-market,Website,5,0,3,10,0
+LD00239,Banking,Mid-market,Cold outreach,6,0,2,61,0
+LD00240,Manufacturing,Enterprise,Referral,6,0,8,25,1
+LD00241,Manufacturing,Enterprise,LinkedIn,9,0,3,51,1
+LD00242,Telecoms,SME,Cold outreach,1,0,2,31,0
+LD00243,Manufacturing,Mid-market,Event,1,0,2,9,0
+LD00244,Telecoms,SME,Referral,4,0,8,50,1
+LD00245,Manufacturing,SME,Referral,5,1,4,104,1
+LD00246,Telecoms,SME,LinkedIn,7,0,9,47,0
+LD00247,Public Sector,SME,Cold outreach,6,1,6,95,0
+LD00248,Banking,SME,Website,5,0,5,30,0
+LD00249,Telecoms,Mid-market,Event,5,0,3,98,0
+LD00250,Oil & Gas,Enterprise,Cold outreach,5,1,4,7,1
+LD00251,Telecoms,Mid-market,Event,6,1,5,83,0
+LD00252,Retail,SME,LinkedIn,12,0,0,46,1
+LD00253,Banking,Mid-market,Event,4,0,8,24,0
+LD00254,Oil & Gas,SME,LinkedIn,7,1,5,78,0
+LD00255,Banking,SME,Website,9,0,2,109,0
+LD00256,Banking,SME,Referral,6,0,1,60,0
+LD00257,Oil & Gas,Mid-market,Event,7,0,2,30,0
+LD00258,Public Sector,Mid-market,Cold outreach,6,0,3,118,0
+LD00259,Oil & Gas,SME,LinkedIn,5,1,3,39,0
+LD00260,Public Sector,SME,Referral,6,1,2,49,0
+LD00261,Banking,SME,LinkedIn,8,0,3,109,0
+LD00262,Retail,Mid-market,Event,5,0,4,35,0
+LD00263,Banking,SME,Cold outreach,4,0,3,81,0
+LD00264,Public Sector,SME,Cold outreach,5,0,3,37,0
+LD00265,Banking,Mid-market,Website,7,0,4,97,0
+LD00266,Banking,SME,Website,9,0,2,26,0
+LD00267,Manufacturing,SME,Cold outreach,3,0,2,11,0
+LD00268,Public Sector,SME,Referral,5,0,4,85,0
+LD00269,Banking,Mid-market,Event,7,0,0,62,0
+LD00270,Oil & Gas,SME,Event,9,0,3,47,0
+LD00271,Telecoms,SME,Referral,8,0,3,7,0
+LD00272,Manufacturing,Mid-market,Website,8,1,4,25,1
+LD00273,Oil & Gas,Enterprise,Website,7,0,1,63,0
+LD00274,Banking,SME,Website,4,0,2,5,0
+LD00275,Public Sector,SME,LinkedIn,7,0,3,86,0
+LD00276,Banking,Mid-market,LinkedIn,3,0,6,4,0
+LD00277,Oil & Gas,Mid-market,Website,8,1,10,66,0
+LD00278,Public Sector,Enterprise,Website,5,0,6,37,1
+LD00279,Oil & Gas,Mid-market,Cold outreach,6,0,0,116,0
+LD00280,Telecoms,SME,LinkedIn,2,0,3,72,0
+LD00281,Public Sector,Mid-market,Website,3,0,3,29,0
+LD00282,Telecoms,Mid-market,Website,5,0,4,60,0
+LD00283,Telecoms,Enterprise,Referral,11,1,2,113,0
+LD00284,Manufacturing,SME,Website,5,1,2,36,0
+LD00285,Manufacturing,SME,Website,5,0,2,26,0
+LD00286,Manufacturing,SME,LinkedIn,4,1,5,9,0
+LD00287,Public Sector,Mid-market,Event,2,0,2,41,0
+LD00288,Public Sector,Mid-market,LinkedIn,6,0,1,65,0
+LD00289,Retail,SME,Website,7,0,2,89,0
+LD00290,Telecoms,SME,Website,4,1,2,52,0
+LD00291,Manufacturing,Mid-market,LinkedIn,5,0,3,28,0
+LD00292,Manufacturing,Enterprise,LinkedIn,5,0,1,54,0
+LD00293,Telecoms,SME,Website,4,1,4,35,0
+LD00294,Oil & Gas,SME,Cold outreach,6,0,1,89,1
+LD00295,Manufacturing,Mid-market,LinkedIn,4,0,1,2,0
+LD00296,Oil & Gas,SME,Event,7,0,8,94,0
+LD00297,Retail,Mid-market,LinkedIn,5,0,4,13,0
+LD00298,Telecoms,Mid-market,Website,3,1,2,56,0
+LD00299,Manufacturing,Mid-market,LinkedIn,3,1,4,8,1
+LD00300,Telecoms,Mid-market,Website,7,0,3,55,0
+LD00301,Public Sector,SME,LinkedIn,8,0,3,56,0
+LD00302,Telecoms,Enterprise,Website,11,0,1,50,0
+LD00303,Manufacturing,SME,Website,7,0,4,108,0
+LD00304,Retail,Enterprise,Website,2,0,0,43,0
+LD00305,Oil & Gas,Mid-market,Cold outreach,6,0,1,54,0
+LD00306,Banking,Mid-market,Cold outreach,2,0,2,49,0
+LD00307,Retail,SME,Website,7,0,4,40,1
+LD00308,Banking,Enterprise,Website,8,0,2,42,0
+LD00309,Banking,Mid-market,Referral,5,0,2,109,0
+LD00310,Public Sector,SME,Cold outreach,10,0,3,72,0
+LD00311,Telecoms,Mid-market,Website,9,1,2,108,1
+LD00312,Retail,SME,Cold outreach,5,0,1,109,0
+LD00313,Public Sector,SME,LinkedIn,5,0,3,75,0
+LD00314,Retail,SME,Cold outreach,5,0,2,48,0
+LD00315,Telecoms,SME,Event,7,0,3,71,0
+LD00316,Public Sector,SME,Website,7,0,2,7,1
+LD00317,Telecoms,SME,Cold outreach,12,1,4,44,1
+LD00318,Oil & Gas,Mid-market,LinkedIn,10,1,5,20,0
+LD00319,Public Sector,SME,Event,3,0,5,92,0
+LD00320,Manufacturing,Mid-market,LinkedIn,4,1,5,101,0
+LD00321,Banking,SME,Referral,5,1,2,10,0
+LD00322,Retail,SME,Cold outreach,7,0,7,100,0
+LD00323,Oil & Gas,Mid-market,Cold outreach,3,0,1,119,0
+LD00324,Retail,Mid-market,Cold outreach,12,0,4,16,0
+LD00325,Oil & Gas,SME,Cold outreach,6,0,2,24,0
+LD00326,Manufacturing,Mid-market,Event,7,0,2,72,0
+LD00327,Oil & Gas,SME,Referral,7,0,5,22,1
+LD00328,Public Sector,Mid-market,Event,6,0,4,99,0
+LD00329,Telecoms,Mid-market,Event,9,0,3,35,0
+LD00330,Retail,SME,Website,3,0,1,44,1
+LD00331,Oil & Gas,SME,LinkedIn,3,0,2,68,0
+LD00332,Retail,Mid-market,Website,8,0,4,20,0
+LD00333,Oil & Gas,Mid-market,LinkedIn,7,0,2,64,0
+LD00334,Manufacturing,Mid-market,LinkedIn,6,0,5,95,0
+LD00335,Banking,Mid-market,Cold outreach,10,0,2,78,0
+LD00336,Telecoms,SME,LinkedIn,8,0,3,66,1
+LD00337,Banking,SME,Website,4,0,1,62,0
+LD00338,Public Sector,Mid-market,Referral,3,0,1,83,0
+LD00339,Oil & Gas,Enterprise,Cold outreach,8,0,4,30,0
+LD00340,Banking,SME,Referral,4,0,5,113,0
+LD00341,Telecoms,Mid-market,Website,4,0,3,26,0
+LD00342,Telecoms,SME,Website,6,0,3,11,0
+LD00343,Banking,SME,LinkedIn,5,0,6,27,0
+LD00344,Public Sector,SME,Cold outreach,7,0,6,62,0
+LD00345,Banking,SME,Cold outreach,5,0,8,101,0
+LD00346,Banking,SME,Cold outreach,6,0,4,61,0
+LD00347,Telecoms,SME,Website,6,0,5,72,0
+LD00348,Telecoms,SME,Referral,10,0,5,3,1
+LD00349,Retail,SME,Website,8,1,1,95,1
+LD00350,Public Sector,Mid-market,Website,6,0,4,78,0
+LD00351,Banking,SME,Website,4,0,2,78,0
+LD00352,Retail,SME,LinkedIn,7,0,5,6,1
+LD00353,Manufacturing,Mid-market,Website,8,0,4,40,1
+LD00354,Oil & Gas,Enterprise,Cold outreach,6,1,2,97,1
+LD00355,Retail,Enterprise,Website,8,0,2,85,0
+LD00356,Banking,SME,LinkedIn,7,1,6,72,0
+LD00357,Retail,SME,Cold outreach,5,1,4,35,0
+LD00358,Oil & Gas,Mid-market,Referral,9,0,5,95,0
+LD00359,Telecoms,Mid-market,LinkedIn,9,0,3,5,0
+LD00360,Manufacturing,Enterprise,Cold outreach,4,0,5,84,0
+LD00361,Public Sector,SME,Cold outreach,2,0,2,19,0
+LD00362,Banking,Mid-market,Website,8,1,3,48,1
+LD00363,Telecoms,SME,LinkedIn,5,0,4,98,0
+LD00364,Banking,Mid-market,Cold outreach,8,1,4,81,0
+LD00365,Manufacturing,SME,LinkedIn,2,1,2,109,0
+LD00366,Public Sector,SME,Website,6,0,5,6,1
+LD00367,Oil & Gas,SME,LinkedIn,6,0,4,13,1
+LD00368,Banking,SME,Event,7,1,4,45,0
+LD00369,Public Sector,Mid-market,Website,6,0,3,29,0
+LD00370,Banking,SME,Website,5,0,1,106,0
+LD00371,Telecoms,SME,Website,9,0,2,88,1
+LD00372,Oil & Gas,Mid-market,Website,8,0,2,12,0
+LD00373,Retail,Mid-market,Website,7,0,1,37,0
+LD00374,Banking,SME,Website,6,0,1,21,0
+LD00375,Retail,Enterprise,Website,3,0,2,22,0
+LD00376,Telecoms,Mid-market,Website,4,0,0,74,0
+LD00377,Telecoms,SME,Referral,7,0,6,52,0
+LD00378,Manufacturing,Mid-market,Cold outreach,5,0,2,96,0
+LD00379,Retail,SME,LinkedIn,8,1,7,38,1
+LD00380,Banking,SME,Website,2,1,3,48,0
+LD00381,Telecoms,Mid-market,LinkedIn,6,0,1,62,0
+LD00382,Public Sector,Mid-market,Referral,10,0,3,15,0
+LD00383,Manufacturing,Enterprise,Cold outreach,9,0,4,113,0
+LD00384,Oil & Gas,Enterprise,LinkedIn,4,0,5,43,1
+LD00385,Public Sector,Mid-market,Referral,8,0,3,7,0
+LD00386,Retail,SME,Event,8,0,4,67,0
+LD00387,Banking,Mid-market,Website,11,0,2,62,0
+LD00388,Retail,Mid-market,Event,3,0,2,119,0
+LD00389,Telecoms,Mid-market,Cold outreach,5,0,5,53,0
+LD00390,Retail,Mid-market,Website,5,0,2,8,0
+LD00391,Public Sector,SME,Website,3,0,4,3,0
+LD00392,Oil & Gas,Mid-market,Referral,4,0,4,53,0
+LD00393,Banking,SME,LinkedIn,3,0,3,108,0
+LD00394,Oil & Gas,Enterprise,Event,10,1,3,37,0
+LD00395,Banking,Mid-market,Website,6,1,1,77,0
+LD00396,Banking,SME,LinkedIn,6,0,2,114,0
+LD00397,Manufacturing,SME,Cold outreach,7,0,3,37,0
+LD00398,Banking,SME,Cold outreach,2,0,4,29,0
+LD00399,Manufacturing,SME,Cold outreach,6,0,4,113,0
+LD00400,Manufacturing,Mid-market,LinkedIn,5,0,2,33,0
+LD00401,Public Sector,SME,LinkedIn,4,0,2,102,0
+LD00402,Oil & Gas,Mid-market,Website,4,0,2,97,0
+LD00403,Public Sector,SME,Cold outreach,8,0,4,37,0
+LD00404,Public Sector,Mid-market,Cold outreach,10,0,2,76,0
+LD00405,Telecoms,SME,Website,7,0,2,84,0
+LD00406,Retail,SME,Cold outreach,6,1,2,115,1
+LD00407,Retail,Enterprise,LinkedIn,3,0,1,60,0
+LD00408,Retail,Mid-market,Website,12,0,1,95,0
+LD00409,Telecoms,SME,Cold outreach,8,0,3,104,0
+LD00410,Oil & Gas,SME,Cold outreach,8,0,2,42,0
+LD00411,Telecoms,SME,Website,7,0,0,77,0
+LD00412,Retail,Mid-market,Referral,9,1,1,47,0
+LD00413,Oil & Gas,Enterprise,Cold outreach,6,1,6,82,0
+LD00414,Manufacturing,SME,Cold outreach,5,0,1,19,0
+LD00415,Retail,SME,LinkedIn,5,0,3,82,0
+LD00416,Oil & Gas,SME,Cold outreach,8,0,1,115,0
+LD00417,Retail,SME,Website,2,0,1,27,0
+LD00418,Banking,SME,Event,6,1,2,96,1
+LD00419,Retail,SME,LinkedIn,7,1,0,21,0
+LD00420,Public Sector,SME,Website,7,0,3,46,0
+LD00421,Retail,Mid-market,Cold outreach,4,1,3,40,0
+LD00422,Manufacturing,Enterprise,Cold outreach,1,0,2,106,0
+LD00423,Banking,SME,Website,9,0,3,102,0
+LD00424,Manufacturing,Mid-market,Website,5,0,0,6,0
+LD00425,Banking,Enterprise,Website,3,0,4,37,0
+LD00426,Telecoms,Enterprise,Cold outreach,4,0,6,27,0
+LD00427,Telecoms,Mid-market,LinkedIn,7,0,2,49,0
+LD00428,Banking,SME,Referral,4,1,1,68,1
+LD00429,Banking,Mid-market,LinkedIn,8,0,1,111,0
+LD00430,Telecoms,SME,Website,5,1,3,80,1
+LD00431,Public Sector,Mid-market,Cold outreach,8,0,3,118,0
+LD00432,Oil & Gas,Mid-market,Website,8,0,1,114,0
+LD00433,Manufacturing,Mid-market,Event,6,0,3,36,1
+LD00434,Banking,Enterprise,Website,7,1,1,52,0
+LD00435,Manufacturing,SME,Referral,5,0,2,24,0
+LD00436,Manufacturing,Enterprise,Event,9,1,3,55,0
+LD00437,Retail,SME,Website,5,0,5,23,0
+LD00438,Retail,SME,LinkedIn,6,1,5,40,1
+LD00439,Banking,SME,Website,12,0,0,48,0
+LD00440,Oil & Gas,Enterprise,LinkedIn,5,0,5,35,0
+LD00441,Banking,SME,LinkedIn,5,0,2,11,0
+LD00442,Oil & Gas,SME,Event,8,0,3,46,0
+LD00443,Oil & Gas,SME,Website,5,1,0,97,0
+LD00444,Oil & Gas,Enterprise,LinkedIn,2,0,3,77,0
+LD00445,Oil & Gas,Mid-market,Website,7,0,2,38,0
+LD00446,Telecoms,SME,Event,5,0,2,93,0
+LD00447,Manufacturing,Enterprise,Website,6,0,2,47,0
+LD00448,Banking,Enterprise,Event,6,0,1,113,0
+LD00449,Retail,SME,LinkedIn,4,1,5,35,0
+LD00450,Telecoms,SME,Referral,5,0,4,2,1
+LD00451,Manufacturing,Mid-market,Website,8,0,2,15,0
+LD00452,Telecoms,SME,LinkedIn,5,0,2,54,0
+LD00453,Banking,Enterprise,Website,3,0,4,13,0
+LD00454,Oil & Gas,SME,Website,4,0,0,119,0
+LD00455,Retail,Enterprise,Referral,4,0,2,45,0
+LD00456,Retail,SME,Cold outreach,10,0,1,90,0
+LD00457,Oil & Gas,Enterprise,Referral,9,1,6,69,0
+LD00458,Telecoms,SME,Website,7,0,6,52,0
+LD00459,Telecoms,Enterprise,Website,1,1,1,114,0
+LD00460,Banking,Mid-market,Event,9,0,6,43,1
+LD00461,Oil & Gas,Mid-market,Event,3,0,2,41,0
+LD00462,Manufacturing,Mid-market,Website,5,0,4,60,1
+LD00463,Public Sector,SME,LinkedIn,6,0,0,21,0
+LD00464,Banking,SME,Website,13,0,5,66,0
+LD00465,Oil & Gas,SME,LinkedIn,1,1,1,77,0
+LD00466,Public Sector,Mid-market,Referral,11,0,7,96,0
+LD00467,Retail,Mid-market,LinkedIn,10,1,2,65,1
+LD00468,Telecoms,Mid-market,LinkedIn,4,1,6,66,0
+LD00469,Oil & Gas,Enterprise,LinkedIn,3,0,4,102,0
+LD00470,Public Sector,Enterprise,Website,5,0,2,61,0
+LD00471,Retail,Mid-market,Cold outreach,4,0,2,74,0
+LD00472,Banking,Mid-market,Referral,7,0,3,83,0
+LD00473,Banking,SME,Event,4,1,4,13,1
+LD00474,Telecoms,Mid-market,Website,3,1,2,32,1
+LD00475,Telecoms,Mid-market,Referral,6,0,2,19,0
+LD00476,Telecoms,SME,Referral,8,0,5,42,1
+LD00477,Banking,SME,Referral,8,0,0,110,0
+LD00478,Telecoms,SME,Event,3,0,2,19,0
+LD00479,Banking,Mid-market,Event,7,0,1,86,1
+LD00480,Manufacturing,Enterprise,Cold outreach,3,0,3,22,0
+LD00481,Banking,Enterprise,Website,7,0,1,45,1
+LD00482,Banking,Enterprise,Cold outreach,8,0,3,6,0
+LD00483,Telecoms,SME,Cold outreach,3,1,4,14,0
+LD00484,Oil & Gas,SME,Event,5,0,1,111,0
+LD00485,Telecoms,Mid-market,Event,5,0,5,27,0
+LD00486,Banking,SME,Referral,8,0,3,110,1
+LD00487,Public Sector,Mid-market,Event,6,0,4,28,0
+LD00488,Retail,Mid-market,Event,7,0,6,43,1
+LD00489,Telecoms,Mid-market,Referral,14,1,0,98,0
+LD00490,Oil & Gas,Mid-market,Website,8,1,3,72,1
+LD00491,Banking,SME,LinkedIn,6,0,1,44,0
+LD00492,Public Sector,Enterprise,Referral,5,0,4,37,1
+LD00493,Manufacturing,Mid-market,Event,0,0,2,94,0
+LD00494,Public Sector,Mid-market,Website,10,0,4,10,0
+LD00495,Oil & Gas,SME,Event,4,0,5,29,0
+LD00496,Retail,Mid-market,Website,5,0,3,54,0
+LD00497,Banking,SME,LinkedIn,5,1,3,67,0
+LD00498,Telecoms,SME,LinkedIn,4,0,4,12,0
+LD00499,Oil & Gas,Mid-market,Website,5,1,3,24,0
+LD00500,Telecoms,Enterprise,Website,8,0,2,10,1
+LD00501,Banking,Mid-market,Website,9,0,2,79,0
+LD00502,Retail,Enterprise,LinkedIn,12,1,2,41,0
+LD00503,Manufacturing,Enterprise,Cold outreach,4,0,3,109,1
+LD00504,Banking,Mid-market,LinkedIn,2,0,4,91,0
+LD00505,Manufacturing,Mid-market,Website,5,1,2,104,1
+LD00506,Banking,SME,Cold outreach,10,0,4,10,0
+LD00507,Public Sector,Enterprise,LinkedIn,6,0,1,56,0
+LD00508,Banking,Mid-market,Event,4,1,1,54,0
+LD00509,Public Sector,Enterprise,Website,9,1,4,56,1
+LD00510,Retail,SME,Website,6,0,4,47,0
+LD00511,Telecoms,Mid-market,Cold outreach,7,0,2,99,0
+LD00512,Banking,Mid-market,LinkedIn,5,1,1,54,0
+LD00513,Manufacturing,SME,Cold outreach,11,1,3,113,0
+LD00514,Banking,SME,Referral,7,0,2,17,0
+LD00515,Manufacturing,Enterprise,Event,4,0,4,105,0
+LD00516,Public Sector,Mid-market,Website,3,1,1,2,0
+LD00517,Retail,SME,Cold outreach,10,0,0,31,0
+LD00518,Banking,Mid-market,Website,6,1,5,3,1
+LD00519,Oil & Gas,SME,Event,5,1,1,86,1
+LD00520,Manufacturing,Mid-market,Referral,7,0,3,70,0
+LD00521,Manufacturing,Enterprise,Referral,5,0,2,34,0
+LD00522,Oil & Gas,Mid-market,Event,7,0,8,47,1
+LD00523,Manufacturing,Mid-market,Event,10,1,7,54,0
+LD00524,Retail,Mid-market,Referral,9,0,1,3,0
+LD00525,Manufacturing,Enterprise,Website,7,0,2,100,0
+LD00526,Public Sector,SME,Event,4,0,4,44,1
+LD00527,Oil & Gas,Enterprise,Referral,6,0,2,103,0
+LD00528,Public Sector,Mid-market,Website,7,1,4,19,1
+LD00529,Manufacturing,SME,Event,9,0,6,28,1
+LD00530,Retail,SME,LinkedIn,2,1,3,99,1
+LD00531,Public Sector,SME,Cold outreach,5,1,3,89,0
+LD00532,Banking,SME,Website,6,0,1,6,0
+LD00533,Retail,SME,Event,5,0,4,95,0
+LD00534,Telecoms,Mid-market,Website,5,0,3,109,0
+LD00535,Retail,Mid-market,LinkedIn,5,0,2,55,0
+LD00536,Oil & Gas,SME,Referral,4,0,3,58,0
+LD00537,Oil & Gas,SME,Referral,5,0,1,14,0
+LD00538,Banking,Mid-market,Website,2,0,5,12,0
+LD00539,Oil & Gas,SME,Referral,11,0,2,86,1
+LD00540,Manufacturing,SME,Cold outreach,4,1,3,20,0
+LD00541,Oil & Gas,Mid-market,Website,8,0,5,91,0
+LD00542,Public Sector,SME,Cold outreach,5,0,2,27,0
+LD00543,Manufacturing,Mid-market,LinkedIn,10,1,5,57,1
+LD00544,Banking,Enterprise,Event,6,0,3,64,0
+LD00545,Banking,Enterprise,LinkedIn,7,0,3,40,0
+LD00546,Retail,Mid-market,Website,4,0,2,74,0
+LD00547,Manufacturing,Mid-market,Event,10,0,4,24,0
+LD00548,Banking,SME,Cold outreach,7,0,3,56,0
+LD00549,Public Sector,SME,Cold outreach,4,1,3,96,0
+LD00550,Retail,Enterprise,Website,9,1,2,100,1
+LD00551,Retail,SME,Event,12,0,3,104,0
+LD00552,Banking,SME,Referral,3,0,3,110,0
+LD00553,Banking,Enterprise,Referral,9,0,3,77,0
+LD00554,Manufacturing,Mid-market,Referral,6,1,2,9,0
+LD00555,Telecoms,Enterprise,Cold outreach,4,0,5,114,0
+LD00556,Public Sector,Mid-market,LinkedIn,9,1,4,39,0
+LD00557,Banking,SME,Event,6,0,2,20,0
+LD00558,Retail,SME,LinkedIn,2,0,1,11,0
+LD00559,Public Sector,SME,Event,4,0,5,117,0
+LD00560,Oil & Gas,Mid-market,Event,2,0,2,103,0
+LD00561,Public Sector,Enterprise,LinkedIn,7,0,6,2,0
+LD00562,Public Sector,Mid-market,Event,4,0,3,33,0
+LD00563,Banking,Enterprise,Referral,3,0,2,20,0
+LD00564,Public Sector,SME,Website,7,1,5,66,0
+LD00565,Retail,SME,Website,9,0,4,15,0
+LD00566,Retail,Mid-market,Cold outreach,6,1,0,8,0
+LD00567,Oil & Gas,Enterprise,Event,5,0,3,34,0
+LD00568,Telecoms,Enterprise,Website,6,0,5,7,0
+LD00569,Oil & Gas,SME,LinkedIn,7,0,4,67,0
+LD00570,Telecoms,SME,Website,6,0,4,4,0
+LD00571,Telecoms,Enterprise,Event,5,1,0,1,1
+LD00572,Manufacturing,Enterprise,Event,5,0,4,117,0
+LD00573,Oil & Gas,Mid-market,Event,3,0,3,40,0
+LD00574,Telecoms,Mid-market,Event,4,1,8,111,0
+LD00575,Oil & Gas,Enterprise,Event,7,0,1,30,0
+LD00576,Telecoms,Mid-market,Website,5,1,7,109,0
+LD00577,Public Sector,SME,Website,5,1,2,53,1
+LD00578,Retail,SME,Event,7,0,5,8,0
+LD00579,Public Sector,SME,Cold outreach,6,0,4,51,0
+LD00580,Banking,Enterprise,Website,11,0,4,49,1
+LD00581,Public Sector,Mid-market,Referral,9,0,2,20,0
+LD00582,Telecoms,SME,Cold outreach,9,0,1,94,0
+LD00583,Manufacturing,SME,Referral,7,0,2,85,1
+LD00584,Telecoms,Enterprise,LinkedIn,5,0,6,14,0
+LD00585,Oil & Gas,SME,Website,12,0,1,1,0
+LD00586,Public Sector,Mid-market,Website,8,0,1,89,0
+LD00587,Retail,SME,Event,7,0,3,67,1
+LD00588,Public Sector,Mid-market,Cold outreach,4,0,0,21,0
+LD00589,Manufacturing,SME,Website,3,0,4,64,0
+LD00590,Banking,SME,LinkedIn,7,0,4,18,1
+LD00591,Oil & Gas,SME,Cold outreach,5,1,4,61,0
+LD00592,Retail,SME,LinkedIn,6,0,4,30,0
+LD00593,Telecoms,SME,Referral,7,0,4,103,0
+LD00594,Oil & Gas,Mid-market,LinkedIn,2,0,6,77,0
+LD00595,Retail,SME,Event,3,0,0,4,0
+LD00596,Oil & Gas,Enterprise,Cold outreach,5,0,4,45,0
+LD00597,Public Sector,SME,Website,7,0,3,24,0
+LD00598,Banking,SME,Event,3,0,1,89,0
+LD00599,Public Sector,SME,Cold outreach,6,0,1,110,0
+LD00600,Manufacturing,Mid-market,Referral,9,0,1,113,0
+LD00601,Public Sector,SME,Cold outreach,7,0,6,36,1
+LD00602,Manufacturing,Enterprise,Event,7,0,5,115,0
+LD00603,Banking,Mid-market,Cold outreach,3,0,1,93,0
+LD00604,Banking,Enterprise,Referral,8,0,5,115,1
+LD00605,Telecoms,Mid-market,Referral,3,1,3,92,0
+LD00606,Telecoms,Mid-market,Cold outreach,8,0,2,52,0
+LD00607,Oil & Gas,SME,LinkedIn,5,0,5,27,0
+LD00608,Retail,Mid-market,Cold outreach,6,1,4,80,0
+LD00609,Oil & Gas,SME,Website,11,0,1,51,0
+LD00610,Banking,SME,Referral,9,0,1,50,0
+LD00611,Public Sector,Mid-market,Website,5,0,4,11,0
+LD00612,Public Sector,Mid-market,Cold outreach,6,0,6,80,0
+LD00613,Oil & Gas,Mid-market,Event,5,1,4,70,0
+LD00614,Oil & Gas,SME,Website,10,0,1,99,0
+LD00615,Oil & Gas,Enterprise,Event,5,0,3,117,0
+LD00616,Banking,SME,Website,3,0,4,117,1
+LD00617,Oil & Gas,Mid-market,LinkedIn,6,0,0,72,0
+LD00618,Retail,SME,Cold outreach,7,0,3,98,0
+LD00619,Telecoms,Mid-market,Cold outreach,5,0,4,105,0
+LD00620,Telecoms,SME,Website,4,1,3,3,0
+LD00621,Oil & Gas,Mid-market,Referral,11,0,1,74,0
+LD00622,Telecoms,SME,Event,4,0,1,66,0
+LD00623,Oil & Gas,SME,Website,8,0,3,100,0
+LD00624,Public Sector,SME,Cold outreach,2,1,1,89,0
+LD00625,Retail,SME,Website,7,0,5,5,0
+LD00626,Manufacturing,Mid-market,Event,6,0,1,41,0
+LD00627,Banking,SME,LinkedIn,5,0,4,80,0
+LD00628,Telecoms,SME,LinkedIn,1,0,5,42,0
+LD00629,Retail,SME,Event,5,1,2,72,1
+LD00630,Retail,Mid-market,Event,5,0,6,22,0
+LD00631,Public Sector,SME,Event,9,0,3,14,1
+LD00632,Manufacturing,Mid-market,Website,4,0,4,96,0
+LD00633,Manufacturing,Enterprise,Website,8,0,1,96,0
+LD00634,Retail,Enterprise,Cold outreach,2,0,4,107,0
+LD00635,Public Sector,SME,Event,9,1,2,46,1
+LD00636,Banking,Mid-market,Event,14,1,3,10,1
+LD00637,Public Sector,Mid-market,Website,2,0,5,54,0
+LD00638,Oil & Gas,SME,LinkedIn,5,0,4,1,0
+LD00639,Banking,SME,Cold outreach,1,0,3,27,1
+LD00640,Public Sector,SME,Website,3,0,2,14,0
+LD00641,Oil & Gas,SME,Website,8,0,0,13,0
+LD00642,Manufacturing,Enterprise,Website,2,0,3,7,0
+LD00643,Public Sector,Mid-market,Cold outreach,6,1,3,1,0
+LD00644,Retail,Enterprise,Cold outreach,6,0,3,70,0
+LD00645,Retail,SME,LinkedIn,4,0,5,51,0
+LD00646,Public Sector,Enterprise,Referral,5,0,2,19,0
+LD00647,Oil & Gas,Mid-market,Website,5,0,3,30,1
+LD00648,Manufacturing,SME,LinkedIn,4,0,1,29,0
+LD00649,Retail,SME,LinkedIn,6,0,2,115,0
+LD00650,Manufacturing,Mid-market,Website,4,0,1,40,0
+LD00651,Oil & Gas,Enterprise,Cold outreach,8,0,6,27,1
+LD00652,Telecoms,Enterprise,LinkedIn,2,0,1,68,0
+LD00653,Telecoms,SME,Website,1,0,1,100,0
+LD00654,Oil & Gas,Enterprise,Referral,5,0,6,105,0
+LD00655,Telecoms,SME,Website,6,0,6,67,0
+LD00656,Telecoms,Mid-market,Event,5,0,4,114,0
+LD00657,Retail,Enterprise,LinkedIn,4,1,1,108,0
+LD00658,Retail,SME,Referral,4,1,2,102,0
+LD00659,Banking,Enterprise,LinkedIn,9,0,4,52,0
+LD00660,Retail,Mid-market,Website,6,0,4,65,1
+LD00661,Oil & Gas,Mid-market,Referral,2,0,2,68,0
+LD00662,Banking,SME,Event,4,0,3,87,1
+LD00663,Banking,SME,Referral,6,0,3,45,1
+LD00664,Oil & Gas,Mid-market,Website,4,0,4,88,0
+LD00665,Public Sector,SME,Event,5,1,8,29,0
+LD00666,Public Sector,SME,Cold outreach,6,0,4,4,0
+LD00667,Banking,SME,Website,8,0,3,82,0
+LD00668,Manufacturing,SME,Website,8,0,2,23,0
+LD00669,Retail,Enterprise,Event,8,0,3,53,0
+LD00670,Manufacturing,Enterprise,Website,4,1,4,10,1
+LD00671,Manufacturing,Mid-market,Event,5,0,3,69,0
+LD00672,Retail,SME,Website,7,1,0,57,1
+LD00673,Telecoms,SME,Website,8,1,5,50,1
+LD00674,Retail,Mid-market,Cold outreach,5,0,2,109,0
+LD00675,Manufacturing,SME,Website,6,0,7,72,0
+LD00676,Oil & Gas,SME,Referral,12,0,1,67,0
+LD00677,Retail,SME,Event,4,1,6,14,0
+LD00678,Telecoms,SME,Website,3,0,4,102,0
+LD00679,Public Sector,SME,LinkedIn,4,0,3,118,0
+LD00680,Telecoms,SME,LinkedIn,9,0,5,81,0
+LD00681,Telecoms,Mid-market,LinkedIn,9,0,1,21,0
+LD00682,Banking,Mid-market,Referral,9,0,3,87,1
+LD00683,Banking,SME,LinkedIn,8,0,3,93,1
+LD00684,Manufacturing,Mid-market,Website,6,0,4,78,0
+LD00685,Manufacturing,Mid-market,Cold outreach,6,0,6,80,0
+LD00686,Public Sector,Enterprise,Website,4,0,3,99,0
+LD00687,Oil & Gas,SME,Website,10,0,1,32,0
+LD00688,Oil & Gas,SME,Event,8,0,3,105,0
+LD00689,Banking,SME,LinkedIn,8,1,3,100,0
+LD00690,Manufacturing,SME,Website,6,1,3,6,0
+LD00691,Public Sector,Mid-market,Website,2,1,4,40,1
+LD00692,Oil & Gas,SME,Website,3,0,3,107,0
+LD00693,Public Sector,SME,LinkedIn,2,1,1,12,0
+LD00694,Oil & Gas,Enterprise,Referral,2,1,3,61,0
+LD00695,Manufacturing,Mid-market,Cold outreach,8,0,3,111,0
+LD00696,Telecoms,SME,Referral,1,0,4,94,0
+LD00697,Oil & Gas,Mid-market,Website,5,0,4,6,1
+LD00698,Oil & Gas,Mid-market,Website,2,0,2,27,0
+LD00699,Banking,SME,LinkedIn,5,1,3,13,0
+LD00700,Public Sector,SME,Website,7,0,9,16,0
+LD00701,Telecoms,Mid-market,Cold outreach,5,0,3,110,0
+LD00702,Oil & Gas,Mid-market,Cold outreach,7,0,1,21,0
+LD00703,Oil & Gas,SME,Event,4,1,3,10,1
+LD00704,Retail,Mid-market,Website,3,0,5,73,0
+LD00705,Public Sector,Mid-market,LinkedIn,4,0,1,21,0
+LD00706,Retail,Mid-market,Website,6,0,2,44,1
+LD00707,Banking,SME,Event,11,0,3,111,0
+LD00708,Retail,SME,Website,8,0,5,67,0
+LD00709,Banking,Enterprise,LinkedIn,8,0,2,67,0
+LD00710,Public Sector,Mid-market,LinkedIn,5,1,1,16,0
+LD00711,Oil & Gas,Mid-market,Website,5,0,3,10,0
+LD00712,Telecoms,SME,Event,12,0,1,5,1
+LD00713,Public Sector,SME,Website,4,0,2,1,0
+LD00714,Telecoms,SME,Event,9,1,4,39,0
+LD00715,Manufacturing,Enterprise,Cold outreach,7,0,5,61,0
+LD00716,Retail,SME,Event,8,0,4,31,1
+LD00717,Public Sector,SME,Cold outreach,3,0,0,1,0
+LD00718,Public Sector,Enterprise,Cold outreach,6,1,5,87,0
+LD00719,Banking,SME,Referral,8,0,0,52,0
+LD00720,Telecoms,Mid-market,Event,4,0,5,92,0
+LD00721,Telecoms,SME,Website,8,0,5,115,0
+LD00722,Oil & Gas,SME,Cold outreach,5,0,3,4,0
+LD00723,Oil & Gas,SME,Website,5,0,2,12,0
+LD00724,Oil & Gas,SME,Website,3,0,1,20,0
+LD00725,Public Sector,Mid-market,Cold outreach,3,0,2,12,0
+LD00726,Public Sector,Mid-market,LinkedIn,5,0,3,67,0
+LD00727,Telecoms,Mid-market,Referral,1,0,1,55,1
+LD00728,Manufacturing,SME,Referral,7,0,8,51,0
+LD00729,Manufacturing,Mid-market,Event,4,1,3,99,0
+LD00730,Telecoms,Mid-market,Referral,3,0,3,73,0
+LD00731,Telecoms,Enterprise,Website,5,0,0,104,0
+LD00732,Telecoms,SME,Cold outreach,4,0,1,98,0
+LD00733,Oil & Gas,Enterprise,Event,3,0,3,62,1
+LD00734,Public Sector,SME,Website,6,0,3,105,0
+LD00735,Public Sector,SME,Cold outreach,11,0,3,89,0
+LD00736,Retail,SME,Event,5,0,4,100,1
+LD00737,Oil & Gas,SME,LinkedIn,7,0,4,103,0
+LD00738,Banking,Mid-market,Cold outreach,2,0,2,85,0
+LD00739,Public Sector,Enterprise,LinkedIn,2,0,1,33,0
+LD00740,Banking,Mid-market,Website,7,0,1,58,0
+LD00741,Manufacturing,Mid-market,Cold outreach,4,0,3,100,0
+LD00742,Retail,Enterprise,Referral,4,1,2,10,1
+LD00743,Oil & Gas,Enterprise,LinkedIn,7,0,0,16,0
+LD00744,Banking,Enterprise,Referral,6,0,4,93,0
+LD00745,Public Sector,Enterprise,Referral,3,0,3,69,0
+LD00746,Public Sector,Mid-market,Cold outreach,3,0,2,71,0
+LD00747,Retail,SME,Referral,3,0,2,49,0
+LD00748,Public Sector,SME,Referral,8,0,2,73,0
+LD00749,Public Sector,SME,Event,10,0,5,7,1
+LD00750,Manufacturing,SME,Event,8,0,0,86,0
+LD00751,Banking,SME,Cold outreach,4,0,7,112,0
+LD00752,Manufacturing,Mid-market,Website,7,0,2,42,1
+LD00753,Oil & Gas,Mid-market,Event,7,1,4,57,0
+LD00754,Telecoms,SME,Event,6,0,1,35,0
+LD00755,Public Sector,Enterprise,Event,8,0,1,50,0
+LD00756,Manufacturing,Mid-market,Cold outreach,4,0,4,41,0
+LD00757,Manufacturing,Mid-market,Website,2,0,6,25,0
+LD00758,Manufacturing,Enterprise,Referral,7,0,2,31,0
+LD00759,Banking,Enterprise,LinkedIn,7,1,2,24,1
+LD00760,Retail,SME,Event,8,0,3,71,0
+LD00761,Banking,SME,Referral,3,0,2,70,0
+LD00762,Public Sector,Enterprise,Cold outreach,8,1,4,96,0
+LD00763,Public Sector,SME,LinkedIn,3,0,4,28,0
+LD00764,Oil & Gas,Mid-market,Website,5,0,3,98,0
+LD00765,Retail,SME,Website,5,0,4,29,0
+LD00766,Oil & Gas,SME,Website,7,0,2,93,0
+LD00767,Telecoms,Mid-market,Website,8,0,5,92,0
+LD00768,Manufacturing,SME,Website,5,0,3,64,0
+LD00769,Telecoms,Mid-market,Event,8,0,4,5,0
+LD00770,Public Sector,Mid-market,Cold outreach,7,1,1,23,1
+LD00771,Retail,SME,Cold outreach,2,0,5,101,0
+LD00772,Public Sector,Enterprise,Cold outreach,7,1,1,42,0
+LD00773,Oil & Gas,Mid-market,Website,2,0,4,99,0
+LD00774,Retail,Mid-market,Cold outreach,2,1,5,98,0
+LD00775,Oil & Gas,SME,Website,8,0,3,111,0
+LD00776,Retail,Enterprise,Referral,8,0,2,77,1
+LD00777,Banking,Enterprise,Website,1,1,1,78,0
+LD00778,Telecoms,Mid-market,Website,8,0,5,53,0
+LD00779,Oil & Gas,SME,LinkedIn,5,1,0,69,1
+LD00780,Banking,SME,Website,6,1,4,98,0
+LD00781,Public Sector,Enterprise,Cold outreach,5,0,3,4,0
+LD00782,Oil & Gas,Mid-market,Cold outreach,10,0,2,22,0
+LD00783,Banking,SME,Referral,2,0,1,92,0
+LD00784,Telecoms,Enterprise,Cold outreach,5,0,2,65,0
+LD00785,Public Sector,Mid-market,Referral,6,0,4,75,1
+LD00786,Manufacturing,SME,LinkedIn,4,0,1,80,0
+LD00787,Retail,Enterprise,Event,9,0,3,54,0
+LD00788,Public Sector,SME,LinkedIn,5,0,1,108,0
+LD00789,Public Sector,SME,Cold outreach,13,0,0,25,0
+LD00790,Telecoms,Mid-market,Event,8,0,5,60,0
+LD00791,Oil & Gas,Mid-market,LinkedIn,13,0,5,117,0
+LD00792,Oil & Gas,SME,Website,4,1,1,37,0
+LD00793,Manufacturing,SME,Website,10,0,1,102,0
+LD00794,Telecoms,SME,LinkedIn,5,0,2,24,0
+LD00795,Telecoms,Mid-market,LinkedIn,5,1,3,51,0
+LD00796,Telecoms,SME,LinkedIn,4,0,7,119,0
+LD00797,Banking,Mid-market,Website,3,1,1,73,0
+LD00798,Manufacturing,Mid-market,Cold outreach,5,0,3,82,0
+LD00799,Telecoms,SME,Referral,7,0,3,71,0
+LD00800,Retail,SME,Website,8,1,0,85,1
+LD00801,Banking,Mid-market,Event,4,0,1,77,1
+LD00802,Telecoms,Enterprise,Cold outreach,5,1,7,50,0
+LD00803,Public Sector,SME,Event,4,0,3,55,0
+LD00804,Banking,SME,Cold outreach,7,0,4,7,0
+LD00805,Manufacturing,SME,Event,7,0,1,46,0
+LD00806,Banking,Enterprise,Referral,7,0,0,98,1
+LD00807,Oil & Gas,SME,Website,13,0,5,67,0
+LD00808,Telecoms,Mid-market,Website,8,1,4,91,0
+LD00809,Public Sector,SME,Website,5,0,4,80,0
+LD00810,Public Sector,SME,LinkedIn,7,0,1,80,0
+LD00811,Banking,SME,Referral,9,1,3,22,1
+LD00812,Public Sector,SME,Website,10,0,5,91,1
+LD00813,Banking,Enterprise,Referral,8,0,3,116,0
+LD00814,Manufacturing,SME,Event,6,0,3,85,0
+LD00815,Banking,Mid-market,Website,6,0,6,117,0
+LD00816,Retail,SME,Referral,5,1,3,37,0
+LD00817,Banking,SME,Cold outreach,11,0,3,11,0
+LD00818,Oil & Gas,SME,Referral,9,0,2,16,0
+LD00819,Public Sector,Mid-market,Website,10,1,5,73,0
+LD00820,Manufacturing,SME,Website,4,0,5,49,0
+LD00821,Manufacturing,SME,Website,6,0,7,6,0
+LD00822,Telecoms,Enterprise,Referral,1,0,4,99,0
+LD00823,Retail,SME,Cold outreach,5,1,5,18,0
+LD00824,Banking,SME,LinkedIn,4,1,4,112,0
+LD00825,Retail,SME,Website,12,0,0,107,0
+LD00826,Public Sector,SME,Website,7,1,4,119,0
+LD00827,Retail,Mid-market,Event,3,0,2,78,0
+LD00828,Retail,SME,Website,4,0,1,99,0
+LD00829,Telecoms,SME,Referral,7,1,2,118,1
+LD00830,Oil & Gas,SME,Website,8,1,2,14,1
+LD00831,Oil & Gas,SME,Cold outreach,4,0,2,38,0
+LD00832,Oil & Gas,SME,Event,2,0,2,4,0
+LD00833,Manufacturing,SME,Referral,5,0,2,118,0
+LD00834,Manufacturing,Mid-market,Website,5,1,4,95,0
+LD00835,Retail,Enterprise,Event,8,0,4,76,0
+LD00836,Manufacturing,SME,Referral,6,0,1,80,0
+LD00837,Public Sector,SME,Cold outreach,7,1,4,77,0
+LD00838,Banking,SME,LinkedIn,6,1,6,114,0
+LD00839,Public Sector,SME,Website,10,0,2,89,0
+LD00840,Oil & Gas,Mid-market,Referral,3,1,2,1,1
+LD00841,Public Sector,Mid-market,Event,5,0,1,83,0
+LD00842,Public Sector,Mid-market,Cold outreach,8,0,4,98,0
+LD00843,Manufacturing,SME,Referral,9,0,5,47,0
+LD00844,Public Sector,Mid-market,Event,6,0,5,41,0
+LD00845,Public Sector,Mid-market,Cold outreach,6,1,1,110,0
+LD00846,Banking,Mid-market,Website,8,0,6,84,0
+LD00847,Manufacturing,Mid-market,LinkedIn,3,0,0,63,0
+LD00848,Telecoms,Mid-market,Cold outreach,5,1,4,42,0
+LD00849,Retail,SME,LinkedIn,3,0,2,52,1
+LD00850,Telecoms,Enterprise,LinkedIn,8,0,4,84,0
+LD00851,Banking,Mid-market,LinkedIn,6,0,1,51,0
+LD00852,Oil & Gas,Mid-market,LinkedIn,6,0,3,90,0
+LD00853,Banking,Enterprise,Referral,7,0,2,116,0
+LD00854,Retail,Mid-market,Referral,9,0,2,53,1
+LD00855,Manufacturing,Enterprise,Website,2,0,2,74,0
+LD00856,Banking,SME,Event,6,0,3,93,0
+LD00857,Retail,Enterprise,Event,0,0,0,83,0
+LD00858,Banking,Enterprise,Website,9,0,3,95,0
+LD00859,Public Sector,SME,Website,7,0,3,52,0
+LD00860,Retail,SME,LinkedIn,3,1,4,107,0
+LD00861,Retail,Enterprise,LinkedIn,7,0,2,64,0
+LD00862,Public Sector,Mid-market,Website,9,1,3,74,0
+LD00863,Manufacturing,SME,Event,3,0,3,75,0
+LD00864,Oil & Gas,Enterprise,Event,6,0,6,69,1
+LD00865,Manufacturing,SME,Website,3,1,3,12,0
+LD00866,Retail,SME,Cold outreach,4,0,5,79,0
+LD00867,Manufacturing,SME,LinkedIn,7,0,3,104,1
+LD00868,Telecoms,SME,Referral,2,0,1,72,1
+LD00869,Banking,Mid-market,Cold outreach,6,0,6,82,1
+LD00870,Public Sector,Mid-market,Website,6,1,4,84,0
+LD00871,Manufacturing,Mid-market,Cold outreach,3,0,4,106,0
+LD00872,Oil & Gas,Enterprise,Event,7,0,2,20,1
+LD00873,Manufacturing,Enterprise,Referral,2,1,1,71,1
+LD00874,Manufacturing,Mid-market,Website,9,0,4,77,0
+LD00875,Retail,Mid-market,Website,5,0,1,2,0
+LD00876,Retail,SME,Website,4,0,2,91,0
+LD00877,Retail,Enterprise,Cold outreach,8,0,1,30,0
+LD00878,Manufacturing,SME,Cold outreach,6,0,2,5,0
+LD00879,Retail,SME,LinkedIn,5,0,0,23,0
+LD00880,Retail,SME,Referral,4,0,3,75,0
+LD00881,Oil & Gas,Mid-market,Website,6,0,6,67,0
+LD00882,Manufacturing,Enterprise,Cold outreach,5,0,0,78,0
+LD00883,Oil & Gas,SME,Cold outreach,6,0,4,40,0
+LD00884,Telecoms,Mid-market,Cold outreach,3,1,2,43,0
+LD00885,Telecoms,Mid-market,Cold outreach,6,0,4,4,0
+LD00886,Retail,SME,Event,1,1,1,39,0
+LD00887,Public Sector,Mid-market,Cold outreach,6,0,3,107,0
+LD00888,Banking,SME,Website,10,0,5,70,0
+LD00889,Oil & Gas,Mid-market,Website,6,0,6,54,0
+LD00890,Public Sector,SME,Referral,5,0,2,5,0
+LD00891,Oil & Gas,Mid-market,Referral,9,0,3,34,1
+LD00892,Manufacturing,Enterprise,LinkedIn,5,0,3,17,1
+LD00893,Telecoms,SME,LinkedIn,5,1,1,40,0
+LD00894,Retail,SME,Event,4,0,2,92,0
+LD00895,Oil & Gas,Mid-market,Cold outreach,6,0,2,112,0
+LD00896,Manufacturing,SME,Referral,6,1,4,57,0
+LD00897,Manufacturing,SME,Website,11,0,3,105,0
+LD00898,Public Sector,SME,LinkedIn,9,0,7,101,0
+LD00899,Manufacturing,SME,Website,3,0,5,83,0
+LD00900,Manufacturing,Enterprise,Cold outreach,12,1,4,30,1
+LD00901,Oil & Gas,Mid-market,Website,5,0,2,63,0
+LD00902,Oil & Gas,Enterprise,Cold outreach,6,0,1,110,0
+LD00903,Telecoms,Mid-market,LinkedIn,5,0,1,80,0
+LD00904,Telecoms,SME,Event,8,0,1,84,1
+LD00905,Telecoms,SME,Website,7,0,0,44,0
+LD00906,Manufacturing,Mid-market,LinkedIn,4,0,1,85,0
+LD00907,Manufacturing,SME,Website,9,0,3,53,0
+LD00908,Public Sector,Mid-market,Website,6,0,1,5,0
+LD00909,Public Sector,SME,LinkedIn,3,0,3,44,0
+LD00910,Banking,Enterprise,Website,6,0,2,15,0
+LD00911,Public Sector,SME,Cold outreach,5,0,3,23,0
+LD00912,Telecoms,Mid-market,LinkedIn,9,0,3,14,0
+LD00913,Manufacturing,SME,Website,5,0,3,78,0
+LD00914,Telecoms,SME,LinkedIn,7,0,4,63,1
+LD00915,Telecoms,Enterprise,Referral,6,0,5,3,1
+LD00916,Retail,SME,Website,5,0,0,102,0
+LD00917,Telecoms,SME,Website,6,0,2,73,0
+LD00918,Telecoms,SME,Event,10,1,3,11,0
+LD00919,Telecoms,Mid-market,Website,7,0,4,18,0
+LD00920,Telecoms,SME,Website,10,0,4,33,0
+LD00921,Banking,Enterprise,Event,8,0,7,90,0
+LD00922,Manufacturing,SME,Event,8,0,1,93,0
+LD00923,Public Sector,Mid-market,LinkedIn,8,0,2,105,0
+LD00924,Telecoms,SME,Event,7,0,2,45,0
+LD00925,Manufacturing,Enterprise,Cold outreach,3,1,3,29,0
+LD00926,Manufacturing,SME,Event,9,0,2,20,0
+LD00927,Manufacturing,Mid-market,LinkedIn,3,1,3,118,0
+LD00928,Telecoms,Enterprise,Referral,5,0,1,25,0
+LD00929,Telecoms,SME,Cold outreach,5,0,3,60,0
+LD00930,Oil & Gas,Mid-market,Cold outreach,5,1,3,81,0
+LD00931,Oil & Gas,SME,Website,10,0,4,108,0
+LD00932,Telecoms,SME,Event,4,1,4,23,0
+LD00933,Telecoms,Mid-market,Referral,3,0,2,6,0
+LD00934,Public Sector,SME,Referral,6,0,4,93,0
+LD00935,Retail,Mid-market,Referral,4,1,4,65,0
+LD00936,Telecoms,SME,Event,7,0,1,31,0
+LD00937,Public Sector,SME,Website,4,1,5,43,1
+LD00938,Public Sector,SME,Referral,5,0,4,28,0
+LD00939,Banking,SME,Event,4,1,0,117,0
+LD00940,Public Sector,Mid-market,Referral,7,0,3,113,0
+LD00941,Banking,SME,Event,6,0,4,94,0
+LD00942,Public Sector,SME,Website,10,0,3,34,0
+LD00943,Public Sector,Enterprise,Referral,2,0,4,102,0
+LD00944,Telecoms,SME,Website,5,0,4,73,0
+LD00945,Telecoms,Enterprise,LinkedIn,6,0,7,106,1
+LD00946,Public Sector,SME,Website,6,0,2,102,0
+LD00947,Manufacturing,Enterprise,LinkedIn,9,0,2,92,0
+LD00948,Telecoms,SME,Event,5,0,5,76,0
+LD00949,Public Sector,Mid-market,Referral,10,0,3,86,0
+LD00950,Retail,SME,Referral,6,0,3,62,0
+LD00951,Oil & Gas,Mid-market,Website,5,0,3,104,0
+LD00952,Retail,Enterprise,Referral,4,0,2,25,0
+LD00953,Banking,Enterprise,LinkedIn,4,1,3,90,0
+LD00954,Manufacturing,Enterprise,Cold outreach,4,0,3,108,0
+LD00955,Banking,SME,Referral,9,1,0,92,0
+LD00956,Manufacturing,Enterprise,Referral,6,0,4,27,1
+LD00957,Telecoms,Enterprise,Website,6,1,3,68,1
+LD00958,Banking,SME,Referral,7,0,2,95,0
+LD00959,Telecoms,SME,Event,9,0,4,52,1
+LD00960,Public Sector,SME,LinkedIn,9,0,3,86,1
+LD00961,Telecoms,SME,Referral,10,0,0,65,0
+LD00962,Public Sector,Enterprise,Cold outreach,3,0,5,51,0
+LD00963,Public Sector,SME,LinkedIn,10,0,4,87,0
+LD00964,Oil & Gas,SME,Website,6,0,6,63,1
+LD00965,Manufacturing,Enterprise,LinkedIn,10,0,3,9,0
+LD00966,Oil & Gas,Enterprise,LinkedIn,1,0,6,49,0
+LD00967,Telecoms,SME,LinkedIn,9,1,0,5,1
+LD00968,Banking,SME,Website,6,0,4,72,0
+LD00969,Banking,Enterprise,Event,6,0,1,64,1
+LD00970,Telecoms,Enterprise,Website,3,0,4,92,0
+LD00971,Oil & Gas,Mid-market,Referral,6,0,3,49,1
+LD00972,Public Sector,Mid-market,Referral,4,0,2,78,0
+LD00973,Retail,SME,LinkedIn,7,0,4,95,0
+LD00974,Public Sector,SME,Website,4,0,2,6,0
+LD00975,Telecoms,SME,Referral,11,0,5,55,1
+LD00976,Banking,SME,LinkedIn,2,0,3,8,0
+LD00977,Telecoms,SME,Cold outreach,4,0,2,61,0
+LD00978,Banking,Enterprise,Cold outreach,5,0,4,24,1
+LD00979,Telecoms,Enterprise,Website,2,0,0,9,0
+LD00980,Retail,Enterprise,Website,1,1,3,73,1
+LD00981,Telecoms,Enterprise,Cold outreach,4,0,1,110,0
+LD00982,Retail,Enterprise,Website,11,0,2,44,0
+LD00983,Telecoms,SME,LinkedIn,6,0,4,15,0
+LD00984,Oil & Gas,SME,LinkedIn,5,0,3,49,0
+LD00985,Manufacturing,Mid-market,LinkedIn,5,0,4,74,1
+LD00986,Banking,SME,Cold outreach,2,0,4,58,0
+LD00987,Retail,SME,Referral,4,1,4,55,1
+LD00988,Manufacturing,SME,Website,3,0,3,8,0
+LD00989,Banking,SME,Cold outreach,8,0,5,112,0
+LD00990,Manufacturing,SME,Website,4,1,2,61,0
+LD00991,Public Sector,SME,LinkedIn,8,0,4,68,0
+LD00992,Banking,SME,Referral,5,0,2,16,0
+LD00993,Banking,SME,Cold outreach,8,0,2,103,1
+LD00994,Public Sector,Mid-market,Event,10,0,6,65,0
+LD00995,Public Sector,Mid-market,Website,5,0,4,80,0
+LD00996,Oil & Gas,Mid-market,LinkedIn,3,0,3,115,0
+LD00997,Banking,SME,Referral,6,1,1,25,0
+LD00998,Banking,Enterprise,Event,7,0,0,46,0
+LD00999,Banking,Mid-market,Website,4,0,5,45,0
+LD01000,Retail,SME,Website,6,1,2,73,1
+LD01001,Manufacturing,Enterprise,Event,9,0,4,62,0
+LD01002,Public Sector,SME,Event,3,0,3,28,0
+LD01003,Oil & Gas,Enterprise,Website,6,0,4,43,0
+LD01004,Manufacturing,SME,Event,9,1,2,20,0
+LD01005,Banking,SME,LinkedIn,9,0,0,114,0
+LD01006,Telecoms,Mid-market,Event,11,0,2,103,0
+LD01007,Banking,Enterprise,Event,5,0,3,78,0
+LD01008,Retail,SME,Event,6,0,4,98,1
+LD01009,Manufacturing,SME,Website,5,0,2,71,0
+LD01010,Telecoms,SME,LinkedIn,9,0,6,117,0
+LD01011,Banking,SME,Referral,7,0,4,100,0
+LD01012,Oil & Gas,Mid-market,Event,8,0,3,18,0
+LD01013,Manufacturing,Mid-market,Website,6,1,4,106,0
+LD01014,Manufacturing,SME,LinkedIn,5,0,5,113,0
+LD01015,Banking,SME,LinkedIn,6,0,4,6,0
+LD01016,Public Sector,SME,LinkedIn,3,0,4,55,0
+LD01017,Retail,SME,Cold outreach,7,1,2,63,1
+LD01018,Retail,Enterprise,LinkedIn,4,0,1,33,0
+LD01019,Manufacturing,SME,Cold outreach,6,0,1,76,0
+LD01020,Telecoms,SME,Website,9,0,4,47,0
+LD01021,Public Sector,SME,LinkedIn,8,0,2,64,0
+LD01022,Telecoms,SME,LinkedIn,2,0,3,117,0
+LD01023,Banking,Mid-market,Referral,6,0,1,102,0
+LD01024,Oil & Gas,Mid-market,LinkedIn,2,0,4,71,0
+LD01025,Manufacturing,SME,Cold outreach,4,0,3,61,0
+LD01026,Public Sector,Mid-market,Event,5,0,4,26,1
+LD01027,Oil & Gas,Enterprise,Website,4,0,0,109,1
+LD01028,Public Sector,Enterprise,LinkedIn,8,0,3,14,0
+LD01029,Telecoms,Mid-market,Website,2,1,3,30,0
+LD01030,Manufacturing,SME,Event,3,0,1,43,0
+LD01031,Retail,SME,Website,5,1,3,103,1
+LD01032,Public Sector,SME,LinkedIn,6,1,3,116,0
+LD01033,Public Sector,Mid-market,Event,11,1,4,18,1
+LD01034,Retail,Enterprise,Referral,6,0,2,109,0
+LD01035,Telecoms,SME,Cold outreach,8,1,6,76,0
+LD01036,Oil & Gas,SME,LinkedIn,4,0,3,64,0
+LD01037,Public Sector,Enterprise,Referral,7,0,3,10,0
+LD01038,Manufacturing,Enterprise,Cold outreach,11,0,6,56,0
+LD01039,Oil & Gas,SME,Website,6,0,5,22,0
+LD01040,Manufacturing,Mid-market,Event,9,0,2,90,0
+LD01041,Oil & Gas,SME,Website,5,0,3,85,0
+LD01042,Banking,Mid-market,Cold outreach,8,1,3,85,0
+LD01043,Telecoms,Mid-market,LinkedIn,5,0,2,31,0
+LD01044,Public Sector,SME,Website,6,1,7,12,1
+LD01045,Retail,SME,Website,10,0,3,70,0
+LD01046,Banking,Mid-market,Event,4,0,3,65,0
+LD01047,Retail,SME,Event,8,0,0,40,1
+LD01048,Manufacturing,Mid-market,Referral,7,0,1,106,0
+LD01049,Oil & Gas,SME,LinkedIn,4,1,4,5,0
+LD01050,Oil & Gas,SME,LinkedIn,8,0,2,35,0
+LD01051,Retail,Enterprise,Website,8,1,2,29,1
+LD01052,Retail,Mid-market,Website,4,0,4,25,0
+LD01053,Banking,Mid-market,Website,6,0,3,11,0
+LD01054,Oil & Gas,SME,Website,2,0,2,38,0
+LD01055,Manufacturing,Mid-market,LinkedIn,8,0,3,51,0
+LD01056,Oil & Gas,Mid-market,Event,7,0,8,66,0
+LD01057,Oil & Gas,SME,Website,4,0,2,10,0
+LD01058,Retail,Mid-market,Website,5,0,7,55,0
+LD01059,Manufacturing,SME,LinkedIn,0,1,2,98,0
+LD01060,Banking,SME,Event,5,1,4,77,0
+LD01061,Telecoms,SME,Referral,3,0,5,50,0
+LD01062,Oil & Gas,SME,Event,8,0,3,57,0
+LD01063,Oil & Gas,SME,LinkedIn,8,0,3,74,0
+LD01064,Public Sector,Mid-market,Referral,8,0,2,31,1
+LD01065,Oil & Gas,SME,Website,4,0,3,7,0
+LD01066,Telecoms,Mid-market,Referral,9,0,3,35,0
+LD01067,Retail,SME,LinkedIn,7,0,3,49,0
+LD01068,Retail,SME,Cold outreach,7,1,5,116,0
+LD01069,Retail,SME,Event,7,0,3,63,0
+LD01070,Retail,SME,Website,7,1,5,54,1
+LD01071,Manufacturing,Mid-market,Website,7,0,3,81,0
+LD01072,Banking,SME,Referral,4,0,3,18,0
+LD01073,Oil & Gas,SME,LinkedIn,6,0,2,101,0
+LD01074,Manufacturing,Enterprise,Cold outreach,6,0,2,42,0
+LD01075,Oil & Gas,SME,Cold outreach,4,0,3,24,0
+LD01076,Telecoms,Enterprise,Cold outreach,10,1,3,41,0
+LD01077,Banking,Mid-market,LinkedIn,9,0,3,11,0
+LD01078,Retail,SME,Website,5,0,4,53,0
+LD01079,Manufacturing,SME,Cold outreach,4,1,2,34,0
+LD01080,Retail,SME,LinkedIn,2,0,3,101,0
+LD01081,Retail,SME,Website,8,0,3,66,0
+LD01082,Retail,Enterprise,LinkedIn,7,0,4,111,0
+LD01083,Banking,SME,LinkedIn,3,0,2,89,0
+LD01084,Public Sector,Mid-market,Website,6,1,2,64,1
+LD01085,Telecoms,SME,Cold outreach,7,0,4,50,0
+LD01086,Oil & Gas,Mid-market,LinkedIn,7,0,4,85,0
+LD01087,Banking,SME,Website,8,0,3,79,0
+LD01088,Telecoms,Enterprise,Referral,3,1,3,75,0
+LD01089,Manufacturing,Enterprise,Referral,3,0,5,73,0
+LD01090,Telecoms,SME,LinkedIn,8,0,5,55,0
+LD01091,Manufacturing,Mid-market,Cold outreach,3,0,7,28,0
+LD01092,Manufacturing,SME,Cold outreach,9,0,3,118,0
+LD01093,Manufacturing,Enterprise,Event,6,0,3,93,0
+LD01094,Public Sector,SME,LinkedIn,4,0,3,103,0
+LD01095,Oil & Gas,SME,Website,9,0,3,8,0
+LD01096,Public Sector,Enterprise,Referral,8,0,5,9,0
+LD01097,Public Sector,SME,Website,7,0,4,80,0
+LD01098,Public Sector,SME,Website,6,0,4,102,0
+LD01099,Banking,SME,LinkedIn,2,0,2,113,0
+LD01100,Telecoms,Mid-market,Referral,6,0,3,67,0
+LD01101,Telecoms,SME,LinkedIn,9,0,1,93,0
+LD01102,Oil & Gas,Enterprise,Website,6,0,4,87,0
+LD01103,Telecoms,SME,LinkedIn,5,0,2,109,0
+LD01104,Oil & Gas,Mid-market,LinkedIn,11,1,4,107,0
+LD01105,Retail,SME,Cold outreach,5,0,1,91,0
+LD01106,Telecoms,Mid-market,Website,7,0,2,35,0
+LD01107,Banking,Mid-market,Cold outreach,6,1,3,24,0
+LD01108,Telecoms,Mid-market,Cold outreach,3,0,1,71,0
+LD01109,Oil & Gas,Mid-market,Website,5,0,4,114,0
+LD01110,Public Sector,SME,Website,6,1,3,20,0
+LD01111,Retail,Enterprise,Website,5,0,1,83,0
+LD01112,Public Sector,Enterprise,Cold outreach,7,0,2,116,1
+LD01113,Telecoms,SME,LinkedIn,7,1,3,71,1
+LD01114,Telecoms,Enterprise,Event,6,0,4,19,1
+LD01115,Retail,SME,Cold outreach,8,0,1,59,0
+LD01116,Telecoms,SME,Website,3,0,6,59,0
+LD01117,Manufacturing,SME,LinkedIn,3,0,2,107,0
+LD01118,Public Sector,Enterprise,Cold outreach,3,1,3,84,0
+LD01119,Banking,Mid-market,Referral,4,1,1,103,0
+LD01120,Public Sector,SME,Cold outreach,5,0,7,6,0
+LD01121,Public Sector,Mid-market,LinkedIn,4,1,0,32,0
+LD01122,Retail,SME,Website,10,0,1,94,0
+LD01123,Manufacturing,Enterprise,Website,8,0,5,34,0
+LD01124,Banking,Mid-market,Event,5,0,2,94,0
+LD01125,Banking,Enterprise,Event,5,0,2,3,1
+LD01126,Retail,Mid-market,Referral,8,0,3,34,0
+LD01127,Banking,Mid-market,LinkedIn,4,0,4,51,0
+LD01128,Retail,SME,LinkedIn,9,0,4,19,0
+LD01129,Retail,Mid-market,Website,3,0,2,84,0
+LD01130,Oil & Gas,Mid-market,Cold outreach,9,0,3,116,0
+LD01131,Public Sector,SME,Referral,1,0,5,94,0
+LD01132,Banking,SME,Cold outreach,6,0,4,97,1
+LD01133,Manufacturing,Mid-market,Referral,14,0,2,68,0
+LD01134,Manufacturing,Mid-market,LinkedIn,7,0,4,25,0
+LD01135,Retail,SME,LinkedIn,4,1,0,52,0
+LD01136,Telecoms,SME,Website,7,0,1,50,0
+LD01137,Oil & Gas,Mid-market,Event,11,0,5,77,0
+LD01138,Oil & Gas,SME,Referral,7,1,5,4,0
+LD01139,Telecoms,Mid-market,LinkedIn,6,0,3,7,0
+LD01140,Manufacturing,SME,LinkedIn,7,1,0,49,0
+LD01141,Retail,SME,Referral,11,0,4,17,0
+LD01142,Oil & Gas,Enterprise,Event,7,0,4,96,0
+LD01143,Retail,SME,LinkedIn,5,0,1,15,0
+LD01144,Oil & Gas,SME,Referral,4,0,2,76,0
+LD01145,Manufacturing,SME,Referral,4,1,2,97,0
+LD01146,Public Sector,SME,LinkedIn,3,0,3,87,0
+LD01147,Oil & Gas,SME,LinkedIn,4,0,4,36,0
+LD01148,Telecoms,Mid-market,Website,7,0,2,31,0
+LD01149,Banking,SME,Referral,8,0,6,87,0
+LD01150,Banking,Enterprise,Website,5,0,2,94,0
+LD01151,Retail,SME,LinkedIn,3,0,1,90,0
+LD01152,Oil & Gas,Enterprise,LinkedIn,4,0,1,111,0
+LD01153,Telecoms,SME,Event,7,0,3,91,0
+LD01154,Banking,Mid-market,Event,5,1,4,27,0
+LD01155,Telecoms,Mid-market,Cold outreach,7,0,6,89,0
+LD01156,Oil & Gas,Mid-market,Cold outreach,5,0,3,60,0
+LD01157,Banking,SME,Website,4,1,5,37,0
+LD01158,Telecoms,Enterprise,Event,6,0,2,79,0
+LD01159,Retail,SME,LinkedIn,3,0,1,82,0
+LD01160,Public Sector,Enterprise,Event,7,0,4,69,0
+LD01161,Banking,SME,Event,3,1,5,110,0
+LD01162,Manufacturing,Mid-market,Website,4,1,5,96,1
+LD01163,Telecoms,SME,Event,7,1,3,30,1
+LD01164,Telecoms,Mid-market,LinkedIn,6,1,2,43,0
+LD01165,Oil & Gas,Mid-market,Cold outreach,5,1,1,29,0
+LD01166,Public Sector,SME,Website,2,1,1,20,0
+LD01167,Banking,SME,Event,7,1,1,52,0
+LD01168,Manufacturing,Enterprise,LinkedIn,5,0,2,41,0
+LD01169,Public Sector,Enterprise,Cold outreach,5,1,3,1,1
+LD01170,Oil & Gas,SME,Event,8,0,6,31,0
+LD01171,Banking,Mid-market,Cold outreach,6,0,1,10,0
+LD01172,Banking,SME,Website,5,1,2,110,0
+LD01173,Public Sector,Enterprise,Referral,7,0,7,44,0
+LD01174,Public Sector,Enterprise,LinkedIn,9,0,4,64,0
+LD01175,Oil & Gas,SME,Website,8,1,2,11,0
+LD01176,Telecoms,Mid-market,Event,7,0,4,10,0
+LD01177,Telecoms,SME,Event,11,0,1,67,0
+LD01178,Banking,SME,Event,4,0,1,17,0
+LD01179,Oil & Gas,Mid-market,LinkedIn,6,0,3,75,0
+LD01180,Oil & Gas,SME,Cold outreach,12,1,3,21,0
+LD01181,Retail,SME,Cold outreach,5,0,1,109,0
+LD01182,Oil & Gas,SME,Cold outreach,6,0,6,94,0
+LD01183,Manufacturing,SME,Referral,6,1,2,18,0
+LD01184,Banking,SME,Cold outreach,7,0,5,15,0
+LD01185,Retail,SME,LinkedIn,4,0,6,19,0
+LD01186,Public Sector,SME,Website,7,0,1,84,0
+LD01187,Telecoms,Mid-market,Event,5,0,3,13,0
+LD01188,Telecoms,SME,Website,9,0,2,11,0
+LD01189,Manufacturing,SME,Website,5,0,1,56,0
+LD01190,Oil & Gas,Enterprise,Referral,6,0,5,85,0
+LD01191,Public Sector,SME,Referral,4,0,5,13,0
+LD01192,Telecoms,Enterprise,Website,4,0,2,110,0
+LD01193,Retail,SME,Referral,7,0,3,68,0
+LD01194,Retail,SME,Cold outreach,7,0,2,63,0
+LD01195,Manufacturing,SME,Website,5,1,0,44,0
+LD01196,Oil & Gas,SME,Website,8,0,2,112,0
+LD01197,Oil & Gas,Mid-market,LinkedIn,5,0,2,29,0
+LD01198,Oil & Gas,SME,LinkedIn,8,0,3,28,0
+LD01199,Telecoms,SME,Referral,7,0,5,71,0
+LD01200,Public Sector,Mid-market,Website,8,0,2,21,0
+LD01201,Banking,Enterprise,Website,4,1,6,117,0
+LD01202,Manufacturing,Mid-market,Event,6,0,3,99,0
+LD01203,Public Sector,Enterprise,LinkedIn,8,0,3,13,0
+LD01204,Manufacturing,SME,LinkedIn,6,0,3,111,0
+LD01205,Manufacturing,Mid-market,Website,4,0,4,23,0
+LD01206,Oil & Gas,Mid-market,Website,4,0,1,109,0
+LD01207,Banking,SME,LinkedIn,8,0,5,48,0
+LD01208,Telecoms,Mid-market,Event,11,0,3,50,0
+LD01209,Manufacturing,Mid-market,Website,6,0,4,29,0
+LD01210,Telecoms,Mid-market,Website,2,0,4,68,0
+LD01211,Manufacturing,SME,Website,7,1,2,115,0
+LD01212,Manufacturing,SME,Event,5,1,3,56,0
+LD01213,Manufacturing,Enterprise,Referral,4,0,5,45,1
+LD01214,Oil & Gas,Enterprise,Event,7,0,4,13,1
+LD01215,Manufacturing,SME,LinkedIn,8,0,3,78,0
+LD01216,Banking,SME,Event,8,1,6,66,1
+LD01217,Manufacturing,Enterprise,LinkedIn,8,0,2,46,0
+LD01218,Public Sector,Enterprise,Cold outreach,4,0,1,115,0
+LD01219,Oil & Gas,SME,LinkedIn,5,0,4,11,0
+LD01220,Oil & Gas,Mid-market,Event,4,1,3,85,1
+LD01221,Manufacturing,Mid-market,Referral,5,1,2,88,0
+LD01222,Telecoms,SME,LinkedIn,3,0,2,73,0
+LD01223,Telecoms,SME,Referral,8,0,5,53,0
+LD01224,Retail,SME,Cold outreach,8,0,4,78,0
+LD01225,Manufacturing,SME,Website,3,0,4,111,0
+LD01226,Telecoms,SME,Website,5,0,1,3,0
+LD01227,Manufacturing,SME,Cold outreach,7,0,4,72,0
+LD01228,Manufacturing,SME,Cold outreach,5,0,5,11,0
+LD01229,Retail,Mid-market,Website,6,1,2,104,0
+LD01230,Telecoms,Mid-market,Cold outreach,6,0,2,52,0
+LD01231,Manufacturing,SME,Cold outreach,6,0,6,75,0
+LD01232,Manufacturing,Mid-market,Website,7,0,4,49,0
+LD01233,Oil & Gas,Mid-market,Event,1,0,2,1,0
+LD01234,Retail,SME,Website,4,0,5,77,0
+LD01235,Telecoms,Enterprise,LinkedIn,6,0,4,45,0
+LD01236,Manufacturing,Mid-market,Referral,10,0,0,34,0
+LD01237,Oil & Gas,SME,LinkedIn,10,0,4,32,0
+LD01238,Telecoms,Mid-market,Cold outreach,10,1,2,16,0
+LD01239,Oil & Gas,SME,Event,7,0,4,15,0
+LD01240,Public Sector,Enterprise,Cold outreach,7,0,1,12,0
+LD01241,Public Sector,SME,Website,3,0,4,31,0
+LD01242,Telecoms,Mid-market,LinkedIn,6,0,1,65,0
+LD01243,Oil & Gas,Mid-market,Cold outreach,8,0,3,71,1
+LD01244,Retail,Mid-market,Referral,10,0,4,56,0
+LD01245,Retail,Enterprise,Referral,6,1,4,1,1
+LD01246,Oil & Gas,SME,Website,9,0,2,71,0
+LD01247,Banking,Mid-market,LinkedIn,3,0,1,34,0
+LD01248,Manufacturing,Enterprise,Referral,6,0,2,94,0
+LD01249,Banking,Mid-market,Referral,6,1,4,26,0
+LD01250,Manufacturing,SME,Referral,11,1,4,42,1
+LD01251,Telecoms,SME,Website,8,0,3,51,0
+LD01252,Manufacturing,Mid-market,Website,6,0,3,6,0
+LD01253,Telecoms,Mid-market,Cold outreach,4,0,6,66,0
+LD01254,Oil & Gas,Mid-market,LinkedIn,8,0,2,68,1
+LD01255,Banking,SME,Cold outreach,8,0,2,63,0
+LD01256,Telecoms,SME,Event,8,0,6,27,1
+LD01257,Manufacturing,SME,Website,4,0,4,87,0
+LD01258,Retail,SME,Event,5,1,3,79,0
+LD01259,Banking,Enterprise,LinkedIn,7,0,4,36,1
+LD01260,Public Sector,Enterprise,LinkedIn,4,1,0,34,1
+LD01261,Oil & Gas,Mid-market,Website,2,0,3,73,0
+LD01262,Retail,SME,Referral,3,0,1,45,0
+LD01263,Banking,Enterprise,Cold outreach,5,0,4,19,1
+LD01264,Retail,Mid-market,Cold outreach,4,0,1,56,0
+LD01265,Banking,Enterprise,Referral,11,0,1,63,1
+LD01266,Public Sector,SME,Cold outreach,5,0,2,22,0
+LD01267,Telecoms,Mid-market,Cold outreach,8,0,6,50,0
+LD01268,Banking,SME,Cold outreach,7,1,1,92,1
+LD01269,Banking,SME,Event,7,0,4,110,1
+LD01270,Retail,SME,Cold outreach,2,0,5,63,0
+LD01271,Retail,SME,Event,5,0,3,81,0
+LD01272,Telecoms,SME,LinkedIn,7,0,4,99,0
+LD01273,Public Sector,Enterprise,LinkedIn,1,0,4,18,0
+LD01274,Telecoms,SME,Cold outreach,6,0,1,80,0
+LD01275,Retail,Mid-market,Cold outreach,9,1,6,8,0
+LD01276,Retail,SME,Website,5,0,3,48,0
+LD01277,Oil & Gas,SME,Cold outreach,3,0,2,15,0
+LD01278,Telecoms,SME,Website,7,0,5,75,0
+LD01279,Manufacturing,Mid-market,Website,5,0,2,9,0
+LD01280,Public Sector,Enterprise,Cold outreach,6,0,1,97,0
+LD01281,Manufacturing,SME,Cold outreach,9,0,7,6,0
+LD01282,Manufacturing,SME,Website,9,0,2,119,0
+LD01283,Telecoms,SME,Cold outreach,5,1,3,88,0
+LD01284,Retail,Enterprise,LinkedIn,10,0,5,25,0
+LD01285,Oil & Gas,SME,LinkedIn,6,0,2,24,0
+LD01286,Banking,SME,Website,5,0,2,68,0
+LD01287,Manufacturing,SME,LinkedIn,12,0,2,48,1
+LD01288,Manufacturing,Mid-market,Website,8,0,4,63,0
+LD01289,Manufacturing,Enterprise,Website,10,0,2,61,0
+LD01290,Banking,SME,Website,8,0,5,80,1
+LD01291,Oil & Gas,Enterprise,LinkedIn,3,0,3,47,0
+LD01292,Telecoms,Mid-market,Website,8,0,0,92,0
+LD01293,Manufacturing,SME,Website,6,0,5,9,1
+LD01294,Banking,SME,Cold outreach,2,0,3,113,0
+LD01295,Retail,Mid-market,LinkedIn,7,0,0,79,0
+LD01296,Manufacturing,Mid-market,Event,3,0,2,26,0
+LD01297,Retail,SME,LinkedIn,7,1,4,44,1
+LD01298,Oil & Gas,Mid-market,Website,6,0,2,19,0
+LD01299,Telecoms,SME,Event,6,0,1,86,0
+LD01300,Banking,SME,LinkedIn,5,1,4,4,1
+LD01301,Banking,SME,Cold outreach,10,1,4,46,1
+LD01302,Retail,SME,Cold outreach,7,0,5,65,0
+LD01303,Public Sector,SME,Referral,4,1,4,62,1
+LD01304,Public Sector,Enterprise,LinkedIn,4,0,3,73,0
+LD01305,Public Sector,SME,Website,7,0,5,56,0
+LD01306,Manufacturing,SME,Event,3,1,2,87,0
+LD01307,Public Sector,Enterprise,LinkedIn,5,0,8,51,0
+LD01308,Oil & Gas,Mid-market,Website,3,0,4,113,0
+LD01309,Retail,SME,Cold outreach,6,0,5,18,0
+LD01310,Retail,SME,LinkedIn,7,0,4,84,0
+LD01311,Banking,SME,LinkedIn,9,0,2,63,0
+LD01312,Banking,SME,Website,6,0,1,44,0
+LD01313,Public Sector,SME,Cold outreach,6,1,2,108,0
+LD01314,Retail,SME,Website,3,0,1,50,0
+LD01315,Banking,SME,LinkedIn,5,1,2,99,0
+LD01316,Banking,SME,Website,3,1,4,87,0
+LD01317,Banking,Enterprise,Website,9,0,2,36,1
+LD01318,Oil & Gas,SME,LinkedIn,8,0,2,84,0
+LD01319,Public Sector,Mid-market,Event,9,0,6,42,0
+LD01320,Manufacturing,SME,Website,4,0,4,32,0
+LD01321,Oil & Gas,Enterprise,LinkedIn,6,0,1,107,0
+LD01322,Telecoms,SME,Cold outreach,5,0,2,36,0
+LD01323,Banking,SME,Website,7,1,3,70,0
+LD01324,Public Sector,Mid-market,Event,8,0,1,92,0
+LD01325,Oil & Gas,Mid-market,Cold outreach,8,0,5,118,0
+LD01326,Public Sector,Enterprise,Event,9,0,3,118,0
+LD01327,Banking,Enterprise,Website,5,1,6,66,1
+LD01328,Oil & Gas,Mid-market,Website,3,0,2,98,0
+LD01329,Manufacturing,SME,Cold outreach,5,0,4,19,0
+LD01330,Public Sector,Enterprise,Cold outreach,6,0,4,51,0
+LD01331,Public Sector,Mid-market,Cold outreach,11,0,6,29,0
+LD01332,Telecoms,SME,Website,4,1,3,59,0
+LD01333,Retail,Mid-market,Website,8,0,5,109,0
+LD01334,Telecoms,SME,Website,9,0,1,68,0
+LD01335,Manufacturing,SME,LinkedIn,3,1,3,87,0
+LD01336,Banking,Enterprise,Event,3,0,2,107,0
+LD01337,Retail,Enterprise,Website,7,0,1,68,0
+LD01338,Manufacturing,Mid-market,Website,3,0,3,61,0
+LD01339,Banking,Mid-market,Referral,3,0,0,1,0
+LD01340,Public Sector,SME,Cold outreach,6,0,1,14,0
+LD01341,Public Sector,Mid-market,Event,6,0,4,26,0
+LD01342,Manufacturing,SME,Event,6,0,5,61,0
+LD01343,Oil & Gas,Mid-market,LinkedIn,5,0,4,75,0
+LD01344,Oil & Gas,SME,Event,5,0,5,40,1
+LD01345,Telecoms,Mid-market,Cold outreach,5,0,3,83,0
+LD01346,Telecoms,SME,Referral,7,1,2,50,1
+LD01347,Telecoms,SME,Event,6,0,2,12,0
+LD01348,Banking,Enterprise,Website,5,1,4,62,1
+LD01349,Retail,SME,Event,1,0,5,99,0
+LD01350,Oil & Gas,Enterprise,Referral,4,0,3,67,0
+LD01351,Public Sector,SME,Website,6,0,2,39,0
+LD01352,Oil & Gas,SME,Referral,10,0,2,102,0
+LD01353,Manufacturing,Mid-market,LinkedIn,4,1,4,51,0
+LD01354,Manufacturing,SME,LinkedIn,3,1,4,97,0
+LD01355,Manufacturing,SME,Cold outreach,8,1,6,59,1
+LD01356,Public Sector,Mid-market,Website,4,0,2,93,0
+LD01357,Public Sector,Mid-market,LinkedIn,6,0,5,86,0
+LD01358,Oil & Gas,SME,Cold outreach,9,1,2,103,1
+LD01359,Telecoms,SME,LinkedIn,4,0,1,11,0
+LD01360,Public Sector,Mid-market,Referral,6,0,2,76,0
+LD01361,Retail,SME,Website,4,0,2,1,1
+LD01362,Public Sector,Mid-market,Website,4,0,5,88,0
+LD01363,Manufacturing,SME,Cold outreach,3,0,2,102,0
+LD01364,Manufacturing,Enterprise,LinkedIn,4,1,3,77,1
+LD01365,Manufacturing,SME,Event,4,0,5,92,0
+LD01366,Manufacturing,SME,Website,4,1,2,73,0
+LD01367,Telecoms,SME,Event,7,0,4,119,0
+LD01368,Oil & Gas,SME,LinkedIn,11,1,5,75,1
+LD01369,Banking,Enterprise,LinkedIn,6,1,4,83,0
+LD01370,Manufacturing,Mid-market,Event,3,0,1,31,0
+LD01371,Telecoms,SME,Referral,9,0,3,86,0
+LD01372,Manufacturing,SME,Website,8,0,1,92,0
+LD01373,Banking,SME,Website,7,0,3,64,0
+LD01374,Telecoms,Enterprise,LinkedIn,3,0,1,11,0
+LD01375,Oil & Gas,SME,Cold outreach,5,0,5,119,0
+LD01376,Telecoms,SME,Cold outreach,6,0,3,22,0
+LD01377,Manufacturing,Mid-market,Cold outreach,9,0,5,47,1
+LD01378,Oil & Gas,Mid-market,Referral,6,0,4,14,0
+LD01379,Telecoms,Mid-market,Cold outreach,3,0,2,16,0
+LD01380,Retail,Enterprise,Website,9,0,5,96,0
+LD01381,Retail,Mid-market,LinkedIn,7,1,5,37,0
+LD01382,Oil & Gas,SME,LinkedIn,6,0,2,49,0
+LD01383,Oil & Gas,Mid-market,Event,11,0,2,25,0
+LD01384,Manufacturing,SME,Website,6,0,4,46,0
+LD01385,Manufacturing,SME,Cold outreach,6,1,1,39,0
+LD01386,Telecoms,SME,Cold outreach,3,0,3,10,0
+LD01387,Retail,SME,Cold outreach,6,0,4,34,0
+LD01388,Oil & Gas,SME,Website,7,0,4,10,1
+LD01389,Public Sector,Mid-market,Referral,8,0,2,32,0
+LD01390,Manufacturing,Enterprise,Event,9,1,1,20,1
+LD01391,Banking,Mid-market,Website,4,0,3,1,0
+LD01392,Banking,SME,Event,6,0,2,88,0
+LD01393,Banking,Mid-market,Referral,6,0,8,6,0
+LD01394,Manufacturing,SME,LinkedIn,5,0,3,58,0
+LD01395,Oil & Gas,SME,Cold outreach,4,0,1,54,0
+LD01396,Oil & Gas,Mid-market,Cold outreach,3,1,3,118,0
+LD01397,Oil & Gas,Enterprise,Event,4,0,0,95,0
+LD01398,Telecoms,SME,Cold outreach,4,1,3,42,1
+LD01399,Telecoms,Enterprise,Event,6,1,3,4,0
+LD01400,Oil & Gas,SME,Event,6,0,5,10,0
+LD01401,Banking,SME,Cold outreach,5,0,4,95,0
+LD01402,Banking,SME,LinkedIn,6,0,4,48,0
+LD01403,Public Sector,SME,Website,4,0,2,99,0
+LD01404,Oil & Gas,Enterprise,Website,5,0,4,34,0
+LD01405,Telecoms,SME,Website,5,1,2,117,0
+LD01406,Manufacturing,Enterprise,Event,5,0,5,47,0
+LD01407,Oil & Gas,SME,Website,5,0,1,85,0
+LD01408,Banking,SME,Event,6,0,2,33,0
+LD01409,Manufacturing,Enterprise,LinkedIn,9,0,4,69,0
+LD01410,Oil & Gas,SME,Cold outreach,8,0,4,108,0
+LD01411,Manufacturing,Enterprise,Cold outreach,3,0,1,24,0
+LD01412,Telecoms,SME,LinkedIn,6,0,4,17,1
+LD01413,Manufacturing,SME,Cold outreach,6,0,4,1,0
+LD01414,Telecoms,Mid-market,LinkedIn,6,1,2,117,0
+LD01415,Oil & Gas,SME,Website,5,0,3,39,0
+LD01416,Public Sector,SME,Website,6,0,5,105,0
+LD01417,Banking,SME,Cold outreach,3,0,6,89,0
+LD01418,Oil & Gas,SME,LinkedIn,8,0,5,68,0
+LD01419,Public Sector,SME,Website,4,1,2,50,0
+LD01420,Oil & Gas,SME,Website,2,1,1,32,1
+LD01421,Retail,SME,Referral,7,0,3,90,0
+LD01422,Banking,Enterprise,Referral,8,0,2,80,0
+LD01423,Telecoms,Enterprise,Website,6,0,2,85,0
+LD01424,Retail,Mid-market,Website,8,0,3,112,0
+LD01425,Manufacturing,SME,Cold outreach,1,1,2,112,0
+LD01426,Retail,SME,Website,6,0,2,114,0
+LD01427,Retail,Enterprise,Website,10,0,4,21,1
+LD01428,Public Sector,SME,Cold outreach,2,1,3,72,0
+LD01429,Oil & Gas,SME,Referral,5,0,2,93,0
+LD01430,Retail,SME,Cold outreach,5,0,4,12,0
+LD01431,Telecoms,SME,Event,4,1,0,97,0
+LD01432,Retail,SME,Event,4,1,5,17,0
+LD01433,Oil & Gas,SME,Website,5,1,4,14,0
+LD01434,Oil & Gas,Mid-market,LinkedIn,3,0,3,77,0
+LD01435,Public Sector,Mid-market,Cold outreach,6,0,0,99,0
+LD01436,Retail,Mid-market,Event,2,0,2,78,0
+LD01437,Telecoms,Enterprise,Referral,4,1,3,41,0
+LD01438,Manufacturing,SME,Event,6,1,4,107,0
+LD01439,Retail,SME,Event,6,0,2,53,0
+LD01440,Manufacturing,Enterprise,Event,7,0,3,26,0
+LD01441,Manufacturing,SME,Cold outreach,2,0,6,19,0
+LD01442,Public Sector,SME,Website,5,0,3,100,1
+LD01443,Public Sector,SME,Event,7,0,2,80,1
+LD01444,Manufacturing,Mid-market,LinkedIn,10,1,1,53,1
+LD01445,Telecoms,Mid-market,Event,7,0,3,23,0
+LD01446,Oil & Gas,Mid-market,LinkedIn,4,0,5,93,0
+LD01447,Banking,SME,Website,4,0,4,42,0
+LD01448,Oil & Gas,Mid-market,Cold outreach,5,1,0,49,0
+LD01449,Manufacturing,Enterprise,Cold outreach,4,0,4,5,0
+LD01450,Manufacturing,SME,Cold outreach,4,1,4,108,1
+LD01451,Retail,Enterprise,Referral,5,1,1,7,1
+LD01452,Banking,SME,Event,4,0,0,37,0
+LD01453,Retail,Mid-market,LinkedIn,10,1,6,91,0
+LD01454,Telecoms,SME,LinkedIn,5,0,0,119,0
+LD01455,Public Sector,Mid-market,Referral,5,0,5,46,1
+LD01456,Public Sector,SME,Website,6,0,2,45,0
+LD01457,Manufacturing,SME,Event,8,0,4,99,1
+LD01458,Public Sector,SME,LinkedIn,5,0,1,10,0
+LD01459,Banking,SME,Website,3,0,3,75,0
+LD01460,Public Sector,SME,Cold outreach,9,0,4,75,0
+LD01461,Public Sector,SME,Cold outreach,6,1,6,38,0
+LD01462,Oil & Gas,Mid-market,Website,6,0,5,96,0
+LD01463,Public Sector,Enterprise,Event,9,0,2,80,0
+LD01464,Telecoms,Mid-market,Cold outreach,8,0,3,24,0
+LD01465,Retail,Mid-market,LinkedIn,13,0,5,99,0
+LD01466,Retail,Enterprise,Website,4,0,5,89,0
+LD01467,Telecoms,SME,Referral,6,0,3,74,1
+LD01468,Retail,Mid-market,Referral,4,0,2,57,0
+LD01469,Banking,Enterprise,Website,4,0,5,43,0
+LD01470,Retail,Mid-market,LinkedIn,9,0,3,20,0
+LD01471,Telecoms,Mid-market,Website,2,0,2,86,0
+LD01472,Telecoms,SME,Website,3,0,2,76,0
+LD01473,Manufacturing,Mid-market,LinkedIn,4,0,4,51,0
+LD01474,Oil & Gas,Mid-market,Cold outreach,3,0,4,18,0
+LD01475,Oil & Gas,SME,Website,9,0,2,79,0
+LD01476,Retail,SME,Event,4,0,1,109,0
+LD01477,Telecoms,SME,Referral,2,1,2,1,1
+LD01478,Oil & Gas,SME,Referral,5,0,2,60,0
+LD01479,Manufacturing,Enterprise,Event,5,1,2,78,0
+LD01480,Public Sector,Mid-market,Referral,7,1,6,94,0
+LD01481,Banking,SME,Event,5,1,2,59,1
+LD01482,Retail,Enterprise,Website,5,1,3,95,0
+LD01483,Retail,SME,LinkedIn,4,0,6,9,0
+LD01484,Retail,SME,Website,4,0,1,65,0
+LD01485,Manufacturing,SME,Event,8,0,1,114,0
+LD01486,Retail,SME,Website,3,0,5,107,0
+LD01487,Oil & Gas,SME,Website,4,0,4,90,0
+LD01488,Oil & Gas,Enterprise,LinkedIn,5,0,4,42,0
+LD01489,Retail,Mid-market,Event,3,0,4,115,1
+LD01490,Retail,SME,Referral,6,0,3,13,1
+LD01491,Banking,Enterprise,Event,5,0,5,118,0
+LD01492,Retail,Enterprise,LinkedIn,4,0,2,94,1
+LD01493,Retail,Mid-market,Cold outreach,5,1,4,93,0
+LD01494,Banking,Mid-market,Cold outreach,3,1,1,113,0
+LD01495,Oil & Gas,Mid-market,Website,8,0,6,67,0
+LD01496,Manufacturing,Enterprise,LinkedIn,6,1,6,84,1
+LD01497,Retail,SME,Event,2,0,2,99,0
+LD01498,Retail,SME,Referral,4,0,1,117,0
+LD01499,Oil & Gas,SME,Website,5,0,2,88,0
+LD01500,Banking,SME,Website,2,1,3,48,0
+LD01501,Telecoms,Mid-market,LinkedIn,6,0,3,12,0
+LD01502,Oil & Gas,SME,Event,10,0,5,37,0
+LD01503,Banking,SME,Event,5,0,4,97,0
+LD01504,Manufacturing,SME,Cold outreach,6,0,4,38,0
+LD01505,Telecoms,Mid-market,Website,5,0,1,43,0
+LD01506,Public Sector,SME,Website,5,0,1,29,0
+LD01507,Banking,Mid-market,Website,4,0,3,15,0
+LD01508,Telecoms,SME,Website,3,0,2,43,0
+LD01509,Telecoms,SME,Referral,3,0,1,33,1
+LD01510,Telecoms,Mid-market,Referral,6,0,3,48,0
+LD01511,Manufacturing,SME,Website,8,0,2,70,0
+LD01512,Oil & Gas,Mid-market,Cold outreach,8,1,1,58,0
+LD01513,Oil & Gas,SME,Website,13,0,3,38,0
+LD01514,Oil & Gas,SME,Cold outreach,4,0,3,52,0
+LD01515,Manufacturing,SME,Website,2,1,4,83,1
+LD01516,Retail,Enterprise,Website,4,0,2,92,0
+LD01517,Manufacturing,SME,Cold outreach,3,0,1,17,0
+LD01518,Public Sector,Mid-market,Cold outreach,4,0,3,111,0
+LD01519,Retail,Mid-market,LinkedIn,2,1,1,16,1
+LD01520,Oil & Gas,Mid-market,LinkedIn,5,1,4,74,0
+LD01521,Banking,SME,Cold outreach,8,0,7,73,0
+LD01522,Banking,Mid-market,Website,9,1,4,52,0
+LD01523,Banking,Mid-market,LinkedIn,5,0,6,58,0
+LD01524,Oil & Gas,SME,Event,6,0,1,84,0
+LD01525,Banking,Mid-market,Cold outreach,8,0,4,97,0
+LD01526,Manufacturing,Enterprise,Event,6,0,4,91,0
+LD01527,Public Sector,Enterprise,Event,4,0,3,35,1
+LD01528,Banking,Enterprise,LinkedIn,7,0,1,45,1
+LD01529,Public Sector,SME,Website,7,1,3,44,0
+LD01530,Oil & Gas,SME,Website,2,0,6,100,0
+LD01531,Manufacturing,SME,LinkedIn,2,0,8,100,0
+LD01532,Oil & Gas,Mid-market,Event,6,0,3,84,0
+LD01533,Public Sector,Enterprise,Event,10,0,5,98,0
+LD01534,Telecoms,Mid-market,Event,3,0,5,48,0
+LD01535,Retail,SME,Cold outreach,11,0,6,42,0
+LD01536,Public Sector,SME,Referral,10,0,2,91,0
+LD01537,Oil & Gas,Mid-market,Website,8,0,4,105,0
+LD01538,Retail,Enterprise,Cold outreach,5,0,0,61,0
+LD01539,Manufacturing,Enterprise,LinkedIn,7,0,1,114,0
+LD01540,Manufacturing,Mid-market,Website,7,0,2,58,0
+LD01541,Public Sector,SME,LinkedIn,9,0,4,76,0
+LD01542,Manufacturing,Mid-market,Website,10,0,2,40,0
+LD01543,Oil & Gas,Mid-market,Website,2,0,1,92,0
+LD01544,Banking,SME,Referral,6,0,6,78,1
+LD01545,Banking,SME,Website,7,0,2,96,0
+LD01546,Telecoms,Mid-market,Referral,1,0,4,99,1
+LD01547,Banking,Mid-market,Event,7,0,3,39,0
+LD01548,Banking,Mid-market,LinkedIn,5,0,2,28,0
+LD01549,Banking,Mid-market,Website,7,0,4,5,0
+LD01550,Oil & Gas,Mid-market,Referral,5,1,1,34,1
+LD01551,Retail,Mid-market,LinkedIn,6,0,1,83,0
+LD01552,Telecoms,SME,Cold outreach,5,0,3,79,0
+LD01553,Telecoms,Mid-market,Event,6,0,1,90,0
+LD01554,Manufacturing,SME,Website,10,0,2,97,0
+LD01555,Retail,Mid-market,LinkedIn,5,0,2,50,0
+LD01556,Public Sector,SME,Event,5,0,2,29,0
+LD01557,Telecoms,SME,Event,7,0,3,57,0
+LD01558,Manufacturing,SME,Website,6,0,1,70,0
+LD01559,Manufacturing,SME,Website,5,0,1,97,0
+LD01560,Public Sector,SME,Cold outreach,5,0,4,5,0
+LD01561,Manufacturing,Mid-market,Website,11,0,2,15,0
+LD01562,Manufacturing,Mid-market,Cold outreach,5,0,3,75,0
+LD01563,Retail,Enterprise,Event,10,1,3,52,1
+LD01564,Manufacturing,Mid-market,Cold outreach,8,0,4,85,0
+LD01565,Banking,SME,Website,7,0,2,116,0
+LD01566,Manufacturing,SME,Website,4,0,4,55,0
+LD01567,Telecoms,SME,Website,12,1,3,59,0
+LD01568,Retail,SME,Referral,8,0,5,32,0
+LD01569,Telecoms,Enterprise,Referral,1,1,2,91,1
+LD01570,Banking,Mid-market,Website,8,0,2,89,0
+LD01571,Manufacturing,SME,Referral,7,1,3,115,1
+LD01572,Manufacturing,Enterprise,Cold outreach,14,0,2,11,0
+LD01573,Banking,SME,Website,5,0,2,39,0
+LD01574,Retail,Mid-market,Cold outreach,9,0,1,18,0
+LD01575,Public Sector,Mid-market,Referral,7,0,0,18,0
+LD01576,Banking,Mid-market,Website,8,0,1,51,0
+LD01577,Public Sector,SME,Referral,4,0,1,8,0
+LD01578,Manufacturing,Mid-market,LinkedIn,2,0,1,103,0
+LD01579,Public Sector,SME,Referral,3,0,2,2,0
+LD01580,Banking,SME,LinkedIn,4,0,3,31,0
+LD01581,Retail,SME,LinkedIn,6,0,2,5,0
+LD01582,Retail,SME,Event,5,0,4,78,0
+LD01583,Telecoms,SME,Website,2,1,2,107,0
+LD01584,Public Sector,Mid-market,Cold outreach,11,1,2,40,0
+LD01585,Telecoms,SME,LinkedIn,10,0,4,32,0
+LD01586,Oil & Gas,Enterprise,Cold outreach,6,0,2,109,0
+LD01587,Public Sector,Enterprise,Cold outreach,5,0,1,12,0
+LD01588,Public Sector,Mid-market,Cold outreach,8,1,5,29,1
+LD01589,Telecoms,Mid-market,Event,14,1,2,75,0
+LD01590,Banking,SME,LinkedIn,10,0,2,34,0
+LD01591,Oil & Gas,Enterprise,Cold outreach,7,0,5,80,0
+LD01592,Manufacturing,SME,Website,4,0,0,28,0
+LD01593,Manufacturing,SME,Website,9,0,5,26,0
+LD01594,Telecoms,Mid-market,Website,3,0,4,19,0
+LD01595,Banking,SME,LinkedIn,4,0,4,107,0
+LD01596,Oil & Gas,SME,Referral,6,0,5,111,0
+LD01597,Oil & Gas,Mid-market,Website,4,0,3,28,0
+LD01598,Telecoms,SME,Cold outreach,4,1,2,76,0
+LD01599,Telecoms,SME,Website,4,0,1,103,0
+LD01600,Banking,Enterprise,Referral,8,0,4,111,0
+LD01601,Oil & Gas,SME,LinkedIn,6,1,6,60,0
+LD01602,Oil & Gas,SME,Website,11,0,1,34,0
+LD01603,Retail,SME,LinkedIn,7,0,1,99,1
+LD01604,Oil & Gas,SME,Event,9,0,3,77,0
+LD01605,Manufacturing,SME,Referral,6,1,1,106,0
+LD01606,Retail,SME,Website,6,1,3,102,1
+LD01607,Telecoms,Mid-market,Website,6,0,2,52,0
+LD01608,Banking,Mid-market,Cold outreach,8,0,2,2,0
+LD01609,Banking,Mid-market,Website,1,0,5,19,0
+LD01610,Manufacturing,Mid-market,Website,10,0,5,27,0
+LD01611,Banking,Mid-market,Cold outreach,4,0,4,116,0
+LD01612,Telecoms,Mid-market,Website,5,0,5,44,0
+LD01613,Banking,SME,Cold outreach,7,0,4,48,0
+LD01614,Banking,SME,Website,6,0,7,104,0
+LD01615,Telecoms,Mid-market,LinkedIn,5,1,3,68,0
+LD01616,Manufacturing,SME,Event,9,0,4,62,0
+LD01617,Retail,Mid-market,Website,7,0,2,63,0
+LD01618,Banking,Mid-market,LinkedIn,12,0,4,83,0
+LD01619,Banking,Mid-market,Cold outreach,3,0,1,71,0
+LD01620,Banking,Mid-market,LinkedIn,6,0,2,7,0
+LD01621,Oil & Gas,SME,Website,7,0,2,67,0
+LD01622,Public Sector,SME,Cold outreach,5,0,1,42,0
+LD01623,Banking,SME,Website,5,0,3,22,0
+LD01624,Telecoms,SME,LinkedIn,6,0,0,31,0
+LD01625,Telecoms,Enterprise,Event,7,0,1,27,0
+LD01626,Banking,SME,Website,8,0,0,12,0
+LD01627,Banking,Mid-market,Cold outreach,7,0,2,117,1
+LD01628,Telecoms,SME,LinkedIn,9,0,4,3,0
+LD01629,Manufacturing,SME,Cold outreach,8,0,2,60,1
+LD01630,Banking,Mid-market,Event,5,0,2,9,1
+LD01631,Public Sector,Mid-market,LinkedIn,7,0,3,82,0
+LD01632,Banking,SME,Referral,8,0,0,80,0
+LD01633,Retail,SME,Referral,9,0,2,37,1
+LD01634,Banking,SME,Website,8,1,5,61,0
+LD01635,Retail,Mid-market,Event,3,0,3,29,0
+LD01636,Banking,Mid-market,Website,5,0,1,36,0
+LD01637,Manufacturing,SME,LinkedIn,5,0,4,80,0
+LD01638,Telecoms,Enterprise,Cold outreach,8,0,5,99,0
+LD01639,Oil & Gas,Mid-market,Website,8,0,4,34,0
+LD01640,Oil & Gas,SME,LinkedIn,7,0,2,53,0
+LD01641,Oil & Gas,Enterprise,Referral,7,0,1,10,0
+LD01642,Retail,SME,Website,13,1,4,48,1
+LD01643,Oil & Gas,SME,LinkedIn,9,0,4,77,0
+LD01644,Public Sector,Enterprise,Cold outreach,4,0,0,94,0
+LD01645,Telecoms,SME,LinkedIn,7,0,3,76,0
+LD01646,Banking,SME,Website,7,1,1,106,0
+LD01647,Retail,Mid-market,Cold outreach,3,1,0,62,0
+LD01648,Retail,Enterprise,LinkedIn,7,0,6,92,0
+LD01649,Public Sector,Enterprise,Cold outreach,7,0,0,53,0
+LD01650,Manufacturing,Mid-market,Cold outreach,10,1,0,19,0
+LD01651,Manufacturing,Mid-market,Website,11,0,1,45,0
+LD01652,Manufacturing,SME,Website,2,0,2,17,0
+LD01653,Retail,Enterprise,LinkedIn,4,1,3,111,0
+LD01654,Oil & Gas,SME,Referral,7,0,5,44,1
+LD01655,Public Sector,SME,Cold outreach,3,0,5,104,0
+LD01656,Banking,Mid-market,Cold outreach,8,1,2,98,0
+LD01657,Oil & Gas,SME,Website,7,0,2,1,1
+LD01658,Telecoms,Enterprise,LinkedIn,3,0,6,54,0
+LD01659,Retail,Mid-market,Event,4,0,1,115,0
+LD01660,Manufacturing,SME,Event,10,1,3,90,0
+LD01661,Banking,SME,Website,7,1,1,25,0
+LD01662,Retail,SME,LinkedIn,8,1,3,98,1
+LD01663,Oil & Gas,Mid-market,LinkedIn,4,0,2,74,0
+LD01664,Public Sector,Mid-market,Event,2,1,2,14,0
+LD01665,Retail,SME,Event,5,0,4,48,0
+LD01666,Oil & Gas,SME,Referral,4,0,4,13,0
+LD01667,Banking,Mid-market,Website,4,0,3,79,0
+LD01668,Oil & Gas,SME,Website,5,0,1,69,0
+LD01669,Banking,SME,Website,6,0,1,9,0
+LD01670,Telecoms,SME,LinkedIn,7,0,8,15,0
+LD01671,Public Sector,SME,Cold outreach,5,1,3,16,0
+LD01672,Banking,SME,Event,3,0,6,10,0
+LD01673,Manufacturing,Enterprise,Website,3,0,1,3,0
+LD01674,Public Sector,Mid-market,Referral,4,0,3,84,0
+LD01675,Telecoms,Mid-market,Website,8,0,1,75,0
+LD01676,Public Sector,SME,Event,13,0,6,42,0
+LD01677,Telecoms,Mid-market,Website,4,0,5,100,0
+LD01678,Public Sector,SME,Website,5,0,2,74,0
+LD01679,Oil & Gas,Mid-market,LinkedIn,8,0,3,18,0
+LD01680,Telecoms,Enterprise,LinkedIn,7,0,3,95,0
+LD01681,Banking,Enterprise,LinkedIn,6,0,3,107,1
+LD01682,Public Sector,SME,Cold outreach,5,0,4,101,0
+LD01683,Oil & Gas,SME,Referral,8,0,2,60,0
+LD01684,Oil & Gas,SME,Website,7,0,2,75,0
+LD01685,Manufacturing,SME,LinkedIn,5,0,1,70,0
+LD01686,Banking,Mid-market,Event,5,0,5,20,0
+LD01687,Banking,Enterprise,Website,4,0,0,96,0
+LD01688,Banking,SME,Website,8,0,5,34,0
+LD01689,Public Sector,Mid-market,Event,5,0,4,52,0
+LD01690,Retail,SME,Website,12,1,2,50,1
+LD01691,Telecoms,SME,LinkedIn,7,0,4,3,1
+LD01692,Oil & Gas,Enterprise,Event,4,0,1,35,0
+LD01693,Oil & Gas,SME,Referral,7,1,3,36,1
+LD01694,Oil & Gas,Mid-market,LinkedIn,5,0,3,15,0
+LD01695,Manufacturing,SME,Cold outreach,7,0,4,31,0
+LD01696,Oil & Gas,Mid-market,LinkedIn,6,1,4,35,0
+LD01697,Telecoms,Enterprise,Event,8,1,4,45,1
+LD01698,Public Sector,Mid-market,Website,5,0,2,18,0
+LD01699,Telecoms,Mid-market,Referral,9,0,4,104,0
+LD01700,Telecoms,SME,Referral,6,0,2,66,0
+LD01701,Banking,SME,Referral,3,0,3,78,1
+LD01702,Oil & Gas,Mid-market,LinkedIn,8,0,3,78,0
+LD01703,Manufacturing,Mid-market,Website,3,0,0,13,0
+LD01704,Retail,Enterprise,Referral,7,1,1,86,0
+LD01705,Banking,Mid-market,LinkedIn,6,0,6,83,0
+LD01706,Retail,Mid-market,Event,3,1,5,106,0
+LD01707,Banking,Mid-market,Cold outreach,3,0,5,108,1
+LD01708,Oil & Gas,SME,LinkedIn,6,0,5,45,0
+LD01709,Oil & Gas,SME,LinkedIn,5,0,2,23,0
+LD01710,Oil & Gas,Enterprise,LinkedIn,9,1,3,87,1
+LD01711,Oil & Gas,Mid-market,Referral,6,0,3,43,0
+LD01712,Manufacturing,Mid-market,Cold outreach,6,0,2,113,0
+LD01713,Manufacturing,SME,Event,8,0,4,16,0
+LD01714,Public Sector,Enterprise,Referral,6,0,0,23,0
+LD01715,Banking,Mid-market,Event,7,0,3,49,1
+LD01716,Oil & Gas,SME,Website,4,0,2,87,1
+LD01717,Public Sector,SME,Event,10,0,5,6,0
+LD01718,Public Sector,Mid-market,Event,4,0,4,13,0
+LD01719,Retail,Mid-market,Website,6,0,3,50,0
+LD01720,Oil & Gas,SME,Website,8,1,1,73,0
+LD01721,Public Sector,SME,Event,10,0,3,111,0
+LD01722,Public Sector,Mid-market,LinkedIn,8,1,3,28,0
+LD01723,Manufacturing,Mid-market,Referral,8,0,2,84,0
+LD01724,Oil & Gas,Mid-market,Event,6,0,2,117,0
+LD01725,Public Sector,Mid-market,Event,6,0,3,54,0
+LD01726,Retail,Enterprise,Cold outreach,7,0,4,62,0
+LD01727,Public Sector,SME,Cold outreach,7,0,3,64,0
+LD01728,Manufacturing,SME,LinkedIn,8,1,4,117,0
+LD01729,Retail,SME,Cold outreach,6,0,1,112,0
+LD01730,Retail,Mid-market,Referral,2,0,8,74,0
+LD01731,Oil & Gas,SME,Referral,5,0,1,9,0
+LD01732,Oil & Gas,Mid-market,Website,5,0,4,7,0
+LD01733,Oil & Gas,SME,Referral,9,0,2,5,0
+LD01734,Telecoms,SME,LinkedIn,4,0,5,24,0
+LD01735,Public Sector,SME,Website,7,1,3,87,0
+LD01736,Manufacturing,Mid-market,LinkedIn,7,0,3,106,0
+LD01737,Public Sector,Mid-market,LinkedIn,5,0,2,37,0
+LD01738,Oil & Gas,Enterprise,LinkedIn,4,0,2,53,0
+LD01739,Retail,Mid-market,Referral,11,0,4,48,0
+LD01740,Banking,Mid-market,Referral,10,1,1,79,1
+LD01741,Retail,SME,Website,3,1,3,117,1
+LD01742,Public Sector,Mid-market,Event,8,0,7,65,0
+LD01743,Public Sector,Mid-market,Website,13,1,0,92,0
+LD01744,Banking,Mid-market,Event,8,0,2,101,0
+LD01745,Retail,Mid-market,Referral,8,0,2,93,0
+LD01746,Banking,SME,Website,2,0,0,79,0
+LD01747,Public Sector,SME,LinkedIn,6,0,5,94,0
+LD01748,Retail,Enterprise,Website,6,1,2,74,0
+LD01749,Telecoms,Enterprise,LinkedIn,1,0,4,91,0
+LD01750,Banking,Enterprise,LinkedIn,7,0,3,87,0
+LD01751,Retail,Mid-market,Event,5,0,3,67,0
+LD01752,Banking,SME,Cold outreach,6,0,5,111,0
+LD01753,Oil & Gas,Enterprise,Website,6,0,2,119,0
+LD01754,Retail,Enterprise,Referral,7,1,5,28,0
+LD01755,Public Sector,Mid-market,Website,4,1,5,54,0
+LD01756,Retail,SME,Website,6,0,4,60,0
+LD01757,Telecoms,Mid-market,Referral,10,0,4,55,0
+LD01758,Retail,SME,Cold outreach,5,1,1,89,0
+LD01759,Public Sector,Enterprise,LinkedIn,6,0,4,81,0
+LD01760,Manufacturing,SME,Website,7,0,6,103,0
+LD01761,Public Sector,Mid-market,Referral,9,0,4,31,0
+LD01762,Oil & Gas,Enterprise,LinkedIn,8,0,6,33,0
+LD01763,Retail,Mid-market,Event,8,0,1,19,0
+LD01764,Telecoms,Mid-market,Cold outreach,2,0,5,85,0
+LD01765,Retail,Mid-market,LinkedIn,4,1,5,30,1
+LD01766,Public Sector,Enterprise,Website,7,0,3,110,0
+LD01767,Public Sector,Enterprise,Cold outreach,9,0,3,5,0
+LD01768,Telecoms,SME,Event,7,0,4,94,0
+LD01769,Retail,Enterprise,Website,5,1,5,70,1
+LD01770,Telecoms,Enterprise,Website,4,0,2,12,0
+LD01771,Public Sector,Mid-market,Cold outreach,8,0,4,96,0
+LD01772,Manufacturing,Mid-market,Website,8,0,5,92,0
+LD01773,Manufacturing,SME,LinkedIn,3,0,3,88,0
+LD01774,Telecoms,SME,Website,3,0,6,108,0
+LD01775,Oil & Gas,Enterprise,Referral,7,0,2,104,0
+LD01776,Oil & Gas,SME,Referral,7,0,3,63,0
+LD01777,Banking,SME,Event,8,0,5,108,0
+LD01778,Oil & Gas,SME,Cold outreach,3,0,2,13,0
+LD01779,Oil & Gas,SME,Website,3,0,0,1,0
+LD01780,Public Sector,Mid-market,Website,4,0,2,57,0
+LD01781,Public Sector,SME,LinkedIn,5,0,6,29,0
+LD01782,Telecoms,SME,Cold outreach,4,0,5,37,0
+LD01783,Public Sector,Enterprise,LinkedIn,5,0,3,30,0
+LD01784,Oil & Gas,Enterprise,Cold outreach,8,0,2,77,0
+LD01785,Public Sector,SME,LinkedIn,7,0,5,49,0
+LD01786,Banking,SME,LinkedIn,3,1,2,24,0
+LD01787,Public Sector,Mid-market,Referral,7,0,4,45,0
+LD01788,Retail,SME,Cold outreach,6,0,3,68,0
+LD01789,Manufacturing,SME,Website,2,0,1,70,0
+LD01790,Telecoms,SME,Website,5,1,1,57,0
+LD01791,Banking,Mid-market,Website,5,0,2,67,0
+LD01792,Oil & Gas,SME,Website,3,0,3,50,0
+LD01793,Oil & Gas,Enterprise,Referral,3,1,3,25,1
+LD01794,Manufacturing,SME,Referral,6,0,3,68,0
+LD01795,Public Sector,Enterprise,LinkedIn,4,1,6,118,0
+LD01796,Oil & Gas,Mid-market,Website,10,0,2,30,0
+LD01797,Oil & Gas,SME,LinkedIn,6,0,4,10,0
+LD01798,Manufacturing,Mid-market,Website,6,0,5,19,0
+LD01799,Oil & Gas,Enterprise,Website,7,1,2,101,0
+LD01800,Retail,SME,Website,9,1,3,49,0
+LD01801,Oil & Gas,Mid-market,Website,3,0,4,5,0
+LD01802,Manufacturing,Enterprise,Referral,7,0,4,109,0
+LD01803,Banking,Enterprise,Website,5,0,4,11,0
+LD01804,Banking,Mid-market,Cold outreach,3,0,3,90,0
+LD01805,Public Sector,Mid-market,Cold outreach,2,0,3,1,0
+LD01806,Retail,Mid-market,Referral,6,0,3,15,0
+LD01807,Banking,Enterprise,Cold outreach,6,1,2,115,0
+LD01808,Retail,SME,Event,5,0,2,38,0
+LD01809,Telecoms,Enterprise,Cold outreach,11,1,3,113,0
+LD01810,Telecoms,Enterprise,Cold outreach,3,1,1,63,0
+LD01811,Retail,Enterprise,Referral,5,0,3,101,0
+LD01812,Oil & Gas,Enterprise,Cold outreach,8,0,4,57,0
+LD01813,Manufacturing,Mid-market,Referral,6,0,2,69,0
+LD01814,Oil & Gas,SME,LinkedIn,8,0,3,79,0
+LD01815,Oil & Gas,Mid-market,Cold outreach,7,0,3,25,0
+LD01816,Manufacturing,Mid-market,LinkedIn,3,1,2,64,0
+LD01817,Retail,SME,Referral,6,0,1,59,0
+LD01818,Telecoms,SME,Referral,4,0,3,12,0
+LD01819,Public Sector,SME,Referral,7,0,0,24,0
+LD01820,Manufacturing,SME,LinkedIn,3,1,3,89,0
+LD01821,Public Sector,SME,LinkedIn,8,0,3,12,0
+LD01822,Public Sector,SME,LinkedIn,7,0,1,98,0
+LD01823,Banking,Mid-market,Website,3,0,7,8,0
+LD01824,Public Sector,Mid-market,Website,7,0,2,34,1
+LD01825,Banking,SME,LinkedIn,4,0,3,112,0
+LD01826,Banking,SME,Cold outreach,8,1,2,95,0
+LD01827,Telecoms,SME,Referral,2,1,4,113,0
+LD01828,Manufacturing,Enterprise,Cold outreach,9,0,4,83,0
+LD01829,Public Sector,Mid-market,LinkedIn,5,0,4,32,0
+LD01830,Public Sector,Enterprise,Website,7,0,2,28,0
+LD01831,Telecoms,Enterprise,Website,10,0,6,58,1
+LD01832,Banking,Enterprise,Website,5,1,1,45,0
+LD01833,Oil & Gas,Mid-market,Website,1,0,5,96,0
+LD01834,Telecoms,SME,Website,7,0,3,30,0
+LD01835,Oil & Gas,Enterprise,LinkedIn,2,0,5,50,0
+LD01836,Manufacturing,SME,Website,9,0,4,90,0
+LD01837,Retail,SME,Event,9,0,2,104,0
+LD01838,Manufacturing,Mid-market,Website,5,0,5,10,1
+LD01839,Banking,SME,Website,4,0,2,51,0
+LD01840,Oil & Gas,SME,LinkedIn,9,0,4,92,0
+LD01841,Retail,Enterprise,Event,6,0,5,36,0
+LD01842,Retail,SME,LinkedIn,9,1,6,19,0
+LD01843,Telecoms,SME,LinkedIn,8,0,1,43,0
+LD01844,Oil & Gas,Mid-market,Event,7,0,0,67,0
+LD01845,Banking,Mid-market,Event,4,0,1,64,0
+LD01846,Manufacturing,SME,Referral,6,0,3,7,0
+LD01847,Banking,SME,Referral,8,1,1,36,1
+LD01848,Public Sector,Mid-market,LinkedIn,4,0,3,69,0
+LD01849,Banking,SME,LinkedIn,6,0,4,53,0
+LD01850,Oil & Gas,Mid-market,Website,3,1,2,23,0
+LD01851,Retail,SME,LinkedIn,7,0,3,112,0
+LD01852,Telecoms,SME,Cold outreach,9,0,4,55,0
+LD01853,Retail,SME,Website,3,0,1,97,0
+LD01854,Oil & Gas,SME,LinkedIn,6,0,1,104,0
+LD01855,Oil & Gas,SME,Website,7,0,1,53,1
+LD01856,Manufacturing,Mid-market,Referral,6,0,1,40,0
+LD01857,Telecoms,Mid-market,Website,9,0,3,81,0
+LD01858,Telecoms,SME,Event,5,0,5,58,0
+LD01859,Manufacturing,SME,Cold outreach,8,0,1,4,0
+LD01860,Manufacturing,SME,Website,11,0,3,110,0
+LD01861,Telecoms,SME,Cold outreach,2,0,2,30,0
+LD01862,Manufacturing,Enterprise,Event,5,0,2,8,1
+LD01863,Banking,Mid-market,Website,1,1,2,116,0
+LD01864,Telecoms,Enterprise,LinkedIn,5,1,2,9,0
+LD01865,Banking,Enterprise,LinkedIn,8,0,5,6,0
+LD01866,Public Sector,Enterprise,Cold outreach,6,0,4,13,0
+LD01867,Public Sector,SME,Event,7,0,2,63,0
+LD01868,Manufacturing,SME,Referral,7,0,3,105,1
+LD01869,Banking,SME,Event,2,0,3,106,0
+LD01870,Retail,Mid-market,Website,8,0,2,115,0
+LD01871,Banking,SME,Event,6,1,3,102,0
+LD01872,Banking,SME,LinkedIn,1,1,4,40,0
+LD01873,Telecoms,SME,Website,9,0,5,34,1
+LD01874,Oil & Gas,Enterprise,Website,6,1,2,46,1
+LD01875,Banking,Mid-market,Website,5,0,3,114,0
+LD01876,Manufacturing,Mid-market,LinkedIn,7,0,1,73,0
+LD01877,Public Sector,Enterprise,Website,2,0,1,43,0
+LD01878,Retail,SME,Website,6,0,0,59,0
+LD01879,Manufacturing,SME,Website,5,1,4,26,0
+LD01880,Public Sector,SME,Event,5,0,4,117,0
+LD01881,Telecoms,Enterprise,Cold outreach,6,0,3,10,0
+LD01882,Public Sector,Mid-market,Event,7,1,3,48,1
+LD01883,Oil & Gas,SME,LinkedIn,9,0,1,27,0
+LD01884,Public Sector,Mid-market,Cold outreach,7,0,1,42,0
+LD01885,Manufacturing,SME,Website,7,0,4,34,0
+LD01886,Banking,Enterprise,Referral,5,1,3,89,1
+LD01887,Oil & Gas,SME,Cold outreach,9,0,2,97,0
+LD01888,Retail,SME,Website,5,0,2,79,0
+LD01889,Oil & Gas,SME,Referral,4,0,3,39,0
+LD01890,Telecoms,Enterprise,Event,14,0,3,96,0
+LD01891,Public Sector,Mid-market,Website,4,0,0,61,0
+LD01892,Banking,Mid-market,LinkedIn,7,0,3,29,0
+LD01893,Oil & Gas,Mid-market,Cold outreach,4,0,2,27,0
+LD01894,Banking,SME,Cold outreach,2,0,4,9,0
+LD01895,Telecoms,SME,Referral,8,0,1,67,0
+LD01896,Manufacturing,Mid-market,Referral,8,0,4,19,0
+LD01897,Oil & Gas,Mid-market,LinkedIn,11,1,2,115,0
+LD01898,Manufacturing,SME,LinkedIn,8,0,4,32,0
+LD01899,Retail,SME,Website,10,0,4,59,0
+LD01900,Manufacturing,SME,Website,2,0,1,101,0
+LD01901,Oil & Gas,Enterprise,LinkedIn,6,0,4,35,1
+LD01902,Public Sector,SME,Cold outreach,5,0,1,80,0
+LD01903,Manufacturing,SME,Website,7,0,5,5,0
+LD01904,Manufacturing,Mid-market,Event,6,0,4,38,1
+LD01905,Telecoms,Mid-market,Website,6,0,0,2,0
+LD01906,Manufacturing,SME,Website,5,0,4,41,0
+LD01907,Manufacturing,SME,Referral,8,1,7,18,1
+LD01908,Retail,SME,Website,8,1,5,79,1
+LD01909,Public Sector,SME,Cold outreach,3,0,4,89,0
+LD01910,Oil & Gas,Mid-market,Referral,4,1,2,92,0
+LD01911,Banking,SME,Event,10,0,8,68,1
+LD01912,Public Sector,SME,Referral,10,0,3,107,0
+LD01913,Oil & Gas,SME,LinkedIn,8,0,2,26,0
+LD01914,Telecoms,SME,Website,7,0,2,107,0
+LD01915,Public Sector,Mid-market,Website,6,0,3,106,0
+LD01916,Banking,SME,Referral,8,0,5,105,0
+LD01917,Banking,Mid-market,Website,2,0,2,5,0
+LD01918,Banking,Enterprise,LinkedIn,5,0,4,103,0
+LD01919,Public Sector,Mid-market,LinkedIn,4,1,3,71,0
+LD01920,Retail,SME,Cold outreach,10,0,1,98,0
+LD01921,Telecoms,Mid-market,Event,8,1,3,61,0
+LD01922,Oil & Gas,SME,Event,6,0,5,116,0
+LD01923,Telecoms,SME,Website,6,0,3,50,0
+LD01924,Retail,SME,Referral,7,0,1,3,0
+LD01925,Retail,SME,Event,4,1,3,41,1
+LD01926,Manufacturing,Mid-market,Event,8,0,1,75,0
+LD01927,Manufacturing,Mid-market,Referral,8,0,3,66,0
+LD01928,Retail,SME,Referral,4,0,5,56,1
+LD01929,Telecoms,SME,Website,6,0,3,85,0
+LD01930,Telecoms,Enterprise,LinkedIn,5,1,5,23,0
+LD01931,Banking,Mid-market,Website,6,0,4,8,0
+LD01932,Retail,SME,Website,7,0,4,77,0
+LD01933,Manufacturing,SME,Event,2,0,2,43,0
+LD01934,Public Sector,SME,Cold outreach,6,1,6,106,0
+LD01935,Retail,SME,Referral,2,1,4,78,0
+LD01936,Oil & Gas,Mid-market,Cold outreach,6,0,3,108,0
+LD01937,Oil & Gas,Mid-market,LinkedIn,3,0,3,45,0
+LD01938,Retail,SME,Website,5,0,3,50,0
+LD01939,Retail,Mid-market,Website,6,0,3,1,1
+LD01940,Retail,Mid-market,Website,2,0,2,67,1
+LD01941,Public Sector,SME,Website,3,1,4,91,0
+LD01942,Manufacturing,Enterprise,Website,3,0,5,11,0
+LD01943,Telecoms,Mid-market,Website,4,0,4,112,0
+LD01944,Telecoms,SME,Website,2,0,2,88,0
+LD01945,Oil & Gas,Mid-market,Website,10,0,1,59,0
+LD01946,Banking,SME,Event,6,0,1,65,0
+LD01947,Telecoms,Mid-market,Referral,4,0,2,22,1
+LD01948,Manufacturing,SME,Cold outreach,5,0,3,32,0
+LD01949,Retail,Enterprise,Website,9,0,3,33,0
+LD01950,Telecoms,SME,Cold outreach,5,0,2,53,0
+LD01951,Public Sector,Mid-market,Referral,4,1,3,44,1
+LD01952,Oil & Gas,SME,Website,4,0,4,6,0
+LD01953,Banking,SME,Referral,14,0,4,26,1
+LD01954,Banking,Mid-market,Event,6,1,1,119,0
+LD01955,Retail,SME,Website,10,1,4,102,1
+LD01956,Banking,SME,LinkedIn,7,0,3,58,0
+LD01957,Telecoms,Enterprise,Website,8,0,4,85,0
+LD01958,Retail,Mid-market,Event,5,0,3,70,0
+LD01959,Oil & Gas,Mid-market,Event,8,0,2,34,0
+LD01960,Public Sector,Mid-market,Website,3,0,3,115,0
+LD01961,Telecoms,Mid-market,LinkedIn,14,0,3,61,0
+LD01962,Oil & Gas,SME,Cold outreach,7,0,0,27,0
+LD01963,Telecoms,SME,Event,8,0,3,80,0
+LD01964,Oil & Gas,SME,Website,4,0,1,21,0
+LD01965,Telecoms,SME,Website,6,0,5,104,0
+LD01966,Banking,Mid-market,Event,3,0,3,64,0
+LD01967,Public Sector,SME,LinkedIn,6,0,6,31,0
+LD01968,Public Sector,SME,LinkedIn,4,0,5,42,0
+LD01969,Manufacturing,Mid-market,Event,4,0,2,2,0
+LD01970,Manufacturing,Mid-market,Website,9,0,4,107,0
+LD01971,Retail,SME,Cold outreach,5,0,2,112,0
+LD01972,Public Sector,SME,LinkedIn,4,0,4,28,0
+LD01973,Oil & Gas,SME,Website,4,0,4,88,0
+LD01974,Manufacturing,Mid-market,Referral,6,1,5,84,0
+LD01975,Retail,SME,LinkedIn,7,0,1,19,0
+LD01976,Telecoms,Mid-market,LinkedIn,8,0,2,70,0
+LD01977,Retail,Enterprise,Cold outreach,6,1,4,23,1
+LD01978,Banking,SME,Referral,6,0,2,83,0
+LD01979,Telecoms,SME,Cold outreach,5,0,5,7,0
+LD01980,Retail,Enterprise,LinkedIn,7,0,3,29,0
+LD01981,Public Sector,SME,Cold outreach,9,0,3,80,0
+LD01982,Public Sector,SME,Referral,9,0,3,87,0
+LD01983,Public Sector,SME,Cold outreach,10,0,6,118,0
+LD01984,Oil & Gas,SME,Website,3,0,1,6,0
+LD01985,Telecoms,Mid-market,Event,4,0,1,104,0
+LD01986,Telecoms,SME,Event,9,0,3,7,0
+LD01987,Public Sector,SME,Cold outreach,8,0,0,97,0
+LD01988,Oil & Gas,SME,LinkedIn,9,0,3,37,0
+LD01989,Oil & Gas,Enterprise,Website,6,1,1,87,0
+LD01990,Oil & Gas,Mid-market,Website,2,0,5,56,0
+LD01991,Telecoms,Mid-market,Cold outreach,3,0,1,17,0
+LD01992,Manufacturing,Mid-market,LinkedIn,6,1,1,39,0
+LD01993,Banking,SME,Referral,2,0,1,56,0
+LD01994,Banking,Mid-market,Website,9,0,5,66,1
+LD01995,Oil & Gas,SME,Website,7,0,1,2,0
+LD01996,Retail,Mid-market,Event,3,0,1,42,0
+LD01997,Telecoms,Mid-market,Referral,6,0,2,85,0
+LD01998,Manufacturing,SME,Website,7,1,2,41,1
+LD01999,Banking,Enterprise,Website,4,0,4,72,0
+LD02000,Retail,SME,Cold outreach,4,0,4,84,0
+LD02001,Oil & Gas,SME,Referral,8,0,6,76,0
+LD02002,Manufacturing,Mid-market,Website,4,0,6,89,0
+LD02003,Oil & Gas,SME,LinkedIn,9,0,2,97,0
+LD02004,Retail,Mid-market,Website,4,0,4,13,0
+LD02005,Banking,Enterprise,Cold outreach,1,0,2,7,1
+LD02006,Telecoms,Mid-market,Website,7,0,5,9,0
+LD02007,Banking,Enterprise,Cold outreach,11,0,1,56,1
+LD02008,Telecoms,Mid-market,Website,4,1,2,9,0
+LD02009,Public Sector,Mid-market,Website,2,0,3,56,0
+LD02010,Public Sector,SME,LinkedIn,7,0,0,72,0
+LD02011,Banking,Mid-market,Website,8,1,3,74,1
+LD02012,Public Sector,Mid-market,Event,11,0,4,44,1
+LD02013,Telecoms,SME,LinkedIn,2,1,6,90,0
+LD02014,Banking,Mid-market,Referral,7,0,5,1,1
+LD02015,Retail,Mid-market,Event,3,0,1,113,0
+LD02016,Retail,Mid-market,Referral,3,0,6,118,0
+LD02017,Oil & Gas,Mid-market,LinkedIn,9,0,1,22,0
+LD02018,Oil & Gas,Mid-market,LinkedIn,5,0,4,114,0
+LD02019,Banking,SME,Referral,6,0,3,99,0
+LD02020,Banking,Mid-market,Cold outreach,8,0,4,67,0
+LD02021,Public Sector,SME,LinkedIn,11,0,2,109,0
+LD02022,Manufacturing,Enterprise,LinkedIn,9,0,1,35,0
+LD02023,Banking,SME,Referral,4,0,3,26,0
+LD02024,Manufacturing,SME,Website,5,1,2,31,0
+LD02025,Manufacturing,SME,Event,10,0,2,45,0
+LD02026,Public Sector,SME,Referral,7,0,3,60,0
+LD02027,Retail,Mid-market,Referral,4,0,4,91,1
+LD02028,Telecoms,Mid-market,Referral,5,0,4,46,0
+LD02029,Retail,SME,Event,6,1,1,11,1
+LD02030,Oil & Gas,Enterprise,Referral,10,0,2,107,0
+LD02031,Public Sector,SME,Referral,5,0,4,89,0
+LD02032,Manufacturing,SME,Event,4,0,2,10,0
+LD02033,Public Sector,Mid-market,Website,5,0,4,55,0
+LD02034,Public Sector,Mid-market,Event,8,0,4,24,0
+LD02035,Manufacturing,Mid-market,Website,5,0,3,25,0
+LD02036,Telecoms,Mid-market,LinkedIn,6,0,2,67,0
+LD02037,Banking,SME,Website,8,0,1,40,0
+LD02038,Oil & Gas,Mid-market,LinkedIn,6,1,4,107,1
+LD02039,Oil & Gas,Mid-market,LinkedIn,3,0,5,83,0
+LD02040,Manufacturing,Mid-market,Website,5,0,2,72,0
+LD02041,Oil & Gas,Mid-market,Website,4,0,1,48,0
+LD02042,Retail,Mid-market,LinkedIn,9,0,4,119,0
+LD02043,Oil & Gas,SME,Event,3,0,4,54,0
+LD02044,Banking,Enterprise,Event,4,0,6,43,0
+LD02045,Banking,SME,Website,7,1,5,73,0
+LD02046,Oil & Gas,Enterprise,Cold outreach,8,0,1,5,1
+LD02047,Banking,SME,Cold outreach,2,0,4,76,0
+LD02048,Telecoms,Enterprise,Website,6,0,3,17,1
+LD02049,Public Sector,SME,Event,5,0,3,97,0
+LD02050,Telecoms,SME,Cold outreach,7,0,1,67,0
+LD02051,Telecoms,Mid-market,Referral,4,1,6,98,1
+LD02052,Public Sector,Enterprise,Cold outreach,7,0,4,103,0
+LD02053,Telecoms,SME,Website,6,1,2,17,1
+LD02054,Manufacturing,SME,Cold outreach,6,0,2,25,0
+LD02055,Retail,Enterprise,Website,5,0,3,11,0
+LD02056,Oil & Gas,SME,Cold outreach,8,0,5,8,0
+LD02057,Oil & Gas,SME,Website,4,0,2,4,0
+LD02058,Telecoms,SME,Website,9,1,5,8,0
+LD02059,Banking,Mid-market,LinkedIn,11,0,3,71,0
+LD02060,Manufacturing,SME,Website,4,1,2,56,0
+LD02061,Public Sector,Enterprise,LinkedIn,13,0,6,94,0
+LD02062,Manufacturing,Enterprise,Website,6,0,2,29,0
+LD02063,Manufacturing,SME,Cold outreach,10,0,3,66,0
+LD02064,Retail,SME,Event,6,0,4,28,0
+LD02065,Public Sector,Mid-market,Cold outreach,3,1,2,30,1
+LD02066,Public Sector,SME,Cold outreach,4,1,4,2,0
+LD02067,Manufacturing,SME,Cold outreach,8,0,5,20,0
+LD02068,Manufacturing,SME,Website,10,1,0,15,1
+LD02069,Oil & Gas,SME,Event,5,0,3,48,0
+LD02070,Oil & Gas,SME,Website,3,0,6,63,0
+LD02071,Retail,Mid-market,LinkedIn,11,1,1,30,0
+LD02072,Retail,SME,Event,6,1,4,64,1
+LD02073,Public Sector,Mid-market,LinkedIn,4,1,1,21,0
+LD02074,Telecoms,Enterprise,Cold outreach,4,0,2,69,0
+LD02075,Banking,SME,LinkedIn,7,0,4,110,0
+LD02076,Banking,SME,Cold outreach,7,0,0,38,0
+LD02077,Telecoms,Mid-market,Cold outreach,4,0,6,60,0
+LD02078,Banking,Enterprise,Website,6,0,3,93,0
+LD02079,Telecoms,SME,LinkedIn,5,0,7,2,1
+LD02080,Public Sector,SME,Cold outreach,5,1,2,76,0
+LD02081,Public Sector,SME,LinkedIn,10,1,2,2,0
+LD02082,Manufacturing,Mid-market,LinkedIn,6,1,5,76,0
+LD02083,Manufacturing,SME,Cold outreach,9,0,2,114,0
+LD02084,Oil & Gas,SME,Referral,8,1,5,70,1
+LD02085,Oil & Gas,Enterprise,Website,5,1,4,109,1
+LD02086,Manufacturing,Mid-market,Cold outreach,8,0,5,82,0
+LD02087,Manufacturing,SME,Cold outreach,9,0,2,95,0
+LD02088,Oil & Gas,SME,Event,3,0,4,81,0
+LD02089,Banking,SME,Event,7,0,2,114,0
+LD02090,Banking,Mid-market,Event,9,1,4,26,1
+LD02091,Oil & Gas,Mid-market,Referral,6,0,4,12,0
+LD02092,Manufacturing,SME,Cold outreach,11,0,3,58,0
+LD02093,Public Sector,SME,LinkedIn,7,0,0,22,1
+LD02094,Manufacturing,Mid-market,Cold outreach,6,0,1,51,0
+LD02095,Telecoms,Enterprise,Event,3,1,1,60,0
+LD02096,Telecoms,Mid-market,Website,7,0,2,62,0
+LD02097,Banking,SME,Event,11,0,3,4,0
+LD02098,Banking,SME,Website,7,0,2,33,0
+LD02099,Public Sector,SME,Cold outreach,3,0,5,60,0
+LD02100,Banking,Mid-market,Website,10,0,2,74,0
+LD02101,Telecoms,Mid-market,Website,6,0,2,92,0
+LD02102,Retail,SME,Cold outreach,7,1,1,59,1
+LD02103,Manufacturing,SME,Event,6,0,8,26,0
+LD02104,Oil & Gas,Enterprise,Referral,6,0,3,113,0
+LD02105,Banking,Enterprise,Cold outreach,6,0,3,107,0
+LD02106,Telecoms,SME,Website,5,0,4,47,0
+LD02107,Banking,Mid-market,Website,3,0,6,93,0
+LD02108,Public Sector,SME,Referral,8,1,4,54,0
+LD02109,Banking,Enterprise,Cold outreach,7,0,3,30,0
+LD02110,Public Sector,Mid-market,Referral,5,0,5,87,1
+LD02111,Banking,SME,Event,2,0,3,6,0
+LD02112,Manufacturing,SME,LinkedIn,6,0,3,111,0
+LD02113,Manufacturing,Mid-market,Referral,8,0,5,29,0
+LD02114,Banking,Enterprise,LinkedIn,2,0,0,65,0
+LD02115,Oil & Gas,Mid-market,LinkedIn,10,0,1,18,0
+LD02116,Retail,SME,Website,7,0,1,50,0
+LD02117,Banking,Mid-market,Website,10,0,6,114,0
+LD02118,Manufacturing,SME,Event,9,1,6,105,0
+LD02119,Public Sector,Mid-market,Referral,3,0,5,107,0
+LD02120,Manufacturing,Enterprise,Website,6,0,2,115,0
+LD02121,Oil & Gas,SME,Referral,4,0,3,27,0
+LD02122,Retail,Mid-market,Event,2,0,3,83,1
+LD02123,Oil & Gas,Mid-market,Event,6,0,3,117,0
+LD02124,Retail,SME,LinkedIn,8,0,1,65,0
+LD02125,Public Sector,Enterprise,Website,4,0,5,101,0
+LD02126,Telecoms,Mid-market,Website,5,0,1,46,0
+LD02127,Manufacturing,Mid-market,Website,3,1,2,97,0
+LD02128,Telecoms,SME,LinkedIn,6,0,0,11,1
+LD02129,Telecoms,Mid-market,Event,5,1,4,5,0
+LD02130,Oil & Gas,SME,LinkedIn,6,1,4,33,0
+LD02131,Manufacturing,Mid-market,LinkedIn,6,0,2,34,0
+LD02132,Telecoms,SME,Event,3,1,4,22,0
+LD02133,Manufacturing,SME,Referral,1,1,5,105,0
+LD02134,Manufacturing,Mid-market,Website,9,0,5,118,0
+LD02135,Public Sector,SME,Event,10,0,5,42,0
+LD02136,Manufacturing,Enterprise,Website,8,0,1,80,1
+LD02137,Oil & Gas,Mid-market,LinkedIn,7,0,3,84,0
+LD02138,Telecoms,Mid-market,Website,2,0,3,59,0
+LD02139,Telecoms,SME,Referral,3,0,5,35,1
+LD02140,Retail,Mid-market,Referral,6,0,1,106,0
+LD02141,Banking,Enterprise,Cold outreach,3,1,4,66,0
+LD02142,Telecoms,SME,LinkedIn,3,0,0,77,0
+LD02143,Public Sector,SME,Event,5,0,2,9,0
+LD02144,Manufacturing,Mid-market,Event,9,0,6,75,0
+LD02145,Public Sector,SME,LinkedIn,12,0,1,44,0
+LD02146,Public Sector,Enterprise,Website,10,0,4,41,1
+LD02147,Telecoms,SME,Cold outreach,4,0,6,37,0
+LD02148,Manufacturing,SME,Event,5,1,4,2,1
+LD02149,Telecoms,SME,LinkedIn,7,0,3,103,0
+LD02150,Telecoms,Mid-market,LinkedIn,5,0,2,111,0
+LD02151,Telecoms,SME,Event,8,0,3,112,0
+LD02152,Public Sector,Mid-market,LinkedIn,4,0,1,74,0
+LD02153,Telecoms,SME,Referral,7,0,4,59,0
+LD02154,Manufacturing,Enterprise,Referral,4,0,3,27,0
+LD02155,Public Sector,Mid-market,Cold outreach,6,0,1,98,0
+LD02156,Telecoms,SME,Referral,4,0,4,91,1
+LD02157,Oil & Gas,SME,Website,8,0,1,96,0
+LD02158,Oil & Gas,Mid-market,LinkedIn,9,0,1,32,0
+LD02159,Telecoms,Enterprise,Referral,6,0,3,78,0
+LD02160,Telecoms,Enterprise,Cold outreach,4,0,2,33,0
+LD02161,Retail,Mid-market,Cold outreach,9,0,2,45,0
+LD02162,Retail,SME,Website,5,0,7,110,0
+LD02163,Telecoms,SME,Website,4,0,6,38,0
+LD02164,Oil & Gas,SME,Event,4,1,5,18,1
+LD02165,Manufacturing,Enterprise,LinkedIn,4,0,6,109,0
+LD02166,Public Sector,SME,Event,4,0,5,110,0
+LD02167,Banking,SME,Website,8,0,0,119,0
+LD02168,Public Sector,Mid-market,Cold outreach,6,0,4,14,0
+LD02169,Telecoms,SME,Cold outreach,1,0,5,69,0
+LD02170,Oil & Gas,SME,Referral,6,0,0,21,0
+LD02171,Manufacturing,Enterprise,Cold outreach,6,1,1,83,1
+LD02172,Manufacturing,SME,Referral,3,0,5,65,0
+LD02173,Public Sector,Enterprise,Website,8,0,1,62,0
+LD02174,Public Sector,SME,LinkedIn,9,0,4,59,0
+LD02175,Manufacturing,Mid-market,Cold outreach,9,0,6,34,0
+LD02176,Telecoms,Mid-market,Cold outreach,2,0,1,13,0
+LD02177,Manufacturing,Enterprise,Website,3,0,2,55,0
+LD02178,Banking,SME,Website,7,0,4,76,0
+LD02179,Telecoms,Mid-market,Cold outreach,2,0,2,75,0
+LD02180,Banking,SME,Referral,10,0,6,102,1
+LD02181,Telecoms,SME,LinkedIn,5,0,0,28,1
+LD02182,Telecoms,Enterprise,LinkedIn,2,1,3,67,0
+LD02183,Retail,Enterprise,Cold outreach,8,0,3,51,0
+LD02184,Retail,Mid-market,Referral,6,0,3,84,1
+LD02185,Retail,Mid-market,Website,4,0,4,106,0
+LD02186,Oil & Gas,SME,Event,3,1,4,40,0
+LD02187,Retail,Mid-market,Referral,14,1,4,108,0
+LD02188,Public Sector,Mid-market,Cold outreach,10,1,2,101,0
+LD02189,Retail,SME,Cold outreach,2,0,3,27,0
+LD02190,Telecoms,SME,Website,3,0,2,58,0
+LD02191,Public Sector,SME,Referral,7,0,3,112,0
+LD02192,Oil & Gas,SME,Website,7,0,4,4,0
+LD02193,Public Sector,SME,Event,6,0,3,109,0
+LD02194,Retail,Enterprise,Website,3,0,7,73,0
+LD02195,Banking,SME,Referral,4,0,7,56,0
+LD02196,Manufacturing,Mid-market,LinkedIn,7,0,2,26,1
+LD02197,Banking,Mid-market,Referral,6,0,2,6,0
+LD02198,Telecoms,Mid-market,LinkedIn,4,0,3,57,0
+LD02199,Oil & Gas,SME,Cold outreach,5,0,2,117,0
+LD02200,Telecoms,SME,Website,10,0,3,91,0
+LD02201,Retail,SME,Referral,4,0,3,41,0
+LD02202,Retail,Mid-market,Event,4,0,2,94,0
+LD02203,Banking,SME,Cold outreach,6,1,2,119,0
+LD02204,Public Sector,Mid-market,Referral,6,0,5,38,0
+LD02205,Oil & Gas,Enterprise,Website,7,0,3,115,0
+LD02206,Banking,SME,Cold outreach,10,0,1,55,0
+LD02207,Public Sector,Mid-market,Website,3,0,4,90,0
+LD02208,Public Sector,Enterprise,Cold outreach,6,0,1,112,0
+LD02209,Public Sector,Mid-market,Website,8,0,5,41,0
+LD02210,Telecoms,Enterprise,Event,8,0,4,5,0
+LD02211,Manufacturing,Enterprise,Cold outreach,4,0,1,115,0
+LD02212,Retail,SME,Website,1,1,3,31,1
+LD02213,Manufacturing,Enterprise,LinkedIn,7,1,5,114,0
+LD02214,Public Sector,SME,LinkedIn,6,0,3,64,0
+LD02215,Telecoms,SME,Cold outreach,2,1,5,32,0
+LD02216,Manufacturing,Mid-market,Event,5,0,3,77,0
+LD02217,Telecoms,SME,Website,11,0,3,61,0
+LD02218,Telecoms,SME,Event,2,0,2,93,0
+LD02219,Telecoms,SME,Website,4,0,6,80,0
+LD02220,Telecoms,Mid-market,Cold outreach,4,0,8,19,0
+LD02221,Oil & Gas,Mid-market,LinkedIn,5,1,4,35,0
+LD02222,Oil & Gas,SME,Website,10,0,3,107,0
+LD02223,Oil & Gas,Enterprise,Website,7,1,2,25,1
+LD02224,Manufacturing,Enterprise,LinkedIn,9,1,5,36,0
+LD02225,Public Sector,Mid-market,Cold outreach,7,1,8,92,0
+LD02226,Public Sector,Mid-market,LinkedIn,7,1,2,1,0
+LD02227,Manufacturing,SME,Referral,7,0,5,102,0
+LD02228,Manufacturing,SME,Website,9,0,5,97,0
+LD02229,Oil & Gas,Mid-market,Cold outreach,9,0,2,66,0
+LD02230,Telecoms,SME,Cold outreach,5,0,6,101,0
+LD02231,Manufacturing,SME,Referral,6,0,3,110,0
+LD02232,Oil & Gas,Mid-market,Website,3,0,4,54,0
+LD02233,Manufacturing,SME,Website,5,0,5,76,0
+LD02234,Manufacturing,SME,Cold outreach,5,0,2,101,0
+LD02235,Public Sector,SME,Website,5,0,3,58,0
+LD02236,Public Sector,SME,Event,4,1,4,7,0
+LD02237,Manufacturing,Mid-market,Cold outreach,6,0,3,56,0
+LD02238,Public Sector,Mid-market,Website,8,0,1,18,0
+LD02239,Retail,Enterprise,Referral,4,1,2,28,1
+LD02240,Retail,Mid-market,Website,3,1,4,111,0
+LD02241,Public Sector,Mid-market,Cold outreach,9,0,2,97,0
+LD02242,Retail,Enterprise,Referral,4,1,2,27,1
+LD02243,Telecoms,SME,Website,7,0,3,102,0
+LD02244,Banking,Mid-market,Cold outreach,6,1,5,63,0
+LD02245,Oil & Gas,SME,Website,5,1,6,115,0
+LD02246,Retail,Mid-market,LinkedIn,6,0,3,80,0
+LD02247,Telecoms,Enterprise,Website,3,0,1,1,0
+LD02248,Telecoms,Enterprise,Cold outreach,4,0,6,97,0
+LD02249,Telecoms,SME,Referral,10,0,2,101,1
+LD02250,Public Sector,Mid-market,Referral,7,1,5,44,0
+LD02251,Telecoms,SME,Website,2,0,0,87,0
+LD02252,Telecoms,Mid-market,Website,3,0,3,81,0
+LD02253,Public Sector,Mid-market,Event,3,1,5,22,0
+LD02254,Manufacturing,Mid-market,Referral,6,1,2,74,0
+LD02255,Banking,SME,Cold outreach,7,0,5,94,0
+LD02256,Retail,SME,Referral,11,0,2,21,0
+LD02257,Oil & Gas,SME,Referral,5,0,4,75,0
+LD02258,Banking,Mid-market,LinkedIn,5,0,3,33,0
+LD02259,Retail,Enterprise,Cold outreach,7,0,2,113,0
+LD02260,Banking,Enterprise,Cold outreach,7,0,2,9,0
+LD02261,Manufacturing,SME,Website,5,0,1,62,0
+LD02262,Retail,Mid-market,Website,8,0,2,11,0
+LD02263,Telecoms,SME,Cold outreach,4,1,1,112,0
+LD02264,Manufacturing,SME,Event,1,0,5,57,0
+LD02265,Manufacturing,SME,LinkedIn,8,0,2,18,0
+LD02266,Manufacturing,SME,Website,5,1,0,80,0
+LD02267,Manufacturing,SME,Website,5,1,0,82,0
+LD02268,Manufacturing,Mid-market,Event,8,0,3,53,1
+LD02269,Retail,Mid-market,LinkedIn,3,0,3,119,0
+LD02270,Manufacturing,Mid-market,Website,8,1,2,20,1
+LD02271,Telecoms,SME,Website,5,0,1,28,0
+LD02272,Oil & Gas,SME,Event,5,0,3,77,0
+LD02273,Banking,Mid-market,Cold outreach,5,0,2,56,0
+LD02274,Manufacturing,SME,Website,6,0,3,119,0
+LD02275,Retail,Enterprise,Website,6,0,5,83,1
+LD02276,Banking,SME,Cold outreach,4,0,2,98,0
+LD02277,Retail,SME,Website,4,0,1,5,0
+LD02278,Telecoms,Enterprise,LinkedIn,5,0,4,81,0
+LD02279,Retail,SME,LinkedIn,11,0,1,51,0
+LD02280,Public Sector,Mid-market,Website,4,0,4,17,0
+LD02281,Retail,Mid-market,Event,6,1,1,60,0
+LD02282,Banking,Mid-market,LinkedIn,4,1,1,71,0
+LD02283,Retail,Enterprise,Website,6,0,2,109,0
+LD02284,Oil & Gas,SME,Website,4,0,3,109,0
+LD02285,Public Sector,Enterprise,Website,7,0,3,84,0
+LD02286,Manufacturing,Enterprise,Website,4,0,0,13,0
+LD02287,Banking,Enterprise,LinkedIn,2,0,3,113,0
+LD02288,Banking,SME,Website,1,0,4,35,0
+LD02289,Public Sector,Enterprise,Website,4,0,1,69,0
+LD02290,Manufacturing,Enterprise,Website,6,0,4,38,0
+LD02291,Retail,SME,Referral,5,0,1,53,0
+LD02292,Telecoms,SME,Referral,5,0,5,24,0
+LD02293,Telecoms,SME,LinkedIn,8,0,3,62,0
+LD02294,Manufacturing,SME,Website,9,0,1,91,0
+LD02295,Telecoms,SME,LinkedIn,4,0,4,79,0
+LD02296,Manufacturing,Mid-market,Event,3,1,2,23,0
+LD02297,Telecoms,Mid-market,Cold outreach,4,0,3,25,0
+LD02298,Public Sector,Mid-market,Cold outreach,3,0,2,47,0
+LD02299,Telecoms,SME,LinkedIn,6,0,4,23,0
+LD02300,Retail,SME,Website,7,0,3,13,0
+LD02301,Banking,SME,Event,3,1,2,31,1
+LD02302,Banking,SME,Website,3,0,6,25,0
+LD02303,Manufacturing,Mid-market,Referral,2,1,3,119,0
+LD02304,Manufacturing,SME,Website,5,0,6,9,0
+LD02305,Oil & Gas,Mid-market,LinkedIn,6,0,4,45,0
+LD02306,Manufacturing,Mid-market,Referral,11,1,4,80,1
+LD02307,Public Sector,SME,Referral,9,0,2,105,1
+LD02308,Public Sector,Mid-market,Event,5,0,3,100,0
+LD02309,Banking,SME,Website,2,0,1,114,0
+LD02310,Manufacturing,Enterprise,Referral,4,0,4,62,0
+LD02311,Public Sector,Enterprise,Cold outreach,2,0,6,81,0
+LD02312,Banking,SME,Cold outreach,5,0,3,92,0
+LD02313,Retail,Mid-market,Website,10,0,5,50,0
+LD02314,Public Sector,Mid-market,Website,6,0,1,76,0
+LD02315,Public Sector,SME,Website,7,0,3,75,0
+LD02316,Oil & Gas,SME,LinkedIn,3,1,2,98,0
+LD02317,Manufacturing,Mid-market,Event,6,0,2,46,1
+LD02318,Banking,Enterprise,Event,5,1,3,47,1
+LD02319,Oil & Gas,SME,Referral,4,1,5,54,1
+LD02320,Banking,SME,Cold outreach,9,0,3,44,0
+LD02321,Telecoms,Mid-market,LinkedIn,8,0,4,2,0
+LD02322,Public Sector,Mid-market,Website,9,0,5,104,0
+LD02323,Oil & Gas,Mid-market,Event,3,0,1,42,0
+LD02324,Public Sector,Mid-market,Referral,5,1,2,16,1
+LD02325,Oil & Gas,SME,Event,4,0,3,114,0
+LD02326,Retail,SME,Referral,4,0,5,3,1
+LD02327,Retail,Mid-market,Event,9,0,3,47,0
+LD02328,Public Sector,SME,Event,5,0,0,27,0
+LD02329,Retail,Mid-market,Cold outreach,7,0,2,25,0
+LD02330,Banking,SME,Website,4,0,0,60,0
+LD02331,Manufacturing,Mid-market,Event,5,0,2,94,0
+LD02332,Telecoms,SME,Website,5,0,1,97,0
+LD02333,Banking,Enterprise,Referral,5,0,4,110,0
+LD02334,Public Sector,Mid-market,Referral,4,0,3,27,0
+LD02335,Retail,Mid-market,LinkedIn,10,1,3,103,1
+LD02336,Banking,Mid-market,Referral,3,1,2,100,0
+LD02337,Oil & Gas,SME,Website,6,0,1,119,0
+LD02338,Retail,SME,Website,6,0,0,77,0
+LD02339,Oil & Gas,SME,Website,2,0,1,26,0
+LD02340,Retail,SME,Website,5,0,1,31,0
+LD02341,Manufacturing,SME,Referral,3,0,4,85,1
+LD02342,Manufacturing,SME,Cold outreach,5,1,2,11,1
+LD02343,Banking,SME,Website,4,1,5,52,0
+LD02344,Telecoms,SME,Cold outreach,5,0,3,24,0
+LD02345,Manufacturing,Enterprise,Website,9,0,0,54,1
+LD02346,Manufacturing,Mid-market,Referral,7,0,4,106,0
+LD02347,Public Sector,SME,Website,6,1,2,40,0
+LD02348,Public Sector,Mid-market,Referral,14,1,4,118,0
+LD02349,Banking,SME,LinkedIn,3,0,3,38,0
+LD02350,Public Sector,Mid-market,Cold outreach,8,0,2,95,0
+LD02351,Manufacturing,Enterprise,Event,7,0,2,101,0
+LD02352,Public Sector,Mid-market,LinkedIn,4,0,1,112,0
+LD02353,Telecoms,Mid-market,Website,2,0,2,70,0
+LD02354,Retail,Enterprise,Cold outreach,7,1,2,84,1
+LD02355,Telecoms,Mid-market,Website,5,0,3,51,0
+LD02356,Public Sector,SME,Event,5,1,1,51,0
+LD02357,Manufacturing,Mid-market,Event,5,0,5,19,0
+LD02358,Manufacturing,SME,Cold outreach,5,0,2,69,0
+LD02359,Telecoms,SME,LinkedIn,4,0,4,17,0
+LD02360,Public Sector,Enterprise,Website,7,1,3,13,1
+LD02361,Telecoms,SME,Cold outreach,6,0,4,39,0
+LD02362,Retail,Mid-market,Website,8,0,4,45,1
+LD02363,Telecoms,Mid-market,Cold outreach,5,0,1,14,0
+LD02364,Banking,SME,Cold outreach,5,1,4,27,0
+LD02365,Public Sector,SME,Website,2,0,1,72,0
+LD02366,Telecoms,Enterprise,Referral,7,1,3,11,1
+LD02367,Public Sector,Enterprise,Website,5,0,1,23,1
+LD02368,Manufacturing,SME,Event,3,0,1,94,0
+LD02369,Public Sector,SME,Website,10,1,1,64,0
+LD02370,Retail,Enterprise,Cold outreach,3,0,6,114,0
+LD02371,Manufacturing,Mid-market,Referral,2,1,4,119,0
+LD02372,Manufacturing,SME,LinkedIn,3,0,2,70,0
+LD02373,Retail,Mid-market,Event,8,0,2,28,0
+LD02374,Banking,Mid-market,Website,3,0,1,41,0
+LD02375,Telecoms,SME,LinkedIn,4,0,4,80,0
+LD02376,Public Sector,Enterprise,Event,5,1,5,89,1
+LD02377,Manufacturing,Mid-market,Cold outreach,7,1,3,92,0
+LD02378,Telecoms,Enterprise,Referral,7,0,1,37,0
+LD02379,Manufacturing,SME,Cold outreach,5,0,4,74,0
+LD02380,Telecoms,Enterprise,Event,6,0,1,22,0
+LD02381,Telecoms,Mid-market,Website,2,1,2,23,0
+LD02382,Oil & Gas,SME,Cold outreach,6,0,2,80,0
+LD02383,Public Sector,Enterprise,Cold outreach,7,0,3,41,0
+LD02384,Retail,Mid-market,Website,5,0,4,15,0
+LD02385,Retail,SME,LinkedIn,4,0,5,67,0
+LD02386,Oil & Gas,SME,LinkedIn,5,0,3,55,0
+LD02387,Oil & Gas,SME,Cold outreach,6,0,2,17,0
+LD02388,Manufacturing,Enterprise,Website,8,0,3,7,0
+LD02389,Retail,SME,Referral,4,0,1,12,1
+LD02390,Oil & Gas,SME,Referral,3,0,3,42,0
+LD02391,Manufacturing,Mid-market,LinkedIn,4,0,1,83,0
+LD02392,Public Sector,SME,Referral,5,0,4,76,0
+LD02393,Public Sector,Mid-market,Website,6,0,0,33,0
+LD02394,Banking,Mid-market,Referral,8,0,1,35,0
+LD02395,Public Sector,Enterprise,Referral,7,0,3,70,0
+LD02396,Manufacturing,Mid-market,Cold outreach,5,0,6,2,0
+LD02397,Manufacturing,SME,Website,7,0,3,101,0
+LD02398,Oil & Gas,SME,LinkedIn,10,0,1,55,0
+LD02399,Oil & Gas,SME,Event,4,1,5,50,1
+LD02400,Retail,SME,Event,10,0,6,102,0
+LD02401,Banking,SME,Website,7,1,2,3,1
+LD02402,Telecoms,SME,Event,2,0,2,46,0
+LD02403,Telecoms,Mid-market,Cold outreach,3,0,3,45,0
+LD02404,Banking,SME,Referral,9,0,1,72,0
+LD02405,Public Sector,SME,LinkedIn,5,0,3,6,0
+LD02406,Manufacturing,Enterprise,Cold outreach,9,0,2,71,0
+LD02407,Manufacturing,SME,Cold outreach,5,0,3,87,0
+LD02408,Manufacturing,SME,Event,2,0,0,99,0
+LD02409,Public Sector,SME,Event,11,1,2,23,0
+LD02410,Oil & Gas,SME,Website,4,1,3,97,1
+LD02411,Public Sector,Mid-market,LinkedIn,7,0,1,9,1
+LD02412,Telecoms,SME,Referral,7,1,1,115,0
+LD02413,Banking,SME,Referral,7,0,3,68,0
+LD02414,Manufacturing,Mid-market,Cold outreach,7,0,4,83,0
+LD02415,Retail,Mid-market,Event,6,0,3,103,0
+LD02416,Banking,SME,Website,6,0,4,97,1
+LD02417,Telecoms,SME,Website,8,0,2,74,0
+LD02418,Public Sector,Mid-market,Website,7,0,3,38,0
+LD02419,Oil & Gas,Mid-market,Website,3,0,3,32,0
+LD02420,Public Sector,SME,Referral,6,0,2,15,0
+LD02421,Oil & Gas,SME,Website,8,0,4,64,0
+LD02422,Retail,SME,Website,2,0,1,25,0
+LD02423,Banking,Enterprise,Cold outreach,6,1,4,108,0
+LD02424,Banking,Enterprise,Website,3,1,6,53,0
+LD02425,Oil & Gas,Mid-market,LinkedIn,2,1,3,71,0
+LD02426,Banking,SME,Cold outreach,11,0,1,100,0
+LD02427,Oil & Gas,Enterprise,LinkedIn,2,1,4,109,0
+LD02428,Telecoms,Enterprise,Cold outreach,5,0,4,71,0
+LD02429,Manufacturing,Mid-market,Cold outreach,8,0,6,38,0
+LD02430,Banking,Mid-market,Website,5,0,1,108,0
+LD02431,Retail,SME,Website,8,0,4,25,0
+LD02432,Public Sector,SME,Cold outreach,7,1,6,103,0
+LD02433,Manufacturing,Mid-market,Cold outreach,6,0,2,74,0
+LD02434,Manufacturing,Enterprise,LinkedIn,5,0,3,8,0
+LD02435,Banking,Mid-market,LinkedIn,9,0,3,106,0
+LD02436,Oil & Gas,Mid-market,Referral,8,1,2,51,1
+LD02437,Oil & Gas,Mid-market,Cold outreach,9,0,4,93,0
+LD02438,Oil & Gas,Enterprise,Website,10,1,2,99,1
+LD02439,Retail,Mid-market,LinkedIn,6,0,3,1,0
+LD02440,Oil & Gas,Enterprise,Cold outreach,11,0,3,63,0
+LD02441,Retail,SME,Website,8,0,2,82,0
+LD02442,Manufacturing,SME,Referral,3,0,3,73,0
+LD02443,Public Sector,Mid-market,Event,7,0,6,60,0
+LD02444,Oil & Gas,SME,Referral,5,0,1,96,0
+LD02445,Banking,SME,Website,3,0,2,47,0
+LD02446,Retail,Mid-market,Website,9,0,0,24,0
+LD02447,Banking,Mid-market,Referral,8,0,4,37,1
+LD02448,Oil & Gas,SME,LinkedIn,7,0,2,83,0
+LD02449,Retail,SME,Website,7,1,3,47,0
+LD02450,Oil & Gas,SME,LinkedIn,1,0,1,72,0
+LD02451,Banking,Mid-market,Website,6,1,4,95,0
+LD02452,Banking,SME,Website,8,1,1,77,1
+LD02453,Public Sector,Enterprise,Website,5,0,3,68,0
+LD02454,Telecoms,SME,Website,4,0,8,96,0
+LD02455,Oil & Gas,Enterprise,Event,7,0,2,47,0
+LD02456,Manufacturing,SME,Referral,5,1,2,48,0
+LD02457,Telecoms,SME,Referral,6,0,1,67,0
+LD02458,Oil & Gas,SME,LinkedIn,7,1,4,107,0
+LD02459,Manufacturing,Mid-market,Event,7,0,3,5,0
+LD02460,Retail,SME,Cold outreach,7,0,7,100,0
+LD02461,Telecoms,SME,Cold outreach,1,0,1,118,0
+LD02462,Retail,SME,Website,7,1,3,57,0
+LD02463,Manufacturing,SME,Cold outreach,3,1,1,81,0
+LD02464,Public Sector,SME,Website,8,0,8,63,0
+LD02465,Telecoms,Mid-market,Cold outreach,6,1,2,88,0
+LD02466,Retail,SME,Website,3,0,6,16,0
+LD02467,Banking,Mid-market,Referral,9,0,3,31,0
+LD02468,Telecoms,SME,Cold outreach,6,0,3,118,0
+LD02469,Oil & Gas,Mid-market,Event,2,1,2,100,0
+LD02470,Telecoms,SME,Event,12,0,0,81,0
+LD02471,Telecoms,SME,Website,5,0,1,79,0
+LD02472,Retail,SME,Website,4,0,5,51,0
+LD02473,Telecoms,Enterprise,LinkedIn,4,0,0,6,0
+LD02474,Telecoms,Mid-market,LinkedIn,1,0,2,20,0
+LD02475,Public Sector,SME,Website,5,0,2,7,1
+LD02476,Telecoms,Mid-market,Event,3,1,4,76,0
+LD02477,Oil & Gas,Mid-market,LinkedIn,6,0,1,42,0
+LD02478,Retail,SME,LinkedIn,5,0,3,27,0
+LD02479,Retail,Mid-market,Cold outreach,5,0,4,25,1
+LD02480,Retail,SME,Cold outreach,7,1,6,5,1
+LD02481,Manufacturing,Mid-market,LinkedIn,6,1,4,95,0
+LD02482,Banking,Mid-market,Website,3,0,3,63,0
+LD02483,Oil & Gas,Mid-market,Cold outreach,8,0,4,104,0
+LD02484,Oil & Gas,Enterprise,Website,5,0,3,77,0
+LD02485,Banking,Mid-market,Referral,6,0,2,41,0
+LD02486,Retail,SME,Event,5,0,7,99,0
+LD02487,Public Sector,SME,Website,9,1,2,106,0
+LD02488,Banking,SME,Referral,1,0,4,103,0
+LD02489,Public Sector,Enterprise,Website,4,0,4,117,0
+LD02490,Oil & Gas,SME,LinkedIn,10,0,1,40,0
+LD02491,Manufacturing,SME,Website,8,0,2,113,0
+LD02492,Banking,Enterprise,Cold outreach,4,1,1,103,0
+LD02493,Public Sector,SME,Referral,6,0,6,103,1
+LD02494,Public Sector,SME,Cold outreach,4,0,3,16,0
+LD02495,Telecoms,SME,Event,2,1,1,86,0
+LD02496,Retail,Mid-market,Referral,5,0,5,89,0
+LD02497,Manufacturing,Mid-market,Referral,8,0,3,41,1
+LD02498,Banking,SME,LinkedIn,7,1,2,68,1
+LD02499,Banking,SME,Event,7,1,2,87,0
+LD02500,Oil & Gas,Mid-market,LinkedIn,8,1,1,70,1

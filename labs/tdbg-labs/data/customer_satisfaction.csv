@@ -1,0 +1,351 @@
+customer_id,channel,csat_score,nps_score,region
+CS0001,In-Branch,1,7,Lagos Mainland
+CS0002,Phone,5,10,Ikeja
+CS0003,Phone,4,8,Lagos Mainland
+CS0004,Email,4,6,Lekki
+CS0005,In-Branch,5,9,Lekki
+CS0006,Phone,4,10,Lagos Mainland
+CS0007,Email,5,3,Lekki
+CS0008,In-Branch,3,10,Lagos Mainland
+CS0009,Chat,4,10,Lagos Mainland
+CS0010,Email,4,7,Ikeja
+CS0011,In-Branch,5,7,Surulere
+CS0012,Chat,5,7,Lekki
+CS0013,In-Branch,4,5,Lagos Island
+CS0014,Phone,5,6,Lekki
+CS0015,Email,2,7,Lekki
+CS0016,In-Branch,4,7,Lekki
+CS0017,Phone,4,8,Lagos Island
+CS0018,Phone,1,9,Lagos Mainland
+CS0019,Chat,4,9,Lagos Mainland
+CS0020,Chat,1,8,Lagos Island
+CS0021,Phone,4,9,Lagos Mainland
+CS0022,In-Branch,4,5,Surulere
+CS0023,Phone,3,4,Lekki
+CS0024,Phone,4,8,Lagos Mainland
+CS0025,Email,5,7,Lagos Island
+CS0026,Chat,3,8,Lekki
+CS0027,Chat,5,4,Lagos Mainland
+CS0028,Email,1,7,Surulere
+CS0029,Phone,3,7,Lagos Mainland
+CS0030,Email,4,9,Ikeja
+CS0031,Email,4,9,Ikeja
+CS0032,In-Branch,3,8,Lagos Mainland
+CS0033,Email,4,9,Lagos Island
+CS0034,In-Branch,2,7,Surulere
+CS0035,Chat,4,8,Lagos Mainland
+CS0036,Email,3,8,Lagos Mainland
+CS0037,Phone,4,8,Lagos Island
+CS0038,Phone,4,5,Lagos Mainland
+CS0039,Phone,5,10,Lekki
+CS0040,Chat,4,5,Lagos Mainland
+CS0041,Chat,3,10,Surulere
+CS0042,Phone,3,8,Lagos Island
+CS0043,Chat,5,6,Lagos Island
+CS0044,Phone,5,10,Lagos Island
+CS0045,Chat,3,7,Lagos Island
+CS0046,In-Branch,4,6,Lagos Mainland
+CS0047,Chat,2,7,Lagos Mainland
+CS0048,Chat,4,6,Lagos Island
+CS0049,Chat,4,8,Lekki
+CS0050,Phone,5,10,Lekki
+CS0051,Chat,3,8,Lagos Island
+CS0052,Phone,3,3,Lagos Mainland
+CS0053,Phone,2,9,Lekki
+CS0054,Chat,5,10,Lagos Island
+CS0055,Phone,3,5,Lagos Mainland
+CS0056,Email,5,10,Lekki
+CS0057,Email,4,8,Lekki
+CS0058,Chat,4,8,Ikeja
+CS0059,Phone,3,5,Ikeja
+CS0060,Chat,4,5,Lagos Mainland
+CS0061,In-Branch,4,7,Ikeja
+CS0062,Email,4,9,Lagos Island
+CS0063,In-Branch,5,7,Lagos Mainland
+CS0064,Phone,5,10,Lagos Island
+CS0065,In-Branch,2,0,Surulere
+CS0066,Chat,3,10,Ikeja
+CS0067,Chat,4,3,Lagos Mainland
+CS0068,Chat,3,6,Lagos Island
+CS0069,Phone,4,9,Lagos Island
+CS0070,Email,5,7,Lekki
+CS0071,Phone,2,9,Lagos Mainland
+CS0072,Chat,5,8,Surulere
+CS0073,In-Branch,5,6,Ikeja
+CS0074,Email,5,10,Surulere
+CS0075,In-Branch,5,8,Lekki
+CS0076,Phone,3,9,Lagos Island
+CS0077,Chat,5,5,Surulere
+CS0078,Email,4,8,Lagos Mainland
+CS0079,Chat,4,8,Lekki
+CS0080,Chat,4,7,Ikeja
+CS0081,Phone,5,9,Lekki
+CS0082,Email,4,5,Lekki
+CS0083,Chat,5,10,Lagos Island
+CS0084,In-Branch,4,5,Lagos Mainland
+CS0085,Chat,3,7,Lagos Island
+CS0086,Chat,5,6,Lekki
+CS0087,Email,2,10,Surulere
+CS0088,Email,4,4,Lekki
+CS0089,Chat,3,8,Surulere
+CS0090,Email,4,2,Lagos Island
+CS0091,Phone,4,6,Lekki
+CS0092,Phone,5,8,Lagos Mainland
+CS0093,In-Branch,2,9,Lagos Island
+CS0094,In-Branch,2,6,Lagos Mainland
+CS0095,Chat,5,6,Lekki
+CS0096,Phone,5,8,Lekki
+CS0097,Chat,4,10,Lekki
+CS0098,Chat,5,10,Ikeja
+CS0099,Chat,1,9,Surulere
+CS0100,Chat,5,7,Lagos Island
+CS0101,Email,4,6,Lagos Mainland
+CS0102,Email,5,10,Lekki
+CS0103,Chat,4,8,Lagos Island
+CS0104,Phone,5,7,Lekki
+CS0105,Phone,5,9,Lekki
+CS0106,Chat,3,9,Lekki
+CS0107,In-Branch,3,6,Lagos Island
+CS0108,Chat,1,8,Ikeja
+CS0109,Chat,5,7,Lagos Island
+CS0110,Chat,5,7,Lagos Island
+CS0111,Email,4,10,Lagos Island
+CS0112,Phone,3,9,Lagos Mainland
+CS0113,Email,3,6,Lagos Mainland
+CS0114,Phone,4,7,Ikeja
+CS0115,In-Branch,4,3,Lekki
+CS0116,Phone,2,9,Ikeja
+CS0117,Phone,5,10,Surulere
+CS0118,Chat,3,9,Surulere
+CS0119,Chat,5,5,Lekki
+CS0120,Chat,4,9,Lagos Mainland
+CS0121,Chat,4,8,Lekki
+CS0122,Phone,4,7,Lekki
+CS0123,Phone,4,10,Lagos Mainland
+CS0124,Email,5,8,Lekki
+CS0125,Chat,3,10,Ikeja
+CS0126,Email,1,9,Surulere
+CS0127,Chat,3,7,Lagos Island
+CS0128,Phone,3,7,Lekki
+CS0129,Email,2,8,Lekki
+CS0130,Phone,4,3,Lagos Island
+CS0131,In-Branch,2,8,Lagos Mainland
+CS0132,Email,4,5,Surulere
+CS0133,In-Branch,3,10,Surulere
+CS0134,In-Branch,5,8,Ikeja
+CS0135,Chat,4,4,Ikeja
+CS0136,Phone,4,1,Surulere
+CS0137,Chat,3,6,Lekki
+CS0138,Phone,5,8,Lagos Island
+CS0139,Phone,4,6,Lagos Mainland
+CS0140,Chat,3,8,Lekki
+CS0141,Phone,2,7,Lagos Mainland
+CS0142,Phone,3,8,Lagos Mainland
+CS0143,Phone,4,9,Lekki
+CS0144,Chat,4,6,Surulere
+CS0145,In-Branch,4,6,Lagos Mainland
+CS0146,Email,5,4,Lagos Island
+CS0147,Phone,2,9,Lekki
+CS0148,Phone,3,9,Ikeja
+CS0149,Email,3,7,Lagos Mainland
+CS0150,Phone,4,6,Ikeja
+CS0151,In-Branch,4,7,Ikeja
+CS0152,Email,4,8,Lagos Mainland
+CS0153,Phone,4,8,Surulere
+CS0154,Phone,5,4,Lekki
+CS0155,In-Branch,1,9,Ikeja
+CS0156,Phone,3,7,Lekki
+CS0157,Email,5,2,Surulere
+CS0158,In-Branch,3,6,Lagos Mainland
+CS0159,In-Branch,3,8,Ikeja
+CS0160,Phone,3,5,Ikeja
+CS0161,Chat,4,8,Lagos Island
+CS0162,Phone,5,10,Ikeja
+CS0163,Phone,5,7,Lekki
+CS0164,Chat,3,7,Surulere
+CS0165,In-Branch,5,8,Lagos Island
+CS0166,Chat,2,8,Lekki
+CS0167,Email,4,6,Lekki
+CS0168,In-Branch,5,8,Lagos Island
+CS0169,Phone,3,8,Lekki
+CS0170,Phone,4,9,Ikeja
+CS0171,Email,3,9,Lekki
+CS0172,Email,4,9,Lagos Island
+CS0173,Phone,5,9,Lagos Mainland
+CS0174,Chat,4,6,Ikeja
+CS0175,Phone,4,8,Lagos Mainland
+CS0176,Phone,1,10,Lagos Island
+CS0177,Phone,5,8,Lekki
+CS0178,Chat,5,6,Lekki
+CS0179,Chat,4,6,Lagos Mainland
+CS0180,Email,3,9,Lagos Mainland
+CS0181,Chat,4,10,Ikeja
+CS0182,Chat,5,9,Lagos Island
+CS0183,Phone,3,7,Surulere
+CS0184,Chat,3,6,Lekki
+CS0185,Phone,4,8,Lekki
+CS0186,Chat,5,6,Lagos Mainland
+CS0187,Email,5,9,Lagos Island
+CS0188,Email,4,9,Lagos Mainland
+CS0189,In-Branch,2,7,Lagos Island
+CS0190,Email,3,9,Lekki
+CS0191,Phone,5,8,Lekki
+CS0192,Chat,5,3,Lagos Mainland
+CS0193,Email,4,9,Lagos Island
+CS0194,Email,5,7,Lekki
+CS0195,In-Branch,3,5,Lekki
+CS0196,Email,5,6,Lagos Mainland
+CS0197,In-Branch,5,9,Lagos Mainland
+CS0198,Phone,4,9,Surulere
+CS0199,Phone,2,6,Lagos Mainland
+CS0200,Chat,5,7,Lagos Mainland
+CS0201,Phone,3,7,Lekki
+CS0202,Phone,4,6,Lekki
+CS0203,Phone,4,6,Lekki
+CS0204,Phone,4,7,Lagos Island
+CS0205,Email,5,9,Lekki
+CS0206,Phone,5,9,Lagos Mainland
+CS0207,In-Branch,3,9,Lagos Mainland
+CS0208,Chat,3,10,Surulere
+CS0209,Chat,4,9,Lagos Mainland
+CS0210,Chat,4,7,Lekki
+CS0211,Phone,5,5,Lekki
+CS0212,In-Branch,3,8,Surulere
+CS0213,Phone,4,8,Lagos Mainland
+CS0214,Chat,5,7,Surulere
+CS0215,Phone,4,9,Lagos Island
+CS0216,Phone,4,8,Lagos Island
+CS0217,Chat,4,3,Surulere
+CS0218,Chat,3,8,Ikeja
+CS0219,Phone,3,6,Lagos Mainland
+CS0220,In-Branch,3,5,Lagos Mainland
+CS0221,In-Branch,5,6,Lagos Mainland
+CS0222,Phone,4,10,Ikeja
+CS0223,Chat,1,6,Ikeja
+CS0224,In-Branch,4,8,Lagos Mainland
+CS0225,Phone,5,9,Lagos Island
+CS0226,Phone,3,7,Ikeja
+CS0227,Email,2,5,Lagos Mainland
+CS0228,Phone,3,7,Lagos Mainland
+CS0229,Chat,2,5,Lagos Mainland
+CS0230,Phone,5,9,Lagos Mainland
+CS0231,Email,2,9,Ikeja
+CS0232,Chat,5,6,Lekki
+CS0233,Email,4,3,Ikeja
+CS0234,Phone,5,3,Ikeja
+CS0235,Email,5,8,Lagos Island
+CS0236,Phone,4,10,Surulere
+CS0237,Chat,4,7,Lagos Mainland
+CS0238,Phone,1,5,Lekki
+CS0239,Phone,2,9,Lagos Mainland
+CS0240,Email,4,6,Lekki
+CS0241,In-Branch,3,9,Lagos Mainland
+CS0242,Phone,5,4,Lagos Island
+CS0243,Chat,4,0,Surulere
+CS0244,In-Branch,5,6,Surulere
+CS0245,Chat,5,10,Lekki
+CS0246,Email,3,9,Lekki
+CS0247,In-Branch,4,4,Lagos Mainland
+CS0248,Phone,4,1,Ikeja
+CS0249,Phone,4,5,Lekki
+CS0250,Chat,4,9,Surulere
+CS0251,In-Branch,3,8,Lagos Island
+CS0252,Chat,5,7,Lagos Mainland
+CS0253,Phone,1,7,Lekki
+CS0254,In-Branch,4,5,Ikeja
+CS0255,Chat,5,7,Lagos Mainland
+CS0256,Chat,5,7,Lagos Mainland
+CS0257,In-Branch,4,7,Lagos Island
+CS0258,In-Branch,1,3,Lekki
+CS0259,Chat,4,4,Lekki
+CS0260,Chat,5,9,Lagos Island
+CS0261,Chat,4,7,Ikeja
+CS0262,Chat,4,9,Ikeja
+CS0263,Phone,5,6,Surulere
+CS0264,Phone,4,10,Ikeja
+CS0265,Email,5,7,Ikeja
+CS0266,Phone,3,8,Ikeja
+CS0267,In-Branch,4,7,Ikeja
+CS0268,Email,3,10,Lagos Island
+CS0269,Chat,3,10,Lagos Mainland
+CS0270,Email,3,4,Ikeja
+CS0271,In-Branch,5,6,Surulere
+CS0272,Phone,5,4,Surulere
+CS0273,In-Branch,5,6,Lagos Mainland
+CS0274,Chat,5,8,Lagos Mainland
+CS0275,Chat,5,8,Ikeja
+CS0276,Phone,5,8,Surulere
+CS0277,In-Branch,3,2,Lagos Mainland
+CS0278,Chat,5,3,Lagos Mainland
+CS0279,In-Branch,3,7,Surulere
+CS0280,Phone,5,7,Surulere
+CS0281,Email,4,10,Ikeja
+CS0282,In-Branch,3,6,Lagos Island
+CS0283,Phone,4,10,Lagos Island
+CS0284,Chat,5,5,Ikeja
+CS0285,Phone,4,8,Lekki
+CS0286,Phone,4,8,Lagos Island
+CS0287,Chat,4,10,Surulere
+CS0288,Chat,5,9,Ikeja
+CS0289,Phone,4,6,Lagos Island
+CS0290,Phone,5,9,Lagos Mainland
+CS0291,Chat,4,5,Ikeja
+CS0292,Email,3,7,Lagos Island
+CS0293,Email,4,1,Lagos Mainland
+CS0294,In-Branch,4,6,Surulere
+CS0295,Chat,4,5,Lekki
+CS0296,Chat,3,9,Lagos Mainland
+CS0297,Chat,5,8,Ikeja
+CS0298,Phone,4,7,Surulere
+CS0299,Phone,3,4,Lagos Mainland
+CS0300,Email,2,9,Surulere
+CS0301,Chat,4,8,Lagos Island
+CS0302,In-Branch,5,8,Ikeja
+CS0303,In-Branch,4,7,Lagos Island
+CS0304,Chat,5,9,Surulere
+CS0305,Chat,4,8,Surulere
+CS0306,Phone,4,8,Lagos Island
+CS0307,Email,4,8,Surulere
+CS0308,In-Branch,4,7,Lagos Island
+CS0309,Chat,2,7,Lagos Island
+CS0310,Phone,4,7,Surulere
+CS0311,Phone,5,7,Ikeja
+CS0312,Phone,4,6,Ikeja
+CS0313,Chat,4,6,Lagos Mainland
+CS0314,Email,2,8,Lagos Mainland
+CS0315,Email,5,10,Ikeja
+CS0316,Phone,3,9,Ikeja
+CS0317,Phone,3,7,Lagos Mainland
+CS0318,In-Branch,4,8,Lekki
+CS0319,Email,4,9,Lagos Island
+CS0320,In-Branch,2,8,Lekki
+CS0321,Email,4,6,Lagos Mainland
+CS0322,Phone,5,8,Lagos Mainland
+CS0323,Chat,4,10,Ikeja
+CS0324,In-Branch,5,7,Ikeja
+CS0325,Phone,4,6,Lagos Island
+CS0326,In-Branch,3,10,Lagos Mainland
+CS0327,Phone,4,7,Ikeja
+CS0328,In-Branch,5,4,Lekki
+CS0329,In-Branch,4,7,Lagos Mainland
+CS0330,Chat,3,7,Surulere
+CS0331,In-Branch,4,5,Lagos Island
+CS0332,In-Branch,3,9,Lagos Island
+CS0333,Phone,4,7,Lagos Island
+CS0334,Chat,1,7,Ikeja
+CS0335,Chat,5,8,Lagos Island
+CS0336,In-Branch,2,7,Lekki
+CS0337,Phone,4,2,Lagos Island
+CS0338,Chat,3,6,Lekki
+CS0339,Chat,4,3,Lekki
+CS0340,In-Branch,3,5,Ikeja
+CS0341,Phone,4,6,Lagos Island
+CS0342,Chat,5,8,Lagos Mainland
+CS0343,Phone,4,9,Lagos Mainland
+CS0344,Chat,3,7,Lagos Island
+CS0345,Email,4,9,Ikeja
+CS0346,Phone,5,9,Surulere
+CS0347,In-Branch,2,8,Surulere
+CS0348,Chat,5,9,Lagos Island
+CS0349,In-Branch,5,7,Ikeja
+CS0350,In-Branch,1,9,Surulere

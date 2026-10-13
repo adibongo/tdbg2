@@ -1,0 +1,1401 @@
+customer_id,item,rating
+C001,Baby wipes,3
+C001,Palm oil,2
+C001,Rice,2
+C001,Groundnut,4
+C001,Chicken,3
+C002,Sardine,5
+C002,Milo,2
+C002,Soap,4
+C002,Diapers,5
+C002,Chicken,1
+C002,Garri,5
+C003,Sugar,2
+C003,Indomie,2
+C003,Milo,4
+C003,Baby wipes,3
+C003,Soap,2
+C003,Garri,2
+C004,Palm oil,3
+C004,Soap,2
+C004,Chicken,2
+C004,Groundnut,3
+C004,Detergent,5
+C004,Beer,4
+C004,Baby wipes,3
+C004,Tomato paste,5
+C005,Sugar,2
+C005,Eggs,3
+C005,Baby wipes,3
+C005,Bread,2
+C006,Sugar,3
+C006,Spaghetti,3
+C006,Groundnut,3
+C006,Milk,3
+C006,Diapers,5
+C007,Tea,4
+C007,Sardine,4
+C007,Baby wipes,5
+C007,Palm oil,1
+C007,Tomato paste,2
+C007,Indomie,3
+C007,Milo,2
+C008,Indomie,4
+C008,Tomato paste,3
+C008,Sugar,3
+C008,Chicken,4
+C009,Spaghetti,3
+C009,Detergent,3
+C009,Groundnut,3
+C009,Tomato paste,4
+C009,Tea,3
+C009,Milo,3
+C009,Garri,3
+C009,Soap,3
+C009,Diapers,3
+C009,Bread,3
+C010,Detergent,3
+C010,Rice,4
+C010,Soap,2
+C010,Milk,3
+C010,Sardine,2
+C010,Tea,2
+C010,Palm oil,3
+C010,Beer,4
+C011,Rice,1
+C011,Milo,3
+C011,Sugar,2
+C011,Spaghetti,4
+C012,Sugar,3
+C012,Chicken,4
+C012,Soap,4
+C012,Beer,3
+C012,Eggs,4
+C012,Sardine,3
+C012,Tomato paste,2
+C012,Bread,3
+C012,Palm oil,2
+C013,Chicken,4
+C013,Baby wipes,3
+C013,Eggs,4
+C013,Sugar,3
+C014,Indomie,3
+C014,Tea,3
+C014,Spaghetti,3
+C014,Rice,2
+C014,Diapers,5
+C014,Soap,3
+C015,Soap,4
+C015,Eggs,3
+C015,Palm oil,2
+C015,Sardine,4
+C016,Bread,3
+C016,Sardine,3
+C016,Tomato paste,2
+C016,Palm oil,3
+C017,Bread,3
+C017,Soap,5
+C017,Indomie,3
+C017,Eggs,4
+C017,Sardine,4
+C018,Diapers,2
+C018,Milk,4
+C018,Detergent,4
+C018,Sardine,2
+C018,Rice,2
+C018,Bread,4
+C018,Palm oil,2
+C018,Beer,3
+C018,Garri,3
+C019,Sugar,4
+C019,Tea,4
+C019,Indomie,3
+C019,Baby wipes,4
+C019,Eggs,1
+C019,Bread,5
+C019,Soap,4
+C019,Tomato paste,1
+C020,Soap,3
+C020,Beer,3
+C020,Garri,2
+C020,Rice,3
+C020,Milk,2
+C020,Palm oil,2
+C020,Spaghetti,3
+C021,Milk,1
+C021,Chicken,4
+C021,Garri,1
+C021,Groundnut,3
+C021,Milo,2
+C021,Rice,3
+C021,Soap,4
+C021,Palm oil,3
+C022,Beer,3
+C022,Indomie,4
+C022,Bread,2
+C022,Soap,1
+C022,Garri,2
+C022,Eggs,5
+C022,Diapers,4
+C023,Milo,3
+C023,Sardine,3
+C023,Groundnut,3
+C023,Garri,5
+C023,Detergent,3
+C023,Diapers,3
+C023,Baby wipes,3
+C023,Spaghetti,3
+C023,Indomie,3
+C024,Rice,2
+C024,Baby wipes,3
+C024,Tomato paste,1
+C024,Sugar,4
+C024,Garri,3
+C024,Tea,4
+C024,Milo,2
+C024,Spaghetti,2
+C025,Diapers,2
+C025,Spaghetti,4
+C025,Milk,5
+C025,Tea,4
+C026,Sardine,3
+C026,Garri,3
+C026,Milo,3
+C026,Palm oil,4
+C026,Rice,3
+C027,Detergent,4
+C027,Eggs,1
+C027,Bread,4
+C027,Sardine,1
+C028,Tomato paste,1
+C028,Soap,3
+C028,Spaghetti,2
+C028,Milo,2
+C028,Chicken,5
+C028,Bread,3
+C028,Palm oil,5
+C029,Palm oil,5
+C029,Indomie,5
+C029,Tea,2
+C029,Eggs,5
+C029,Spaghetti,2
+C029,Soap,2
+C029,Chicken,4
+C030,Diapers,3
+C030,Milk,4
+C030,Sugar,4
+C030,Indomie,2
+C030,Tomato paste,1
+C030,Baby wipes,3
+C030,Beer,2
+C030,Spaghetti,3
+C030,Soap,2
+C030,Garri,2
+C031,Detergent,3
+C031,Beer,3
+C031,Rice,3
+C031,Chicken,3
+C032,Chicken,2
+C032,Spaghetti,2
+C032,Milo,4
+C032,Sugar,3
+C032,Soap,2
+C032,Baby wipes,3
+C032,Palm oil,3
+C032,Milk,3
+C032,Beer,3
+C032,Rice,4
+C033,Bread,2
+C033,Indomie,4
+C033,Detergent,5
+C033,Sugar,2
+C033,Sardine,3
+C033,Garri,1
+C034,Sugar,3
+C034,Indomie,2
+C034,Eggs,1
+C034,Detergent,2
+C034,Soap,4
+C034,Diapers,2
+C034,Milo,2
+C034,Groundnut,4
+C034,Chicken,1
+C034,Beer,3
+C035,Detergent,4
+C035,Eggs,3
+C035,Indomie,3
+C035,Chicken,4
+C035,Diapers,4
+C035,Beer,2
+C035,Soap,5
+C035,Rice,3
+C035,Milo,2
+C035,Tomato paste,2
+C036,Diapers,3
+C036,Bread,3
+C036,Garri,4
+C036,Tomato paste,3
+C037,Milk,1
+C037,Chicken,3
+C037,Palm oil,5
+C037,Tea,2
+C037,Rice,5
+C037,Diapers,4
+C037,Milo,4
+C037,Groundnut,3
+C037,Sugar,2
+C037,Eggs,5
+C038,Bread,5
+C038,Groundnut,2
+C038,Beer,2
+C038,Indomie,2
+C038,Garri,1
+C038,Milk,3
+C038,Spaghetti,3
+C038,Diapers,3
+C039,Milk,3
+C039,Tea,3
+C039,Milo,3
+C039,Baby wipes,3
+C039,Eggs,5
+C039,Spaghetti,4
+C040,Bread,4
+C040,Chicken,2
+C040,Groundnut,3
+C040,Diapers,3
+C040,Rice,3
+C040,Garri,4
+C040,Sardine,2
+C040,Tomato paste,2
+C040,Soap,3
+C040,Milo,3
+C041,Garri,2
+C041,Palm oil,4
+C041,Milk,2
+C041,Detergent,4
+C041,Tea,3
+C041,Rice,4
+C042,Garri,2
+C042,Chicken,2
+C042,Tomato paste,3
+C042,Spaghetti,4
+C042,Indomie,3
+C042,Tea,3
+C042,Eggs,1
+C042,Palm oil,2
+C042,Sardine,3
+C043,Groundnut,2
+C043,Soap,2
+C043,Bread,3
+C043,Sardine,2
+C043,Sugar,3
+C043,Eggs,5
+C043,Milo,4
+C043,Milk,1
+C043,Baby wipes,3
+C044,Milk,4
+C044,Sugar,4
+C044,Diapers,3
+C044,Tea,3
+C044,Eggs,1
+C044,Chicken,3
+C045,Tomato paste,4
+C045,Detergent,2
+C045,Milk,4
+C045,Palm oil,2
+C046,Garri,4
+C046,Detergent,2
+C046,Indomie,3
+C046,Tomato paste,2
+C046,Tea,4
+C046,Chicken,2
+C046,Spaghetti,4
+C046,Palm oil,2
+C047,Chicken,1
+C047,Palm oil,1
+C047,Tomato paste,1
+C047,Detergent,1
+C047,Beer,3
+C047,Rice,2
+C047,Baby wipes,3
+C048,Beer,3
+C048,Milk,4
+C048,Diapers,1
+C048,Chicken,2
+C048,Rice,2
+C048,Sugar,3
+C048,Palm oil,2
+C048,Sardine,4
+C048,Tomato paste,2
+C049,Rice,2
+C049,Detergent,3
+C049,Milk,3
+C049,Chicken,3
+C049,Garri,3
+C049,Diapers,4
+C049,Sardine,4
+C049,Spaghetti,3
+C049,Baby wipes,4
+C050,Indomie,3
+C050,Soap,3
+C050,Beer,5
+C050,Chicken,1
+C050,Bread,2
+C050,Tea,3
+C050,Tomato paste,4
+C050,Sugar,3
+C051,Diapers,4
+C051,Palm oil,5
+C051,Groundnut,3
+C051,Sugar,4
+C051,Tea,2
+C051,Bread,3
+C051,Spaghetti,3
+C051,Baby wipes,4
+C052,Eggs,1
+C052,Rice,3
+C052,Detergent,3
+C052,Baby wipes,3
+C052,Bread,4
+C053,Soap,2
+C053,Diapers,2
+C053,Garri,1
+C053,Milo,3
+C053,Sardine,2
+C053,Indomie,1
+C053,Beer,3
+C053,Eggs,3
+C054,Detergent,4
+C054,Garri,2
+C054,Tea,2
+C054,Soap,2
+C054,Sardine,2
+C054,Rice,3
+C054,Sugar,2
+C055,Rice,3
+C055,Sardine,4
+C055,Groundnut,4
+C055,Beer,4
+C055,Milo,3
+C056,Baby wipes,4
+C056,Diapers,4
+C056,Beer,3
+C056,Tea,4
+C056,Spaghetti,2
+C056,Sugar,4
+C056,Eggs,4
+C056,Tomato paste,3
+C056,Rice,3
+C056,Soap,3
+C057,Milk,3
+C057,Detergent,4
+C057,Baby wipes,3
+C057,Tomato paste,3
+C057,Sugar,2
+C057,Bread,3
+C058,Bread,4
+C058,Milo,2
+C058,Groundnut,3
+C058,Tea,4
+C059,Eggs,1
+C059,Groundnut,3
+C059,Chicken,4
+C059,Beer,2
+C060,Soap,4
+C060,Sardine,4
+C060,Groundnut,3
+C060,Rice,2
+C060,Tomato paste,2
+C060,Tea,3
+C060,Palm oil,3
+C061,Sardine,4
+C061,Soap,4
+C061,Palm oil,2
+C061,Detergent,2
+C061,Sugar,4
+C061,Chicken,3
+C061,Spaghetti,4
+C061,Beer,3
+C061,Indomie,3
+C062,Detergent,2
+C062,Sugar,3
+C062,Baby wipes,3
+C062,Palm oil,2
+C062,Indomie,4
+C062,Groundnut,3
+C062,Sardine,3
+C062,Garri,4
+C062,Rice,3
+C063,Milk,3
+C063,Baby wipes,2
+C063,Tea,3
+C063,Sardine,1
+C063,Bread,3
+C063,Sugar,1
+C063,Palm oil,3
+C063,Diapers,2
+C064,Chicken,2
+C064,Eggs,5
+C064,Spaghetti,3
+C064,Indomie,3
+C065,Groundnut,3
+C065,Soap,5
+C065,Diapers,3
+C065,Rice,1
+C065,Bread,2
+C065,Milk,5
+C065,Sugar,3
+C065,Beer,4
+C066,Sardine,2
+C066,Rice,2
+C066,Groundnut,3
+C066,Tomato paste,1
+C066,Tea,4
+C066,Detergent,2
+C066,Beer,2
+C066,Milo,4
+C067,Chicken,3
+C067,Palm oil,2
+C067,Soap,4
+C067,Sugar,4
+C067,Milk,4
+C068,Detergent,3
+C068,Bread,3
+C068,Diapers,2
+C068,Eggs,2
+C068,Sugar,2
+C068,Chicken,3
+C068,Milo,3
+C069,Palm oil,1
+C069,Groundnut,3
+C069,Sardine,3
+C069,Milo,3
+C070,Diapers,2
+C070,Tomato paste,1
+C070,Detergent,3
+C070,Milk,2
+C070,Chicken,5
+C070,Spaghetti,3
+C070,Sardine,2
+C070,Baby wipes,3
+C070,Garri,1
+C070,Rice,5
+C071,Milo,4
+C071,Sardine,2
+C071,Detergent,4
+C071,Milk,2
+C071,Diapers,2
+C072,Rice,1
+C072,Milk,5
+C072,Sardine,4
+C072,Beer,4
+C073,Bread,3
+C073,Eggs,4
+C073,Chicken,5
+C073,Tomato paste,2
+C073,Palm oil,5
+C073,Diapers,4
+C073,Beer,3
+C073,Sugar,2
+C073,Detergent,4
+C073,Tea,2
+C074,Garri,4
+C074,Detergent,5
+C074,Sardine,4
+C074,Groundnut,3
+C074,Indomie,5
+C074,Rice,3
+C075,Tomato paste,1
+C075,Palm oil,2
+C075,Milk,5
+C075,Baby wipes,3
+C075,Bread,2
+C076,Milo,2
+C076,Bread,3
+C076,Indomie,2
+C076,Beer,3
+C076,Detergent,3
+C076,Soap,3
+C077,Baby wipes,3
+C077,Soap,5
+C077,Groundnut,2
+C077,Rice,3
+C077,Garri,5
+C077,Palm oil,1
+C077,Tomato paste,2
+C077,Eggs,2
+C078,Eggs,1
+C078,Indomie,3
+C078,Rice,2
+C078,Sardine,4
+C078,Milk,4
+C079,Sugar,3
+C079,Milk,1
+C079,Tea,3
+C079,Garri,1
+C079,Groundnut,3
+C079,Indomie,2
+C079,Diapers,3
+C079,Sardine,2
+C079,Beer,2
+C080,Eggs,4
+C080,Detergent,5
+C080,Indomie,4
+C080,Beer,4
+C080,Bread,3
+C080,Garri,4
+C080,Groundnut,4
+C080,Chicken,2
+C080,Tomato paste,5
+C080,Milo,5
+C081,Tea,4
+C081,Diapers,2
+C081,Detergent,5
+C081,Beer,2
+C082,Soap,4
+C082,Garri,5
+C082,Milk,4
+C082,Tomato paste,3
+C082,Baby wipes,4
+C082,Indomie,3
+C082,Diapers,4
+C082,Spaghetti,4
+C082,Groundnut,3
+C082,Eggs,2
+C083,Sardine,4
+C083,Bread,3
+C083,Tomato paste,4
+C083,Detergent,3
+C083,Chicken,2
+C083,Spaghetti,3
+C083,Eggs,5
+C084,Eggs,3
+C084,Tomato paste,4
+C084,Chicken,3
+C084,Palm oil,4
+C084,Sugar,2
+C084,Groundnut,3
+C084,Sardine,2
+C085,Sugar,3
+C085,Rice,2
+C085,Bread,3
+C085,Detergent,2
+C085,Diapers,3
+C085,Milo,3
+C086,Detergent,3
+C086,Sardine,3
+C086,Beer,3
+C086,Bread,2
+C086,Eggs,2
+C086,Palm oil,3
+C086,Spaghetti,4
+C086,Groundnut,3
+C086,Soap,2
+C087,Sardine,3
+C087,Milk,3
+C087,Bread,3
+C087,Baby wipes,3
+C088,Indomie,3
+C088,Milk,3
+C088,Tomato paste,1
+C088,Soap,5
+C088,Milo,3
+C089,Spaghetti,2
+C089,Tomato paste,4
+C089,Rice,4
+C089,Milo,3
+C089,Soap,3
+C089,Milk,1
+C089,Baby wipes,4
+C089,Bread,2
+C090,Sugar,3
+C090,Tea,3
+C090,Soap,4
+C090,Milk,3
+C090,Garri,2
+C090,Detergent,3
+C090,Baby wipes,3
+C090,Beer,3
+C090,Rice,2
+C090,Eggs,4
+C091,Sardine,4
+C091,Garri,5
+C091,Diapers,4
+C091,Tomato paste,3
+C091,Sugar,4
+C091,Tea,3
+C091,Beer,4
+C091,Palm oil,2
+C092,Tomato paste,5
+C092,Detergent,1
+C092,Sardine,4
+C092,Milk,5
+C092,Bread,1
+C092,Tea,5
+C092,Groundnut,3
+C093,Chicken,3
+C093,Detergent,2
+C093,Beer,3
+C093,Soap,3
+C093,Eggs,4
+C094,Tea,4
+C094,Sardine,5
+C094,Garri,5
+C094,Palm oil,2
+C094,Soap,4
+C094,Eggs,3
+C095,Milo,3
+C095,Soap,2
+C095,Baby wipes,3
+C095,Chicken,3
+C095,Diapers,3
+C095,Groundnut,4
+C095,Sugar,3
+C096,Diapers,5
+C096,Detergent,2
+C096,Soap,4
+C096,Milk,3
+C096,Beer,3
+C096,Tea,3
+C096,Rice,2
+C097,Garri,5
+C097,Indomie,3
+C097,Spaghetti,4
+C097,Diapers,3
+C097,Milo,3
+C097,Milk,3
+C097,Sugar,2
+C097,Sardine,2
+C097,Baby wipes,3
+C098,Milk,3
+C098,Detergent,2
+C098,Soap,5
+C098,Baby wipes,3
+C099,Sugar,4
+C099,Garri,1
+C099,Rice,4
+C099,Eggs,2
+C099,Beer,2
+C099,Indomie,3
+C099,Chicken,4
+C099,Soap,3
+C099,Groundnut,3
+C099,Sardine,1
+C100,Bread,2
+C100,Diapers,3
+C100,Garri,4
+C100,Groundnut,3
+C100,Rice,2
+C100,Beer,4
+C100,Tea,4
+C101,Tea,3
+C101,Soap,5
+C101,Sugar,4
+C101,Spaghetti,5
+C101,Eggs,5
+C101,Sardine,5
+C101,Beer,3
+C101,Bread,2
+C101,Chicken,2
+C101,Garri,4
+C102,Soap,3
+C102,Milk,2
+C102,Baby wipes,3
+C102,Eggs,3
+C102,Tomato paste,2
+C102,Spaghetti,4
+C103,Tea,3
+C103,Soap,3
+C103,Eggs,5
+C103,Beer,3
+C103,Milk,2
+C103,Spaghetti,2
+C103,Rice,4
+C103,Sugar,3
+C104,Beer,3
+C104,Sardine,2
+C104,Milk,2
+C104,Groundnut,4
+C104,Indomie,3
+C105,Sugar,2
+C105,Spaghetti,2
+C105,Sardine,3
+C105,Palm oil,3
+C105,Baby wipes,3
+C105,Beer,3
+C105,Indomie,4
+C106,Milk,3
+C106,Palm oil,5
+C106,Eggs,3
+C106,Baby wipes,3
+C106,Beer,3
+C106,Garri,3
+C107,Indomie,2
+C107,Beer,3
+C107,Milo,2
+C107,Groundnut,3
+C107,Bread,4
+C108,Tea,4
+C108,Detergent,2
+C108,Rice,3
+C108,Milk,3
+C108,Beer,3
+C108,Spaghetti,3
+C108,Milo,3
+C108,Palm oil,4
+C108,Garri,2
+C108,Eggs,1
+C109,Detergent,3
+C109,Chicken,3
+C109,Bread,3
+C109,Sardine,4
+C109,Garri,3
+C109,Baby wipes,4
+C109,Milo,2
+C109,Groundnut,4
+C109,Sugar,4
+C109,Palm oil,3
+C110,Milk,4
+C110,Bread,2
+C110,Indomie,3
+C110,Detergent,3
+C110,Rice,1
+C111,Milk,5
+C111,Beer,5
+C111,Indomie,4
+C111,Tea,3
+C111,Eggs,4
+C112,Rice,4
+C112,Diapers,2
+C112,Groundnut,4
+C112,Milo,3
+C112,Baby wipes,1
+C113,Indomie,4
+C113,Baby wipes,1
+C113,Chicken,2
+C113,Milo,3
+C113,Tomato paste,5
+C113,Tea,3
+C113,Detergent,3
+C113,Garri,5
+C114,Diapers,2
+C114,Sardine,3
+C114,Beer,3
+C114,Chicken,4
+C115,Garri,4
+C115,Detergent,1
+C115,Chicken,3
+C115,Baby wipes,2
+C116,Groundnut,4
+C116,Diapers,3
+C116,Garri,5
+C116,Spaghetti,2
+C116,Soap,1
+C116,Sardine,3
+C116,Bread,2
+C116,Indomie,4
+C117,Rice,1
+C117,Baby wipes,4
+C117,Detergent,1
+C117,Sardine,4
+C117,Palm oil,1
+C117,Eggs,1
+C117,Tea,3
+C117,Beer,4
+C118,Sardine,3
+C118,Tea,4
+C118,Groundnut,3
+C118,Eggs,1
+C118,Tomato paste,1
+C118,Palm oil,2
+C118,Milk,4
+C118,Soap,5
+C118,Diapers,2
+C118,Indomie,1
+C119,Groundnut,3
+C119,Eggs,1
+C119,Tea,4
+C119,Diapers,3
+C119,Milo,3
+C119,Bread,4
+C119,Milk,5
+C119,Sardine,4
+C120,Diapers,2
+C120,Chicken,4
+C120,Detergent,3
+C120,Tea,3
+C120,Palm oil,4
+C120,Groundnut,4
+C120,Tomato paste,5
+C120,Rice,4
+C121,Indomie,2
+C121,Milk,3
+C121,Bread,3
+C121,Baby wipes,3
+C121,Milo,4
+C121,Soap,2
+C121,Beer,3
+C121,Sardine,1
+C122,Bread,5
+C122,Milo,4
+C122,Garri,1
+C122,Soap,3
+C122,Palm oil,4
+C123,Soap,5
+C123,Sugar,4
+C123,Beer,2
+C123,Rice,2
+C123,Eggs,2
+C123,Garri,2
+C123,Diapers,4
+C123,Milk,3
+C123,Baby wipes,4
+C123,Chicken,4
+C124,Tomato paste,5
+C124,Garri,5
+C124,Indomie,3
+C124,Sugar,1
+C124,Beer,4
+C125,Tomato paste,3
+C125,Detergent,1
+C125,Soap,4
+C125,Bread,3
+C125,Rice,3
+C126,Garri,4
+C126,Milo,4
+C126,Indomie,2
+C126,Milk,4
+C126,Rice,2
+C126,Chicken,3
+C126,Bread,3
+C126,Sugar,3
+C126,Tomato paste,2
+C126,Palm oil,2
+C127,Milo,2
+C127,Diapers,4
+C127,Bread,3
+C127,Baby wipes,3
+C127,Beer,3
+C127,Soap,3
+C127,Sugar,2
+C127,Rice,3
+C128,Palm oil,2
+C128,Sardine,4
+C128,Diapers,3
+C128,Garri,3
+C129,Spaghetti,4
+C129,Milo,3
+C129,Palm oil,3
+C129,Bread,4
+C129,Sugar,4
+C129,Groundnut,4
+C129,Detergent,2
+C130,Milk,4
+C130,Soap,4
+C130,Groundnut,3
+C130,Rice,3
+C130,Palm oil,3
+C130,Baby wipes,4
+C130,Garri,2
+C130,Milo,2
+C131,Groundnut,3
+C131,Milk,4
+C131,Milo,2
+C131,Baby wipes,2
+C131,Diapers,4
+C131,Palm oil,1
+C131,Rice,2
+C131,Tomato paste,5
+C131,Bread,1
+C132,Chicken,2
+C132,Groundnut,5
+C132,Diapers,1
+C132,Baby wipes,2
+C132,Tea,5
+C132,Bread,3
+C133,Groundnut,3
+C133,Diapers,3
+C133,Rice,4
+C133,Sardine,3
+C133,Milo,3
+C134,Beer,3
+C134,Soap,1
+C134,Tea,2
+C134,Diapers,2
+C134,Tomato paste,4
+C134,Eggs,5
+C134,Sugar,2
+C135,Eggs,1
+C135,Detergent,1
+C135,Garri,4
+C135,Sardine,5
+C135,Milk,5
+C135,Spaghetti,5
+C135,Chicken,2
+C135,Palm oil,1
+C135,Diapers,3
+C136,Milo,3
+C136,Tomato paste,3
+C136,Sugar,3
+C136,Garri,4
+C136,Tea,3
+C136,Groundnut,2
+C137,Sugar,3
+C137,Tomato paste,3
+C137,Palm oil,3
+C137,Spaghetti,4
+C137,Bread,3
+C137,Sardine,4
+C137,Baby wipes,4
+C138,Beer,4
+C138,Tea,3
+C138,Soap,3
+C138,Chicken,2
+C138,Palm oil,4
+C138,Garri,4
+C138,Rice,3
+C138,Detergent,3
+C138,Baby wipes,2
+C139,Rice,3
+C139,Eggs,3
+C139,Groundnut,3
+C139,Milo,3
+C139,Bread,4
+C139,Baby wipes,3
+C139,Palm oil,2
+C140,Baby wipes,2
+C140,Milo,4
+C140,Sugar,2
+C140,Indomie,4
+C140,Spaghetti,3
+C141,Diapers,4
+C141,Palm oil,5
+C141,Baby wipes,3
+C141,Soap,2
+C141,Rice,4
+C141,Groundnut,2
+C141,Milo,3
+C142,Groundnut,4
+C142,Beer,4
+C142,Eggs,3
+C142,Baby wipes,4
+C142,Chicken,3
+C142,Palm oil,4
+C142,Spaghetti,1
+C142,Tea,3
+C142,Sugar,2
+C143,Tomato paste,4
+C143,Rice,4
+C143,Palm oil,3
+C143,Spaghetti,1
+C143,Milk,3
+C143,Soap,1
+C143,Diapers,2
+C143,Sardine,2
+C144,Palm oil,3
+C144,Diapers,3
+C144,Chicken,3
+C144,Milk,4
+C144,Spaghetti,4
+C144,Beer,3
+C144,Indomie,3
+C144,Sugar,2
+C145,Rice,5
+C145,Garri,1
+C145,Soap,4
+C145,Beer,1
+C145,Tea,2
+C146,Rice,4
+C146,Soap,2
+C146,Beer,3
+C146,Sardine,2
+C147,Indomie,3
+C147,Milo,3
+C147,Garri,3
+C147,Spaghetti,2
+C148,Baby wipes,3
+C148,Groundnut,3
+C148,Diapers,2
+C148,Eggs,1
+C148,Beer,3
+C148,Detergent,2
+C148,Tea,3
+C149,Soap,3
+C149,Groundnut,3
+C149,Chicken,2
+C149,Spaghetti,5
+C150,Palm oil,3
+C150,Groundnut,3
+C150,Baby wipes,3
+C150,Milk,4
+C150,Sugar,2
+C150,Garri,4
+C150,Bread,3
+C150,Detergent,3
+C150,Eggs,4
+C150,Indomie,3
+C151,Milo,2
+C151,Chicken,2
+C151,Soap,4
+C151,Palm oil,1
+C151,Tea,3
+C151,Bread,4
+C151,Spaghetti,5
+C151,Eggs,1
+C151,Sugar,5
+C152,Soap,3
+C152,Sardine,3
+C152,Beer,4
+C152,Detergent,3
+C152,Baby wipes,3
+C152,Palm oil,3
+C152,Groundnut,3
+C152,Milo,3
+C153,Garri,3
+C153,Tomato paste,2
+C153,Detergent,3
+C153,Sardine,2
+C153,Milo,4
+C153,Baby wipes,3
+C153,Soap,3
+C153,Eggs,3
+C154,Beer,5
+C154,Sardine,2
+C154,Milo,4
+C154,Detergent,3
+C155,Bread,3
+C155,Eggs,2
+C155,Detergent,2
+C155,Beer,3
+C156,Beer,4
+C156,Soap,2
+C156,Baby wipes,3
+C156,Tomato paste,3
+C156,Milo,3
+C156,Chicken,2
+C156,Bread,3
+C156,Sugar,3
+C156,Spaghetti,3
+C157,Sardine,5
+C157,Chicken,2
+C157,Spaghetti,5
+C157,Baby wipes,3
+C157,Soap,5
+C157,Milk,5
+C158,Bread,3
+C158,Chicken,4
+C158,Milk,3
+C158,Baby wipes,3
+C158,Spaghetti,3
+C158,Garri,2
+C158,Tomato paste,3
+C158,Sugar,3
+C158,Eggs,4
+C158,Rice,4
+C159,Milo,3
+C159,Rice,3
+C159,Garri,2
+C159,Bread,3
+C160,Milo,4
+C160,Sugar,2
+C160,Bread,3
+C160,Palm oil,3
+C160,Chicken,3
+C161,Diapers,2
+C161,Groundnut,4
+C161,Beer,3
+C161,Milk,5
+C161,Rice,1
+C161,Soap,3
+C162,Diapers,3
+C162,Eggs,1
+C162,Chicken,2
+C162,Sardine,3
+C162,Tea,3
+C162,Milk,4
+C162,Beer,4
+C162,Baby wipes,3
+C162,Sugar,2
+C163,Baby wipes,2
+C163,Groundnut,2
+C163,Tomato paste,2
+C163,Milk,2
+C163,Eggs,3
+C163,Soap,3
+C163,Rice,3
+C163,Sugar,3
+C163,Detergent,3
+C164,Rice,3
+C164,Tea,3
+C164,Groundnut,4
+C164,Detergent,4
+C164,Diapers,2
+C164,Bread,3
+C164,Tomato paste,4
+C165,Bread,2
+C165,Garri,4
+C165,Sardine,3
+C165,Spaghetti,4
+C165,Chicken,3
+C165,Beer,2
+C165,Detergent,2
+C166,Bread,2
+C166,Chicken,3
+C166,Baby wipes,4
+C166,Soap,2
+C166,Palm oil,5
+C166,Beer,3
+C166,Sugar,4
+C166,Spaghetti,2
+C166,Tomato paste,2
+C167,Spaghetti,4
+C167,Soap,4
+C167,Indomie,3
+C167,Rice,2
+C167,Milo,3
+C167,Sugar,3
+C167,Detergent,2
+C167,Tea,3
+C168,Milk,3
+C168,Baby wipes,2
+C168,Tomato paste,5
+C168,Indomie,3
+C168,Eggs,2
+C168,Palm oil,2
+C168,Milo,3
+C168,Chicken,3
+C169,Groundnut,4
+C169,Rice,2
+C169,Soap,2
+C169,Eggs,4
+C169,Tomato paste,5
+C169,Detergent,3
+C169,Sardine,3
+C170,Beer,3
+C170,Groundnut,2
+C170,Eggs,2
+C170,Sardine,4
+C170,Baby wipes,3
+C170,Chicken,3
+C170,Garri,4
+C170,Spaghetti,4
+C170,Rice,1
+C170,Tomato paste,2
+C171,Soap,2
+C171,Garri,3
+C171,Baby wipes,3
+C171,Eggs,4
+C171,Tea,2
+C171,Bread,4
+C171,Groundnut,3
+C172,Groundnut,3
+C172,Detergent,3
+C172,Rice,5
+C172,Baby wipes,3
+C172,Soap,3
+C172,Milo,3
+C172,Indomie,2
+C173,Indomie,2
+C173,Spaghetti,3
+C173,Diapers,2
+C173,Bread,3
+C173,Eggs,1
+C173,Garri,4
+C173,Soap,3
+C173,Chicken,2
+C173,Sugar,4
+C173,Sardine,4
+C174,Indomie,2
+C174,Detergent,2
+C174,Soap,3
+C174,Milo,4
+C174,Groundnut,4
+C175,Indomie,3
+C175,Palm oil,2
+C175,Milo,3
+C175,Tomato paste,3
+C176,Palm oil,2
+C176,Detergent,2
+C176,Rice,2
+C176,Chicken,2
+C176,Garri,5
+C176,Milk,4
+C176,Tomato paste,4
+C176,Eggs,1
+C176,Milo,4
+C176,Sugar,3
+C177,Detergent,3
+C177,Sugar,4
+C177,Diapers,3
+C177,Garri,2
+C177,Groundnut,3
+C177,Sardine,3
+C177,Chicken,3
+C177,Tea,2
+C178,Rice,2
+C178,Milo,3
+C178,Eggs,5
+C178,Milk,3
+C178,Bread,1
+C179,Detergent,1
+C179,Baby wipes,3
+C179,Beer,3
+C179,Rice,2
+C179,Indomie,1
+C180,Garri,2
+C180,Tomato paste,3
+C180,Palm oil,4
+C180,Indomie,3
+C180,Soap,1
+C180,Eggs,2
+C181,Beer,4
+C181,Sardine,2
+C181,Palm oil,3
+C181,Eggs,4
+C181,Sugar,1
+C181,Bread,2
+C181,Indomie,3
+C181,Garri,4
+C181,Milo,4
+C181,Diapers,2
+C182,Tea,3
+C182,Sardine,5
+C182,Bread,3
+C182,Spaghetti,5
+C182,Beer,3
+C182,Chicken,3
+C182,Milo,3
+C183,Tea,4
+C183,Chicken,3
+C183,Diapers,2
+C183,Palm oil,1
+C183,Detergent,2
+C183,Rice,2
+C183,Soap,3
+C183,Garri,4
+C183,Sugar,4
+C183,Eggs,1
+C184,Soap,2
+C184,Groundnut,3
+C184,Eggs,5
+C184,Detergent,5
+C184,Chicken,5
+C184,Tea,3
+C184,Sugar,4
+C185,Bread,4
+C185,Palm oil,4
+C185,Rice,4
+C185,Milo,2
+C185,Baby wipes,4
+C185,Eggs,3
+C185,Tea,3
+C185,Sardine,2
+C185,Soap,3
+C186,Tea,3
+C186,Detergent,2
+C186,Soap,4
+C186,Milo,2
+C187,Tomato paste,3
+C187,Garri,4
+C187,Bread,3
+C187,Tea,3
+C187,Rice,4
+C187,Milk,4
+C187,Indomie,4
+C187,Chicken,4
+C188,Diapers,2
+C188,Palm oil,3
+C188,Milk,4
+C188,Tomato paste,1
+C188,Milo,4
+C188,Bread,5
+C188,Rice,2
+C189,Milk,3
+C189,Soap,5
+C189,Sardine,5
+C189,Garri,1
+C189,Detergent,3
+C189,Tomato paste,1
+C189,Eggs,4
+C189,Beer,2
+C190,Rice,2
+C190,Milk,3
+C190,Groundnut,2
+C190,Sardine,4
+C191,Soap,3
+C191,Garri,2
+C191,Diapers,2
+C191,Milk,3
+C191,Beer,3
+C191,Tomato paste,1
+C191,Groundnut,3
+C191,Rice,3
+C192,Indomie,4
+C192,Milo,3
+C192,Sardine,2
+C192,Milk,1
+C192,Tea,2
+C193,Milo,3
+C193,Baby wipes,3
+C193,Sardine,3
+C193,Garri,1
+C193,Palm oil,4
+C193,Spaghetti,3
+C193,Beer,2
+C193,Chicken,4
+C193,Milk,3
+C193,Sugar,4
+C194,Bread,4
+C194,Palm oil,4
+C194,Detergent,4
+C194,Soap,3
+C194,Spaghetti,2
+C194,Rice,3
+C194,Milo,4
+C194,Beer,3
+C194,Tomato paste,1
+C195,Sardine,2
+C195,Baby wipes,1
+C195,Detergent,2
+C195,Sugar,2
+C195,Indomie,3
+C195,Tea,4
+C195,Soap,2
+C195,Spaghetti,2
+C195,Palm oil,2
+C196,Milo,4
+C196,Sugar,2
+C196,Palm oil,4
+C196,Tea,3
+C196,Chicken,2
+C196,Indomie,2
+C197,Bread,4
+C197,Spaghetti,3
+C197,Beer,2
+C197,Garri,1
+C197,Sardine,3
+C197,Sugar,4
+C197,Eggs,4
+C197,Indomie,2
+C198,Baby wipes,3
+C198,Rice,3
+C198,Beer,2
+C198,Diapers,4
+C198,Milo,2
+C198,Sardine,2
+C198,Chicken,4
+C198,Tea,3
+C199,Soap,3
+C199,Chicken,3
+C199,Milk,3
+C199,Tomato paste,3
+C199,Rice,5
+C199,Milo,3
+C199,Detergent,4
+C199,Sardine,3
+C200,Sardine,1
+C200,Milo,3
+C200,Garri,2
+C200,Milk,3
+C200,Rice,3
+C200,Spaghetti,3

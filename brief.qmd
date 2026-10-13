@@ -1,0 +1,60 @@
+---
+title: "Availability: closing the gap to target"
+subtitle: "Decision brief for the Supply Chain Steering Committee"
+date: today
+format:
+  html: {embed-resources: true}
+  typst: {fig-format: png}   # needed for R code on a Mac without XQuartz
+  pdf:  {geometry: [margin=2.2cm], fontsize: 11pt}   # LaTeX: needs TinyTeX
+execute: {echo: false, warning: false}
+---
+
+```{r}
+library(tidyverse)
+weekly <- arrow::read_parquet("outputs/fmcg_weekly.parquet")
+
+# The shipped file stops on 2026-03-30 -- Q2 is held back for the forecast
+# market -- so the last complete quarter is Q1 2026. Filter on a period the
+# data does not contain and every inline number below renders as NaN. Which is
+# the lesson, arriving the hard way.
+q1      <- weekly |> filter(week_starting >= as.Date("2026-01-01"))
+avail   <- 1 - mean(q1$stockout_flag)
+target  <- 0.975
+gap_pp  <- (target - avail) * 100
+
+# The one assumption the whole range rests on: what share of a stockout is a
+# genuinely lost sale rather than demand deferred to the following week.
+# Every naming decision below is downstream of this vector, so a reader can
+# change one line and see the brief move.
+lost_sale_share <- c(low = 0.15, mid = 0.33, high = 0.60)
+
+# ANNUALISE, and say so. q1 is one quarter -- 6,240 depot-SKU-weeks -- so the
+# recovered weeks it implies are a quarter's worth. The sentence below claims a
+# figure "a year", and a quarterly number wearing an annual label is the single
+# most common error in a value case. Multiply by four, or change the sentence.
+quarters_per_year <- 4
+weeks_recovered <- nrow(q1) * (target - avail) * quarters_per_year
+rev_per_week    <- mean(q1$revenue_ngn, na.rm = TRUE)
+gross_margin    <- 0.34
+
+value <- weeks_recovered * rev_per_week * gross_margin * lost_sale_share
+value_mid  <- value[["mid"]]
+value_low  <- value[["low"]]
+value_high <- value[["high"]]
+
+fmt <- \(x) paste0("₦", format(round(x / 1e6, 1), nsmall = 1), "m")
+```
+
+## The number
+
+Network availability in Q1 2026 was `r scales::percent(avail, 0.1)` against a target of `r scales::percent(target, 0.1)` — a gap of `r round(gap_pp, 1)` points. Closing it is worth about **`r fmt(value_mid)`** of gross profit a year.
+
+## How confident
+
+My 80% range is **`r fmt(value_low)` to `r fmt(value_high)`**. Almost all of that width is one assumption: what share of a stockout is genuinely lost sale rather than demand deferred to the following week. I have assumed `r scales::percent(lost_sale_share[["mid"]])`, with a plausible range of `r scales::percent(lost_sale_share[["low"]])` to `r scales::percent(lost_sale_share[["high"]])`. Two weeks of point-of-sale analysis would replace the assumption with a measurement.
+
+Note what that means: the range is not the model's uncertainty. It is one judgement of mine. Say that out loud, because the version of this sentence that does not say it is the one that gets you caught.
+
+## The ask
+
+Approval to change the reorder policy at three depots for one quarter, with the remaining nine as a comparison group. No incremental spend. Decision required by 30 October so the change lands before the December peak.

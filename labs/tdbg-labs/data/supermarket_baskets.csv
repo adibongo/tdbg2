@@ -1,0 +1,8789 @@
+txn_id,item
+B00001,Palm oil
+B00002,Baby wipes
+B00002,Palm oil
+B00002,Rice
+B00002,Tomato paste
+B00003,Groundnut
+B00004,Bread
+B00004,Eggs
+B00004,Groundnut
+B00004,Tomato paste
+B00005,Detergent
+B00005,Garri
+B00005,Groundnut
+B00005,Sardine
+B00006,Soap
+B00006,Spaghetti
+B00006,Sugar
+B00007,Detergent
+B00007,Groundnut
+B00007,Palm oil
+B00007,Sugar
+B00007,Tea
+B00008,Sugar
+B00008,Tea
+B00009,Beer
+B00010,Baby wipes
+B00011,Detergent
+B00011,Indomie
+B00012,Detergent
+B00012,Indomie
+B00012,Sugar
+B00012,Tea
+B00013,Groundnut
+B00013,Milk
+B00013,Milo
+B00014,Milo
+B00015,Milk
+B00016,Milo
+B00017,Spaghetti
+B00018,Baby wipes
+B00018,Chicken
+B00019,Beer
+B00019,Chicken
+B00019,Soap
+B00020,Garri
+B00020,Groundnut
+B00020,Indomie
+B00020,Soap
+B00020,Spaghetti
+B00021,Eggs
+B00022,Milo
+B00022,Sugar
+B00022,Tea
+B00023,Baby wipes
+B00023,Diapers
+B00023,Eggs
+B00023,Sugar
+B00024,Detergent
+B00024,Sugar
+B00025,Bread
+B00025,Soap
+B00025,Sugar
+B00026,Milk
+B00026,Milo
+B00027,Garri
+B00027,Milk
+B00028,Baby wipes
+B00028,Beer
+B00028,Diapers
+B00028,Groundnut
+B00028,Indomie
+B00029,Milk
+B00029,Spaghetti
+B00029,Sugar
+B00029,Tea
+B00030,Diapers
+B00030,Indomie
+B00030,Palm oil
+B00031,Chicken
+B00031,Rice
+B00031,Soap
+B00031,Tomato paste
+B00032,Groundnut
+B00032,Palm oil
+B00032,Spaghetti
+B00033,Palm oil
+B00034,Groundnut
+B00034,Milk
+B00034,Milo
+B00034,Spaghetti
+B00035,Baby wipes
+B00035,Milk
+B00035,Milo
+B00036,Chicken
+B00036,Eggs
+B00036,Groundnut
+B00036,Milo
+B00037,Eggs
+B00037,Garri
+B00037,Indomie
+B00038,Bread
+B00038,Indomie
+B00038,Rice
+B00038,Sugar
+B00039,Detergent
+B00040,Eggs
+B00040,Rice
+B00040,Sugar
+B00041,Bread
+B00041,Milk
+B00042,Chicken
+B00042,Tomato paste
+B00043,Chicken
+B00043,Indomie
+B00043,Milk
+B00043,Palm oil
+B00044,Beer
+B00044,Sugar
+B00044,Tea
+B00045,Baby wipes
+B00045,Beer
+B00045,Sugar
+B00046,Detergent
+B00047,Baby wipes
+B00047,Chicken
+B00047,Diapers
+B00047,Sugar
+B00047,Tea
+B00048,Bread
+B00049,Bread
+B00049,Detergent
+B00050,Eggs
+B00050,Spaghetti
+B00051,Detergent
+B00051,Groundnut
+B00052,Diapers
+B00052,Garri
+B00052,Groundnut
+B00052,Palm oil
+B00052,Rice
+B00053,Chicken
+B00053,Detergent
+B00054,Palm oil
+B00054,Sardine
+B00054,Spaghetti
+B00054,Sugar
+B00055,Eggs
+B00055,Indomie
+B00055,Spaghetti
+B00055,Tomato paste
+B00056,Beer
+B00057,Tomato paste
+B00058,Tomato paste
+B00059,Chicken
+B00059,Eggs
+B00059,Milk
+B00060,Sardine
+B00061,Beer
+B00061,Detergent
+B00061,Garri
+B00061,Tomato paste
+B00062,Baby wipes
+B00062,Diapers
+B00062,Garri
+B00062,Groundnut
+B00062,Indomie
+B00063,Palm oil
+B00064,Eggs
+B00065,Bread
+B00065,Eggs
+B00066,Beer
+B00066,Chicken
+B00066,Soap
+B00066,Spaghetti
+B00067,Baby wipes
+B00067,Beer
+B00067,Indomie
+B00067,Sugar
+B00068,Palm oil
+B00068,Sardine
+B00069,Tea
+B00070,Chicken
+B00070,Palm oil
+B00071,Diapers
+B00072,Soap
+B00072,Tea
+B00073,Beer
+B00073,Bread
+B00073,Eggs
+B00073,Groundnut
+B00073,Sugar
+B00073,Tea
+B00074,Bread
+B00074,Chicken
+B00074,Eggs
+B00075,Eggs
+B00075,Garri
+B00075,Groundnut
+B00075,Sardine
+B00075,Sugar
+B00076,Baby wipes
+B00076,Diapers
+B00076,Milk
+B00076,Milo
+B00076,Soap
+B00077,Bread
+B00077,Palm oil
+B00078,Bread
+B00078,Eggs
+B00078,Groundnut
+B00078,Sugar
+B00078,Tea
+B00079,Baby wipes
+B00080,Baby wipes
+B00080,Diapers
+B00081,Baby wipes
+B00081,Diapers
+B00081,Eggs
+B00082,Detergent
+B00082,Groundnut
+B00082,Indomie
+B00082,Milk
+B00083,Beer
+B00083,Groundnut
+B00084,Bread
+B00084,Sugar
+B00085,Palm oil
+B00086,Detergent
+B00086,Diapers
+B00086,Palm oil
+B00086,Soap
+B00087,Groundnut
+B00088,Beer
+B00089,Palm oil
+B00089,Tomato paste
+B00090,Baby wipes
+B00090,Diapers
+B00091,Groundnut
+B00092,Milk
+B00092,Milo
+B00093,Garri
+B00093,Indomie
+B00093,Soap
+B00094,Baby wipes
+B00094,Beer
+B00094,Chicken
+B00094,Diapers
+B00095,Bread
+B00095,Detergent
+B00095,Eggs
+B00095,Rice
+B00095,Sardine
+B00096,Milo
+B00097,Groundnut
+B00097,Soap
+B00097,Tomato paste
+B00098,Milk
+B00098,Soap
+B00099,Baby wipes
+B00099,Indomie
+B00099,Sardine
+B00100,Baby wipes
+B00100,Soap
+B00101,Baby wipes
+B00101,Diapers
+B00101,Indomie
+B00101,Rice
+B00102,Soap
+B00103,Baby wipes
+B00103,Indomie
+B00104,Baby wipes
+B00104,Chicken
+B00104,Sugar
+B00104,Tea
+B00105,Chicken
+B00105,Garri
+B00105,Groundnut
+B00105,Soap
+B00105,Sugar
+B00106,Chicken
+B00106,Indomie
+B00106,Palm oil
+B00106,Soap
+B00107,Eggs
+B00107,Sardine
+B00108,Baby wipes
+B00108,Diapers
+B00109,Beer
+B00109,Diapers
+B00109,Eggs
+B00109,Groundnut
+B00109,Rice
+B00109,Tomato paste
+B00110,Beer
+B00110,Detergent
+B00111,Baby wipes
+B00111,Chicken
+B00111,Detergent
+B00111,Diapers
+B00111,Groundnut
+B00112,Rice
+B00112,Soap
+B00113,Milo
+B00113,Palm oil
+B00113,Sardine
+B00114,Bread
+B00114,Groundnut
+B00114,Sardine
+B00114,Soap
+B00115,Baby wipes
+B00115,Beer
+B00115,Bread
+B00115,Diapers
+B00115,Sugar
+B00116,Palm oil
+B00116,Tomato paste
+B00117,Baby wipes
+B00117,Groundnut
+B00117,Indomie
+B00117,Rice
+B00117,Tomato paste
+B00118,Milk
+B00118,Palm oil
+B00118,Rice
+B00119,Tea
+B00120,Baby wipes
+B00120,Palm oil
+B00120,Tomato paste
+B00121,Milk
+B00121,Rice
+B00121,Soap
+B00121,Tomato paste
+B00122,Bread
+B00122,Eggs
+B00122,Garri
+B00122,Groundnut
+B00122,Sugar
+B00123,Detergent
+B00123,Groundnut
+B00124,Garri
+B00124,Groundnut
+B00125,Beer
+B00125,Indomie
+B00125,Tea
+B00126,Baby wipes
+B00126,Bread
+B00126,Sardine
+B00126,Sugar
+B00126,Tea
+B00127,Eggs
+B00127,Indomie
+B00128,Tea
+B00129,Milk
+B00129,Tomato paste
+B00130,Milk
+B00130,Palm oil
+B00130,Soap
+B00131,Beer
+B00131,Indomie
+B00131,Sardine
+B00131,Spaghetti
+B00132,Baby wipes
+B00132,Diapers
+B00132,Sardine
+B00133,Groundnut
+B00133,Sardine
+B00133,Spaghetti
+B00134,Chicken
+B00134,Palm oil
+B00135,Baby wipes
+B00136,Baby wipes
+B00137,Bread
+B00137,Diapers
+B00137,Spaghetti
+B00138,Beer
+B00138,Chicken
+B00138,Detergent
+B00138,Sardine
+B00139,Baby wipes
+B00139,Diapers
+B00139,Milk
+B00139,Tea
+B00140,Beer
+B00140,Milk
+B00140,Palm oil
+B00141,Garri
+B00141,Groundnut
+B00141,Milk
+B00141,Palm oil
+B00141,Spaghetti
+B00142,Bread
+B00142,Eggs
+B00142,Sugar
+B00142,Tea
+B00143,Spaghetti
+B00144,Chicken
+B00144,Milo
+B00144,Palm oil
+B00144,Spaghetti
+B00145,Chicken
+B00145,Spaghetti
+B00146,Baby wipes
+B00146,Bread
+B00146,Diapers
+B00146,Garri
+B00147,Sardine
+B00148,Bread
+B00148,Chicken
+B00148,Eggs
+B00148,Groundnut
+B00148,Rice
+B00149,Beer
+B00149,Milk
+B00149,Sardine
+B00149,Spaghetti
+B00150,Palm oil
+B00150,Tomato paste
+B00151,Beer
+B00151,Diapers
+B00151,Milo
+B00151,Rice
+B00151,Tea
+B00152,Bread
+B00152,Eggs
+B00152,Groundnut
+B00153,Detergent
+B00153,Eggs
+B00153,Groundnut
+B00153,Indomie
+B00154,Groundnut
+B00154,Rice
+B00155,Eggs
+B00155,Milk
+B00155,Milo
+B00156,Indomie
+B00156,Milo
+B00156,Soap
+B00156,Tomato paste
+B00157,Beer
+B00157,Chicken
+B00157,Spaghetti
+B00158,Milo
+B00158,Sugar
+B00159,Baby wipes
+B00159,Sardine
+B00160,Chicken
+B00160,Tomato paste
+B00161,Baby wipes
+B00161,Beer
+B00161,Diapers
+B00161,Spaghetti
+B00162,Chicken
+B00162,Garri
+B00162,Tomato paste
+B00163,Baby wipes
+B00163,Beer
+B00163,Sugar
+B00164,Baby wipes
+B00164,Garri
+B00164,Groundnut
+B00164,Milo
+B00165,Groundnut
+B00166,Eggs
+B00166,Palm oil
+B00166,Rice
+B00166,Tomato paste
+B00167,Palm oil
+B00168,Rice
+B00169,Chicken
+B00169,Palm oil
+B00169,Rice
+B00169,Tomato paste
+B00170,Baby wipes
+B00170,Diapers
+B00170,Groundnut
+B00170,Sugar
+B00170,Tomato paste
+B00171,Baby wipes
+B00171,Beer
+B00171,Diapers
+B00172,Bread
+B00172,Eggs
+B00172,Garri
+B00172,Palm oil
+B00172,Tomato paste
+B00173,Milk
+B00173,Milo
+B00174,Groundnut
+B00174,Palm oil
+B00174,Sugar
+B00175,Baby wipes
+B00175,Palm oil
+B00175,Sardine
+B00176,Groundnut
+B00176,Sardine
+B00177,Beer
+B00177,Chicken
+B00177,Rice
+B00178,Bread
+B00178,Detergent
+B00178,Eggs
+B00178,Milk
+B00179,Eggs
+B00179,Milk
+B00179,Tomato paste
+B00180,Baby wipes
+B00180,Detergent
+B00180,Milk
+B00180,Milo
+B00180,Sardine
+B00181,Sardine
+B00182,Chicken
+B00182,Garri
+B00182,Indomie
+B00183,Eggs
+B00184,Baby wipes
+B00184,Chicken
+B00184,Indomie
+B00184,Milk
+B00185,Sugar
+B00186,Groundnut
+B00186,Palm oil
+B00187,Chicken
+B00187,Groundnut
+B00187,Palm oil
+B00187,Tomato paste
+B00188,Eggs
+B00188,Groundnut
+B00188,Palm oil
+B00188,Spaghetti
+B00189,Milk
+B00189,Milo
+B00190,Tomato paste
+B00191,Baby wipes
+B00191,Chicken
+B00191,Rice
+B00191,Sugar
+B00192,Groundnut
+B00193,Bread
+B00193,Eggs
+B00193,Milo
+B00193,Palm oil
+B00194,Beer
+B00194,Groundnut
+B00194,Rice
+B00194,Sardine
+B00195,Beer
+B00195,Chicken
+B00195,Garri
+B00196,Baby wipes
+B00196,Beer
+B00196,Soap
+B00196,Spaghetti
+B00197,Bread
+B00197,Tea
+B00198,Baby wipes
+B00198,Diapers
+B00198,Soap
+B00199,Baby wipes
+B00199,Beer
+B00199,Diapers
+B00199,Milk
+B00199,Milo
+B00199,Soap
+B00200,Indomie
+B00200,Sardine
+B00200,Spaghetti
+B00201,Indomie
+B00201,Milk
+B00201,Milo
+B00201,Tomato paste
+B00202,Chicken
+B00203,Garri
+B00203,Groundnut
+B00204,Detergent
+B00205,Baby wipes
+B00205,Bread
+B00205,Diapers
+B00205,Garri
+B00206,Garri
+B00207,Garri
+B00207,Groundnut
+B00207,Indomie
+B00207,Milo
+B00208,Milk
+B00208,Sardine
+B00208,Soap
+B00209,Baby wipes
+B00209,Bread
+B00209,Eggs
+B00209,Milk
+B00209,Sardine
+B00210,Baby wipes
+B00210,Beer
+B00210,Eggs
+B00210,Rice
+B00210,Tomato paste
+B00211,Baby wipes
+B00211,Detergent
+B00211,Spaghetti
+B00212,Bread
+B00212,Eggs
+B00212,Indomie
+B00212,Milk
+B00213,Rice
+B00214,Milk
+B00214,Milo
+B00214,Rice
+B00215,Groundnut
+B00215,Indomie
+B00215,Sugar
+B00216,Groundnut
+B00217,Diapers
+B00218,Indomie
+B00218,Rice
+B00218,Sugar
+B00218,Tea
+B00218,Tomato paste
+B00219,Groundnut
+B00220,Sardine
+B00220,Spaghetti
+B00221,Palm oil
+B00221,Rice
+B00221,Tea
+B00221,Tomato paste
+B00222,Milk
+B00222,Soap
+B00222,Sugar
+B00223,Baby wipes
+B00223,Beer
+B00223,Bread
+B00223,Diapers
+B00223,Eggs
+B00224,Eggs
+B00224,Milo
+B00224,Palm oil
+B00224,Soap
+B00225,Detergent
+B00225,Palm oil
+B00225,Rice
+B00225,Soap
+B00225,Spaghetti
+B00225,Tomato paste
+B00226,Baby wipes
+B00226,Beer
+B00227,Bread
+B00227,Detergent
+B00227,Eggs
+B00227,Indomie
+B00228,Beer
+B00228,Diapers
+B00228,Groundnut
+B00228,Palm oil
+B00228,Soap
+B00229,Eggs
+B00230,Baby wipes
+B00230,Milk
+B00230,Soap
+B00231,Baby wipes
+B00231,Beer
+B00231,Sardine
+B00232,Beer
+B00232,Palm oil
+B00233,Eggs
+B00233,Milk
+B00234,Garri
+B00234,Palm oil
+B00234,Spaghetti
+B00234,Tomato paste
+B00235,Detergent
+B00235,Sardine
+B00235,Sugar
+B00235,Tea
+B00236,Baby wipes
+B00236,Diapers
+B00236,Soap
+B00237,Groundnut
+B00237,Palm oil
+B00237,Tomato paste
+B00238,Baby wipes
+B00238,Diapers
+B00238,Groundnut
+B00238,Tomato paste
+B00239,Spaghetti
+B00240,Groundnut
+B00241,Baby wipes
+B00241,Diapers
+B00241,Indomie
+B00241,Tomato paste
+B00242,Baby wipes
+B00242,Palm oil
+B00243,Bread
+B00243,Eggs
+B00243,Groundnut
+B00244,Detergent
+B00244,Groundnut
+B00244,Milo
+B00244,Palm oil
+B00245,Palm oil
+B00245,Tomato paste
+B00246,Sugar
+B00247,Baby wipes
+B00247,Beer
+B00247,Diapers
+B00247,Groundnut
+B00247,Spaghetti
+B00247,Tomato paste
+B00248,Chicken
+B00248,Milk
+B00248,Milo
+B00248,Sardine
+B00248,Sugar
+B00249,Detergent
+B00249,Eggs
+B00249,Soap
+B00249,Sugar
+B00250,Spaghetti
+B00251,Eggs
+B00252,Indomie
+B00252,Milk
+B00252,Milo
+B00252,Soap
+B00252,Sugar
+B00253,Tea
+B00254,Beer
+B00254,Diapers
+B00254,Milo
+B00254,Palm oil
+B00255,Indomie
+B00255,Rice
+B00255,Soap
+B00256,Baby wipes
+B00256,Beer
+B00256,Diapers
+B00256,Garri
+B00256,Palm oil
+B00257,Chicken
+B00257,Indomie
+B00257,Palm oil
+B00257,Soap
+B00257,Tomato paste
+B00258,Detergent
+B00258,Garri
+B00258,Milk
+B00258,Palm oil
+B00258,Tomato paste
+B00259,Garri
+B00259,Sardine
+B00260,Eggs
+B00260,Milk
+B00260,Milo
+B00260,Rice
+B00260,Soap
+B00261,Beer
+B00261,Detergent
+B00261,Sardine
+B00261,Tomato paste
+B00262,Baby wipes
+B00262,Eggs
+B00262,Milk
+B00262,Sugar
+B00263,Baby wipes
+B00263,Beer
+B00264,Baby wipes
+B00264,Beer
+B00264,Soap
+B00264,Sugar
+B00265,Baby wipes
+B00265,Milk
+B00266,Bread
+B00266,Eggs
+B00266,Tomato paste
+B00267,Palm oil
+B00267,Rice
+B00267,Sardine
+B00267,Soap
+B00267,Tomato paste
+B00268,Baby wipes
+B00268,Beer
+B00268,Diapers
+B00268,Indomie
+B00268,Sardine
+B00269,Rice
+B00269,Tomato paste
+B00270,Baby wipes
+B00270,Milk
+B00271,Milk
+B00271,Palm oil
+B00272,Beer
+B00272,Indomie
+B00272,Palm oil
+B00272,Rice
+B00272,Tomato paste
+B00273,Sardine
+B00274,Rice
+B00274,Soap
+B00274,Sugar
+B00274,Tomato paste
+B00275,Soap
+B00276,Beer
+B00276,Garri
+B00276,Palm oil
+B00277,Beer
+B00277,Diapers
+B00277,Tea
+B00278,Baby wipes
+B00278,Beer
+B00278,Diapers
+B00278,Sugar
+B00278,Tea
+B00279,Tomato paste
+B00280,Garri
+B00280,Groundnut
+B00281,Eggs
+B00282,Tomato paste
+B00283,Bread
+B00283,Palm oil
+B00283,Sugar
+B00283,Tomato paste
+B00284,Indomie
+B00284,Sardine
+B00285,Baby wipes
+B00285,Chicken
+B00285,Detergent
+B00285,Palm oil
+B00286,Garri
+B00286,Groundnut
+B00286,Sugar
+B00286,Tea
+B00287,Sardine
+B00287,Sugar
+B00288,Groundnut
+B00288,Milk
+B00289,Baby wipes
+B00289,Beer
+B00289,Diapers
+B00289,Sugar
+B00289,Tea
+B00290,Beer
+B00290,Rice
+B00290,Sardine
+B00290,Sugar
+B00291,Eggs
+B00291,Palm oil
+B00291,Rice
+B00291,Tomato paste
+B00292,Baby wipes
+B00292,Beer
+B00292,Diapers
+B00292,Milk
+B00292,Soap
+B00292,Tomato paste
+B00293,Bread
+B00293,Chicken
+B00293,Indomie
+B00294,Detergent
+B00294,Groundnut
+B00294,Sugar
+B00295,Baby wipes
+B00295,Diapers
+B00295,Spaghetti
+B00296,Palm oil
+B00297,Baby wipes
+B00297,Beer
+B00297,Garri
+B00298,Baby wipes
+B00298,Beer
+B00298,Groundnut
+B00298,Milk
+B00298,Milo
+B00299,Groundnut
+B00299,Sugar
+B00299,Tomato paste
+B00300,Beer
+B00300,Eggs
+B00300,Sugar
+B00301,Milk
+B00301,Palm oil
+B00302,Beer
+B00302,Diapers
+B00302,Garri
+B00303,Eggs
+B00304,Groundnut
+B00304,Palm oil
+B00304,Spaghetti
+B00304,Tomato paste
+B00305,Soap
+B00305,Sugar
+B00305,Tea
+B00306,Milk
+B00306,Sardine
+B00307,Chicken
+B00308,Chicken
+B00308,Detergent
+B00308,Indomie
+B00308,Sugar
+B00308,Tea
+B00309,Indomie
+B00310,Chicken
+B00310,Milk
+B00311,Palm oil
+B00311,Sardine
+B00311,Soap
+B00311,Sugar
+B00311,Tea
+B00312,Groundnut
+B00312,Indomie
+B00313,Rice
+B00314,Groundnut
+B00315,Bread
+B00315,Eggs
+B00315,Milo
+B00316,Beer
+B00316,Eggs
+B00316,Indomie
+B00316,Sardine
+B00317,Baby wipes
+B00317,Eggs
+B00317,Sardine
+B00318,Beer
+B00318,Eggs
+B00319,Baby wipes
+B00319,Diapers
+B00320,Baby wipes
+B00320,Detergent
+B00320,Groundnut
+B00320,Tea
+B00321,Sardine
+B00321,Sugar
+B00321,Tea
+B00322,Detergent
+B00322,Milo
+B00322,Sugar
+B00322,Tea
+B00323,Diapers
+B00323,Tea
+B00324,Baby wipes
+B00325,Beer
+B00325,Bread
+B00325,Eggs
+B00325,Garri
+B00325,Sugar
+B00326,Baby wipes
+B00326,Beer
+B00326,Chicken
+B00326,Diapers
+B00326,Palm oil
+B00327,Baby wipes
+B00327,Detergent
+B00327,Milk
+B00327,Palm oil
+B00327,Tomato paste
+B00328,Baby wipes
+B00328,Beer
+B00328,Bread
+B00328,Detergent
+B00328,Diapers
+B00328,Eggs
+B00328,Rice
+B00329,Groundnut
+B00329,Spaghetti
+B00330,Baby wipes
+B00330,Sugar
+B00330,Tea
+B00331,Diapers
+B00332,Beer
+B00332,Bread
+B00332,Garri
+B00332,Groundnut
+B00333,Bread
+B00333,Eggs
+B00333,Milo
+B00333,Soap
+B00334,Baby wipes
+B00334,Groundnut
+B00334,Sardine
+B00334,Spaghetti
+B00335,Chicken
+B00335,Milk
+B00336,Milk
+B00337,Beer
+B00338,Groundnut
+B00338,Milk
+B00338,Rice
+B00338,Sardine
+B00338,Tomato paste
+B00339,Beer
+B00339,Groundnut
+B00339,Indomie
+B00340,Baby wipes
+B00340,Chicken
+B00340,Soap
+B00341,Indomie
+B00342,Chicken
+B00342,Eggs
+B00342,Milk
+B00342,Tomato paste
+B00343,Beer
+B00344,Baby wipes
+B00344,Garri
+B00344,Groundnut
+B00344,Milo
+B00345,Baby wipes
+B00345,Sugar
+B00346,Baby wipes
+B00346,Diapers
+B00346,Garri
+B00346,Groundnut
+B00346,Sardine
+B00346,Soap
+B00347,Baby wipes
+B00347,Detergent
+B00347,Diapers
+B00347,Spaghetti
+B00347,Tomato paste
+B00348,Milo
+B00348,Sugar
+B00348,Tomato paste
+B00349,Indomie
+B00350,Indomie
+B00351,Baby wipes
+B00351,Diapers
+B00351,Indomie
+B00352,Sugar
+B00353,Chicken
+B00353,Milk
+B00353,Sugar
+B00353,Tomato paste
+B00354,Bread
+B00355,Sardine
+B00356,Baby wipes
+B00356,Garri
+B00356,Groundnut
+B00357,Beer
+B00357,Soap
+B00357,Tea
+B00358,Baby wipes
+B00358,Eggs
+B00358,Groundnut
+B00358,Milk
+B00358,Milo
+B00359,Indomie
+B00359,Tea
+B00360,Baby wipes
+B00360,Palm oil
+B00361,Eggs
+B00362,Milk
+B00363,Spaghetti
+B00364,Milk
+B00364,Palm oil
+B00364,Sugar
+B00364,Tomato paste
+B00365,Baby wipes
+B00365,Milk
+B00365,Milo
+B00366,Garri
+B00366,Groundnut
+B00366,Sugar
+B00366,Tea
+B00367,Indomie
+B00367,Milk
+B00367,Tomato paste
+B00368,Indomie
+B00369,Bread
+B00369,Eggs
+B00369,Milo
+B00369,Rice
+B00370,Indomie
+B00371,Palm oil
+B00371,Spaghetti
+B00372,Beer
+B00372,Groundnut
+B00372,Milk
+B00373,Baby wipes
+B00373,Chicken
+B00373,Diapers
+B00373,Indomie
+B00373,Sardine
+B00374,Palm oil
+B00374,Sugar
+B00374,Tea
+B00375,Bread
+B00375,Eggs
+B00375,Garri
+B00375,Milo
+B00375,Tomato paste
+B00376,Detergent
+B00377,Bread
+B00377,Rice
+B00377,Spaghetti
+B00377,Sugar
+B00378,Beer
+B00378,Detergent
+B00378,Diapers
+B00379,Beer
+B00379,Eggs
+B00379,Milk
+B00380,Baby wipes
+B00380,Beer
+B00380,Diapers
+B00380,Tomato paste
+B00381,Tomato paste
+B00382,Rice
+B00382,Tomato paste
+B00383,Baby wipes
+B00383,Beer
+B00383,Diapers
+B00383,Rice
+B00383,Tomato paste
+B00384,Palm oil
+B00384,Sugar
+B00384,Tea
+B00385,Bread
+B00385,Detergent
+B00385,Eggs
+B00385,Milo
+B00385,Spaghetti
+B00386,Baby wipes
+B00386,Beer
+B00387,Eggs
+B00387,Garri
+B00387,Groundnut
+B00387,Palm oil
+B00387,Sardine
+B00387,Tomato paste
+B00388,Detergent
+B00388,Indomie
+B00389,Bread
+B00389,Eggs
+B00389,Sugar
+B00389,Tea
+B00390,Detergent
+B00390,Soap
+B00390,Sugar
+B00391,Spaghetti
+B00392,Beer
+B00392,Diapers
+B00392,Groundnut
+B00392,Sugar
+B00392,Tea
+B00393,Baby wipes
+B00393,Garri
+B00393,Groundnut
+B00393,Milk
+B00393,Milo
+B00393,Palm oil
+B00394,Beer
+B00394,Milo
+B00394,Palm oil
+B00395,Chicken
+B00395,Eggs
+B00395,Palm oil
+B00395,Spaghetti
+B00395,Tomato paste
+B00396,Milo
+B00396,Sugar
+B00396,Tea
+B00397,Palm oil
+B00397,Spaghetti
+B00398,Groundnut
+B00398,Milo
+B00398,Spaghetti
+B00398,Sugar
+B00399,Bread
+B00399,Eggs
+B00400,Baby wipes
+B00400,Diapers
+B00400,Garri
+B00400,Groundnut
+B00401,Milo
+B00401,Tea
+B00402,Rice
+B00402,Sugar
+B00402,Tomato paste
+B00403,Indomie
+B00404,Garri
+B00404,Groundnut
+B00404,Palm oil
+B00405,Beer
+B00405,Indomie
+B00405,Milo
+B00405,Rice
+B00405,Tomato paste
+B00406,Groundnut
+B00406,Palm oil
+B00406,Rice
+B00406,Soap
+B00406,Sugar
+B00406,Tea
+B00406,Tomato paste
+B00407,Beer
+B00407,Chicken
+B00407,Tea
+B00408,Garri
+B00408,Milk
+B00408,Rice
+B00408,Spaghetti
+B00409,Palm oil
+B00409,Rice
+B00409,Sugar
+B00409,Tea
+B00409,Tomato paste
+B00410,Baby wipes
+B00411,Detergent
+B00411,Eggs
+B00411,Rice
+B00412,Beer
+B00413,Eggs
+B00413,Palm oil
+B00413,Rice
+B00413,Tomato paste
+B00414,Garri
+B00414,Sardine
+B00415,Beer
+B00415,Soap
+B00416,Baby wipes
+B00416,Bread
+B00416,Diapers
+B00416,Milo
+B00416,Soap
+B00417,Beer
+B00417,Milk
+B00417,Milo
+B00417,Tomato paste
+B00418,Groundnut
+B00418,Indomie
+B00418,Sugar
+B00418,Tea
+B00419,Eggs
+B00419,Indomie
+B00419,Rice
+B00419,Tomato paste
+B00420,Detergent
+B00420,Milk
+B00421,Spaghetti
+B00422,Chicken
+B00423,Bread
+B00423,Eggs
+B00423,Garri
+B00423,Indomie
+B00423,Milk
+B00424,Groundnut
+B00424,Indomie
+B00424,Palm oil
+B00424,Rice
+B00425,Beer
+B00425,Diapers
+B00425,Sugar
+B00425,Tea
+B00425,Tomato paste
+B00426,Baby wipes
+B00426,Sugar
+B00426,Tea
+B00427,Milk
+B00428,Bread
+B00428,Eggs
+B00428,Palm oil
+B00428,Sardine
+B00429,Bread
+B00429,Detergent
+B00429,Indomie
+B00429,Palm oil
+B00430,Beer
+B00430,Garri
+B00430,Sardine
+B00431,Groundnut
+B00432,Groundnut
+B00433,Indomie
+B00433,Tea
+B00434,Milk
+B00434,Milo
+B00435,Baby wipes
+B00435,Detergent
+B00435,Groundnut
+B00435,Sugar
+B00436,Sugar
+B00436,Tea
+B00437,Indomie
+B00437,Spaghetti
+B00438,Baby wipes
+B00438,Soap
+B00438,Tea
+B00439,Beer
+B00439,Sugar
+B00440,Milk
+B00441,Rice
+B00441,Sugar
+B00442,Baby wipes
+B00442,Diapers
+B00443,Bread
+B00443,Eggs
+B00443,Garri
+B00443,Palm oil
+B00443,Soap
+B00444,Bread
+B00444,Eggs
+B00444,Sugar
+B00444,Tea
+B00445,Garri
+B00445,Groundnut
+B00446,Bread
+B00446,Eggs
+B00446,Spaghetti
+B00447,Beer
+B00447,Tomato paste
+B00448,Baby wipes
+B00449,Diapers
+B00450,Sugar
+B00451,Garri
+B00452,Beer
+B00452,Garri
+B00452,Groundnut
+B00452,Indomie
+B00453,Diapers
+B00453,Sugar
+B00454,Detergent
+B00454,Garri
+B00454,Milo
+B00454,Sugar
+B00455,Bread
+B00455,Eggs
+B00455,Palm oil
+B00455,Sugar
+B00455,Tea
+B00456,Baby wipes
+B00456,Milk
+B00456,Rice
+B00456,Sardine
+B00457,Baby wipes
+B00457,Eggs
+B00457,Indomie
+B00457,Rice
+B00458,Groundnut
+B00458,Sugar
+B00459,Detergent
+B00459,Milk
+B00459,Sugar
+B00460,Milo
+B00460,Soap
+B00460,Tea
+B00461,Detergent
+B00461,Groundnut
+B00461,Milk
+B00461,Milo
+B00462,Sardine
+B00463,Baby wipes
+B00463,Garri
+B00463,Sugar
+B00463,Tea
+B00464,Detergent
+B00464,Milk
+B00465,Baby wipes
+B00465,Beer
+B00465,Diapers
+B00465,Spaghetti
+B00466,Milk
+B00466,Milo
+B00467,Beer
+B00467,Eggs
+B00467,Groundnut
+B00467,Indomie
+B00468,Baby wipes
+B00469,Eggs
+B00469,Milk
+B00469,Tea
+B00470,Bread
+B00470,Eggs
+B00470,Spaghetti
+B00470,Sugar
+B00470,Tea
+B00471,Soap
+B00471,Spaghetti
+B00472,Garri
+B00472,Groundnut
+B00472,Milk
+B00473,Eggs
+B00473,Garri
+B00473,Groundnut
+B00474,Garri
+B00474,Groundnut
+B00475,Milk
+B00475,Milo
+B00476,Bread
+B00476,Chicken
+B00476,Eggs
+B00477,Indomie
+B00478,Chicken
+B00478,Garri
+B00478,Groundnut
+B00478,Milk
+B00478,Tea
+B00479,Diapers
+B00479,Palm oil
+B00479,Rice
+B00479,Sugar
+B00479,Tomato paste
+B00480,Beer
+B00480,Diapers
+B00481,Palm oil
+B00482,Baby wipes
+B00483,Beer
+B00483,Detergent
+B00483,Tomato paste
+B00484,Eggs
+B00484,Groundnut
+B00484,Indomie
+B00484,Milk
+B00484,Milo
+B00485,Baby wipes
+B00485,Diapers
+B00485,Palm oil
+B00485,Tea
+B00486,Beer
+B00486,Milk
+B00486,Milo
+B00486,Sardine
+B00487,Milk
+B00488,Sugar
+B00488,Tea
+B00489,Indomie
+B00489,Palm oil
+B00490,Bread
+B00490,Diapers
+B00490,Indomie
+B00490,Rice
+B00491,Groundnut
+B00491,Palm oil
+B00491,Rice
+B00491,Tomato paste
+B00492,Groundnut
+B00492,Spaghetti
+B00492,Sugar
+B00492,Tea
+B00493,Chicken
+B00493,Garri
+B00493,Groundnut
+B00493,Sugar
+B00493,Tea
+B00494,Beer
+B00494,Garri
+B00494,Soap
+B00495,Indomie
+B00495,Milk
+B00496,Milk
+B00497,Milk
+B00497,Rice
+B00497,Tomato paste
+B00498,Garri
+B00498,Groundnut
+B00499,Chicken
+B00499,Detergent
+B00499,Sardine
+B00500,Sardine
+B00500,Sugar
+B00500,Tea
+B00501,Eggs
+B00501,Indomie
+B00501,Milk
+B00501,Milo
+B00501,Tomato paste
+B00502,Baby wipes
+B00502,Eggs
+B00502,Milk
+B00502,Milo
+B00502,Sardine
+B00503,Chicken
+B00503,Palm oil
+B00503,Sardine
+B00503,Soap
+B00504,Palm oil
+B00504,Tea
+B00504,Tomato paste
+B00505,Detergent
+B00506,Baby wipes
+B00506,Chicken
+B00507,Bread
+B00507,Eggs
+B00507,Sardine
+B00507,Spaghetti
+B00508,Garri
+B00508,Groundnut
+B00508,Indomie
+B00509,Baby wipes
+B00509,Beer
+B00509,Diapers
+B00509,Eggs
+B00509,Groundnut
+B00510,Groundnut
+B00510,Sardine
+B00511,Soap
+B00512,Baby wipes
+B00512,Detergent
+B00512,Palm oil
+B00513,Diapers
+B00513,Milk
+B00513,Milo
+B00514,Palm oil
+B00515,Garri
+B00515,Groundnut
+B00516,Rice
+B00516,Soap
+B00516,Spaghetti
+B00517,Chicken
+B00518,Palm oil
+B00518,Rice
+B00518,Tomato paste
+B00519,Garri
+B00520,Detergent
+B00520,Indomie
+B00520,Milk
+B00520,Tomato paste
+B00521,Baby wipes
+B00521,Groundnut
+B00521,Sugar
+B00521,Tea
+B00522,Eggs
+B00522,Garri
+B00522,Soap
+B00522,Sugar
+B00522,Tea
+B00523,Milo
+B00524,Beer
+B00524,Diapers
+B00524,Milk
+B00524,Sugar
+B00525,Beer
+B00526,Palm oil
+B00527,Baby wipes
+B00527,Diapers
+B00527,Milk
+B00527,Milo
+B00527,Spaghetti
+B00528,Milo
+B00529,Baby wipes
+B00529,Beer
+B00529,Diapers
+B00529,Garri
+B00529,Indomie
+B00530,Baby wipes
+B00530,Chicken
+B00530,Sardine
+B00531,Indomie
+B00531,Milk
+B00532,Spaghetti
+B00532,Tomato paste
+B00533,Bread
+B00533,Eggs
+B00533,Garri
+B00533,Rice
+B00533,Sugar
+B00534,Chicken
+B00534,Detergent
+B00534,Sugar
+B00535,Detergent
+B00535,Eggs
+B00535,Soap
+B00536,Chicken
+B00536,Milk
+B00536,Spaghetti
+B00537,Detergent
+B00537,Garri
+B00537,Milk
+B00538,Diapers
+B00538,Garri
+B00538,Groundnut
+B00538,Soap
+B00539,Chicken
+B00540,Bread
+B00540,Eggs
+B00541,Baby wipes
+B00541,Beer
+B00541,Diapers
+B00541,Indomie
+B00541,Sardine
+B00542,Rice
+B00543,Groundnut
+B00544,Milk
+B00544,Tomato paste
+B00545,Garri
+B00545,Groundnut
+B00545,Milk
+B00545,Milo
+B00545,Sugar
+B00545,Tea
+B00546,Baby wipes
+B00546,Groundnut
+B00546,Palm oil
+B00546,Tea
+B00547,Milk
+B00547,Palm oil
+B00547,Soap
+B00548,Groundnut
+B00548,Sardine
+B00548,Spaghetti
+B00549,Palm oil
+B00549,Spaghetti
+B00549,Tomato paste
+B00550,Baby wipes
+B00550,Sardine
+B00550,Soap
+B00551,Beer
+B00551,Chicken
+B00551,Milo
+B00552,Bread
+B00552,Eggs
+B00552,Groundnut
+B00553,Chicken
+B00554,Detergent
+B00554,Garri
+B00555,Baby wipes
+B00555,Eggs
+B00556,Milk
+B00556,Palm oil
+B00556,Spaghetti
+B00557,Groundnut
+B00557,Milo
+B00558,Detergent
+B00559,Baby wipes
+B00559,Diapers
+B00560,Baby wipes
+B00560,Beer
+B00560,Chicken
+B00560,Sugar
+B00560,Tea
+B00561,Diapers
+B00561,Milk
+B00561,Milo
+B00562,Indomie
+B00563,Baby wipes
+B00563,Beer
+B00563,Sugar
+B00563,Tea
+B00564,Groundnut
+B00565,Eggs
+B00566,Milk
+B00566,Milo
+B00566,Sugar
+B00567,Garri
+B00567,Groundnut
+B00568,Soap
+B00569,Rice
+B00570,Chicken
+B00570,Milk
+B00570,Sardine
+B00571,Baby wipes
+B00571,Beer
+B00571,Diapers
+B00571,Groundnut
+B00571,Sardine
+B00572,Sardine
+B00572,Spaghetti
+B00572,Sugar
+B00572,Tea
+B00573,Garri
+B00574,Beer
+B00574,Diapers
+B00574,Palm oil
+B00574,Rice
+B00574,Tomato paste
+B00575,Detergent
+B00575,Soap
+B00575,Tea
+B00576,Indomie
+B00576,Rice
+B00577,Baby wipes
+B00577,Chicken
+B00577,Diapers
+B00577,Sugar
+B00578,Garri
+B00578,Soap
+B00578,Spaghetti
+B00579,Chicken
+B00579,Milk
+B00579,Milo
+B00580,Detergent
+B00580,Eggs
+B00580,Sardine
+B00580,Sugar
+B00580,Tea
+B00581,Baby wipes
+B00581,Soap
+B00582,Milk
+B00583,Groundnut
+B00584,Soap
+B00584,Tomato paste
+B00585,Beer
+B00585,Groundnut
+B00585,Indomie
+B00586,Beer
+B00586,Chicken
+B00587,Detergent
+B00587,Tomato paste
+B00588,Spaghetti
+B00588,Sugar
+B00589,Indomie
+B00589,Rice
+B00589,Tomato paste
+B00590,Baby wipes
+B00590,Palm oil
+B00590,Rice
+B00590,Sugar
+B00591,Baby wipes
+B00591,Beer
+B00591,Sardine
+B00591,Spaghetti
+B00592,Baby wipes
+B00592,Bread
+B00592,Eggs
+B00592,Milk
+B00593,Baby wipes
+B00593,Milo
+B00593,Tomato paste
+B00594,Baby wipes
+B00594,Beer
+B00594,Diapers
+B00594,Milk
+B00594,Palm oil
+B00595,Detergent
+B00595,Garri
+B00595,Palm oil
+B00595,Rice
+B00596,Baby wipes
+B00596,Beer
+B00597,Eggs
+B00597,Milk
+B00597,Milo
+B00598,Eggs
+B00598,Milo
+B00599,Garri
+B00599,Milk
+B00600,Sugar
+B00600,Tea
+B00601,Bread
+B00601,Garri
+B00601,Groundnut
+B00602,Baby wipes
+B00602,Diapers
+B00602,Eggs
+B00602,Indomie
+B00603,Garri
+B00603,Groundnut
+B00603,Palm oil
+B00603,Soap
+B00603,Tomato paste
+B00604,Indomie
+B00604,Spaghetti
+B00604,Tea
+B00605,Beer
+B00605,Indomie
+B00605,Sardine
+B00605,Spaghetti
+B00606,Palm oil
+B00606,Spaghetti
+B00607,Beer
+B00607,Chicken
+B00607,Palm oil
+B00607,Rice
+B00607,Tomato paste
+B00608,Baby wipes
+B00608,Beer
+B00608,Soap
+B00609,Eggs
+B00609,Garri
+B00609,Groundnut
+B00610,Tomato paste
+B00611,Chicken
+B00611,Detergent
+B00612,Sugar
+B00613,Baby wipes
+B00613,Detergent
+B00613,Garri
+B00613,Groundnut
+B00613,Palm oil
+B00614,Sardine
+B00615,Sardine
+B00616,Beer
+B00616,Tea
+B00617,Bread
+B00617,Eggs
+B00617,Garri
+B00617,Milk
+B00618,Garri
+B00618,Groundnut
+B00618,Palm oil
+B00619,Garri
+B00619,Groundnut
+B00620,Sugar
+B00621,Baby wipes
+B00621,Diapers
+B00621,Groundnut
+B00622,Rice
+B00622,Spaghetti
+B00622,Tomato paste
+B00623,Beer
+B00623,Diapers
+B00623,Garri
+B00624,Beer
+B00624,Diapers
+B00624,Indomie
+B00624,Spaghetti
+B00625,Baby wipes
+B00625,Garri
+B00625,Milo
+B00625,Palm oil
+B00625,Tomato paste
+B00626,Milk
+B00626,Milo
+B00627,Palm oil
+B00628,Rice
+B00629,Eggs
+B00629,Palm oil
+B00629,Spaghetti
+B00630,Eggs
+B00630,Milk
+B00630,Milo
+B00630,Rice
+B00630,Tea
+B00630,Tomato paste
+B00631,Chicken
+B00632,Indomie
+B00632,Milk
+B00632,Milo
+B00632,Sugar
+B00633,Baby wipes
+B00633,Detergent
+B00633,Soap
+B00633,Sugar
+B00634,Eggs
+B00635,Baby wipes
+B00635,Beer
+B00635,Diapers
+B00635,Sugar
+B00635,Tea
+B00636,Detergent
+B00636,Palm oil
+B00636,Soap
+B00636,Sugar
+B00636,Tea
+B00636,Tomato paste
+B00637,Detergent
+B00637,Garri
+B00637,Groundnut
+B00637,Palm oil
+B00637,Spaghetti
+B00637,Tomato paste
+B00638,Milk
+B00638,Milo
+B00639,Beer
+B00640,Garri
+B00640,Groundnut
+B00641,Eggs
+B00641,Garri
+B00641,Groundnut
+B00642,Chicken
+B00642,Eggs
+B00642,Indomie
+B00642,Tomato paste
+B00643,Garri
+B00643,Groundnut
+B00643,Indomie
+B00644,Indomie
+B00644,Palm oil
+B00645,Garri
+B00645,Groundnut
+B00645,Spaghetti
+B00645,Sugar
+B00645,Tea
+B00646,Garri
+B00646,Groundnut
+B00646,Milo
+B00647,Milk
+B00647,Milo
+B00648,Beer
+B00648,Sugar
+B00648,Tea
+B00649,Beer
+B00649,Detergent
+B00649,Eggs
+B00649,Groundnut
+B00650,Chicken
+B00651,Diapers
+B00651,Eggs
+B00651,Palm oil
+B00651,Soap
+B00651,Tomato paste
+B00652,Chicken
+B00652,Spaghetti
+B00653,Rice
+B00653,Sardine
+B00654,Chicken
+B00654,Palm oil
+B00655,Baby wipes
+B00655,Beer
+B00655,Bread
+B00655,Eggs
+B00655,Soap
+B00656,Baby wipes
+B00656,Groundnut
+B00656,Rice
+B00656,Sardine
+B00657,Groundnut
+B00658,Milk
+B00658,Spaghetti
+B00659,Baby wipes
+B00659,Sardine
+B00660,Detergent
+B00660,Eggs
+B00661,Chicken
+B00661,Garri
+B00661,Milk
+B00661,Milo
+B00662,Baby wipes
+B00662,Diapers
+B00663,Baby wipes
+B00663,Indomie
+B00664,Detergent
+B00664,Palm oil
+B00665,Detergent
+B00665,Garri
+B00666,Eggs
+B00667,Milk
+B00668,Milk
+B00668,Spaghetti
+B00669,Beer
+B00669,Bread
+B00669,Eggs
+B00669,Garri
+B00669,Groundnut
+B00670,Rice
+B00670,Tomato paste
+B00671,Beer
+B00671,Diapers
+B00671,Garri
+B00671,Milk
+B00671,Sardine
+B00672,Indomie
+B00672,Rice
+B00672,Soap
+B00672,Tomato paste
+B00673,Chicken
+B00673,Palm oil
+B00673,Rice
+B00673,Tomato paste
+B00674,Chicken
+B00674,Eggs
+B00674,Indomie
+B00675,Eggs
+B00676,Beer
+B00676,Chicken
+B00676,Milk
+B00676,Milo
+B00676,Rice
+B00677,Spaghetti
+B00678,Beer
+B00679,Bread
+B00679,Eggs
+B00680,Baby wipes
+B00680,Rice
+B00680,Spaghetti
+B00680,Sugar
+B00681,Eggs
+B00682,Baby wipes
+B00682,Diapers
+B00682,Palm oil
+B00682,Soap
+B00682,Spaghetti
+B00682,Tomato paste
+B00683,Diapers
+B00683,Indomie
+B00683,Palm oil
+B00683,Tomato paste
+B00684,Detergent
+B00684,Diapers
+B00684,Milk
+B00684,Sugar
+B00685,Bread
+B00685,Detergent
+B00686,Chicken
+B00686,Detergent
+B00686,Milk
+B00686,Palm oil
+B00687,Baby wipes
+B00687,Beer
+B00687,Diapers
+B00688,Baby wipes
+B00688,Diapers
+B00689,Baby wipes
+B00689,Eggs
+B00689,Garri
+B00690,Diapers
+B00690,Garri
+B00690,Groundnut
+B00690,Sardine
+B00691,Soap
+B00691,Sugar
+B00691,Tomato paste
+B00692,Bread
+B00692,Eggs
+B00692,Sugar
+B00693,Beer
+B00693,Sardine
+B00693,Sugar
+B00693,Tomato paste
+B00694,Milk
+B00694,Palm oil
+B00695,Beer
+B00695,Sugar
+B00696,Baby wipes
+B00696,Bread
+B00696,Eggs
+B00696,Rice
+B00696,Tomato paste
+B00697,Garri
+B00698,Palm oil
+B00698,Rice
+B00698,Spaghetti
+B00698,Sugar
+B00698,Tomato paste
+B00699,Milo
+B00700,Indomie
+B00701,Milk
+B00701,Palm oil
+B00701,Spaghetti
+B00702,Soap
+B00702,Tomato paste
+B00703,Bread
+B00703,Eggs
+B00703,Garri
+B00703,Sugar
+B00704,Palm oil
+B00705,Bread
+B00706,Tomato paste
+B00707,Spaghetti
+B00708,Garri
+B00709,Beer
+B00709,Detergent
+B00709,Spaghetti
+B00709,Sugar
+B00710,Indomie
+B00710,Soap
+B00711,Baby wipes
+B00711,Chicken
+B00712,Chicken
+B00712,Indomie
+B00712,Milk
+B00713,Palm oil
+B00713,Tea
+B00714,Baby wipes
+B00714,Beer
+B00714,Diapers
+B00714,Indomie
+B00714,Palm oil
+B00714,Rice
+B00714,Sugar
+B00714,Tea
+B00714,Tomato paste
+B00715,Baby wipes
+B00715,Sardine
+B00715,Sugar
+B00716,Milk
+B00716,Rice
+B00717,Baby wipes
+B00717,Beer
+B00717,Chicken
+B00717,Diapers
+B00717,Rice
+B00717,Tomato paste
+B00718,Detergent
+B00718,Soap
+B00718,Spaghetti
+B00719,Detergent
+B00719,Rice
+B00719,Sugar
+B00719,Tea
+B00720,Tomato paste
+B00721,Baby wipes
+B00721,Tea
+B00722,Baby wipes
+B00722,Beer
+B00722,Diapers
+B00723,Baby wipes
+B00723,Chicken
+B00723,Indomie
+B00723,Spaghetti
+B00724,Baby wipes
+B00724,Diapers
+B00725,Palm oil
+B00725,Sardine
+B00725,Tea
+B00726,Bread
+B00726,Palm oil
+B00726,Soap
+B00727,Bread
+B00727,Chicken
+B00727,Eggs
+B00727,Palm oil
+B00727,Rice
+B00727,Tomato paste
+B00728,Chicken
+B00728,Groundnut
+B00728,Tomato paste
+B00729,Baby wipes
+B00729,Diapers
+B00730,Milk
+B00730,Milo
+B00730,Palm oil
+B00731,Sugar
+B00732,Chicken
+B00732,Groundnut
+B00732,Milo
+B00732,Spaghetti
+B00733,Beer
+B00733,Milk
+B00733,Soap
+B00733,Spaghetti
+B00734,Chicken
+B00734,Detergent
+B00734,Rice
+B00735,Chicken
+B00736,Beer
+B00736,Eggs
+B00736,Garri
+B00736,Groundnut
+B00737,Beer
+B00737,Chicken
+B00737,Detergent
+B00737,Palm oil
+B00738,Baby wipes
+B00738,Chicken
+B00739,Milk
+B00740,Baby wipes
+B00740,Sugar
+B00741,Palm oil
+B00741,Rice
+B00741,Tomato paste
+B00742,Beer
+B00742,Detergent
+B00743,Milk
+B00743,Palm oil
+B00743,Sardine
+B00743,Soap
+B00744,Baby wipes
+B00744,Beer
+B00744,Diapers
+B00744,Palm oil
+B00744,Rice
+B00744,Sugar
+B00744,Tomato paste
+B00745,Palm oil
+B00745,Spaghetti
+B00745,Sugar
+B00745,Tea
+B00746,Milk
+B00746,Milo
+B00746,Sugar
+B00746,Tea
+B00747,Beer
+B00747,Diapers
+B00748,Palm oil
+B00748,Tomato paste
+B00749,Bread
+B00749,Detergent
+B00749,Eggs
+B00750,Groundnut
+B00750,Palm oil
+B00750,Rice
+B00750,Tomato paste
+B00751,Chicken
+B00752,Detergent
+B00753,Tea
+B00754,Garri
+B00754,Sugar
+B00755,Beer
+B00755,Detergent
+B00755,Rice
+B00755,Sugar
+B00756,Indomie
+B00756,Palm oil
+B00756,Sardine
+B00756,Spaghetti
+B00756,Tomato paste
+B00757,Garri
+B00757,Groundnut
+B00757,Milo
+B00757,Sugar
+B00757,Tea
+B00757,Tomato paste
+B00758,Bread
+B00758,Chicken
+B00758,Milk
+B00759,Chicken
+B00759,Diapers
+B00759,Sugar
+B00759,Tea
+B00760,Groundnut
+B00760,Sardine
+B00760,Soap
+B00761,Chicken
+B00761,Indomie
+B00761,Sugar
+B00762,Baby wipes
+B00762,Groundnut
+B00762,Indomie
+B00762,Sardine
+B00763,Bread
+B00763,Eggs
+B00763,Rice
+B00763,Soap
+B00764,Baby wipes
+B00764,Indomie
+B00764,Palm oil
+B00764,Spaghetti
+B00765,Baby wipes
+B00765,Garri
+B00765,Sardine
+B00766,Indomie
+B00766,Spaghetti
+B00767,Beer
+B00767,Detergent
+B00767,Eggs
+B00767,Sardine
+B00768,Baby wipes
+B00768,Bread
+B00768,Diapers
+B00768,Eggs
+B00768,Garri
+B00768,Groundnut
+B00768,Palm oil
+B00769,Beer
+B00769,Bread
+B00769,Milk
+B00770,Beer
+B00770,Milk
+B00771,Spaghetti
+B00771,Tomato paste
+B00772,Chicken
+B00772,Palm oil
+B00772,Sugar
+B00772,Tomato paste
+B00773,Baby wipes
+B00774,Milk
+B00775,Beer
+B00775,Soap
+B00775,Spaghetti
+B00776,Palm oil
+B00776,Soap
+B00776,Spaghetti
+B00776,Sugar
+B00777,Groundnut
+B00777,Soap
+B00778,Sugar
+B00778,Tea
+B00779,Rice
+B00779,Spaghetti
+B00780,Eggs
+B00781,Baby wipes
+B00781,Bread
+B00781,Eggs
+B00781,Soap
+B00782,Soap
+B00783,Baby wipes
+B00783,Chicken
+B00784,Baby wipes
+B00784,Beer
+B00784,Detergent
+B00784,Diapers
+B00784,Milo
+B00784,Sugar
+B00785,Chicken
+B00785,Eggs
+B00785,Indomie
+B00785,Sugar
+B00785,Tea
+B00786,Bread
+B00786,Groundnut
+B00786,Milk
+B00787,Garri
+B00787,Groundnut
+B00787,Spaghetti
+B00788,Bread
+B00788,Eggs
+B00788,Palm oil
+B00788,Rice
+B00788,Tomato paste
+B00789,Baby wipes
+B00789,Garri
+B00789,Tomato paste
+B00790,Milk
+B00790,Sardine
+B00790,Spaghetti
+B00791,Chicken
+B00791,Soap
+B00791,Tomato paste
+B00792,Bread
+B00792,Milo
+B00793,Bread
+B00793,Eggs
+B00793,Milk
+B00794,Baby wipes
+B00794,Beer
+B00794,Milk
+B00794,Palm oil
+B00794,Tomato paste
+B00795,Milk
+B00796,Beer
+B00796,Soap
+B00796,Tomato paste
+B00797,Indomie
+B00798,Baby wipes
+B00798,Beer
+B00798,Detergent
+B00798,Groundnut
+B00799,Detergent
+B00800,Beer
+B00800,Spaghetti
+B00801,Sardine
+B00802,Milk
+B00802,Sugar
+B00802,Tea
+B00802,Tomato paste
+B00803,Garri
+B00804,Baby wipes
+B00804,Detergent
+B00804,Indomie
+B00804,Milk
+B00805,Bread
+B00805,Indomie
+B00805,Soap
+B00805,Tea
+B00806,Beer
+B00806,Bread
+B00806,Palm oil
+B00807,Soap
+B00807,Tea
+B00808,Rice
+B00809,Beer
+B00809,Eggs
+B00809,Palm oil
+B00810,Indomie
+B00810,Milk
+B00811,Baby wipes
+B00811,Diapers
+B00812,Diapers
+B00813,Sardine
+B00813,Tomato paste
+B00814,Tomato paste
+B00815,Chicken
+B00815,Indomie
+B00815,Milk
+B00815,Milo
+B00815,Sugar
+B00816,Baby wipes
+B00816,Sugar
+B00817,Baby wipes
+B00817,Milk
+B00817,Milo
+B00818,Chicken
+B00818,Milk
+B00818,Milo
+B00818,Palm oil
+B00818,Spaghetti
+B00819,Milk
+B00819,Milo
+B00819,Palm oil
+B00819,Sugar
+B00819,Tea
+B00820,Palm oil
+B00820,Rice
+B00820,Sardine
+B00820,Sugar
+B00820,Tea
+B00820,Tomato paste
+B00821,Baby wipes
+B00821,Chicken
+B00821,Groundnut
+B00821,Rice
+B00822,Beer
+B00822,Soap
+B00822,Tomato paste
+B00823,Baby wipes
+B00823,Beer
+B00823,Diapers
+B00823,Spaghetti
+B00824,Garri
+B00825,Sardine
+B00825,Soap
+B00825,Sugar
+B00825,Tomato paste
+B00826,Baby wipes
+B00826,Bread
+B00826,Garri
+B00826,Sugar
+B00826,Tea
+B00827,Milk
+B00828,Beer
+B00828,Eggs
+B00828,Milk
+B00828,Milo
+B00828,Palm oil
+B00829,Baby wipes
+B00829,Rice
+B00829,Sugar
+B00829,Tea
+B00829,Tomato paste
+B00830,Bread
+B00830,Eggs
+B00830,Indomie
+B00830,Rice
+B00830,Tomato paste
+B00831,Eggs
+B00831,Garri
+B00831,Indomie
+B00832,Spaghetti
+B00833,Bread
+B00833,Groundnut
+B00833,Milk
+B00833,Tomato paste
+B00834,Eggs
+B00834,Palm oil
+B00834,Spaghetti
+B00834,Sugar
+B00834,Tea
+B00835,Bread
+B00835,Chicken
+B00835,Eggs
+B00835,Groundnut
+B00835,Sugar
+B00836,Milk
+B00837,Beer
+B00837,Chicken
+B00837,Diapers
+B00837,Eggs
+B00838,Baby wipes
+B00838,Garri
+B00838,Soap
+B00839,Baby wipes
+B00839,Beer
+B00839,Diapers
+B00839,Indomie
+B00839,Spaghetti
+B00840,Chicken
+B00840,Rice
+B00841,Bread
+B00841,Palm oil
+B00841,Tea
+B00841,Tomato paste
+B00842,Bread
+B00842,Eggs
+B00842,Palm oil
+B00842,Sugar
+B00842,Tea
+B00842,Tomato paste
+B00843,Bread
+B00843,Diapers
+B00843,Eggs
+B00843,Palm oil
+B00844,Baby wipes
+B00844,Palm oil
+B00844,Rice
+B00844,Sardine
+B00844,Tomato paste
+B00845,Indomie
+B00845,Sardine
+B00845,Spaghetti
+B00846,Baby wipes
+B00846,Diapers
+B00846,Spaghetti
+B00847,Eggs
+B00847,Soap
+B00847,Spaghetti
+B00847,Sugar
+B00847,Tea
+B00848,Detergent
+B00849,Sardine
+B00850,Beer
+B00850,Sugar
+B00850,Tea
+B00851,Soap
+B00852,Detergent
+B00852,Garri
+B00852,Groundnut
+B00852,Milk
+B00852,Sugar
+B00852,Tea
+B00853,Baby wipes
+B00853,Chicken
+B00853,Diapers
+B00854,Chicken
+B00854,Palm oil
+B00854,Sugar
+B00854,Tomato paste
+B00855,Bread
+B00855,Eggs
+B00856,Chicken
+B00856,Sardine
+B00856,Sugar
+B00856,Tea
+B00857,Baby wipes
+B00857,Detergent
+B00857,Soap
+B00858,Detergent
+B00858,Eggs
+B00858,Garri
+B00858,Palm oil
+B00859,Baby wipes
+B00859,Beer
+B00859,Diapers
+B00859,Soap
+B00860,Baby wipes
+B00860,Diapers
+B00860,Garri
+B00860,Groundnut
+B00860,Sugar
+B00861,Garri
+B00861,Milo
+B00861,Rice
+B00861,Sugar
+B00861,Tea
+B00862,Baby wipes
+B00863,Chicken
+B00863,Groundnut
+B00864,Milk
+B00865,Indomie
+B00865,Milk
+B00865,Sardine
+B00866,Baby wipes
+B00866,Beer
+B00866,Chicken
+B00866,Diapers
+B00866,Sugar
+B00866,Tea
+B00867,Garri
+B00867,Sugar
+B00867,Tea
+B00868,Chicken
+B00868,Detergent
+B00869,Sardine
+B00869,Sugar
+B00870,Beer
+B00871,Chicken
+B00871,Groundnut
+B00872,Baby wipes
+B00873,Soap
+B00873,Spaghetti
+B00873,Sugar
+B00874,Baby wipes
+B00874,Eggs
+B00874,Garri
+B00874,Sugar
+B00874,Tea
+B00875,Tea
+B00875,Tomato paste
+B00876,Indomie
+B00876,Tomato paste
+B00877,Baby wipes
+B00877,Beer
+B00877,Diapers
+B00877,Milk
+B00877,Sugar
+B00878,Eggs
+B00878,Milk
+B00879,Beer
+B00879,Indomie
+B00879,Sardine
+B00880,Baby wipes
+B00880,Beer
+B00880,Milo
+B00880,Tomato paste
+B00881,Eggs
+B00881,Indomie
+B00881,Milk
+B00881,Milo
+B00881,Sugar
+B00882,Bread
+B00882,Eggs
+B00882,Soap
+B00883,Detergent
+B00883,Garri
+B00883,Palm oil
+B00883,Rice
+B00883,Tomato paste
+B00884,Eggs
+B00884,Groundnut
+B00884,Rice
+B00884,Sugar
+B00885,Palm oil
+B00886,Indomie
+B00887,Detergent
+B00887,Rice
+B00887,Spaghetti
+B00888,Eggs
+B00888,Milk
+B00888,Milo
+B00888,Sardine
+B00888,Tomato paste
+B00889,Beer
+B00889,Garri
+B00889,Groundnut
+B00889,Milo
+B00890,Bread
+B00890,Palm oil
+B00890,Soap
+B00891,Beer
+B00891,Indomie
+B00891,Sardine
+B00892,Baby wipes
+B00892,Diapers
+B00893,Milk
+B00893,Milo
+B00893,Palm oil
+B00893,Rice
+B00893,Tomato paste
+B00894,Garri
+B00894,Groundnut
+B00894,Indomie
+B00894,Rice
+B00894,Tea
+B00894,Tomato paste
+B00895,Baby wipes
+B00895,Chicken
+B00895,Diapers
+B00895,Eggs
+B00895,Milk
+B00896,Baby wipes
+B00896,Beer
+B00896,Bread
+B00896,Diapers
+B00896,Milk
+B00897,Garri
+B00897,Groundnut
+B00897,Rice
+B00897,Spaghetti
+B00898,Rice
+B00898,Sugar
+B00898,Tomato paste
+B00899,Palm oil
+B00899,Sardine
+B00899,Tomato paste
+B00900,Bread
+B00900,Eggs
+B00900,Sardine
+B00901,Chicken
+B00901,Rice
+B00901,Spaghetti
+B00902,Eggs
+B00902,Sugar
+B00902,Tea
+B00903,Garri
+B00903,Groundnut
+B00903,Palm oil
+B00903,Rice
+B00903,Tomato paste
+B00904,Rice
+B00905,Milo
+B00905,Palm oil
+B00905,Tomato paste
+B00906,Garri
+B00906,Groundnut
+B00906,Milk
+B00906,Tea
+B00907,Baby wipes
+B00907,Soap
+B00907,Sugar
+B00907,Tea
+B00908,Eggs
+B00908,Indomie
+B00909,Baby wipes
+B00909,Diapers
+B00909,Soap
+B00909,Sugar
+B00910,Baby wipes
+B00910,Diapers
+B00911,Chicken
+B00911,Indomie
+B00912,Groundnut
+B00912,Soap
+B00913,Eggs
+B00913,Garri
+B00913,Palm oil
+B00913,Tomato paste
+B00914,Eggs
+B00915,Rice
+B00915,Spaghetti
+B00915,Tomato paste
+B00916,Bread
+B00916,Eggs
+B00917,Baby wipes
+B00917,Indomie
+B00918,Garri
+B00918,Groundnut
+B00919,Soap
+B00920,Garri
+B00921,Beer
+B00921,Spaghetti
+B00922,Baby wipes
+B00922,Chicken
+B00922,Diapers
+B00922,Garri
+B00922,Groundnut
+B00923,Bread
+B00923,Eggs
+B00923,Groundnut
+B00923,Milk
+B00923,Milo
+B00923,Palm oil
+B00923,Tomato paste
+B00924,Spaghetti
+B00924,Sugar
+B00924,Tea
+B00925,Garri
+B00925,Groundnut
+B00925,Indomie
+B00925,Milk
+B00926,Detergent
+B00926,Garri
+B00926,Sardine
+B00927,Garri
+B00928,Chicken
+B00928,Milk
+B00929,Detergent
+B00930,Soap
+B00931,Baby wipes
+B00931,Diapers
+B00931,Indomie
+B00932,Baby wipes
+B00932,Diapers
+B00932,Sugar
+B00933,Milo
+B00933,Rice
+B00933,Sardine
+B00933,Sugar
+B00934,Chicken
+B00934,Sugar
+B00935,Milk
+B00935,Milo
+B00935,Sardine
+B00936,Bread
+B00936,Rice
+B00936,Tomato paste
+B00937,Chicken
+B00937,Detergent
+B00937,Eggs
+B00937,Sugar
+B00938,Chicken
+B00938,Eggs
+B00938,Palm oil
+B00938,Rice
+B00938,Tomato paste
+B00939,Palm oil
+B00939,Rice
+B00939,Tea
+B00939,Tomato paste
+B00940,Chicken
+B00940,Indomie
+B00940,Milk
+B00940,Soap
+B00941,Chicken
+B00941,Palm oil
+B00942,Baby wipes
+B00942,Garri
+B00942,Groundnut
+B00942,Sugar
+B00943,Milk
+B00943,Sardine
+B00944,Baby wipes
+B00944,Bread
+B00944,Eggs
+B00944,Garri
+B00944,Groundnut
+B00944,Milk
+B00945,Bread
+B00945,Detergent
+B00945,Milk
+B00945,Palm oil
+B00945,Rice
+B00945,Tomato paste
+B00946,Baby wipes
+B00946,Detergent
+B00946,Diapers
+B00946,Garri
+B00947,Chicken
+B00947,Spaghetti
+B00947,Sugar
+B00947,Tea
+B00948,Eggs
+B00948,Tomato paste
+B00949,Chicken
+B00949,Spaghetti
+B00950,Garri
+B00950,Palm oil
+B00950,Sugar
+B00951,Eggs
+B00951,Spaghetti
+B00952,Baby wipes
+B00952,Beer
+B00952,Indomie
+B00952,Rice
+B00953,Bread
+B00953,Eggs
+B00953,Milk
+B00953,Milo
+B00953,Rice
+B00953,Tomato paste
+B00954,Eggs
+B00954,Soap
+B00954,Tea
+B00955,Garri
+B00955,Groundnut
+B00955,Sardine
+B00955,Sugar
+B00955,Tea
+B00956,Baby wipes
+B00956,Milk
+B00956,Soap
+B00957,Baby wipes
+B00957,Garri
+B00957,Tomato paste
+B00958,Palm oil
+B00958,Soap
+B00959,Detergent
+B00959,Palm oil
+B00959,Tomato paste
+B00960,Groundnut
+B00960,Milo
+B00961,Bread
+B00961,Indomie
+B00961,Palm oil
+B00961,Rice
+B00962,Baby wipes
+B00962,Diapers
+B00962,Garri
+B00962,Indomie
+B00962,Tomato paste
+B00963,Groundnut
+B00963,Indomie
+B00963,Milk
+B00963,Palm oil
+B00964,Milk
+B00965,Detergent
+B00965,Indomie
+B00966,Groundnut
+B00967,Indomie
+B00967,Milk
+B00967,Milo
+B00967,Palm oil
+B00968,Detergent
+B00968,Sardine
+B00969,Palm oil
+B00969,Tomato paste
+B00970,Groundnut
+B00970,Milo
+B00971,Baby wipes
+B00971,Diapers
+B00971,Milo
+B00971,Palm oil
+B00971,Sugar
+B00972,Detergent
+B00973,Garri
+B00974,Beer
+B00974,Palm oil
+B00974,Tomato paste
+B00975,Indomie
+B00975,Rice
+B00976,Bread
+B00976,Sardine
+B00977,Baby wipes
+B00977,Eggs
+B00977,Groundnut
+B00977,Indomie
+B00978,Chicken
+B00978,Soap
+B00979,Baby wipes
+B00979,Diapers
+B00979,Palm oil
+B00979,Sugar
+B00979,Tea
+B00979,Tomato paste
+B00980,Spaghetti
+B00981,Baby wipes
+B00982,Garri
+B00982,Palm oil
+B00982,Rice
+B00982,Tomato paste
+B00983,Rice
+B00983,Spaghetti
+B00983,Tomato paste
+B00984,Soap
+B00985,Garri
+B00986,Baby wipes
+B00986,Beer
+B00986,Detergent
+B00986,Tomato paste
+B00987,Chicken
+B00987,Eggs
+B00987,Spaghetti
+B00987,Sugar
+B00988,Indomie
+B00988,Sardine
+B00988,Sugar
+B00989,Detergent
+B00990,Bread
+B00990,Eggs
+B00990,Garri
+B00990,Indomie
+B00990,Sugar
+B00990,Tea
+B00991,Groundnut
+B00991,Tomato paste
+B00992,Beer
+B00992,Bread
+B00992,Sugar
+B00992,Tea
+B00993,Indomie
+B00993,Rice
+B00993,Spaghetti
+B00994,Beer
+B00994,Indomie
+B00994,Spaghetti
+B00994,Sugar
+B00995,Bread
+B00995,Chicken
+B00995,Garri
+B00995,Groundnut
+B00995,Milk
+B00996,Sugar
+B00997,Beer
+B00997,Bread
+B00997,Diapers
+B00997,Soap
+B00998,Bread
+B00998,Indomie
+B00998,Palm oil
+B00998,Sugar
+B00998,Tea
+B00999,Spaghetti
+B01000,Beer
+B01000,Eggs
+B01000,Milk
+B01001,Rice
+B01001,Soap
+B01001,Tea
+B01001,Tomato paste
+B01002,Detergent
+B01002,Sardine
+B01003,Garri
+B01003,Indomie
+B01004,Detergent
+B01004,Soap
+B01005,Beer
+B01005,Bread
+B01005,Eggs
+B01005,Groundnut
+B01006,Palm oil
+B01006,Rice
+B01006,Sardine
+B01006,Tea
+B01007,Beer
+B01007,Sardine
+B01008,Chicken
+B01008,Rice
+B01009,Bread
+B01009,Eggs
+B01009,Indomie
+B01009,Sardine
+B01010,Garri
+B01010,Sugar
+B01011,Milo
+B01011,Soap
+B01011,Sugar
+B01011,Tea
+B01011,Tomato paste
+B01012,Bread
+B01012,Soap
+B01013,Milk
+B01013,Milo
+B01014,Eggs
+B01014,Groundnut
+B01015,Diapers
+B01015,Milo
+B01016,Baby wipes
+B01016,Beer
+B01016,Milk
+B01016,Sugar
+B01017,Garri
+B01017,Sugar
+B01017,Tea
+B01018,Detergent
+B01018,Garri
+B01018,Soap
+B01019,Soap
+B01020,Chicken
+B01020,Eggs
+B01020,Sugar
+B01020,Tea
+B01021,Baby wipes
+B01021,Palm oil
+B01022,Bread
+B01022,Groundnut
+B01022,Indomie
+B01023,Spaghetti
+B01024,Soap
+B01025,Baby wipes
+B01026,Spaghetti
+B01027,Chicken
+B01028,Bread
+B01028,Eggs
+B01029,Baby wipes
+B01029,Diapers
+B01029,Garri
+B01029,Milk
+B01030,Baby wipes
+B01030,Chicken
+B01030,Sugar
+B01031,Soap
+B01032,Chicken
+B01032,Groundnut
+B01032,Milk
+B01032,Palm oil
+B01033,Baby wipes
+B01033,Beer
+B01033,Chicken
+B01033,Palm oil
+B01034,Detergent
+B01034,Sardine
+B01034,Spaghetti
+B01035,Baby wipes
+B01035,Beer
+B01035,Diapers
+B01035,Sardine
+B01035,Tea
+B01036,Baby wipes
+B01036,Beer
+B01036,Milk
+B01036,Soap
+B01037,Baby wipes
+B01037,Eggs
+B01037,Groundnut
+B01037,Sardine
+B01038,Sugar
+B01039,Garri
+B01039,Groundnut
+B01040,Eggs
+B01041,Beer
+B01041,Indomie
+B01041,Rice
+B01041,Tomato paste
+B01042,Bread
+B01042,Palm oil
+B01042,Tomato paste
+B01043,Milk
+B01043,Milo
+B01043,Spaghetti
+B01044,Detergent
+B01044,Milo
+B01044,Rice
+B01044,Tomato paste
+B01045,Eggs
+B01045,Sardine
+B01045,Spaghetti
+B01046,Eggs
+B01046,Palm oil
+B01047,Baby wipes
+B01047,Chicken
+B01047,Milo
+B01047,Sugar
+B01047,Tea
+B01048,Beer
+B01048,Sugar
+B01049,Chicken
+B01049,Detergent
+B01049,Sugar
+B01050,Garri
+B01051,Tomato paste
+B01052,Beer
+B01052,Chicken
+B01052,Milk
+B01052,Sugar
+B01053,Detergent
+B01053,Indomie
+B01053,Milo
+B01054,Baby wipes
+B01054,Chicken
+B01054,Eggs
+B01054,Soap
+B01055,Baby wipes
+B01055,Sugar
+B01056,Spaghetti
+B01057,Indomie
+B01057,Tea
+B01058,Beer
+B01058,Diapers
+B01058,Milk
+B01058,Soap
+B01059,Beer
+B01059,Chicken
+B01059,Diapers
+B01059,Eggs
+B01059,Indomie
+B01060,Baby wipes
+B01060,Beer
+B01060,Diapers
+B01060,Indomie
+B01060,Palm oil
+B01060,Sardine
+B01061,Palm oil
+B01062,Baby wipes
+B01063,Palm oil
+B01063,Rice
+B01063,Tomato paste
+B01064,Baby wipes
+B01064,Palm oil
+B01064,Sugar
+B01064,Tea
+B01064,Tomato paste
+B01065,Chicken
+B01065,Tomato paste
+B01066,Bread
+B01066,Detergent
+B01066,Eggs
+B01066,Groundnut
+B01066,Palm oil
+B01067,Palm oil
+B01067,Soap
+B01067,Sugar
+B01067,Tea
+B01068,Beer
+B01068,Diapers
+B01068,Groundnut
+B01069,Baby wipes
+B01069,Palm oil
+B01069,Rice
+B01069,Tomato paste
+B01070,Eggs
+B01070,Soap
+B01070,Spaghetti
+B01071,Detergent
+B01071,Sardine
+B01072,Milk
+B01072,Sardine
+B01073,Bread
+B01073,Diapers
+B01073,Eggs
+B01073,Rice
+B01073,Tomato paste
+B01074,Milk
+B01074,Soap
+B01074,Spaghetti
+B01074,Sugar
+B01074,Tea
+B01075,Bread
+B01075,Eggs
+B01075,Milk
+B01075,Milo
+B01076,Beer
+B01076,Diapers
+B01076,Milk
+B01076,Spaghetti
+B01077,Baby wipes
+B01077,Chicken
+B01077,Diapers
+B01077,Sugar
+B01078,Chicken
+B01078,Eggs
+B01078,Milk
+B01079,Milk
+B01080,Tea
+B01081,Beer
+B01082,Sardine
+B01083,Beer
+B01083,Bread
+B01083,Eggs
+B01083,Garri
+B01083,Groundnut
+B01084,Spaghetti
+B01085,Detergent
+B01085,Groundnut
+B01085,Sardine
+B01086,Detergent
+B01086,Sugar
+B01086,Tea
+B01087,Eggs
+B01087,Indomie
+B01087,Milk
+B01087,Milo
+B01088,Chicken
+B01088,Detergent
+B01088,Indomie
+B01088,Sardine
+B01089,Bread
+B01089,Palm oil
+B01089,Spaghetti
+B01090,Beer
+B01090,Sugar
+B01091,Garri
+B01091,Groundnut
+B01091,Indomie
+B01091,Milk
+B01091,Milo
+B01092,Palm oil
+B01092,Sugar
+B01092,Tomato paste
+B01093,Beer
+B01093,Palm oil
+B01094,Spaghetti
+B01095,Garri
+B01095,Groundnut
+B01095,Palm oil
+B01095,Rice
+B01095,Tomato paste
+B01096,Baby wipes
+B01096,Beer
+B01096,Diapers
+B01096,Eggs
+B01096,Milo
+B01096,Spaghetti
+B01097,Garri
+B01097,Indomie
+B01098,Baby wipes
+B01098,Bread
+B01098,Eggs
+B01099,Beer
+B01099,Sugar
+B01099,Tea
+B01100,Detergent
+B01101,Chicken
+B01101,Eggs
+B01101,Milo
+B01101,Soap
+B01102,Baby wipes
+B01102,Rice
+B01102,Sugar
+B01103,Sugar
+B01104,Garri
+B01104,Groundnut
+B01104,Soap
+B01104,Tomato paste
+B01105,Beer
+B01105,Sardine
+B01106,Baby wipes
+B01106,Rice
+B01106,Soap
+B01107,Beer
+B01107,Garri
+B01107,Groundnut
+B01107,Spaghetti
+B01108,Bread
+B01108,Eggs
+B01109,Baby wipes
+B01109,Diapers
+B01109,Garri
+B01109,Sugar
+B01110,Baby wipes
+B01110,Bread
+B01110,Diapers
+B01110,Eggs
+B01110,Groundnut
+B01110,Rice
+B01111,Garri
+B01111,Milk
+B01112,Milk
+B01113,Baby wipes
+B01113,Beer
+B01113,Diapers
+B01114,Groundnut
+B01114,Milk
+B01114,Soap
+B01115,Milk
+B01115,Sardine
+B01116,Milk
+B01116,Milo
+B01117,Eggs
+B01117,Sugar
+B01117,Tomato paste
+B01118,Sardine
+B01119,Sardine
+B01119,Tomato paste
+B01120,Beer
+B01120,Groundnut
+B01120,Palm oil
+B01120,Soap
+B01121,Beer
+B01121,Bread
+B01121,Eggs
+B01121,Indomie
+B01121,Palm oil
+B01122,Baby wipes
+B01122,Garri
+B01122,Groundnut
+B01122,Milo
+B01122,Sugar
+B01122,Tea
+B01123,Soap
+B01123,Tea
+B01124,Beer
+B01125,Beer
+B01125,Chicken
+B01125,Eggs
+B01125,Groundnut
+B01126,Beer
+B01126,Spaghetti
+B01126,Sugar
+B01126,Tea
+B01126,Tomato paste
+B01127,Soap
+B01128,Indomie
+B01128,Sardine
+B01129,Chicken
+B01129,Indomie
+B01129,Palm oil
+B01129,Rice
+B01130,Bread
+B01130,Eggs
+B01130,Garri
+B01130,Groundnut
+B01130,Palm oil
+B01130,Sugar
+B01131,Chicken
+B01131,Soap
+B01131,Spaghetti
+B01132,Garri
+B01132,Groundnut
+B01133,Garri
+B01133,Sugar
+B01134,Bread
+B01134,Detergent
+B01134,Sardine
+B01135,Garri
+B01135,Milk
+B01135,Spaghetti
+B01136,Baby wipes
+B01136,Beer
+B01136,Diapers
+B01136,Tomato paste
+B01137,Diapers
+B01137,Garri
+B01137,Groundnut
+B01137,Sardine
+B01138,Detergent
+B01139,Detergent
+B01139,Palm oil
+B01139,Sardine
+B01140,Milk
+B01140,Milo
+B01141,Baby wipes
+B01141,Diapers
+B01141,Palm oil
+B01141,Soap
+B01141,Sugar
+B01141,Tomato paste
+B01142,Baby wipes
+B01142,Beer
+B01142,Diapers
+B01142,Eggs
+B01143,Baby wipes
+B01143,Garri
+B01143,Indomie
+B01144,Chicken
+B01144,Indomie
+B01144,Sugar
+B01145,Detergent
+B01145,Garri
+B01145,Groundnut
+B01145,Milo
+B01145,Spaghetti
+B01146,Groundnut
+B01147,Milk
+B01147,Sugar
+B01148,Beer
+B01148,Chicken
+B01148,Spaghetti
+B01148,Tomato paste
+B01149,Baby wipes
+B01149,Diapers
+B01149,Garri
+B01149,Groundnut
+B01149,Soap
+B01149,Spaghetti
+B01150,Milk
+B01150,Palm oil
+B01150,Tomato paste
+B01151,Baby wipes
+B01151,Garri
+B01151,Groundnut
+B01151,Palm oil
+B01152,Spaghetti
+B01153,Detergent
+B01153,Groundnut
+B01153,Indomie
+B01153,Spaghetti
+B01154,Beer
+B01154,Detergent
+B01154,Palm oil
+B01155,Spaghetti
+B01155,Sugar
+B01156,Milk
+B01157,Palm oil
+B01158,Sugar
+B01159,Baby wipes
+B01159,Diapers
+B01160,Garri
+B01160,Milk
+B01160,Palm oil
+B01161,Palm oil
+B01161,Rice
+B01162,Milk
+B01162,Milo
+B01163,Indomie
+B01163,Soap
+B01164,Baby wipes
+B01164,Beer
+B01164,Spaghetti
+B01165,Milk
+B01165,Milo
+B01165,Spaghetti
+B01166,Baby wipes
+B01166,Diapers
+B01166,Milk
+B01166,Palm oil
+B01166,Rice
+B01167,Beer
+B01167,Groundnut
+B01168,Indomie
+B01169,Sugar
+B01169,Tea
+B01170,Baby wipes
+B01170,Detergent
+B01170,Diapers
+B01171,Palm oil
+B01171,Rice
+B01171,Sugar
+B01171,Tomato paste
+B01172,Bread
+B01172,Chicken
+B01172,Eggs
+B01172,Groundnut
+B01172,Soap
+B01173,Groundnut
+B01173,Palm oil
+B01173,Spaghetti
+B01174,Palm oil
+B01175,Bread
+B01176,Milo
+B01177,Milk
+B01177,Milo
+B01178,Beer
+B01178,Milk
+B01178,Milo
+B01178,Palm oil
+B01178,Sardine
+B01179,Beer
+B01179,Eggs
+B01180,Palm oil
+B01181,Garri
+B01181,Groundnut
+B01182,Bread
+B01182,Chicken
+B01182,Diapers
+B01182,Eggs
+B01182,Milk
+B01183,Detergent
+B01184,Eggs
+B01185,Soap
+B01186,Beer
+B01186,Eggs
+B01186,Groundnut
+B01187,Beer
+B01187,Detergent
+B01187,Garri
+B01187,Milo
+B01188,Sardine
+B01189,Detergent
+B01189,Groundnut
+B01189,Milk
+B01190,Bread
+B01190,Eggs
+B01190,Soap
+B01190,Spaghetti
+B01191,Garri
+B01191,Groundnut
+B01192,Eggs
+B01192,Sardine
+B01192,Soap
+B01193,Milk
+B01194,Groundnut
+B01194,Palm oil
+B01194,Tea
+B01194,Tomato paste
+B01195,Detergent
+B01196,Milk
+B01196,Sardine
+B01197,Milo
+B01197,Sardine
+B01198,Garri
+B01198,Groundnut
+B01198,Milo
+B01198,Rice
+B01199,Tea
+B01200,Eggs
+B01200,Groundnut
+B01201,Milo
+B01202,Baby wipes
+B01202,Sardine
+B01202,Spaghetti
+B01202,Tomato paste
+B01203,Baby wipes
+B01203,Bread
+B01203,Soap
+B01204,Eggs
+B01204,Tea
+B01205,Milo
+B01206,Beer
+B01206,Eggs
+B01206,Palm oil
+B01207,Eggs
+B01207,Groundnut
+B01207,Milk
+B01208,Baby wipes
+B01208,Diapers
+B01208,Eggs
+B01208,Groundnut
+B01208,Milk
+B01209,Baby wipes
+B01209,Chicken
+B01209,Indomie
+B01209,Sugar
+B01210,Chicken
+B01210,Eggs
+B01210,Palm oil
+B01210,Tea
+B01211,Diapers
+B01211,Sugar
+B01211,Tea
+B01212,Eggs
+B01212,Indomie
+B01212,Milk
+B01212,Tomato paste
+B01213,Beer
+B01213,Milk
+B01213,Milo
+B01214,Soap
+B01215,Bread
+B01215,Eggs
+B01215,Indomie
+B01215,Palm oil
+B01215,Tomato paste
+B01216,Beer
+B01216,Groundnut
+B01216,Spaghetti
+B01217,Beer
+B01217,Groundnut
+B01218,Sugar
+B01219,Bread
+B01219,Eggs
+B01219,Indomie
+B01219,Milk
+B01219,Palm oil
+B01220,Palm oil
+B01221,Palm oil
+B01222,Beer
+B01223,Beer
+B01223,Milk
+B01223,Tomato paste
+B01224,Baby wipes
+B01224,Detergent
+B01224,Groundnut
+B01225,Baby wipes
+B01225,Eggs
+B01225,Garri
+B01225,Sardine
+B01226,Garri
+B01226,Groundnut
+B01227,Eggs
+B01227,Indomie
+B01227,Milk
+B01227,Milo
+B01228,Eggs
+B01228,Groundnut
+B01228,Rice
+B01229,Groundnut
+B01229,Milo
+B01229,Palm oil
+B01230,Bread
+B01230,Chicken
+B01230,Eggs
+B01230,Sardine
+B01231,Milk
+B01232,Detergent
+B01232,Sardine
+B01232,Spaghetti
+B01232,Sugar
+B01233,Beer
+B01233,Sardine
+B01234,Beer
+B01234,Palm oil
+B01234,Rice
+B01234,Sardine
+B01235,Groundnut
+B01235,Soap
+B01236,Palm oil
+B01236,Sardine
+B01236,Tea
+B01237,Baby wipes
+B01237,Beer
+B01237,Diapers
+B01237,Indomie
+B01237,Spaghetti
+B01238,Bread
+B01238,Groundnut
+B01238,Sugar
+B01239,Baby wipes
+B01239,Beer
+B01239,Chicken
+B01239,Diapers
+B01239,Milo
+B01239,Sugar
+B01239,Tea
+B01240,Eggs
+B01240,Palm oil
+B01240,Tomato paste
+B01241,Detergent
+B01241,Milk
+B01241,Rice
+B01241,Sugar
+B01242,Spaghetti
+B01243,Groundnut
+B01243,Sugar
+B01244,Groundnut
+B01244,Spaghetti
+B01245,Baby wipes
+B01245,Beer
+B01245,Bread
+B01245,Milk
+B01245,Milo
+B01246,Bread
+B01246,Chicken
+B01246,Eggs
+B01247,Baby wipes
+B01247,Eggs
+B01247,Indomie
+B01247,Sardine
+B01248,Beer
+B01248,Diapers
+B01248,Palm oil
+B01249,Indomie
+B01250,Palm oil
+B01250,Tomato paste
+B01251,Baby wipes
+B01251,Chicken
+B01251,Palm oil
+B01251,Sugar
+B01251,Tea
+B01251,Tomato paste
+B01252,Beer
+B01252,Spaghetti
+B01253,Chicken
+B01254,Baby wipes
+B01254,Chicken
+B01254,Diapers
+B01254,Palm oil
+B01255,Beer
+B01255,Palm oil
+B01256,Garri
+B01256,Milk
+B01257,Detergent
+B01258,Detergent
+B01258,Diapers
+B01258,Groundnut
+B01258,Rice
+B01259,Bread
+B01259,Eggs
+B01260,Beer
+B01260,Palm oil
+B01260,Spaghetti
+B01261,Sardine
+B01262,Beer
+B01262,Garri
+B01262,Milk
+B01262,Milo
+B01263,Garri
+B01264,Chicken
+B01264,Garri
+B01264,Groundnut
+B01264,Indomie
+B01265,Bread
+B01265,Eggs
+B01265,Soap
+B01265,Spaghetti
+B01266,Groundnut
+B01266,Rice
+B01266,Sugar
+B01266,Tea
+B01266,Tomato paste
+B01267,Garri
+B01267,Palm oil
+B01267,Soap
+B01267,Sugar
+B01267,Tomato paste
+B01268,Garri
+B01268,Groundnut
+B01268,Palm oil
+B01269,Bread
+B01269,Eggs
+B01270,Bread
+B01270,Eggs
+B01270,Garri
+B01270,Groundnut
+B01271,Eggs
+B01271,Groundnut
+B01271,Milo
+B01271,Rice
+B01272,Milk
+B01272,Sardine
+B01272,Sugar
+B01272,Tea
+B01273,Baby wipes
+B01273,Beer
+B01273,Diapers
+B01273,Palm oil
+B01274,Baby wipes
+B01274,Rice
+B01275,Milk
+B01276,Garri
+B01276,Groundnut
+B01276,Palm oil
+B01277,Beer
+B01277,Milo
+B01277,Sugar
+B01278,Baby wipes
+B01278,Diapers
+B01278,Garri
+B01278,Milo
+B01278,Sardine
+B01279,Baby wipes
+B01279,Eggs
+B01279,Groundnut
+B01279,Sugar
+B01280,Milo
+B01280,Rice
+B01280,Sardine
+B01280,Tomato paste
+B01281,Beer
+B01281,Palm oil
+B01282,Baby wipes
+B01282,Beer
+B01283,Sugar
+B01283,Tea
+B01284,Baby wipes
+B01284,Diapers
+B01284,Milk
+B01284,Milo
+B01284,Sugar
+B01285,Baby wipes
+B01285,Bread
+B01285,Palm oil
+B01286,Palm oil
+B01286,Tomato paste
+B01287,Chicken
+B01288,Spaghetti
+B01289,Beer
+B01289,Garri
+B01289,Groundnut
+B01289,Sugar
+B01289,Tea
+B01290,Soap
+B01290,Spaghetti
+B01291,Chicken
+B01291,Groundnut
+B01291,Milo
+B01292,Groundnut
+B01293,Eggs
+B01293,Milk
+B01293,Rice
+B01294,Baby wipes
+B01294,Beer
+B01294,Detergent
+B01294,Diapers
+B01295,Eggs
+B01295,Indomie
+B01295,Milo
+B01295,Soap
+B01296,Chicken
+B01297,Beer
+B01297,Bread
+B01297,Chicken
+B01297,Eggs
+B01298,Chicken
+B01298,Groundnut
+B01298,Spaghetti
+B01299,Chicken
+B01300,Diapers
+B01301,Garri
+B01301,Rice
+B01302,Detergent
+B01302,Eggs
+B01303,Beer
+B01303,Groundnut
+B01303,Milk
+B01303,Milo
+B01304,Sugar
+B01305,Bread
+B01305,Chicken
+B01305,Eggs
+B01305,Milk
+B01306,Soap
+B01307,Eggs
+B01307,Indomie
+B01307,Milo
+B01307,Sugar
+B01308,Baby wipes
+B01308,Beer
+B01308,Bread
+B01308,Diapers
+B01309,Beer
+B01309,Chicken
+B01309,Diapers
+B01309,Eggs
+B01310,Eggs
+B01310,Groundnut
+B01310,Palm oil
+B01310,Soap
+B01311,Chicken
+B01311,Spaghetti
+B01311,Sugar
+B01312,Beer
+B01312,Milk
+B01312,Milo
+B01313,Indomie
+B01313,Milk
+B01314,Spaghetti
+B01314,Sugar
+B01315,Palm oil
+B01316,Milk
+B01316,Milo
+B01316,Tomato paste
+B01317,Soap
+B01318,Groundnut
+B01318,Sugar
+B01319,Eggs
+B01319,Indomie
+B01319,Milk
+B01319,Milo
+B01319,Sugar
+B01319,Tea
+B01320,Chicken
+B01321,Milk
+B01322,Detergent
+B01322,Sardine
+B01322,Soap
+B01322,Spaghetti
+B01323,Milk
+B01323,Spaghetti
+B01323,Sugar
+B01324,Palm oil
+B01324,Tea
+B01324,Tomato paste
+B01325,Bread
+B01325,Garri
+B01326,Groundnut
+B01326,Soap
+B01327,Milo
+B01327,Palm oil
+B01327,Rice
+B01327,Tomato paste
+B01328,Baby wipes
+B01328,Eggs
+B01328,Milk
+B01328,Palm oil
+B01328,Rice
+B01328,Tomato paste
+B01329,Beer
+B01329,Rice
+B01329,Tomato paste
+B01330,Indomie
+B01330,Soap
+B01330,Spaghetti
+B01330,Sugar
+B01331,Baby wipes
+B01331,Palm oil
+B01331,Rice
+B01331,Soap
+B01331,Tomato paste
+B01332,Garri
+B01332,Spaghetti
+B01332,Sugar
+B01332,Tea
+B01333,Detergent
+B01333,Rice
+B01333,Soap
+B01333,Tea
+B01334,Baby wipes
+B01334,Soap
+B01335,Groundnut
+B01335,Milo
+B01335,Palm oil
+B01335,Spaghetti
+B01336,Eggs
+B01337,Bread
+B01337,Detergent
+B01337,Diapers
+B01337,Eggs
+B01337,Soap
+B01338,Baby wipes
+B01338,Beer
+B01338,Chicken
+B01338,Diapers
+B01338,Soap
+B01339,Indomie
+B01339,Palm oil
+B01339,Rice
+B01339,Tomato paste
+B01340,Baby wipes
+B01340,Diapers
+B01340,Eggs
+B01340,Spaghetti
+B01341,Spaghetti
+B01341,Sugar
+B01341,Tea
+B01342,Baby wipes
+B01342,Beer
+B01342,Diapers
+B01343,Baby wipes
+B01343,Garri
+B01343,Indomie
+B01343,Tea
+B01344,Baby wipes
+B01344,Bread
+B01345,Baby wipes
+B01345,Tea
+B01345,Tomato paste
+B01346,Beer
+B01347,Rice
+B01347,Tomato paste
+B01348,Eggs
+B01348,Sardine
+B01348,Sugar
+B01349,Eggs
+B01349,Milk
+B01349,Palm oil
+B01349,Tomato paste
+B01350,Detergent
+B01350,Spaghetti
+B01351,Bread
+B01351,Detergent
+B01351,Rice
+B01352,Palm oil
+B01353,Eggs
+B01353,Indomie
+B01353,Palm oil
+B01353,Tomato paste
+B01354,Baby wipes
+B01354,Beer
+B01354,Diapers
+B01354,Milk
+B01354,Tea
+B01355,Baby wipes
+B01355,Detergent
+B01355,Diapers
+B01355,Tea
+B01356,Indomie
+B01356,Milk
+B01356,Tea
+B01357,Chicken
+B01357,Indomie
+B01357,Spaghetti
+B01358,Baby wipes
+B01359,Chicken
+B01359,Indomie
+B01360,Beer
+B01360,Bread
+B01360,Chicken
+B01360,Rice
+B01360,Tomato paste
+B01361,Baby wipes
+B01361,Diapers
+B01361,Sugar
+B01362,Baby wipes
+B01362,Diapers
+B01362,Sardine
+B01362,Soap
+B01362,Sugar
+B01363,Beer
+B01363,Diapers
+B01363,Eggs
+B01363,Garri
+B01364,Bread
+B01364,Eggs
+B01365,Bread
+B01365,Palm oil
+B01366,Baby wipes
+B01366,Detergent
+B01367,Baby wipes
+B01367,Garri
+B01368,Chicken
+B01368,Eggs
+B01368,Milo
+B01368,Rice
+B01368,Tomato paste
+B01369,Bread
+B01370,Chicken
+B01370,Indomie
+B01370,Sugar
+B01370,Tea
+B01371,Baby wipes
+B01371,Diapers
+B01371,Milo
+B01371,Palm oil
+B01371,Spaghetti
+B01372,Bread
+B01373,Beer
+B01373,Chicken
+B01373,Sugar
+B01374,Baby wipes
+B01374,Diapers
+B01374,Eggs
+B01374,Palm oil
+B01375,Sardine
+B01376,Chicken
+B01376,Indomie
+B01376,Milo
+B01377,Baby wipes
+B01377,Groundnut
+B01377,Sardine
+B01377,Sugar
+B01378,Indomie
+B01378,Palm oil
+B01378,Rice
+B01378,Sardine
+B01378,Tomato paste
+B01379,Rice
+B01379,Spaghetti
+B01380,Bread
+B01380,Eggs
+B01380,Spaghetti
+B01380,Sugar
+B01380,Tomato paste
+B01381,Detergent
+B01381,Eggs
+B01382,Beer
+B01382,Indomie
+B01382,Spaghetti
+B01382,Sugar
+B01382,Tea
+B01383,Baby wipes
+B01383,Spaghetti
+B01384,Beer
+B01384,Chicken
+B01384,Indomie
+B01385,Chicken
+B01385,Sardine
+B01385,Sugar
+B01386,Baby wipes
+B01386,Indomie
+B01386,Sugar
+B01386,Tea
+B01387,Garri
+B01387,Groundnut
+B01388,Tea
+B01389,Milk
+B01389,Milo
+B01389,Spaghetti
+B01390,Beer
+B01390,Chicken
+B01390,Milk
+B01390,Milo
+B01391,Palm oil
+B01392,Baby wipes
+B01392,Groundnut
+B01392,Sugar
+B01393,Baby wipes
+B01393,Detergent
+B01393,Diapers
+B01393,Groundnut
+B01394,Bread
+B01394,Eggs
+B01394,Sardine
+B01395,Eggs
+B01395,Milk
+B01395,Milo
+B01395,Soap
+B01396,Eggs
+B01396,Sardine
+B01396,Sugar
+B01397,Bread
+B01397,Eggs
+B01398,Baby wipes
+B01398,Chicken
+B01398,Rice
+B01398,Sugar
+B01399,Baby wipes
+B01400,Garri
+B01400,Groundnut
+B01400,Milk
+B01400,Milo
+B01400,Sugar
+B01401,Groundnut
+B01401,Sardine
+B01402,Tomato paste
+B01403,Detergent
+B01404,Sugar
+B01405,Groundnut
+B01406,Soap
+B01407,Detergent
+B01407,Diapers
+B01407,Garri
+B01407,Indomie
+B01408,Garri
+B01409,Milk
+B01410,Eggs
+B01411,Beer
+B01411,Diapers
+B01411,Groundnut
+B01411,Rice
+B01412,Baby wipes
+B01412,Garri
+B01412,Tomato paste
+B01413,Groundnut
+B01413,Indomie
+B01413,Sardine
+B01414,Baby wipes
+B01414,Diapers
+B01414,Eggs
+B01414,Garri
+B01414,Groundnut
+B01414,Spaghetti
+B01415,Beer
+B01415,Chicken
+B01415,Palm oil
+B01415,Tomato paste
+B01416,Baby wipes
+B01416,Diapers
+B01416,Palm oil
+B01416,Rice
+B01417,Beer
+B01417,Detergent
+B01417,Tomato paste
+B01418,Baby wipes
+B01418,Diapers
+B01418,Eggs
+B01419,Baby wipes
+B01419,Beer
+B01419,Bread
+B01419,Detergent
+B01419,Diapers
+B01419,Eggs
+B01419,Soap
+B01420,Garri
+B01420,Groundnut
+B01420,Spaghetti
+B01421,Indomie
+B01421,Milk
+B01421,Milo
+B01421,Rice
+B01422,Tomato paste
+B01423,Eggs
+B01423,Palm oil
+B01423,Sardine
+B01423,Soap
+B01423,Tomato paste
+B01424,Groundnut
+B01425,Eggs
+B01426,Baby wipes
+B01426,Beer
+B01426,Diapers
+B01427,Milk
+B01428,Baby wipes
+B01428,Palm oil
+B01429,Chicken
+B01429,Milk
+B01429,Sugar
+B01429,Tea
+B01430,Indomie
+B01430,Soap
+B01431,Detergent
+B01432,Baby wipes
+B01432,Diapers
+B01432,Eggs
+B01433,Bread
+B01433,Detergent
+B01433,Spaghetti
+B01433,Sugar
+B01434,Chicken
+B01434,Milo
+B01435,Sugar
+B01435,Tea
+B01436,Eggs
+B01436,Palm oil
+B01436,Sugar
+B01436,Tea
+B01437,Rice
+B01437,Tomato paste
+B01438,Spaghetti
+B01439,Beer
+B01439,Rice
+B01439,Sardine
+B01439,Sugar
+B01440,Diapers
+B01440,Milo
+B01440,Palm oil
+B01441,Palm oil
+B01441,Spaghetti
+B01442,Palm oil
+B01443,Indomie
+B01443,Sardine
+B01443,Sugar
+B01444,Milk
+B01444,Milo
+B01445,Baby wipes
+B01445,Indomie
+B01445,Soap
+B01445,Sugar
+B01446,Detergent
+B01446,Eggs
+B01447,Detergent
+B01447,Garri
+B01447,Groundnut
+B01447,Palm oil
+B01447,Sardine
+B01448,Palm oil
+B01449,Detergent
+B01449,Groundnut
+B01449,Sugar
+B01449,Tea
+B01450,Baby wipes
+B01450,Chicken
+B01450,Palm oil
+B01450,Rice
+B01450,Spaghetti
+B01450,Tomato paste
+B01451,Baby wipes
+B01451,Beer
+B01451,Detergent
+B01452,Eggs
+B01452,Garri
+B01452,Spaghetti
+B01452,Tomato paste
+B01453,Detergent
+B01453,Sugar
+B01453,Tea
+B01454,Bread
+B01454,Chicken
+B01454,Eggs
+B01454,Sardine
+B01455,Beer
+B01455,Sugar
+B01455,Tea
+B01456,Palm oil
+B01456,Sardine
+B01457,Sugar
+B01458,Bread
+B01458,Soap
+B01458,Sugar
+B01458,Tea
+B01459,Baby wipes
+B01459,Diapers
+B01459,Palm oil
+B01459,Sardine
+B01460,Bread
+B01460,Chicken
+B01460,Detergent
+B01460,Rice
+B01461,Bread
+B01461,Chicken
+B01461,Eggs
+B01461,Groundnut
+B01462,Baby wipes
+B01462,Bread
+B01462,Milk
+B01462,Milo
+B01462,Palm oil
+B01462,Tomato paste
+B01463,Chicken
+B01463,Sugar
+B01464,Eggs
+B01465,Eggs
+B01465,Sardine
+B01465,Soap
+B01466,Chicken
+B01466,Detergent
+B01466,Sugar
+B01467,Sardine
+B01467,Spaghetti
+B01468,Indomie
+B01468,Soap
+B01469,Chicken
+B01469,Milk
+B01470,Beer
+B01470,Chicken
+B01470,Milo
+B01470,Palm oil
+B01471,Baby wipes
+B01471,Eggs
+B01472,Rice
+B01472,Soap
+B01473,Indomie
+B01473,Soap
+B01474,Garri
+B01474,Groundnut
+B01474,Indomie
+B01474,Milo
+B01474,Sardine
+B01475,Beer
+B01476,Eggs
+B01477,Baby wipes
+B01477,Milk
+B01477,Spaghetti
+B01478,Bread
+B01478,Eggs
+B01478,Milk
+B01478,Milo
+B01478,Palm oil
+B01478,Soap
+B01479,Detergent
+B01479,Milk
+B01479,Milo
+B01480,Groundnut
+B01480,Sardine
+B01481,Bread
+B01481,Eggs
+B01481,Soap
+B01481,Sugar
+B01482,Palm oil
+B01483,Bread
+B01483,Eggs
+B01484,Garri
+B01484,Groundnut
+B01484,Palm oil
+B01484,Sardine
+B01485,Beer
+B01485,Rice
+B01485,Tea
+B01485,Tomato paste
+B01486,Baby wipes
+B01486,Chicken
+B01486,Tea
+B01487,Sugar
+B01487,Tea
+B01488,Groundnut
+B01488,Sugar
+B01489,Indomie
+B01490,Garri
+B01490,Groundnut
+B01490,Indomie
+B01490,Palm oil
+B01491,Chicken
+B01491,Eggs
+B01491,Groundnut
+B01491,Rice
+B01491,Tomato paste
+B01492,Milk
+B01493,Groundnut
+B01494,Diapers
+B01494,Sardine
+B01494,Sugar
+B01495,Baby wipes
+B01495,Beer
+B01495,Diapers
+B01495,Sardine
+B01495,Spaghetti
+B01496,Baby wipes
+B01496,Indomie
+B01496,Sugar
+B01497,Detergent
+B01497,Garri
+B01497,Groundnut
+B01498,Beer
+B01498,Indomie
+B01498,Milk
+B01498,Spaghetti
+B01499,Chicken
+B01499,Groundnut
+B01499,Indomie
+B01499,Palm oil
+B01499,Tomato paste
+B01500,Garri
+B01500,Groundnut
+B01500,Milk
+B01500,Milo
+B01500,Sugar
+B01500,Tomato paste
+B01501,Diapers
+B01501,Groundnut
+B01501,Milo
+B01501,Spaghetti
+B01502,Baby wipes
+B01502,Beer
+B01502,Groundnut
+B01502,Sugar
+B01502,Tea
+B01503,Groundnut
+B01503,Palm oil
+B01503,Soap
+B01503,Tomato paste
+B01504,Baby wipes
+B01504,Bread
+B01504,Eggs
+B01504,Spaghetti
+B01505,Baby wipes
+B01505,Bread
+B01505,Indomie
+B01505,Sugar
+B01506,Beer
+B01506,Eggs
+B01506,Groundnut
+B01507,Indomie
+B01507,Milk
+B01507,Milo
+B01507,Sardine
+B01507,Soap
+B01508,Groundnut
+B01508,Indomie
+B01508,Milk
+B01508,Sardine
+B01509,Beer
+B01509,Indomie
+B01509,Milk
+B01509,Sugar
+B01510,Rice
+B01510,Sugar
+B01510,Tea
+B01511,Eggs
+B01511,Milk
+B01511,Milo
+B01511,Sardine
+B01512,Sardine
+B01513,Detergent
+B01513,Groundnut
+B01513,Indomie
+B01514,Chicken
+B01515,Detergent
+B01515,Sugar
+B01516,Bread
+B01516,Chicken
+B01516,Diapers
+B01516,Garri
+B01516,Groundnut
+B01517,Baby wipes
+B01517,Groundnut
+B01517,Milk
+B01517,Milo
+B01517,Palm oil
+B01518,Beer
+B01518,Chicken
+B01518,Sardine
+B01518,Soap
+B01519,Beer
+B01520,Sardine
+B01521,Chicken
+B01521,Garri
+B01521,Groundnut
+B01522,Baby wipes
+B01522,Chicken
+B01522,Diapers
+B01522,Garri
+B01522,Sardine
+B01523,Eggs
+B01524,Beer
+B01525,Baby wipes
+B01525,Garri
+B01525,Groundnut
+B01525,Tomato paste
+B01526,Beer
+B01526,Eggs
+B01526,Sardine
+B01527,Sugar
+B01527,Tea
+B01528,Tea
+B01529,Baby wipes
+B01529,Bread
+B01529,Chicken
+B01529,Eggs
+B01530,Garri
+B01530,Milo
+B01530,Soap
+B01531,Eggs
+B01531,Rice
+B01531,Tomato paste
+B01532,Sardine
+B01533,Baby wipes
+B01533,Bread
+B01533,Chicken
+B01533,Tomato paste
+B01534,Baby wipes
+B01534,Bread
+B01534,Eggs
+B01534,Rice
+B01535,Baby wipes
+B01535,Beer
+B01535,Detergent
+B01535,Diapers
+B01535,Garri
+B01535,Groundnut
+B01536,Soap
+B01537,Garri
+B01537,Groundnut
+B01537,Tea
+B01537,Tomato paste
+B01538,Beer
+B01539,Beer
+B01539,Palm oil
+B01539,Soap
+B01539,Sugar
+B01540,Spaghetti
+B01541,Milk
+B01541,Milo
+B01541,Palm oil
+B01541,Spaghetti
+B01542,Baby wipes
+B01542,Beer
+B01542,Diapers
+B01542,Garri
+B01542,Groundnut
+B01542,Spaghetti
+B01543,Bread
+B01543,Milo
+B01543,Rice
+B01543,Tea
+B01543,Tomato paste
+B01544,Beer
+B01544,Diapers
+B01544,Rice
+B01545,Eggs
+B01546,Bread
+B01546,Milk
+B01546,Spaghetti
+B01547,Beer
+B01547,Milk
+B01548,Eggs
+B01549,Chicken
+B01549,Rice
+B01549,Sugar
+B01549,Tea
+B01550,Sugar
+B01550,Tea
+B01551,Indomie
+B01551,Milk
+B01551,Milo
+B01551,Spaghetti
+B01552,Beer
+B01552,Diapers
+B01552,Sardine
+B01553,Baby wipes
+B01553,Beer
+B01553,Bread
+B01553,Diapers
+B01553,Sugar
+B01554,Chicken
+B01555,Beer
+B01555,Indomie
+B01555,Spaghetti
+B01556,Detergent
+B01556,Garri
+B01556,Sardine
+B01556,Tea
+B01557,Baby wipes
+B01557,Beer
+B01557,Diapers
+B01557,Milk
+B01558,Chicken
+B01559,Baby wipes
+B01559,Milk
+B01559,Palm oil
+B01559,Rice
+B01559,Sugar
+B01559,Tea
+B01559,Tomato paste
+B01560,Baby wipes
+B01561,Milo
+B01561,Palm oil
+B01562,Milk
+B01562,Milo
+B01562,Tomato paste
+B01563,Bread
+B01563,Groundnut
+B01563,Milk
+B01563,Sardine
+B01564,Baby wipes
+B01564,Diapers
+B01564,Spaghetti
+B01565,Baby wipes
+B01565,Diapers
+B01565,Indomie
+B01565,Sardine
+B01566,Indomie
+B01566,Milk
+B01566,Tomato paste
+B01567,Palm oil
+B01568,Beer
+B01568,Diapers
+B01568,Milk
+B01568,Milo
+B01568,Soap
+B01569,Chicken
+B01569,Indomie
+B01569,Milk
+B01570,Groundnut
+B01570,Milk
+B01570,Milo
+B01571,Diapers
+B01571,Eggs
+B01571,Milo
+B01571,Sardine
+B01572,Milk
+B01572,Palm oil
+B01572,Tomato paste
+B01573,Detergent
+B01573,Milk
+B01573,Soap
+B01574,Groundnut
+B01574,Rice
+B01574,Spaghetti
+B01574,Sugar
+B01574,Tea
+B01575,Bread
+B01575,Soap
+B01575,Spaghetti
+B01576,Milo
+B01576,Palm oil
+B01577,Beer
+B01577,Milo
+B01578,Baby wipes
+B01578,Diapers
+B01578,Garri
+B01578,Groundnut
+B01579,Milo
+B01580,Baby wipes
+B01580,Beer
+B01580,Diapers
+B01580,Eggs
+B01580,Palm oil
+B01581,Garri
+B01581,Groundnut
+B01581,Soap
+B01581,Tomato paste
+B01582,Beer
+B01582,Milk
+B01582,Milo
+B01582,Rice
+B01582,Tomato paste
+B01583,Diapers
+B01583,Groundnut
+B01583,Palm oil
+B01584,Diapers
+B01584,Indomie
+B01584,Soap
+B01585,Baby wipes
+B01586,Baby wipes
+B01586,Beer
+B01586,Chicken
+B01586,Diapers
+B01586,Groundnut
+B01586,Sugar
+B01586,Tea
+B01587,Milk
+B01587,Milo
+B01587,Palm oil
+B01587,Soap
+B01588,Beer
+B01588,Detergent
+B01588,Eggs
+B01588,Rice
+B01589,Milo
+B01589,Rice
+B01590,Bread
+B01590,Eggs
+B01590,Indomie
+B01590,Milo
+B01590,Palm oil
+B01591,Beer
+B01591,Sardine
+B01591,Soap
+B01592,Chicken
+B01592,Groundnut
+B01593,Bread
+B01593,Indomie
+B01593,Milo
+B01594,Milk
+B01594,Palm oil
+B01594,Spaghetti
+B01595,Garri
+B01595,Groundnut
+B01595,Milk
+B01595,Spaghetti
+B01595,Tomato paste
+B01596,Baby wipes
+B01596,Bread
+B01596,Detergent
+B01596,Diapers
+B01596,Milo
+B01597,Indomie
+B01597,Rice
+B01597,Tomato paste
+B01598,Detergent
+B01598,Sardine
+B01599,Bread
+B01599,Detergent
+B01599,Palm oil
+B01600,Milk
+B01601,Sugar
+B01602,Beer
+B01602,Eggs
+B01602,Indomie
+B01603,Milo
+B01604,Baby wipes
+B01605,Beer
+B01605,Detergent
+B01605,Diapers
+B01605,Indomie
+B01605,Soap
+B01606,Bread
+B01606,Chicken
+B01607,Baby wipes
+B01607,Diapers
+B01607,Milk
+B01607,Sardine
+B01608,Indomie
+B01608,Palm oil
+B01608,Sardine
+B01608,Sugar
+B01609,Baby wipes
+B01610,Sugar
+B01611,Eggs
+B01611,Spaghetti
+B01612,Baby wipes
+B01612,Detergent
+B01612,Diapers
+B01612,Rice
+B01613,Baby wipes
+B01613,Bread
+B01613,Chicken
+B01613,Milo
+B01614,Beer
+B01614,Detergent
+B01614,Indomie
+B01615,Beer
+B01615,Diapers
+B01615,Groundnut
+B01615,Milk
+B01616,Chicken
+B01616,Garri
+B01616,Groundnut
+B01616,Sugar
+B01617,Garri
+B01617,Groundnut
+B01617,Milk
+B01617,Sugar
+B01618,Detergent
+B01618,Garri
+B01618,Indomie
+B01618,Rice
+B01619,Beer
+B01619,Chicken
+B01619,Groundnut
+B01620,Detergent
+B01620,Palm oil
+B01620,Spaghetti
+B01621,Bread
+B01621,Eggs
+B01621,Milk
+B01622,Chicken
+B01623,Diapers
+B01623,Garri
+B01623,Groundnut
+B01623,Indomie
+B01623,Sardine
+B01624,Beer
+B01625,Baby wipes
+B01625,Eggs
+B01626,Baby wipes
+B01626,Diapers
+B01626,Soap
+B01626,Spaghetti
+B01626,Sugar
+B01626,Tea
+B01627,Beer
+B01628,Beer
+B01628,Milk
+B01628,Milo
+B01629,Bread
+B01629,Detergent
+B01630,Milk
+B01631,Palm oil
+B01632,Diapers
+B01632,Garri
+B01632,Groundnut
+B01632,Milk
+B01632,Milo
+B01632,Sugar
+B01632,Tea
+B01633,Bread
+B01633,Chicken
+B01633,Eggs
+B01634,Bread
+B01634,Milk
+B01634,Palm oil
+B01635,Beer
+B01635,Sugar
+B01636,Rice
+B01636,Tea
+B01637,Bread
+B01637,Eggs
+B01637,Groundnut
+B01637,Rice
+B01638,Palm oil
+B01638,Sardine
+B01638,Tea
+B01638,Tomato paste
+B01639,Baby wipes
+B01639,Beer
+B01640,Sugar
+B01640,Tea
+B01641,Baby wipes
+B01641,Groundnut
+B01642,Garri
+B01642,Sardine
+B01642,Spaghetti
+B01642,Tomato paste
+B01643,Baby wipes
+B01643,Eggs
+B01643,Sugar
+B01643,Tea
+B01644,Bread
+B01644,Chicken
+B01644,Eggs
+B01645,Eggs
+B01645,Groundnut
+B01646,Bread
+B01646,Chicken
+B01646,Eggs
+B01647,Milk
+B01647,Palm oil
+B01648,Palm oil
+B01649,Baby wipes
+B01649,Chicken
+B01649,Milk
+B01649,Sugar
+B01649,Tea
+B01650,Beer
+B01650,Garri
+B01650,Groundnut
+B01650,Sardine
+B01651,Baby wipes
+B01651,Soap
+B01652,Chicken
+B01652,Garri
+B01652,Milk
+B01653,Garri
+B01653,Groundnut
+B01654,Soap
+B01655,Eggs
+B01655,Spaghetti
+B01656,Beer
+B01656,Diapers
+B01656,Sardine
+B01656,Sugar
+B01657,Beer
+B01657,Detergent
+B01658,Beer
+B01658,Eggs
+B01658,Spaghetti
+B01658,Tea
+B01659,Bread
+B01659,Eggs
+B01659,Sugar
+B01660,Baby wipes
+B01660,Garri
+B01661,Soap
+B01662,Indomie
+B01663,Rice
+B01663,Spaghetti
+B01663,Tomato paste
+B01664,Detergent
+B01664,Indomie
+B01664,Sugar
+B01664,Tea
+B01665,Baby wipes
+B01665,Diapers
+B01665,Palm oil
+B01665,Rice
+B01665,Spaghetti
+B01665,Tomato paste
+B01666,Baby wipes
+B01666,Beer
+B01666,Bread
+B01666,Diapers
+B01666,Eggs
+B01666,Groundnut
+B01667,Sugar
+B01667,Tea
+B01668,Palm oil
+B01668,Rice
+B01668,Sardine
+B01668,Spaghetti
+B01668,Tomato paste
+B01669,Soap
+B01670,Beer
+B01671,Milk
+B01671,Palm oil
+B01671,Sardine
+B01671,Sugar
+B01672,Bread
+B01672,Indomie
+B01672,Palm oil
+B01672,Rice
+B01672,Soap
+B01672,Tomato paste
+B01673,Garri
+B01673,Indomie
+B01673,Sugar
+B01673,Tea
+B01674,Groundnut
+B01675,Detergent
+B01675,Diapers
+B01675,Sardine
+B01676,Bread
+B01676,Eggs
+B01676,Indomie
+B01676,Tea
+B01677,Beer
+B01677,Bread
+B01677,Chicken
+B01677,Palm oil
+B01677,Tomato paste
+B01678,Bread
+B01678,Detergent
+B01678,Eggs
+B01678,Milk
+B01678,Milo
+B01678,Sugar
+B01679,Bread
+B01679,Detergent
+B01679,Diapers
+B01679,Eggs
+B01680,Sardine
+B01680,Spaghetti
+B01681,Chicken
+B01681,Eggs
+B01681,Palm oil
+B01682,Rice
+B01682,Soap
+B01683,Milk
+B01684,Baby wipes
+B01684,Bread
+B01684,Chicken
+B01684,Eggs
+B01684,Sugar
+B01685,Chicken
+B01685,Milk
+B01685,Milo
+B01686,Soap
+B01686,Spaghetti
+B01687,Soap
+B01688,Bread
+B01688,Eggs
+B01688,Garri
+B01688,Indomie
+B01689,Spaghetti
+B01690,Palm oil
+B01690,Spaghetti
+B01690,Tomato paste
+B01691,Groundnut
+B01692,Baby wipes
+B01692,Beer
+B01692,Bread
+B01692,Chicken
+B01692,Diapers
+B01692,Eggs
+B01692,Sardine
+B01693,Diapers
+B01693,Eggs
+B01693,Garri
+B01693,Groundnut
+B01693,Tomato paste
+B01694,Indomie
+B01694,Sardine
+B01695,Eggs
+B01696,Beer
+B01696,Detergent
+B01696,Garri
+B01696,Groundnut
+B01696,Sardine
+B01697,Beer
+B01697,Diapers
+B01697,Groundnut
+B01697,Indomie
+B01697,Tea
+B01698,Bread
+B01698,Sardine
+B01699,Chicken
+B01699,Sugar
+B01699,Tea
+B01700,Beer
+B01700,Milk
+B01700,Milo
+B01700,Sugar
+B01700,Tea
+B01700,Tomato paste
+B01701,Chicken
+B01701,Garri
+B01701,Groundnut
+B01701,Milk
+B01702,Soap
+B01703,Detergent
+B01703,Milo
+B01703,Palm oil
+B01703,Sardine
+B01704,Garri
+B01705,Spaghetti
+B01706,Groundnut
+B01706,Indomie
+B01706,Spaghetti
+B01706,Sugar
+B01707,Beer
+B01707,Palm oil
+B01707,Sugar
+B01708,Detergent
+B01708,Sardine
+B01709,Palm oil
+B01709,Sugar
+B01710,Baby wipes
+B01710,Beer
+B01710,Bread
+B01710,Chicken
+B01710,Diapers
+B01710,Palm oil
+B01710,Rice
+B01710,Tomato paste
+B01711,Baby wipes
+B01711,Diapers
+B01711,Garri
+B01711,Groundnut
+B01712,Baby wipes
+B01713,Chicken
+B01713,Garri
+B01713,Groundnut
+B01713,Milk
+B01713,Milo
+B01713,Sardine
+B01714,Rice
+B01714,Tomato paste
+B01715,Eggs
+B01715,Milk
+B01715,Palm oil
+B01715,Soap
+B01715,Tomato paste
+B01716,Baby wipes
+B01716,Chicken
+B01716,Soap
+B01717,Groundnut
+B01717,Milk
+B01717,Milo
+B01717,Palm oil
+B01717,Spaghetti
+B01718,Soap
+B01719,Baby wipes
+B01719,Sugar
+B01720,Beer
+B01720,Eggs
+B01720,Groundnut
+B01721,Detergent
+B01721,Indomie
+B01721,Sugar
+B01721,Tea
+B01722,Baby wipes
+B01722,Eggs
+B01722,Palm oil
+B01723,Baby wipes
+B01723,Chicken
+B01723,Rice
+B01724,Eggs
+B01724,Palm oil
+B01724,Sardine
+B01725,Groundnut
+B01726,Detergent
+B01726,Garri
+B01727,Garri
+B01728,Groundnut
+B01728,Milo
+B01728,Tea
+B01729,Bread
+B01730,Milk
+B01731,Beer
+B01731,Diapers
+B01731,Milo
+B01732,Baby wipes
+B01732,Beer
+B01732,Diapers
+B01732,Indomie
+B01733,Tomato paste
+B01734,Palm oil
+B01734,Sardine
+B01734,Spaghetti
+B01735,Beer
+B01735,Indomie
+B01735,Spaghetti
+B01736,Beer
+B01737,Chicken
+B01737,Indomie
+B01737,Sugar
+B01738,Sardine
+B01739,Palm oil
+B01739,Tomato paste
+B01740,Beer
+B01740,Milo
+B01741,Eggs
+B01741,Milk
+B01741,Milo
+B01742,Detergent
+B01742,Milk
+B01742,Milo
+B01742,Soap
+B01742,Tea
+B01743,Palm oil
+B01743,Rice
+B01743,Sugar
+B01743,Tea
+B01743,Tomato paste
+B01744,Baby wipes
+B01744,Chicken
+B01744,Palm oil
+B01744,Rice
+B01744,Tomato paste
+B01745,Beer
+B01745,Indomie
+B01746,Beer
+B01746,Detergent
+B01746,Diapers
+B01746,Milo
+B01747,Palm oil
+B01748,Milk
+B01748,Milo
+B01748,Rice
+B01749,Beer
+B01749,Milk
+B01749,Milo
+B01749,Sugar
+B01749,Tea
+B01749,Tomato paste
+B01750,Baby wipes
+B01751,Garri
+B01751,Indomie
+B01751,Milo
+B01751,Soap
+B01752,Milk
+B01752,Milo
+B01752,Palm oil
+B01752,Rice
+B01753,Indomie
+B01753,Milk
+B01754,Detergent
+B01754,Groundnut
+B01754,Milk
+B01754,Palm oil
+B01754,Tomato paste
+B01755,Baby wipes
+B01755,Beer
+B01756,Eggs
+B01757,Milk
+B01757,Soap
+B01757,Sugar
+B01757,Tea
+B01758,Baby wipes
+B01758,Beer
+B01758,Palm oil
+B01758,Sardine
+B01759,Eggs
+B01759,Sugar
+B01759,Tea
+B01760,Baby wipes
+B01760,Diapers
+B01760,Rice
+B01761,Bread
+B01761,Eggs
+B01761,Spaghetti
+B01761,Tea
+B01762,Chicken
+B01762,Detergent
+B01763,Baby wipes
+B01763,Diapers
+B01763,Tea
+B01764,Indomie
+B01765,Beer
+B01765,Tomato paste
+B01766,Eggs
+B01767,Spaghetti
+B01768,Bread
+B01768,Soap
+B01769,Bread
+B01769,Eggs
+B01769,Soap
+B01769,Tea
+B01770,Bread
+B01770,Detergent
+B01770,Eggs
+B01770,Sugar
+B01770,Tea
+B01771,Chicken
+B01771,Palm oil
+B01771,Spaghetti
+B01772,Bread
+B01772,Eggs
+B01772,Milk
+B01772,Milo
+B01773,Milo
+B01774,Bread
+B01774,Eggs
+B01774,Tomato paste
+B01775,Eggs
+B01775,Milk
+B01775,Palm oil
+B01776,Diapers
+B01776,Palm oil
+B01776,Spaghetti
+B01777,Milo
+B01778,Beer
+B01778,Eggs
+B01778,Soap
+B01779,Eggs
+B01779,Garri
+B01779,Milk
+B01779,Milo
+B01779,Rice
+B01779,Tomato paste
+B01780,Spaghetti
+B01781,Groundnut
+B01781,Palm oil
+B01782,Chicken
+B01783,Baby wipes
+B01783,Beer
+B01783,Diapers
+B01784,Baby wipes
+B01784,Diapers
+B01784,Milk
+B01785,Baby wipes
+B01785,Detergent
+B01785,Eggs
+B01786,Baby wipes
+B01787,Baby wipes
+B01787,Bread
+B01787,Eggs
+B01787,Milk
+B01788,Garri
+B01788,Milk
+B01788,Milo
+B01788,Palm oil
+B01789,Garri
+B01790,Beer
+B01790,Milk
+B01790,Milo
+B01790,Spaghetti
+B01791,Beer
+B01791,Bread
+B01791,Palm oil
+B01792,Baby wipes
+B01792,Soap
+B01793,Soap
+B01794,Eggs
+B01794,Palm oil
+B01794,Tomato paste
+B01795,Groundnut
+B01795,Soap
+B01795,Sugar
+B01795,Tea
+B01795,Tomato paste
+B01796,Groundnut
+B01796,Milk
+B01796,Milo
+B01797,Baby wipes
+B01797,Beer
+B01797,Detergent
+B01797,Diapers
+B01797,Garri
+B01797,Milk
+B01798,Baby wipes
+B01798,Beer
+B01798,Milo
+B01799,Milo
+B01799,Soap
+B01800,Spaghetti
+B01800,Sugar
+B01801,Detergent
+B01801,Spaghetti
+B01802,Chicken
+B01803,Soap
+B01804,Garri
+B01804,Groundnut
+B01804,Milk
+B01804,Spaghetti
+B01804,Sugar
+B01805,Palm oil
+B01805,Sardine
+B01806,Palm oil
+B01806,Soap
+B01807,Baby wipes
+B01807,Indomie
+B01807,Milk
+B01807,Tomato paste
+B01808,Milo
+B01809,Sugar
+B01810,Spaghetti
+B01811,Garri
+B01811,Sugar
+B01812,Chicken
+B01813,Beer
+B01814,Detergent
+B01814,Milo
+B01814,Soap
+B01814,Sugar
+B01815,Baby wipes
+B01815,Diapers
+B01815,Milk
+B01815,Milo
+B01815,Sugar
+B01816,Eggs
+B01816,Garri
+B01816,Groundnut
+B01816,Palm oil
+B01817,Bread
+B01817,Eggs
+B01817,Tea
+B01818,Garri
+B01818,Groundnut
+B01818,Palm oil
+B01818,Rice
+B01818,Tomato paste
+B01819,Rice
+B01819,Sardine
+B01819,Tomato paste
+B01820,Garri
+B01820,Groundnut
+B01820,Sugar
+B01821,Beer
+B01822,Spaghetti
+B01822,Sugar
+B01822,Tea
+B01823,Beer
+B01823,Spaghetti
+B01823,Tomato paste
+B01824,Eggs
+B01824,Milo
+B01825,Baby wipes
+B01825,Groundnut
+B01825,Milo
+B01825,Spaghetti
+B01826,Beer
+B01826,Eggs
+B01826,Groundnut
+B01827,Palm oil
+B01827,Spaghetti
+B01827,Sugar
+B01827,Tea
+B01828,Beer
+B01828,Rice
+B01829,Indomie
+B01829,Spaghetti
+B01830,Bread
+B01830,Spaghetti
+B01831,Groundnut
+B01831,Indomie
+B01831,Rice
+B01832,Bread
+B01832,Eggs
+B01832,Sardine
+B01832,Soap
+B01832,Sugar
+B01833,Garri
+B01833,Groundnut
+B01833,Sardine
+B01834,Bread
+B01834,Eggs
+B01834,Soap
+B01835,Baby wipes
+B01835,Beer
+B01835,Diapers
+B01835,Garri
+B01835,Groundnut
+B01836,Tomato paste
+B01837,Soap
+B01837,Spaghetti
+B01838,Chicken
+B01838,Soap
+B01838,Sugar
+B01838,Tea
+B01839,Beer
+B01839,Bread
+B01839,Diapers
+B01839,Sardine
+B01839,Tea
+B01840,Garri
+B01840,Groundnut
+B01840,Palm oil
+B01841,Groundnut
+B01841,Palm oil
+B01841,Spaghetti
+B01842,Eggs
+B01842,Milk
+B01842,Spaghetti
+B01843,Palm oil
+B01844,Bread
+B01844,Eggs
+B01845,Diapers
+B01846,Beer
+B01846,Milo
+B01846,Soap
+B01847,Beer
+B01847,Chicken
+B01847,Milo
+B01847,Sugar
+B01848,Baby wipes
+B01848,Beer
+B01848,Diapers
+B01849,Groundnut
+B01849,Sardine
+B01850,Milk
+B01850,Milo
+B01850,Soap
+B01850,Spaghetti
+B01850,Sugar
+B01851,Baby wipes
+B01851,Bread
+B01851,Diapers
+B01851,Garri
+B01851,Spaghetti
+B01852,Baby wipes
+B01852,Diapers
+B01852,Soap
+B01853,Milk
+B01854,Sugar
+B01854,Tea
+B01855,Milk
+B01855,Rice
+B01855,Tomato paste
+B01856,Detergent
+B01856,Groundnut
+B01856,Sardine
+B01856,Sugar
+B01857,Garri
+B01858,Chicken
+B01858,Groundnut
+B01859,Garri
+B01859,Groundnut
+B01859,Sardine
+B01860,Eggs
+B01860,Groundnut
+B01860,Milk
+B01860,Spaghetti
+B01861,Baby wipes
+B01861,Diapers
+B01861,Palm oil
+B01861,Spaghetti
+B01862,Eggs
+B01862,Garri
+B01862,Groundnut
+B01862,Spaghetti
+B01863,Milk
+B01863,Rice
+B01863,Spaghetti
+B01863,Sugar
+B01863,Tomato paste
+B01864,Garri
+B01864,Groundnut
+B01864,Tea
+B01864,Tomato paste
+B01865,Bread
+B01865,Diapers
+B01865,Eggs
+B01865,Milk
+B01866,Bread
+B01866,Eggs
+B01866,Groundnut
+B01866,Palm oil
+B01866,Sugar
+B01867,Beer
+B01867,Milk
+B01867,Milo
+B01868,Diapers
+B01868,Groundnut
+B01868,Milo
+B01869,Groundnut
+B01869,Sardine
+B01870,Beer
+B01870,Eggs
+B01870,Palm oil
+B01870,Rice
+B01870,Tomato paste
+B01871,Baby wipes
+B01871,Palm oil
+B01871,Tea
+B01871,Tomato paste
+B01872,Tea
+B01873,Bread
+B01873,Milk
+B01874,Tea
+B01875,Chicken
+B01875,Milk
+B01875,Rice
+B01875,Sardine
+B01875,Tomato paste
+B01876,Eggs
+B01876,Palm oil
+B01876,Sugar
+B01876,Tomato paste
+B01877,Rice
+B01877,Tomato paste
+B01878,Sugar
+B01879,Detergent
+B01879,Eggs
+B01879,Sugar
+B01880,Beer
+B01880,Palm oil
+B01880,Sardine
+B01880,Sugar
+B01881,Baby wipes
+B01881,Palm oil
+B01881,Rice
+B01881,Tomato paste
+B01882,Milk
+B01882,Palm oil
+B01882,Soap
+B01882,Tea
+B01883,Bread
+B01883,Eggs
+B01883,Rice
+B01883,Tomato paste
+B01884,Eggs
+B01884,Groundnut
+B01884,Sugar
+B01885,Milk
+B01885,Milo
+B01886,Indomie
+B01887,Indomie
+B01888,Indomie
+B01888,Sugar
+B01889,Chicken
+B01889,Eggs
+B01889,Milk
+B01889,Milo
+B01889,Soap
+B01890,Groundnut
+B01890,Milk
+B01890,Milo
+B01890,Sardine
+B01891,Beer
+B01892,Baby wipes
+B01892,Beer
+B01892,Diapers
+B01892,Garri
+B01892,Indomie
+B01893,Chicken
+B01893,Detergent
+B01893,Palm oil
+B01893,Soap
+B01894,Garri
+B01894,Palm oil
+B01895,Garri
+B01895,Groundnut
+B01896,Baby wipes
+B01896,Sugar
+B01897,Chicken
+B01897,Garri
+B01897,Groundnut
+B01897,Palm oil
+B01897,Rice
+B01897,Sugar
+B01897,Tomato paste
+B01898,Baby wipes
+B01899,Baby wipes
+B01899,Diapers
+B01899,Groundnut
+B01900,Sardine
+B01901,Garri
+B01901,Palm oil
+B01901,Sugar
+B01901,Tomato paste
+B01902,Baby wipes
+B01902,Groundnut
+B01902,Palm oil
+B01903,Soap
+B01904,Eggs
+B01905,Detergent
+B01906,Milo
+B01906,Palm oil
+B01906,Sardine
+B01906,Tomato paste
+B01907,Baby wipes
+B01907,Chicken
+B01907,Detergent
+B01908,Baby wipes
+B01908,Beer
+B01908,Diapers
+B01909,Chicken
+B01909,Detergent
+B01909,Eggs
+B01909,Sugar
+B01910,Garri
+B01910,Groundnut
+B01911,Tomato paste
+B01912,Baby wipes
+B01912,Detergent
+B01912,Diapers
+B01912,Milk
+B01912,Milo
+B01913,Detergent
+B01913,Eggs
+B01913,Rice
+B01913,Tomato paste
+B01914,Chicken
+B01915,Eggs
+B01915,Groundnut
+B01915,Sugar
+B01916,Baby wipes
+B01916,Garri
+B01916,Sugar
+B01917,Baby wipes
+B01917,Bread
+B01917,Chicken
+B01917,Diapers
+B01918,Bread
+B01918,Milk
+B01918,Milo
+B01919,Garri
+B01919,Groundnut
+B01919,Palm oil
+B01920,Baby wipes
+B01920,Garri
+B01921,Baby wipes
+B01921,Bread
+B01921,Diapers
+B01921,Groundnut
+B01922,Milo
+B01922,Spaghetti
+B01922,Sugar
+B01923,Indomie
+B01924,Chicken
+B01924,Groundnut
+B01924,Indomie
+B01924,Milk
+B01924,Milo
+B01925,Beer
+B01925,Soap
+B01926,Beer
+B01926,Diapers
+B01926,Milk
+B01926,Milo
+B01927,Eggs
+B01927,Groundnut
+B01927,Milo
+B01928,Chicken
+B01929,Indomie
+B01930,Beer
+B01930,Eggs
+B01930,Groundnut
+B01930,Milk
+B01930,Milo
+B01931,Garri
+B01931,Groundnut
+B01932,Bread
+B01932,Milk
+B01932,Spaghetti
+B01933,Eggs
+B01933,Milo
+B01933,Spaghetti
+B01933,Sugar
+B01933,Tea
+B01934,Bread
+B01934,Chicken
+B01934,Indomie
+B01934,Soap
+B01935,Chicken
+B01935,Garri
+B01935,Groundnut
+B01935,Sardine
+B01935,Sugar
+B01935,Tea
+B01936,Indomie
+B01936,Sugar
+B01937,Groundnut
+B01938,Sardine
+B01939,Eggs
+B01939,Milo
+B01939,Palm oil
+B01940,Milk
+B01940,Milo
+B01940,Palm oil
+B01941,Milk
+B01941,Milo
+B01941,Soap
+B01942,Baby wipes
+B01942,Diapers
+B01943,Eggs
+B01943,Rice
+B01943,Tomato paste
+B01944,Beer
+B01944,Groundnut
+B01944,Indomie
+B01944,Tomato paste
+B01945,Detergent
+B01945,Garri
+B01945,Groundnut
+B01945,Tomato paste
+B01946,Bread
+B01946,Diapers
+B01946,Eggs
+B01947,Baby wipes
+B01947,Beer
+B01947,Diapers
+B01947,Groundnut
+B01948,Chicken
+B01948,Diapers
+B01948,Sardine
+B01948,Sugar
+B01949,Baby wipes
+B01949,Groundnut
+B01949,Sardine
+B01950,Baby wipes
+B01950,Eggs
+B01950,Palm oil
+B01950,Sardine
+B01951,Bread
+B01951,Chicken
+B01951,Eggs
+B01951,Milk
+B01951,Sugar
+B01952,Palm oil
+B01953,Baby wipes
+B01953,Beer
+B01953,Chicken
+B01953,Diapers
+B01953,Indomie
+B01953,Milk
+B01954,Garri
+B01954,Groundnut
+B01954,Sugar
+B01954,Tea
+B01955,Diapers
+B01955,Spaghetti
+B01955,Sugar
+B01955,Tea
+B01956,Baby wipes
+B01956,Beer
+B01956,Diapers
+B01956,Eggs
+B01956,Sugar
+B01957,Baby wipes
+B01957,Diapers
+B01957,Eggs
+B01957,Milk
+B01957,Milo
+B01957,Sugar
+B01958,Milo
+B01958,Tomato paste
+B01959,Garri
+B01959,Groundnut
+B01959,Milo
+B01959,Rice
+B01959,Spaghetti
+B01960,Baby wipes
+B01960,Diapers
+B01961,Soap
+B01962,Detergent
+B01962,Garri
+B01962,Sardine
+B01962,Sugar
+B01963,Eggs
+B01963,Garri
+B01963,Milo
+B01964,Palm oil
+B01964,Spaghetti
+B01965,Rice
+B01966,Baby wipes
+B01966,Palm oil
+B01967,Palm oil
+B01967,Tomato paste
+B01968,Bread
+B01968,Eggs
+B01968,Sugar
+B01968,Tea
+B01969,Sugar
+B01969,Tea
+B01970,Eggs
+B01970,Groundnut
+B01971,Beer
+B01971,Detergent
+B01971,Tomato paste
+B01972,Eggs
+B01972,Garri
+B01972,Groundnut
+B01972,Palm oil
+B01972,Tea
+B01973,Baby wipes
+B01973,Milk
+B01973,Sugar
+B01974,Bread
+B01974,Eggs
+B01974,Tomato paste
+B01975,Beer
+B01975,Diapers
+B01975,Milk
+B01975,Palm oil
+B01976,Detergent
+B01976,Soap
+B01977,Garri
+B01977,Groundnut
+B01977,Milk
+B01977,Palm oil
+B01977,Spaghetti
+B01978,Baby wipes
+B01978,Garri
+B01978,Sugar
+B01978,Tea
+B01979,Sardine
+B01980,Chicken
+B01981,Garri
+B01981,Groundnut
+B01981,Spaghetti
+B01982,Milk
+B01982,Milo
+B01982,Palm oil
+B01982,Sugar
+B01982,Tea
+B01983,Spaghetti
+B01984,Beer
+B01984,Diapers
+B01985,Sardine
+B01985,Spaghetti
+B01986,Detergent
+B01986,Garri
+B01986,Groundnut
+B01986,Indomie
+B01987,Rice
+B01987,Soap
+B01987,Tomato paste
+B01988,Palm oil
+B01988,Sugar
+B01988,Tomato paste
+B01989,Detergent
+B01990,Palm oil
+B01991,Milo
+B01991,Sardine
+B01992,Beer
+B01992,Chicken
+B01992,Diapers
+B01992,Tomato paste
+B01993,Soap
+B01994,Sardine
+B01994,Sugar
+B01994,Tea
+B01994,Tomato paste
+B01995,Detergent
+B01995,Groundnut
+B01996,Baby wipes
+B01996,Beer
+B01996,Diapers
+B01996,Milk
+B01997,Beer
+B01997,Chicken
+B01997,Milk
+B01997,Milo
+B01997,Soap
+B01998,Groundnut
+B01998,Milk
+B01998,Palm oil
+B01998,Soap
+B01999,Baby wipes
+B01999,Spaghetti
+B02000,Chicken
+B02001,Chicken
+B02001,Palm oil
+B02001,Sugar
+B02002,Baby wipes
+B02002,Indomie
+B02003,Spaghetti
+B02004,Baby wipes
+B02004,Chicken
+B02004,Soap
+B02004,Sugar
+B02005,Eggs
+B02005,Spaghetti
+B02006,Baby wipes
+B02006,Beer
+B02006,Diapers
+B02006,Rice
+B02007,Beer
+B02007,Detergent
+B02008,Eggs
+B02008,Milo
+B02009,Sugar
+B02009,Tea
+B02010,Milk
+B02010,Milo
+B02010,Palm oil
+B02011,Baby wipes
+B02011,Diapers
+B02011,Tea
+B02012,Soap
+B02013,Bread
+B02013,Eggs
+B02013,Rice
+B02013,Tomato paste
+B02014,Milk
+B02015,Baby wipes
+B02015,Eggs
+B02016,Baby wipes
+B02017,Baby wipes
+B02017,Spaghetti
+B02018,Indomie
+B02019,Baby wipes
+B02019,Beer
+B02019,Diapers
+B02020,Beer
+B02020,Palm oil
+B02021,Beer
+B02021,Palm oil
+B02021,Rice
+B02021,Sardine
+B02021,Spaghetti
+B02021,Tomato paste
+B02022,Baby wipes
+B02022,Beer
+B02023,Beer
+B02023,Spaghetti
+B02024,Sugar
+B02024,Tea
+B02025,Baby wipes
+B02025,Rice
+B02025,Soap
+B02025,Sugar
+B02025,Tea
+B02026,Spaghetti
+B02027,Chicken
+B02027,Milk
+B02027,Sugar
+B02027,Tea
+B02027,Tomato paste
+B02028,Bread
+B02028,Milo
+B02028,Sugar
+B02029,Indomie
+B02029,Milk
+B02029,Palm oil
+B02029,Sugar
+B02029,Tomato paste
+B02030,Detergent
+B02030,Garri
+B02030,Groundnut
+B02030,Rice
+B02031,Beer
+B02031,Detergent
+B02032,Chicken
+B02032,Groundnut
+B02032,Milk
+B02032,Milo
+B02032,Sugar
+B02033,Indomie
+B02033,Soap
+B02034,Rice
+B02034,Spaghetti
+B02034,Sugar
+B02034,Tea
+B02034,Tomato paste
+B02035,Indomie
+B02035,Soap
+B02036,Garri
+B02036,Groundnut
+B02036,Spaghetti
+B02037,Beer
+B02037,Diapers
+B02038,Spaghetti
+B02038,Tomato paste
+B02039,Detergent
+B02039,Spaghetti
+B02040,Groundnut
+B02041,Baby wipes
+B02041,Sardine
+B02042,Baby wipes
+B02042,Diapers
+B02042,Rice
+B02042,Spaghetti
+B02042,Tomato paste
+B02043,Eggs
+B02043,Garri
+B02043,Rice
+B02043,Tomato paste
+B02044,Garri
+B02044,Groundnut
+B02044,Palm oil
+B02044,Rice
+B02044,Spaghetti
+B02044,Sugar
+B02044,Tea
+B02044,Tomato paste
+B02045,Chicken
+B02045,Milo
+B02045,Spaghetti
+B02045,Sugar
+B02046,Bread
+B02046,Detergent
+B02046,Eggs
+B02047,Eggs
+B02047,Milk
+B02047,Tea
+B02048,Chicken
+B02049,Eggs
+B02049,Groundnut
+B02049,Milk
+B02049,Sugar
+B02050,Soap
+B02051,Baby wipes
+B02051,Beer
+B02051,Diapers
+B02051,Sardine
+B02051,Soap
+B02052,Diapers
+B02052,Palm oil
+B02052,Soap
+B02053,Indomie
+B02053,Milk
+B02053,Palm oil
+B02053,Tea
+B02054,Bread
+B02054,Eggs
+B02054,Sardine
+B02055,Rice
+B02055,Tomato paste
+B02056,Spaghetti
+B02057,Sugar
+B02057,Tea
+B02058,Milk
+B02058,Palm oil
+B02059,Bread
+B02059,Chicken
+B02059,Garri
+B02060,Palm oil
+B02060,Tea
+B02060,Tomato paste
+B02061,Tea
+B02062,Eggs
+B02063,Baby wipes
+B02064,Baby wipes
+B02064,Diapers
+B02064,Eggs
+B02064,Milk
+B02064,Milo
+B02065,Baby wipes
+B02065,Detergent
+B02065,Diapers
+B02065,Milk
+B02065,Tomato paste
+B02066,Chicken
+B02066,Milk
+B02066,Palm oil
+B02066,Tea
+B02067,Sardine
+B02068,Palm oil
+B02069,Bread
+B02069,Eggs
+B02070,Beer
+B02070,Diapers
+B02070,Eggs
+B02070,Palm oil
+B02070,Rice
+B02070,Tomato paste
+B02071,Detergent
+B02071,Spaghetti
+B02071,Sugar
+B02072,Palm oil
+B02072,Rice
+B02072,Spaghetti
+B02072,Tomato paste
+B02073,Indomie
+B02074,Baby wipes
+B02075,Milk
+B02075,Palm oil
+B02076,Palm oil
+B02076,Sardine
+B02076,Sugar
+B02077,Chicken
+B02077,Milk
+B02078,Baby wipes
+B02078,Garri
+B02078,Palm oil
+B02078,Sugar
+B02078,Tea
+B02078,Tomato paste
+B02079,Beer
+B02080,Soap
+B02081,Chicken
+B02081,Detergent
+B02082,Beer
+B02082,Bread
+B02082,Palm oil
+B02083,Indomie
+B02084,Milo
+B02085,Baby wipes
+B02085,Diapers
+B02085,Spaghetti
+B02085,Sugar
+B02086,Baby wipes
+B02086,Chicken
+B02086,Diapers
+B02086,Milk
+B02086,Sugar
+B02087,Sardine
+B02088,Groundnut
+B02088,Milk
+B02088,Rice
+B02089,Eggs
+B02089,Milk
+B02089,Milo
+B02089,Soap
+B02090,Sugar
+B02091,Eggs
+B02092,Milk
+B02093,Beer
+B02093,Groundnut
+B02093,Palm oil
+B02093,Rice
+B02093,Tomato paste
+B02094,Bread
+B02094,Eggs
+B02094,Palm oil
+B02095,Spaghetti
+B02095,Tomato paste
+B02096,Rice
+B02097,Detergent
+B02097,Diapers
+B02098,Palm oil
+B02099,Baby wipes
+B02099,Sardine
+B02099,Tea
+B02100,Baby wipes
+B02100,Sardine
+B02100,Soap
+B02100,Tea
+B02101,Detergent
+B02101,Garri
+B02101,Groundnut
+B02101,Sugar
+B02102,Eggs
+B02102,Soap
+B02102,Tea
+B02103,Baby wipes
+B02103,Diapers
+B02103,Sardine
+B02104,Eggs
+B02104,Milk
+B02104,Milo
+B02105,Beer
+B02105,Groundnut
+B02105,Sugar
+B02105,Tea
+B02105,Tomato paste
+B02106,Indomie
+B02106,Milk
+B02106,Milo
+B02106,Palm oil
+B02107,Baby wipes
+B02107,Milo
+B02107,Spaghetti
+B02108,Tomato paste
+B02109,Chicken
+B02109,Milo
+B02110,Palm oil
+B02111,Baby wipes
+B02111,Diapers
+B02111,Garri
+B02111,Palm oil
+B02111,Sardine
+B02112,Palm oil
+B02112,Soap
+B02113,Baby wipes
+B02113,Diapers
+B02113,Garri
+B02113,Groundnut
+B02114,Bread
+B02114,Diapers
+B02114,Eggs
+B02114,Garri
+B02114,Groundnut
+B02115,Milo
+B02116,Milo
+B02116,Sardine
+B02116,Sugar
+B02116,Tea
+B02117,Sardine
+B02117,Sugar
+B02118,Baby wipes
+B02118,Beer
+B02118,Diapers
+B02118,Soap
+B02118,Tea
+B02119,Garri
+B02120,Detergent
+B02120,Diapers
+B02120,Groundnut
+B02120,Sugar
+B02121,Beer
+B02121,Spaghetti
+B02121,Sugar
+B02122,Baby wipes
+B02122,Diapers
+B02123,Bread
+B02123,Eggs
+B02123,Soap
+B02123,Sugar
+B02124,Bread
+B02124,Eggs
+B02125,Baby wipes
+B02125,Beer
+B02125,Diapers
+B02125,Palm oil
+B02126,Rice
+B02127,Indomie
+B02127,Milk
+B02127,Milo
+B02128,Garri
+B02128,Groundnut
+B02129,Chicken
+B02129,Groundnut
+B02129,Rice
+B02130,Sardine
+B02131,Milk
+B02132,Milo
+B02133,Indomie
+B02133,Milk
+B02133,Sugar
+B02133,Tea
+B02134,Milk
+B02134,Milo
+B02135,Palm oil
+B02135,Sugar
+B02135,Tea
+B02135,Tomato paste
+B02136,Baby wipes
+B02136,Groundnut
+B02136,Indomie
+B02136,Sardine
+B02137,Indomie
+B02137,Sugar
+B02137,Tea
+B02138,Chicken
+B02138,Detergent
+B02138,Indomie
+B02139,Detergent
+B02140,Detergent
+B02141,Detergent
+B02141,Milk
+B02141,Sardine
+B02141,Spaghetti
+B02142,Sugar
+B02143,Baby wipes
+B02143,Detergent
+B02143,Sugar
+B02143,Tea
+B02144,Baby wipes
+B02144,Indomie
+B02144,Tomato paste
+B02145,Baby wipes
+B02145,Detergent
+B02145,Groundnut
+B02146,Baby wipes
+B02146,Chicken
+B02146,Detergent
+B02146,Sardine
+B02147,Beer
+B02147,Bread
+B02147,Detergent
+B02147,Spaghetti
+B02148,Baby wipes
+B02148,Beer
+B02148,Milk
+B02148,Palm oil
+B02149,Garri
+B02149,Groundnut
+B02149,Rice
+B02150,Baby wipes
+B02150,Bread
+B02150,Chicken
+B02150,Eggs
+B02151,Baby wipes
+B02151,Beer
+B02151,Diapers
+B02151,Palm oil
+B02151,Tomato paste
+B02152,Beer
+B02152,Bread
+B02152,Eggs
+B02152,Palm oil
+B02153,Indomie
+B02153,Palm oil
+B02153,Rice
+B02154,Beer
+B02154,Indomie
+B02154,Spaghetti
+B02155,Sugar
+B02155,Tea
+B02156,Chicken
+B02156,Sardine
+B02157,Milk
+B02157,Milo
+B02157,Sugar
+B02158,Baby wipes
+B02158,Chicken
+B02158,Detergent
+B02158,Rice
+B02158,Tomato paste
+B02159,Garri
+B02159,Indomie
+B02159,Rice
+B02159,Sardine
+B02160,Detergent
+B02160,Garri
+B02160,Spaghetti
+B02160,Sugar
+B02161,Beer
+B02161,Garri
+B02161,Indomie
+B02162,Milk
+B02162,Milo
+B02163,Eggs
+B02163,Garri
+B02163,Groundnut
+B02164,Eggs
+B02165,Bread
+B02165,Eggs
+B02165,Groundnut
+B02165,Spaghetti
+B02166,Bread
+B02166,Eggs
+B02166,Milo
+B02167,Beer
+B02167,Eggs
+B02167,Palm oil
+B02167,Sugar
+B02168,Beer
+B02168,Chicken
+B02169,Beer
+B02169,Groundnut
+B02169,Rice
+B02169,Tomato paste
+B02170,Baby wipes
+B02170,Milk
+B02170,Milo
+B02171,Milk
+B02171,Milo
+B02171,Tomato paste
+B02172,Beer
+B02172,Garri
+B02172,Sardine
+B02173,Eggs
+B02173,Palm oil
+B02174,Baby wipes
+B02174,Soap
+B02175,Palm oil
+B02176,Beer
+B02176,Bread
+B02177,Detergent
+B02177,Spaghetti
+B02177,Sugar
+B02178,Chicken
+B02178,Eggs
+B02178,Indomie
+B02179,Chicken
+B02180,Baby wipes
+B02180,Diapers
+B02181,Milk
+B02181,Milo
+B02181,Spaghetti
+B02182,Baby wipes
+B02182,Diapers
+B02182,Garri
+B02182,Groundnut
+B02183,Bread
+B02183,Milo
+B02184,Baby wipes
+B02184,Diapers
+B02184,Milk
+B02184,Milo
+B02184,Spaghetti
+B02185,Garri
+B02185,Rice
+B02186,Beer
+B02186,Diapers
+B02186,Spaghetti
+B02187,Spaghetti
+B02187,Sugar
+B02187,Tea
+B02188,Bread
+B02188,Garri
+B02188,Groundnut
+B02188,Tomato paste
+B02189,Eggs
+B02189,Groundnut
+B02189,Milk
+B02189,Milo
+B02189,Sugar
+B02190,Beer
+B02191,Milk
+B02191,Milo
+B02191,Sardine
+B02192,Chicken
+B02192,Palm oil
+B02192,Rice
+B02192,Tomato paste
+B02193,Sugar
+B02193,Tea
+B02194,Detergent
+B02194,Milk
+B02194,Milo
+B02194,Sugar
+B02195,Tomato paste
+B02196,Chicken
+B02196,Tomato paste
+B02197,Rice
+B02197,Sardine
+B02198,Groundnut
+B02199,Milk
+B02199,Palm oil
+B02199,Tomato paste
+B02200,Garri
+B02200,Groundnut
+B02201,Eggs
+B02201,Groundnut
+B02201,Indomie
+B02201,Rice
+B02202,Bread
+B02202,Eggs
+B02202,Garri
+B02202,Groundnut
+B02202,Sugar
+B02202,Tea
+B02203,Baby wipes
+B02203,Groundnut
+B02204,Diapers
+B02204,Tomato paste
+B02205,Diapers
+B02205,Garri
+B02205,Palm oil
+B02205,Sugar
+B02205,Tea
+B02205,Tomato paste
+B02206,Beer
+B02206,Bread
+B02206,Groundnut
+B02207,Tomato paste
+B02208,Milk
+B02208,Sardine
+B02208,Spaghetti
+B02208,Sugar
+B02208,Tea
+B02209,Baby wipes
+B02209,Beer
+B02209,Eggs
+B02210,Soap
+B02211,Garri
+B02211,Groundnut
+B02211,Milo
+B02211,Spaghetti
+B02211,Tea
+B02212,Tea
+B02213,Bread
+B02213,Eggs
+B02213,Sardine
+B02214,Baby wipes
+B02214,Diapers
+B02215,Eggs
+B02215,Rice
+B02216,Palm oil
+B02217,Chicken
+B02217,Milo
+B02217,Palm oil
+B02218,Beer
+B02218,Detergent
+B02218,Indomie
+B02219,Baby wipes
+B02219,Beer
+B02219,Spaghetti
+B02219,Sugar
+B02220,Detergent
+B02220,Milk
+B02220,Rice
+B02221,Baby wipes
+B02221,Diapers
+B02221,Sugar
+B02222,Milo
+B02222,Sardine
+B02223,Beer
+B02223,Chicken
+B02223,Indomie
+B02223,Sardine
+B02224,Palm oil
+B02225,Garri
+B02225,Groundnut
+B02225,Milk
+B02225,Palm oil
+B02225,Sardine
+B02226,Indomie
+B02226,Milk
+B02226,Palm oil
+B02227,Palm oil
+B02228,Baby wipes
+B02228,Detergent
+B02228,Diapers
+B02229,Garri
+B02230,Groundnut
+B02231,Baby wipes
+B02231,Rice
+B02231,Spaghetti
+B02231,Sugar
+B02231,Tea
+B02232,Bread
+B02232,Eggs
+B02232,Soap
+B02232,Sugar
+B02233,Baby wipes
+B02233,Bread
+B02233,Eggs
+B02233,Sugar
+B02233,Tea
+B02234,Baby wipes
+B02234,Beer
+B02234,Groundnut
+B02234,Sugar
+B02235,Garri
+B02235,Groundnut
+B02236,Chicken
+B02236,Groundnut
+B02236,Palm oil
+B02236,Sugar
+B02236,Tea
+B02237,Sugar
+B02238,Milk
+B02238,Palm oil
+B02239,Palm oil
+B02239,Rice
+B02239,Tomato paste
+B02240,Sardine
+B02240,Soap
+B02240,Spaghetti
+B02241,Beer
+B02242,Baby wipes
+B02242,Detergent
+B02242,Groundnut
+B02242,Spaghetti
+B02243,Bread
+B02243,Soap
+B02244,Indomie
+B02244,Spaghetti
+B02244,Sugar
+B02245,Bread
+B02245,Tea
+B02246,Eggs
+B02246,Garri
+B02246,Groundnut
+B02246,Milk
+B02246,Sugar
+B02246,Tea
+B02247,Eggs
+B02247,Groundnut
+B02247,Soap
+B02248,Palm oil
+B02248,Sugar
+B02248,Tea
+B02249,Milk
+B02250,Baby wipes
+B02250,Diapers
+B02250,Sardine
+B02250,Spaghetti
+B02251,Sugar
+B02251,Tea
+B02252,Groundnut
+B02252,Indomie
+B02253,Diapers
+B02253,Eggs
+B02253,Groundnut
+B02253,Indomie
+B02254,Baby wipes
+B02254,Palm oil
+B02254,Sugar
+B02254,Tea
+B02254,Tomato paste
+B02255,Baby wipes
+B02255,Diapers
+B02255,Sugar
+B02255,Tomato paste
+B02256,Diapers
+B02256,Palm oil
+B02256,Sardine
+B02256,Sugar
+B02257,Chicken
+B02257,Soap
+B02258,Bread
+B02258,Milk
+B02258,Sardine
+B02259,Diapers
+B02259,Spaghetti
+B02260,Palm oil
+B02260,Sardine
+B02260,Sugar
+B02260,Tea
+B02260,Tomato paste
+B02261,Chicken
+B02261,Soap
+B02262,Beer
+B02262,Groundnut
+B02262,Sugar
+B02263,Palm oil
+B02264,Diapers
+B02264,Soap
+B02265,Indomie
+B02265,Palm oil
+B02265,Sugar
+B02265,Tea
+B02266,Baby wipes
+B02266,Bread
+B02266,Eggs
+B02266,Groundnut
+B02267,Soap
+B02268,Beer
+B02268,Milk
+B02268,Milo
+B02268,Sardine
+B02269,Baby wipes
+B02269,Detergent
+B02269,Palm oil
+B02269,Tomato paste
+B02270,Eggs
+B02271,Beer
+B02271,Soap
+B02272,Detergent
+B02272,Garri
+B02273,Baby wipes
+B02274,Baby wipes
+B02274,Bread
+B02274,Eggs
+B02274,Rice
+B02274,Spaghetti
+B02275,Soap
+B02275,Spaghetti
+B02276,Chicken
+B02276,Sardine
+B02277,Beer
+B02277,Indomie
+B02278,Detergent
+B02278,Milk
+B02279,Tomato paste
+B02280,Baby wipes
+B02280,Sugar
+B02281,Milo
+B02281,Palm oil
+B02282,Garri
+B02282,Milk
+B02282,Milo
+B02282,Sardine
+B02282,Sugar
+B02283,Baby wipes
+B02283,Diapers
+B02283,Groundnut
+B02284,Bread
+B02284,Eggs
+B02285,Diapers
+B02285,Eggs
+B02286,Milk
+B02286,Milo
+B02286,Sardine
+B02287,Diapers
+B02287,Rice
+B02288,Baby wipes
+B02288,Chicken
+B02288,Detergent
+B02288,Sardine
+B02289,Bread
+B02289,Eggs
+B02289,Milk
+B02289,Soap
+B02290,Baby wipes
+B02290,Sugar
+B02290,Tea
+B02291,Chicken
+B02291,Palm oil
+B02292,Indomie
+B02293,Eggs
+B02293,Indomie
+B02293,Milk
+B02293,Milo
+B02293,Spaghetti
+B02294,Beer
+B02294,Eggs
+B02294,Palm oil
+B02294,Soap
+B02295,Baby wipes
+B02295,Sardine
+B02295,Tomato paste
+B02296,Garri
+B02296,Groundnut
+B02297,Baby wipes
+B02297,Eggs
+B02297,Soap
+B02298,Baby wipes
+B02298,Chicken
+B02298,Groundnut
+B02298,Soap
+B02299,Bread
+B02299,Eggs
+B02299,Palm oil
+B02299,Sardine
+B02299,Tea
+B02300,Sardine
+B02301,Chicken
+B02301,Detergent
+B02302,Detergent
+B02302,Soap
+B02302,Sugar
+B02303,Baby wipes
+B02303,Chicken
+B02303,Palm oil
+B02303,Sugar
+B02303,Tomato paste
+B02304,Detergent
+B02304,Rice
+B02305,Eggs
+B02306,Detergent
+B02306,Eggs
+B02306,Tea
+B02307,Tomato paste
+B02308,Beer
+B02308,Soap
+B02308,Tea
+B02309,Baby wipes
+B02309,Beer
+B02309,Detergent
+B02309,Rice
+B02309,Tomato paste
+B02310,Baby wipes
+B02310,Detergent
+B02310,Groundnut
+B02311,Beer
+B02312,Baby wipes
+B02313,Baby wipes
+B02313,Chicken
+B02313,Groundnut
+B02314,Sardine
+B02315,Baby wipes
+B02315,Detergent
+B02315,Diapers
+B02315,Palm oil
+B02316,Bread
+B02316,Spaghetti
+B02316,Tea
+B02317,Garri
+B02317,Groundnut
+B02318,Baby wipes
+B02318,Soap
+B02319,Beer
+B02319,Eggs
+B02319,Tea
+B02320,Baby wipes
+B02320,Beer
+B02320,Diapers
+B02320,Rice
+B02320,Soap
+B02321,Groundnut
+B02321,Milk
+B02321,Soap
+B02322,Milk
+B02322,Palm oil
+B02322,Sugar
+B02322,Tea
+B02323,Eggs
+B02323,Groundnut
+B02324,Chicken
+B02324,Tomato paste
+B02325,Sardine
+B02326,Milk
+B02327,Beer
+B02327,Groundnut
+B02327,Spaghetti
+B02327,Sugar
+B02328,Groundnut
+B02328,Soap
+B02329,Soap
+B02329,Spaghetti
+B02330,Indomie
+B02330,Milo
+B02330,Spaghetti
+B02331,Garri
+B02331,Groundnut
+B02331,Sardine
+B02332,Milk
+B02333,Eggs
+B02333,Indomie
+B02333,Spaghetti
+B02334,Garri
+B02334,Spaghetti
+B02334,Sugar
+B02335,Sardine
+B02336,Milk
+B02337,Baby wipes
+B02337,Milk
+B02337,Milo
+B02337,Sugar
+B02337,Tea
+B02338,Sardine
+B02339,Eggs
+B02339,Rice
+B02339,Sardine
+B02339,Tomato paste
+B02340,Detergent
+B02340,Groundnut
+B02340,Indomie
+B02340,Milo
+B02341,Bread
+B02341,Chicken
+B02341,Eggs
+B02341,Soap
+B02341,Spaghetti
+B02342,Garri
+B02342,Groundnut
+B02342,Palm oil
+B02343,Baby wipes
+B02343,Beer
+B02343,Diapers
+B02344,Beer
+B02344,Chicken
+B02344,Rice
+B02345,Groundnut
+B02346,Chicken
+B02346,Eggs
+B02346,Garri
+B02346,Sugar
+B02347,Baby wipes
+B02347,Diapers
+B02347,Indomie
+B02347,Milk
+B02347,Spaghetti
+B02348,Palm oil
+B02348,Tomato paste
+B02349,Garri
+B02349,Milk
+B02349,Sardine
+B02349,Spaghetti
+B02350,Garri
+B02350,Groundnut
+B02350,Milo
+B02351,Chicken
+B02351,Eggs
+B02352,Groundnut
+B02353,Detergent
+B02354,Eggs
+B02354,Indomie
+B02354,Milk
+B02354,Tea
+B02355,Palm oil
+B02355,Spaghetti
+B02355,Tomato paste
+B02356,Groundnut
+B02356,Milk
+B02356,Sugar
+B02356,Tea
+B02356,Tomato paste
+B02357,Rice
+B02358,Beer
+B02358,Eggs
+B02358,Milk
+B02358,Milo
+B02359,Indomie
+B02359,Tea
+B02360,Baby wipes
+B02360,Indomie
+B02360,Palm oil
+B02360,Spaghetti
+B02361,Rice
+B02361,Sugar
+B02361,Tomato paste
+B02362,Baby wipes
+B02362,Beer
+B02362,Diapers
+B02362,Garri
+B02362,Groundnut
+B02363,Baby wipes
+B02363,Bread
+B02363,Detergent
+B02363,Eggs
+B02364,Eggs
+B02364,Garri
+B02364,Groundnut
+B02364,Rice
+B02364,Spaghetti
+B02365,Baby wipes
+B02365,Beer
+B02365,Bread
+B02365,Diapers
+B02365,Milk
+B02365,Palm oil
+B02365,Tomato paste
+B02366,Baby wipes
+B02366,Eggs
+B02366,Milk
+B02366,Milo
+B02366,Tomato paste
+B02367,Milk
+B02368,Chicken
+B02368,Sardine
+B02368,Sugar
+B02368,Tomato paste
+B02369,Detergent
+B02369,Sugar
+B02369,Tea
+B02370,Baby wipes
+B02371,Eggs
+B02371,Milo
+B02372,Palm oil
+B02372,Sugar
+B02373,Baby wipes
+B02373,Diapers
+B02373,Milk
+B02374,Indomie
+B02374,Palm oil
+B02374,Soap
+B02375,Beer
+B02375,Diapers
+B02375,Eggs
+B02375,Garri
+B02375,Milk
+B02375,Milo
+B02376,Eggs
+B02376,Milo
+B02376,Spaghetti
+B02377,Beer
+B02378,Groundnut
+B02378,Palm oil
+B02378,Spaghetti
+B02379,Bread
+B02379,Eggs
+B02379,Milo
+B02380,Chicken
+B02380,Palm oil
+B02380,Sardine
+B02380,Sugar
+B02380,Tea
+B02381,Eggs
+B02381,Milo
+B02381,Palm oil
+B02381,Spaghetti
+B02382,Milk
+B02383,Detergent
+B02383,Sardine
+B02383,Tomato paste
+B02384,Bread
+B02384,Eggs
+B02385,Palm oil
+B02385,Sugar
+B02385,Tea
+B02386,Baby wipes
+B02386,Chicken
+B02387,Beer
+B02387,Chicken
+B02387,Detergent
+B02388,Garri
+B02388,Groundnut
+B02388,Spaghetti
+B02389,Chicken
+B02389,Milk
+B02390,Tomato paste
+B02391,Baby wipes
+B02391,Chicken
+B02392,Eggs
+B02392,Groundnut
+B02392,Tea
+B02393,Chicken
+B02393,Detergent
+B02393,Groundnut
+B02393,Milk
+B02394,Diapers
+B02394,Garri
+B02394,Groundnut
+B02394,Palm oil
+B02394,Soap
+B02394,Tomato paste
+B02395,Spaghetti
+B02396,Milo
+B02397,Palm oil
+B02397,Rice
+B02397,Spaghetti
+B02397,Tomato paste
+B02398,Baby wipes
+B02398,Bread
+B02398,Diapers
+B02398,Eggs
+B02398,Soap
+B02399,Rice
+B02399,Sardine
+B02399,Sugar
+B02399,Tea
+B02399,Tomato paste
+B02400,Garri
+B02400,Groundnut
+B02401,Garri
+B02401,Indomie
+B02401,Sardine
+B02402,Groundnut
+B02402,Milk
+B02402,Rice
+B02402,Sugar
+B02403,Baby wipes
+B02403,Diapers
+B02403,Indomie
+B02403,Rice
+B02403,Spaghetti
+B02404,Bread
+B02404,Eggs
+B02404,Groundnut
+B02405,Detergent
+B02405,Garri
+B02405,Rice
+B02405,Sugar
+B02405,Tea
+B02406,Beer
+B02407,Garri
+B02407,Groundnut
+B02408,Chicken
+B02409,Baby wipes
+B02410,Detergent
+B02410,Rice
+B02410,Soap
+B02410,Sugar
+B02411,Milk
+B02412,Baby wipes
+B02412,Chicken
+B02412,Diapers
+B02413,Soap
+B02414,Bread
+B02414,Eggs
+B02414,Sardine
+B02415,Rice
+B02415,Sardine
+B02415,Spaghetti
+B02415,Sugar
+B02416,Baby wipes
+B02416,Bread
+B02416,Diapers
+B02416,Sugar
+B02416,Tea
+B02417,Eggs
+B02417,Milk
+B02417,Milo
+B02417,Rice
+B02418,Diapers
+B02419,Baby wipes
+B02419,Beer
+B02419,Detergent
+B02420,Baby wipes
+B02420,Diapers
+B02420,Groundnut
+B02421,Eggs
+B02422,Baby wipes
+B02422,Diapers
+B02423,Bread
+B02423,Eggs
+B02423,Milk
+B02423,Sugar
+B02423,Tea
+B02424,Chicken
+B02424,Palm oil
+B02424,Rice
+B02424,Tomato paste
+B02425,Groundnut
+B02426,Eggs
+B02426,Sugar
+B02426,Tomato paste
+B02427,Baby wipes
+B02427,Detergent
+B02427,Milk
+B02427,Milo
+B02427,Sardine
+B02428,Baby wipes
+B02428,Diapers
+B02428,Milk
+B02428,Milo
+B02429,Chicken
+B02429,Soap
+B02430,Palm oil
+B02430,Rice
+B02431,Baby wipes
+B02431,Bread
+B02431,Indomie
+B02431,Soap
+B02432,Baby wipes
+B02432,Milo
+B02432,Spaghetti
+B02433,Bread
+B02433,Eggs
+B02433,Garri
+B02433,Groundnut
+B02433,Spaghetti
+B02433,Tomato paste
+B02434,Beer
+B02434,Garri
+B02434,Groundnut
+B02434,Milo
+B02435,Detergent
+B02435,Indomie
+B02436,Sugar
+B02437,Palm oil
+B02437,Sugar
+B02438,Milk
+B02438,Milo
+B02438,Palm oil
+B02438,Spaghetti
+B02439,Baby wipes
+B02439,Beer
+B02440,Beer
+B02440,Diapers
+B02440,Eggs
+B02440,Soap
+B02440,Sugar
+B02441,Garri
+B02441,Milk
+B02441,Palm oil
+B02441,Tomato paste
+B02442,Beer
+B02443,Baby wipes
+B02443,Beer
+B02443,Diapers
+B02443,Milo
+B02443,Spaghetti
+B02444,Chicken
+B02444,Palm oil
+B02444,Sardine
+B02444,Sugar
+B02444,Tea
+B02444,Tomato paste
+B02445,Garri
+B02446,Bread
+B02446,Milk
+B02447,Bread
+B02447,Eggs
+B02447,Groundnut
+B02447,Rice
+B02447,Sugar
+B02447,Tomato paste
+B02448,Detergent
+B02448,Diapers
+B02448,Rice
+B02448,Sugar
+B02449,Bread
+B02449,Eggs
+B02449,Garri
+B02449,Sardine
+B02450,Milk
+B02451,Spaghetti
+B02452,Bread
+B02452,Eggs
+B02452,Palm oil
+B02452,Rice
+B02452,Soap
+B02452,Tomato paste
+B02453,Milk
+B02454,Bread
+B02454,Detergent
+B02455,Indomie
+B02455,Milk
+B02455,Soap
+B02456,Baby wipes
+B02456,Spaghetti
+B02457,Baby wipes
+B02457,Diapers
+B02457,Sugar
+B02458,Garri
+B02459,Beer
+B02459,Chicken
+B02460,Chicken
+B02461,Palm oil
+B02461,Rice
+B02461,Tomato paste
+B02462,Milk
+B02462,Milo
+B02462,Sugar
+B02463,Indomie
+B02464,Garri
+B02464,Soap
+B02464,Tea
+B02465,Rice
+B02466,Bread
+B02466,Indomie
+B02467,Detergent
+B02467,Soap
+B02468,Baby wipes
+B02468,Sardine
+B02468,Soap
+B02469,Bread
+B02469,Tomato paste
+B02470,Detergent
+B02470,Milk
+B02470,Sugar
+B02471,Beer
+B02471,Palm oil
+B02471,Tomato paste
+B02472,Indomie
+B02473,Soap
+B02473,Sugar
+B02474,Sugar
+B02475,Milo
+B02475,Palm oil
+B02475,Soap
+B02476,Eggs
+B02476,Soap
+B02477,Detergent
+B02477,Soap
+B02478,Baby wipes
+B02478,Eggs
+B02478,Groundnut
+B02479,Baby wipes
+B02479,Indomie
+B02479,Milo
+B02480,Beer
+B02480,Diapers
+B02481,Bread
+B02482,Detergent
+B02482,Indomie
+B02482,Palm oil
+B02482,Spaghetti
+B02482,Tomato paste
+B02483,Detergent
+B02483,Soap
+B02483,Spaghetti
+B02483,Sugar
+B02484,Bread
+B02484,Eggs
+B02484,Sardine
+B02484,Sugar
+B02485,Baby wipes
+B02485,Chicken
+B02485,Diapers
+B02485,Sardine
+B02485,Tomato paste
+B02486,Baby wipes
+B02486,Bread
+B02486,Diapers
+B02486,Eggs
+B02486,Milo
+B02486,Soap
+B02487,Milk
+B02487,Milo
+B02487,Spaghetti
+B02488,Baby wipes
+B02488,Sugar
+B02489,Tea
+B02490,Beer
+B02490,Milo
+B02491,Chicken
+B02491,Garri
+B02491,Groundnut
+B02491,Indomie
+B02492,Groundnut
+B02492,Tomato paste
+B02493,Milk
+B02493,Milo
+B02494,Diapers
+B02494,Soap
+B02494,Spaghetti
+B02494,Sugar
+B02494,Tea
+B02495,Bread
+B02495,Eggs
+B02495,Milk
+B02495,Spaghetti
+B02496,Sugar
+B02497,Bread
+B02497,Detergent
+B02497,Eggs
+B02497,Milk
+B02497,Sardine
+B02498,Beer
+B02498,Eggs
+B02498,Groundnut
+B02498,Sugar
+B02498,Tea
+B02499,Baby wipes
+B02499,Diapers
+B02499,Eggs
+B02499,Milk
+B02499,Spaghetti
+B02500,Beer
+B02500,Eggs
+B02500,Garri
+B02500,Indomie
+B02501,Baby wipes
+B02501,Chicken
+B02502,Indomie
+B02503,Chicken
+B02503,Detergent
+B02504,Baby wipes
+B02504,Detergent
+B02505,Beer
+B02505,Indomie
+B02505,Soap
+B02506,Groundnut
+B02506,Sardine
+B02507,Baby wipes
+B02507,Beer
+B02507,Diapers
+B02507,Eggs
+B02507,Indomie
+B02508,Eggs
+B02508,Spaghetti
+B02509,Baby wipes
+B02509,Beer
+B02509,Diapers
+B02509,Milo
+B02510,Baby wipes
+B02510,Soap
+B02510,Sugar
+B02511,Bread
+B02511,Eggs
+B02511,Milk
+B02512,Detergent
+B02513,Chicken
+B02514,Garri
+B02514,Sardine
+B02514,Sugar
+B02514,Tea
+B02515,Baby wipes
+B02515,Beer
+B02515,Bread
+B02515,Diapers
+B02515,Eggs
+B02515,Soap
+B02516,Beer
+B02516,Diapers
+B02516,Eggs
+B02516,Tomato paste
+B02517,Baby wipes
+B02517,Milk
+B02517,Milo
+B02517,Palm oil
+B02517,Tomato paste
+B02518,Chicken
+B02518,Sardine
+B02519,Beer
+B02519,Sugar
+B02520,Bread
+B02520,Eggs
+B02520,Garri
+B02520,Sugar
+B02521,Chicken
+B02522,Baby wipes
+B02522,Palm oil
+B02522,Sugar
+B02523,Garri
+B02523,Sardine
+B02523,Tea
+B02524,Detergent
+B02524,Milo
+B02525,Beer
+B02525,Chicken
+B02525,Diapers
+B02525,Garri
+B02525,Groundnut
+B02526,Bread
+B02526,Chicken
+B02526,Palm oil
+B02527,Eggs
+B02527,Palm oil
+B02527,Rice
+B02527,Sugar
+B02527,Tomato paste
+B02528,Baby wipes
+B02528,Garri
+B02528,Groundnut
+B02529,Eggs
+B02529,Garri
+B02530,Baby wipes
+B02530,Beer
+B02530,Chicken
+B02530,Sugar
+B02530,Tea
+B02531,Baby wipes
+B02531,Chicken
+B02531,Diapers
+B02532,Baby wipes
+B02532,Detergent
+B02532,Garri
+B02532,Groundnut
+B02532,Indomie
+B02533,Bread
+B02533,Eggs
+B02533,Soap
+B02533,Sugar
+B02534,Baby wipes
+B02534,Chicken
+B02534,Diapers
+B02534,Sugar
+B02535,Diapers
+B02535,Eggs
+B02535,Groundnut
+B02535,Tomato paste
+B02536,Baby wipes
+B02536,Beer
+B02536,Chicken
+B02536,Detergent
+B02536,Diapers
+B02536,Palm oil
+B02537,Bread
+B02537,Groundnut
+B02537,Palm oil
+B02537,Sugar
+B02537,Tomato paste
+B02538,Spaghetti
+B02538,Sugar
+B02538,Tea
+B02539,Baby wipes
+B02539,Beer
+B02539,Diapers
+B02539,Palm oil
+B02539,Tomato paste
+B02540,Tea
+B02541,Baby wipes
+B02541,Beer
+B02541,Bread
+B02541,Diapers
+B02541,Eggs
+B02541,Rice
+B02541,Tomato paste
+B02542,Chicken
+B02542,Detergent
+B02542,Sugar
+B02542,Tea
+B02543,Bread
+B02543,Eggs
+B02543,Garri
+B02543,Groundnut
+B02543,Palm oil
+B02543,Rice
+B02543,Soap
+B02543,Tomato paste
+B02544,Beer
+B02544,Eggs
+B02544,Indomie
+B02544,Milk
+B02544,Milo
+B02545,Beer
+B02545,Eggs
+B02545,Spaghetti
+B02545,Sugar
+B02546,Baby wipes
+B02546,Beer
+B02546,Palm oil
+B02546,Spaghetti
+B02547,Palm oil
+B02548,Beer
+B02548,Detergent
+B02548,Milk
+B02548,Milo
+B02548,Tomato paste
+B02549,Beer
+B02549,Spaghetti
+B02549,Sugar
+B02549,Tea
+B02550,Sardine
+B02550,Sugar
+B02550,Tea
+B02550,Tomato paste
+B02551,Chicken
+B02551,Eggs
+B02551,Milk
+B02552,Baby wipes
+B02552,Bread
+B02552,Diapers
+B02553,Groundnut
+B02553,Rice
+B02553,Spaghetti
+B02553,Sugar
+B02554,Bread
+B02554,Indomie
+B02554,Sardine
+B02555,Beer
+B02556,Baby wipes
+B02557,Bread
+B02557,Eggs
+B02557,Spaghetti
+B02558,Baby wipes
+B02558,Beer
+B02558,Diapers
+B02558,Eggs
+B02558,Groundnut
+B02559,Groundnut
+B02560,Baby wipes
+B02560,Chicken
+B02560,Eggs
+B02560,Milk
+B02561,Sardine
+B02562,Milo
+B02563,Indomie
+B02563,Milk
+B02564,Beer
+B02565,Garri
+B02566,Beer
+B02566,Milk
+B02566,Milo
+B02566,Rice
+B02566,Tomato paste
+B02567,Milk
+B02567,Milo
+B02567,Spaghetti
+B02567,Sugar
+B02568,Groundnut
+B02569,Beer
+B02569,Sugar
+B02569,Tea
+B02569,Tomato paste
+B02570,Eggs
+B02570,Palm oil
+B02570,Spaghetti
+B02570,Tea
+B02571,Detergent
+B02571,Rice
+B02571,Soap
+B02572,Milk
+B02572,Milo
+B02572,Palm oil
+B02572,Spaghetti
+B02573,Baby wipes
+B02573,Beer
+B02573,Diapers
+B02573,Palm oil
+B02573,Spaghetti
+B02574,Rice
+B02574,Sugar
+B02575,Groundnut
+B02575,Milk
+B02575,Palm oil
+B02575,Tomato paste
+B02576,Chicken
+B02576,Garri
+B02576,Milo
+B02576,Rice
+B02577,Detergent
+B02577,Palm oil
+B02577,Rice
+B02577,Sugar
+B02577,Tomato paste
+B02578,Bread
+B02578,Garri
+B02578,Groundnut
+B02578,Rice
+B02578,Tomato paste
+B02579,Eggs
+B02580,Sardine
+B02581,Bread
+B02581,Eggs
+B02582,Bread
+B02582,Eggs
+B02582,Rice
+B02582,Spaghetti
+B02583,Baby wipes
+B02583,Rice
+B02583,Spaghetti
+B02583,Tomato paste
+B02584,Detergent
+B02584,Palm oil
+B02585,Baby wipes
+B02585,Chicken
+B02585,Detergent
+B02585,Diapers
+B02585,Eggs
+B02586,Indomie
+B02587,Baby wipes
+B02587,Detergent
+B02587,Diapers
+B02587,Groundnut
+B02588,Beer
+B02588,Chicken
+B02588,Milk
+B02588,Palm oil
+B02589,Beer
+B02589,Indomie
+B02589,Spaghetti
+B02590,Diapers
+B02591,Eggs
+B02591,Palm oil
+B02591,Tomato paste
+B02592,Detergent
+B02593,Groundnut
+B02593,Sardine
+B02593,Spaghetti
+B02593,Sugar
+B02594,Bread
+B02594,Detergent
+B02594,Eggs
+B02594,Groundnut
+B02594,Milo
+B02595,Eggs
+B02595,Soap
+B02596,Bread
+B02596,Eggs
+B02596,Tomato paste
+B02597,Baby wipes
+B02597,Palm oil
+B02597,Spaghetti
+B02597,Tomato paste
+B02598,Beer
+B02598,Eggs
+B02598,Garri
+B02598,Milk
+B02599,Garri
+B02599,Groundnut
+B02599,Milk
+B02599,Palm oil
+B02599,Rice
+B02600,Baby wipes
+B02600,Chicken
+B02600,Detergent
+B02600,Diapers
+B02600,Groundnut
+B02601,Groundnut
+B02601,Indomie
+B02601,Soap
+B02601,Sugar
+B02601,Tea
+B02602,Bread
+B02602,Groundnut
+B02602,Tea
+B02603,Baby wipes
+B02603,Palm oil
+B02603,Rice
+B02603,Tomato paste
+B02604,Diapers
+B02604,Sugar
+B02605,Detergent
+B02605,Garri
+B02605,Groundnut
+B02605,Palm oil
+B02606,Baby wipes
+B02606,Beer
+B02606,Diapers
+B02607,Beer
+B02608,Milk
+B02608,Milo
+B02608,Tea
+B02609,Beer
+B02609,Sugar
+B02610,Chicken
+B02610,Milk
+B02610,Palm oil
+B02610,Sardine
+B02610,Tomato paste
+B02611,Baby wipes
+B02611,Beer
+B02611,Diapers
+B02611,Palm oil
+B02611,Tomato paste
+B02612,Baby wipes
+B02612,Beer
+B02612,Diapers
+B02612,Sugar
+B02612,Tea
+B02613,Beer
+B02613,Detergent
+B02613,Eggs
+B02614,Detergent
+B02614,Milk
+B02614,Milo
+B02614,Soap
+B02615,Baby wipes
+B02615,Diapers
+B02615,Groundnut
+B02615,Milk
+B02616,Beer
+B02617,Palm oil
+B02618,Indomie
+B02618,Milk
+B02618,Spaghetti
+B02619,Baby wipes
+B02619,Indomie
+B02619,Milk
+B02620,Milo
+B02620,Soap
+B02620,Tea
+B02621,Groundnut
+B02621,Sugar
+B02621,Tea
+B02622,Garri
+B02622,Milo
+B02622,Soap
+B02623,Baby wipes
+B02623,Diapers
+B02623,Garri
+B02623,Groundnut
+B02624,Baby wipes
+B02624,Chicken
+B02624,Milk
+B02624,Soap
+B02625,Palm oil
+B02625,Tomato paste
+B02626,Beer
+B02626,Groundnut
+B02626,Sardine
+B02626,Sugar
+B02626,Tea
+B02627,Eggs
+B02627,Rice
+B02627,Tomato paste
+B02628,Detergent
+B02628,Tomato paste
+B02629,Chicken
+B02629,Rice
+B02630,Baby wipes
+B02630,Diapers
+B02630,Eggs
+B02631,Sardine
+B02631,Sugar
+B02632,Sugar
+B02633,Beer
+B02633,Bread
+B02633,Eggs
+B02633,Milk
+B02633,Milo
+B02634,Soap
+B02635,Beer
+B02635,Diapers
+B02635,Palm oil
+B02635,Tea
+B02635,Tomato paste
+B02636,Sugar
+B02636,Tea
+B02637,Baby wipes
+B02637,Palm oil
+B02637,Sugar
+B02637,Tomato paste
+B02638,Tomato paste
+B02639,Bread
+B02639,Milo
+B02640,Bread
+B02640,Eggs
+B02640,Milo
+B02640,Palm oil
+B02640,Soap
+B02640,Tomato paste
+B02641,Eggs
+B02642,Diapers
+B02642,Eggs
+B02642,Garri
+B02642,Groundnut
+B02642,Soap
+B02643,Bread
+B02643,Eggs
+B02643,Garri
+B02643,Groundnut
+B02643,Milk
+B02644,Eggs
+B02644,Garri
+B02644,Palm oil
+B02644,Tomato paste
+B02645,Bread
+B02645,Garri
+B02645,Soap
+B02645,Sugar
+B02646,Palm oil
+B02647,Baby wipes
+B02648,Baby wipes
+B02648,Palm oil
+B02648,Sardine
+B02649,Bread
+B02649,Eggs
+B02649,Milk
+B02649,Palm oil
+B02649,Spaghetti
+B02650,Chicken
+B02650,Tea
+B02651,Baby wipes
+B02651,Diapers
+B02651,Indomie
+B02651,Sugar
+B02651,Tea
+B02652,Beer
+B02653,Chicken
+B02653,Indomie
+B02653,Palm oil
+B02653,Tomato paste
+B02654,Sardine
+B02655,Baby wipes
+B02655,Beer
+B02655,Diapers
+B02656,Baby wipes
+B02656,Bread
+B02656,Eggs
+B02656,Sugar
+B02656,Tea
+B02657,Spaghetti
+B02658,Bread
+B02658,Chicken
+B02658,Indomie
+B02658,Soap
+B02659,Eggs
+B02659,Milk
+B02659,Sardine
+B02660,Baby wipes
+B02660,Diapers
+B02660,Eggs
+B02660,Palm oil
+B02660,Sugar
+B02661,Bread
+B02661,Indomie
+B02661,Tomato paste
+B02662,Beer
+B02662,Milk
+B02663,Beer
+B02663,Sardine
+B02663,Sugar
+B02664,Diapers
+B02664,Eggs
+B02664,Sugar
+B02665,Baby wipes
+B02665,Soap
+B02665,Sugar
+B02665,Tea
+B02666,Baby wipes
+B02666,Beer
+B02666,Diapers
+B02667,Diapers
+B02667,Palm oil
+B02667,Sugar
+B02667,Tea
+B02668,Garri
+B02668,Groundnut
+B02668,Indomie
+B02668,Palm oil
+B02668,Rice
+B02668,Tomato paste
+B02669,Baby wipes
+B02669,Groundnut
+B02670,Milk
+B02670,Milo
+B02671,Bread
+B02671,Detergent
+B02671,Eggs
+B02671,Garri
+B02672,Baby wipes
+B02672,Chicken
+B02672,Diapers
+B02672,Eggs
+B02673,Beer
+B02673,Chicken
+B02673,Sardine
+B02674,Sugar
+B02674,Tea
+B02675,Bread
+B02675,Indomie
+B02676,Chicken
+B02676,Rice
+B02676,Soap
+B02677,Beer
+B02677,Bread
+B02677,Indomie
+B02677,Palm oil
+B02678,Indomie
+B02679,Bread
+B02679,Rice
+B02679,Sardine
+B02679,Spaghetti
+B02679,Tomato paste
+B02680,Bread
+B02680,Palm oil
+B02680,Rice
+B02680,Spaghetti
+B02681,Diapers
+B02681,Eggs
+B02681,Milk
+B02681,Milo
+B02681,Rice
+B02681,Tomato paste
+B02682,Baby wipes
+B02682,Beer
+B02682,Diapers
+B02682,Milk
+B02682,Milo
+B02682,Spaghetti
+B02683,Rice
+B02683,Sugar
+B02683,Tea
+B02684,Soap
+B02685,Bread
+B02685,Eggs
+B02685,Garri
+B02685,Spaghetti
+B02686,Rice
+B02687,Tomato paste
+B02688,Palm oil
+B02688,Rice
+B02688,Tomato paste
+B02689,Sardine
+B02690,Soap
+B02691,Chicken
+B02691,Eggs
+B02691,Palm oil
+B02691,Rice
+B02691,Sugar
+B02691,Tomato paste
+B02692,Bread
+B02692,Detergent
+B02692,Eggs
+B02692,Sardine
+B02692,Sugar
+B02693,Milk
+B02693,Palm oil
+B02693,Sardine
+B02693,Spaghetti
+B02693,Tomato paste
+B02694,Milk
+B02694,Soap
+B02695,Eggs
+B02696,Bread
+B02696,Garri
+B02696,Groundnut
+B02696,Indomie
+B02696,Tomato paste
+B02697,Garri
+B02697,Groundnut
+B02697,Milk
+B02697,Tomato paste
+B02698,Sugar
+B02699,Baby wipes
+B02699,Beer
+B02699,Diapers
+B02699,Garri
+B02699,Palm oil
+B02700,Rice
+B02701,Milo
+B02701,Sugar
+B02701,Tea
+B02702,Indomie
+B02702,Milk
+B02702,Soap
+B02703,Bread
+B02703,Soap
+B02703,Spaghetti
+B02703,Tea
+B02704,Beer
+B02705,Groundnut
+B02705,Indomie
+B02706,Baby wipes
+B02706,Chicken
+B02706,Detergent
+B02707,Beer
+B02707,Chicken
+B02707,Milk
+B02707,Spaghetti
+B02708,Eggs
+B02708,Milk
+B02708,Soap
+B02709,Detergent
+B02710,Indomie
+B02710,Sugar
+B02710,Tomato paste
+B02711,Baby wipes
+B02711,Detergent
+B02711,Diapers
+B02711,Indomie
+B02711,Soap
+B02712,Baby wipes
+B02712,Diapers
+B02713,Baby wipes
+B02713,Diapers
+B02714,Chicken
+B02714,Detergent
+B02714,Spaghetti
+B02715,Milo
+B02715,Sardine
+B02715,Sugar
+B02715,Tea
+B02716,Chicken
+B02716,Eggs
+B02716,Sardine
+B02716,Sugar
+B02716,Tea
+B02717,Spaghetti
+B02718,Detergent
+B02718,Palm oil
+B02718,Soap
+B02719,Sugar
+B02720,Groundnut
+B02721,Groundnut
+B02721,Soap
+B02722,Sugar
+B02723,Garri
+B02723,Sugar
+B02724,Beer
+B02725,Palm oil
+B02725,Sugar
+B02725,Tea
+B02726,Groundnut
+B02726,Palm oil
+B02726,Tomato paste
+B02727,Chicken
+B02727,Milk
+B02727,Milo
+B02727,Spaghetti
+B02728,Detergent
+B02728,Sugar
+B02728,Tea
+B02729,Indomie
+B02730,Garri
+B02730,Palm oil
+B02731,Beer
+B02731,Eggs
+B02731,Groundnut
+B02731,Palm oil
+B02732,Baby wipes
+B02732,Detergent
+B02732,Palm oil
+B02732,Tomato paste
+B02733,Rice
+B02734,Eggs
+B02734,Sardine
+B02735,Chicken
+B02735,Eggs
+B02735,Palm oil
+B02736,Baby wipes
+B02736,Diapers
+B02737,Tomato paste
+B02738,Detergent
+B02738,Garri
+B02738,Groundnut
+B02739,Beer
+B02740,Detergent
+B02740,Rice
+B02740,Tomato paste
+B02741,Groundnut
+B02741,Palm oil
+B02741,Soap
+B02741,Sugar
+B02742,Palm oil
+B02743,Baby wipes
+B02743,Sardine
+B02744,Garri
+B02744,Soap
+B02745,Beer
+B02745,Tomato paste
+B02746,Milk
+B02746,Milo
+B02747,Chicken
+B02747,Sardine
+B02747,Soap
+B02748,Chicken
+B02748,Detergent
+B02748,Rice
+B02748,Sardine
+B02749,Baby wipes
+B02749,Beer
+B02749,Diapers
+B02749,Milk
+B02749,Milo
+B02750,Milk
+B02751,Tomato paste
+B02752,Sardine
+B02753,Beer
+B02753,Diapers
+B02753,Palm oil
+B02753,Rice
+B02753,Tomato paste
+B02754,Groundnut
+B02754,Sugar
+B02754,Tea
+B02755,Baby wipes
+B02755,Bread
+B02755,Diapers
+B02755,Eggs
+B02755,Milk
+B02755,Milo
+B02756,Beer
+B02756,Eggs
+B02756,Palm oil
+B02756,Rice
+B02756,Tomato paste
+B02757,Detergent
+B02757,Palm oil
+B02757,Sardine
+B02757,Tomato paste
+B02758,Eggs
+B02758,Garri
+B02758,Milk
+B02758,Milo
+B02759,Baby wipes
+B02759,Diapers
+B02759,Eggs
+B02759,Palm oil
+B02759,Rice
+B02759,Tomato paste
+B02760,Sugar
+B02761,Garri
+B02761,Groundnut
+B02761,Sardine
+B02762,Bread
+B02762,Chicken
+B02762,Eggs
+B02763,Baby wipes
+B02763,Diapers
+B02764,Sugar
+B02764,Tea
+B02765,Eggs
+B02765,Palm oil
+B02765,Sardine
+B02766,Chicken
+B02766,Milk
+B02767,Sugar
+B02768,Bread
+B02768,Detergent
+B02768,Groundnut
+B02768,Sardine
+B02769,Beer
+B02770,Detergent
+B02770,Garri
+B02770,Groundnut
+B02770,Soap
+B02770,Tea
+B02771,Palm oil
+B02771,Tomato paste
+B02772,Beer
+B02772,Detergent
+B02772,Eggs
+B02773,Eggs
+B02773,Milo
+B02774,Indomie
+B02775,Beer
+B02775,Bread
+B02775,Eggs
+B02775,Soap
+B02775,Spaghetti
+B02776,Baby wipes
+B02776,Beer
+B02776,Diapers
+B02776,Palm oil
+B02776,Sugar
+B02776,Tea
+B02777,Beer
+B02777,Diapers
+B02777,Eggs
+B02777,Milk
+B02778,Baby wipes
+B02778,Palm oil
+B02778,Sugar
+B02778,Tea
+B02779,Sardine
+B02779,Tomato paste
+B02780,Groundnut
+B02781,Baby wipes
+B02781,Diapers
+B02781,Eggs
+B02781,Sugar
+B02782,Bread
+B02782,Chicken
+B02782,Eggs
+B02782,Spaghetti
+B02782,Sugar
+B02783,Baby wipes
+B02783,Indomie
+B02783,Sardine
+B02784,Baby wipes
+B02784,Bread
+B02784,Diapers
+B02784,Eggs
+B02784,Soap
+B02785,Beer
+B02786,Detergent
+B02786,Palm oil
+B02787,Baby wipes
+B02787,Chicken
+B02787,Diapers
+B02787,Indomie
+B02788,Baby wipes
+B02788,Beer
+B02788,Diapers
+B02788,Garri
+B02789,Beer
+B02789,Groundnut
+B02789,Milk
+B02789,Milo
+B02789,Palm oil
+B02790,Baby wipes
+B02790,Beer
+B02790,Chicken
+B02790,Diapers
+B02791,Garri
+B02791,Groundnut
+B02791,Rice
+B02791,Sugar
+B02791,Tea
+B02792,Bread
+B02792,Detergent
+B02792,Garri
+B02793,Bread
+B02793,Eggs
+B02793,Groundnut
+B02794,Baby wipes
+B02794,Diapers
+B02794,Palm oil
+B02794,Sardine
+B02794,Tomato paste
+B02795,Eggs
+B02795,Soap
+B02795,Sugar
+B02795,Tea
+B02796,Beer
+B02796,Palm oil
+B02797,Palm oil
+B02797,Soap
+B02797,Sugar
+B02798,Groundnut
+B02798,Palm oil
+B02798,Rice
+B02798,Sugar
+B02798,Tomato paste
+B02799,Milk
+B02799,Palm oil
+B02799,Soap
+B02800,Chicken
+B02800,Garri
+B02800,Milk
+B02800,Spaghetti
+B02801,Baby wipes
+B02801,Diapers
+B02801,Rice
+B02802,Tomato paste
+B02803,Baby wipes
+B02803,Beer
+B02803,Chicken
+B02803,Diapers
+B02804,Beer
+B02804,Diapers
+B02804,Sardine
+B02805,Groundnut
+B02806,Baby wipes
+B02806,Diapers
+B02806,Groundnut
+B02807,Eggs
+B02807,Palm oil
+B02808,Baby wipes
+B02809,Bread
+B02809,Eggs
+B02809,Soap
+B02810,Baby wipes
+B02810,Chicken
+B02810,Sardine
+B02811,Bread
+B02811,Detergent
+B02811,Eggs
+B02811,Milk
+B02811,Sardine
+B02812,Beer
+B02812,Chicken
+B02813,Baby wipes
+B02813,Diapers
+B02813,Tea
+B02814,Garri
+B02814,Groundnut
+B02814,Palm oil
+B02814,Soap
+B02814,Sugar
+B02815,Beer
+B02815,Diapers
+B02815,Garri
+B02815,Groundnut
+B02815,Sugar
+B02816,Bread
+B02816,Milk
+B02816,Sardine
+B02816,Tea
+B02817,Garri
+B02817,Indomie
+B02818,Tomato paste
+B02819,Garri
+B02819,Rice
+B02819,Tomato paste
+B02820,Soap
+B02820,Spaghetti
+B02821,Baby wipes
+B02821,Bread
+B02821,Diapers
+B02821,Eggs
+B02821,Palm oil
+B02822,Chicken
+B02822,Eggs
+B02822,Palm oil
+B02822,Sugar
+B02823,Palm oil
+B02824,Beer
+B02824,Palm oil
+B02825,Bread
+B02825,Detergent
+B02825,Sardine
+B02825,Sugar
+B02826,Baby wipes
+B02826,Bread
+B02826,Palm oil
+B02826,Soap
+B02827,Beer
+B02827,Groundnut
+B02828,Beer
+B02828,Groundnut
+B02828,Tomato paste
+B02829,Baby wipes
+B02829,Garri
+B02829,Rice
+B02829,Tea
+B02830,Baby wipes
+B02830,Chicken
+B02830,Sardine
+B02831,Chicken
+B02831,Eggs
+B02832,Beer
+B02832,Eggs
+B02832,Sugar
+B02832,Tea
+B02833,Bread
+B02833,Eggs
+B02833,Milk
+B02833,Milo
+B02833,Sugar
+B02833,Tea
+B02834,Baby wipes
+B02834,Bread
+B02834,Diapers
+B02834,Eggs
+B02834,Garri
+B02834,Soap
+B02835,Baby wipes
+B02835,Beer
+B02835,Bread
+B02835,Diapers
+B02835,Eggs
+B02836,Sugar
+B02837,Groundnut
+B02837,Indomie
+B02837,Sugar
+B02838,Indomie
+B02838,Palm oil
+B02838,Sugar
+B02838,Tea
+B02839,Baby wipes
+B02840,Garri
+B02840,Sardine
+B02841,Garri
+B02841,Indomie
+B02841,Milo
+B02842,Milo
+B02842,Palm oil
+B02842,Soap
+B02842,Sugar
+B02843,Baby wipes
+B02843,Beer
+B02843,Sugar
+B02844,Sugar
+B02845,Chicken
+B02845,Groundnut
+B02846,Eggs
+B02846,Garri
+B02846,Milo
+B02846,Spaghetti
+B02847,Indomie
+B02847,Tomato paste
+B02848,Chicken
+B02848,Milk
+B02848,Milo
+B02848,Sugar
+B02849,Chicken
+B02850,Sugar
+B02851,Chicken
+B02851,Sardine
+B02851,Sugar
+B02851,Tea
+B02852,Eggs
+B02853,Baby wipes
+B02853,Bread
+B02853,Chicken
+B02853,Detergent
+B02853,Diapers
+B02853,Eggs
+B02854,Chicken
+B02854,Eggs
+B02854,Sardine
+B02855,Baby wipes
+B02855,Eggs
+B02855,Rice
+B02855,Sardine
+B02855,Tomato paste
+B02856,Baby wipes
+B02857,Baby wipes
+B02857,Bread
+B02857,Sugar
+B02858,Eggs
+B02858,Milk
+B02859,Rice
+B02859,Sardine
+B02859,Spaghetti
+B02859,Sugar
+B02859,Tomato paste
+B02860,Groundnut
+B02861,Beer
+B02861,Chicken
+B02861,Garri
+B02862,Baby wipes
+B02862,Garri
+B02862,Indomie
+B02862,Rice
+B02862,Tomato paste
+B02863,Baby wipes
+B02863,Beer
+B02863,Diapers
+B02864,Baby wipes
+B02864,Tea
+B02865,Eggs
+B02865,Garri
+B02865,Groundnut
+B02865,Sardine
+B02866,Garri
+B02866,Indomie
+B02866,Sugar
+B02867,Garri
+B02867,Milk
+B02867,Milo
+B02868,Baby wipes
+B02868,Chicken
+B02868,Groundnut
+B02869,Bread
+B02869,Detergent
+B02869,Sardine
+B02869,Sugar
+B02869,Tea
+B02870,Groundnut
+B02871,Baby wipes
+B02871,Beer
+B02871,Chicken
+B02871,Diapers
+B02871,Rice
+B02871,Tomato paste
+B02872,Baby wipes
+B02872,Beer
+B02872,Detergent
+B02872,Diapers
+B02872,Garri
+B02872,Groundnut
+B02873,Beer
+B02873,Groundnut
+B02874,Baby wipes
+B02874,Eggs
+B02874,Garri
+B02874,Milk
+B02875,Indomie
+B02875,Milk
+B02875,Milo
+B02876,Groundnut
+B02876,Milk
+B02876,Milo
+B02876,Sugar
+B02876,Tea
+B02877,Baby wipes
+B02877,Beer
+B02877,Diapers
+B02877,Indomie
+B02878,Detergent
+B02878,Sardine
+B02879,Bread
+B02879,Eggs
+B02879,Soap
+B02880,Detergent
+B02880,Soap
+B02881,Bread
+B02881,Eggs
+B02881,Indomie
+B02882,Baby wipes
+B02882,Bread
+B02882,Diapers
+B02882,Eggs
+B02883,Garri
+B02884,Bread
+B02884,Palm oil
+B02885,Diapers
+B02885,Milk
+B02885,Sardine
+B02886,Baby wipes
+B02886,Garri
+B02886,Groundnut
+B02886,Milk
+B02886,Milo
+B02886,Sugar
+B02887,Milk
+B02888,Sardine
+B02889,Chicken
+B02890,Bread
+B02890,Rice
+B02890,Soap
+B02890,Tomato paste
+B02891,Bread
+B02891,Detergent
+B02891,Eggs
+B02891,Groundnut
+B02892,Baby wipes
+B02892,Diapers
+B02892,Milk
+B02892,Milo
+B02892,Palm oil
+B02893,Diapers
+B02893,Palm oil
+B02894,Beer
+B02894,Bread
+B02894,Eggs
+B02895,Baby wipes
+B02895,Milk
+B02895,Milo
+B02896,Baby wipes
+B02896,Palm oil
+B02897,Detergent
+B02898,Baby wipes
+B02898,Beer
+B02898,Milk
+B02898,Soap
+B02899,Baby wipes
+B02899,Diapers
+B02899,Eggs
+B02899,Rice
+B02899,Sardine
+B02899,Tomato paste
+B02900,Detergent
+B02900,Eggs
+B02900,Palm oil
+B02900,Spaghetti
+B02900,Tomato paste
+B02901,Milk
+B02901,Soap
+B02902,Bread
+B02902,Diapers
+B02902,Eggs
+B02902,Sugar
+B02902,Tea
+B02903,Rice
+B02904,Bread
+B02904,Soap
+B02904,Tea
+B02905,Spaghetti
+B02906,Detergent
+B02907,Milk
+B02907,Milo
+B02908,Palm oil
+B02908,Tomato paste
+B02909,Garri
+B02910,Beer
+B02910,Palm oil
+B02911,Garri
+B02911,Groundnut
+B02911,Rice
+B02912,Sardine
+B02913,Beer
+B02913,Groundnut
+B02914,Milo
+B02914,Sardine
+B02915,Beer
+B02915,Rice
+B02915,Soap
+B02916,Garri
+B02917,Chicken
+B02917,Diapers
+B02917,Rice
+B02917,Tomato paste
+B02918,Chicken
+B02918,Palm oil
+B02918,Sugar
+B02918,Tea
+B02919,Baby wipes
+B02919,Beer
+B02919,Diapers
+B02919,Groundnut
+B02919,Spaghetti
+B02920,Detergent
+B02921,Chicken
+B02921,Palm oil
+B02922,Bread
+B02922,Eggs
+B02922,Rice
+B02922,Soap
+B02922,Sugar
+B02922,Tea
+B02923,Bread
+B02923,Eggs
+B02923,Palm oil
+B02923,Spaghetti
+B02924,Beer
+B02924,Milk
+B02924,Spaghetti
+B02924,Tomato paste
+B02925,Baby wipes
+B02925,Beer
+B02925,Bread
+B02925,Eggs
+B02925,Indomie
+B02926,Detergent
+B02926,Spaghetti
+B02927,Eggs
+B02927,Indomie
+B02927,Milk
+B02927,Palm oil
+B02928,Garri
+B02928,Indomie
+B02928,Sugar
+B02929,Baby wipes
+B02929,Milo
+B02929,Palm oil
+B02929,Soap
+B02930,Spaghetti
+B02931,Baby wipes
+B02931,Diapers
+B02931,Eggs
+B02931,Milk
+B02932,Palm oil
+B02932,Rice
+B02932,Spaghetti
+B02932,Tomato paste
+B02933,Beer
+B02933,Detergent
+B02933,Milk
+B02934,Bread
+B02934,Eggs
+B02935,Spaghetti
+B02936,Eggs
+B02937,Detergent
+B02937,Spaghetti
+B02937,Sugar
+B02937,Tea
+B02938,Chicken
+B02938,Palm oil
+B02939,Diapers
+B02939,Sugar
+B02939,Tea
+B02940,Bread
+B02940,Eggs
+B02940,Spaghetti
+B02941,Milk
+B02941,Sugar
+B02941,Tea
+B02942,Diapers
+B02942,Spaghetti
+B02943,Palm oil
+B02944,Baby wipes
+B02944,Beer
+B02944,Diapers
+B02944,Sardine
+B02944,Spaghetti
+B02945,Chicken
+B02945,Rice
+B02946,Bread
+B02946,Detergent
+B02946,Eggs
+B02946,Indomie
+B02947,Diapers
+B02947,Milk
+B02947,Milo
+B02948,Baby wipes
+B02948,Diapers
+B02949,Groundnut
+B02950,Sardine
+B02951,Garri
+B02952,Detergent
+B02952,Milk
+B02953,Garri
+B02953,Groundnut
+B02954,Baby wipes
+B02955,Bread
+B02955,Eggs
+B02955,Sugar
+B02956,Rice
+B02957,Baby wipes
+B02957,Beer
+B02957,Detergent
+B02957,Diapers
+B02957,Palm oil
+B02958,Eggs
+B02959,Beer
+B02959,Indomie
+B02959,Palm oil
+B02959,Tomato paste
+B02960,Chicken
+B02961,Milk
+B02961,Milo
+B02961,Spaghetti
+B02961,Sugar
+B02962,Baby wipes
+B02962,Groundnut
+B02963,Bread
+B02963,Eggs
+B02963,Milk
+B02963,Tomato paste
+B02964,Soap
+B02965,Baby wipes
+B02965,Bread
+B02965,Diapers
+B02965,Eggs
+B02965,Sardine
+B02965,Sugar
+B02966,Sugar
+B02966,Tomato paste
+B02967,Diapers
+B02967,Rice
+B02967,Sugar
+B02968,Baby wipes
+B02968,Beer
+B02968,Chicken
+B02968,Diapers
+B02968,Soap
+B02968,Tomato paste
+B02969,Palm oil
+B02970,Groundnut
+B02970,Sardine
+B02971,Beer
+B02971,Groundnut
+B02972,Bread
+B02972,Eggs
+B02972,Palm oil
+B02972,Spaghetti
+B02973,Beer
+B02974,Palm oil
+B02975,Rice
+B02976,Milk
+B02977,Baby wipes
+B02977,Beer
+B02977,Bread
+B02977,Chicken
+B02977,Eggs
+B02978,Palm oil
+B02978,Rice
+B02978,Sugar
+B02978,Tea
+B02978,Tomato paste
+B02979,Bread
+B02979,Eggs
+B02979,Indomie
+B02979,Tea
+B02980,Palm oil
+B02980,Rice
+B02980,Tea
+B02980,Tomato paste
+B02981,Bread
+B02981,Chicken
+B02981,Detergent
+B02981,Rice
+B02982,Baby wipes
+B02982,Spaghetti
+B02983,Detergent
+B02983,Milk
+B02984,Chicken
+B02984,Soap
+B02984,Sugar
+B02984,Tea
+B02985,Milo
+B02985,Sugar
+B02986,Sardine
+B02987,Palm oil
+B02987,Spaghetti
+B02988,Eggs
+B02988,Garri
+B02988,Groundnut
+B02988,Soap
+B02988,Spaghetti
+B02989,Palm oil
+B02990,Indomie
+B02991,Eggs
+B02991,Garri
+B02992,Milk
+B02992,Milo
+B02993,Beer
+B02993,Eggs
+B02994,Palm oil
+B02994,Tomato paste
+B02995,Palm oil
+B02995,Tomato paste
+B02996,Palm oil
+B02997,Sugar
+B02998,Chicken
+B02998,Indomie
+B02998,Milk
+B02998,Milo
+B02998,Palm oil
+B02999,Baby wipes
+B02999,Eggs
+B02999,Milo
+B02999,Sugar
+B03000,Detergent
+B03000,Rice
+B03000,Sugar
+B03000,Tomato paste

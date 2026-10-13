@@ -1,0 +1,14 @@
+depot_code,depot_name,region,state,opened
+DP01,Lagos Mainland,South West,Lagos,2016-03-01
+DP02,Lagos Island,South West,Lagos,2017-08-14
+DP03,Ibadan,South West,Oyo,2018-01-09
+DP04,Abuja Central,North Central,FCT,2015-06-30
+DP05,Kano,North West,Kano,2014-02-17
+DP06,Port Harcourt,South South,Rivers,2016-11-02
+DP07,Onitsha,South East,Anambra,2019-04-22
+DP08,Benin City,South South,Edo,2020-09-15
+DP09,Kaduna,North West,Kaduna,2021-05-10
+DP10,Enugu,South East,Enugu,2022-02-28
+DP11,Abeokuta,South West,Ogun,2023-07-03
+DP12,Jos,North Central,Plateau,2024-01-15
+DP04,Abuja Central (Wuse II),North Central,FCT,2015-06-30

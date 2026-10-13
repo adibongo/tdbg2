@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 300" role="img" aria-label="TDBG · Lagos Business School">
+  <title>TDBG · Turning Data into Business Growth · Lagos Business School</title>
+  <polygon points="130,4 254,76 254,224 130,296 6,224 6,76" fill="#141B4D"/>
+  <polygon points="130,18 241,83 241,217 130,282 19,217 19,83" fill="#D99A2B"/>
+  <polygon points="130,24 236,86 236,214 130,276 24,214 24,86" fill="#FBF7EC"/>
+  <rect x="88" y="46" width="84" height="16" rx="3" fill="#141B4D"/>
+  <text x="130" y="58" text-anchor="middle" font-family="Lato, Calibri, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.4" fill="#FBF7EC">LBS · EXEC ED</text>
+  <text x="130" y="112" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="46" font-weight="700" fill="#141B4D">TDBG</text>
+  <text x="130" y="131" text-anchor="middle" font-family="Lato, Calibri, sans-serif" font-size="9.5" font-style="italic" fill="#0B5E82">Turning Data into Business Growth</text>
+  <g fill="#0B5E82">
+    <rect x="62" y="210" width="14" height="18"/>
+    <rect x="80" y="200" width="14" height="28"/>
+    <rect x="98" y="192" width="14" height="36"/>
+    <rect x="116" y="178" width="14" height="50" fill="#1C7293"/>
+    <rect x="134" y="170" width="14" height="58" fill="#1C7293"/>
+    <rect x="152" y="158" width="14" height="70" fill="#141B4D"/>
+    <rect x="170" y="148" width="14" height="80" fill="#141B4D"/>
+  </g>
+  <polyline points="69,198 87,188 105,180 123,164 141,156 159,142 177,130 198,116" fill="none" stroke="#D99A2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="198,116 186,117 194,127" fill="#D99A2B"/>
+  <line x1="56" y1="229" x2="204" y2="229" stroke="#141B4D" stroke-width="2"/>
+  <text x="130" y="250" text-anchor="middle" font-family="Lato, Calibri, sans-serif" font-size="9" font-weight="700" letter-spacing="1.6" fill="#141B4D">OCTOBER 2026</text>
+</svg>

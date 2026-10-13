@@ -1,0 +1,17 @@
+Turning Data into Business Growth — course website
+Lagos Business School, Pan-Atlantic University
+
+TO OPEN: double-click  index.html  in this folder.
+
+That is the whole thing. It runs from your hard drive with no internet
+connection and no server. Every page, all five facilitator decks and all
+twelve datasets are inside this folder.
+
+Keep the folder together. index.html loads everything else from the
+folders beside it (assets, sessions, slides, data), so if you move
+index.html out on its own it will open unstyled or blank.
+
+The bongo.ai button in the bottom-right corner will say it is not yet
+configured. That is expected: the assistant needs its small Cloudflare
+service deployed first, which takes about five minutes and is described
+in chat-api/README.md in the source repository.

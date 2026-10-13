@@ -1,0 +1,351 @@
+<!-- ==========================================================================
+     Turning Data into Business Growth — the small webapp layer.
+
+     Three jobs, no dependencies:
+       1. Track which sessions and labs a participant has completed, in their
+          own browser, and show it back to them as a week progress bar.
+       2. Give every lab checklist a persistent tick box.
+       3. Keep the "what did I actually do this week" view honest, because on
+          Friday people have to say what they finished.
+
+     Nothing leaves the browser. There is no analytics call anywhere in this
+     file, which is deliberate on a programme that spends a day on data
+     governance.
+     ========================================================================== -->
+<style>
+  .tdbg-progress {
+    position: sticky; top: 0; z-index: 900;
+    height: 3px; background: rgba(20,27,77,.08); margin: 0 0 .2rem;
+  }
+  .tdbg-progress > i {
+    display: block; height: 100%; width: 0;
+    background: linear-gradient(90deg,#1F2A66,#0B5E82,#D99A2B,#1C7293,#D99A2B);
+    transition: width .5s ease;
+  }
+  .tdbg-done-bar {
+    display: flex; align-items: center; gap: .8rem; flex-wrap: wrap;
+    border: 1px solid #E1E7EE; border-left: 4px solid #1C7293;
+    border-radius: 8px; padding: .75rem 1rem; margin: 2.2rem 0 1rem;
+    background: #FBFDFC;
+  }
+  .tdbg-done-bar button {
+    font: 600 .82rem/1 "Lato", system-ui, sans-serif;
+    border: 1px solid #1C7293; background: #1C7293; color: #fff;
+    border-radius: 6px; padding: .52rem .9rem; cursor: pointer;
+  }
+  .tdbg-done-bar button[aria-pressed="true"] { background: #fff; color: #0B5E82; }
+  .tdbg-done-bar button:focus-visible { outline: 3px solid #D99A2B; outline-offset: 2px; }
+  .tdbg-done-bar .msg { font-size: .84rem; color: #5C6B7A; }
+
+  .tdbg-check { list-style: none; padding-left: 0; }
+  .tdbg-check li {
+    display: flex; gap: .6rem; align-items: flex-start;
+    padding: .35rem 0; border-bottom: 1px dashed #EAEEF5;
+  }
+  .tdbg-check input[type=checkbox] {
+    margin-top: .32rem; width: 1.02rem; height: 1.02rem; accent-color: #1C7293; flex: none;
+  }
+  .tdbg-check li.on > span { color: #5C6B7A; text-decoration: line-through; }
+
+  .tdbg-tracker { border-collapse: collapse; width: 100%; font-size: .87rem; }
+  .tdbg-tracker td, .tdbg-tracker th { padding: .38rem .5rem; border-bottom: 1px solid #EAEEF5; text-align: left; }
+  .tdbg-tracker thead th { font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: #66707F; }
+  .tdbg-tracker th.n { font-family: "IBM Plex Mono", monospace; font-size: .76rem; color: #5C6B7A; width: 4.4rem; font-weight: 500; }
+  .tdbg-tracker td.n { font-family: "IBM Plex Mono", monospace; font-size: .76rem; color: #5C6B7A; width: 4.4rem; }
+  .tdbg-tracker td.s { text-align: right; width: 6rem; font-size: .78rem; color: #5C6B7A; }
+  .tdbg-tracker tr.on td.s { color: #0B5E82; font-weight: 600; }
+  .tdbg-reset {
+    font: 500 .78rem/1 "Lato", system-ui, sans-serif; background: none;
+    border: 1px solid #E1E7EE; border-radius: 6px; padding: .4rem .7rem;
+    color: #5C6B7A; cursor: pointer;
+  }
+  details.tdbg-sol > summary {
+    cursor: pointer; font: 600 .84rem/1.4 "Lato", system-ui, sans-serif;
+    color: #0B5E82; padding: .55rem .8rem; border: 1px solid #E1E7EE;
+    border-radius: 7px; background: #F7F9FC; list-style: none;
+  }
+  details.tdbg-sol > summary::before { content: "▸  "; }
+  details.tdbg-sol[open] > summary::before { content: "▾  "; }
+  details.tdbg-sol[open] > summary { border-radius: 7px 7px 0 0; border-bottom: 0; }
+  details.tdbg-sol > div.body {
+    border: 1px solid #E1E7EE; border-top: 0; border-radius: 0 0 7px 7px;
+    padding: .3rem 1rem .1rem;
+  }
+  details.tdbg-sol { margin: 1.1rem 0; }
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  var KEY = "tdbg.progress.v1";
+
+  // Every trackable unit on the site, in week order. Keep in sync with
+  // _quarto.yml — the tracker page renders straight from this list.
+  var UNITS = [
+    ["1.1", "Competing on analytics",            "sessions/1-1-competing-on-analytics.html"],
+    ["1.2", "The KPI tree",                      "sessions/1-2-kpi-tree.html"],
+    ["1.3", "Sizing the prize",                  "sessions/1-3-sizing-the-prize.html"],
+    ["1.4", "What AI actually changed",          "sessions/1-4-what-ai-changed.html"],
+    ["1.5", "Where the data lives",              "sessions/1-5-where-data-lives.html"],
+    ["1.6", "Lab 1 · Use-case charter",          "sessions/1-6-lab-charter.html"],
+    ["2.1", "SQL as the lingua franca",          "sessions/2-1-sql-lingua-franca.html"],
+    ["2.2", "The laptop warehouse",              "sessions/2-2-laptop-warehouse.html"],
+    ["2.3", "Excel as the bridge",               "sessions/2-3-excel-bridge.html"],
+    ["2.4", "Joins that lie",                    "sessions/2-4-joins-that-lie.html"],
+    ["2.5", "Data quality as a contract",        "sessions/2-5-data-quality-contract.html"],
+    ["2.6", "Lab 2 · The pipeline that reruns",  "sessions/2-6-lab-pipeline.html"],
+    ["3.1", "What is odd here?",                 "sessions/3-1-eda.html"],
+    ["3.2", "Charts that survive a board",       "sessions/3-2-charts-that-survive.html"],
+    ["3.3", "Forecasting with intervals",        "sessions/3-3-forecasting.html"],
+    ["3.4", "Segmentation you can act on",       "sessions/3-4-segmentation.html"],
+    ["3.5", "Propensity and the leak",           "sessions/3-5-propensity-and-leakage.html"],
+    ["3.6", "Lab 3 · The forecast market",       "sessions/3-6-lab-forecast-market.html"],
+    ["4.1", "Text as data",                      "sessions/4-1-text-as-data.html"],
+    ["4.2", "LLM classification at scale",       "sessions/4-2-llm-classification.html"],
+    ["4.3", "Dashboards that get used",          "sessions/4-3-dashboards.html"],
+    ["4.4", "One source, five outputs",          "sessions/4-4-reproducible-reporting.html"],
+    ["4.5", "The executive narrative",           "sessions/4-5-executive-narrative.html"],
+    ["4.6", "Lab 4 · The one-number brief",      "sessions/4-6-lab-one-number-brief.html"],
+    ["5.1", "Correlation, contribution, cause",  "sessions/5-1-correlation-contribution-cause.html"],
+    ["5.2", "Experiments that settle arguments", "sessions/5-2-experiments.html"],
+    ["5.3", "When you cannot randomise",         "sessions/5-3-quasi-experiments.html"],
+    ["5.4", "Governance you can actually run",   "sessions/5-4-governance.html"],
+    ["5.5", "The operating model",               "sessions/5-5-operating-model.html"],
+    ["5.6", "Capstone · Defence",                "sessions/5-6-capstone-defence.html"]
+  ];
+
+  // localStorage can throw outright in a private window or with site data
+  // blocked, so every read and write is guarded and the page renders fine
+  // with nothing stored.
+  function load() {
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      return raw ? (JSON.parse(raw) || {}) : {};
+    } catch (e) { return {}; }
+  }
+  function save(state) {
+    try { window.localStorage.setItem(KEY, JSON.stringify(state)); }
+    catch (e) { /* nothing to do; the page still works */ }
+  }
+
+  var state = load();
+
+  function pctDone() {
+    var n = 0;
+    for (var i = 0; i < UNITS.length; i++) if (state["s:" + UNITS[i][0]]) n++;
+    return { done: n, total: UNITS.length, pct: Math.round(100 * n / UNITS.length) };
+  }
+
+  // ------------------------------------------------------- progress ribbon
+  function ribbon() {
+    var host = document.querySelector("#quarto-content") || document.body;
+    var bar = document.createElement("div");
+    bar.className = "tdbg-progress";
+    bar.setAttribute("role", "progressbar");
+    bar.setAttribute("aria-label", "Programme progress");
+    bar.innerHTML = "<i></i>";
+    host.insertBefore(bar, host.firstChild);
+    paintRibbon();
+  }
+  function paintRibbon() {
+    var p = pctDone();
+    document.querySelectorAll(".tdbg-progress > i").forEach(function (el) {
+      el.style.width = p.pct + "%";
+    });
+    document.querySelectorAll(".tdbg-progress").forEach(function (el) {
+      el.setAttribute("aria-valuenow", String(p.pct));
+      el.setAttribute("aria-valuemin", "0");
+      el.setAttribute("aria-valuemax", "100");
+      el.title = p.done + " of " + p.total + " sessions marked complete";
+    });
+  }
+
+  // ------------------------------------------- "mark this session complete"
+  function doneBar() {
+    var id = document.body.getAttribute("data-tdbg-session");
+    if (!id) return;
+    var main = document.querySelector("main.content");
+    if (!main) return;
+
+    var wrap = document.createElement("div");
+    wrap.className = "tdbg-done-bar";
+    var btn = document.createElement("button");
+    var msg = document.createElement("span");
+    msg.className = "msg";
+    wrap.appendChild(btn);
+    wrap.appendChild(msg);
+    main.appendChild(wrap);
+
+    function paint() {
+      var on = !!state["s:" + id];
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.textContent = on ? "✓ Marked complete" : "Mark session " + id + " complete";
+      var p = pctDone();
+      msg.textContent = p.done + " of " + p.total + " sessions done · " + p.pct + "% of the week";
+    }
+    btn.addEventListener("click", function () {
+      state["s:" + id] = !state["s:" + id];
+      save(state); paint(); paintRibbon();
+    });
+    paint();
+  }
+
+  // --------------------------------------------- persistent lab checklists
+  //
+  // Two things here are deliberate and were both got wrong first time.
+  //
+  // 1. The storage key is a hash of the item's *text*, not its index in the
+  //    list. Index keys look fine until somebody edits a lab — insert one step
+  //    at the top of a six-step checklist and every tick silently shifts down
+  //    to the wrong line, which is worse than losing them. Hashing the text
+  //    means an edited step loses its own tick (correct: it is a different
+  //    step now) and leaves its neighbours alone.
+  //
+  // 2. The checkbox is labelled with aria-labelledby pointing at the step's
+  //    own text, not an aria-label of "Mark step 3 complete". A screen reader
+  //    user tabbing a checklist should hear the step, exactly as a sighted
+  //    user reads it — "step 3" tells them nothing about what they are
+  //    ticking.
+  function hash32(s) {
+    // FNV-1a. Not cryptographic; it only has to be stable and collision-shy
+    // across a few hundred short strings in one page.
+    var h = 0x811c9dc5;
+    for (var i = 0; i < s.length; i++) {
+      h ^= s.charCodeAt(i);
+      h = (h + (h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24)) >>> 0;
+    }
+    return h.toString(36);
+  }
+
+  function checklists() {
+    document.querySelectorAll("ul.tdbg-check").forEach(function (ul, ui) {
+      var scope = ul.getAttribute("data-key") ||
+                  (document.body.getAttribute("data-tdbg-session") || "page") + ":" + ui;
+      var seen = {};
+      ul.querySelectorAll("li").forEach(function (li, li_i) {
+        var text = (li.textContent || "").replace(/\s+/g, " ").trim();
+
+        // Two genuinely identical steps in one list would collide, so the
+        // second occurrence gets a suffix. Rare, but silent if unhandled.
+        // Two identical steps in one list would collide. Disambiguate with the
+        // item's index only for the duplicates themselves, so a unique step's
+        // key never depends on its position -- which is the whole point of
+        // hashing the text in the first place.
+        var base = hash32(text);
+        seen[base] = (seen[base] || 0) + 1;
+        var sig = seen[base] > 1 ? base + "." + li_i : base;
+        var k = "c:" + scope + ":" + sig;
+
+        var span = document.createElement("span");
+        span.id = "tdbg-ck-" + scope.replace(/[^A-Za-z0-9_.-]/g, "_") + "-" + sig;
+        while (li.firstChild) span.appendChild(li.firstChild);
+
+        var box = document.createElement("input");
+        box.type = "checkbox";
+        box.checked = !!state[k];
+        box.setAttribute("aria-labelledby", span.id);
+
+        li.appendChild(box);
+        li.appendChild(span);
+        if (box.checked) li.classList.add("on");
+        box.addEventListener("change", function () {
+          state[k] = box.checked;
+          li.classList.toggle("on", box.checked);
+          save(state);
+        });
+      });
+    });
+  }
+
+  // ------------------------------------------------------- tracker table
+  function tracker() {
+    var host = document.getElementById("tdbg-tracker");
+    if (!host) return;
+    var depth = (location.pathname.indexOf("/sessions/") > -1) ? "../" : "";
+    var t = document.createElement("table");
+    t.className = "tdbg-tracker";
+    // A data table needs a caption and real column headers, or a screen reader
+    // announces thirty rows of three unlabelled cells.
+    var cap = document.createElement("caption");
+    cap.textContent = "Your progress through the thirty sessions";
+    cap.style.cssText = "text-align:left;font-weight:600;color:#5C6B7A;" +
+                        "font-size:.84rem;padding:.2rem 0 .5rem";
+    t.appendChild(cap);
+    var thead = document.createElement("thead");
+    thead.innerHTML = '<tr>' +
+      '<th scope="col" class="n">Session</th>' +
+      '<th scope="col">Title</th>' +
+      '<th scope="col" class="s">Status</th></tr>';
+    t.appendChild(thead);
+    var tbody = document.createElement("tbody");
+    UNITS.forEach(function (u) {
+      var tr = document.createElement("tr");
+      var on = !!state["s:" + u[0]];
+      if (on) tr.className = "on";
+      var th = document.createElement("th");
+      th.scope = "row"; th.className = "n"; th.textContent = u[0];
+      tr.appendChild(th);
+      var td = document.createElement("td");
+      var a = document.createElement("a");
+      a.href = depth + u[2]; a.textContent = u[1];
+      td.appendChild(a); tr.appendChild(td);
+      var st = document.createElement("td");
+      st.className = "s"; st.textContent = on ? "complete" : "\u2014";
+      tr.appendChild(st);
+      tbody.appendChild(tr);
+    });
+    t.appendChild(tbody);
+    host.appendChild(t);
+
+    var p = pctDone();
+    var sum = document.createElement("p");
+    sum.style.marginTop = "1rem";
+    sum.innerHTML = "<strong>" + p.done + " of " + p.total + "</strong> sessions marked " +
+      "complete (" + p.pct + "%). This is stored in this browser only — it is not sent " +
+      "anywhere, and it will not follow you to another machine.";
+    host.appendChild(sum);
+
+    // Two-step, because one stray click used to wipe a week of ticks with no
+    // way back. The button becomes its own confirmation and reverts after
+    // five seconds if the person walks away from it.
+    var reset = document.createElement("button");
+    reset.className = "tdbg-reset";
+    reset.textContent = "Clear my progress";
+    var armed = false, timer = null;
+    reset.addEventListener("click", function () {
+      if (!armed) {
+        armed = true;
+        reset.textContent = "Clear everything? Click again to confirm";
+        reset.style.borderColor = "#B4443A";
+        reset.style.color = "#B4443A";
+        timer = window.setTimeout(function () {
+          armed = false;
+          reset.textContent = "Clear my progress";
+          reset.style.borderColor = "";
+          reset.style.color = "";
+        }, 5000);
+        return;
+      }
+      window.clearTimeout(timer);
+      state = {};
+      save(state);
+      location.reload();
+    });
+    host.appendChild(reset);
+  }
+
+  function boot() {
+    try { ribbon(); } catch (e) {}
+    try { doneBar(); } catch (e) {}
+    try { checklists(); } catch (e) {}
+    try { tracker(); } catch (e) {}
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})();
+</script>

@@ -1,0 +1,2001 @@
+txn_id,date,hour,store,region,category,items,basket_naira,payment_method,loyalty_member
+T01489,2025-01-01,11,Lekki Phase 1,Lekki,Beverages,6,6250,Card,No
+T00132,2025-01-01,14,Yaba,Lagos Mainland,Personal Care,6,6100,Card,Yes
+T00140,2025-01-01,14,Yaba,Lagos Mainland,Groceries,8,10570,POS,No
+T00756,2025-01-01,14,Lekki Phase 1,Lekki,Beverages,2,3680,Transfer,No
+T01997,2025-01-01,15,Ikeja City Mall,Ikeja,Groceries,13,12220,Cash,Yes
+T00699,2025-01-02,12,Lekki Phase 1,Lekki,Groceries,10,11850,Card,Yes
+T01176,2025-01-02,15,Ikeja City Mall,Ikeja,Beverages,3,2520,Transfer,Yes
+T00191,2025-01-02,17,Surulere,Surulere,Groceries,3,4170,Card,Yes
+T00648,2025-01-02,21,Surulere,Surulere,Electronics,64,67920,Card,Yes
+T00372,2025-01-03,12,Yaba,Lagos Mainland,Groceries,9,9760,Card,No
+T00785,2025-01-03,13,Victoria Island,Lagos Island,Groceries,8,8720,Card,No
+T01314,2025-01-03,13,Yaba,Lagos Mainland,Personal Care,2,2300,Cash,Yes
+T01334,2025-01-03,14,Victoria Island,Lagos Island,Personal Care,6,6650,Card,No
+T01983,2025-01-03,14,Lekki Phase 1,Lekki,Personal Care,8,9380,Card,No
+T00232,2025-01-03,15,Lekki Phase 1,Lekki,Household,6,8240,Card,Yes
+T00452,2025-01-03,15,Lekki Phase 1,Lekki,Groceries,7,6810,Card,No
+T00792,2025-01-03,17,Surulere,Surulere,Groceries,21,20620,POS,Yes
+T01005,2025-01-04,12,Lekki Phase 1,Lekki,Household,4,3790,POS,No
+T01994,2025-01-04,12,Ikeja City Mall,Ikeja,Groceries,12,11000,Card,Yes
+T00186,2025-01-04,14,Ikeja City Mall,Ikeja,Baby,7,8490,Transfer,Yes
+T01154,2025-01-04,14,Ikeja City Mall,Ikeja,Groceries,7,8830,Card,No
+T00210,2025-01-04,15,Festac,Lagos Mainland,Beverages,6,7610,Cash,No
+T00922,2025-01-04,15,Victoria Island,Lagos Island,Personal Care,3,2520,Transfer,No
+T00207,2025-01-04,16,Festac,Lagos Mainland,Baby,10,14370,POS,Yes
+T01842,2025-01-05,10,Yaba,Lagos Mainland,Household,12,18800,Card,Yes
+T00408,2025-01-05,13,Ikeja City Mall,Ikeja,Personal Care,18,17000,Transfer,No
+T00100,2025-01-05,15,Yaba,Lagos Mainland,Baby,11,17600,Transfer,No
+T00669,2025-01-05,15,Ikeja City Mall,Ikeja,Personal Care,2,2270,POS,No
+T01699,2025-01-05,16,Ikeja City Mall,Ikeja,Household,13,15250,POS,No
+T01922,2025-01-05,16,Surulere,Surulere,Groceries,5,5860,Card,No
+T00066,2025-01-05,18,Victoria Island,Lagos Island,Beverages,3,2870,Card,Yes
+T00612,2025-01-05,19,Festac,Lagos Mainland,Baby,11,10240,Card,Yes
+T01817,2025-01-06,11,Surulere,Surulere,Groceries,14,12640,Transfer,No
+T01648,2025-01-06,12,Lekki Phase 1,Lekki,Beverages,5,7890,Transfer,Yes
+T01788,2025-01-06,12,Surulere,Surulere,Beverages,5,7280,Transfer,No
+T01310,2025-01-06,14,Ikeja City Mall,Ikeja,Groceries,4,5590,Card,No
+T01803,2025-01-06,16,Surulere,Surulere,Beverages,6,6420,Cash,No
+T00508,2025-01-07,8,Yaba,Lagos Mainland,Baby,8,10260,Transfer,Yes
+T00624,2025-01-07,8,Surulere,Surulere,Beverages,3,4070,Transfer,No
+T01026,2025-01-07,12,Ikeja City Mall,Ikeja,Beverages,4,6940,POS,No
+T00574,2025-01-08,8,Surulere,Surulere,Beverages,4,4410,POS,Yes
+T00961,2025-01-08,8,Lekki Phase 1,Lekki,Beverages,3,4070,Transfer,No
+T01806,2025-01-08,11,Yaba,Lagos Mainland,Groceries,10,11190,Card,No
+T00749,2025-01-08,14,Victoria Island,Lagos Island,Beverages,4,5600,Card,Yes
+T00458,2025-01-09,8,Festac,Lagos Mainland,Baby,13,15270,Transfer,No
+T00655,2025-01-09,11,Ikeja City Mall,Ikeja,Groceries,15,17320,Card,Yes
+T00567,2025-01-09,14,Ikeja City Mall,Ikeja,Electronics,21,24970,Card,No
+T00339,2025-01-09,15,Victoria Island,Lagos Island,Personal Care,4,4790,Cash,No
+T01170,2025-01-09,16,Yaba,Lagos Mainland,Household,9,10320,Card,Yes
+T00456,2025-01-09,19,Yaba,Lagos Mainland,Household,8,9020,Transfer,Yes
+T01617,2025-01-10,13,Festac,Lagos Mainland,Groceries,8,9600,Transfer,Yes
+T00511,2025-01-10,16,Ikeja City Mall,Ikeja,Baby,21,21690,Cash,No
+T01270,2025-01-10,16,Lekki Phase 1,Lekki,Beverages,5,5520,Card,No
+T01507,2025-01-10,19,Yaba,Lagos Mainland,Groceries,3,4060,Transfer,Yes
+T01320,2025-01-11,13,Surulere,Surulere,Baby,3,4780,Card,No
+T01832,2025-01-11,14,Victoria Island,Lagos Island,Household,7,10510,POS,Yes
+T00741,2025-01-11,15,Ikeja City Mall,Ikeja,Personal Care,5,5430,Transfer,Yes
+T01526,2025-01-11,15,Festac,Lagos Mainland,Personal Care,8,10080,Transfer,Yes
+T01491,2025-01-11,18,Lekki Phase 1,Lekki,Groceries,13,19430,POS,No
+T01022,2025-01-11,19,Yaba,Lagos Mainland,Groceries,4,4860,Card,No
+T00042,2025-01-12,8,Ikeja City Mall,Ikeja,Electronics,38,47580,Card,Yes
+T00062,2025-01-12,12,Ikeja City Mall,Ikeja,Personal Care,6,5950,POS,No
+T01043,2025-01-12,14,Ikeja City Mall,Ikeja,Groceries,4,4660,Card,Yes
+T01913,2025-01-12,21,Victoria Island,Lagos Island,Groceries,8,11250,POS,Yes
+T00829,2025-01-13,13,Festac,Lagos Mainland,Groceries,8,10320,Transfer,Yes
+T01057,2025-01-13,15,Yaba,Lagos Mainland,Beverages,5,6230,Transfer,Yes
+T01347,2025-01-13,15,Festac,Lagos Mainland,Personal Care,12,17400,Transfer,Yes
+T00714,2025-01-13,16,Ikeja City Mall,Ikeja,Beverages,2,2590,Transfer,No
+T01483,2025-01-13,20,Yaba,Lagos Mainland,Groceries,5,5690,POS,No
+T00277,2025-01-14,14,Lekki Phase 1,Lekki,Household,9,8430,POS,Yes
+T00581,2025-01-14,14,Ikeja City Mall,Ikeja,Beverages,1,1320,Transfer,No
+T01549,2025-01-14,14,Victoria Island,Lagos Island,Household,21,27640,Card,Yes
+T01352,2025-01-14,16,Festac,Lagos Mainland,Beverages,2,3140,Card,Yes
+T01721,2025-01-14,16,Ikeja City Mall,Ikeja,Groceries,9,13510,Card,No
+T01981,2025-01-14,20,Ikeja City Mall,Ikeja,Groceries,4,6040,Card,No
+T00719,2025-01-15,8,Yaba,Lagos Mainland,Personal Care,5,7180,POS,Yes
+T01108,2025-01-15,15,Lekki Phase 1,Lekki,Personal Care,6,6350,Card,No
+T01695,2025-01-15,15,Ikeja City Mall,Ikeja,Personal Care,7,7350,Card,No
+T00501,2025-01-15,16,Ikeja City Mall,Ikeja,Baby,3,3850,Card,Yes
+T00029,2025-01-15,17,Festac,Lagos Mainland,Baby,8,8760,POS,Yes
+T00545,2025-01-15,17,Yaba,Lagos Mainland,Household,2,3570,POS,Yes
+T01517,2025-01-15,17,Festac,Lagos Mainland,Beverages,5,4670,POS,Yes
+T01571,2025-01-15,18,Ikeja City Mall,Ikeja,Groceries,4,6530,Card,No
+T01592,2025-01-15,21,Yaba,Lagos Mainland,Groceries,23,23210,Transfer,Yes
+T01461,2025-01-16,12,Lekki Phase 1,Lekki,Electronics,11,11620,Card,No
+T00652,2025-01-16,15,Lekki Phase 1,Lekki,Groceries,4,6610,Transfer,No
+T00948,2025-01-16,15,Surulere,Surulere,Personal Care,7,6700,Transfer,No
+T01049,2025-01-16,18,Lekki Phase 1,Lekki,Personal Care,3,4310,Card,No
+T01796,2025-01-16,20,Victoria Island,Lagos Island,Baby,4,6630,Transfer,No
+T00123,2025-01-17,8,Lekki Phase 1,Lekki,Groceries,5,5110,POS,No
+T00299,2025-01-17,12,Yaba,Lagos Mainland,Groceries,9,9460,Card,No
+T00457,2025-01-17,17,Victoria Island,Lagos Island,Household,11,16920,POS,No
+T00998,2025-01-17,20,Ikeja City Mall,Ikeja,Groceries,9,11810,POS,No
+T00585,2025-01-18,9,Surulere,Surulere,Beverages,2,3100,Cash,Yes
+T01134,2025-01-18,10,Surulere,Surulere,Household,4,3870,POS,Yes
+T01827,2025-01-18,13,Victoria Island,Lagos Island,Household,5,6470,POS,Yes
+T00067,2025-01-18,14,Yaba,Lagos Mainland,Groceries,15,17900,Cash,No
+T00784,2025-01-18,14,Victoria Island,Lagos Island,Beverages,2,2410,Card,No
+T00438,2025-01-18,16,Lekki Phase 1,Lekki,Groceries,10,15010,Card,Yes
+T01254,2025-01-18,18,Ikeja City Mall,Ikeja,Beverages,4,3820,Cash,Yes
+T01419,2025-01-18,18,Victoria Island,Lagos Island,Groceries,3,2990,Transfer,Yes
+T01761,2025-01-19,11,Lekki Phase 1,Lekki,Groceries,7,9180,Transfer,No
+T00364,2025-01-19,12,Ikeja City Mall,Ikeja,Groceries,17,17300,Transfer,Yes
+T00467,2025-01-19,12,Lekki Phase 1,Lekki,Household,8,10290,Card,No
+T00599,2025-01-19,12,Yaba,Lagos Mainland,Baby,12,11250,Card,No
+T01740,2025-01-19,12,Ikeja City Mall,Ikeja,Beverages,8,9190,Transfer,Yes
+T01953,2025-01-19,13,Ikeja City Mall,Ikeja,Personal Care,3,4490,Transfer,No
+T01768,2025-01-19,18,Ikeja City Mall,Ikeja,Personal Care,2,2050,Transfer,No
+T00664,2025-01-20,20,Festac,Lagos Mainland,Baby,11,17660,Card,Yes
+T01802,2025-01-21,13,Festac,Lagos Mainland,Beverages,5,4660,Card,No
+T00644,2025-01-21,19,Surulere,Surulere,Groceries,5,5800,Cash,No
+T01155,2025-01-21,21,Ikeja City Mall,Ikeja,Groceries,5,6600,Card,Yes
+T01520,2025-01-22,14,Yaba,Lagos Mainland,Groceries,6,7640,Transfer,No
+T01858,2025-01-22,21,Yaba,Lagos Mainland,Baby,9,8230,POS,Yes
+T01291,2025-01-23,12,Surulere,Surulere,Groceries,8,12990,Cash,No
+T00101,2025-01-23,14,Yaba,Lagos Mainland,Beverages,8,12310,Card,Yes
+T01083,2025-01-23,15,Victoria Island,Lagos Island,Personal Care,4,4820,Card,No
+T00376,2025-01-23,16,Ikeja City Mall,Ikeja,Baby,18,22470,Transfer,No
+T01481,2025-01-23,17,Victoria Island,Lagos Island,Groceries,4,5530,Transfer,Yes
+T01321,2025-01-24,12,Ikeja City Mall,Ikeja,Personal Care,6,8180,Transfer,Yes
+T00169,2025-01-24,13,Surulere,Surulere,Groceries,10,13980,Transfer,No
+T00370,2025-01-24,16,Ikeja City Mall,Ikeja,Personal Care,6,6890,POS,Yes
+T01247,2025-01-24,18,Yaba,Lagos Mainland,Groceries,10,11590,Cash,Yes
+T01044,2025-01-24,20,Victoria Island,Lagos Island,Beverages,6,5690,Transfer,No
+T00369,2025-01-25,13,Ikeja City Mall,Ikeja,Groceries,33,30360,Card,No
+T01071,2025-01-25,14,Ikeja City Mall,Ikeja,Groceries,7,9380,POS,Yes
+T00137,2025-01-25,15,Festac,Lagos Mainland,Personal Care,3,4180,Transfer,Yes
+T00072,2025-01-25,16,Festac,Lagos Mainland,Personal Care,5,7100,Card,No
+T00544,2025-01-25,18,Festac,Lagos Mainland,Electronics,25,23110,Transfer,No
+T00668,2025-01-25,18,Lekki Phase 1,Lekki,Groceries,9,12650,Card,Yes
+T01568,2025-01-26,16,Ikeja City Mall,Ikeja,Electronics,26,33820,POS,No
+T01542,2025-01-26,18,Yaba,Lagos Mainland,Groceries,10,9770,Card,No
+T01515,2025-01-27,8,Yaba,Lagos Mainland,Household,3,4840,Transfer,No
+T01781,2025-01-27,13,Ikeja City Mall,Ikeja,Groceries,6,5960,POS,Yes
+T00521,2025-01-27,14,Ikeja City Mall,Ikeja,Groceries,7,10460,POS,No
+T00695,2025-01-27,15,Surulere,Surulere,Beverages,5,4960,Transfer,No
+T01670,2025-01-27,15,Yaba,Lagos Mainland,Groceries,2,3500,Transfer,No
+T01368,2025-01-27,18,Ikeja City Mall,Ikeja,Groceries,10,14640,POS,No
+T00055,2025-01-28,13,Ikeja City Mall,Ikeja,Electronics,12,16020,Card,No
+T00050,2025-01-28,18,Surulere,Surulere,Beverages,2,2670,Transfer,Yes
+T00747,2025-01-29,10,Victoria Island,Lagos Island,Household,16,24670,Transfer,Yes
+T01244,2025-01-29,14,Lekki Phase 1,Lekki,Household,4,5410,Card,Yes
+T01527,2025-01-29,15,Victoria Island,Lagos Island,Personal Care,9,8850,Card,Yes
+T00248,2025-01-29,17,Festac,Lagos Mainland,Beverages,7,9900,Card,No
+T00916,2025-01-29,18,Festac,Lagos Mainland,Beverages,1,1240,Transfer,Yes
+T00646,2025-01-29,19,Lekki Phase 1,Lekki,Personal Care,2,2750,Card,Yes
+T01082,2025-01-30,12,Victoria Island,Lagos Island,Beverages,4,4580,POS,No
+T01555,2025-01-30,12,Yaba,Lagos Mainland,Groceries,13,17510,Cash,Yes
+T00266,2025-01-30,13,Festac,Lagos Mainland,Beverages,4,4020,Transfer,Yes
+T01285,2025-01-30,13,Yaba,Lagos Mainland,Groceries,7,10750,Transfer,No
+T00993,2025-01-30,14,Festac,Lagos Mainland,Groceries,5,6880,Card,No
+T00089,2025-01-30,15,Ikeja City Mall,Ikeja,Groceries,3,3830,Card,No
+T00251,2025-01-31,10,Ikeja City Mall,Ikeja,Personal Care,3,4130,POS,Yes
+T00874,2025-01-31,12,Victoria Island,Lagos Island,Beverages,5,5130,Cash,Yes
+T01870,2025-01-31,15,Ikeja City Mall,Ikeja,Baby,10,14660,Cash,No
+T00557,2025-01-31,18,Surulere,Surulere,Household,4,6210,Transfer,Yes
+T01249,2025-01-31,18,Yaba,Lagos Mainland,Household,8,12690,Cash,No
+T01875,2025-01-31,18,Yaba,Lagos Mainland,Personal Care,9,14760,Cash,No
+T01174,2025-02-01,15,Victoria Island,Lagos Island,Household,3,4470,POS,Yes
+T01197,2025-02-01,16,Surulere,Surulere,Personal Care,6,7350,Cash,No
+T01680,2025-02-01,17,Ikeja City Mall,Ikeja,Baby,14,16840,POS,No
+T00963,2025-02-01,18,Victoria Island,Lagos Island,Groceries,10,10950,Cash,Yes
+T00656,2025-02-02,13,Ikeja City Mall,Ikeja,Beverages,3,3980,Card,Yes
+T01420,2025-02-02,15,Lekki Phase 1,Lekki,Groceries,6,9160,POS,Yes
+T01355,2025-02-02,18,Victoria Island,Lagos Island,Baby,11,10770,Card,No
+T00243,2025-02-02,21,Festac,Lagos Mainland,Beverages,1,1990,Cash,No
+T00698,2025-02-03,11,Lekki Phase 1,Lekki,Household,3,3420,Card,No
+T00208,2025-02-03,12,Lekki Phase 1,Lekki,Groceries,2,2400,Transfer,Yes
+T00817,2025-02-03,16,Victoria Island,Lagos Island,Groceries,2,2310,Transfer,Yes
+T01246,2025-02-03,16,Festac,Lagos Mainland,Groceries,5,4390,Transfer,Yes
+T00400,2025-02-03,17,Yaba,Lagos Mainland,Baby,4,6460,Cash,No
+T00908,2025-02-03,17,Ikeja City Mall,Ikeja,Personal Care,4,5100,Cash,Yes
+T01498,2025-02-03,19,Lekki Phase 1,Lekki,Beverages,3,3970,Transfer,No
+T01823,2025-02-04,12,Yaba,Lagos Mainland,Groceries,4,6040,Card,Yes
+T00384,2025-02-04,14,Ikeja City Mall,Ikeja,Household,6,8150,Card,No
+T01107,2025-02-04,15,Festac,Lagos Mainland,Beverages,4,5090,POS,Yes
+T01629,2025-02-05,11,Ikeja City Mall,Ikeja,Groceries,23,21490,Card,Yes
+T00037,2025-02-05,12,Surulere,Surulere,Personal Care,13,13970,Transfer,Yes
+T01384,2025-02-05,13,Surulere,Surulere,Groceries,7,10180,Transfer,Yes
+T00020,2025-02-05,14,Lekki Phase 1,Lekki,Personal Care,6,8160,Cash,Yes
+T01970,2025-02-05,14,Lekki Phase 1,Lekki,Household,3,3960,Transfer,Yes
+T01211,2025-02-05,15,Lekki Phase 1,Lekki,Groceries,6,8720,POS,No
+T00265,2025-02-06,9,Ikeja City Mall,Ikeja,Baby,15,17600,Card,No
+T00559,2025-02-06,10,Ikeja City Mall,Ikeja,Groceries,8,7580,POS,No
+T01120,2025-02-06,12,Ikeja City Mall,Ikeja,Electronics,40,52240,Transfer,No
+T00436,2025-02-06,14,Ikeja City Mall,Ikeja,Groceries,4,5100,Transfer,Yes
+T00003,2025-02-06,15,Victoria Island,Lagos Island,Beverages,3,3810,Transfer,No
+T01216,2025-02-06,16,Victoria Island,Lagos Island,Electronics,22,27360,Cash,Yes
+T01488,2025-02-06,17,Ikeja City Mall,Ikeja,Groceries,7,7540,Transfer,Yes
+T01343,2025-02-06,20,Surulere,Surulere,Household,4,5920,Transfer,No
+T00661,2025-02-06,21,Victoria Island,Lagos Island,Beverages,4,6040,Card,No
+T01809,2025-02-06,21,Festac,Lagos Mainland,Groceries,6,7910,Cash,No
+T01904,2025-02-07,9,Yaba,Lagos Mainland,Beverages,4,5490,Transfer,No
+T01029,2025-02-07,13,Victoria Island,Lagos Island,Electronics,48,74450,Card,Yes
+T01272,2025-02-07,13,Surulere,Surulere,Beverages,5,5640,Transfer,No
+T01149,2025-02-07,15,Ikeja City Mall,Ikeja,Personal Care,2,2320,Card,No
+T01987,2025-02-07,21,Lekki Phase 1,Lekki,Electronics,12,17520,POS,Yes
+T01297,2025-02-08,12,Ikeja City Mall,Ikeja,Baby,16,18190,Cash,No
+T00153,2025-02-08,13,Ikeja City Mall,Ikeja,Electronics,23,23520,POS,No
+T00201,2025-02-08,13,Surulere,Surulere,Groceries,22,30730,Cash,Yes
+T00853,2025-02-08,15,Lekki Phase 1,Lekki,Groceries,16,18990,Transfer,Yes
+T01960,2025-02-08,17,Festac,Lagos Mainland,Groceries,6,5580,Cash,Yes
+T01924,2025-02-08,21,Yaba,Lagos Mainland,Household,6,7450,Card,No
+T00681,2025-02-09,8,Victoria Island,Lagos Island,Groceries,8,12750,Transfer,No
+T01122,2025-02-09,13,Lekki Phase 1,Lekki,Groceries,5,5570,Card,No
+T01137,2025-02-09,18,Victoria Island,Lagos Island,Groceries,3,3800,Card,Yes
+T00702,2025-02-10,9,Lekki Phase 1,Lekki,Groceries,4,6130,Card,Yes
+T00301,2025-02-10,12,Yaba,Lagos Mainland,Electronics,50,66840,POS,No
+T01655,2025-02-10,16,Victoria Island,Lagos Island,Groceries,6,6880,Transfer,No
+T00732,2025-02-10,17,Ikeja City Mall,Ikeja,Household,11,12690,Cash,No
+T01739,2025-02-10,17,Lekki Phase 1,Lekki,Baby,15,17440,Card,Yes
+T00929,2025-02-10,18,Ikeja City Mall,Ikeja,Beverages,4,4980,Transfer,Yes
+T01551,2025-02-10,18,Festac,Lagos Mainland,Personal Care,2,2170,Card,No
+T01429,2025-02-11,9,Lekki Phase 1,Lekki,Personal Care,10,12010,Card,Yes
+T01073,2025-02-11,15,Lekki Phase 1,Lekki,Groceries,10,12060,POS,Yes
+T01104,2025-02-11,17,Victoria Island,Lagos Island,Personal Care,3,2980,Card,No
+T00510,2025-02-12,14,Victoria Island,Lagos Island,Groceries,13,12890,POS,Yes
+T00642,2025-02-12,16,Ikeja City Mall,Ikeja,Beverages,9,8870,Transfer,No
+T00911,2025-02-13,11,Festac,Lagos Mainland,Household,4,5490,Card,No
+T01934,2025-02-13,11,Victoria Island,Lagos Island,Groceries,14,14560,Transfer,No
+T00007,2025-02-13,12,Victoria Island,Lagos Island,Beverages,2,1850,POS,Yes
+T01745,2025-02-13,12,Victoria Island,Lagos Island,Groceries,3,2950,Transfer,No
+T00992,2025-02-13,13,Lekki Phase 1,Lekki,Beverages,8,8720,Transfer,Yes
+T01350,2025-02-13,15,Yaba,Lagos Mainland,Groceries,8,7800,Transfer,No
+T00078,2025-02-13,16,Festac,Lagos Mainland,Household,14,13270,Card,Yes
+T00267,2025-02-13,19,Surulere,Surulere,Baby,8,10800,Card,No
+T01078,2025-02-13,20,Ikeja City Mall,Ikeja,Personal Care,3,4080,Cash,Yes
+T01471,2025-02-14,12,Yaba,Lagos Mainland,Groceries,4,6440,Card,Yes
+T00828,2025-02-14,14,Surulere,Surulere,Groceries,7,10000,Transfer,Yes
+T00936,2025-02-14,14,Victoria Island,Lagos Island,Groceries,8,8200,Transfer,Yes
+T01252,2025-02-14,17,Festac,Lagos Mainland,Household,7,8650,POS,Yes
+T00144,2025-02-14,19,Lekki Phase 1,Lekki,Electronics,71,97370,Card,No
+T00004,2025-02-14,20,Yaba,Lagos Mainland,Beverages,3,4400,Cash,Yes
+T00994,2025-02-15,17,Ikeja City Mall,Ikeja,Groceries,10,15630,POS,Yes
+T00527,2025-02-15,18,Festac,Lagos Mainland,Groceries,4,5690,Transfer,No
+T01136,2025-02-15,19,Lekki Phase 1,Lekki,Personal Care,4,4750,POS,Yes
+T00810,2025-02-15,21,Yaba,Lagos Mainland,Personal Care,12,12350,POS,No
+T01325,2025-02-16,13,Lekki Phase 1,Lekki,Groceries,8,11940,POS,No
+T00444,2025-02-16,14,Festac,Lagos Mainland,Household,5,5410,Card,No
+T01181,2025-02-16,14,Festac,Lagos Mainland,Baby,8,7720,Transfer,No
+T01396,2025-02-16,14,Festac,Lagos Mainland,Groceries,5,5820,POS,Yes
+T01752,2025-02-16,14,Yaba,Lagos Mainland,Household,5,6970,Transfer,No
+T01567,2025-02-16,19,Lekki Phase 1,Lekki,Beverages,4,4190,POS,No
+T01717,2025-02-16,21,Yaba,Lagos Mainland,Household,5,4670,Card,Yes
+T01436,2025-02-17,13,Lekki Phase 1,Lekki,Personal Care,3,4210,Transfer,Yes
+T00839,2025-02-17,15,Lekki Phase 1,Lekki,Baby,12,13560,POS,Yes
+T00200,2025-02-17,18,Surulere,Surulere,Groceries,7,8130,Card,Yes
+T00552,2025-02-17,18,Yaba,Lagos Mainland,Groceries,14,20580,Card,No
+T01698,2025-02-17,18,Ikeja City Mall,Ikeja,Groceries,17,16550,Transfer,No
+T01145,2025-02-17,21,Surulere,Surulere,Personal Care,2,2220,Transfer,Yes
+T00058,2025-02-18,11,Ikeja City Mall,Ikeja,Household,10,12280,Transfer,No
+T01389,2025-02-18,11,Surulere,Surulere,Groceries,8,7940,Card,No
+T01191,2025-02-18,12,Lekki Phase 1,Lekki,Baby,14,20520,Card,Yes
+T00639,2025-02-18,17,Surulere,Surulere,Groceries,4,4000,Cash,No
+T00831,2025-02-19,13,Ikeja City Mall,Ikeja,Groceries,12,12200,Cash,No
+T00962,2025-02-19,14,Surulere,Surulere,Personal Care,4,5450,Transfer,No
+T01850,2025-02-19,14,Yaba,Lagos Mainland,Groceries,3,3970,Transfer,Yes
+T00729,2025-02-19,15,Ikeja City Mall,Ikeja,Baby,13,13670,Cash,No
+T01868,2025-02-19,16,Yaba,Lagos Mainland,Groceries,8,11260,Transfer,No
+T00179,2025-02-19,18,Lekki Phase 1,Lekki,Beverages,2,3600,Transfer,No
+T01900,2025-02-20,8,Victoria Island,Lagos Island,Groceries,5,7460,Transfer,No
+T00832,2025-02-20,11,Ikeja City Mall,Ikeja,Groceries,9,10910,POS,No
+T00084,2025-02-20,12,Ikeja City Mall,Ikeja,Personal Care,4,4570,POS,No
+T01500,2025-02-20,12,Surulere,Surulere,Groceries,3,3900,POS,Yes
+T01984,2025-02-20,13,Surulere,Surulere,Baby,9,11070,Card,No
+T01267,2025-02-20,15,Lekki Phase 1,Lekki,Groceries,8,11150,Cash,Yes
+T01750,2025-02-20,17,Surulere,Surulere,Household,4,4560,Card,No
+T00684,2025-02-21,10,Ikeja City Mall,Ikeja,Baby,4,5280,Card,No
+T00172,2025-02-21,11,Festac,Lagos Mainland,Groceries,5,5890,Cash,No
+T01250,2025-02-21,13,Festac,Lagos Mainland,Household,7,10620,Transfer,No
+T01948,2025-02-21,13,Ikeja City Mall,Ikeja,Groceries,6,7070,Transfer,No
+T00333,2025-02-21,15,Surulere,Surulere,Groceries,2,3110,Card,No
+T01164,2025-02-21,17,Yaba,Lagos Mainland,Baby,3,4510,Transfer,No
+T00368,2025-02-21,18,Festac,Lagos Mainland,Groceries,8,6820,Card,Yes
+T00631,2025-02-21,20,Lekki Phase 1,Lekki,Beverages,5,7020,POS,Yes
+T00108,2025-02-22,13,Ikeja City Mall,Ikeja,Beverages,2,2700,Cash,Yes
+T00488,2025-02-22,15,Yaba,Lagos Mainland,Beverages,3,3780,POS,No
+T00715,2025-02-22,17,Surulere,Surulere,Groceries,22,24850,Cash,Yes
+T01175,2025-02-22,18,Ikeja City Mall,Ikeja,Household,4,5080,Card,No
+T01283,2025-02-22,18,Ikeja City Mall,Ikeja,Beverages,4,4660,Cash,No
+T00591,2025-02-23,19,Victoria Island,Lagos Island,Beverages,8,12990,POS,No
+T00170,2025-02-24,10,Lekki Phase 1,Lekki,Household,4,4180,Card,Yes
+T01582,2025-02-24,11,Victoria Island,Lagos Island,Household,8,12360,Card,No
+T01754,2025-02-24,11,Yaba,Lagos Mainland,Beverages,4,3940,Transfer,Yes
+T00193,2025-02-24,15,Lekki Phase 1,Lekki,Groceries,13,13820,POS,No
+T01993,2025-02-24,15,Ikeja City Mall,Ikeja,Electronics,18,23080,Cash,No
+T00957,2025-02-24,17,Victoria Island,Lagos Island,Beverages,2,2700,Transfer,Yes
+T00287,2025-02-25,14,Yaba,Lagos Mainland,Groceries,15,15600,Cash,No
+T00195,2025-02-25,17,Ikeja City Mall,Ikeja,Household,4,4750,Transfer,No
+T00685,2025-02-25,17,Lekki Phase 1,Lekki,Household,3,4010,Transfer,Yes
+T00757,2025-02-25,18,Ikeja City Mall,Ikeja,Beverages,7,6500,Transfer,Yes
+T00161,2025-02-25,21,Victoria Island,Lagos Island,Baby,17,19110,Transfer,No
+T00869,2025-02-26,10,Surulere,Surulere,Personal Care,2,2970,Transfer,No
+T00602,2025-02-26,11,Victoria Island,Lagos Island,Household,14,19670,Card,Yes
+T01782,2025-02-26,12,Lekki Phase 1,Lekki,Personal Care,3,2570,POS,No
+T01727,2025-02-26,13,Yaba,Lagos Mainland,Groceries,14,16600,Transfer,Yes
+T00331,2025-02-26,14,Surulere,Surulere,Electronics,16,16240,POS,No
+T01711,2025-02-26,15,Lekki Phase 1,Lekki,Personal Care,10,9160,POS,No
+T01553,2025-02-27,9,Lekki Phase 1,Lekki,Groceries,7,10830,Transfer,Yes
+T00640,2025-02-27,12,Surulere,Surulere,Electronics,23,23900,Transfer,No
+T00317,2025-02-27,14,Victoria Island,Lagos Island,Groceries,6,9980,Transfer,Yes
+T01999,2025-02-27,15,Ikeja City Mall,Ikeja,Groceries,14,17870,Card,Yes
+T00206,2025-02-28,13,Surulere,Surulere,Groceries,6,7800,Card,Yes
+T00449,2025-02-28,13,Lekki Phase 1,Lekki,Groceries,16,17550,Card,No
+T00082,2025-02-28,14,Surulere,Surulere,Groceries,2,3580,Card,Yes
+T00107,2025-02-28,15,Lekki Phase 1,Lekki,Groceries,15,14790,Transfer,No
+T01552,2025-02-28,19,Ikeja City Mall,Ikeja,Beverages,4,5790,Transfer,Yes
+T01226,2025-03-01,9,Surulere,Surulere,Groceries,21,23470,Transfer,No
+T01357,2025-03-01,12,Yaba,Lagos Mainland,Groceries,6,7810,Transfer,No
+T00970,2025-03-01,14,Lekki Phase 1,Lekki,Groceries,16,24010,Card,No
+T00643,2025-03-01,15,Victoria Island,Lagos Island,Beverages,4,5670,Transfer,No
+T00556,2025-03-02,12,Ikeja City Mall,Ikeja,Groceries,5,5390,POS,Yes
+T01158,2025-03-02,18,Surulere,Surulere,Baby,5,7200,Cash,No
+T00968,2025-03-02,19,Lekki Phase 1,Lekki,Household,6,7910,Cash,No
+T00825,2025-03-02,21,Lekki Phase 1,Lekki,Baby,11,16750,Card,Yes
+T01047,2025-03-03,14,Lekki Phase 1,Lekki,Groceries,10,9820,Card,No
+T01645,2025-03-03,15,Festac,Lagos Mainland,Baby,10,13320,Card,No
+T01300,2025-03-03,18,Festac,Lagos Mainland,Beverages,5,6250,Card,No
+T01185,2025-03-04,14,Ikeja City Mall,Ikeja,Household,4,4620,Card,Yes
+T01985,2025-03-04,14,Festac,Lagos Mainland,Household,7,6960,Card,No
+T01392,2025-03-04,15,Lekki Phase 1,Lekki,Groceries,4,6740,Card,No
+T00335,2025-03-04,16,Festac,Lagos Mainland,Beverages,3,3900,Card,No
+T01193,2025-03-04,21,Lekki Phase 1,Lekki,Personal Care,9,11770,Card,No
+T00840,2025-03-05,12,Festac,Lagos Mainland,Beverages,3,4870,Card,No
+T00870,2025-03-05,15,Yaba,Lagos Mainland,Groceries,5,6480,Card,Yes
+T01367,2025-03-05,16,Ikeja City Mall,Ikeja,Groceries,14,17990,POS,No
+T01535,2025-03-06,10,Surulere,Surulere,Groceries,12,12080,POS,No
+T01317,2025-03-06,13,Lekki Phase 1,Lekki,Electronics,26,34350,Transfer,No
+T01290,2025-03-06,15,Yaba,Lagos Mainland,Groceries,15,14190,POS,No
+T01737,2025-03-06,16,Lekki Phase 1,Lekki,Groceries,11,11300,Card,Yes
+T00475,2025-03-06,17,Yaba,Lagos Mainland,Personal Care,9,10470,Transfer,No
+T00750,2025-03-06,19,Victoria Island,Lagos Island,Groceries,3,3930,Transfer,No
+T01322,2025-03-06,19,Victoria Island,Lagos Island,Groceries,7,9950,Transfer,Yes
+T00404,2025-03-07,14,Festac,Lagos Mainland,Baby,15,14780,Transfer,No
+T01957,2025-03-07,14,Victoria Island,Lagos Island,Household,8,7530,Card,Yes
+T00799,2025-03-07,15,Ikeja City Mall,Ikeja,Beverages,6,8540,Transfer,No
+T01407,2025-03-07,15,Lekki Phase 1,Lekki,Groceries,3,4400,Card,No
+T00229,2025-03-07,17,Victoria Island,Lagos Island,Baby,6,5280,POS,Yes
+T01475,2025-03-08,10,Yaba,Lagos Mainland,Beverages,4,5120,POS,No
+T00268,2025-03-08,11,Lekki Phase 1,Lekki,Personal Care,4,4070,Card,Yes
+T01846,2025-03-08,11,Festac,Lagos Mainland,Electronics,47,60920,Transfer,Yes
+T01967,2025-03-08,12,Lekki Phase 1,Lekki,Groceries,8,11180,POS,No
+T00766,2025-03-08,13,Ikeja City Mall,Ikeja,Personal Care,4,5730,POS,No
+T01786,2025-03-08,15,Victoria Island,Lagos Island,Baby,8,11770,POS,No
+T00868,2025-03-08,19,Surulere,Surulere,Baby,6,7970,Card,Yes
+T01687,2025-03-09,8,Ikeja City Mall,Ikeja,Household,3,2850,Card,No
+T00289,2025-03-09,13,Surulere,Surulere,Beverages,4,4790,Transfer,No
+T00588,2025-03-09,17,Ikeja City Mall,Ikeja,Personal Care,4,4400,Cash,No
+T00920,2025-03-09,17,Surulere,Surulere,Beverages,2,2700,Transfer,No
+T01584,2025-03-09,17,Festac,Lagos Mainland,Household,3,3810,POS,No
+T01595,2025-03-09,20,Ikeja City Mall,Ikeja,Baby,13,13160,Card,No
+T00996,2025-03-10,13,Lekki Phase 1,Lekki,Household,7,7260,Cash,No
+T00181,2025-03-10,14,Lekki Phase 1,Lekki,Personal Care,3,4860,Transfer,Yes
+T00269,2025-03-10,14,Festac,Lagos Mainland,Groceries,7,6980,POS,No
+T01238,2025-03-10,19,Ikeja City Mall,Ikeja,Beverages,3,4740,Transfer,No
+T00350,2025-03-11,13,Victoria Island,Lagos Island,Personal Care,3,3820,Card,No
+T01180,2025-03-11,16,Lekki Phase 1,Lekki,Groceries,10,11420,Transfer,Yes
+T01901,2025-03-11,17,Yaba,Lagos Mainland,Groceries,8,10280,Cash,Yes
+T01492,2025-03-11,19,Yaba,Lagos Mainland,Household,5,5720,Cash,Yes
+T00313,2025-03-12,12,Surulere,Surulere,Beverages,1,820,Cash,No
+T00182,2025-03-12,18,Victoria Island,Lagos Island,Groceries,17,17910,Cash,Yes
+T01703,2025-03-12,18,Victoria Island,Lagos Island,Beverages,3,5250,Card,No
+T00572,2025-03-12,21,Festac,Lagos Mainland,Groceries,13,13490,Transfer,No
+T01814,2025-03-13,9,Lekki Phase 1,Lekki,Groceries,4,5030,Cash,Yes
+T01869,2025-03-13,12,Surulere,Surulere,Groceries,5,4420,Card,No
+T00967,2025-03-13,14,Lekki Phase 1,Lekki,Household,3,4260,Card,No
+T01112,2025-03-13,15,Festac,Lagos Mainland,Groceries,7,6400,Transfer,No
+T01556,2025-03-13,16,Ikeja City Mall,Ikeja,Groceries,2,3140,Transfer,No
+T00224,2025-03-13,17,Lekki Phase 1,Lekki,Beverages,7,7910,POS,No
+T01729,2025-03-13,17,Lekki Phase 1,Lekki,Groceries,6,7670,Cash,No
+T00228,2025-03-13,18,Ikeja City Mall,Ikeja,Beverages,2,3180,Transfer,No
+T00892,2025-03-13,18,Lekki Phase 1,Lekki,Groceries,18,19470,POS,Yes
+T00238,2025-03-13,21,Ikeja City Mall,Ikeja,Baby,8,10890,Transfer,Yes
+T00925,2025-03-14,11,Ikeja City Mall,Ikeja,Groceries,8,11830,Transfer,Yes
+T00745,2025-03-14,15,Lekki Phase 1,Lekki,Groceries,5,5980,Card,No
+T01878,2025-03-14,15,Lekki Phase 1,Lekki,Personal Care,8,7210,Card,No
+T00490,2025-03-14,16,Lekki Phase 1,Lekki,Personal Care,8,9530,Card,No
+T01397,2025-03-14,17,Surulere,Surulere,Personal Care,4,3810,Card,No
+T00211,2025-03-14,18,Festac,Lagos Mainland,Groceries,11,13740,Card,Yes
+T00738,2025-03-15,10,Yaba,Lagos Mainland,Household,3,3590,Transfer,No
+T00282,2025-03-15,12,Surulere,Surulere,Baby,7,9720,POS,No
+T01903,2025-03-15,12,Lekki Phase 1,Lekki,Household,2,3160,Transfer,No
+T00341,2025-03-15,16,Ikeja City Mall,Ikeja,Beverages,4,3820,Card,No
+T01890,2025-03-15,16,Ikeja City Mall,Ikeja,Groceries,15,14440,Cash,No
+T01097,2025-03-15,17,Victoria Island,Lagos Island,Personal Care,5,4460,Transfer,Yes
+T01403,2025-03-15,17,Victoria Island,Lagos Island,Groceries,11,15150,POS,Yes
+T00075,2025-03-15,18,Lekki Phase 1,Lekki,Groceries,8,8710,Card,Yes
+T00239,2025-03-15,18,Victoria Island,Lagos Island,Groceries,9,9190,Transfer,Yes
+T01068,2025-03-15,18,Festac,Lagos Mainland,Beverages,3,3470,POS,No
+T01607,2025-03-15,18,Lekki Phase 1,Lekki,Personal Care,2,3320,Card,No
+T00883,2025-03-15,20,Ikeja City Mall,Ikeja,Baby,14,13310,POS,No
+T00789,2025-03-16,11,Lekki Phase 1,Lekki,Beverages,5,7050,Card,No
+T01012,2025-03-16,13,Festac,Lagos Mainland,Groceries,5,5840,Card,No
+T01909,2025-03-16,13,Lekki Phase 1,Lekki,Personal Care,4,6180,Transfer,Yes
+T00025,2025-03-16,15,Victoria Island,Lagos Island,Baby,12,17080,Transfer,Yes
+T01921,2025-03-16,16,Surulere,Surulere,Beverages,2,2690,POS,No
+T01789,2025-03-16,17,Yaba,Lagos Mainland,Groceries,5,7160,POS,Yes
+T01618,2025-03-16,20,Victoria Island,Lagos Island,Groceries,6,8560,Transfer,No
+T00562,2025-03-16,21,Yaba,Lagos Mainland,Groceries,8,13170,Transfer,Yes
+T00609,2025-03-17,10,Surulere,Surulere,Groceries,8,10100,Card,No
+T01940,2025-03-17,16,Ikeja City Mall,Ikeja,Beverages,9,8390,Card,Yes
+T00700,2025-03-17,18,Surulere,Surulere,Household,14,15680,Card,Yes
+T00008,2025-03-18,11,Lekki Phase 1,Lekki,Personal Care,7,7090,Transfer,Yes
+T01982,2025-03-18,13,Festac,Lagos Mainland,Groceries,12,13040,Card,Yes
+T00157,2025-03-18,14,Lekki Phase 1,Lekki,Baby,12,17160,POS,No
+T01079,2025-03-18,14,Victoria Island,Lagos Island,Household,8,9660,Card,Yes
+T00857,2025-03-18,16,Ikeja City Mall,Ikeja,Beverages,3,2770,Transfer,No
+T00610,2025-03-19,12,Ikeja City Mall,Ikeja,Groceries,11,11430,Transfer,No
+T00489,2025-03-19,13,Lekki Phase 1,Lekki,Groceries,3,5150,Card,No
+T00487,2025-03-19,14,Ikeja City Mall,Ikeja,Beverages,3,3080,Transfer,No
+T01439,2025-03-19,17,Victoria Island,Lagos Island,Personal Care,7,8910,POS,No
+T01098,2025-03-20,13,Lekki Phase 1,Lekki,Beverages,5,6900,Card,No
+T00061,2025-03-20,14,Yaba,Lagos Mainland,Groceries,6,6160,Transfer,Yes
+T00711,2025-03-21,8,Yaba,Lagos Mainland,Electronics,30,47520,POS,No
+T01996,2025-03-21,11,Festac,Lagos Mainland,Groceries,4,4480,POS,No
+T01151,2025-03-21,12,Surulere,Surulere,Personal Care,10,13330,Transfer,Yes
+T00080,2025-03-21,16,Victoria Island,Lagos Island,Household,5,5070,Card,No
+T01510,2025-03-21,17,Surulere,Surulere,Household,4,4000,Transfer,Yes
+T01245,2025-03-21,18,Surulere,Surulere,Household,7,8480,Card,No
+T01084,2025-03-21,19,Yaba,Lagos Mainland,Household,8,11290,Card,No
+T00546,2025-03-22,13,Ikeja City Mall,Ikeja,Groceries,6,7810,Transfer,Yes
+T01847,2025-03-22,13,Victoria Island,Lagos Island,Household,8,11530,POS,Yes
+T00594,2025-03-22,15,Yaba,Lagos Mainland,Beverages,3,3670,POS,No
+T00304,2025-03-22,16,Lekki Phase 1,Lekki,Personal Care,4,5390,Card,Yes
+T00760,2025-03-22,16,Surulere,Surulere,Electronics,20,28880,Transfer,Yes
+T01543,2025-03-22,16,Ikeja City Mall,Ikeja,Groceries,8,8600,Cash,Yes
+T00778,2025-03-22,18,Festac,Lagos Mainland,Electronics,86,98580,Card,No
+T00579,2025-03-22,21,Yaba,Lagos Mainland,Groceries,5,6320,Transfer,No
+T00010,2025-03-23,12,Lekki Phase 1,Lekki,Household,5,5390,Transfer,No
+T01644,2025-03-23,12,Ikeja City Mall,Ikeja,Baby,4,5090,Transfer,No
+T00425,2025-03-23,15,Yaba,Lagos Mainland,Groceries,10,12380,POS,No
+T00442,2025-03-23,15,Yaba,Lagos Mainland,Groceries,10,14780,POS,Yes
+T01251,2025-03-23,15,Ikeja City Mall,Ikeja,Groceries,7,8580,Card,No
+T01881,2025-03-23,15,Lekki Phase 1,Lekki,Beverages,4,6650,Transfer,Yes
+T01349,2025-03-23,16,Ikeja City Mall,Ikeja,Personal Care,5,7850,Card,No
+T01742,2025-03-23,16,Lekki Phase 1,Lekki,Groceries,11,11170,Transfer,Yes
+T00053,2025-03-23,17,Surulere,Surulere,Baby,18,22700,Card,No
+T00125,2025-03-23,18,Lekki Phase 1,Lekki,Electronics,20,26350,Transfer,Yes
+T00548,2025-03-23,20,Festac,Lagos Mainland,Household,3,5460,Card,Yes
+T01704,2025-03-24,13,Surulere,Surulere,Household,6,6930,Card,No
+T00477,2025-03-24,14,Ikeja City Mall,Ikeja,Groceries,6,8290,Card,No
+T01925,2025-03-24,15,Surulere,Surulere,Groceries,11,15730,Cash,No
+T00428,2025-03-24,17,Victoria Island,Lagos Island,Beverages,6,7230,POS,No
+T00633,2025-03-24,18,Ikeja City Mall,Ikeja,Groceries,11,16140,Transfer,Yes
+T00484,2025-03-25,11,Lekki Phase 1,Lekki,Beverages,11,11530,Transfer,No
+T00315,2025-03-25,13,Ikeja City Mall,Ikeja,Personal Care,18,24920,Card,Yes
+T01977,2025-03-25,18,Ikeja City Mall,Ikeja,Groceries,15,16270,Cash,Yes
+T00464,2025-03-25,20,Ikeja City Mall,Ikeja,Groceries,46,47340,Transfer,No
+T00492,2025-03-26,9,Festac,Lagos Mainland,Electronics,22,31410,Card,No
+T01455,2025-03-26,9,Ikeja City Mall,Ikeja,Beverages,2,3340,Transfer,No
+T01602,2025-03-26,9,Ikeja City Mall,Ikeja,Electronics,37,50130,Cash,Yes
+T01152,2025-03-26,10,Yaba,Lagos Mainland,Beverages,5,5850,Cash,No
+T00637,2025-03-26,11,Surulere,Surulere,Household,3,4730,Card,Yes
+T01954,2025-03-26,11,Festac,Lagos Mainland,Groceries,8,10400,POS,No
+T00359,2025-03-26,12,Surulere,Surulere,Groceries,6,7110,Transfer,No
+T01163,2025-03-26,16,Ikeja City Mall,Ikeja,Groceries,8,11710,POS,No
+T00069,2025-03-27,9,Lekki Phase 1,Lekki,Groceries,7,6490,Transfer,No
+T01010,2025-03-27,13,Lekki Phase 1,Lekki,Baby,26,23820,Card,Yes
+T00409,2025-03-27,15,Lekki Phase 1,Lekki,Baby,14,18010,Cash,No
+T00462,2025-03-27,16,Lekki Phase 1,Lekki,Groceries,3,4730,Transfer,Yes
+T01013,2025-03-27,17,Ikeja City Mall,Ikeja,Groceries,26,39360,Transfer,No
+T00486,2025-03-27,19,Surulere,Surulere,Personal Care,4,5000,Transfer,Yes
+T01891,2025-03-27,20,Victoria Island,Lagos Island,Groceries,9,12180,Transfer,No
+T00526,2025-03-27,21,Yaba,Lagos Mainland,Groceries,18,24870,Card,No
+T01046,2025-03-28,13,Surulere,Surulere,Groceries,10,8720,Cash,No
+T01430,2025-03-28,14,Ikeja City Mall,Ikeja,Groceries,17,15720,Transfer,Yes
+T01518,2025-03-28,17,Ikeja City Mall,Ikeja,Groceries,6,9250,POS,Yes
+T00454,2025-03-29,12,Festac,Lagos Mainland,Groceries,6,5540,POS,No
+T00688,2025-03-29,15,Victoria Island,Lagos Island,Personal Care,2,2850,Card,No
+T00040,2025-03-29,18,Lekki Phase 1,Lekki,Groceries,8,7250,Transfer,Yes
+T00805,2025-03-29,18,Ikeja City Mall,Ikeja,Household,5,7630,POS,No
+T00837,2025-03-29,18,Festac,Lagos Mainland,Personal Care,1,1770,Card,No
+T00653,2025-03-30,12,Surulere,Surulere,Groceries,6,10110,POS,Yes
+T01217,2025-03-30,16,Surulere,Surulere,Groceries,8,11640,POS,No
+T00558,2025-03-30,18,Yaba,Lagos Mainland,Groceries,4,3830,Cash,No
+T01853,2025-03-30,19,Ikeja City Mall,Ikeja,Personal Care,6,6140,POS,No
+T01685,2025-03-30,20,Victoria Island,Lagos Island,Groceries,15,17570,Card,No
+T00141,2025-03-31,11,Lekki Phase 1,Lekki,Groceries,17,21170,Cash,Yes
+T01360,2025-03-31,11,Festac,Lagos Mainland,Groceries,7,10730,Transfer,Yes
+T00635,2025-03-31,12,Lekki Phase 1,Lekki,Groceries,7,7630,POS,No
+T00399,2025-03-31,15,Festac,Lagos Mainland,Personal Care,4,4790,Cash,No
+T00966,2025-03-31,17,Yaba,Lagos Mainland,Groceries,4,3930,Cash,No
+T00850,2025-03-31,19,Victoria Island,Lagos Island,Household,7,10520,Transfer,No
+T00913,2025-04-01,19,Surulere,Surulere,Beverages,10,11730,Card,No
+T01601,2025-04-01,19,Yaba,Lagos Mainland,Baby,11,14100,Card,No
+T00568,2025-04-01,21,Ikeja City Mall,Ikeja,Personal Care,5,6370,Cash,No
+T00726,2025-04-01,21,Festac,Lagos Mainland,Groceries,7,10360,Card,No
+T00366,2025-04-02,12,Yaba,Lagos Mainland,Household,5,5530,Card,Yes
+T00031,2025-04-02,14,Lekki Phase 1,Lekki,Beverages,3,4420,Transfer,Yes
+T00223,2025-04-02,14,Festac,Lagos Mainland,Groceries,6,6610,Cash,Yes
+T00252,2025-04-02,16,Ikeja City Mall,Ikeja,Beverages,3,3800,Card,No
+T01143,2025-04-02,16,Festac,Lagos Mainland,Personal Care,11,13100,POS,Yes
+T01200,2025-04-02,17,Lekki Phase 1,Lekki,Beverages,4,3830,POS,No
+T00875,2025-04-02,18,Lekki Phase 1,Lekki,Groceries,3,4650,Transfer,No
+T00873,2025-04-03,11,Surulere,Surulere,Groceries,10,14220,Cash,No
+T00390,2025-04-03,13,Victoria Island,Lagos Island,Groceries,6,8780,Transfer,No
+T01686,2025-04-03,18,Lekki Phase 1,Lekki,Groceries,17,19410,Card,No
+T00093,2025-04-03,21,Ikeja City Mall,Ikeja,Household,18,17200,Transfer,Yes
+T00910,2025-04-04,15,Yaba,Lagos Mainland,Groceries,12,14100,Card,Yes
+T01683,2025-04-04,16,Victoria Island,Lagos Island,Electronics,15,19920,Card,No
+T01379,2025-04-04,18,Yaba,Lagos Mainland,Groceries,5,6700,Transfer,No
+T01893,2025-04-05,12,Surulere,Surulere,Personal Care,8,7290,Transfer,Yes
+T00308,2025-04-05,17,Victoria Island,Lagos Island,Beverages,3,4870,Card,Yes
+T00667,2025-04-05,17,Surulere,Surulere,Groceries,8,12120,POS,No
+T00120,2025-04-05,21,Lekki Phase 1,Lekki,Groceries,10,9270,Transfer,No
+T01129,2025-04-06,13,Festac,Lagos Mainland,Baby,6,9350,Cash,No
+T00045,2025-04-06,15,Ikeja City Mall,Ikeja,Groceries,15,14300,Transfer,Yes
+T01919,2025-04-06,15,Surulere,Surulere,Household,5,7030,Card,No
+T00156,2025-04-06,16,Festac,Lagos Mainland,Groceries,16,16130,POS,Yes
+T01178,2025-04-06,16,Surulere,Surulere,Household,6,6400,Transfer,No
+T01477,2025-04-07,15,Ikeja City Mall,Ikeja,Groceries,3,4670,Transfer,No
+T01497,2025-04-07,15,Lekki Phase 1,Lekki,Groceries,7,8440,Transfer,No
+T01874,2025-04-07,16,Lekki Phase 1,Lekki,Beverages,3,3610,Card,No
+T00325,2025-04-07,18,Festac,Lagos Mainland,Household,3,2960,Card,No
+T00932,2025-04-07,18,Lekki Phase 1,Lekki,Household,9,9060,POS,Yes
+T01069,2025-04-07,20,Ikeja City Mall,Ikeja,Groceries,15,14440,POS,Yes
+T00281,2025-04-08,10,Victoria Island,Lagos Island,Personal Care,6,6940,Card,No
+T00256,2025-04-08,13,Lekki Phase 1,Lekki,Baby,15,14260,POS,No
+T00641,2025-04-08,14,Ikeja City Mall,Ikeja,Groceries,24,23050,Card,Yes
+T00513,2025-04-08,15,Lekki Phase 1,Lekki,Beverages,4,5090,Card,No
+T00953,2025-04-08,16,Lekki Phase 1,Lekki,Personal Care,8,10130,Transfer,Yes
+T00360,2025-04-08,19,Ikeja City Mall,Ikeja,Personal Care,15,21830,Card,Yes
+T01229,2025-04-08,19,Yaba,Lagos Mainland,Household,5,6400,POS,Yes
+T01614,2025-04-08,19,Lekki Phase 1,Lekki,Baby,11,14110,Cash,Yes
+T00494,2025-04-08,20,Ikeja City Mall,Ikeja,Household,5,6170,Transfer,No
+T01798,2025-04-09,11,Lekki Phase 1,Lekki,Household,11,11910,Card,Yes
+T01378,2025-04-10,11,Yaba,Lagos Mainland,Groceries,25,34710,Cash,Yes
+T00175,2025-04-10,13,Victoria Island,Lagos Island,Personal Care,5,5410,Card,No
+T00960,2025-04-10,13,Surulere,Surulere,Beverages,3,3230,POS,No
+T00021,2025-04-10,15,Surulere,Surulere,Beverages,6,9440,Card,No
+T01622,2025-04-10,18,Festac,Lagos Mainland,Beverages,5,7730,Transfer,No
+T01056,2025-04-11,12,Ikeja City Mall,Ikeja,Groceries,6,6820,Transfer,No
+T01632,2025-04-11,14,Ikeja City Mall,Ikeja,Groceries,19,18900,Cash,Yes
+T01106,2025-04-12,9,Yaba,Lagos Mainland,Beverages,4,5800,Cash,Yes
+T00279,2025-04-12,11,Victoria Island,Lagos Island,Groceries,15,15800,POS,Yes
+T00395,2025-04-12,11,Yaba,Lagos Mainland,Groceries,8,12810,POS,No
+T01374,2025-04-12,12,Yaba,Lagos Mainland,Beverages,7,7450,Card,No
+T00718,2025-04-12,14,Surulere,Surulere,Personal Care,6,5680,POS,No
+T01034,2025-04-12,14,Yaba,Lagos Mainland,Groceries,3,5360,Transfer,No
+T00737,2025-04-12,16,Lekki Phase 1,Lekki,Electronics,29,40130,Transfer,No
+T01907,2025-04-12,17,Yaba,Lagos Mainland,Personal Care,4,3760,Card,Yes
+T01702,2025-04-12,21,Festac,Lagos Mainland,Household,4,5100,POS,No
+T01724,2025-04-13,10,Ikeja City Mall,Ikeja,Groceries,3,2590,Card,No
+T00041,2025-04-13,13,Surulere,Surulere,Household,6,6190,Card,Yes
+T01341,2025-04-13,15,Victoria Island,Lagos Island,Beverages,7,7760,Card,Yes
+T00439,2025-04-13,17,Ikeja City Mall,Ikeja,Electronics,37,51500,Cash,Yes
+T01184,2025-04-14,9,Ikeja City Mall,Ikeja,Beverages,5,4960,Card,Yes
+T00583,2025-04-14,11,Yaba,Lagos Mainland,Groceries,3,5300,Cash,No
+T01319,2025-04-14,11,Lekki Phase 1,Lekki,Groceries,5,6890,POS,No
+T00863,2025-04-14,14,Ikeja City Mall,Ikeja,Groceries,14,12410,Transfer,No
+T01562,2025-04-14,14,Ikeja City Mall,Ikeja,Groceries,8,10390,Card,No
+T00601,2025-04-14,15,Ikeja City Mall,Ikeja,Baby,5,6030,Cash,No
+T01759,2025-04-14,16,Victoria Island,Lagos Island,Groceries,22,31060,Card,No
+T00382,2025-04-15,15,Ikeja City Mall,Ikeja,Groceries,8,9140,POS,Yes
+T00561,2025-04-15,17,Ikeja City Mall,Ikeja,Groceries,19,20290,Card,No
+T01490,2025-04-15,19,Lekki Phase 1,Lekki,Groceries,15,16160,Transfer,No
+T01006,2025-04-15,21,Festac,Lagos Mainland,Groceries,10,11130,Cash,No
+T00307,2025-04-16,9,Victoria Island,Lagos Island,Groceries,7,9130,POS,Yes
+T01625,2025-04-16,12,Ikeja City Mall,Ikeja,Groceries,4,5350,POS,No
+T01156,2025-04-16,13,Yaba,Lagos Mainland,Personal Care,8,10260,Cash,No
+T00167,2025-04-16,14,Surulere,Surulere,Beverages,10,11990,Transfer,Yes
+T00180,2025-04-16,15,Victoria Island,Lagos Island,Beverages,3,4120,POS,Yes
+T00705,2025-04-16,17,Yaba,Lagos Mainland,Groceries,9,10410,Transfer,No
+T00212,2025-04-16,20,Surulere,Surulere,Personal Care,12,11770,Card,Yes
+T00533,2025-04-17,13,Festac,Lagos Mainland,Groceries,5,8450,Transfer,Yes
+T00790,2025-04-17,14,Yaba,Lagos Mainland,Household,6,7940,POS,No
+T00096,2025-04-17,15,Lekki Phase 1,Lekki,Household,4,3650,Transfer,No
+T01952,2025-04-17,20,Lekki Phase 1,Lekki,Groceries,9,12720,Card,No
+T01166,2025-04-18,13,Ikeja City Mall,Ikeja,Groceries,4,5910,Transfer,No
+T00649,2025-04-18,14,Surulere,Surulere,Groceries,11,12660,Transfer,Yes
+T00736,2025-04-18,14,Ikeja City Mall,Ikeja,Groceries,7,11660,Transfer,Yes
+T00469,2025-04-18,15,Victoria Island,Lagos Island,Personal Care,5,7210,POS,Yes
+T01661,2025-04-18,16,Surulere,Surulere,Groceries,10,14560,POS,Yes
+T01102,2025-04-18,19,Lekki Phase 1,Lekki,Household,14,14820,Transfer,Yes
+T00355,2025-04-18,21,Lekki Phase 1,Lekki,Baby,14,12890,Transfer,Yes
+T01447,2025-04-18,21,Surulere,Surulere,Groceries,10,11920,Card,Yes
+T01127,2025-04-19,13,Festac,Lagos Mainland,Beverages,2,2510,Transfer,No
+T01623,2025-04-19,16,Surulere,Surulere,Beverages,2,2360,Transfer,Yes
+T01469,2025-04-20,8,Ikeja City Mall,Ikeja,Groceries,4,6570,Card,Yes
+T00783,2025-04-20,13,Ikeja City Mall,Ikeja,Household,5,8260,Cash,No
+T01356,2025-04-20,14,Yaba,Lagos Mainland,Household,6,7050,Transfer,No
+T00385,2025-04-20,15,Victoria Island,Lagos Island,Household,15,15200,POS,Yes
+T01495,2025-04-20,15,Ikeja City Mall,Ikeja,Groceries,3,2950,Cash,No
+T00973,2025-04-20,17,Yaba,Lagos Mainland,Baby,25,28870,Transfer,No
+T01025,2025-04-20,18,Lekki Phase 1,Lekki,Groceries,10,13470,Card,No
+T00362,2025-04-21,10,Victoria Island,Lagos Island,Groceries,31,28540,Card,Yes
+T01833,2025-04-21,11,Ikeja City Mall,Ikeja,Beverages,8,11960,Card,No
+T01087,2025-04-21,14,Lekki Phase 1,Lekki,Groceries,6,8490,Cash,No
+T01573,2025-04-21,15,Surulere,Surulere,Personal Care,2,3480,Card,No
+T00603,2025-04-22,13,Surulere,Surulere,Personal Care,10,11780,Transfer,No
+T01162,2025-04-22,14,Lekki Phase 1,Lekki,Groceries,4,5430,Card,No
+T00103,2025-04-22,15,Lekki Phase 1,Lekki,Groceries,10,13110,POS,No
+T00696,2025-04-22,16,Victoria Island,Lagos Island,Groceries,9,14310,Card,Yes
+T00491,2025-04-22,18,Festac,Lagos Mainland,Personal Care,2,2400,Card,No
+T01261,2025-04-23,13,Lekki Phase 1,Lekki,Household,10,10800,Cash,Yes
+T00856,2025-04-23,14,Lekki Phase 1,Lekki,Household,4,5410,Card,No
+T00796,2025-04-23,15,Surulere,Surulere,Household,5,6090,POS,No
+T00285,2025-04-23,16,Lekki Phase 1,Lekki,Personal Care,15,21810,Cash,No
+T01141,2025-04-23,21,Ikeja City Mall,Ikeja,Household,7,7080,Transfer,Yes
+T01385,2025-04-24,15,Victoria Island,Lagos Island,Groceries,12,15670,Card,No
+T00815,2025-04-25,14,Lekki Phase 1,Lekki,Groceries,11,14420,Card,Yes
+T01338,2025-04-25,14,Surulere,Surulere,Groceries,10,13870,Cash,Yes
+T00030,2025-04-25,15,Victoria Island,Lagos Island,Beverages,3,2830,POS,No
+T01734,2025-04-26,9,Festac,Lagos Mainland,Beverages,4,4320,Cash,No
+T01785,2025-04-26,17,Ikeja City Mall,Ikeja,Beverages,9,8410,Transfer,Yes
+T01201,2025-04-27,13,Lekki Phase 1,Lekki,Beverages,17,19220,Transfer,Yes
+T01720,2025-04-27,13,Yaba,Lagos Mainland,Groceries,7,8340,Transfer,No
+T00420,2025-04-27,14,Victoria Island,Lagos Island,Baby,8,9610,Transfer,No
+T00380,2025-04-27,18,Lekki Phase 1,Lekki,Beverages,5,6160,POS,Yes
+T01840,2025-04-27,19,Victoria Island,Lagos Island,Personal Care,5,7450,POS,No
+T00670,2025-04-28,13,Yaba,Lagos Mainland,Personal Care,1,1180,Cash,No
+T01700,2025-04-28,17,Ikeja City Mall,Ikeja,Beverages,3,4670,POS,Yes
+T00926,2025-04-28,18,Victoria Island,Lagos Island,Household,6,9990,Card,Yes
+T01277,2025-04-28,18,Ikeja City Mall,Ikeja,Household,5,6970,Cash,Yes
+T00352,2025-04-29,15,Surulere,Surulere,Groceries,6,9140,Card,No
+T00450,2025-04-29,17,Yaba,Lagos Mainland,Beverages,3,3370,Transfer,Yes
+T01588,2025-04-29,18,Lekki Phase 1,Lekki,Beverages,2,2690,Cash,Yes
+T00975,2025-04-29,21,Lekki Phase 1,Lekki,Household,5,5170,Cash,No
+T00431,2025-04-30,13,Ikeja City Mall,Ikeja,Electronics,34,42640,Card,Yes
+T01482,2025-04-30,21,Yaba,Lagos Mainland,Beverages,10,11100,Card,No
+T01697,2025-05-01,11,Ikeja City Mall,Ikeja,Personal Care,4,5160,POS,No
+T00149,2025-05-01,12,Ikeja City Mall,Ikeja,Household,8,9100,Transfer,Yes
+T00173,2025-05-01,13,Yaba,Lagos Mainland,Beverages,5,5000,Card,Yes
+T01472,2025-05-01,15,Lekki Phase 1,Lekki,Household,5,6340,Card,Yes
+T01007,2025-05-01,19,Victoria Island,Lagos Island,Groceries,3,4900,POS,Yes
+T01371,2025-05-01,19,Ikeja City Mall,Ikeja,Groceries,4,4050,Transfer,Yes
+T01657,2025-05-01,21,Victoria Island,Lagos Island,Household,10,12640,Cash,Yes
+T00923,2025-05-02,10,Ikeja City Mall,Ikeja,Household,3,4440,Transfer,No
+T00461,2025-05-02,14,Surulere,Surulere,Personal Care,6,7690,Transfer,No
+T00509,2025-05-02,14,Surulere,Surulere,Household,6,7560,Transfer,No
+T01404,2025-05-02,17,Victoria Island,Lagos Island,Beverages,1,1840,POS,Yes
+T00057,2025-05-02,20,Festac,Lagos Mainland,Electronics,102,105220,Card,No
+T00196,2025-05-03,10,Yaba,Lagos Mainland,Personal Care,2,2080,POS,Yes
+T00298,2025-05-03,11,Ikeja City Mall,Ikeja,Groceries,19,27270,Card,No
+T00136,2025-05-03,14,Festac,Lagos Mainland,Groceries,5,5290,Card,No
+T00956,2025-05-03,14,Ikeja City Mall,Ikeja,Groceries,14,12580,Cash,No
+T00171,2025-05-03,15,Yaba,Lagos Mainland,Beverages,6,7560,Transfer,No
+T00253,2025-05-03,18,Lekki Phase 1,Lekki,Personal Care,11,11780,POS,No
+T01123,2025-05-04,8,Lekki Phase 1,Lekki,Personal Care,4,5440,Card,Yes
+T00295,2025-05-04,15,Lekki Phase 1,Lekki,Groceries,5,4850,Card,No
+T00073,2025-05-04,16,Surulere,Surulere,Groceries,7,6830,Card,No
+T00013,2025-05-05,10,Surulere,Surulere,Personal Care,3,4030,POS,No
+T00259,2025-05-05,15,Lekki Phase 1,Lekki,Personal Care,4,3690,Transfer,No
+T00898,2025-05-05,17,Victoria Island,Lagos Island,Groceries,14,17420,Transfer,No
+T00178,2025-05-05,19,Ikeja City Mall,Ikeja,Groceries,8,9730,POS,Yes
+T01301,2025-05-05,20,Yaba,Lagos Mainland,Groceries,17,16420,Cash,No
+T01165,2025-05-05,21,Festac,Lagos Mainland,Groceries,15,22640,Card,No
+T01256,2025-05-06,13,Ikeja City Mall,Ikeja,Beverages,4,5470,Cash,No
+T01807,2025-05-06,13,Festac,Lagos Mainland,Groceries,8,9580,Card,No
+T00538,2025-05-06,16,Yaba,Lagos Mainland,Baby,7,9110,Cash,Yes
+T01897,2025-05-06,17,Lekki Phase 1,Lekki,Household,5,6830,Transfer,Yes
+T00113,2025-05-06,19,Yaba,Lagos Mainland,Electronics,19,24400,Card,No
+T00626,2025-05-06,20,Ikeja City Mall,Ikeja,Groceries,5,6440,Transfer,No
+T01075,2025-05-06,20,Surulere,Surulere,Groceries,6,6560,Cash,No
+T00077,2025-05-07,12,Victoria Island,Lagos Island,Groceries,6,7970,Card,Yes
+T01638,2025-05-07,14,Ikeja City Mall,Ikeja,Beverages,3,3670,Cash,No
+T01476,2025-05-07,15,Surulere,Surulere,Beverages,5,5090,POS,No
+T01631,2025-05-07,15,Yaba,Lagos Mainland,Beverages,14,15500,Card,No
+T01950,2025-05-07,16,Festac,Lagos Mainland,Groceries,3,4440,Transfer,No
+T01599,2025-05-08,12,Surulere,Surulere,Household,5,4540,Card,No
+T01241,2025-05-08,13,Festac,Lagos Mainland,Groceries,4,5120,Transfer,No
+T00122,2025-05-08,15,Lekki Phase 1,Lekki,Personal Care,4,5870,Transfer,No
+T00885,2025-05-08,15,Lekki Phase 1,Lekki,Beverages,6,8500,Transfer,Yes
+T01387,2025-05-08,15,Festac,Lagos Mainland,Personal Care,3,3190,Transfer,No
+T00725,2025-05-08,16,Festac,Lagos Mainland,Baby,10,10660,Card,Yes
+T00507,2025-05-08,17,Surulere,Surulere,Groceries,5,6790,Cash,No
+T01774,2025-05-08,18,Ikeja City Mall,Ikeja,Groceries,3,3410,POS,No
+T01167,2025-05-08,19,Surulere,Surulere,Household,3,3770,Transfer,Yes
+T01583,2025-05-09,8,Ikeja City Mall,Ikeja,Baby,9,12590,Cash,Yes
+T01895,2025-05-09,11,Lekki Phase 1,Lekki,Household,6,6280,Card,Yes
+T00865,2025-05-09,13,Festac,Lagos Mainland,Groceries,7,11070,Cash,Yes
+T00434,2025-05-09,14,Lekki Phase 1,Lekki,Baby,6,9630,Cash,Yes
+T01941,2025-05-09,15,Lekki Phase 1,Lekki,Groceries,6,6720,Card,No
+T00060,2025-05-09,17,Ikeja City Mall,Ikeja,Personal Care,2,3200,Transfer,Yes
+T01718,2025-05-09,19,Lekki Phase 1,Lekki,Groceries,22,24730,Transfer,No
+T00466,2025-05-09,21,Ikeja City Mall,Ikeja,Groceries,8,10130,Card,Yes
+T01565,2025-05-10,11,Victoria Island,Lagos Island,Groceries,9,8330,Transfer,Yes
+T01845,2025-05-10,17,Yaba,Lagos Mainland,Personal Care,5,6020,POS,Yes
+T00742,2025-05-10,21,Yaba,Lagos Mainland,Personal Care,11,15710,Cash,No
+T01259,2025-05-11,9,Surulere,Surulere,Personal Care,6,7630,Transfer,Yes
+T00471,2025-05-11,10,Victoria Island,Lagos Island,Personal Care,5,5800,Card,No
+T01587,2025-05-11,10,Yaba,Lagos Mainland,Beverages,3,5040,Card,Yes
+T01962,2025-05-11,11,Ikeja City Mall,Ikeja,Beverages,4,3940,Transfer,Yes
+T01359,2025-05-11,15,Festac,Lagos Mainland,Electronics,40,53420,Transfer,Yes
+T01692,2025-05-11,17,Victoria Island,Lagos Island,Groceries,3,3500,Cash,Yes
+T00441,2025-05-11,18,Lekki Phase 1,Lekki,Beverages,2,2850,Card,Yes
+T00197,2025-05-12,11,Surulere,Surulere,Beverages,3,3360,Transfer,No
+T00918,2025-05-12,11,Yaba,Lagos Mainland,Groceries,9,8480,Card,No
+T01243,2025-05-12,12,Lekki Phase 1,Lekki,Personal Care,16,18140,Transfer,No
+T01401,2025-05-12,18,Festac,Lagos Mainland,Groceries,11,11210,Cash,Yes
+T01716,2025-05-12,18,Ikeja City Mall,Ikeja,Personal Care,6,5830,Card,No
+T01220,2025-05-13,10,Yaba,Lagos Mainland,Electronics,13,15170,POS,No
+T01580,2025-05-13,12,Yaba,Lagos Mainland,Beverages,2,3180,Card,No
+T00985,2025-05-13,15,Surulere,Surulere,Groceries,18,19730,Transfer,No
+T01612,2025-05-13,16,Victoria Island,Lagos Island,Personal Care,1,1400,POS,No
+T01340,2025-05-13,17,Victoria Island,Lagos Island,Baby,9,8580,Card,Yes
+T01926,2025-05-13,18,Yaba,Lagos Mainland,Personal Care,5,5180,Cash,No
+T00176,2025-05-14,12,Lekki Phase 1,Lekki,Baby,15,15830,Transfer,No
+T00184,2025-05-14,14,Victoria Island,Lagos Island,Electronics,14,20290,POS,Yes
+T01731,2025-05-14,16,Lekki Phase 1,Lekki,Groceries,7,9240,Cash,Yes
+T01421,2025-05-15,16,Lekki Phase 1,Lekki,Groceries,7,10880,Card,No
+T01284,2025-05-16,13,Lekki Phase 1,Lekki,Electronics,20,28230,Transfer,No
+T01144,2025-05-16,15,Ikeja City Mall,Ikeja,Household,7,6830,POS,Yes
+T01441,2025-05-16,15,Victoria Island,Lagos Island,Personal Care,9,11240,Card,No
+T01579,2025-05-16,20,Surulere,Surulere,Beverages,2,2480,Transfer,No
+T00761,2025-05-17,9,Surulere,Surulere,Household,13,16780,POS,No
+T00854,2025-05-17,12,Festac,Lagos Mainland,Groceries,9,10750,Cash,No
+T00694,2025-05-17,14,Lekki Phase 1,Lekki,Personal Care,11,10270,POS,Yes
+T01480,2025-05-17,16,Lekki Phase 1,Lekki,Beverages,2,3130,Cash,No
+T00421,2025-05-17,17,Ikeja City Mall,Ikeja,Groceries,14,18950,Cash,No
+T00227,2025-05-17,19,Victoria Island,Lagos Island,Groceries,13,19170,Transfer,Yes
+T01339,2025-05-18,13,Surulere,Surulere,Groceries,17,15290,POS,Yes
+T01544,2025-05-18,16,Surulere,Surulere,Baby,9,13570,Transfer,Yes
+T01906,2025-05-18,20,Yaba,Lagos Mainland,Baby,11,14700,Card,Yes
+T01516,2025-05-18,21,Lekki Phase 1,Lekki,Personal Care,9,9530,POS,Yes
+T01000,2025-05-19,16,Victoria Island,Lagos Island,Beverages,5,4320,POS,Yes
+T00322,2025-05-19,17,Surulere,Surulere,Groceries,4,5300,Card,No
+T00083,2025-05-19,18,Surulere,Surulere,Groceries,12,12180,Cash,No
+T00361,2025-05-19,18,Lekki Phase 1,Lekki,Beverages,4,5120,POS,No
+T00254,2025-05-19,19,Surulere,Surulere,Groceries,6,6450,Card,Yes
+T01530,2025-05-19,20,Yaba,Lagos Mainland,Electronics,77,83570,Card,Yes
+T01772,2025-05-19,20,Victoria Island,Lagos Island,Groceries,13,15330,Transfer,Yes
+T00052,2025-05-19,21,Festac,Lagos Mainland,Groceries,7,7740,Card,Yes
+T01031,2025-05-20,10,Ikeja City Mall,Ikeja,Groceries,19,19520,Cash,Yes
+T00043,2025-05-20,14,Surulere,Surulere,Household,6,8730,Cash,No
+T01067,2025-05-20,16,Yaba,Lagos Mainland,Beverages,7,9940,POS,Yes
+T00893,2025-05-20,18,Yaba,Lagos Mainland,Beverages,2,2700,Card,Yes
+T01521,2025-05-20,19,Surulere,Surulere,Electronics,13,18360,Transfer,No
+T00709,2025-05-20,20,Lekki Phase 1,Lekki,Groceries,9,10910,Transfer,Yes
+T00142,2025-05-21,14,Victoria Island,Lagos Island,Groceries,11,11930,Card,Yes
+T01051,2025-05-21,16,Ikeja City Mall,Ikeja,Baby,17,16590,POS,Yes
+T01679,2025-05-21,17,Victoria Island,Lagos Island,Groceries,4,6510,Transfer,No
+T00127,2025-05-22,11,Lekki Phase 1,Lekki,Household,6,8750,Card,No
+T00226,2025-05-22,13,Lekki Phase 1,Lekki,Household,7,10020,Transfer,No
+T01066,2025-05-22,13,Lekki Phase 1,Lekki,Baby,8,12040,Transfer,No
+T00735,2025-05-22,14,Ikeja City Mall,Ikeja,Beverages,5,6520,POS,No
+T01450,2025-05-22,14,Yaba,Lagos Mainland,Personal Care,3,4680,Card,Yes
+T01682,2025-05-22,15,Lekki Phase 1,Lekki,Groceries,5,8100,Cash,No
+T01775,2025-05-22,15,Surulere,Surulere,Baby,9,13290,Cash,Yes
+T00204,2025-05-22,16,Yaba,Lagos Mainland,Groceries,9,13210,POS,No
+T00881,2025-05-22,16,Lekki Phase 1,Lekki,Electronics,62,62820,Transfer,No
+T00590,2025-05-22,18,Lekki Phase 1,Lekki,Beverages,5,6580,Transfer,No
+T00686,2025-05-22,18,Surulere,Surulere,Groceries,5,8080,Card,No
+T01712,2025-05-22,18,Ikeja City Mall,Ikeja,Groceries,12,16740,Transfer,No
+T01395,2025-05-23,13,Victoria Island,Lagos Island,Groceries,8,12330,Card,No
+T00727,2025-05-23,14,Victoria Island,Lagos Island,Groceries,6,8650,Card,Yes
+T01443,2025-05-23,14,Lekki Phase 1,Lekki,Groceries,7,9630,POS,Yes
+T01514,2025-05-23,15,Yaba,Lagos Mainland,Beverages,5,7100,Card,No
+T00584,2025-05-24,14,Surulere,Surulere,Groceries,7,8350,Transfer,No
+T01746,2025-05-24,15,Yaba,Lagos Mainland,Baby,6,8510,Transfer,No
+T01795,2025-05-24,15,Ikeja City Mall,Ikeja,Groceries,3,4620,Cash,Yes
+T00807,2025-05-24,16,Surulere,Surulere,Beverages,5,5460,Cash,No
+T00955,2025-05-24,17,Victoria Island,Lagos Island,Personal Care,4,3440,POS,Yes
+T01456,2025-05-24,17,Yaba,Lagos Mainland,Beverages,3,3940,Card,Yes
+T00185,2025-05-25,13,Yaba,Lagos Mainland,Beverages,3,3140,Card,No
+T01115,2025-05-25,13,Surulere,Surulere,Personal Care,8,8210,Transfer,No
+T01604,2025-05-25,16,Victoria Island,Lagos Island,Groceries,3,5350,POS,No
+T01696,2025-05-25,16,Lekki Phase 1,Lekki,Groceries,2,3070,Cash,No
+T01892,2025-05-25,16,Ikeja City Mall,Ikeja,Personal Care,2,3560,POS,No
+T01502,2025-05-25,17,Yaba,Lagos Mainland,Household,11,14970,Card,No
+T01380,2025-05-25,18,Yaba,Lagos Mainland,Beverages,6,5510,Transfer,No
+T00604,2025-05-25,19,Festac,Lagos Mainland,Groceries,3,3810,Transfer,Yes
+T01505,2025-05-25,19,Yaba,Lagos Mainland,Personal Care,9,10890,Transfer,Yes
+T00876,2025-05-26,10,Lekki Phase 1,Lekki,Groceries,15,18950,Card,Yes
+T01540,2025-05-26,11,Victoria Island,Lagos Island,Beverages,3,3770,Card,Yes
+T01118,2025-05-26,12,Ikeja City Mall,Ikeja,Groceries,7,8590,Transfer,No
+T01619,2025-05-26,13,Victoria Island,Lagos Island,Groceries,16,25080,Card,Yes
+T00375,2025-05-26,14,Ikeja City Mall,Ikeja,Household,3,4000,Card,Yes
+T00553,2025-05-26,15,Ikeja City Mall,Ikeja,Groceries,10,12630,Transfer,Yes
+T00764,2025-05-26,18,Ikeja City Mall,Ikeja,Household,7,8440,POS,No
+T00068,2025-05-26,19,Yaba,Lagos Mainland,Electronics,30,30390,Transfer,Yes
+T00952,2025-05-26,19,Yaba,Lagos Mainland,Beverages,9,10800,Transfer,Yes
+T00257,2025-05-26,20,Surulere,Surulere,Groceries,7,10040,Cash,No
+T00002,2025-05-27,13,Lekki Phase 1,Lekki,Groceries,6,8060,Card,No
+T01466,2025-05-27,14,Ikeja City Mall,Ikeja,Personal Care,5,7210,Card,Yes
+T00048,2025-05-27,15,Yaba,Lagos Mainland,Groceries,14,14500,Transfer,Yes
+T01376,2025-05-28,10,Festac,Lagos Mainland,Groceries,4,5000,Card,Yes
+T01365,2025-05-28,11,Surulere,Surulere,Household,5,7310,Transfer,Yes
+T00162,2025-05-28,16,Lekki Phase 1,Lekki,Groceries,19,18020,Card,Yes
+T00550,2025-05-28,16,Ikeja City Mall,Ikeja,Groceries,4,5870,POS,No
+T01099,2025-05-28,16,Festac,Lagos Mainland,Groceries,12,10680,Transfer,No
+T01963,2025-05-28,18,Festac,Lagos Mainland,Baby,16,17950,Card,Yes
+T00152,2025-05-29,15,Victoria Island,Lagos Island,Groceries,4,3670,POS,No
+T00074,2025-05-29,19,Victoria Island,Lagos Island,Household,8,7850,Transfer,No
+T00389,2025-05-29,20,Ikeja City Mall,Ikeja,Electronics,25,35230,Transfer,Yes
+T01182,2025-05-29,21,Victoria Island,Lagos Island,Groceries,8,7290,Card,No
+T00771,2025-05-30,13,Lekki Phase 1,Lekki,Beverages,5,4740,Transfer,Yes
+T01574,2025-05-30,16,Yaba,Lagos Mainland,Baby,18,19890,Card,No
+T00619,2025-05-30,17,Surulere,Surulere,Personal Care,4,4580,POS,Yes
+T00116,2025-05-30,19,Lekki Phase 1,Lekki,Baby,8,12100,Cash,Yes
+T00413,2025-05-31,12,Ikeja City Mall,Ikeja,Groceries,7,7100,POS,No
+T01708,2025-05-31,12,Lekki Phase 1,Lekki,Beverages,8,8500,POS,Yes
+T00476,2025-05-31,13,Victoria Island,Lagos Island,Electronics,59,85530,Cash,Yes
+T01701,2025-05-31,13,Lekki Phase 1,Lekki,Baby,7,8570,Card,Yes
+T00872,2025-05-31,18,Yaba,Lagos Mainland,Beverages,4,4710,POS,No
+T01651,2025-05-31,21,Surulere,Surulere,Beverages,6,6530,Card,Yes
+T00032,2025-06-01,13,Surulere,Surulere,Personal Care,5,5530,Transfer,Yes
+T00104,2025-06-01,13,Ikeja City Mall,Ikeja,Household,6,5610,Cash,Yes
+T00690,2025-06-01,15,Victoria Island,Lagos Island,Household,7,11100,Transfer,No
+T00899,2025-06-01,15,Ikeja City Mall,Ikeja,Beverages,3,3480,Card,Yes
+T01309,2025-06-01,15,Surulere,Surulere,Beverages,3,3720,POS,No
+T00657,2025-06-01,16,Festac,Lagos Mainland,Groceries,3,4760,POS,No
+T01863,2025-06-02,9,Surulere,Surulere,Beverages,1,1340,POS,No
+T00687,2025-06-02,12,Yaba,Lagos Mainland,Groceries,13,18800,Card,No
+T01669,2025-06-02,14,Festac,Lagos Mainland,Groceries,8,12050,POS,No
+T01646,2025-06-02,16,Victoria Island,Lagos Island,Household,6,7200,Cash,Yes
+T01756,2025-06-02,18,Yaba,Lagos Mainland,Groceries,4,6010,Card,No
+T00809,2025-06-02,19,Surulere,Surulere,Personal Care,8,9270,Card,Yes
+T00570,2025-06-03,12,Victoria Island,Lagos Island,Household,4,4950,Card,No
+T01089,2025-06-03,14,Lekki Phase 1,Lekki,Household,8,7910,Card,No
+T01423,2025-06-03,14,Lekki Phase 1,Lekki,Household,10,9480,Card,Yes
+T00706,2025-06-03,19,Yaba,Lagos Mainland,Beverages,5,5920,Transfer,Yes
+T01971,2025-06-04,9,Yaba,Lagos Mainland,Electronics,17,19860,Card,Yes
+T01329,2025-06-04,10,Lekki Phase 1,Lekki,Personal Care,10,12470,Cash,No
+T00765,2025-06-04,14,Ikeja City Mall,Ikeja,Groceries,6,7630,POS,No
+T01315,2025-06-04,14,Yaba,Lagos Mainland,Groceries,1,1930,Transfer,No
+T01637,2025-06-04,14,Victoria Island,Lagos Island,Electronics,23,33170,POS,Yes
+T01212,2025-06-04,16,Lekki Phase 1,Lekki,Groceries,5,7330,POS,No
+T01933,2025-06-04,16,Festac,Lagos Mainland,Beverages,10,8760,Card,No
+T01138,2025-06-05,12,Victoria Island,Lagos Island,Personal Care,8,12720,Transfer,Yes
+T01058,2025-06-05,13,Festac,Lagos Mainland,Groceries,8,12690,Cash,Yes
+T00164,2025-06-05,15,Surulere,Surulere,Beverages,2,2790,Card,No
+T01126,2025-06-05,18,Ikeja City Mall,Ikeja,Electronics,20,24850,POS,No
+T01764,2025-06-06,9,Lekki Phase 1,Lekki,Baby,11,13610,POS,Yes
+T01021,2025-06-06,15,Ikeja City Mall,Ikeja,Groceries,10,13430,Cash,No
+T01478,2025-06-06,16,Surulere,Surulere,Household,7,6820,Card,No
+T01303,2025-06-06,17,Surulere,Surulere,Groceries,4,5970,POS,Yes
+T00085,2025-06-06,19,Festac,Lagos Mainland,Personal Care,4,4910,Card,No
+T00280,2025-06-07,12,Festac,Lagos Mainland,Groceries,6,8040,POS,Yes
+T00344,2025-06-07,13,Surulere,Surulere,Household,5,5400,Card,Yes
+T01663,2025-06-07,14,Ikeja City Mall,Ikeja,Household,3,4410,Transfer,Yes
+T01835,2025-06-07,15,Ikeja City Mall,Ikeja,Groceries,5,6300,POS,Yes
+T00095,2025-06-07,18,Lekki Phase 1,Lekki,Personal Care,7,7670,Transfer,No
+T01161,2025-06-07,18,Surulere,Surulere,Beverages,12,19220,Card,No
+T01305,2025-06-07,18,Yaba,Lagos Mainland,Groceries,7,6810,POS,No
+T01323,2025-06-08,15,Lekki Phase 1,Lekki,Groceries,6,7570,Transfer,Yes
+T01417,2025-06-08,16,Lekki Phase 1,Lekki,Electronics,49,70460,Card,Yes
+T01362,2025-06-08,20,Ikeja City Mall,Ikeja,Beverages,4,4200,POS,Yes
+T00827,2025-06-09,8,Ikeja City Mall,Ikeja,Groceries,9,10970,Transfer,No
+T00448,2025-06-09,9,Lekki Phase 1,Lekki,Groceries,9,11570,POS,Yes
+T01133,2025-06-09,11,Festac,Lagos Mainland,Beverages,3,3080,Card,No
+T01600,2025-06-09,11,Surulere,Surulere,Groceries,6,6670,Cash,No
+T01751,2025-06-09,13,Victoria Island,Lagos Island,Beverages,2,2560,Cash,Yes
+T00613,2025-06-09,15,Yaba,Lagos Mainland,Baby,8,12170,Card,Yes
+T01412,2025-06-09,21,Surulere,Surulere,Personal Care,8,8130,Card,No
+T01232,2025-06-10,10,Victoria Island,Lagos Island,Groceries,8,8250,Card,No
+T01203,2025-06-10,17,Lekki Phase 1,Lekki,Groceries,9,9320,Card,Yes
+T00198,2025-06-10,21,Festac,Lagos Mainland,Beverages,7,9510,Cash,No
+T00945,2025-06-11,9,Victoria Island,Lagos Island,Personal Care,4,5500,Card,Yes
+T01294,2025-06-11,13,Ikeja City Mall,Ikeja,Groceries,11,10270,Card,Yes
+T00931,2025-06-11,14,Ikeja City Mall,Ikeja,Household,2,2510,Transfer,No
+T01627,2025-06-11,17,Victoria Island,Lagos Island,Beverages,5,8530,Transfer,Yes
+T01849,2025-06-11,21,Victoria Island,Lagos Island,Groceries,7,8660,Transfer,No
+T01039,2025-06-12,9,Surulere,Surulere,Beverages,8,7160,POS,No
+T01253,2025-06-12,11,Lekki Phase 1,Lekki,Groceries,6,6680,POS,No
+T01938,2025-06-12,11,Ikeja City Mall,Ikeja,Personal Care,6,6240,Transfer,No
+T00188,2025-06-12,13,Lekki Phase 1,Lekki,Groceries,6,8970,Card,No
+T00941,2025-06-12,13,Festac,Lagos Mainland,Groceries,14,16550,POS,Yes
+T00499,2025-06-12,17,Lekki Phase 1,Lekki,Beverages,3,3500,Card,No
+T01862,2025-06-12,17,Lekki Phase 1,Lekki,Personal Care,6,6930,Card,Yes
+T00383,2025-06-12,19,Victoria Island,Lagos Island,Groceries,10,13610,POS,No
+T01344,2025-06-12,19,Ikeja City Mall,Ikeja,Baby,6,9570,Card,No
+T00430,2025-06-12,21,Victoria Island,Lagos Island,Household,7,7420,Card,Yes
+T01311,2025-06-13,10,Surulere,Surulere,Personal Care,7,7650,Card,No
+T01811,2025-06-13,11,Ikeja City Mall,Ikeja,Personal Care,8,10630,Transfer,No
+T01636,2025-06-13,15,Lekki Phase 1,Lekki,Baby,4,4950,Transfer,No
+T01770,2025-06-13,15,Victoria Island,Lagos Island,Household,2,3070,Transfer,No
+T01624,2025-06-13,16,Victoria Island,Lagos Island,Electronics,9,10230,Transfer,Yes
+T00724,2025-06-13,17,Surulere,Surulere,Groceries,4,6170,Card,No
+T01169,2025-06-13,18,Victoria Island,Lagos Island,Baby,5,8010,Cash,Yes
+T00381,2025-06-14,13,Ikeja City Mall,Ikeja,Groceries,14,15290,Card,Yes
+T01014,2025-06-14,13,Lekki Phase 1,Lekki,Beverages,2,3180,Card,No
+T01834,2025-06-14,14,Yaba,Lagos Mainland,Beverages,2,1800,Transfer,Yes
+T00393,2025-06-14,15,Surulere,Surulere,Groceries,9,9090,Transfer,No
+T00518,2025-06-14,21,Festac,Lagos Mainland,Groceries,15,21040,POS,Yes
+T01557,2025-06-15,13,Ikeja City Mall,Ikeja,Personal Care,3,3040,Card,No
+T01664,2025-06-15,13,Yaba,Lagos Mainland,Electronics,20,26900,POS,No
+T01666,2025-06-15,13,Surulere,Surulere,Electronics,14,13690,Transfer,No
+T00098,2025-06-15,14,Ikeja City Mall,Ikeja,Personal Care,4,6090,Transfer,Yes
+T01192,2025-06-15,16,Surulere,Surulere,Beverages,3,3890,Cash,Yes
+T01859,2025-06-15,16,Lekki Phase 1,Lekki,Baby,5,8120,Card,No
+T00349,2025-06-15,18,Lekki Phase 1,Lekki,Household,4,3880,Transfer,No
+T00523,2025-06-15,18,Ikeja City Mall,Ikeja,Groceries,13,18960,Card,Yes
+T01458,2025-06-15,19,Festac,Lagos Mainland,Personal Care,3,3740,Transfer,No
+T01988,2025-06-15,20,Ikeja City Mall,Ikeja,Groceries,7,9100,POS,No
+T01452,2025-06-16,8,Lekki Phase 1,Lekki,Beverages,6,9550,POS,Yes
+T00065,2025-06-16,11,Festac,Lagos Mainland,Beverages,7,7890,Card,Yes
+T00620,2025-06-16,12,Victoria Island,Lagos Island,Beverages,2,2100,Transfer,No
+T00867,2025-06-16,12,Yaba,Lagos Mainland,Electronics,37,33600,POS,No
+T01053,2025-06-16,13,Victoria Island,Lagos Island,Groceries,11,13630,Card,No
+T01187,2025-06-16,13,Festac,Lagos Mainland,Groceries,9,9660,Cash,No
+T01794,2025-06-16,16,Surulere,Surulere,Groceries,26,25140,Card,Yes
+T01485,2025-06-16,17,Lekki Phase 1,Lekki,Groceries,8,12470,POS,Yes
+T00841,2025-06-16,18,Victoria Island,Lagos Island,Beverages,3,3230,Cash,Yes
+T00460,2025-06-18,8,Festac,Lagos Mainland,Groceries,6,7400,Transfer,Yes
+T01065,2025-06-18,13,Lekki Phase 1,Lekki,Groceries,3,3340,POS,No
+T01593,2025-06-18,14,Ikeja City Mall,Ikeja,Household,7,8380,Card,No
+T00319,2025-06-19,15,Yaba,Lagos Mainland,Personal Care,9,8170,Card,No
+T00398,2025-06-19,16,Lekki Phase 1,Lekki,Personal Care,5,5370,Cash,No
+T01279,2025-06-19,16,Victoria Island,Lagos Island,Groceries,9,8750,Card,No
+T01468,2025-06-19,19,Victoria Island,Lagos Island,Baby,14,21940,POS,No
+T00114,2025-06-19,21,Yaba,Lagos Mainland,Groceries,2,3060,Cash,No
+T00500,2025-06-20,8,Festac,Lagos Mainland,Household,6,9940,Transfer,No
+T00605,2025-06-20,18,Surulere,Surulere,Beverages,4,3920,Card,No
+T00890,2025-06-20,18,Festac,Lagos Mainland,Baby,5,8100,Card,No
+T00189,2025-06-21,11,Ikeja City Mall,Ikeja,Groceries,7,10880,Transfer,No
+T00138,2025-06-21,12,Festac,Lagos Mainland,Personal Care,10,10840,Transfer,No
+T00614,2025-06-21,14,Festac,Lagos Mainland,Baby,4,6170,Transfer,Yes
+T01377,2025-06-21,19,Lekki Phase 1,Lekki,Groceries,15,13720,POS,Yes
+T00733,2025-06-21,20,Surulere,Surulere,Groceries,13,14000,Transfer,Yes
+T00445,2025-06-21,21,Surulere,Surulere,Groceries,12,14170,Transfer,No
+T01222,2025-06-22,15,Surulere,Surulere,Electronics,26,39190,Cash,Yes
+T01233,2025-06-22,15,Ikeja City Mall,Ikeja,Household,8,7380,Transfer,No
+T01969,2025-06-22,15,Ikeja City Mall,Ikeja,Groceries,2,2770,Card,Yes
+T00001,2025-06-22,16,Festac,Lagos Mainland,Groceries,6,7550,Card,Yes
+T00063,2025-06-23,11,Ikeja City Mall,Ikeja,Household,5,4460,POS,Yes
+T01372,2025-06-23,11,Victoria Island,Lagos Island,Groceries,8,8790,POS,Yes
+T01024,2025-06-23,14,Yaba,Lagos Mainland,Groceries,9,13070,Card,No
+T01652,2025-06-23,14,Ikeja City Mall,Ikeja,Personal Care,6,9110,Cash,Yes
+T01313,2025-06-23,15,Yaba,Lagos Mainland,Groceries,6,8240,POS,Yes
+T01335,2025-06-23,16,Yaba,Lagos Mainland,Beverages,2,2550,Transfer,No
+T01915,2025-06-23,16,Surulere,Surulere,Groceries,12,13380,POS,Yes
+T01228,2025-06-23,17,Festac,Lagos Mainland,Groceries,9,8430,Cash,Yes
+T01965,2025-06-23,19,Surulere,Surulere,Groceries,2,3010,Transfer,Yes
+T01088,2025-06-24,9,Ikeja City Mall,Ikeja,Beverages,3,4640,POS,Yes
+T00230,2025-06-24,12,Victoria Island,Lagos Island,Beverages,10,10010,Transfer,Yes
+T00707,2025-06-24,12,Lekki Phase 1,Lekki,Household,4,5360,Transfer,No
+T00323,2025-06-24,13,Surulere,Surulere,Electronics,35,49070,Transfer,No
+T01726,2025-06-24,13,Ikeja City Mall,Ikeja,Groceries,7,6460,Card,No
+T01179,2025-06-24,17,Surulere,Surulere,Groceries,14,18890,Transfer,Yes
+T01911,2025-06-24,18,Victoria Island,Lagos Island,Beverages,7,6830,POS,No
+T00496,2025-06-24,21,Yaba,Lagos Mainland,Household,7,10560,Transfer,No
+T01968,2025-06-25,15,Victoria Island,Lagos Island,Groceries,10,13230,POS,No
+T01225,2025-06-25,16,Festac,Lagos Mainland,Beverages,4,6240,POS,No
+T01486,2025-06-25,16,Lekki Phase 1,Lekki,Groceries,5,7040,Card,Yes
+T00592,2025-06-25,21,Lekki Phase 1,Lekki,Beverages,2,3030,Transfer,Yes
+T01405,2025-06-26,12,Festac,Lagos Mainland,Groceries,3,5420,POS,Yes
+T00451,2025-06-26,14,Yaba,Lagos Mainland,Household,10,10400,Cash,Yes
+T01536,2025-06-26,14,Festac,Lagos Mainland,Groceries,6,8590,Card,Yes
+T00950,2025-06-26,15,Ikeja City Mall,Ikeja,Household,6,7940,Transfer,No
+T00746,2025-06-27,9,Surulere,Surulere,Beverages,3,3050,Card,Yes
+T01643,2025-06-27,14,Ikeja City Mall,Ikeja,Groceries,4,5230,Card,No
+T01694,2025-06-27,14,Festac,Lagos Mainland,Groceries,4,5300,POS,Yes
+T01023,2025-06-27,16,Lekki Phase 1,Lekki,Personal Care,6,5780,Card,No
+T00023,2025-06-27,17,Ikeja City Mall,Ikeja,Groceries,6,9700,POS,Yes
+T01183,2025-06-28,11,Surulere,Surulere,Baby,18,23760,Cash,No
+T00035,2025-06-28,13,Lekki Phase 1,Lekki,Groceries,8,7810,Transfer,Yes
+T00190,2025-06-28,13,Yaba,Lagos Mainland,Groceries,9,11250,Cash,No
+T00015,2025-06-28,17,Festac,Lagos Mainland,Groceries,11,9720,Cash,No
+T00468,2025-06-28,18,Ikeja City Mall,Ikeja,Personal Care,3,3880,POS,No
+T01548,2025-06-28,19,Ikeja City Mall,Ikeja,Groceries,9,10800,Transfer,Yes
+T01723,2025-06-28,20,Ikeja City Mall,Ikeja,Beverages,7,9830,Transfer,No
+T00879,2025-06-29,10,Festac,Lagos Mainland,Groceries,18,28180,POS,No
+T00816,2025-06-29,13,Yaba,Lagos Mainland,Groceries,3,4410,POS,No
+T00502,2025-06-29,14,Ikeja City Mall,Ikeja,Beverages,4,5020,Cash,No
+T00712,2025-06-29,15,Ikeja City Mall,Ikeja,Groceries,9,11850,Cash,Yes
+T00543,2025-06-29,16,Victoria Island,Lagos Island,Personal Care,4,5600,Transfer,Yes
+T00838,2025-06-29,18,Festac,Lagos Mainland,Groceries,2,3110,Transfer,No
+T01525,2025-06-30,13,Festac,Lagos Mainland,Baby,5,6080,Card,No
+T01038,2025-07-01,9,Ikeja City Mall,Ikeja,Groceries,9,12090,POS,No
+T01606,2025-07-01,12,Victoria Island,Lagos Island,Baby,5,6590,Card,Yes
+T01828,2025-07-01,12,Festac,Lagos Mainland,Groceries,6,5990,Card,Yes
+T00283,2025-07-01,13,Ikeja City Mall,Ikeja,Groceries,5,8080,Cash,Yes
+T01470,2025-07-01,14,Lekki Phase 1,Lekki,Groceries,13,12980,Card,No
+T00177,2025-07-01,16,Ikeja City Mall,Ikeja,Beverages,5,7460,Transfer,No
+T01678,2025-07-01,16,Yaba,Lagos Mainland,Groceries,8,9070,Card,No
+T01235,2025-07-01,17,Lekki Phase 1,Lekki,Groceries,1,1700,Transfer,No
+T00022,2025-07-01,18,Lekki Phase 1,Lekki,Electronics,25,33120,Card,Yes
+T01943,2025-07-01,21,Ikeja City Mall,Ikeja,Household,4,6400,Card,No
+T00982,2025-07-02,13,Lekki Phase 1,Lekki,Household,3,4060,Cash,No
+T01177,2025-07-02,16,Ikeja City Mall,Ikeja,Personal Care,5,8390,Transfer,Yes
+T00629,2025-07-02,17,Festac,Lagos Mainland,Groceries,3,4610,Transfer,Yes
+T00818,2025-07-02,17,Lekki Phase 1,Lekki,Groceries,6,7120,Cash,Yes
+T00528,2025-07-02,18,Surulere,Surulere,Personal Care,3,2940,Card,No
+T01688,2025-07-02,18,Victoria Island,Lagos Island,Beverages,4,3770,Card,No
+T01855,2025-07-02,19,Festac,Lagos Mainland,Electronics,30,42360,Transfer,Yes
+T00632,2025-07-02,20,Yaba,Lagos Mainland,Personal Care,4,3440,POS,No
+T00844,2025-07-02,21,Festac,Lagos Mainland,Household,8,8650,Transfer,Yes
+T00506,2025-07-03,11,Festac,Lagos Mainland,Groceries,8,9930,POS,Yes
+T00978,2025-07-03,12,Yaba,Lagos Mainland,Groceries,7,9760,Transfer,Yes
+T01055,2025-07-03,13,Ikeja City Mall,Ikeja,Beverages,3,4340,Cash,No
+T00148,2025-07-03,14,Victoria Island,Lagos Island,Electronics,77,100920,POS,No
+T00763,2025-07-03,17,Victoria Island,Lagos Island,Beverages,3,3790,Transfer,No
+T01916,2025-07-03,17,Yaba,Lagos Mainland,Beverages,3,3130,Transfer,No
+T01109,2025-07-03,18,Ikeja City Mall,Ikeja,Groceries,3,3440,Transfer,No
+T01577,2025-07-03,21,Lekki Phase 1,Lekki,Household,5,4660,Transfer,No
+T00821,2025-07-04,15,Victoria Island,Lagos Island,Personal Care,5,5300,Card,No
+T00834,2025-07-04,16,Festac,Lagos Mainland,Personal Care,14,18720,POS,Yes
+T00203,2025-07-04,18,Ikeja City Mall,Ikeja,Household,7,8990,Transfer,No
+T01886,2025-07-05,11,Lekki Phase 1,Lekki,Groceries,6,7890,Cash,No
+T01560,2025-07-05,12,Yaba,Lagos Mainland,Beverages,4,4750,POS,Yes
+T00630,2025-07-05,15,Ikeja City Mall,Ikeja,Groceries,4,5730,Card,No
+T00480,2025-07-05,16,Surulere,Surulere,Groceries,11,15280,Card,Yes
+T01448,2025-07-05,18,Ikeja City Mall,Ikeja,Electronics,32,45200,Card,Yes
+T01787,2025-07-05,18,Yaba,Lagos Mainland,Groceries,4,3770,POS,No
+T01558,2025-07-05,19,Yaba,Lagos Mainland,Baby,18,17410,Card,No
+T00901,2025-07-06,13,Ikeja City Mall,Ikeja,Beverages,5,5710,Card,No
+T00126,2025-07-06,14,Lekki Phase 1,Lekki,Beverages,3,3830,POS,No
+T01432,2025-07-06,14,Festac,Lagos Mainland,Personal Care,3,4890,Cash,No
+T01783,2025-07-06,21,Ikeja City Mall,Ikeja,Baby,23,20740,Cash,No
+T00088,2025-07-07,12,Victoria Island,Lagos Island,Baby,3,4640,POS,No
+T00192,2025-07-07,12,Surulere,Surulere,Groceries,11,13970,Card,Yes
+T00824,2025-07-07,12,Lekki Phase 1,Lekki,Baby,9,12380,POS,No
+T01671,2025-07-07,12,Lekki Phase 1,Lekki,Household,5,7750,Card,No
+T00033,2025-07-07,13,Festac,Lagos Mainland,Beverages,1,1210,POS,No
+T01972,2025-07-07,17,Yaba,Lagos Mainland,Personal Care,4,4790,POS,Yes
+T01292,2025-07-08,12,Yaba,Lagos Mainland,Personal Care,7,8920,POS,No
+T01076,2025-07-08,15,Ikeja City Mall,Ikeja,Personal Care,4,5960,Card,No
+T00160,2025-07-08,17,Victoria Island,Lagos Island,Beverages,1,1790,Transfer,No
+T01052,2025-07-08,18,Lekki Phase 1,Lekki,Beverages,2,2820,Cash,No
+T01271,2025-07-09,13,Yaba,Lagos Mainland,Baby,3,4880,Cash,Yes
+T00432,2025-07-09,14,Victoria Island,Lagos Island,Groceries,4,6570,Cash,No
+T00199,2025-07-09,16,Festac,Lagos Mainland,Groceries,4,5590,Card,Yes
+T01438,2025-07-10,14,Festac,Lagos Mainland,Beverages,3,3130,POS,No
+T00418,2025-07-10,16,Victoria Island,Lagos Island,Groceries,5,7290,POS,Yes
+T00503,2025-07-10,16,Yaba,Lagos Mainland,Baby,7,9240,Transfer,No
+T01523,2025-07-10,16,Victoria Island,Lagos Island,Household,7,6430,Transfer,Yes
+T00634,2025-07-10,18,Yaba,Lagos Mainland,Baby,8,11240,Transfer,No
+T01264,2025-07-11,11,Surulere,Surulere,Groceries,7,7630,Card,Yes
+T01465,2025-07-11,13,Festac,Lagos Mainland,Groceries,7,10210,Cash,Yes
+T01041,2025-07-11,14,Festac,Lagos Mainland,Baby,2,2680,Cash,No
+T00470,2025-07-11,20,Victoria Island,Lagos Island,Beverages,8,7260,Card,Yes
+T00678,2025-07-12,18,Lekki Phase 1,Lekki,Baby,8,9540,Transfer,No
+T01202,2025-07-12,18,Lekki Phase 1,Lekki,Beverages,6,6250,Card,No
+T00611,2025-07-12,19,Surulere,Surulere,Groceries,7,7410,Transfer,Yes
+T01131,2025-07-13,9,Yaba,Lagos Mainland,Beverages,3,3040,Card,Yes
+T01101,2025-07-13,11,Surulere,Surulere,Baby,9,12290,POS,No
+T00860,2025-07-13,12,Festac,Lagos Mainland,Personal Care,11,15840,Card,Yes
+T00514,2025-07-13,14,Ikeja City Mall,Ikeja,Groceries,5,6420,POS,Yes
+T01852,2025-07-13,14,Ikeja City Mall,Ikeja,Personal Care,8,7890,POS,No
+T01035,2025-07-13,15,Ikeja City Mall,Ikeja,Groceries,9,9530,Cash,Yes
+T01199,2025-07-13,15,Ikeja City Mall,Ikeja,Beverages,3,3180,Transfer,No
+T01020,2025-07-13,17,Ikeja City Mall,Ikeja,Household,12,14400,Cash,Yes
+T01307,2025-07-13,17,Lekki Phase 1,Lekki,Beverages,5,7900,Card,Yes
+T01748,2025-07-13,17,Ikeja City Mall,Ikeja,Personal Care,5,5750,Card,No
+T01506,2025-07-14,8,Festac,Lagos Mainland,Personal Care,11,17420,Cash,No
+T01003,2025-07-14,13,Ikeja City Mall,Ikeja,Personal Care,5,5480,Cash,Yes
+T01873,2025-07-14,13,Lekki Phase 1,Lekki,Groceries,7,8470,Card,No
+T00673,2025-07-14,15,Victoria Island,Lagos Island,Groceries,8,11080,Card,No
+T01457,2025-07-14,15,Yaba,Lagos Mainland,Beverages,3,3750,Transfer,Yes
+T00133,2025-07-14,16,Surulere,Surulere,Beverages,3,3090,Transfer,No
+T00848,2025-07-14,16,Festac,Lagos Mainland,Groceries,11,11060,Card,Yes
+T01829,2025-07-14,21,Lekki Phase 1,Lekki,Personal Care,13,16160,POS,No
+T00520,2025-07-15,10,Festac,Lagos Mainland,Groceries,5,5180,Card,Yes
+T01667,2025-07-15,14,Festac,Lagos Mainland,Groceries,3,5180,Card,No
+T01656,2025-07-15,15,Festac,Lagos Mainland,Groceries,11,13570,Card,No
+T00833,2025-07-16,11,Lekki Phase 1,Lekki,Groceries,14,15610,Card,Yes
+T01660,2025-07-16,11,Surulere,Surulere,Groceries,5,7370,Transfer,Yes
+T00983,2025-07-16,13,Lekki Phase 1,Lekki,Groceries,6,6370,Transfer,Yes
+T01760,2025-07-16,14,Yaba,Lagos Mainland,Groceries,8,9020,Cash,Yes
+T00921,2025-07-16,16,Ikeja City Mall,Ikeja,Groceries,3,4550,Cash,No
+T00474,2025-07-16,18,Yaba,Lagos Mainland,Beverages,5,5020,Transfer,Yes
+T00964,2025-07-16,21,Surulere,Surulere,Beverages,7,7840,Card,Yes
+T01373,2025-07-17,10,Victoria Island,Lagos Island,Baby,8,11360,Card,No
+T01936,2025-07-17,14,Victoria Island,Lagos Island,Personal Care,7,9870,Transfer,Yes
+T01214,2025-07-17,15,Lekki Phase 1,Lekki,Personal Care,4,4490,Cash,Yes
+T01639,2025-07-17,15,Surulere,Surulere,Personal Care,2,2520,POS,No
+T01923,2025-07-17,16,Surulere,Surulere,Beverages,2,3200,Cash,No
+T00774,2025-07-17,17,Yaba,Lagos Mainland,Groceries,9,12790,Cash,Yes
+T00139,2025-07-17,18,Surulere,Surulere,Groceries,4,5250,POS,No
+T00597,2025-07-17,18,Festac,Lagos Mainland,Groceries,28,32240,Card,No
+T01074,2025-07-17,18,Victoria Island,Lagos Island,Beverages,3,2640,Card,Yes
+T01302,2025-07-17,18,Ikeja City Mall,Ikeja,Beverages,6,6860,Transfer,No
+T01346,2025-07-17,21,Surulere,Surulere,Household,2,3280,Card,No
+T01974,2025-07-18,11,Surulere,Surulere,Groceries,6,8850,POS,No
+T01063,2025-07-18,14,Ikeja City Mall,Ikeja,Groceries,6,7460,Card,No
+T01090,2025-07-18,18,Yaba,Lagos Mainland,Beverages,3,3890,Card,No
+T01460,2025-07-18,18,Yaba,Lagos Mainland,Groceries,7,6320,Transfer,No
+T00143,2025-07-18,21,Yaba,Lagos Mainland,Household,9,13740,POS,Yes
+T01539,2025-07-19,14,Yaba,Lagos Mainland,Groceries,16,21630,Card,Yes
+T00991,2025-07-19,16,Festac,Lagos Mainland,Baby,35,32700,Card,Yes
+T00777,2025-07-19,17,Victoria Island,Lagos Island,Groceries,3,4280,Cash,No
+T00392,2025-07-19,18,Victoria Island,Lagos Island,Household,6,7560,Transfer,Yes
+T00717,2025-07-19,18,Ikeja City Mall,Ikeja,Beverages,3,4020,Transfer,No
+T01640,2025-07-19,20,Surulere,Surulere,Electronics,33,35160,POS,No
+T00247,2025-07-19,21,Lekki Phase 1,Lekki,Baby,5,7850,Transfer,No
+T00235,2025-07-20,8,Ikeja City Mall,Ikeja,Groceries,11,11210,Cash,No
+T00776,2025-07-20,8,Ikeja City Mall,Ikeja,Beverages,4,3630,Transfer,No
+T01665,2025-07-20,11,Ikeja City Mall,Ikeja,Beverages,7,6360,POS,Yes
+T00183,2025-07-20,12,Ikeja City Mall,Ikeja,Household,3,3180,POS,No
+T01958,2025-07-20,12,Festac,Lagos Mainland,Personal Care,5,6360,POS,No
+T00748,2025-07-20,13,Festac,Lagos Mainland,Groceries,8,12560,Card,No
+T01613,2025-07-20,14,Yaba,Lagos Mainland,Groceries,5,5960,Cash,No
+T00416,2025-07-20,15,Ikeja City Mall,Ikeja,Groceries,13,16960,Cash,Yes
+T00787,2025-07-20,15,Lekki Phase 1,Lekki,Personal Care,6,6230,Card,Yes
+T01463,2025-07-20,15,Ikeja City Mall,Ikeja,Electronics,31,39840,Transfer,No
+T01810,2025-07-20,16,Festac,Lagos Mainland,Beverages,7,9200,Card,Yes
+T00551,2025-07-21,15,Lekki Phase 1,Lekki,Groceries,8,12890,Card,Yes
+T00701,2025-07-21,17,Lekki Phase 1,Lekki,Groceries,5,5730,Card,No
+T00755,2025-07-21,17,Ikeja City Mall,Ikeja,Groceries,11,11840,Cash,No
+T00535,2025-07-22,8,Ikeja City Mall,Ikeja,Household,4,6400,Cash,Yes
+T01944,2025-07-22,13,Ikeja City Mall,Ikeja,Personal Care,6,7810,Card,Yes
+T01017,2025-07-22,15,Festac,Lagos Mainland,Household,6,8760,Transfer,No
+T01597,2025-07-22,16,Ikeja City Mall,Ikeja,Beverages,3,4040,Card,Yes
+T01899,2025-07-22,17,Surulere,Surulere,Groceries,12,18190,Transfer,No
+T01626,2025-07-22,19,Victoria Island,Lagos Island,Beverages,2,1970,Transfer,Yes
+T00155,2025-07-23,12,Victoria Island,Lagos Island,Groceries,12,17260,Card,Yes
+T00250,2025-07-23,12,Yaba,Lagos Mainland,Household,2,2100,Transfer,No
+T01677,2025-07-23,15,Ikeja City Mall,Ikeja,Household,9,13860,Card,No
+T01710,2025-07-23,17,Victoria Island,Lagos Island,Beverages,6,5260,Card,Yes
+T01838,2025-07-23,17,Ikeja City Mall,Ikeja,Household,4,4770,Transfer,Yes
+T00324,2025-07-23,20,Surulere,Surulere,Personal Care,3,4600,Card,Yes
+T00406,2025-07-24,9,Ikeja City Mall,Ikeja,Personal Care,3,4470,POS,Yes
+T01223,2025-07-24,11,Victoria Island,Lagos Island,Groceries,9,9640,Transfer,No
+T00051,2025-07-24,13,Yaba,Lagos Mainland,Groceries,31,44290,Transfer,No
+T01519,2025-07-24,16,Ikeja City Mall,Ikeja,Groceries,4,4570,Transfer,No
+T01728,2025-07-24,19,Ikeja City Mall,Ikeja,Groceries,9,8990,Card,No
+T01831,2025-07-24,20,Yaba,Lagos Mainland,Beverages,2,3950,Cash,No
+T00312,2025-07-25,8,Victoria Island,Lagos Island,Electronics,32,36640,POS,Yes
+T00539,2025-07-25,10,Festac,Lagos Mainland,Groceries,3,5310,Card,No
+T01435,2025-07-25,11,Surulere,Surulere,Personal Care,9,12890,Card,No
+T00165,2025-07-25,14,Lekki Phase 1,Lekki,Groceries,9,13430,POS,No
+T01843,2025-07-25,14,Yaba,Lagos Mainland,Groceries,8,13260,Cash,Yes
+T00405,2025-07-25,19,Victoria Island,Lagos Island,Groceries,3,4230,POS,No
+T01654,2025-07-26,11,Lekki Phase 1,Lekki,Household,2,3210,Cash,No
+T01989,2025-07-26,12,Victoria Island,Lagos Island,Household,5,6810,Cash,No
+T00006,2025-07-26,13,Festac,Lagos Mainland,Personal Care,11,10170,Transfer,No
+T00056,2025-07-26,15,Yaba,Lagos Mainland,Beverages,7,7790,Cash,No
+T00516,2025-07-26,15,Victoria Island,Lagos Island,Groceries,6,5710,Transfer,Yes
+T01237,2025-07-26,17,Yaba,Lagos Mainland,Groceries,4,5580,Cash,No
+T01351,2025-07-26,20,Ikeja City Mall,Ikeja,Baby,3,4430,Transfer,No
+T00124,2025-07-27,11,Yaba,Lagos Mainland,Groceries,3,3970,Card,No
+T00134,2025-07-27,11,Lekki Phase 1,Lekki,Groceries,6,5270,POS,No
+T00321,2025-07-27,13,Ikeja City Mall,Ikeja,Personal Care,12,19090,Transfer,No
+T01808,2025-07-27,14,Victoria Island,Lagos Island,Groceries,7,8960,POS,No
+T01189,2025-07-27,16,Festac,Lagos Mainland,Personal Care,4,5840,Transfer,No
+T00246,2025-07-27,21,Yaba,Lagos Mainland,Groceries,3,4290,POS,Yes
+T01569,2025-07-28,8,Victoria Island,Lagos Island,Electronics,35,45310,Cash,No
+T01871,2025-07-28,12,Ikeja City Mall,Ikeja,Household,5,6120,Transfer,No
+T01333,2025-07-28,16,Yaba,Lagos Mainland,Groceries,3,3290,Transfer,No
+T00677,2025-07-28,19,Lekki Phase 1,Lekki,Household,3,3370,Card,No
+T01910,2025-07-29,15,Lekki Phase 1,Lekki,Personal Care,8,8390,Cash,No
+T00373,2025-07-29,16,Festac,Lagos Mainland,Personal Care,5,4650,Transfer,No
+T01976,2025-07-29,18,Victoria Island,Lagos Island,Groceries,10,9650,Transfer,No
+T01578,2025-07-30,16,Surulere,Surulere,Baby,5,8290,Transfer,No
+T00411,2025-07-30,17,Ikeja City Mall,Ikeja,Baby,10,11540,POS,No
+T00092,2025-07-31,12,Surulere,Surulere,Groceries,4,5730,Card,No
+T01797,2025-07-31,12,Lekki Phase 1,Lekki,Beverages,2,3420,Transfer,Yes
+T00294,2025-07-31,13,Victoria Island,Lagos Island,Groceries,27,37590,Card,No
+T01888,2025-07-31,14,Festac,Lagos Mainland,Groceries,10,12530,Transfer,Yes
+T01125,2025-07-31,15,Lekki Phase 1,Lekki,Electronics,21,23410,Card,No
+T00504,2025-07-31,17,Victoria Island,Lagos Island,Beverages,6,6740,Cash,No
+T00028,2025-07-31,18,Surulere,Surulere,Electronics,36,38900,Transfer,No
+T00233,2025-07-31,19,Lekki Phase 1,Lekki,Beverages,4,5430,Card,Yes
+T01839,2025-07-31,19,Yaba,Lagos Mainland,Groceries,6,5440,Transfer,No
+T01961,2025-07-31,19,Yaba,Lagos Mainland,Groceries,5,8340,POS,No
+T00318,2025-07-31,21,Surulere,Surulere,Beverages,2,3550,Card,No
+T00532,2025-07-31,21,Festac,Lagos Mainland,Groceries,3,4180,Transfer,Yes
+T00483,2025-08-01,13,Ikeja City Mall,Ikeja,Household,10,12950,Transfer,Yes
+T01991,2025-08-01,16,Lekki Phase 1,Lekki,Personal Care,8,7550,Transfer,No
+T00986,2025-08-01,18,Victoria Island,Lagos Island,Electronics,22,29750,POS,No
+T02000,2025-08-02,12,Lekki Phase 1,Lekki,Personal Care,5,7880,Transfer,No
+T00215,2025-08-02,13,Ikeja City Mall,Ikeja,Beverages,2,2200,POS,Yes
+T01383,2025-08-02,13,Ikeja City Mall,Ikeja,Groceries,9,12170,Card,Yes
+T01616,2025-08-02,14,Ikeja City Mall,Ikeja,Baby,13,17040,Transfer,No
+T01032,2025-08-02,16,Ikeja City Mall,Ikeja,Groceries,10,11380,Transfer,No
+T00286,2025-08-02,18,Ikeja City Mall,Ikeja,Personal Care,2,3230,POS,Yes
+T01332,2025-08-02,20,Yaba,Lagos Mainland,Groceries,3,4090,Cash,Yes
+T00819,2025-08-03,13,Yaba,Lagos Mainland,Baby,10,10660,POS,Yes
+T00047,2025-08-03,15,Ikeja City Mall,Ikeja,Baby,20,28740,Card,No
+T01345,2025-08-03,15,Festac,Lagos Mainland,Groceries,15,18710,Card,Yes
+T01777,2025-08-03,19,Surulere,Surulere,Beverages,4,4130,Cash,Yes
+T01589,2025-08-04,8,Festac,Lagos Mainland,Beverages,1,2140,Cash,No
+T00038,2025-08-04,14,Festac,Lagos Mainland,Personal Care,7,9270,Transfer,No
+T01762,2025-08-04,14,Festac,Lagos Mainland,Baby,25,24850,Card,No
+T01030,2025-08-04,15,Ikeja City Mall,Ikeja,Groceries,4,6490,Card,No
+T00130,2025-08-05,9,Lekki Phase 1,Lekki,Electronics,23,36440,Transfer,No
+T00012,2025-08-05,11,Yaba,Lagos Mainland,Beverages,2,1900,Card,No
+T00417,2025-08-05,14,Victoria Island,Lagos Island,Baby,12,15150,Cash,No
+T00946,2025-08-05,16,Surulere,Surulere,Personal Care,3,5330,Transfer,No
+T01072,2025-08-06,8,Victoria Island,Lagos Island,Groceries,7,9260,POS,Yes
+T01231,2025-08-06,10,Ikeja City Mall,Ikeja,Household,6,5480,Cash,No
+T00680,2025-08-06,13,Yaba,Lagos Mainland,Household,4,3540,Transfer,No
+T00542,2025-08-06,14,Ikeja City Mall,Ikeja,Electronics,115,121990,Card,No
+T01620,2025-08-06,14,Festac,Lagos Mainland,Personal Care,4,4670,Transfer,Yes
+T00782,2025-08-06,16,Festac,Lagos Mainland,Beverages,3,4670,POS,No
+T00798,2025-08-06,16,Ikeja City Mall,Ikeja,Beverages,2,2170,POS,No
+T01331,2025-08-07,11,Victoria Island,Lagos Island,Groceries,8,12530,Transfer,No
+T01586,2025-08-07,11,Ikeja City Mall,Ikeja,Groceries,4,5740,Transfer,No
+T00076,2025-08-07,13,Festac,Lagos Mainland,Beverages,3,4100,Card,No
+T00974,2025-08-07,18,Ikeja City Mall,Ikeja,Groceries,6,6570,Card,No
+T00658,2025-08-08,11,Surulere,Surulere,Personal Care,7,8550,Cash,No
+T01048,2025-08-08,11,Yaba,Lagos Mainland,Groceries,11,11560,Card,No
+T01391,2025-08-08,11,Festac,Lagos Mainland,Beverages,3,3580,Transfer,No
+T00671,2025-08-08,15,Ikeja City Mall,Ikeja,Beverages,3,4800,Transfer,Yes
+T00271,2025-08-08,16,Ikeja City Mall,Ikeja,Household,4,6000,Card,No
+T01493,2025-08-08,16,Lekki Phase 1,Lekki,Beverages,2,2660,POS,Yes
+T01755,2025-08-08,16,Lekki Phase 1,Lekki,Groceries,3,4210,Card,Yes
+T00814,2025-08-08,17,Lekki Phase 1,Lekki,Personal Care,6,7970,Card,No
+T00272,2025-08-08,18,Ikeja City Mall,Ikeja,Baby,3,3570,Cash,No
+T01462,2025-08-08,18,Festac,Lagos Mainland,Groceries,12,16500,Card,Yes
+T01566,2025-08-08,19,Yaba,Lagos Mainland,Groceries,17,23910,Cash,No
+T01399,2025-08-09,10,Festac,Lagos Mainland,Beverages,2,3460,Card,No
+T01139,2025-08-09,11,Surulere,Surulere,Groceries,8,7840,Card,Yes
+T01877,2025-08-09,11,Yaba,Lagos Mainland,Beverages,6,6130,Transfer,Yes
+T00163,2025-08-09,14,Ikeja City Mall,Ikeja,Household,4,5870,POS,Yes
+T00949,2025-08-09,15,Ikeja City Mall,Ikeja,Groceries,3,4890,Transfer,Yes
+T00158,2025-08-09,16,Ikeja City Mall,Ikeja,Household,3,3970,POS,Yes
+T00802,2025-08-09,16,Surulere,Surulere,Baby,10,13760,Transfer,Yes
+T01159,2025-08-09,16,Festac,Lagos Mainland,Household,11,9870,Card,Yes
+T00343,2025-08-10,12,Yaba,Lagos Mainland,Beverages,7,6500,Cash,No
+T00580,2025-08-10,15,Yaba,Lagos Mainland,Groceries,6,8310,Card,No
+T00811,2025-08-10,18,Lekki Phase 1,Lekki,Household,8,7580,Card,Yes
+T00531,2025-08-10,19,Surulere,Surulere,Household,6,5620,Card,Yes
+T00744,2025-08-10,20,Yaba,Lagos Mainland,Personal Care,7,9350,Cash,No
+T00386,2025-08-11,10,Surulere,Surulere,Baby,21,23970,Transfer,Yes
+T00951,2025-08-11,11,Lekki Phase 1,Lekki,Groceries,4,6380,POS,Yes
+T00288,2025-08-11,12,Ikeja City Mall,Ikeja,Household,12,16660,Cash,No
+T01266,2025-08-11,12,Yaba,Lagos Mainland,Household,6,8200,Card,No
+T01413,2025-08-11,13,Yaba,Lagos Mainland,Baby,10,13780,Transfer,No
+T00855,2025-08-11,16,Victoria Island,Lagos Island,Beverages,7,10260,Cash,No
+T00924,2025-08-11,16,Surulere,Surulere,Groceries,6,6570,Transfer,Yes
+T01537,2025-08-11,20,Festac,Lagos Mainland,Groceries,4,5780,Transfer,Yes
+T01230,2025-08-12,8,Victoria Island,Lagos Island,Groceries,5,7250,POS,No
+T00278,2025-08-12,13,Festac,Lagos Mainland,Groceries,8,10870,Cash,Yes
+T01437,2025-08-12,14,Lekki Phase 1,Lekki,Baby,15,14680,Card,Yes
+T00159,2025-08-12,20,Lekki Phase 1,Lekki,Groceries,3,3670,Card,Yes
+T01227,2025-08-13,13,Victoria Island,Lagos Island,Personal Care,10,10530,Card,No
+T00429,2025-08-13,18,Surulere,Surulere,Personal Care,2,3490,Transfer,No
+T01805,2025-08-13,21,Lekki Phase 1,Lekki,Household,4,3460,Card,No
+T01675,2025-08-14,9,Ikeja City Mall,Ikeja,Groceries,8,9020,POS,No
+T00099,2025-08-14,10,Festac,Lagos Mainland,Groceries,9,11970,Cash,Yes
+T00915,2025-08-14,13,Festac,Lagos Mainland,Beverages,3,3870,Transfer,No
+T01824,2025-08-14,14,Yaba,Lagos Mainland,Beverages,9,12070,Card,No
+T00716,2025-08-14,15,Ikeja City Mall,Ikeja,Groceries,13,20590,POS,Yes
+T01642,2025-08-14,16,Ikeja City Mall,Ikeja,Household,3,4220,Card,No
+T01725,2025-08-14,17,Ikeja City Mall,Ikeja,Beverages,7,10220,Transfer,No
+T01113,2025-08-15,15,Festac,Lagos Mainland,Household,13,16610,Transfer,No
+T01633,2025-08-15,15,Yaba,Lagos Mainland,Groceries,20,18400,Card,No
+T00214,2025-08-15,17,Lekki Phase 1,Lekki,Groceries,8,11690,Card,Yes
+T01130,2025-08-16,13,Surulere,Surulere,Household,11,14530,Card,Yes
+T00779,2025-08-16,14,Surulere,Surulere,Groceries,7,6550,Card,Yes
+T00426,2025-08-16,18,Lekki Phase 1,Lekki,Groceries,3,4960,Transfer,Yes
+T00628,2025-08-16,19,Surulere,Surulere,Beverages,3,3000,Card,Yes
+T01763,2025-08-17,14,Ikeja City Mall,Ikeja,Personal Care,6,8390,Card,No
+T01793,2025-08-17,19,Yaba,Lagos Mainland,Baby,8,7990,Cash,No
+T00305,2025-08-18,9,Lekki Phase 1,Lekki,Personal Care,6,8880,Card,Yes
+T00106,2025-08-18,12,Lekki Phase 1,Lekki,Personal Care,8,7930,Card,No
+T00147,2025-08-18,13,Yaba,Lagos Mainland,Groceries,4,5140,Transfer,No
+T01559,2025-08-18,13,Victoria Island,Lagos Island,Beverages,8,9610,Cash,No
+T01819,2025-08-18,13,Surulere,Surulere,Personal Care,7,6320,POS,No
+T01572,2025-08-18,15,Victoria Island,Lagos Island,Groceries,4,5260,Transfer,Yes
+T01609,2025-08-18,15,Lekki Phase 1,Lekki,Groceries,4,3610,Transfer,Yes
+T01947,2025-08-18,18,Lekki Phase 1,Lekki,Beverages,3,4790,POS,No
+T01274,2025-08-19,12,Surulere,Surulere,Groceries,3,5290,POS,Yes
+T00577,2025-08-19,13,Yaba,Lagos Mainland,Groceries,8,8140,POS,No
+T00213,2025-08-19,17,Surulere,Surulere,Groceries,10,13220,Card,No
+T01581,2025-08-19,18,Victoria Island,Lagos Island,Groceries,6,6780,Card,No
+T01986,2025-08-19,18,Surulere,Surulere,Beverages,6,5410,Transfer,Yes
+T00472,2025-08-20,11,Festac,Lagos Mainland,Household,5,5060,Card,No
+T00522,2025-08-20,11,Surulere,Surulere,Groceries,4,4520,Card,No
+T01836,2025-08-20,12,Lekki Phase 1,Lekki,Beverages,3,3530,POS,No
+T00274,2025-08-20,14,Ikeja City Mall,Ikeja,Beverages,8,9250,Cash,Yes
+T01713,2025-08-20,14,Lekki Phase 1,Lekki,Groceries,10,9130,Transfer,No
+T01883,2025-08-20,14,Surulere,Surulere,Household,5,5750,Transfer,No
+T00615,2025-08-20,15,Festac,Lagos Mainland,Baby,4,4970,Cash,No
+T00070,2025-08-20,17,Surulere,Surulere,Beverages,5,5850,Card,Yes
+T01598,2025-08-20,17,Festac,Lagos Mainland,Groceries,3,5510,POS,Yes
+T01917,2025-08-20,21,Yaba,Lagos Mainland,Personal Care,16,17480,Card,Yes
+T01318,2025-08-21,12,Ikeja City Mall,Ikeja,Groceries,8,9670,Card,No
+T01019,2025-08-21,13,Victoria Island,Lagos Island,Groceries,22,27590,POS,Yes
+T00622,2025-08-21,16,Ikeja City Mall,Ikeja,Personal Care,5,4650,Card,Yes
+T00593,2025-08-21,17,Victoria Island,Lagos Island,Household,8,11150,Cash,Yes
+T00541,2025-08-21,19,Lekki Phase 1,Lekki,Groceries,10,14940,Transfer,No
+T01358,2025-08-21,20,Yaba,Lagos Mainland,Household,8,8820,Transfer,Yes
+T00433,2025-08-22,9,Ikeja City Mall,Ikeja,Beverages,7,6860,Transfer,Yes
+T00296,2025-08-22,12,Lekki Phase 1,Lekki,Personal Care,4,4990,Card,Yes
+T00989,2025-08-22,16,Surulere,Surulere,Baby,16,18210,Transfer,Yes
+T01375,2025-08-23,9,Surulere,Surulere,Groceries,5,6140,Cash,No
+T00515,2025-08-23,12,Surulere,Surulere,Groceries,11,15190,POS,No
+T01124,2025-08-23,12,Ikeja City Mall,Ikeja,Baby,6,5790,Card,Yes
+T01848,2025-08-23,13,Ikeja City Mall,Ikeja,Household,11,12410,Card,No
+T01428,2025-08-23,14,Victoria Island,Lagos Island,Household,7,7150,Card,No
+T01864,2025-08-23,15,Yaba,Lagos Mainland,Beverages,1,1370,Card,No
+T01366,2025-08-23,17,Lekki Phase 1,Lekki,Groceries,5,5520,Cash,No
+T01931,2025-08-23,17,Festac,Lagos Mainland,Groceries,9,11040,POS,No
+T01060,2025-08-23,19,Surulere,Surulere,Beverages,3,4130,Cash,No
+T00904,2025-08-23,20,Ikeja City Mall,Ikeja,Groceries,4,4170,Card,No
+T00914,2025-08-23,20,Victoria Island,Lagos Island,Beverages,8,9630,Transfer,Yes
+T00240,2025-08-24,8,Ikeja City Mall,Ikeja,Beverages,5,7350,Card,Yes
+T01353,2025-08-24,16,Ikeja City Mall,Ikeja,Personal Care,4,5440,Transfer,Yes
+T00780,2025-08-24,18,Ikeja City Mall,Ikeja,Groceries,15,16000,Transfer,Yes
+T01205,2025-08-24,18,Lekki Phase 1,Lekki,Beverages,6,9600,POS,Yes
+T00437,2025-08-24,20,Festac,Lagos Mainland,Beverages,4,4320,Transfer,Yes
+T00770,2025-08-25,11,Surulere,Surulere,Groceries,12,17290,Card,Yes
+T01442,2025-08-25,12,Victoria Island,Lagos Island,Personal Care,10,13490,Card,No
+T00345,2025-08-25,17,Festac,Lagos Mainland,Baby,13,19070,Card,Yes
+T01902,2025-08-25,18,Lekki Phase 1,Lekki,Household,7,9310,Transfer,No
+T01336,2025-08-25,19,Surulere,Surulere,Beverages,5,4380,Transfer,Yes
+T01085,2025-08-26,11,Surulere,Surulere,Groceries,12,13320,POS,No
+T00606,2025-08-26,12,Victoria Island,Lagos Island,Groceries,3,3500,Card,Yes
+T01585,2025-08-26,12,Festac,Lagos Mainland,Groceries,6,6680,Card,No
+T01474,2025-08-26,16,Lekki Phase 1,Lekki,Groceries,4,6260,Transfer,No
+T01464,2025-08-26,18,Surulere,Surulere,Household,5,7360,Transfer,No
+T01296,2025-08-26,19,Surulere,Surulere,Beverages,6,8100,Cash,No
+T00262,2025-08-26,21,Lekki Phase 1,Lekki,Baby,10,9340,Transfer,No
+T01095,2025-08-27,10,Lekki Phase 1,Lekki,Groceries,13,19740,POS,No
+T01337,2025-08-27,11,Ikeja City Mall,Ikeja,Household,10,13140,Transfer,Yes
+T00316,2025-08-27,13,Lekki Phase 1,Lekki,Groceries,11,12040,Card,Yes
+T00009,2025-08-27,14,Festac,Lagos Mainland,Groceries,5,5120,Transfer,Yes
+T00529,2025-08-27,15,Ikeja City Mall,Ikeja,Beverages,3,4580,Card,Yes
+T00971,2025-08-27,15,Surulere,Surulere,Beverages,3,3500,Card,Yes
+T01547,2025-08-27,15,Lekki Phase 1,Lekki,Groceries,6,6280,Card,No
+T01248,2025-08-27,19,Victoria Island,Lagos Island,Electronics,28,30400,Card,Yes
+T00105,2025-08-28,11,Yaba,Lagos Mainland,Personal Care,13,12140,POS,Yes
+T00151,2025-08-28,13,Victoria Island,Lagos Island,Groceries,2,2680,Transfer,No
+T00935,2025-08-28,13,Lekki Phase 1,Lekki,Beverages,4,4960,Card,Yes
+T01064,2025-08-28,13,Surulere,Surulere,Baby,17,21680,Transfer,No
+T01813,2025-08-28,14,Ikeja City Mall,Ikeja,Groceries,11,15000,Transfer,No
+T01354,2025-08-28,20,Victoria Island,Lagos Island,Beverages,4,3810,Transfer,No
+T01263,2025-08-29,10,Surulere,Surulere,Groceries,12,16320,Cash,Yes
+T01110,2025-08-29,12,Festac,Lagos Mainland,Groceries,7,8550,Card,No
+T00340,2025-08-29,16,Surulere,Surulere,Groceries,6,5960,Cash,No
+T00435,2025-08-29,18,Lekki Phase 1,Lekki,Groceries,8,8210,Card,Yes
+T01529,2025-08-29,21,Surulere,Surulere,Groceries,6,8050,Transfer,Yes
+T00465,2025-08-30,12,Festac,Lagos Mainland,Groceries,12,13800,POS,No
+T01522,2025-08-30,12,Lekki Phase 1,Lekki,Personal Care,4,6220,Card,No
+T00651,2025-08-30,16,Yaba,Lagos Mainland,Beverages,7,10300,POS,No
+T01268,2025-08-30,17,Ikeja City Mall,Ikeja,Electronics,32,37150,Card,No
+T01689,2025-08-30,17,Surulere,Surulere,Household,11,16770,Transfer,No
+T01865,2025-08-30,18,Festac,Lagos Mainland,Personal Care,7,5980,Card,No
+T00866,2025-08-31,8,Victoria Island,Lagos Island,Beverages,2,2340,Card,Yes
+T00415,2025-08-31,15,Lekki Phase 1,Lekki,Household,5,7520,Transfer,Yes
+T01509,2025-08-31,17,Yaba,Lagos Mainland,Household,5,6940,Card,No
+T00396,2025-08-31,18,Festac,Lagos Mainland,Electronics,30,37850,Card,Yes
+T01011,2025-09-01,15,Yaba,Lagos Mainland,Personal Care,4,5370,Card,Yes
+T00937,2025-09-01,18,Lekki Phase 1,Lekki,Groceries,5,6990,Card,No
+T01282,2025-09-01,20,Ikeja City Mall,Ikeja,Beverages,4,3980,Transfer,No
+T01287,2025-09-02,10,Lekki Phase 1,Lekki,Electronics,13,16950,Cash,No
+T01706,2025-09-02,10,Victoria Island,Lagos Island,Baby,6,8660,Transfer,Yes
+T00928,2025-09-02,11,Lekki Phase 1,Lekki,Baby,6,6040,Card,Yes
+T01801,2025-09-02,14,Ikeja City Mall,Ikeja,Beverages,2,3140,Card,No
+T00895,2025-09-02,15,Lekki Phase 1,Lekki,Electronics,42,41840,Transfer,Yes
+T00659,2025-09-02,16,Ikeja City Mall,Ikeja,Beverages,6,6580,Transfer,Yes
+T01077,2025-09-02,19,Yaba,Lagos Mainland,Personal Care,6,9370,Transfer,Yes
+T00906,2025-09-03,15,Lekki Phase 1,Lekki,Baby,12,12630,Transfer,No
+T01719,2025-09-03,16,Victoria Island,Lagos Island,Household,3,3480,Cash,No
+T00675,2025-09-03,17,Yaba,Lagos Mainland,Groceries,1,1060,Cash,Yes
+T01147,2025-09-03,18,Ikeja City Mall,Ikeja,Groceries,9,14390,Cash,Yes
+T01778,2025-09-04,11,Yaba,Lagos Mainland,Personal Care,14,14770,Card,No
+T00327,2025-09-04,14,Festac,Lagos Mainland,Groceries,9,11880,Transfer,Yes
+T00485,2025-09-04,14,Ikeja City Mall,Ikeja,Electronics,55,54180,Cash,No
+T00090,2025-09-04,15,Lekki Phase 1,Lekki,Groceries,7,8470,Transfer,Yes
+T00723,2025-09-05,9,Victoria Island,Lagos Island,Personal Care,2,1840,Card,No
+T01658,2025-09-05,14,Victoria Island,Lagos Island,Baby,6,9640,Card,Yes
+T00034,2025-09-05,18,Victoria Island,Lagos Island,Groceries,7,6590,Transfer,No
+T01240,2025-09-05,20,Ikeja City Mall,Ikeja,Groceries,4,5220,Cash,No
+T00026,2025-09-05,21,Victoria Island,Lagos Island,Groceries,16,20100,Transfer,Yes
+T01410,2025-09-06,12,Victoria Island,Lagos Island,Groceries,15,22560,Card,No
+T00663,2025-09-06,13,Lekki Phase 1,Lekki,Electronics,18,20590,POS,No
+T00861,2025-09-06,13,Ikeja City Mall,Ikeja,Groceries,6,6840,Transfer,No
+T00768,2025-09-06,15,Festac,Lagos Mainland,Beverages,4,5070,POS,Yes
+T00930,2025-09-06,15,Yaba,Lagos Mainland,Groceries,13,13980,Transfer,Yes
+T00704,2025-09-06,16,Lekki Phase 1,Lekki,Groceries,10,13270,Transfer,Yes
+T00071,2025-09-06,17,Surulere,Surulere,Personal Care,7,9640,Transfer,No
+T01001,2025-09-06,17,Festac,Lagos Mainland,Groceries,20,31950,Transfer,Yes
+T01009,2025-09-06,18,Ikeja City Mall,Ikeja,Groceries,34,37440,Card,Yes
+T01955,2025-09-06,19,Ikeja City Mall,Ikeja,Groceries,8,9760,Cash,No
+T00378,2025-09-07,9,Surulere,Surulere,Groceries,10,9580,Card,Yes
+T01561,2025-09-07,14,Ikeja City Mall,Ikeja,Beverages,7,5940,Cash,No
+T00187,2025-09-07,15,Ikeja City Mall,Ikeja,Beverages,3,3410,POS,Yes
+T00536,2025-09-07,15,Ikeja City Mall,Ikeja,Baby,10,12460,Card,No
+T00014,2025-09-07,16,Ikeja City Mall,Ikeja,Groceries,5,7870,Card,No
+T01610,2025-09-07,16,Lekki Phase 1,Lekki,Groceries,9,10660,Card,Yes
+T01276,2025-09-07,20,Festac,Lagos Mainland,Beverages,6,5510,POS,Yes
+T01534,2025-09-07,20,Ikeja City Mall,Ikeja,Personal Care,4,6290,POS,No
+T01528,2025-09-08,9,Ikeja City Mall,Ikeja,Beverages,1,1770,POS,No
+T00596,2025-09-08,11,Yaba,Lagos Mainland,Household,4,4150,Transfer,No
+T01234,2025-09-08,17,Ikeja City Mall,Ikeja,Household,5,5940,POS,Yes
+T00017,2025-09-08,18,Lekki Phase 1,Lekki,Beverages,7,6970,Transfer,No
+T01920,2025-09-08,19,Lekki Phase 1,Lekki,Personal Care,3,3640,Cash,No
+T00357,2025-09-09,9,Victoria Island,Lagos Island,Electronics,10,14460,POS,No
+T01304,2025-09-09,11,Surulere,Surulere,Household,11,17620,Transfer,No
+T01042,2025-09-09,15,Festac,Lagos Mainland,Groceries,5,8030,Card,No
+T01157,2025-09-09,15,Festac,Lagos Mainland,Personal Care,3,2490,Card,No
+T01668,2025-09-09,15,Festac,Lagos Mainland,Groceries,7,7440,Card,No
+T00397,2025-09-09,16,Lekki Phase 1,Lekki,Groceries,6,8060,Cash,No
+T01289,2025-09-09,18,Victoria Island,Lagos Island,Electronics,15,18250,Card,No
+T01215,2025-09-10,11,Lekki Phase 1,Lekki,Groceries,3,2740,Transfer,No
+T01196,2025-09-10,12,Surulere,Surulere,Household,4,4620,Transfer,No
+T01016,2025-09-10,17,Festac,Lagos Mainland,Groceries,2,2670,Transfer,Yes
+T00306,2025-09-10,19,Lekki Phase 1,Lekki,Beverages,2,2330,Card,No
+T01206,2025-09-11,17,Lekki Phase 1,Lekki,Groceries,7,10240,Transfer,No
+T00638,2025-09-12,12,Ikeja City Mall,Ikeja,Household,5,5840,Transfer,No
+T01856,2025-09-12,15,Victoria Island,Lagos Island,Household,4,6250,Transfer,No
+T00443,2025-09-12,16,Yaba,Lagos Mainland,Beverages,2,2300,Card,Yes
+T00708,2025-09-12,16,Victoria Island,Lagos Island,Beverages,4,6010,POS,No
+T00940,2025-09-12,18,Lekki Phase 1,Lekki,Groceries,7,11210,Transfer,Yes
+T00336,2025-09-12,19,Lekki Phase 1,Lekki,Beverages,4,3970,Card,No
+T01818,2025-09-12,21,Ikeja City Mall,Ikeja,Beverages,2,3560,POS,Yes
+T01908,2025-09-13,8,Victoria Island,Lagos Island,Groceries,10,14430,Transfer,No
+T01299,2025-09-13,11,Surulere,Surulere,Baby,7,7530,Cash,No
+T01804,2025-09-13,11,Ikeja City Mall,Ikeja,Household,3,3570,Card,No
+T00880,2025-09-13,15,Yaba,Lagos Mainland,Electronics,19,21630,Card,No
+T00118,2025-09-13,16,Yaba,Lagos Mainland,Groceries,7,9220,Cash,Yes
+T01459,2025-09-13,16,Victoria Island,Lagos Island,Beverages,3,3770,Card,No
+T00135,2025-09-13,19,Ikeja City Mall,Ikeja,Personal Care,2,2990,POS,No
+T00912,2025-09-13,19,Festac,Lagos Mainland,Baby,8,9510,Transfer,No
+T00959,2025-09-13,19,Lekki Phase 1,Lekki,Groceries,10,11480,Transfer,No
+T01980,2025-09-13,21,Yaba,Lagos Mainland,Groceries,7,8920,Card,No
+T01634,2025-09-14,15,Surulere,Surulere,Groceries,12,18390,Card,Yes
+T00109,2025-09-14,17,Surulere,Surulere,Beverages,5,8240,Transfer,Yes
+T00424,2025-09-14,20,Victoria Island,Lagos Island,Personal Care,6,6500,POS,No
+T00980,2025-09-14,21,Yaba,Lagos Mainland,Electronics,108,132060,Transfer,No
+T01209,2025-09-14,21,Lekki Phase 1,Lekki,Groceries,6,6820,POS,Yes
+T01050,2025-09-15,9,Victoria Island,Lagos Island,Groceries,12,15990,Transfer,Yes
+T00303,2025-09-15,12,Lekki Phase 1,Lekki,Groceries,8,10090,POS,Yes
+T01119,2025-09-15,12,Victoria Island,Lagos Island,Groceries,14,20040,Card,Yes
+T01111,2025-09-15,13,Ikeja City Mall,Ikeja,Groceries,9,12600,POS,No
+T01780,2025-09-15,15,Ikeja City Mall,Ikeja,Electronics,14,21110,Card,Yes
+T01747,2025-09-15,17,Ikeja City Mall,Ikeja,Baby,13,17370,Transfer,Yes
+T00808,2025-09-16,12,Ikeja City Mall,Ikeja,Household,16,18250,POS,Yes
+T00909,2025-09-16,12,Surulere,Surulere,Groceries,5,4530,Card,No
+T01512,2025-09-16,13,Victoria Island,Lagos Island,Beverages,4,5360,Card,No
+T01784,2025-09-16,15,Ikeja City Mall,Ikeja,Beverages,3,2370,Transfer,No
+T01830,2025-09-16,17,Ikeja City Mall,Ikeja,Baby,5,6230,Cash,No
+T00933,2025-09-16,21,Victoria Island,Lagos Island,Groceries,7,10910,Card,No
+T01508,2025-09-16,21,Ikeja City Mall,Ikeja,Baby,31,33100,Card,No
+T00453,2025-09-17,11,Festac,Lagos Mainland,Beverages,5,7780,Cash,Yes
+T01275,2025-09-17,11,Lekki Phase 1,Lekki,Baby,16,24430,Card,No
+T01204,2025-09-17,13,Lekki Phase 1,Lekki,Beverages,3,3510,Transfer,No
+T00440,2025-09-17,16,Yaba,Lagos Mainland,Household,6,5720,Transfer,No
+T00896,2025-09-17,21,Ikeja City Mall,Ikeja,Beverages,5,4880,Card,Yes
+T01370,2025-09-17,21,Surulere,Surulere,Groceries,7,7210,Transfer,No
+T00728,2025-09-18,13,Lekki Phase 1,Lekki,Electronics,29,39500,Transfer,Yes
+T00739,2025-09-18,14,Yaba,Lagos Mainland,Groceries,27,24950,Card,No
+T00115,2025-09-18,17,Surulere,Surulere,Household,9,13030,Card,No
+T01647,2025-09-18,17,Lekki Phase 1,Lekki,Groceries,14,13920,Transfer,No
+T00146,2025-09-18,18,Lekki Phase 1,Lekki,Personal Care,2,2980,Card,No
+T00358,2025-09-19,12,Ikeja City Mall,Ikeja,Groceries,4,4270,Card,Yes
+T01749,2025-09-19,13,Ikeja City Mall,Ikeja,Groceries,11,9640,Card,No
+T00402,2025-09-19,17,Ikeja City Mall,Ikeja,Groceries,4,4380,POS,Yes
+T01605,2025-09-19,17,Lekki Phase 1,Lekki,Groceries,3,2430,POS,Yes
+T00290,2025-09-20,9,Lekki Phase 1,Lekki,Baby,11,13000,Card,Yes
+T01504,2025-09-20,9,Festac,Lagos Mainland,Beverages,4,4420,POS,Yes
+T00005,2025-09-20,11,Lekki Phase 1,Lekki,Household,5,6730,Card,No
+T01837,2025-09-20,14,Surulere,Surulere,Personal Care,4,3450,POS,Yes
+T00194,2025-09-20,15,Festac,Lagos Mainland,Beverages,3,3890,Card,No
+T00617,2025-09-20,18,Lekki Phase 1,Lekki,Electronics,32,39010,Transfer,Yes
+T01086,2025-09-21,13,Yaba,Lagos Mainland,Groceries,9,11750,Transfer,No
+T01722,2025-09-21,13,Ikeja City Mall,Ikeja,Beverages,3,3070,Transfer,Yes
+T01885,2025-09-21,13,Yaba,Lagos Mainland,Beverages,5,6600,POS,Yes
+T00519,2025-09-21,14,Ikeja City Mall,Ikeja,Groceries,6,7170,Card,Yes
+T01973,2025-09-21,14,Ikeja City Mall,Ikeja,Personal Care,13,13430,Cash,No
+T00587,2025-09-21,15,Festac,Lagos Mainland,Beverages,10,10160,Card,No
+T00917,2025-09-21,16,Victoria Island,Lagos Island,Beverages,2,3100,Transfer,Yes
+T01255,2025-09-21,16,Lekki Phase 1,Lekki,Groceries,8,10930,Card,No
+T00446,2025-09-21,18,Yaba,Lagos Mainland,Household,3,4160,POS,No
+T01054,2025-09-21,18,Ikeja City Mall,Ikeja,Groceries,3,3570,Transfer,No
+T01128,2025-09-21,18,Victoria Island,Lagos Island,Groceries,6,9540,POS,Yes
+T00554,2025-09-22,11,Lekki Phase 1,Lekki,Personal Care,1,1480,Transfer,Yes
+T00293,2025-09-22,13,Yaba,Lagos Mainland,Personal Care,11,10000,Transfer,No
+T01414,2025-09-22,14,Lekki Phase 1,Lekki,Groceries,10,12290,POS,No
+T00326,2025-09-22,19,Lekki Phase 1,Lekki,Personal Care,6,7450,Transfer,Yes
+T00944,2025-09-22,19,Surulere,Surulere,Beverages,1,1770,POS,No
+T01674,2025-09-22,20,Lekki Phase 1,Lekki,Personal Care,3,4470,POS,Yes
+T01467,2025-09-23,10,Surulere,Surulere,Household,5,6100,Card,No
+T00216,2025-09-23,11,Lekki Phase 1,Lekki,Personal Care,7,10780,Cash,No
+T00703,2025-09-23,12,Victoria Island,Lagos Island,Beverages,6,6370,Transfer,Yes
+T00479,2025-09-23,17,Surulere,Surulere,Personal Care,3,2650,POS,Yes
+T00666,2025-09-23,18,Victoria Island,Lagos Island,Electronics,42,46380,Transfer,Yes
+T01295,2025-09-24,14,Ikeja City Mall,Ikeja,Groceries,7,9020,Card,No
+T01293,2025-09-24,15,Surulere,Surulere,Baby,5,5860,POS,Yes
+T01028,2025-09-24,17,Ikeja City Mall,Ikeja,Baby,9,9240,Card,No
+T01160,2025-09-24,21,Festac,Lagos Mainland,Personal Care,5,5310,Card,Yes
+T01792,2025-09-25,9,Surulere,Surulere,Electronics,15,19380,Transfer,No
+T00241,2025-09-25,16,Surulere,Surulere,Beverages,5,5280,Transfer,Yes
+T00205,2025-09-25,17,Festac,Lagos Mainland,Groceries,11,11320,POS,Yes
+T00586,2025-09-25,18,Ikeja City Mall,Ikeja,Beverages,3,3530,Card,Yes
+T01393,2025-09-26,9,Lekki Phase 1,Lekki,Groceries,9,8680,Cash,Yes
+T00330,2025-09-26,14,Yaba,Lagos Mainland,Household,5,5330,Transfer,Yes
+T01219,2025-09-26,14,Lekki Phase 1,Lekki,Beverages,2,2960,Card,Yes
+T00645,2025-09-26,18,Surulere,Surulere,Groceries,2,3010,Transfer,No
+T00497,2025-09-27,12,Surulere,Surulere,Groceries,4,3540,Card,Yes
+T01738,2025-09-27,16,Ikeja City Mall,Ikeja,Household,4,4410,Transfer,No
+T01841,2025-09-27,18,Lekki Phase 1,Lekki,Household,2,2730,Cash,No
+T01979,2025-09-27,18,Surulere,Surulere,Personal Care,6,9720,POS,Yes
+T01045,2025-09-27,19,Lekki Phase 1,Lekki,Baby,16,19570,Cash,Yes
+T01453,2025-09-27,19,Victoria Island,Lagos Island,Personal Care,2,2450,Card,Yes
+T01730,2025-09-27,19,Surulere,Surulere,Groceries,3,4860,Cash,No
+T00976,2025-09-27,21,Surulere,Surulere,Beverages,4,6300,Transfer,Yes
+T00607,2025-09-28,9,Lekki Phase 1,Lekki,Baby,21,30790,Card,Yes
+T01168,2025-09-28,9,Festac,Lagos Mainland,Beverages,4,5680,Card,Yes
+T00018,2025-09-28,10,Lekki Phase 1,Lekki,Personal Care,9,9320,Transfer,No
+T00356,2025-09-28,14,Ikeja City Mall,Ikeja,Baby,8,12070,POS,Yes
+T01308,2025-09-28,14,Victoria Island,Lagos Island,Household,32,33050,Cash,No
+T01736,2025-09-28,14,Lekki Phase 1,Lekki,Groceries,6,8500,Transfer,No
+T01451,2025-09-28,18,Victoria Island,Lagos Island,Beverages,3,3600,POS,No
+T01766,2025-09-28,20,Ikeja City Mall,Ikeja,Groceries,5,6740,Cash,Yes
+T00086,2025-09-29,11,Yaba,Lagos Mainland,Baby,4,5710,Card,No
+T00560,2025-09-29,16,Victoria Island,Lagos Island,Household,6,6030,Transfer,No
+T01767,2025-09-29,20,Lekki Phase 1,Lekki,Household,4,5960,Transfer,No
+T00218,2025-09-30,12,Surulere,Surulere,Beverages,4,5340,Transfer,No
+T01114,2025-09-30,15,Lekki Phase 1,Lekki,Groceries,5,7070,Cash,No
+T00222,2025-09-30,18,Yaba,Lagos Mainland,Groceries,8,9800,POS,Yes
+T00347,2025-09-30,19,Lekki Phase 1,Lekki,Personal Care,5,6760,Cash,No
+T00721,2025-10-01,10,Surulere,Surulere,Baby,9,9380,Card,No
+T00563,2025-10-01,13,Ikeja City Mall,Ikeja,Groceries,4,5560,Card,Yes
+T00846,2025-10-01,14,Yaba,Lagos Mainland,Groceries,15,16780,POS,No
+T00566,2025-10-01,15,Lekki Phase 1,Lekki,Personal Care,5,6950,Transfer,No
+T00958,2025-10-01,17,Ikeja City Mall,Ikeja,Groceries,12,15510,Card,Yes
+T00751,2025-10-01,18,Ikeja City Mall,Ikeja,Groceries,9,11610,Card,No
+T01615,2025-10-01,20,Festac,Lagos Mainland,Beverages,8,10270,Transfer,No
+T00447,2025-10-02,11,Festac,Lagos Mainland,Groceries,16,17720,Card,Yes
+T00772,2025-10-02,17,Victoria Island,Lagos Island,Beverages,3,3830,Card,Yes
+T00689,2025-10-02,21,Surulere,Surulere,Beverages,1,1480,Transfer,No
+T00419,2025-10-03,12,Surulere,Surulere,Personal Care,4,5570,Card,No
+T00636,2025-10-03,13,Surulere,Surulere,Baby,5,7050,Card,No
+T00788,2025-10-03,17,Ikeja City Mall,Ikeja,Personal Care,4,6100,Card,Yes
+T00623,2025-10-03,19,Lekki Phase 1,Lekki,Household,6,6780,Transfer,Yes
+T00049,2025-10-03,20,Ikeja City Mall,Ikeja,Personal Care,2,2330,Card,No
+T00886,2025-10-04,8,Lekki Phase 1,Lekki,Household,7,6550,POS,No
+T00524,2025-10-04,12,Lekki Phase 1,Lekki,Baby,9,8920,POS,Yes
+T00843,2025-10-04,13,Victoria Island,Lagos Island,Groceries,4,6580,Card,Yes
+T01630,2025-10-04,13,Victoria Island,Lagos Island,Groceries,5,6580,Card,Yes
+T00150,2025-10-04,14,Festac,Lagos Mainland,Beverages,2,2740,Card,No
+T00244,2025-10-04,14,Yaba,Lagos Mainland,Groceries,5,4580,Cash,No
+T01735,2025-10-04,15,Festac,Lagos Mainland,Groceries,10,9660,Card,Yes
+T01061,2025-10-04,17,Ikeja City Mall,Ikeja,Groceries,8,9970,Transfer,No
+T01328,2025-10-04,17,Lekki Phase 1,Lekki,Household,3,3010,Cash,Yes
+T00202,2025-10-05,12,Lekki Phase 1,Lekki,Household,5,6220,POS,Yes
+T00804,2025-10-05,13,Ikeja City Mall,Ikeja,Groceries,24,25030,POS,No
+T00762,2025-10-05,14,Surulere,Surulere,Electronics,34,48500,POS,Yes
+T01570,2025-10-05,14,Surulere,Surulere,Personal Care,4,3590,Transfer,No
+T00820,2025-10-05,16,Lekki Phase 1,Lekki,Groceries,3,3990,Card,No
+T01265,2025-10-05,16,Ikeja City Mall,Ikeja,Household,13,12150,POS,No
+T00878,2025-10-05,17,Ikeja City Mall,Ikeja,Groceries,5,7330,Card,Yes
+T01714,2025-10-05,17,Festac,Lagos Mainland,Groceries,8,8300,Card,No
+T00346,2025-10-06,13,Surulere,Surulere,Electronics,37,56320,POS,Yes
+T00888,2025-10-06,13,Lekki Phase 1,Lekki,Beverages,3,3660,Card,Yes
+T01171,2025-10-06,13,Lekki Phase 1,Lekki,Personal Care,17,15500,Card,Yes
+T01946,2025-10-06,14,Ikeja City Mall,Ikeja,Household,5,5020,Cash,No
+T01433,2025-10-06,18,Ikeja City Mall,Ikeja,Household,4,4430,Card,Yes
+T00495,2025-10-06,19,Surulere,Surulere,Groceries,7,7320,Card,No
+T00309,2025-10-07,13,Surulere,Surulere,Groceries,7,9310,POS,Yes
+T00813,2025-10-07,13,Ikeja City Mall,Ikeja,Beverages,2,2750,Card,Yes
+T01278,2025-10-07,13,Ikeja City Mall,Ikeja,Groceries,15,17920,Card,Yes
+T01691,2025-10-07,13,Yaba,Lagos Mainland,Groceries,6,6670,POS,No
+T01382,2025-10-07,14,Lekki Phase 1,Lekki,Baby,13,12790,POS,No
+T01092,2025-10-07,15,Yaba,Lagos Mainland,Groceries,16,22720,Transfer,Yes
+T01386,2025-10-07,15,Yaba,Lagos Mainland,Beverages,2,3030,Transfer,No
+T00111,2025-10-07,16,Festac,Lagos Mainland,Beverages,1,1470,Transfer,Yes
+T00812,2025-10-07,21,Surulere,Surulere,Personal Care,2,2780,Card,No
+T01949,2025-10-08,8,Lekki Phase 1,Lekki,Household,3,3490,POS,Yes
+T01951,2025-10-08,9,Ikeja City Mall,Ikeja,Beverages,3,3950,Transfer,No
+T00016,2025-10-08,13,Surulere,Surulere,Groceries,6,7750,Card,No
+T01496,2025-10-08,13,Victoria Island,Lagos Island,Beverages,6,6170,Card,No
+T01425,2025-10-08,14,Victoria Island,Lagos Island,Baby,14,15470,Cash,No
+T00517,2025-10-08,15,Ikeja City Mall,Ikeja,Groceries,8,7390,Transfer,No
+T00576,2025-10-08,15,Lekki Phase 1,Lekki,Electronics,20,27890,POS,Yes
+T01715,2025-10-08,15,Lekki Phase 1,Lekki,Personal Care,8,10200,Card,No
+T01198,2025-10-08,16,Lekki Phase 1,Lekki,Groceries,17,16140,Cash,No
+T01363,2025-10-08,16,Victoria Island,Lagos Island,Groceries,7,10550,Card,No
+T00795,2025-10-09,13,Surulere,Surulere,Beverages,2,2890,POS,No
+T00219,2025-10-09,15,Victoria Island,Lagos Island,Groceries,4,3820,Transfer,No
+T01928,2025-10-09,21,Lekki Phase 1,Lekki,Groceries,7,6870,Card,No
+T01312,2025-10-10,13,Ikeja City Mall,Ikeja,Baby,25,32840,Card,No
+T00064,2025-10-10,14,Ikeja City Mall,Ikeja,Groceries,14,16090,POS,Yes
+T00387,2025-10-10,15,Ikeja City Mall,Ikeja,Beverages,5,7390,Transfer,Yes
+T00379,2025-10-10,16,Surulere,Surulere,Beverages,15,19220,Card,Yes
+T01779,2025-10-10,16,Festac,Lagos Mainland,Groceries,5,5400,Cash,No
+T01059,2025-10-10,17,Surulere,Surulere,Beverages,12,18490,Card,No
+T00276,2025-10-10,18,Yaba,Lagos Mainland,Beverages,13,12690,POS,No
+T01945,2025-10-11,8,Yaba,Lagos Mainland,Groceries,10,9130,Transfer,Yes
+T00273,2025-10-11,11,Ikeja City Mall,Ikeja,Household,2,3030,POS,Yes
+T00897,2025-10-11,14,Surulere,Surulere,Household,29,35520,Card,Yes
+T00353,2025-10-11,15,Yaba,Lagos Mainland,Groceries,6,6300,Card,No
+T00693,2025-10-11,15,Ikeja City Mall,Ikeja,Beverages,4,4000,Card,No
+T00758,2025-10-11,15,Victoria Island,Lagos Island,Beverages,4,4150,Transfer,Yes
+T00087,2025-10-11,16,Ikeja City Mall,Ikeja,Household,11,12160,Cash,Yes
+T01409,2025-10-11,18,Lekki Phase 1,Lekki,Beverages,4,5210,POS,No
+T00903,2025-10-11,20,Victoria Island,Lagos Island,Beverages,4,4440,Card,No
+T00455,2025-10-12,13,Festac,Lagos Mainland,Beverages,3,4890,Card,Yes
+T00414,2025-10-12,14,Ikeja City Mall,Ikeja,Household,9,13300,Transfer,No
+T01257,2025-10-12,14,Victoria Island,Lagos Island,Groceries,3,3900,POS,Yes
+T01564,2025-10-12,14,Victoria Island,Lagos Island,Personal Care,2,2630,Transfer,Yes
+T01854,2025-10-12,15,Victoria Island,Lagos Island,Groceries,5,7460,Transfer,No
+T00217,2025-10-12,16,Festac,Lagos Mainland,Groceries,7,9590,Transfer,Yes
+T01930,2025-10-12,16,Lekki Phase 1,Lekki,Groceries,7,10350,Transfer,No
+T01262,2025-10-13,10,Surulere,Surulere,Groceries,7,6690,Cash,No
+T01882,2025-10-13,17,Lekki Phase 1,Lekki,Household,8,9190,POS,No
+T00011,2025-10-13,18,Victoria Island,Lagos Island,Groceries,6,7790,Cash,Yes
+T01884,2025-10-13,18,Surulere,Surulere,Personal Care,2,2470,POS,No
+T00674,2025-10-13,19,Surulere,Surulere,Groceries,7,11000,Transfer,No
+T01117,2025-10-14,11,Yaba,Lagos Mainland,Groceries,11,10150,Cash,No
+T00754,2025-10-14,13,Yaba,Lagos Mainland,Groceries,8,8850,POS,No
+T00753,2025-10-14,15,Festac,Lagos Mainland,Personal Care,7,6050,POS,Yes
+T00987,2025-10-14,15,Lekki Phase 1,Lekki,Beverages,11,12130,Card,No
+T01939,2025-10-14,15,Lekki Phase 1,Lekki,Groceries,9,12010,Transfer,No
+T00145,2025-10-14,16,Lekki Phase 1,Lekki,Groceries,4,5620,POS,Yes
+T01096,2025-10-14,18,Ikeja City Mall,Ikeja,Groceries,9,10390,POS,No
+T01513,2025-10-15,8,Surulere,Surulere,Electronics,12,17180,Cash,Yes
+T00300,2025-10-15,10,Lekki Phase 1,Lekki,Electronics,45,46660,Cash,Yes
+T00679,2025-10-15,15,Lekki Phase 1,Lekki,Beverages,15,17040,Transfer,No
+T00220,2025-10-15,16,Ikeja City Mall,Ikeja,Personal Care,4,5000,Cash,Yes
+T00102,2025-10-15,18,Victoria Island,Lagos Island,Personal Care,3,4730,Transfer,No
+T00569,2025-10-15,18,Lekki Phase 1,Lekki,Beverages,3,5390,Transfer,Yes
+T00882,2025-10-15,19,Festac,Lagos Mainland,Personal Care,8,11560,POS,Yes
+T01959,2025-10-16,9,Ikeja City Mall,Ikeja,Household,20,19360,Card,No
+T01641,2025-10-16,12,Surulere,Surulere,Baby,7,10840,Transfer,No
+T01603,2025-10-16,14,Victoria Island,Lagos Island,Electronics,29,44370,Card,No
+T01912,2025-10-17,10,Surulere,Surulere,Baby,16,25070,Card,Yes
+T01693,2025-10-17,11,Yaba,Lagos Mainland,Groceries,8,8440,Cash,Yes
+T01121,2025-10-17,12,Festac,Lagos Mainland,Electronics,23,34690,Transfer,No
+T00081,2025-10-17,15,Surulere,Surulere,Household,9,13050,Card,Yes
+T00797,2025-10-17,17,Victoria Island,Lagos Island,Household,1,2020,Transfer,Yes
+T01769,2025-10-17,17,Ikeja City Mall,Ikeja,Personal Care,4,6020,POS,No
+T00481,2025-10-17,21,Festac,Lagos Mainland,Beverages,3,3460,Transfer,No
+T00943,2025-10-18,14,Festac,Lagos Mainland,Personal Care,9,8420,Card,No
+T01015,2025-10-18,17,Victoria Island,Lagos Island,Electronics,7,10180,Card,No
+T00822,2025-10-18,21,Ikeja City Mall,Ikeja,Baby,15,15400,POS,Yes
+T01757,2025-10-19,10,Festac,Lagos Mainland,Groceries,4,4030,Card,Yes
+T01733,2025-10-19,15,Ikeja City Mall,Ikeja,Personal Care,3,3610,Transfer,Yes
+T00625,2025-10-19,16,Festac,Lagos Mainland,Groceries,5,7530,Card,Yes
+T01269,2025-10-19,16,Lekki Phase 1,Lekki,Beverages,8,9180,POS,No
+T00995,2025-10-20,13,Victoria Island,Lagos Island,Baby,7,7660,POS,No
+T00621,2025-10-20,16,Surulere,Surulere,Groceries,5,7500,Card,No
+T00555,2025-10-20,19,Festac,Lagos Mainland,Groceries,3,3780,Card,No
+T00919,2025-10-21,12,Ikeja City Mall,Ikeja,Baby,22,19920,Transfer,No
+T01487,2025-10-21,12,Victoria Island,Lagos Island,Baby,12,18250,Transfer,Yes
+T00320,2025-10-21,13,Surulere,Surulere,Household,3,4230,Transfer,No
+T01672,2025-10-21,14,Surulere,Surulere,Beverages,4,5780,Cash,Yes
+T00482,2025-10-21,15,Lekki Phase 1,Lekki,Personal Care,3,3610,POS,No
+T00403,2025-10-21,16,Lekki Phase 1,Lekki,Household,5,6790,POS,Yes
+T00237,2025-10-21,20,Ikeja City Mall,Ikeja,Household,4,5650,Transfer,No
+T01361,2025-10-22,11,Surulere,Surulere,Beverages,6,7310,Transfer,No
+T00889,2025-10-22,13,Surulere,Surulere,Personal Care,5,6170,POS,Yes
+T00091,2025-10-22,15,Yaba,Lagos Mainland,Personal Care,1,1560,Card,No
+T01027,2025-10-22,15,Ikeja City Mall,Ikeja,Personal Care,5,6420,Cash,Yes
+T01207,2025-10-22,15,Ikeja City Mall,Ikeja,Household,6,9010,Transfer,Yes
+T01239,2025-10-22,15,Yaba,Lagos Mainland,Electronics,25,30450,Transfer,Yes
+T01324,2025-10-22,21,Ikeja City Mall,Ikeja,Personal Care,8,11000,Card,Yes
+T00367,2025-10-23,17,Lekki Phase 1,Lekki,Baby,9,12190,Card,No
+T01280,2025-10-23,18,Lekki Phase 1,Lekki,Baby,11,13110,Card,No
+T01765,2025-10-23,18,Yaba,Lagos Mainland,Groceries,11,10050,POS,Yes
+T01306,2025-10-24,10,Yaba,Lagos Mainland,Beverages,5,7230,POS,Yes
+T01825,2025-10-24,13,Yaba,Lagos Mainland,Groceries,4,5750,Card,Yes
+T00720,2025-10-24,15,Ikeja City Mall,Ikeja,Household,11,13960,POS,No
+T00862,2025-10-24,16,Yaba,Lagos Mainland,Groceries,4,4170,Transfer,No
+T00905,2025-10-24,16,Ikeja City Mall,Ikeja,Beverages,3,4270,POS,No
+T01018,2025-10-24,16,Lekki Phase 1,Lekki,Household,6,6460,POS,No
+T00573,2025-10-24,17,Festac,Lagos Mainland,Personal Care,4,3990,Cash,No
+T01242,2025-10-25,12,Festac,Lagos Mainland,Electronics,7,10110,Cash,No
+T01550,2025-10-25,15,Ikeja City Mall,Ikeja,Household,2,2690,POS,No
+T00374,2025-10-25,16,Ikeja City Mall,Ikeja,Groceries,8,7510,POS,No
+T00803,2025-10-25,17,Ikeja City Mall,Ikeja,Groceries,8,11520,Cash,No
+T01650,2025-10-25,17,Victoria Island,Lagos Island,Groceries,6,6720,Transfer,No
+T01879,2025-10-25,20,Surulere,Surulere,Groceries,5,8010,Transfer,Yes
+T01105,2025-10-26,12,Lekki Phase 1,Lekki,Groceries,6,6310,Card,No
+T01342,2025-10-26,15,Yaba,Lagos Mainland,Beverages,3,4250,Card,No
+T01894,2025-10-26,18,Lekki Phase 1,Lekki,Groceries,7,9800,Cash,No
+T00371,2025-10-27,12,Yaba,Lagos Mainland,Baby,13,13680,Card,Yes
+T01929,2025-10-27,13,Lekki Phase 1,Lekki,Personal Care,1,730,Card,Yes
+T01673,2025-10-27,15,Yaba,Lagos Mainland,Groceries,7,7910,Cash,No
+T00887,2025-10-27,17,Victoria Island,Lagos Island,Beverages,3,3840,POS,Yes
+T00423,2025-10-28,10,Surulere,Surulere,Personal Care,4,5520,Transfer,No
+T00129,2025-10-28,12,Ikeja City Mall,Ikeja,Beverages,2,1670,Card,No
+T00582,2025-10-28,13,Lekki Phase 1,Lekki,Household,4,4220,Card,Yes
+T01431,2025-10-28,15,Lekki Phase 1,Lekki,Beverages,3,5200,POS,Yes
+T01998,2025-10-28,16,Ikeja City Mall,Ikeja,Household,7,8220,Card,No
+T00231,2025-10-28,18,Lekki Phase 1,Lekki,Groceries,11,16080,Cash,Yes
+T01188,2025-10-28,19,Yaba,Lagos Mainland,Groceries,8,7980,POS,Yes
+T01956,2025-10-29,8,Surulere,Surulere,Beverages,2,2320,Cash,No
+T01146,2025-10-29,13,Yaba,Lagos Mainland,Beverages,4,4310,Card,No
+T00859,2025-10-29,14,Ikeja City Mall,Ikeja,Household,10,10800,POS,No
+T01081,2025-10-29,15,Ikeja City Mall,Ikeja,Groceries,9,11230,Transfer,No
+T01440,2025-10-29,16,Yaba,Lagos Mainland,Beverages,12,16010,Card,Yes
+T00039,2025-10-29,17,Yaba,Lagos Mainland,Household,2,2670,Card,No
+T01002,2025-10-29,19,Yaba,Lagos Mainland,Beverages,2,3280,Card,No
+T00407,2025-10-30,12,Surulere,Surulere,Household,11,13950,POS,No
+T01880,2025-10-30,12,Lekki Phase 1,Lekki,Electronics,19,19860,Cash,No
+T01103,2025-10-30,14,Surulere,Surulere,Groceries,6,5730,Cash,No
+T00864,2025-10-30,17,Yaba,Lagos Mainland,Electronics,27,29490,Cash,No
+T01327,2025-10-31,9,Lekki Phase 1,Lekki,Beverages,1,1580,Transfer,No
+T00578,2025-10-31,13,Lekki Phase 1,Lekki,Household,5,5150,Cash,No
+T00902,2025-10-31,13,Festac,Lagos Mainland,Groceries,3,3540,Card,Yes
+T00270,2025-10-31,14,Ikeja City Mall,Ikeja,Household,6,7020,POS,No
+T01286,2025-10-31,15,Victoria Island,Lagos Island,Beverages,2,1970,Card,No
+T01659,2025-10-31,17,Surulere,Surulere,Baby,5,6700,Card,No
+T00977,2025-10-31,18,Ikeja City Mall,Ikeja,Household,4,5800,Transfer,No
+T01091,2025-10-31,18,Ikeja City Mall,Ikeja,Groceries,8,7370,Cash,Yes
+T01563,2025-10-31,19,Festac,Lagos Mainland,Household,5,5580,Cash,No
+T01942,2025-10-31,19,Surulere,Surulere,Beverages,5,6010,POS,No
+T01316,2025-10-31,21,Lekki Phase 1,Lekki,Electronics,55,69890,Card,Yes
+T00388,2025-11-02,11,Lekki Phase 1,Lekki,Groceries,5,5510,Cash,No
+T01532,2025-11-02,12,Surulere,Surulere,Beverages,14,21680,Cash,Yes
+T00401,2025-11-02,14,Ikeja City Mall,Ikeja,Groceries,7,8020,Transfer,No
+T00059,2025-11-02,16,Festac,Lagos Mainland,Groceries,2,3080,Transfer,No
+T00275,2025-11-02,16,Yaba,Lagos Mainland,Personal Care,5,5850,Card,No
+T00786,2025-11-02,16,Lekki Phase 1,Lekki,Beverages,3,2900,Transfer,Yes
+T00927,2025-11-02,16,Surulere,Surulere,Personal Care,4,5400,Transfer,No
+T00801,2025-11-03,14,Lekki Phase 1,Lekki,Beverages,5,5190,Transfer,No
+T01978,2025-11-03,15,Victoria Island,Lagos Island,Baby,13,20000,Card,Yes
+T00682,2025-11-03,17,Victoria Island,Lagos Island,Electronics,42,56420,Transfer,No
+T01812,2025-11-03,19,Ikeja City Mall,Ikeja,Groceries,5,4230,Card,No
+T01070,2025-11-04,8,Ikeja City Mall,Ikeja,Personal Care,3,3380,Card,No
+T01741,2025-11-04,8,Yaba,Lagos Mainland,Groceries,6,5870,POS,No
+T01398,2025-11-04,12,Lekki Phase 1,Lekki,Household,4,5570,Transfer,No
+T01591,2025-11-04,12,Surulere,Surulere,Personal Care,9,9430,Card,No
+T01799,2025-11-04,14,Surulere,Surulere,Beverages,5,7690,Card,Yes
+T00534,2025-11-04,16,Victoria Island,Lagos Island,Household,9,13060,Transfer,No
+T01258,2025-11-04,19,Yaba,Lagos Mainland,Beverages,1,1350,Card,No
+T01649,2025-11-05,13,Surulere,Surulere,Groceries,6,8660,Card,No
+T00168,2025-11-05,14,Lekki Phase 1,Lekki,Baby,9,10390,Transfer,Yes
+T01927,2025-11-05,16,Ikeja City Mall,Ikeja,Baby,9,12650,POS,No
+T01628,2025-11-05,17,Lekki Phase 1,Lekki,Electronics,17,26680,Transfer,Yes
+T00969,2025-11-05,19,Lekki Phase 1,Lekki,Groceries,7,11310,Cash,No
+T01992,2025-11-06,10,Lekki Phase 1,Lekki,Personal Care,4,4900,Card,No
+T01653,2025-11-06,14,Festac,Lagos Mainland,Baby,6,6830,Card,No
+T00999,2025-11-06,16,Victoria Island,Lagos Island,Groceries,3,4530,Card,No
+T00112,2025-11-06,17,Lekki Phase 1,Lekki,Beverages,3,4680,Cash,Yes
+T00512,2025-11-06,17,Lekki Phase 1,Lekki,Groceries,12,16590,POS,No
+T00851,2025-11-07,12,Lekki Phase 1,Lekki,Household,7,9150,Cash,No
+T00311,2025-11-07,13,Surulere,Surulere,Baby,13,15370,Card,Yes
+T01213,2025-11-07,14,Yaba,Lagos Mainland,Baby,5,6310,Card,Yes
+T00800,2025-11-07,20,Ikeja City Mall,Ikeja,Groceries,4,5800,Card,Yes
+T01080,2025-11-08,9,Ikeja City Mall,Ikeja,Groceries,4,6040,Cash,No
+T01744,2025-11-08,11,Lekki Phase 1,Lekki,Household,7,10450,Cash,Yes
+T01408,2025-11-08,19,Yaba,Lagos Mainland,Beverages,8,8580,Card,No
+T00525,2025-11-09,11,Victoria Island,Lagos Island,Groceries,18,28440,POS,No
+T00225,2025-11-09,13,Surulere,Surulere,Beverages,6,5620,Card,No
+T00154,2025-11-09,16,Ikeja City Mall,Ikeja,Groceries,10,12590,Transfer,Yes
+T01533,2025-11-09,16,Ikeja City Mall,Ikeja,Beverages,3,4620,Card,No
+T01743,2025-11-09,16,Victoria Island,Lagos Island,Groceries,9,8390,Transfer,No
+T01905,2025-11-09,16,Lekki Phase 1,Lekki,Groceries,7,7310,Transfer,Yes
+T01093,2025-11-10,12,Victoria Island,Lagos Island,Personal Care,12,14970,Transfer,No
+T01195,2025-11-10,12,Ikeja City Mall,Ikeja,Household,5,5640,POS,Yes
+T00676,2025-11-10,14,Yaba,Lagos Mainland,Baby,5,6310,POS,Yes
+T00773,2025-11-10,14,Yaba,Lagos Mainland,Groceries,3,3400,Cash,No
+T00734,2025-11-10,15,Victoria Island,Lagos Island,Groceries,20,25920,Card,Yes
+T00683,2025-11-10,18,Yaba,Lagos Mainland,Groceries,10,10380,Card,Yes
+T01402,2025-11-10,19,Ikeja City Mall,Ikeja,Groceries,19,19170,Transfer,No
+T00019,2025-11-10,20,Yaba,Lagos Mainland,Household,2,1570,Card,No
+T00117,2025-11-11,13,Ikeja City Mall,Ikeja,Personal Care,4,5480,Cash,No
+T00310,2025-11-11,14,Lekki Phase 1,Lekki,Beverages,3,3760,POS,No
+T00997,2025-11-11,14,Victoria Island,Lagos Island,Groceries,10,11640,Cash,No
+T01364,2025-11-11,14,Lekki Phase 1,Lekki,Baby,11,16570,Cash,No
+T00650,2025-11-11,20,Lekki Phase 1,Lekki,Groceries,4,6210,Transfer,No
+T01590,2025-11-11,20,Surulere,Surulere,Groceries,13,15810,Card,Yes
+T00209,2025-11-12,8,Lekki Phase 1,Lekki,Personal Care,7,8980,Transfer,Yes
+T00260,2025-11-12,12,Victoria Island,Lagos Island,Household,4,3890,Transfer,No
+T00110,2025-11-12,13,Ikeja City Mall,Ikeja,Baby,9,12320,Card,No
+T01140,2025-11-12,15,Lekki Phase 1,Lekki,Household,3,3340,Card,Yes
+T01932,2025-11-12,16,Lekki Phase 1,Lekki,Groceries,9,10660,Card,Yes
+T00891,2025-11-12,19,Surulere,Surulere,Baby,17,16510,POS,No
+T01709,2025-11-13,13,Surulere,Surulere,Beverages,4,5920,Transfer,Yes
+T00847,2025-11-13,14,Surulere,Surulere,Groceries,12,16390,Transfer,No
+T01400,2025-11-13,17,Yaba,Lagos Mainland,Baby,5,7050,Transfer,No
+T01554,2025-11-13,17,Festac,Lagos Mainland,Groceries,7,8870,Transfer,No
+T01676,2025-11-14,12,Ikeja City Mall,Ikeja,Groceries,7,7920,Transfer,No
+T01844,2025-11-14,13,Lekki Phase 1,Lekki,Personal Care,5,7190,Transfer,No
+T00365,2025-11-14,14,Lekki Phase 1,Lekki,Groceries,7,7640,POS,No
+T01914,2025-11-14,14,Ikeja City Mall,Ikeja,Household,3,4030,POS,No
+T00616,2025-11-14,15,Ikeja City Mall,Ikeja,Electronics,24,22440,POS,No
+T01707,2025-11-14,18,Lekki Phase 1,Lekki,Groceries,4,6090,POS,No
+T01935,2025-11-14,18,Surulere,Surulere,Household,9,13600,Transfer,Yes
+T01033,2025-11-14,20,Victoria Island,Lagos Island,Groceries,7,6550,Card,No
+T01662,2025-11-14,21,Ikeja City Mall,Ikeja,Beverages,1,1430,Transfer,No
+T00984,2025-11-15,10,Lekki Phase 1,Lekki,Household,11,11690,POS,No
+T00537,2025-11-15,13,Yaba,Lagos Mainland,Electronics,18,19710,Card,No
+T01390,2025-11-15,13,Ikeja City Mall,Ikeja,Personal Care,8,10610,Cash,No
+T00571,2025-11-16,16,Lekki Phase 1,Lekki,Groceries,9,14140,Transfer,No
+T00589,2025-11-16,17,Victoria Island,Lagos Island,Baby,4,4090,Card,No
+T00564,2025-11-16,18,Festac,Lagos Mainland,Personal Care,9,8450,Transfer,No
+T01635,2025-11-16,18,Lekki Phase 1,Lekki,Electronics,43,52010,Card,Yes
+T01186,2025-11-16,21,Surulere,Surulere,Personal Care,3,5350,Cash,No
+T01418,2025-11-16,21,Victoria Island,Lagos Island,Groceries,3,3860,Cash,Yes
+T00505,2025-11-17,10,Yaba,Lagos Mainland,Beverages,4,4540,Transfer,Yes
+T00954,2025-11-17,13,Ikeja City Mall,Ikeja,Baby,22,25790,Card,No
+T01424,2025-11-17,15,Lekki Phase 1,Lekki,Groceries,2,2680,Card,Yes
+T01964,2025-11-17,21,Victoria Island,Lagos Island,Baby,7,8780,Transfer,No
+T01116,2025-11-18,14,Ikeja City Mall,Ikeja,Beverages,11,13600,Transfer,Yes
+T01499,2025-11-18,16,Lekki Phase 1,Lekki,Household,8,8470,Card,No
+T01857,2025-11-18,16,Lekki Phase 1,Lekki,Household,4,4710,Card,No
+T00713,2025-11-18,20,Surulere,Surulere,Groceries,6,9060,Transfer,No
+T00979,2025-11-19,8,Yaba,Lagos Mainland,Household,7,7180,Transfer,No
+T00858,2025-11-19,13,Yaba,Lagos Mainland,Groceries,9,8450,Card,No
+T00329,2025-11-19,14,Surulere,Surulere,Groceries,9,10600,Transfer,No
+T00972,2025-11-19,15,Festac,Lagos Mainland,Beverages,5,7290,Cash,No
+T00691,2025-11-19,19,Surulere,Surulere,Beverages,5,5700,Cash,No
+T01369,2025-11-19,19,Yaba,Lagos Mainland,Groceries,9,8760,Card,No
+T00027,2025-11-20,17,Yaba,Lagos Mainland,Groceries,3,4590,Transfer,No
+T00618,2025-11-20,19,Victoria Island,Lagos Island,Groceries,2,2070,POS,Yes
+T00722,2025-11-20,19,Yaba,Lagos Mainland,Beverages,4,5570,Card,Yes
+T00342,2025-11-21,14,Festac,Lagos Mainland,Electronics,67,63320,Card,Yes
+T00794,2025-11-21,15,Victoria Island,Lagos Island,Electronics,44,52230,POS,Yes
+T01142,2025-11-21,15,Victoria Island,Lagos Island,Groceries,4,5820,Transfer,No
+T01454,2025-11-21,15,Surulere,Surulere,Household,4,5640,Transfer,Yes
+T00627,2025-11-21,16,Surulere,Surulere,Personal Care,3,4490,Transfer,No
+T01511,2025-11-21,16,Victoria Island,Lagos Island,Electronics,38,39350,Card,Yes
+T00871,2025-11-22,17,Victoria Island,Lagos Island,Electronics,24,25590,Transfer,No
+T00338,2025-11-22,19,Surulere,Surulere,Household,13,12690,Card,Yes
+T00767,2025-11-22,19,Surulere,Surulere,Beverages,4,4910,Card,No
+T01411,2025-11-23,8,Festac,Lagos Mainland,Baby,9,12480,Transfer,No
+T00332,2025-11-23,12,Ikeja City Mall,Ikeja,Household,3,4160,POS,No
+T00354,2025-11-23,12,Surulere,Surulere,Household,5,4900,Card,No
+T00245,2025-11-23,16,Festac,Lagos Mainland,Personal Care,8,7560,Cash,No
+T01008,2025-11-23,17,Surulere,Surulere,Baby,4,5360,POS,Yes
+T00608,2025-11-23,19,Lekki Phase 1,Lekki,Groceries,3,4330,Cash,No
+T01705,2025-11-24,12,Victoria Island,Lagos Island,Household,6,6830,Card,Yes
+T01800,2025-11-24,13,Festac,Lagos Mainland,Beverages,2,2200,Card,No
+T00337,2025-11-24,15,Festac,Lagos Mainland,Groceries,3,3950,Transfer,No
+T01732,2025-11-25,11,Victoria Island,Lagos Island,Groceries,6,7480,Card,No
+T01816,2025-11-25,16,Lekki Phase 1,Lekki,Personal Care,8,10580,Transfer,Yes
+T00894,2025-11-25,17,Victoria Island,Lagos Island,Groceries,3,3230,Transfer,No
+T01860,2025-11-25,21,Yaba,Lagos Mainland,Groceries,12,11050,POS,Yes
+T00473,2025-11-26,16,Victoria Island,Lagos Island,Groceries,8,11260,Card,Yes
+T00793,2025-11-26,16,Ikeja City Mall,Ikeja,Baby,7,10450,Cash,No
+T00907,2025-11-26,16,Victoria Island,Lagos Island,Groceries,17,25000,Transfer,Yes
+T01966,2025-11-26,16,Yaba,Lagos Mainland,Personal Care,3,3600,Cash,No
+T01684,2025-11-26,20,Lekki Phase 1,Lekki,Electronics,14,19650,Transfer,No
+T01820,2025-11-27,17,Victoria Island,Lagos Island,Personal Care,6,8640,Cash,Yes
+T00264,2025-11-27,18,Lekki Phase 1,Lekki,Baby,6,8910,Cash,No
+T00662,2025-11-28,14,Lekki Phase 1,Lekki,Personal Care,4,4430,POS,Yes
+T00079,2025-11-28,16,Lekki Phase 1,Lekki,Groceries,7,7740,POS,No
+T00791,2025-11-28,17,Victoria Island,Lagos Island,Beverages,4,4590,Transfer,No
+T01887,2025-11-28,21,Victoria Island,Lagos Island,Personal Care,2,3370,Card,No
+T00427,2025-11-29,8,Lekki Phase 1,Lekki,Baby,15,21030,Cash,Yes
+T00938,2025-11-29,8,Festac,Lagos Mainland,Electronics,17,18060,Card,Yes
+T00221,2025-11-29,11,Victoria Island,Lagos Island,Groceries,7,9390,Cash,No
+T00422,2025-11-29,12,Lekki Phase 1,Lekki,Groceries,4,4020,Cash,No
+T00493,2025-11-29,12,Yaba,Lagos Mainland,Electronics,14,20580,POS,No
+T01898,2025-11-29,15,Lekki Phase 1,Lekki,Baby,13,16240,POS,No
+T00334,2025-11-29,17,Ikeja City Mall,Ikeja,Personal Care,9,11840,Card,No
+T01541,2025-11-29,20,Surulere,Surulere,Groceries,4,4070,Transfer,Yes
+T00743,2025-11-30,14,Surulere,Surulere,Groceries,11,11280,Cash,No
+T01918,2025-11-30,14,Ikeja City Mall,Ikeja,Beverages,2,2570,Card,Yes
+T00575,2025-11-30,16,Ikeja City Mall,Ikeja,Groceries,7,9550,Transfer,Yes
+T01326,2025-11-30,17,Ikeja City Mall,Ikeja,Personal Care,4,4520,Card,Yes
+T01479,2025-11-30,18,Surulere,Surulere,Groceries,13,12380,Transfer,No
+T01776,2025-11-30,18,Yaba,Lagos Mainland,Groceries,8,9240,Transfer,Yes
+T01218,2025-11-30,21,Lekki Phase 1,Lekki,Personal Care,4,4840,Transfer,Yes
+T00836,2025-12-01,10,Lekki Phase 1,Lekki,Household,19,20990,Cash,Yes
+T00530,2025-12-01,11,Ikeja City Mall,Ikeja,Groceries,6,6360,Transfer,Yes
+T00835,2025-12-01,13,Yaba,Lagos Mainland,Beverages,3,2900,Cash,No
+T01501,2025-12-01,16,Victoria Island,Lagos Island,Baby,7,10740,Transfer,No
+T01406,2025-12-01,17,Lekki Phase 1,Lekki,Baby,8,7690,POS,No
+T01872,2025-12-01,17,Yaba,Lagos Mainland,Beverages,8,8790,Card,No
+T00665,2025-12-01,21,Festac,Lagos Mainland,Household,6,5620,POS,Yes
+T00121,2025-12-02,11,Festac,Lagos Mainland,Beverages,3,4890,Card,Yes
+T01771,2025-12-02,11,Victoria Island,Lagos Island,Groceries,9,9690,Card,Yes
+T00730,2025-12-02,13,Ikeja City Mall,Ikeja,Beverages,10,13140,Transfer,No
+T00710,2025-12-02,15,Victoria Island,Lagos Island,Baby,15,15350,POS,Yes
+T00934,2025-12-02,20,Surulere,Surulere,Groceries,14,21430,Cash,No
+T01004,2025-12-02,21,Yaba,Lagos Mainland,Personal Care,11,15240,Transfer,Yes
+T01260,2025-12-03,9,Victoria Island,Lagos Island,Household,14,17180,Card,Yes
+T00459,2025-12-03,10,Yaba,Lagos Mainland,Groceries,12,14750,POS,Yes
+T00174,2025-12-03,12,Lekki Phase 1,Lekki,Household,7,6100,Cash,No
+T01473,2025-12-03,12,Yaba,Lagos Mainland,Baby,15,19750,Transfer,No
+T01896,2025-12-03,15,Festac,Lagos Mainland,Groceries,27,33080,Cash,No
+T00351,2025-12-03,16,Ikeja City Mall,Ikeja,Electronics,33,43240,Transfer,Yes
+T00884,2025-12-03,17,Lekki Phase 1,Lekki,Beverages,16,20510,Transfer,No
+T01100,2025-12-03,17,Surulere,Surulere,Baby,22,28810,Card,Yes
+T00947,2025-12-03,18,Lekki Phase 1,Lekki,Personal Care,6,9030,POS,No
+T01608,2025-12-03,18,Lekki Phase 1,Lekki,Groceries,16,18300,Transfer,Yes
+T01791,2025-12-03,21,Victoria Island,Lagos Island,Electronics,35,51020,Card,No
+T00166,2025-12-04,10,Victoria Island,Lagos Island,Household,8,8620,Cash,Yes
+T01394,2025-12-04,11,Victoria Island,Lagos Island,Personal Care,6,8630,Card,No
+T01446,2025-12-04,13,Ikeja City Mall,Ikeja,Household,9,13240,Transfer,No
+T01037,2025-12-04,14,Ikeja City Mall,Ikeja,Groceries,11,15640,Cash,Yes
+T01531,2025-12-04,14,Victoria Island,Lagos Island,Groceries,22,26070,POS,Yes
+T01153,2025-12-04,17,Yaba,Lagos Mainland,Baby,35,33760,Cash,No
+T01867,2025-12-04,18,Victoria Island,Lagos Island,Groceries,15,14350,Transfer,Yes
+T01422,2025-12-04,20,Festac,Lagos Mainland,Groceries,10,14170,Cash,No
+T01889,2025-12-05,10,Lekki Phase 1,Lekki,Household,10,11150,Cash,Yes
+T01348,2025-12-05,17,Ikeja City Mall,Ikeja,Household,2,2840,POS,No
+T00377,2025-12-05,19,Festac,Lagos Mainland,Groceries,11,10730,Cash,Yes
+T01484,2025-12-06,11,Ikeja City Mall,Ikeja,Household,10,12600,Card,Yes
+T01596,2025-12-06,12,Ikeja City Mall,Ikeja,Groceries,11,10970,Transfer,No
+T00845,2025-12-06,16,Yaba,Lagos Mainland,Beverages,6,8080,Card,No
+T01876,2025-12-06,18,Ikeja City Mall,Ikeja,Groceries,16,18960,Transfer,No
+T01815,2025-12-06,19,Victoria Island,Lagos Island,Electronics,36,45150,Transfer,Yes
+T00654,2025-12-07,10,Lekki Phase 1,Lekki,Beverages,4,5590,Transfer,No
+T00284,2025-12-07,11,Ikeja City Mall,Ikeja,Groceries,7,7270,Transfer,No
+T00900,2025-12-07,13,Lekki Phase 1,Lekki,Electronics,13,17110,Transfer,No
+T01388,2025-12-07,13,Ikeja City Mall,Ikeja,Personal Care,2,2660,Cash,Yes
+T00965,2025-12-07,16,Surulere,Surulere,Groceries,13,14810,POS,No
+T00255,2025-12-07,17,Ikeja City Mall,Ikeja,Groceries,9,13330,POS,No
+T00775,2025-12-07,17,Festac,Lagos Mainland,Household,8,7880,Transfer,Yes
+T01444,2025-12-07,17,Lekki Phase 1,Lekki,Groceries,7,7860,Card,Yes
+T00412,2025-12-07,20,Yaba,Lagos Mainland,Groceries,6,8940,Card,Yes
+T00249,2025-12-08,13,Ikeja City Mall,Ikeja,Baby,14,16900,POS,Yes
+T00692,2025-12-09,12,Lekki Phase 1,Lekki,Groceries,8,10970,Card,Yes
+T01330,2025-12-09,12,Ikeja City Mall,Ikeja,Household,5,7770,POS,No
+T01426,2025-12-09,12,Victoria Island,Lagos Island,Groceries,5,7010,Transfer,No
+T00391,2025-12-09,14,Yaba,Lagos Mainland,Groceries,7,8280,Transfer,Yes
+T01821,2025-12-09,16,Lekki Phase 1,Lekki,Household,8,8330,Transfer,No
+T01150,2025-12-09,18,Yaba,Lagos Mainland,Personal Care,8,8820,POS,No
+T01995,2025-12-09,20,Yaba,Lagos Mainland,Beverages,9,11050,Card,No
+T00842,2025-12-10,8,Yaba,Lagos Mainland,Groceries,7,8080,Card,No
+T00097,2025-12-10,12,Ikeja City Mall,Ikeja,Beverages,9,11560,Cash,Yes
+T01851,2025-12-10,13,Ikeja City Mall,Ikeja,Personal Care,3,3570,Cash,No
+T00672,2025-12-10,14,Victoria Island,Lagos Island,Groceries,9,10750,Cash,No
+T00759,2025-12-10,14,Ikeja City Mall,Ikeja,Beverages,3,3930,Cash,Yes
+T00988,2025-12-10,18,Yaba,Lagos Mainland,Beverages,19,20990,Transfer,Yes
+T01040,2025-12-11,10,Festac,Lagos Mainland,Household,9,8590,Card,No
+T00024,2025-12-11,16,Lekki Phase 1,Lekki,Groceries,33,29320,POS,Yes
+T00781,2025-12-12,11,Ikeja City Mall,Ikeja,Household,9,9670,Transfer,No
+T01990,2025-12-12,11,Surulere,Surulere,Groceries,8,10430,Transfer,No
+T01611,2025-12-12,12,Victoria Island,Lagos Island,Groceries,8,7930,POS,No
+T01576,2025-12-12,14,Yaba,Lagos Mainland,Groceries,4,6380,Card,Yes
+T01790,2025-12-12,14,Festac,Lagos Mainland,Baby,4,5910,Transfer,No
+T00044,2025-12-12,15,Lekki Phase 1,Lekki,Groceries,31,36790,Card,No
+T01132,2025-12-12,17,Surulere,Surulere,Groceries,3,4110,Card,No
+T01288,2025-12-12,17,Lekki Phase 1,Lekki,Household,10,16210,Card,Yes
+T01822,2025-12-12,18,Yaba,Lagos Mainland,Beverages,9,9350,POS,Yes
+T01224,2025-12-13,10,Ikeja City Mall,Ikeja,Groceries,6,6610,Cash,Yes
+T00565,2025-12-13,13,Surulere,Surulere,Beverages,11,10800,Cash,No
+T01524,2025-12-13,14,Yaba,Lagos Mainland,Electronics,22,25910,Card,Yes
+T00291,2025-12-13,15,Lekki Phase 1,Lekki,Baby,15,22280,Transfer,No
+T01494,2025-12-13,16,Lekki Phase 1,Lekki,Beverages,4,4810,Card,No
+T01773,2025-12-14,10,Festac,Lagos Mainland,Electronics,25,30870,Transfer,Yes
+T00498,2025-12-14,12,Ikeja City Mall,Ikeja,Household,7,7630,Card,No
+T00942,2025-12-14,16,Ikeja City Mall,Ikeja,Groceries,8,8160,Card,Yes
+T00660,2025-12-14,19,Yaba,Lagos Mainland,Personal Care,5,4530,POS,No
+T01861,2025-12-14,19,Ikeja City Mall,Ikeja,Household,12,17880,Transfer,Yes
+T01148,2025-12-15,11,Victoria Island,Lagos Island,Household,64,72930,Cash,Yes
+T01210,2025-12-15,16,Yaba,Lagos Mainland,Beverages,8,8420,Card,Yes
+T00598,2025-12-15,18,Lekki Phase 1,Lekki,Groceries,6,7150,POS,Yes
+T00939,2025-12-16,12,Lekki Phase 1,Lekki,Beverages,10,12130,Transfer,No
+T00595,2025-12-16,13,Festac,Lagos Mainland,Personal Care,6,6840,Transfer,No
+T00046,2025-12-16,14,Ikeja City Mall,Ikeja,Groceries,7,7200,Card,No
+T00263,2025-12-16,15,Lekki Phase 1,Lekki,Household,36,35770,Card,Yes
+T01273,2025-12-16,16,Festac,Lagos Mainland,Electronics,31,46190,Cash,No
+T01173,2025-12-16,17,Victoria Island,Lagos Island,Beverages,12,14620,Card,No
+T01866,2025-12-16,19,Ikeja City Mall,Ikeja,Beverages,12,14270,Card,No
+T01538,2025-12-17,11,Surulere,Surulere,Beverages,3,4170,POS,No
+T01545,2025-12-17,11,Victoria Island,Lagos Island,Groceries,5,5160,Card,Yes
+T01298,2025-12-17,14,Lekki Phase 1,Lekki,Personal Care,6,5600,Transfer,No
+T01434,2025-12-17,15,Victoria Island,Lagos Island,Household,8,7880,Cash,Yes
+T01826,2025-12-17,15,Lekki Phase 1,Lekki,Groceries,11,15520,Card,Yes
+T01503,2025-12-17,18,Surulere,Surulere,Personal Care,6,8420,Transfer,Yes
+T00234,2025-12-17,19,Victoria Island,Lagos Island,Personal Care,2,3280,Transfer,No
+T01758,2025-12-17,21,Victoria Island,Lagos Island,Groceries,8,9680,Cash,No
+T00852,2025-12-18,16,Lekki Phase 1,Lekki,Groceries,7,10130,Transfer,No
+T01194,2025-12-18,16,Yaba,Lagos Mainland,Household,12,14570,Transfer,No
+T01690,2025-12-18,17,Yaba,Lagos Mainland,Groceries,9,13930,Card,Yes
+T01416,2025-12-18,18,Lekki Phase 1,Lekki,Baby,17,23760,POS,No
+T00348,2025-12-19,11,Ikeja City Mall,Ikeja,Beverages,8,10050,POS,Yes
+T00769,2025-12-19,11,Yaba,Lagos Mainland,Groceries,18,25860,POS,Yes
+T01575,2025-12-19,16,Ikeja City Mall,Ikeja,Beverages,2,3090,POS,No
+T01681,2025-12-19,16,Surulere,Surulere,Personal Care,10,10490,Card,Yes
+T00981,2025-12-19,19,Surulere,Surulere,Baby,14,16330,POS,No
+T00292,2025-12-19,20,Ikeja City Mall,Ikeja,Groceries,23,30680,Card,Yes
+T00547,2025-12-19,20,Yaba,Lagos Mainland,Household,6,5510,Cash,Yes
+T00478,2025-12-20,11,Lekki Phase 1,Lekki,Household,6,7940,POS,Yes
+T01975,2025-12-20,15,Surulere,Surulere,Beverages,4,5610,Transfer,Yes
+T01036,2025-12-20,16,Ikeja City Mall,Ikeja,Household,13,20470,Cash,Yes
+T00314,2025-12-20,17,Ikeja City Mall,Ikeja,Beverages,7,9310,POS,Yes
+T00697,2025-12-20,17,Victoria Island,Lagos Island,Household,4,5980,Card,No
+T00119,2025-12-20,18,Ikeja City Mall,Ikeja,Electronics,59,73650,Card,Yes
+T00036,2025-12-20,19,Surulere,Surulere,Electronics,75,77310,Cash,Yes
+T00990,2025-12-21,14,Surulere,Surulere,Beverages,7,9410,Transfer,No
+T00242,2025-12-22,16,Surulere,Surulere,Beverages,2,3370,Card,No
+T01172,2025-12-23,8,Ikeja City Mall,Ikeja,Groceries,11,11120,Cash,No
+T00054,2025-12-23,9,Victoria Island,Lagos Island,Beverages,4,5460,Card,No
+T01415,2025-12-23,12,Ikeja City Mall,Ikeja,Groceries,8,10690,Card,Yes
+T01208,2025-12-23,14,Ikeja City Mall,Ikeja,Groceries,9,10670,Transfer,No
+T01221,2025-12-24,8,Festac,Lagos Mainland,Baby,10,11700,Card,No
+T01449,2025-12-24,16,Yaba,Lagos Mainland,Beverages,6,6850,Card,No
+T00647,2025-12-25,10,Lekki Phase 1,Lekki,Baby,33,29610,Cash,Yes
+T00128,2025-12-25,13,Yaba,Lagos Mainland,Personal Care,5,7350,Cash,Yes
+T00297,2025-12-25,15,Yaba,Lagos Mainland,Groceries,10,10540,Cash,No
+T00600,2025-12-25,15,Yaba,Lagos Mainland,Household,14,15610,Transfer,Yes
+T01427,2025-12-25,16,Surulere,Surulere,Beverages,4,5170,Card,Yes
+T01753,2025-12-25,17,Ikeja City Mall,Ikeja,Personal Care,6,6100,POS,No
+T01281,2025-12-26,9,Festac,Lagos Mainland,Beverages,2,2060,Transfer,No
+T00752,2025-12-26,11,Surulere,Surulere,Groceries,13,16720,POS,No
+T01062,2025-12-26,11,Ikeja City Mall,Ikeja,Personal Care,6,8380,Transfer,Yes
+T00410,2025-12-26,13,Surulere,Surulere,Beverages,2,3670,Cash,No
+T00877,2025-12-26,14,Ikeja City Mall,Ikeja,Personal Care,4,4200,Transfer,No
+T00830,2025-12-26,15,Festac,Lagos Mainland,Groceries,12,15930,Transfer,No
+T01190,2025-12-26,15,Lekki Phase 1,Lekki,Groceries,4,4700,Cash,No
+T01236,2025-12-26,15,Surulere,Surulere,Personal Care,7,7730,Cash,No
+T01621,2025-12-26,16,Ikeja City Mall,Ikeja,Baby,7,10680,POS,No
+T01445,2025-12-26,17,Lekki Phase 1,Lekki,Groceries,11,16420,POS,No
+T00549,2025-12-26,18,Surulere,Surulere,Beverages,4,5770,Cash,No
+T01094,2025-12-26,18,Lekki Phase 1,Lekki,Household,4,5070,Cash,No
+T00849,2025-12-27,8,Lekki Phase 1,Lekki,Personal Care,7,6480,Cash,Yes
+T00094,2025-12-27,13,Yaba,Lagos Mainland,Groceries,7,6310,Transfer,Yes
+T00394,2025-12-27,19,Ikeja City Mall,Ikeja,Groceries,7,7720,Card,Yes
+T00540,2025-12-28,13,Surulere,Surulere,Household,5,4710,Cash,Yes
+T00806,2025-12-28,14,Lekki Phase 1,Lekki,Personal Care,4,5310,Card,No
+T01546,2025-12-28,14,Surulere,Surulere,Groceries,8,7770,POS,No
+T01937,2025-12-29,13,Lekki Phase 1,Lekki,Beverages,7,7260,Cash,No
+T00463,2025-12-29,14,Surulere,Surulere,Electronics,16,23810,Card,No
+T01135,2025-12-29,16,Victoria Island,Lagos Island,Beverages,4,6840,Cash,No
+T00826,2025-12-29,17,Lekki Phase 1,Lekki,Baby,7,10160,Card,No
+T00328,2025-12-29,20,Surulere,Surulere,Personal Care,9,9660,Card,Yes
+T00258,2025-12-29,21,Lekki Phase 1,Lekki,Groceries,6,6120,Card,No
+T00731,2025-12-30,8,Festac,Lagos Mainland,Groceries,4,5700,POS,No
+T00131,2025-12-30,11,Festac,Lagos Mainland,Personal Care,8,11710,Card,No
+T00363,2025-12-30,12,Festac,Lagos Mainland,Groceries,7,10400,Cash,No
+T00740,2025-12-30,13,Ikeja City Mall,Ikeja,Electronics,22,23650,POS,No
+T00236,2025-12-30,14,Festac,Lagos Mainland,Baby,13,18570,POS,Yes
+T00302,2025-12-30,14,Yaba,Lagos Mainland,Baby,13,13380,Transfer,Yes
+T01594,2025-12-30,14,Lekki Phase 1,Lekki,Electronics,30,38450,Transfer,Yes
+T01381,2025-12-30,15,Lekki Phase 1,Lekki,Groceries,3,5360,Transfer,No
+T00261,2025-12-31,17,Ikeja City Mall,Ikeja,Groceries,14,13030,Card,Yes
+T00823,2025-12-31,20,Yaba,Lagos Mainland,Groceries,5,7370,Card,No

@@ -1,0 +1,421 @@
+/*-- scss:defaults --*/
+// ===========================================================================
+//  Turning Data into Business Growth — Lagos Business School theme
+//  Palette: indigo / blue / deep blue / cyan / teal / gold on cream and navy.
+// ===========================================================================
+
+$lbs-indigo:    #1F2A66;
+$lbs-blue:      #1C7293;
+$lbs-deepblue:  #0B5E82;
+$lbs-cyan:      #D99A2B;
+$lbs-teal:      #1C7293;
+$lbs-gold:      #D99A2B;
+
+$lbs-navy:      #141B4D;
+$lbs-ink:       #1A2233;
+$lbs-slate:     #5C6B7A;
+$lbs-cream:     #F7F4ED;
+$lbs-paper:     #FFFFFF;
+$lbs-rule:      #E1E7EE;
+
+// Accessible text-on-white siblings of the lighter brand colours
+$lbs-cyan-text: #0B5E82;
+$lbs-teal-text: #0B5E82;
+$lbs-gold-text: #A8700F;
+
+// --- Bootstrap overrides ---------------------------------------------------
+$primary:       $lbs-deepblue;
+$secondary:     $lbs-slate;
+$success:       $lbs-teal;
+$info:          $lbs-cyan;
+$warning:       $lbs-gold;
+$danger:        #B3341E;
+$light:         $lbs-cream;
+$dark:          $lbs-navy;
+
+$body-color:    $lbs-ink;
+$body-bg:       $lbs-paper;
+$link-color:    $lbs-deepblue;
+$link-hover-color: $lbs-blue;
+
+$font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                          Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:  "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas,
+                          "Liberation Mono", monospace;
+$headings-font-family:   "Source Serif 4", Georgia, "Times New Roman", serif;
+
+$font-size-root:      17px;
+$line-height-base:    1.62;
+$headings-font-weight: 600;
+$h1-font-size:        2.45rem;
+$h2-font-size:        1.72rem;
+$h3-font-size:        1.28rem;
+$h4-font-size:        1.06rem;
+
+$border-radius:       6px;
+$border-radius-lg:    10px;
+
+$navbar-bg:           $lbs-navy;
+$navbar-fg:           #EDF1F8;
+$navbar-hl:           $lbs-cyan;
+$sidebar-bg:          $lbs-paper;
+$sidebar-fg:          $lbs-ink;
+$footer-bg:           $lbs-navy;
+$footer-fg:           #C6D0E2;
+
+$code-color:          #9B2C6F;
+$code-bg:             #F4F6FA;
+$code-block-bg:       #F7F9FC;
+$code-block-border-left: $lbs-cyan;
+
+$toc-color:           $lbs-slate;
+$toc-font-size:       0.83rem;
+
+$table-border-color:  $lbs-rule;
+$table-striped-bg:    rgba($lbs-deepblue, 0.030);
+
+/*-- scss:mixins --*/
+
+@mixin rule-top($colour) {
+  border-top: 3px solid $colour;
+}
+
+/*-- scss:rules --*/
+
+// Typefaces are declared in assets/css/fonts.css, inlined as data URIs so the
+// site renders correctly with no network at all.
+
+// ---------------------------------------------------------------- structure
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+main.content {
+  padding-top: 0.5rem;
+  max-width: 62rem;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.012em;
+  color: $lbs-navy;
+}
+
+h1.title {
+  line-height: 1.14;
+  margin-bottom: 0.25rem;
+}
+
+.quarto-title .subtitle,
+p.subtitle {
+  font-family: $headings-font-family;
+  font-size: 1.14rem;
+  font-style: italic;
+  color: $lbs-slate;
+  margin-bottom: 1.1rem;
+}
+
+h2 {
+  margin-top: 2.4rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid $lbs-rule;
+}
+
+h3 { margin-top: 1.9rem; }
+
+// ------------------------------------------------------------------ navbar
+.navbar {
+  border-bottom: 3px solid $lbs-cyan;
+  box-shadow: 0 1px 14px rgba(20, 27, 77, 0.16);
+}
+
+.navbar-brand > img,
+.navbar-logo {
+  height: 34px;
+  width: auto;
+  margin-right: 0.55rem;
+}
+
+.navbar-title {
+  font-family: $headings-font-family;
+  font-weight: 600;
+  font-size: 1.03rem;
+  letter-spacing: -0.01em;
+}
+
+.navbar .dropdown-menu {
+  border: 1px solid $lbs-rule;
+  border-top: 3px solid $lbs-cyan;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 12px 34px rgba(20, 27, 77, 0.19);
+  padding: 0.4rem 0;
+}
+
+.navbar .dropdown-item {
+  font-size: 0.9rem;
+  padding: 0.34rem 1rem;
+}
+
+.navbar .dropdown-item:hover {
+  background: rgba($lbs-cyan, 0.11);
+  color: $lbs-navy;
+}
+
+// ------------------------------------------------------------------ hexes
+.hex {
+  float: right;
+  width: 104px;
+  margin: -5.6rem 0 0.7rem 1.4rem;
+  filter: drop-shadow(0 3px 9px rgba(20, 27, 77, 0.18));
+}
+
+// The badge pair is lifted into the whitespace beside the title block, the
+// way a hex sticker sits in the corner of a workshop page.
+.hex-pair {
+  float: right;
+  display: flex;
+  gap: 0.3rem;
+  align-items: flex-start;
+  margin: -6.1rem 0 0.7rem 1.4rem;
+
+  img { width: 92px; filter: drop-shadow(0 3px 9px rgba(20, 27, 77, 0.18)); }
+  img:nth-child(2) { width: 76px; margin-top: 0.8rem; }
+}
+
+@media (max-width: 991px) {
+  .hex-pair { margin-top: -1.2rem; }
+}
+
+// Keep the title and subtitle clear of the badges they sit beside.
+@media (min-width: 992px) {
+  header#title-block-header .quarto-title h1.title,
+  header#title-block-header .quarto-title p.subtitle {
+    padding-right: 13rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hex { width: 82px; margin-left: 0.9rem; }
+  .hex-pair img { width: 70px; }
+  .hex-pair img:nth-child(2) { width: 58px; }
+}
+
+// -------------------------------------------------------------- hero block
+.hero {
+  background: linear-gradient(135deg, $lbs-navy 0%, $lbs-indigo 55%, $lbs-deepblue 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 2.4rem 2.4rem 2rem;
+  margin: 0.4rem 0 2.2rem;
+  position: relative;
+  overflow: hidden;
+
+  h1, h2, h3, p { color: #fff; border: 0; margin-top: 0; }
+  h1 { font-size: 2.5rem; line-height: 1.1; margin-bottom: 0.5rem; }
+  .lede { font-size: 1.14rem; color: #D7E2F3; max-width: 46rem; }
+  a { color: $lbs-cyan; }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: auto -40px -70px auto;
+    width: 260px; height: 260px;
+    background: radial-gradient(circle, rgba($lbs-cyan, 0.30), transparent 68%);
+  }
+}
+
+.hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin-top: 1.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  position: relative;
+  z-index: 2;
+
+  div { min-width: 8.5rem; }
+  .k {
+    display: block;
+    font-family: $font-family-monospace;
+    font-size: 0.63rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.62);
+    margin-bottom: 0.22rem;
+  }
+  .v { font-weight: 600; font-size: 1.02rem; color: #fff; }
+}
+
+// ------------------------------------------------------------- day cards
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+  gap: 1rem;
+  margin: 1.6rem 0 2rem;
+}
+
+.day-card {
+  border: 1px solid $lbs-rule;
+  border-radius: 10px;
+  padding: 1.15rem 1.15rem 1rem;
+  background: #fff;
+  transition: transform .16s ease, box-shadow .16s ease;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+
+  &:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(20,27,77,.13); }
+
+  .day-k {
+    font-family: $font-family-monospace;
+    font-size: 0.64rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $lbs-slate;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 0.32rem 0 0.5rem;
+    border: 0;
+    padding: 0;
+    line-height: 1.28;
+  }
+  p { font-size: 0.88rem; color: $lbs-slate; margin: 0; }
+
+  &.d1 { @include rule-top($lbs-indigo); }
+  &.d2 { @include rule-top($lbs-deepblue); }
+  &.d3 { @include rule-top($lbs-cyan); }
+  &.d4 { @include rule-top($lbs-teal); }
+  &.d5 { @include rule-top($lbs-gold); }
+}
+
+// -------------------------------------------------------------- callouts
+.callout {
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+
+.callout.callout-style-default .callout-title {
+  font-family: $headings-font-family;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+// The three custom teaching blocks
+.tdbg-box {
+  border: 1px solid $lbs-rule;
+  border-left: 4px solid $lbs-slate;
+  border-radius: 8px;
+  padding: 1rem 1.15rem 0.55rem;
+  margin: 1.5rem 0;
+  background: #FCFDFE;
+
+  > .lbl {
+    display: inline-block;
+    font-family: $font-family-monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $lbs-slate;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.tdbg-aim   { border-left-color: $lbs-indigo;  background: rgba($lbs-indigo, .035);
+              > .lbl { color: $lbs-indigo; } }
+.tdbg-lab   { border-left-color: $lbs-teal;    background: rgba($lbs-teal, .045);
+              > .lbl { color: $lbs-teal-text; } }
+.tdbg-salt  { border-left-color: $lbs-gold;    background: rgba($lbs-gold, .085);
+              > .lbl { color: $lbs-gold-text; } }
+.tdbg-exec  { border-left-color: $lbs-cyan;    background: rgba($lbs-cyan, .055);
+              > .lbl { color: $lbs-cyan-text; } }
+.tdbg-sceptic { border-left-color: #B3341E;    background: rgba(#B3341E, .045);
+              > .lbl { color: #B3341E; } }
+
+// ------------------------------------------------------------------- code
+pre.sourceCode,
+div.sourceCode {
+  border-radius: 7px;
+  border: 1px solid #E3E9F2;
+  border-left: 3px solid $lbs-cyan;
+  font-size: 0.845rem;
+}
+
+code:not(.sourceCode) {
+  font-size: 0.86em;
+  padding: 0.12em 0.34em;
+  border-radius: 4px;
+  background: $code-bg;
+}
+
+.panel-tabset > .nav-tabs {
+  border-bottom: 2px solid $lbs-rule;
+  gap: 0.15rem;
+}
+
+.panel-tabset > .nav-tabs .nav-link {
+  font-family: $font-family-monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $lbs-slate;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  padding: 0.42rem 0.85rem;
+}
+
+.panel-tabset > .nav-tabs .nav-link.active {
+  color: $lbs-navy;
+  border-bottom-color: $lbs-cyan;
+  background: transparent;
+  font-weight: 600;
+}
+
+// ----------------------------------------------------------------- tables
+table {
+  font-size: 0.9rem;
+}
+
+thead th {
+  background: rgba($lbs-navy, 0.045);
+  border-bottom: 2px solid $lbs-rule !important;
+  font-weight: 600;
+  color: $lbs-navy;
+}
+
+// ---------------------------------------------------------------- schedule
+.sched {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0 1.8rem;
+  font-size: 0.9rem;
+
+  td, th { padding: 0.55rem 0.7rem; border-bottom: 1px solid $lbs-rule; vertical-align: top; }
+  .t { font-family: $font-family-monospace; font-size: 0.79rem; color: $lbs-slate;
+       white-space: nowrap; width: 7.2rem; }
+  .brk td { background: rgba($lbs-cream, .9); color: $lbs-slate; font-style: italic; }
+  a { font-weight: 500; }
+}
+
+// -------------------------------------------------------------- footer/toc
+.nav-footer {
+  font-size: 0.83rem;
+  a { color: $lbs-cyan; }
+}
+
+#quarto-margin-sidebar .nav-link,
+.sidebar nav[role="doc-toc"] a {
+  font-size: 0.82rem;
+}
+
+#quarto-sidebar .sidebar-item-text {
+  font-size: 0.86rem;
+}
+
+// ------------------------------------------------------------- print bits
+@media print {
+  .navbar, .sidebar, #quarto-margin-sidebar, .nav-footer, .tdbg-progress { display: none !important; }
+  main.content { max-width: 100%; }
+}

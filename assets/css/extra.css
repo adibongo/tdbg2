@@ -1,0 +1,57 @@
+/* Small corrections that sit better as plain CSS than as SCSS variables. */
+
+/* Quarto's default anchor offset fights the sticky progress ribbon. */
+:root { scroll-padding-top: 4.5rem; }
+
+/* Keep long code lines from forcing the page to scroll sideways. */
+main.content pre code { white-space: pre-wrap; word-break: normal; overflow-wrap: anywhere; }
+
+/* Wide tables scroll inside themselves, never the page. */
+/* Wide tables scroll inside themselves; the page never scrolls sideways.
+   This used to be scoped `main.content > table`, which matched nothing:
+   Quarto nests every table inside a <section>, and it emits no
+   .table-responsive wrapper at all. The eight-column segment table in 3.4
+   was pushing the whole page sideways on a phone. Match any descendant. */
+main.content table { display: block; overflow-x: auto; max-width: 100%; }
+
+/* The figure captions read as captions, not as body text. */
+figure figcaption, .figure-caption {
+  font-size: .8rem; color: #5C6B7A; text-align: center;
+  margin-top: .5rem; font-style: italic;
+}
+
+/* Mermaid diagrams: give them air and stop them overflowing on phones. */
+.cell-output-display > .mermaid, pre.mermaid, div.mermaid {
+  margin: 1.6rem auto; max-width: 100%; overflow-x: auto;
+}
+
+/* Blockquotes as pull-quotes rather than as indentation. */
+main.content blockquote {
+  border-left: 3px solid #D99A2B;
+  padding: .2rem 0 .2rem 1.1rem;
+  color: #38455E;
+  font-size: 1.02rem;
+}
+
+/* External link list in "Further reading" sections. */
+ul.reading li { margin-bottom: .45rem; }
+
+/* Definition-style key/value rows used on the day pages. */
+dl.kv { display: grid; grid-template-columns: max-content 1fr; gap: .35rem 1.1rem; }
+dl.kv dt { font-family: "IBM Plex Mono", monospace; font-size: .74rem;
+           letter-spacing: .08em; text-transform: uppercase; color: #5C6B7A;
+           padding-top: .18rem; }
+dl.kv dd { margin: 0; }
+
+/* Make the "download" links to data files obvious. */
+a.datafile {
+  font-family: "IBM Plex Mono", monospace; font-size: .84rem;
+  background: #F4F6FA; border: 1px solid #E1E7EE; border-radius: 5px;
+  padding: .12rem .4rem; text-decoration: none;
+}
+a.datafile:hover { background: #E9F5FC; border-color: #D99A2B; }
+
+/* Respect a reduced-motion preference for the progress ribbon. */
+@media (prefers-reduced-motion: reduce) {
+  .tdbg-progress > i, .day-card { transition: none !important; }
+}
