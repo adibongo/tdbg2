@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -590,6 +595,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -662,11 +673,11 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td>Sources</td>
-<td>ERP purchasing (SAP MM, Dynamics 365 SCM, Oracle), WMS goods receipts, freight forwarders’ files, port and customs data, supplier portals, Excel trackers</td>
+<td>Enterprise resource planning (ERP) purchasing (SAP MM, Dynamics 365 supply chain management (SCM), Oracle), warehouse management system (WMS) goods receipts, freight forwarders’ files, port and customs data, supplier portals, Excel trackers</td>
 </tr>
 <tr class="even">
 <td>Silver</td>
-<td>Typed POs; <strong>conformed supplier master</strong> (SUP-CEDAR = SUP-CEDAR-NG); date errors flagged (received before ordered); one row per PO line</td>
+<td>Typed purchase orders (POs); <strong>conformed supplier master</strong> (SUP-CEDAR = SUP-CEDAR-NG); date errors flagged (received before ordered); one row per <a class="abbr-ref" href="e-abbreviations.html#abbr-po"><abbr title="purchase order">PO</abbr></a> line</td>
 </tr>
 <tr class="odd">
 <td>Gold</td>
@@ -674,15 +685,15 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td>Gate</td>
-<td>Unique PO; received ≥ ordered (or quarantined); order value = qty × unit cost; every supplier in the master; spend reconciles to accounts payable</td>
+<td>Unique <a class="abbr-ref" href="e-abbreviations.html#abbr-po"><abbr title="purchase order">PO</abbr></a>; received ≥ ordered (or quarantined); order value = qty × unit cost; every supplier in the master; spend reconciles to accounts payable</td>
 </tr>
 <tr class="odd">
 <td>Govern</td>
-<td>Metrics: OTIF %, mean and standard deviation of lead time, spend, supplier concentration (top-3 share)</td>
+<td>Metrics: on time in full (OTIF) %, mean and standard deviation of lead time, spend, supplier concentration (top-3 share)</td>
 </tr>
 <tr class="even">
 <td>Serve</td>
-<td>Procurement dashboard; supplier scorecards (PDF) for quarterly reviews; safety-stock parameters back to the ERP</td>
+<td>Procurement dashboard; supplier scorecards (Portable Document Format (PDF)) for quarterly reviews; safety-stock parameters back to the <a class="abbr-ref" href="e-abbreviations.html#abbr-erp"><abbr title="enterprise resource planning">ERP</abbr></a></td>
 </tr>
 <tr class="odd">
 <td>Plane</td>
@@ -765,7 +776,7 @@ window.Quarto = {
 <tr class="even">
 <td style="text-align: left;">PASS</td>
 <td style="text-align: left;">error</td>
-<td style="text-align: left;">quarantined POs ≤ 2%</td>
+<td style="text-align: left;">quarantined <a class="abbr-ref" href="e-abbreviations.html#abbr-po"><abbr title="purchase order">POs</abbr></a> ≤ 2%</td>
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
@@ -894,98 +905,98 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Apapa</td>
-<td style="text-align: left;">DDP</td>
+<td style="text-align: left;">Delivered duty paid (DDP)</td>
 <td style="text-align: right;">350</td>
 <td style="text-align: right;">17.9</td>
 <td style="text-align: right;">36.0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Onne</td>
-<td style="text-align: left;">EXW</td>
+<td style="text-align: left;">Ex works (EXW)</td>
 <td style="text-align: right;">337</td>
 <td style="text-align: right;">18.8</td>
 <td style="text-align: right;">35.0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Apapa</td>
-<td style="text-align: left;">FOB</td>
+<td style="text-align: left;">Free on board (FOB)</td>
 <td style="text-align: right;">1258</td>
 <td style="text-align: right;">17.7</td>
 <td style="text-align: right;">33.0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Onne</td>
-<td style="text-align: left;">FOB</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-fob"><abbr title="free on board (an Incoterm)">FOB</abbr></a></td>
 <td style="text-align: right;">660</td>
 <td style="text-align: right;">17.7</td>
 <td style="text-align: right;">33.0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Lekki Deep Sea</td>
-<td style="text-align: left;">FOB</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-fob"><abbr title="free on board (an Incoterm)">FOB</abbr></a></td>
 <td style="text-align: right;">529</td>
 <td style="text-align: right;">17.3</td>
 <td style="text-align: right;">32.2</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Lekki Deep Sea</td>
-<td style="text-align: left;">CIF</td>
+<td style="text-align: left;">Cost, insurance and freight (CIF)</td>
 <td style="text-align: right;">406</td>
 <td style="text-align: right;">17.7</td>
 <td style="text-align: right;">32.0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Tin Can</td>
-<td style="text-align: left;">EXW</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-exw"><abbr title="ex works (an Incoterm)">EXW</abbr></a></td>
 <td style="text-align: right;">551</td>
 <td style="text-align: right;">17.3</td>
 <td style="text-align: right;">32.0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Lekki Deep Sea</td>
-<td style="text-align: left;">EXW</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-exw"><abbr title="ex works (an Incoterm)">EXW</abbr></a></td>
 <td style="text-align: right;">295</td>
 <td style="text-align: right;">16.9</td>
 <td style="text-align: right;">32.0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Onne</td>
-<td style="text-align: left;">CIF</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-cif"><abbr title="cost, insurance and freight (an Incoterm)">CIF</abbr></a></td>
 <td style="text-align: right;">486</td>
 <td style="text-align: right;">17.3</td>
 <td style="text-align: right;">32.0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Tin Can</td>
-<td style="text-align: left;">CIF</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-cif"><abbr title="cost, insurance and freight (an Incoterm)">CIF</abbr></a></td>
 <td style="text-align: right;">783</td>
 <td style="text-align: right;">17.6</td>
 <td style="text-align: right;">31.8</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Tin Can</td>
-<td style="text-align: left;">FOB</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-fob"><abbr title="free on board (an Incoterm)">FOB</abbr></a></td>
 <td style="text-align: right;">1013</td>
 <td style="text-align: right;">17.1</td>
 <td style="text-align: right;">31.0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Apapa</td>
-<td style="text-align: left;">CIF</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-cif"><abbr title="cost, insurance and freight (an Incoterm)">CIF</abbr></a></td>
 <td style="text-align: right;">979</td>
 <td style="text-align: right;">17.4</td>
 <td style="text-align: right;">31.0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Apapa</td>
-<td style="text-align: left;">EXW</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-exw"><abbr title="ex works (an Incoterm)">EXW</abbr></a></td>
 <td style="text-align: right;">660</td>
 <td style="text-align: right;">17.5</td>
 <td style="text-align: right;">31.0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Tin Can</td>
-<td style="text-align: left;">DDP</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-ddp"><abbr title="delivered duty paid (an Incoterm)">DDP</abbr></a></td>
 <td style="text-align: right;">266</td>
 <td style="text-align: right;">17.6</td>
 <td style="text-align: right;">31.0</td>
@@ -1001,18 +1012,30 @@ window.Quarto = {
 <h2 data-number="19.7" class="anchored" data-anchor-id="deploying-in-a-supply-chain-function"><span class="header-section-number">19.7</span> Deploying in a supply-chain function</h2>
 <ul>
 <li><strong>Owner:</strong> Head of Procurement (supplier master and scorecard definitions); Supply Planning (safety-stock parameters).</li>
-<li><strong>First 90 days:</strong> a conformed supplier master and a monthly scorecard; then safety-stock recommendations that the ERP <em>imports</em> (a write-back loop: recommendations go in as a source file, approved by planners).</li>
+<li><strong>First 90 days:</strong> a conformed supplier master and a monthly scorecard; then safety-stock recommendations that the <a class="abbr-ref" href="e-abbreviations.html#abbr-erp"><abbr title="enterprise resource planning">ERP</abbr></a> <em>imports</em> (a write-back loop: recommendations go in as a source file, approved by planners).</li>
 <li><strong>Pitfall:</strong> promised lead days typed in by buyers can be gamed. Track who changes them, and compare them with contract terms.</li>
 </ul>
 </section>
 <section id="exercises" class="level2" data-number="19.8">
 <h2 data-number="19.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">19.8</span> 🏋️ Exercises</h2>
-<p><strong>E19.1 🟢</strong> What share of total spend goes to the top three suppliers? Is that a concentration risk? <strong>E19.2 🟡</strong> Join late POs to retail stockouts: for weeks with more late <code>Raw Material</code> POs, is the stockout rate higher? What would you need to make this causal? <strong>E19.3 🔴</strong> Build a quarterly supplier review as a parameterised Quarto PDF (<code>params: supplier</code>) and render it for every supplier in one loop.</p>
+<p><strong>E19.1 🟢</strong> What share of total spend goes to the top three suppliers? Is that a concentration risk? <strong>E19.2 🟡</strong> Join late <a class="abbr-ref" href="e-abbreviations.html#abbr-po"><abbr title="purchase order">POs</abbr></a> to retail stockouts: for weeks with more late <code>Raw Material</code> <a class="abbr-ref" href="e-abbreviations.html#abbr-po"><abbr title="purchase order">POs</abbr></a>, is the stockout rate higher? What would you need to make this causal? <strong>E19.3 🔴</strong> Build a quarterly supplier review as a parameterised Quarto <a class="abbr-ref" href="e-abbreviations.html#abbr-pdf"><abbr title="Portable Document Format">PDF</abbr></a> (<code>params: supplier</code>) and render it for every supplier in one loop.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1447,7 +1470,7 @@ window.Quarto = {
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

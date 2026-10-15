@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -629,17 +640,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th>Layer</th>
-<th>In HR</th>
+<th>In human resources (HR)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Sources</td>
-<td>HRIS (SAP SuccessFactors, Workday, Dynamics 365 HR in Dataverse, Oracle HCM, or Excel), payroll, the engagement survey tool, the learning system, recruitment ATS, exit interviews (text)</td>
+<td>Human resources information system (HRIS) (SAP SuccessFactors, Workday, Dynamics 365 <a class="abbr-ref" href="e-abbreviations.html#abbr-hr"><abbr title="human resources">HR</abbr></a> in Dataverse, Oracle human capital management (HCM), or Excel), payroll, the engagement survey tool, the learning system, recruitment applicant tracking system (ATS), exit interviews (text)</td>
 </tr>
 <tr class="even">
 <td>Bronze</td>
-<td>Monthly HRIS extract + payroll file + survey export, as delivered</td>
+<td>Monthly <a class="abbr-ref" href="e-abbreviations.html#abbr-hris"><abbr title="human resources information system">HRIS</abbr></a> extract + payroll file + survey export, as delivered</td>
 </tr>
 <tr class="odd">
 <td>Silver</td>
@@ -659,11 +670,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td>Serve</td>
-<td>HRBP dashboard (Shiny, with <strong>row-level security by department</strong>); Dataverse for HR Power Apps; aggregate-only views for executives</td>
+<td>Human resources business partner (HRBP) dashboard (Shiny, with <strong>row-level security by department</strong>); Dataverse for <a class="abbr-ref" href="e-abbreviations.html#abbr-hr"><abbr title="human resources">HR</abbr></a> Power Apps; aggregate-only views for executives</td>
 </tr>
 <tr class="even">
 <td>Plane</td>
-<td>Pay and performance are <em>confidential</em>; names and IDs are <em>personal</em>. DPIA for any predictive model about people</td>
+<td>Pay and performance are <em>confidential</em>; names and identifiers (IDs) are <em>personal</em>. Data protection impact assessment (DPIA) for any predictive model about people</td>
 </tr>
 </tbody>
 </table>
@@ -676,12 +687,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Prompt 17.1 — HR pipeline
+🧠 Prompt 17.1 — <a class="abbr-ref" href="e-abbreviations.html#abbr-hr"><abbr title="human resources">HR</abbr></a> pipeline
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Build an HR pipeline with the kit’s run_pipeline(): bronze from hr_attrition.csv; silver.employees typed, with exit_interview_booked excluded because it leaks the outcome; gold.fct_employee with a compa-ratio (pay ÷ median pay for the grade), an engagement band and a promotion-wait band; and a department mart. Tests: unique employee_id, engagement 1–5, pay &gt; 0, accepted grades and work patterns. Publish the mart to a serving SQLite file.</p>
+<p>Build an <a class="abbr-ref" href="e-abbreviations.html#abbr-hr"><abbr title="human resources">HR</abbr></a> pipeline with the kit’s run_pipeline(): bronze from hr_attrition.csv; silver.employees typed, with exit_interview_booked excluded because it leaks the outcome; gold.fct_employee with a compa-ratio (pay ÷ median pay for the grade), an engagement band and a promotion-wait band; and a department mart. Tests: unique employee_id, engagement 1–5, pay &gt; 0, accepted grades and work patterns. Publish the mart to a serving SQLite file.</p>
 </blockquote>
 </div>
 </div>
@@ -811,7 +822,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Fit two logistic regressions for left_within_12m: one with exit_interview_booked (from bronze), one without (from gold). Compare their AUC on a 30% hold-out. Explain to an HR director why the “better” model is useless.</p>
+<p>Fit two logistic regressions for left_within_12m: one with exit_interview_booked (from bronze), one without (from gold). Compare their area under the curve (AUC) on a 30% hold-out. Explain to an <a class="abbr-ref" href="e-abbreviations.html#abbr-hr"><abbr title="human resources">HR</abbr></a> director why the “better” model is useless.</p>
 </blockquote>
 </div>
 </div>
@@ -832,7 +843,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th style="text-align: left;">model</th>
-<th style="text-align: right;">hold_out_AUC</th>
+<th style="text-align: right;">hold_out_<a class="abbr-ref" href="e-abbreviations.html#abbr-auc"><abbr title="area under the curve">AUC</abbr></a></th>
 </tr>
 </thead>
 <tbody>
@@ -925,7 +936,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">1.007378</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">HR</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-hr"><abbr title="human resources">HR</abbr></a></td>
 <td style="text-align: right;">241</td>
 <td style="text-align: right;">18.67220</td>
 <td style="text-align: right;">3.563153</td>
@@ -940,11 +951,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="deploying-in-an-hr-function" class="level2" data-number="17.6">
 <h2 data-number="17.6" class="anchored" data-anchor-id="deploying-in-an-hr-function"><span class="header-section-number">17.6</span> Deploying in an HR function</h2>
 <ul>
-<li><strong>Owner:</strong> the CHRO owns the definitions; the HR analytics lead owns the pipeline.</li>
-<li><strong>First 90 days:</strong> a monthly attrition and headcount pack that reconciles to payroll; then a flight-risk list for HRBPs, with <em>reasons</em>, not just scores.</li>
-<li><strong>Privacy:</strong> individual risk scores are personal data about employees. You need a DPIA, a clear lawful basis, access limited to the employee’s own HRBP and manager, and <strong>no automated decisions</strong>. The model prompts a conversation, never a dismissal.</li>
+<li><strong>Owner:</strong> the chief human resources officer (CHRO) owns the definitions; the <a class="abbr-ref" href="e-abbreviations.html#abbr-hr"><abbr title="human resources">HR</abbr></a> analytics lead owns the pipeline.</li>
+<li><strong>First 90 days:</strong> a monthly attrition and headcount pack that reconciles to payroll; then a flight-risk list for <a class="abbr-ref" href="e-abbreviations.html#abbr-hrbp"><abbr title="human resources business partner">HRBPs</abbr></a>, with <em>reasons</em>, not just scores.</li>
+<li><strong>Privacy:</strong> individual risk scores are personal data about employees. You need a <a class="abbr-ref" href="e-abbreviations.html#abbr-dpia"><abbr title="data protection impact assessment">DPIA</abbr></a>, a clear lawful basis, access limited to the employee’s own <a class="abbr-ref" href="e-abbreviations.html#abbr-hrbp"><abbr title="human resources business partner">HRBP</abbr></a> and manager, and <strong>no automated decisions</strong>. The model prompts a conversation, never a dismissal.</li>
 <li><strong>Fairness:</strong> do not use protected characteristics as model inputs. Check outcomes across groups where lawful.</li>
-<li><strong>Pitfall:</strong> the HRIS records <em>reasons for leaving</em> after the fact. Keep them for reporting, never as model features.</li>
+<li><strong>Pitfall:</strong> the <a class="abbr-ref" href="e-abbreviations.html#abbr-hris"><abbr title="human resources information system">HRIS</abbr></a> records <em>reasons for leaving</em> after the fact. Keep them for reporting, never as model features.</li>
 </ul>
 </section>
 <section id="exercises" class="level2" data-number="17.7">
@@ -955,6 +966,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1389,7 +1412,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

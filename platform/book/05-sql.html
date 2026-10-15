@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -619,11 +630,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><strong>What</strong></td>
-<td>The ~20 SQL ideas that cover 95% of analytics work, practised in DuckDB</td>
+<td>The ~20 Structured Query Language (SQL) ideas that cover 95% of analytics work, practised in DuckDB</td>
 </tr>
 <tr class="even">
 <td><strong>Why</strong></td>
-<td>Every layer from silver onward is written in SQL. It is the one language every database, BI tool and AI assistant shares</td>
+<td>Every layer from silver onward is written in <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>. It is the one language every database, business intelligence (BI) tool and artificial intelligence (AI) assistant shares</td>
 </tr>
 <tr class="odd">
 <td><strong>When</strong></td>
@@ -631,12 +642,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><strong>Who</strong></td>
-<td>Analysts write it. Reviewers read it. AI drafts it, and <em>you</em> must be able to check it</td>
+<td>Analysts write it. Reviewers read it. <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> drafts it, and <em>you</em> must be able to check it</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>This chapter uses a pre-built copy of the running example. Chapters 6–8 show how it was built. Every block below is a <strong>SQL chunk</strong>: Quarto runs it directly against DuckDB.</p>
+<p>This chapter uses a pre-built copy of the running example. Chapters 6–8 show how it was built. Every block below is a <strong><a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> chunk</strong>: Quarto runs it directly against DuckDB.</p>
 <section id="reading-select-where-order-by-limit" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="reading-select-where-order-by-limit"><span class="header-section-number">5.1</span> Reading: SELECT, WHERE, ORDER BY, LIMIT</h2>
 <div class="cell">
@@ -953,7 +964,7 @@ The fan-out trap
 </section>
 <section id="building-in-steps-ctes-with" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="building-in-steps-ctes-with"><span class="header-section-number">5.4</span> Building in steps: CTEs (<code>WITH</code>)</h2>
-<p>Common table expressions name each step. They make long queries readable and reviewable, which matters when AI wrote the first draft:</p>
+<p>Common table expressions name each step. They make long queries readable and reviewable, which matters when <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> wrote the first draft:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> monthly <span class="kw">AS</span> (</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">SELECT</span> year_month, region, <span class="fu">SUM</span>(revenue_ngn) <span class="kw">AS</span> revenue</span>
@@ -1129,6 +1140,16 @@ The fan-out trap
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">Snacks</td>
+<td style="text-align: left;">Snacks Line 08</td>
+<td style="text-align: right;">1318766386</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Home Care</td>
+<td style="text-align: left;">Home Line 03</td>
+<td style="text-align: right;">2167176899</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">Personal Care</td>
 <td style="text-align: left;">Personal Line 04</td>
 <td style="text-align: right;">1333552674</td>
@@ -1142,16 +1163,6 @@ The fan-out trap
 <td style="text-align: left;">Beverages</td>
 <td style="text-align: left;">Beverages Line 03</td>
 <td style="text-align: right;">2631829554</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Snacks</td>
-<td style="text-align: left;">Snacks Line 08</td>
-<td style="text-align: right;">1318766386</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Home Care</td>
-<td style="text-align: left;">Home Line 03</td>
-<td style="text-align: right;">2167176899</td>
 </tr>
 </tbody>
 </table>
@@ -1229,7 +1240,7 @@ The fan-out trap
 </section>
 <section id="r-and-sql-together" class="level2" data-number="5.7">
 <h2 data-number="5.7" class="anchored" data-anchor-id="r-and-sql-together"><span class="header-section-number">5.7</span> R and SQL together</h2>
-<p>You don’t have to choose. Write SQL in SQL chunks, then pick results up in R with <code>output.var</code>, or use dplyr on a lazy table and let it write the SQL:</p>
+<p>You don’t have to choose. Write <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> in <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> chunks, then pick results up in R with <code>output.var</code>, or use dplyr on a lazy table and let it write the <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">tbl</span>(con, <span class="fu">I</span>(<span class="st">"gold.v_sales"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2025</span>) <span class="sc">|&gt;</span></span>
@@ -1296,16 +1307,16 @@ ORDER BY revenue_bn DESC</code></pre>
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Prompt 5.1 — have AI write SQL, then check it
+🧠 Prompt 5.1 — have <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> write <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>, then check it
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Using DuckDB SQL on table gold.v_sales (columns: week_starting, depot_code, sku, units_sold, revenue_ngn, gross_profit_ngn, on_promotion, discount_pct, stockout_flag, depot_name, region, state, product_name, category, pack_size, year, quarter, year_month), write a query for “gross margin % by category and region for 2025, ranked within each region”. Use a CTE and a window function. Then list the assumptions you made.</p>
+<p>Using DuckDB <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> on table gold.v_sales (columns: week_starting, depot_code, sku, units_sold, revenue_ngn, gross_profit_ngn, on_promotion, discount_pct, stockout_flag, depot_name, region, state, product_name, category, pack_size, year, quarter, year_month), write a query for “gross margin % by category and region for 2025, ranked within each region”. Use a common table expression (CTE) and a window function. Then list the assumptions you made.</p>
 </blockquote>
 </div>
 </div>
-<p><strong>Review checklist for AI-written SQL.</strong> Run it every time:</p>
+<p><strong>Review checklist for <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a>-written <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>.</strong> Run it every time:</p>
 <ol type="1">
 <li>Is the <strong>grain</strong> right? (one row per what?)</li>
 <li>Do the <strong>filters</strong> match the question? (year, status, test accounts)</li>
@@ -1317,7 +1328,7 @@ ORDER BY revenue_bn DESC</code></pre>
 </section>
 <section id="exercises" class="level2" data-number="5.8">
 <h2 data-number="5.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">5.8</span> 🏋️ Exercises</h2>
-<p><strong>E5.1 🟢</strong> List the five SKUs with the highest stockout rate in 2025.</p>
+<p><strong>E5.1 🟢</strong> List the five stock-keeping units (SKUs) with the highest stockout rate in 2025.</p>
 <p><strong>E5.2 🟡</strong> For each depot, compute revenue in Q4 2025 vs Q4 2024 and the growth %. Which depots shrank?</p>
 <p><strong>E5.3 🔴</strong> Write one query that returns, for each region and month, revenue, its share of national revenue that month, and its rank. Use window functions only, with no self-joins.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -1558,12 +1569,24 @@ Solutions
 </section>
 <section id="in-the-organisation" class="level2" data-number="5.10">
 <h2 data-number="5.10" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">5.10</span> 🏢 In the organisation</h2>
-<p>Make SQL review part of the culture. No query feeds a board number without a second pair of eyes, and AI-written SQL gets the same review as a junior analyst’s. Keep a shared, Git-versioned folder of “certified queries”. Over time it becomes the seed of your semantic layer.</p>
+<p>Make <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> review part of the culture. No query feeds a board number without a second pair of eyes, and <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a>-written <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> gets the same review as a junior analyst’s. Keep a shared, Git-versioned folder of “certified queries”. Over time it becomes the seed of your semantic layer.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1998,7 +2021,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

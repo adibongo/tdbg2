@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -623,7 +634,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><strong>Why</strong></td>
-<td>One leaked customer file costs more than the whole platform. Regulators (NDPC, CBN, PenCom, NCC) increasingly ask <em>how</em> you govern data, not just whether you do</td>
+<td>One leaked customer file costs more than the whole platform. Regulators (Nigeria Data Protection Commission (NDPC), Central Bank of Nigeria (CBN), National Pension Commission (PenCom), Nigerian Communications Commission (NCC)) increasingly ask <em>how</em> you govern data, not just whether you do</td>
 </tr>
 <tr class="odd">
 <td><strong>When</strong></td>
@@ -646,7 +657,7 @@ Not legal advice
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This chapter explains principles and engineering patterns. Regulations and directives change, and sector regulators add their own rules. Confirm current obligations with your DPO and legal counsel.</p>
+<p>This chapter explains principles and engineering patterns. Regulations and directives change, and sector regulators add their own rules. Confirm current obligations with your <a class="abbr-ref" href="e-abbreviations.html#abbr-dpo"><abbr title="data protection officer">DPO</abbr></a> and legal counsel.</p>
 </div>
 </div>
 <section id="classify-first" class="level2" data-number="15.1">
@@ -683,8 +694,8 @@ Not legal advice
 </tr>
 <tr class="even">
 <td><strong>Restricted / personal</strong></td>
-<td>Names, phone numbers, BVN, NIN, RSA PINs, health data, complaints text</td>
-<td>Minimise; pseudonymise; strict roles; DPIA; retention limits; never to external AI without a lawful basis and agreement</td>
+<td>Names, phone numbers, Bank Verification Number (BVN), National Identification Number (NIN), Retirement Savings Account (RSA) personal identification numbers (PINs), health data, complaints text</td>
+<td>Minimise; pseudonymise; strict roles; data protection impact assessment (DPIA); retention limits; never to external artificial intelligence (AI) without a lawful basis and agreement</td>
 </tr>
 </tbody>
 </table>
@@ -697,12 +708,12 @@ Not legal advice
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Prompt 15.1 — a PII scanner
+🧠 Prompt 15.1 — a personally identifiable information (PII) scanner
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Write a function that scans every VARCHAR column of every table in a DuckDB schema and flags columns where more than 5% of a sample of values look like Nigerian phone numbers, email addresses, 11-digit identifiers (possible BVN or NIN), or personal names from a short list. Output a classification suggestion per column for the steward to confirm.</p>
+<p>Write a function that scans every VARCHAR column of every table in a DuckDB schema and flags columns where more than 5% of a sample of values look like Nigerian phone numbers, email addresses, 11-digit identifiers (possible <a class="abbr-ref" href="e-abbreviations.html#abbr-bvn"><abbr title="Bank Verification Number">BVN</abbr></a> or <a class="abbr-ref" href="e-abbreviations.html#abbr-nin"><abbr title="National Identification Number">NIN</abbr></a>), or personal names from a short list. Output a classification suggestion per column for the steward to confirm.</p>
 </blockquote>
 </div>
 </div>
@@ -917,7 +928,7 @@ Not legal advice
 <h2 data-number="15.5" class="anchored" data-anchor-id="secrets"><span class="header-section-number">15.5</span> Secrets</h2>
 <ul>
 <li><strong>Never</strong> in code, Git, Quarto documents or screenshots.</li>
-<li>On laptops: <code>.Renviron</code> (git-ignored), or the OS keychain via the <code>keyring</code> package.</li>
+<li>On laptops: <code>.Renviron</code> (git-ignored), or the operating system (OS) keychain via the <code>keyring</code> package.</li>
 <li>On servers: the platform’s secret store (GitHub Actions secrets, Azure Key Vault, Posit Connect variables).</li>
 <li><strong>Rotate</strong> on staff exit and at least yearly. Use <strong>service accounts</strong> for pipelines, not personal logins.</li>
 </ul>
@@ -931,7 +942,7 @@ Not legal advice
 </colgroup>
 <thead>
 <tr class="header">
-<th>Principle (NDPA 2023)</th>
+<th>Principle (Nigeria Data Protection Act (NDPA) 2023)</th>
 <th>What it means for the platform</th>
 </tr>
 </thead>
@@ -958,7 +969,7 @@ Not legal advice
 </tr>
 <tr class="even">
 <td>Accountability</td>
-<td>DPIA for high-risk processing (AI on complaints, profiling); audit logs; a named DPO</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-dpia"><abbr title="data protection impact assessment">DPIA</abbr></a> for high-risk processing (<a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> on complaints, profiling); audit logs; a named <a class="abbr-ref" href="e-abbreviations.html#abbr-dpo"><abbr title="data protection officer">DPO</abbr></a></td>
 </tr>
 <tr class="odd">
 <td>Data subject rights</td>
@@ -966,15 +977,15 @@ Not legal advice
 </tr>
 <tr class="even">
 <td>Breach notification</td>
-<td>Detect (logs, alerts) and know whom to notify, and how fast, under the Act and the NDPC’s directives</td>
+<td>Detect (logs, alerts) and know whom to notify, and how fast, under the Act and the <a class="abbr-ref" href="e-abbreviations.html#abbr-ndpc"><abbr title="Nigeria Data Protection Commission">NDPC</abbr></a>’s directives</td>
 </tr>
 <tr class="odd">
 <td>Cross-border transfer</td>
-<td>Know where your cloud region and AI provider process data</td>
+<td>Know where your cloud region and <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> provider process data</td>
 </tr>
 </tbody>
 </table>
-<p>The <strong>GAID 2025</strong> (the NDPC’s General Application and Implementation Directive) adds implementation detail, including DPIA and audit expectations. Sector regulators add more: CBN for banks, PenCom for pension operators, NCC for telecoms.</p>
+<p>The <strong>General Application and Implementation Directive (GAID) 2025</strong> (the <a class="abbr-ref" href="e-abbreviations.html#abbr-ndpc"><abbr title="Nigeria Data Protection Commission">NDPC</abbr></a>’s General Application and Implementation Directive) adds implementation detail, including <a class="abbr-ref" href="e-abbreviations.html#abbr-dpia"><abbr title="data protection impact assessment">DPIA</abbr></a> and audit expectations. Sector regulators add more: <a class="abbr-ref" href="e-abbreviations.html#abbr-cbn"><abbr title="Central Bank of Nigeria">CBN</abbr></a> for banks, <a class="abbr-ref" href="e-abbreviations.html#abbr-pencom"><abbr title="National Pension Commission">PenCom</abbr></a> for pension operators, <a class="abbr-ref" href="e-abbreviations.html#abbr-ncc"><abbr title="Nigerian Communications Commission">NCC</abbr></a> for telecoms.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Storage limitation as code: purge complaint text older than the retention period, keep anonymous aggregates</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bronze_ingest</span>(con, <span class="st">"pension_complaints.csv"</span>)</span>
@@ -1004,9 +1015,9 @@ Not legal advice
 <section id="ai-specific-governance" class="level2" data-number="15.7">
 <h2 data-number="15.7" class="anchored" data-anchor-id="ai-specific-governance"><span class="header-section-number">15.7</span> AI-specific governance</h2>
 <ul>
-<li><strong>Data classes per model tier:</strong> public data to any model; internal data to an enterprise API under a no-training agreement; restricted data to a local model (Ollama), or not at all.</li>
-<li><strong>Log prompts and outputs</strong> for AI features, and review samples monthly.</li>
-<li><strong>A human is accountable</strong> for every AI-assisted decision about a person (credit, hiring, claims).</li>
+<li><strong>Data classes per model tier:</strong> public data to any model; internal data to an enterprise application programming interface (API) under a no-training agreement; restricted data to a local model (Ollama), or not at all.</li>
+<li><strong>Log prompts and outputs</strong> for <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> features, and review samples monthly.</li>
+<li><strong>A human is accountable</strong> for every <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a>-assisted decision about a person (credit, hiring, claims).</li>
 <li><strong>Test for bias</strong> across groups: language (Pidgin vs English, Chapter 11), region, gender where lawful.</li>
 </ul>
 </section>
@@ -1014,7 +1025,7 @@ Not legal advice
 <h2 data-number="15.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">15.8</span> 🏋️ Exercises</h2>
 <p><strong>E15.1 🟢</strong> Run <code>scan_pii()</code> on the bronze schema after loading <code>hr_attrition.csv</code>. Does it flag anything? Should it?</p>
 <p><strong>E15.2 🟡</strong> Create a <code>gold.user_access</code> table (user, role, region) and a function <code>sales_for_user(user)</code> that returns only the permitted rows. Test it with two users.</p>
-<p><strong>E15.3 🔴</strong> Draft a one-page DPIA for the “AI complaint analyst” feature in Chapter 11: purpose, data, lawful basis, risks (including language bias), mitigations, residual risk, and sign-off.</p>
+<p><strong>E15.3 🔴</strong> Draft a one-page <a class="abbr-ref" href="e-abbreviations.html#abbr-dpia"><abbr title="data protection impact assessment">DPIA</abbr></a> for the “<a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> complaint analyst” feature in Chapter 11: purpose, data, lawful basis, risks (including language bias), mitigations, residual risk, and sign-off.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1074,7 +1085,7 @@ Solutions
 <td style="text-align: left;">hr_attrition</td>
 <td style="text-align: left;">grade</td>
 <td style="text-align: left;">person_name</td>
-<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">0.35</td>
 <td style="text-align: left;">Restricted / personal</td>
 </tr>
 </tbody>
@@ -1124,7 +1135,7 @@ Solutions
 </div>
 </div>
 </div>
-<p><strong>E15.1.</strong> The HR file has employee IDs but no names, phones or national IDs, so the pattern scanner flags little. But <strong>salary and attrition are still confidential</strong>, and linked to an employee ID they are personal data. Pattern scanners miss <em>context</em>, which is why a steward always reviews.</p>
+<p><strong>E15.1.</strong> The human resources (HR) file has employee identifiers (IDs) but no names, phones or national <a class="abbr-ref" href="e-abbreviations.html#abbr-id"><abbr title="identifier">IDs</abbr></a>, so the pattern scanner flags little. But <strong>salary and attrition are still confidential</strong>, and linked to an employee <a class="abbr-ref" href="e-abbreviations.html#abbr-id"><abbr title="identifier">ID</abbr></a> they are personal data. Pattern scanners miss <em>context</em>, which is why a steward always reviews.</p>
 </div>
 </div>
 </div>
@@ -1133,18 +1144,30 @@ Solutions
 <h2 data-number="15.9" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">15.9</span> ✅ Mastery check</h2>
 <ul>
 <li>What is the difference between pseudonymisation and masking? When do you use each?</li>
-<li>Name five NDPA principles and the platform control that implements each.</li>
-<li>Which data may go to an external AI API in your organisation today, and who decided?</li>
+<li>Name five <a class="abbr-ref" href="e-abbreviations.html#abbr-ndpa"><abbr title="Nigeria Data Protection Act">NDPA</abbr></a> principles and the platform control that implements each.</li>
+<li>Which data may go to an external <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> in your organisation today, and who decided?</li>
 </ul>
 </section>
 <section id="in-the-organisation" class="level2" data-number="15.10">
 <h2 data-number="15.10" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">15.10</span> 🏢 In the organisation</h2>
-<p>Invite the DPO and internal audit to the platform’s <strong>design review</strong>, not its launch. Show them the classification, the role matrix, the purge job and the logs. Platforms that do this pass audits in days. Platforms that don’t are often frozen for months.</p>
+<p>Invite the <a class="abbr-ref" href="e-abbreviations.html#abbr-dpo"><abbr title="data protection officer">DPO</abbr></a> and internal audit to the platform’s <strong>design review</strong>, not its launch. Show them the classification, the role matrix, the purge job and the logs. Platforms that do this pass audits in days. Platforms that don’t are often frozen for months.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1579,7 +1602,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

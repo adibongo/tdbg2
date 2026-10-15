@@ -1,0 +1,168 @@
+# One abbreviation per line:  ABBR | Full name | plural full name (optional)
+# Proper names keep their capitals; common terms are lower case (the filter
+# capitalises them at the start of a sentence or table cell).
+# Used by abbreviations.lua: spelled out at first use in every chapter, tooltip and
+# link to the Abbreviations appendix afterwards. Add new terms here, nowhere else.
+ADF | Azure Data Factory
+AfDB | African Development Bank
+AI | artificial intelligence
+AMI | advanced metering infrastructure
+API | application programming interface | application programming interfaces
+ASP | average selling price
+ATC&C | aggregate technical, commercial and collection (losses)
+ATS | applicant tracking system
+AUC | area under the curve
+AWS | Amazon Web Services
+BI | business intelligence
+BVN | Bank Verification Number
+CBN | Central Bank of Nigeria
+CC | Creative Commons
+CEO | chief executive officer
+CFO | chief financial officer
+CHRO | chief human resources officer
+CI | continuous integration
+CI/CD | continuous integration and continuous delivery
+CKAN | Comprehensive Knowledge Archive Network
+CPI | consumer price index
+CRM | customer relationship management
+CSSR | call setup success rate
+CSV | comma-separated values (file) | comma-separated values files
+CTE | common table expression | common table expressions
+CTO | chief technology officer
+DAG | directed acyclic graph
+DAX | Data Analysis Expressions
+DBA | database administrator
+DBI | Database Interface (the R package for talking to databases)
+DCR | drop call rate
+DMO | Debt Management Office
+DMZ | demilitarised zone (a buffer network)
+DOI | digital object identifier | digital object identifiers
+DOTS | Direction of Trade Statistics
+DPIA | data protection impact assessment
+DPO | data protection officer
+DPR | daily production report
+DSN | data source name
+ERP | enterprise resource planning
+FAO | Food and Agriculture Organization of the United Nations
+FDI | foreign direct investment
+FMCG | fast-moving consumer goods
+FX | foreign exchange
+GAID | General Application and Implementation Directive
+GB | gigabyte
+GDP | gross domestic product
+GL | general ledger
+HCM | human capital management
+HDX | Humanitarian Data Exchange
+HNSW | hierarchical navigable small world (a vector index)
+HR | human resources
+HRBP | human resources business partner | human resources business partners
+HRIS | human resources information system
+HS | Harmonized System (of product codes)
+HSE | health, safety and environment
+HTML | HyperText Markup Language
+ICT | information and communications technology
+ID | identifier | identifiers
+IDE | integrated development environment
+IEA | International Energy Agency
+IFS | International Financial Statistics
+ILO | International Labour Organization
+IMF | International Monetary Fund
+IRENA | International Renewable Energy Agency
+ISO | International Organization for Standardization
+IT | information technology
+ITU | International Telecommunication Union
+JSON | JavaScript Object Notation
+KB | kilobyte
+KPI | key performance indicator | key performance indicators
+LBS | Lagos Business School
+LIMS | laboratory information management system
+LLM | large language model | large language models
+LMS | learning management system
+MB | megabyte
+MBA | Master of Business Administration
+MD5 | Message-Digest Algorithm 5 (a file fingerprint)
+MDM | meter data management
+MM | Materials Management (an SAP module)
+MPR | Monetary Policy Rate
+MSISDN | Mobile Station International Subscriber Directory Number (a phone number)
+NBET | Nigerian Bulk Electricity Trading
+NBS | National Bureau of Statistics
+NBTE | National Board for Technical Education
+NCC | Nigerian Communications Commission
+NDPA | Nigeria Data Protection Act
+NDPC | Nigeria Data Protection Commission
+NERC | Nigerian Electricity Regulatory Commission
+NIN | National Identification Number
+NLSS | Nigeria Living Standards Survey
+NMDPRA | Nigerian Midstream and Downstream Petroleum Regulatory Authority
+NOC | network operations centre
+NPS | Net Promoter Score
+NUC | National Universities Commission
+NUPRC | Nigerian Upstream Petroleum Regulatory Commission
+ODBC | Open Database Connectivity
+OECD | Organisation for Economic Co-operation and Development
+OS | operating system
+OSS | operations support system
+OT | operational technology
+OTIF | on time in full
+PC | personal computer
+PDF | Portable Document Format
+PenCom | National Pension Commission
+PFC | Pension Fund Custodian
+PII | personally identifiable information
+PIN | personal identification number | personal identification numbers
+PISA | Programme for International Student Assessment
+PM | Plant Maintenance (an SAP module)
+PO | purchase order | purchase orders
+POS | point of sale
+QoS | quality of service
+RACI | responsible, accountable, consulted, informed
+RAG | retrieval-augmented generation
+RDS | Relational Database Service (on Amazon Web Services)
+REST | Representational State Transfer (a style of web API)
+RM | relationship manager | relationship managers
+RSA | Retirement Savings Account
+SaaS | software as a service
+SCADA | supervisory control and data acquisition
+SCD | slowly changing dimension
+SCD2 | slowly changing dimension, type 2
+SCM | supply chain management
+SDMX | Statistical Data and Metadata eXchange
+SKU | stock-keeping unit | stock-keeping units
+SLA | service-level agreement | service-level agreements
+SMS | Short Message Service (text message)
+SQL | Structured Query Language
+SRM | sample-ratio mismatch
+SSO | single sign-on
+TCN | Transmission Company of Nigeria
+TDBG | Turning Data into Business Growth
+TF-IDF | term frequency–inverse document frequency
+TSV | tab-separated values
+UBEC | Universal Basic Education Commission
+UN | United Nations
+UNCTAD | United Nations Conference on Trade and Development (now UN Trade and Development)
+URL | uniform resource locator (a web address)
+UTF-8 | Unicode Transformation Format, 8-bit (the standard text encoding)
+VM | virtual machine | virtual machines
+WAEC | West African Examinations Council
+WDI | World Development Indicators
+WEO | World Economic Outlook
+WITS | World Integrated Trade Solution
+WMS | warehouse management system
+YAML | YAML Ain't Markup Language (a configuration file format)
+
+BS&W | basic sediment and water
+BSc | Bachelor of Science
+CIF | cost, insurance and freight (an Incoterm)
+DDP | delivered duty paid (an Incoterm)
+EXW | ex works (an Incoterm)
+FOB | free on board (an Incoterm)
+NGN | Nigerian naira (currency code)
+
+# Product names that contain an abbreviation: leave these alone (lines start with "!").
+! Power BI
+! SAP MM
+! SAP PM
+! IP.21
+! CSV (Comma delimited)
+! CSV UTF-8

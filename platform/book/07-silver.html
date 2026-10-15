@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -647,7 +658,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Operation</th>
 <th>Question it answers</th>
-<th>SQL pattern</th>
+<th>Structured Query Language (SQL) pattern</th>
 </tr>
 </thead>
 <tbody>
@@ -702,11 +713,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Write DuckDB SQL that builds silver.sell_out from bronze.fmcg_sell_out (all VARCHAR). Cast every column to its proper type. Treat blank units_sold and revenue_ngn as 0, because a blank means a stockout week (rule from the board pack Notes sheet), but keep a boolean units_was_blank as evidence. Keep exactly one row per (week_starting, depot_code, sku), preferring the earliest-loaded row. Comment every business rule.</p>
+<p>Write DuckDB <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> that builds silver.sell_out from bronze.fmcg_sell_out (all VARCHAR). Cast every column to its proper type. Treat blank units_sold and revenue_ngn as 0, because a blank means a stockout week (rule from the board pack Notes sheet), but keep a boolean units_was_blank as evidence. Keep exactly one row per (week_starting, depot_code, sku), preferring the earliest-loaded row. Comment every business rule.</p>
 </blockquote>
 </div>
 </div>
-<p>This is the reviewed SQL, the same string the production script <code>R/retail.R</code> runs:</p>
+<p>This is the reviewed <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>, the same string the production script <code>R/retail.R</code> runs:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TABLE</span> silver.sell_out <span class="kw">AS</span> </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">CAST</span>(week_starting <span class="kw">AS</span> <span class="dt">DATE</span>)                      <span class="kw">AS</span> week_starting,</span>
@@ -794,7 +805,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </colgroup>
 <thead>
 <tr class="header">
-<th>SCD type</th>
+<th>Slowly changing dimension (SCD) type</th>
 <th>Behaviour</th>
 <th>Use when</th>
 </tr>
@@ -823,12 +834,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Prompt 7.2 — SCD type 2
+🧠 Prompt 7.2 — <a class="abbr-ref" href="e-abbreviations.html#abbr-scd"><abbr title="slowly changing dimension">SCD</abbr></a> type 2
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>bronze.fmcg_depots lists DP04 twice (a rename). Build silver.depot_history as an SCD type 2 table: one row per depot version, ordered by load order, with valid_from (the opened date for version 1; 2025-10-01 for later versions, per a business confirmation), valid_to (the day before the next version starts) and is_current.</p>
+<p>bronze.fmcg_depots lists DP04 twice (a rename). Build silver.depot_history as an <a class="abbr-ref" href="e-abbreviations.html#abbr-scd"><abbr title="slowly changing dimension">SCD</abbr></a> type 2 table: one row per depot version, ordered by load order, with valid_from (the opened date for version 1; 2025-10-01 for later versions, per a business confirmation), valid_to (the day before the next version starts) and is_current.</p>
 </blockquote>
 </div>
 </div>
@@ -939,7 +950,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="tidy-the-presentation-spreadsheet-in-sql" class="level2" data-number="7.4">
 <h2 data-number="7.4" class="anchored" data-anchor-id="tidy-the-presentation-spreadsheet-in-sql"><span class="header-section-number">7.4</span> Tidy the presentation spreadsheet in SQL</h2>
-<p>The same Excel clean-up you did in R in Chapter 3, done in SQL inside the warehouse. The steps are: fill the merged cells, drop the total and footnote, unpivot the months, and parse the naira text.</p>
+<p>The same Excel clean-up you did in R in Chapter 3, done in <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> inside the warehouse. The steps are: fill the merged cells, drop the total and footnote, unpivot the months, and parse the naira text.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TABLE</span> silver.regional_report <span class="kw">AS</span> </span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- The printed Excel report, made tidy: fill merged region cells, unpivot months, parse '₦1,234'</span></span>
@@ -1055,16 +1066,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">SUP-CEDAR-NG</td>
-<td style="text-align: left;">SUP-CEDAR</td>
-<td style="text-align: right;">660</td>
-<td style="text-align: right;">0.98</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">SUP-CEDAR</td>
 <td style="text-align: left;">SUP-CEDAR</td>
 <td style="text-align: right;">604</td>
 <td style="text-align: right;">0.99</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SUP-CEDAR-NG</td>
+<td style="text-align: left;">SUP-CEDAR</td>
+<td style="text-align: right;">660</td>
+<td style="text-align: right;">0.98</td>
 </tr>
 </tbody>
 </table>
@@ -1105,8 +1116,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exercises" class="level2" data-number="7.7">
 <h2 data-number="7.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">7.7</span> 🏋️ Exercises</h2>
 <p><strong>E7.1 🟢</strong> Use <code>TRY_CAST</code> to find any <code>unit_price_ngn</code> values in bronze that are not valid numbers.</p>
-<p><strong>E7.2 🟡</strong> Build <code>silver.employees</code> from <code>hr_attrition.csv</code>. Type every column, and <strong>exclude</strong> <code>exit_interview_booked</code> from the analytical table, keeping it in a separate audit table. Explain your reasoning in a SQL comment.</p>
-<p><strong>E7.3 🔴</strong> Implement SCD type 2 <em>incrementally</em>. Given today’s depot file and yesterday’s <code>silver.depot_history</code>, write SQL that closes changed rows (sets <code>valid_to</code>, <code>is_current = false</code>) and inserts the new versions. Test it by renaming a depot in a copy of the file.</p>
+<p><strong>E7.2 🟡</strong> Build <code>silver.employees</code> from <code>hr_attrition.csv</code>. Type every column, and <strong>exclude</strong> <code>exit_interview_booked</code> from the analytical table, keeping it in a separate audit table. Explain your reasoning in a <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> comment.</p>
+<p><strong>E7.3 🔴</strong> Implement <a class="abbr-ref" href="e-abbreviations.html#abbr-scd"><abbr title="slowly changing dimension">SCD</abbr></a> type 2 <em>incrementally</em>. Given today’s depot file and yesterday’s <code>silver.depot_history</code>, write <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> that closes changed rows (sets <code>valid_to</code>, <code>is_current = false</code>) and inserts the new versions. Test it by renaming a depot in a copy of the file.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1177,7 +1188,7 @@ Solutions
 <h2 data-number="7.8" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">7.8</span> ✅ Mastery check</h2>
 <ul>
 <li>Give two examples of a null that means something different from “unknown”.</li>
-<li>When is SCD type 1 the right choice? When is type 2?</li>
+<li>When is <a class="abbr-ref" href="e-abbreviations.html#abbr-scd"><abbr title="slowly changing dimension">SCD</abbr></a> type 1 the right choice? When is type 2?</li>
 <li>Why quarantine rather than delete?</li>
 </ul>
 </section>
@@ -1189,6 +1200,18 @@ Solutions
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1623,7 +1646,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

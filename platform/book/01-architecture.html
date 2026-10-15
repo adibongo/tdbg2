@@ -43,9 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -73,6 +73,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -526,6 +531,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -595,7 +606,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><strong>Why</strong></td>
-<td>So that “revenue” means one thing, every number can be traced to its source, and a bad file never reaches the CEO’s dashboard</td>
+<td>So that “revenue” means one thing, every number can be traced to its source, and a bad file never reaches the chief executive officer (CEO)’s dashboard</td>
 </tr>
 <tr class="odd">
 <td><strong>When</strong></td>
@@ -603,7 +614,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><strong>Who</strong></td>
-<td>Everyone: business owners define the metrics, analysts build them, IT secures them, leaders consume them</td>
+<td>Everyone: business owners define the metrics, analysts build them, information technology (IT) secures them, leaders consume them</td>
 </tr>
 </tbody>
 </table>
@@ -655,10 +666,10 @@ Figure&nbsp;1.1: The reference architecture. Data flows one way, left to right; 
 <tr class="odd">
 <td>1</td>
 <td><strong>Sources</strong></td>
-<td>Every place data is born: files, operational databases, SaaS apps, Dataverse, official statistics (World Bank, IMF, UNCTAD, UN Comtrade, NBS, CBN), research repositories, text</td>
+<td>Every place data is born: files, operational databases, software as a service (SaaS) apps, Dataverse, official statistics (World Bank, International Monetary Fund (IMF), United Nations Conference on Trade and Development (UNCTAD), United Nations (UN) Comtrade, National Bureau of Statistics (NBS), Central Bank of Nigeria (CBN)), research repositories, text</td>
 <td>Recording business events</td>
 <td>Always: you don’t build these, you inherit them</td>
-<td>Excel, core banking, SAP, Dynamics 365, SCADA, HRIS</td>
+<td>Excel, core banking, SAP, Dynamics 365, supervisory control and data acquisition (SCADA), human resources information system (HRIS)</td>
 <td>n/a</td>
 </tr>
 <tr class="even">
@@ -667,7 +678,7 @@ Figure&nbsp;1.1: The reference architecture. Data flows one way, left to right; 
 <td>Connectors that copy data in, inventory it and stamp it with lineage</td>
 <td>Getting data in <em>repeatably</em> without hand-copying</td>
 <td>From the second time you load the same file</td>
-<td>DBI, readxl, httr2, DuckDB readers, Fivetran/ADF at scale</td>
+<td>Database Interface (DBI), readxl, httr2, DuckDB readers, Fivetran/Azure Data Factory (ADF) at scale</td>
 <td>“Which version of the file did we use?”</td>
 </tr>
 <tr class="odd">
@@ -692,7 +703,7 @@ Figure&nbsp;1.1: The reference architecture. Data flows one way, left to right; 
 <td>5</td>
 <td><strong>Govern</strong></td>
 <td>Semantic layer, vector index, catalogue</td>
-<td>One definition per KPI; findable, classified data; AI grounded in your data</td>
+<td>One definition per key performance indicator (KPI); findable, classified data; artificial intelligence (AI) grounded in your data</td>
 <td>When more than one tool or team consumes the data</td>
 <td>metrics.yml, Power BI semantic models, dbt Semantic Layer, Purview</td>
 <td>Five definitions of “active customer”</td>
@@ -700,7 +711,7 @@ Figure&nbsp;1.1: The reference architecture. Data flows one way, left to right; 
 <tr class="even">
 <td>6</td>
 <td><strong>Serve</strong></td>
-<td>Dashboards, portable marts, shared databases, apps, AI</td>
+<td>Dashboards, portable marts, shared databases, apps, <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a></td>
 <td>Getting trusted data to people <em>in the tool they already use</em></td>
 <td>Always: this is the point</td>
 <td>Quarto + Shiny, SQLite, PostgreSQL, Dataverse, Power BI</td>
@@ -712,7 +723,7 @@ Figure&nbsp;1.1: The reference architecture. Data flows one way, left to right; 
 <td>Scheduling, config, secrets, logs, access, privacy, version control</td>
 <td>Keeping it running, safe and lawful</td>
 <td>From day one in production</td>
-<td>cron/GitHub Actions, Git, .Renviron/Key Vault, NDPA DPIA</td>
+<td>cron/GitHub Actions, Git, .Renviron/Key Vault, Nigeria Data Protection Act (NDPA) data protection impact assessment (DPIA)</td>
 <td>It works on Tuesday and nobody knows why it broke on Wednesday</td>
 </tr>
 </tbody>
@@ -741,8 +752,8 @@ Figure&nbsp;1.1: The reference architecture. Data flows one way, left to right; 
 <section id="govern-one-definition-findable-data-grounded-ai" class="level3" data-number="1.2.3">
 <h3 data-number="1.2.3" class="anchored" data-anchor-id="govern-one-definition-findable-data-grounded-ai"><span class="header-section-number">1.2.3</span> Govern: one definition, findable data, grounded AI</h3>
 <ul>
-<li>The <strong>semantic layer</strong> is a file of named metrics (<code>revenue = SUM(revenue_ngn)</code>, <code>gross_margin_pct = …</code>), each with an owner. Every dashboard, report and AI query compiles its SQL from it.</li>
-<li>The <strong>vector index</strong> stores <em>embeddings</em> (numeric fingerprints of meaning) for text such as complaints and reviews. That makes “find complaints like this one” and retrieval-augmented AI possible.</li>
+<li>The <strong>semantic layer</strong> is a file of named metrics (<code>revenue = SUM(revenue_ngn)</code>, <code>gross_margin_pct = …</code>), each with an owner. Every dashboard, report and <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> query compiles its Structured Query Language (SQL) from it.</li>
+<li>The <strong>vector index</strong> stores <em>embeddings</em> (numeric fingerprints of meaning) for text such as complaints and reviews. That makes “find complaints like this one” and retrieval-augmented <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> possible.</li>
 <li>The <strong>catalogue</strong> records what each table is, who owns it, where it came from (lineage), whether it holds personal data, and how its tests went.</li>
 </ul>
 </section>
@@ -764,7 +775,7 @@ Figure&nbsp;1.1: The reference architecture. Data flows one way, left to right; 
 </thead>
 <tbody>
 <tr class="odd">
-<td>Executives exploring KPIs</td>
+<td>Executives exploring <a class="abbr-ref" href="e-abbreviations.html#abbr-kpi"><abbr title="key performance indicator">KPIs</abbr></a></td>
 <td>Quarto + Shiny dashboard</td>
 <td>Interactive, governed, branded, free</td>
 </tr>
@@ -785,12 +796,12 @@ Figure&nbsp;1.1: The reference architecture. Data flows one way, left to right; 
 </tr>
 <tr class="odd">
 <td>“Ask a question in English”</td>
-<td>AI assistant over the semantic layer</td>
-<td>Text-to-SQL that can only use governed metrics</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> assistant over the semantic layer</td>
+<td>Text-to-<a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> that can only use governed metrics</td>
 </tr>
 <tr class="even">
 <td>Regulators and the board</td>
-<td>Quarto PDF report</td>
+<td>Quarto Portable Document Format (PDF) report</td>
 <td>Reproducible and signed off</td>
 </tr>
 </tbody>
@@ -887,10 +898,10 @@ Figure&nbsp;1.2: An earlier draft. Good bones, but several faults. Find them in 
 <tr class="odd">
 <td>Vector</td>
 <td>DuckDB arrays / <code>vss</code></td>
-<td>Azure AI Search</td>
-<td>Mosaic AI Vector Search</td>
+<td>Azure <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> Search</td>
+<td>Mosaic <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> Vector Search</td>
 <td>Cortex Search</td>
-<td>Vertex AI Vector Search</td>
+<td>Vertex <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> Vector Search</td>
 </tr>
 <tr class="even">
 <td>Catalogue</td>
@@ -904,7 +915,7 @@ Figure&nbsp;1.2: An earlier draft. Good bones, but several faults. Find them in 
 <td>Serve</td>
 <td>Quarto + Shiny, SQLite, Postgres, Dataverse</td>
 <td>Power BI, Dataverse</td>
-<td>Databricks SQL dashboards</td>
+<td>Databricks <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> dashboards</td>
 <td>Streamlit in Snowflake</td>
 <td>Looker Studio</td>
 </tr>
@@ -947,7 +958,7 @@ Figure&nbsp;1.2: An earlier draft. Good bones, but several faults. Find them in 
 <tr class="even">
 <td>3 · Shared</td>
 <td>Many tools, apps and users need the data</td>
-<td>Add serving targets, access control and CI/CD (Chapters 12, 15, 16)</td>
+<td>Add serving targets, access control and continuous integration and continuous delivery (CI/CD) (Chapters 12, 15, 16)</td>
 </tr>
 <tr class="odd">
 <td>4 · Enterprise</td>
@@ -958,7 +969,7 @@ Figure&nbsp;1.2: An earlier draft. Good bones, but several faults. Find them in 
 </table>
 <p><strong>Graduation triggers.</strong> Move off a laptop DuckDB when any one of these is true:</p>
 <ul>
-<li>the data is over about 100 GB;</li>
+<li>the data is over about 100 gigabytes (GB);</li>
 <li>more than about 20 people need to write at the same time;</li>
 <li>data must refresh in minutes rather than daily;</li>
 <li>auditors require centrally managed identity and access.</li>
@@ -968,7 +979,7 @@ Figure&nbsp;1.2: An earlier draft. Good bones, but several faults. Find them in 
 <h2 data-number="1.5" class="anchored" data-anchor-id="exercises"><span class="header-section-number">1.5</span> 🏋️ Exercises</h2>
 <p><strong>E1.1 🟢 Find the faults.</strong> Study <a href="#fig-draft" class="quarto-xref">Figure&nbsp;<span>1.2</span></a>. List at least six problems with it, and for each one say which layer of <a href="#fig-arch" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> fixes it.</p>
 <p><strong>E1.2 🟡 Map your organisation.</strong> Draw your own organisation’s data flow on one page, using the six layers. For each layer, name the real system (or “missing”). Circle the layer whose absence costs the most, and estimate the cost in hours per month.</p>
-<p><strong>E1.3 🔴 Make the case.</strong> Write a 300-word memo to your CFO arguing for (or against) building levels 1–2 of the maturity table this quarter. Include one risk of building it and one risk of not building it.</p>
+<p><strong>E1.3 🔴 Make the case.</strong> Write a 300-word memo to your chief financial officer (CFO) arguing for (or against) building levels 1–2 of the maturity table this quarter. Include one risk of building it and one risk of not building it.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -986,10 +997,10 @@ Solutions
 <li><strong>Two-way arrows everywhere.</strong> Data should flow one way. Two-way arrows imply write-back and destroy lineage. <em>Fix: one-way arrows; write-back goes through a source system.</em></li>
 <li><strong>Harvard Dataverse feeds SQLite directly.</strong> That skips landing, cleaning and tests. <em>Fix: every source enters through ingest and bronze.</em></li>
 <li><strong>A duplicate “public research data” box with no arrow.</strong> <em>Fix: remove it, or connect it through ingest.</em></li>
-<li><strong>“SQLite … optimized for BI” is mislabelled.</strong> DuckDB is the columnar analytics engine; SQLite’s value is portability. <em>Fix: label it “portable serving mart”.</em></li>
+<li><strong>“SQLite … optimized for business intelligence (BI)” is mislabelled.</strong> DuckDB is the columnar analytics engine; SQLite’s value is portability. <em>Fix: label it “portable serving mart”.</em></li>
 <li><strong>Governance boxes wired one-to-one to arbitrary consumers.</strong> <em>Fix: the tests become a gate before publishing; the semantic layer fronts every consumer.</em></li>
 <li><strong>No bronze/silver/gold inside the warehouse.</strong> “Clean, transform, model” can’t be tested as one blob. <em>Fix: name the three layers.</em></li>
-<li><strong>No operations and security plane</strong> (scheduling, secrets, logs, access, NDPA). <em>Fix: add the plane underneath.</em></li>
+<li><strong>No operations and security plane</strong> (scheduling, secrets, logs, access, <a class="abbr-ref" href="e-abbreviations.html#abbr-ndpa"><abbr title="Nigeria Data Protection Act">NDPA</abbr></a>). <em>Fix: add the plane underneath.</em></li>
 <li><strong>PostgreSQL and Dataverse shown only as serving targets.</strong> They are often sources too. <em>Fix: show both roles, linked by the write-back loop.</em></li>
 </ol>
 <p>Minor: the typo “emmeddings”.</p>
@@ -1013,7 +1024,7 @@ Solutions
 <ul>
 <li><strong>Business owners</strong> agree the definitions in the semantic layer.</li>
 <li><strong>The data team</strong> guarantees the gate.</li>
-<li><strong>IT</strong> guarantees the plane.</li>
+<li><strong><a class="abbr-ref" href="e-abbreviations.html#abbr-it"><abbr title="information technology">IT</abbr></a></strong> guarantees the plane.</li>
 </ul>
 <p>Most failed analytics programmes in Nigerian organisations did not fail on technology. They failed because nobody owned the definition of a metric, or because nothing stopped a wrong file from reaching the board pack. Start every project by naming the owner of each gold table.</p>
 
@@ -1021,6 +1032,18 @@ Solutions
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1455,7 +1478,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -644,10 +655,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>A <strong>fact</strong> is a measurement of a business event: units sold, naira remitted, barrels produced, minutes of downtime. Facts are numbers you add up.</li>
 <li>A <strong>dimension</strong> is the context you slice by: who, what, where, when. Depot, product, employer, well, week.</li>
-<li>The <strong>grain</strong> is the exact meaning of one row in a fact table, stated in a sentence. <em>Declare the grain before writing any SQL.</em> Most modelling errors are grain errors.</li>
+<li>The <strong>grain</strong> is the exact meaning of one row in a fact table, stated in a sentence. <em>Declare the grain before writing any Structured Query Language (SQL).</em> Most modelling errors are grain errors.</li>
 </ul>
 <blockquote class="blockquote">
-<p><strong>Grain of <code>gold.fct_sales</code>:</strong> one row per <em>week</em> × <em>depot</em> × <em>SKU</em>, recording units, revenue and gross profit for that combination.</p>
+<p><strong>Grain of <code>gold.fct_sales</code>:</strong> one row per <em>week</em> × <em>depot</em> × <em>stock-keeping unit (SKU)</em>, recording units, revenue and gross profit for that combination.</p>
 </blockquote>
 <section id="three-kinds-of-fact-table" class="level3" data-number="8.1.1">
 <h3 data-number="8.1.1" class="anchored" data-anchor-id="three-kinds-of-fact-table"><span class="header-section-number">8.1.1</span> Three kinds of fact table</h3>
@@ -670,20 +681,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><strong>Transaction</strong></td>
 <td>event</td>
-<td>one PO line, one remittance, one complaint</td>
+<td>one purchase order (PO) line, one remittance, one complaint</td>
 <td>“How many complaints came in via WhatsApp?”</td>
 </tr>
 <tr class="even">
 <td><strong>Periodic snapshot</strong></td>
 <td>entity × period</td>
-<td>depot × SKU × week; well × day; account × month-end</td>
+<td>depot × <a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a> × week; well × day; account × month-end</td>
 <td>“What was the trend in weekly sales?”</td>
 </tr>
 <tr class="odd">
 <td><strong>Accumulating snapshot</strong></td>
 <td>process instance, updated as it progresses</td>
 <td>a purchase order: ordered → shipped → received → paid</td>
-<td>“Where do POs get stuck, and for how long?”</td>
+<td>“Where do <a class="abbr-ref" href="e-abbreviations.html#abbr-po"><abbr title="purchase order">POs</abbr></a> get stuck, and for how long?”</td>
 </tr>
 </tbody>
 </table>
@@ -702,7 +713,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>From silver.sell_out, silver.products and silver.depot_history, build a star schema in gold: dim_product (with list margin), dim_depot (current version only), dim_week (year, quarter, year_month, ISO week), and fct_sales at grain week × depot × SKU with gross_profit_ngn = revenue − units × unit cost. Then create a wide view gold.v_sales that pre-joins the star for BI tools and the semantic layer, and a mart of revenue by depot and month.</p>
+<p>From silver.sell_out, silver.products and silver.depot_history, build a star schema in gold: dim_product (with list margin), dim_depot (current version only), dim_week (year, quarter, year_month, International Organization for Standardization (ISO) week), and fct_sales at grain week × depot × <a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a> with gross_profit_ngn = revenue − units × unit cost. Then create a wide view gold.v_sales that pre-joins the star for business intelligence (BI) tools and the semantic layer, and a mart of revenue by depot and month.</p>
 </blockquote>
 </div>
 </div>
@@ -840,7 +851,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>gold.v_sales</code> is a <strong>wide view</strong>: the star, pre-joined. Use both:</p>
 <ul>
 <li><strong>Star tables</strong> keep storage small and dimensions consistent, and they are what Power BI’s model view expects.</li>
-<li><strong>The wide view</strong> is what the semantic layer, the AI assistant and casual SQL users want: one object, no joins to get wrong.</li>
+<li><strong>The wide view</strong> is what the semantic layer, the artificial intelligence (AI) assistant and casual <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> users want: one object, no joins to get wrong.</li>
 </ul>
 </section>
 </section>
@@ -921,7 +932,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Using silver.purchase_orders (built in Chapter 7), build gold.fct_po_lifecycle with one row per PO: order date, received date, promised vs actual lead days, a delivery status (on time / late / date error), and the lateness in days. Then show on-time % and average lateness by conformed supplier.</p>
+<p>Using silver.purchase_orders (built in Chapter 7), build gold.fct_po_lifecycle with one row per <a class="abbr-ref" href="e-abbreviations.html#abbr-po"><abbr title="purchase order">PO</abbr></a>: order date, received date, promised vs actual lead days, a delivery status (on time / late / date error), and the lateness in days. Then show on-time % and average lateness by conformed supplier.</p>
 </blockquote>
 </div>
 </div>
@@ -1046,7 +1057,7 @@ Note
 <h2 data-number="8.5" class="anchored" data-anchor-id="exercises"><span class="header-section-number">8.5</span> 🏋️ Exercises</h2>
 <p><strong>E8.1 🟢</strong> Write the grain sentence for <code>gold.mart_depot_month</code>. Is it a transaction, periodic snapshot or accumulating snapshot table?</p>
 <p><strong>E8.2 🟡</strong> Build <code>gold.fct_marketing_weekly</code> (week × channel) with spend, conversions and cost per acquisition. Join it to weekly revenue to show spend vs revenue by week. What grain mismatch must you handle?</p>
-<p><strong>E8.3 🔴</strong> Design (on paper, then in SQL) a gold model for pension remittances: <code>dim_employer</code>, <code>dim_month</code>, and <code>fct_remittance</code> at employer × month with expected, remitted, shortfall and days late. Add <code>mart_compliance_month</code> with compliance rate by sector.</p>
+<p><strong>E8.3 🔴</strong> Design (on paper, then in <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>) a gold model for pension remittances: <code>dim_employer</code>, <code>dim_month</code>, and <code>fct_remittance</code> at employer × month with expected, remitted, shortfall and days late. Add <code>mart_compliance_month</code> with compliance rate by sector.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1089,7 +1100,7 @@ Solutions
 </div>
 </div>
 </div>
-<p><strong>E8.2.</strong> The grain mismatch: marketing is week × channel, sales is week × depot × SKU. <strong>Aggregate both to the common grain (week) before joining.</strong> Joining at different grains multiplies rows, a fan-out. Correlation is not attribution, either. That needs an experiment (see the pensions playbook) or a marketing-mix model.</p>
+<p><strong>E8.2.</strong> The grain mismatch: marketing is week × channel, sales is week × depot × <a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a>. <strong>Aggregate both to the common grain (week) before joining.</strong> Joining at different grains multiplies rows, a fan-out. Correlation is not attribution, either. That needs an experiment (see the pensions playbook) or a marketing-mix model.</p>
 </div>
 </div>
 </div>
@@ -1104,12 +1115,24 @@ Solutions
 </section>
 <section id="in-the-organisation" class="level2" data-number="8.7">
 <h2 data-number="8.7" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">8.7</span> 🏢 In the organisation</h2>
-<p>Gold tables are <strong>products</strong>, and they need owners, documentation and change control. A change to <code>fct_sales</code> can break twenty dashboards, so treat it like an API change: announce it, version it (<code>v_sales_v2</code>) and retire old versions on a schedule.</p>
+<p>Gold tables are <strong>products</strong>, and they need owners, documentation and change control. A change to <code>fct_sales</code> can break twenty dashboards, so treat it like an application programming interface (API) change: announce it, version it (<code>v_sales_v2</code>) and retire old versions on a schedule.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1544,7 +1567,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

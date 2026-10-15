@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -614,7 +625,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Network quality:</strong> which sites and clusters breach quality-of-service (QoS) thresholds, and why: power, transmission or capacity?</li>
 <li><strong>Customer experience:</strong> do complaints follow network problems, and where?</li>
 <li><strong>Capex prioritisation:</strong> which sites to upgrade, power or densify first?</li>
-<li><strong>Regulatory QoS reporting:</strong> consistent KPIs for NCC returns.</li>
+<li><strong>Regulatory <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> reporting:</strong> consistent key performance indicators (KPIs) for Nigerian Communications Commission (NCC) returns.</li>
 </ul>
 </section>
 <section id="architecture-mapped-to-a-mobile-operator" class="level2" data-number="25.2">
@@ -633,7 +644,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>Sources</td>
-<td>OSS/network-management counters (per cell, every 15 minutes), site and power-system telemetry (generator, battery, grid), the site master, trouble tickets, CRM, app-store and social reviews, call-centre notes</td>
+<td>Operations support system (OSS)/network-management counters (per cell, every 15 minutes), site and power-system telemetry (generator, battery, grid), the site master, trouble tickets, customer relationship management (CRM), app-store and social reviews, call-centre notes</td>
 </tr>
 <tr class="even">
 <td>Silver</td>
@@ -641,7 +652,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td>Gold</td>
-<td><code>fct_site_day</code> (site × day: availability, call setup success, drop rate, traffic), <code>dim_site</code> (region, technology, power type); marts: QoS compliance, worst-site league; complaint themes</td>
+<td><code>fct_site_day</code> (site × day: availability, call setup success, drop rate, traffic), <code>dim_site</code> (region, technology, power type); marts: <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> compliance, worst-site league; complaint themes</td>
 </tr>
 <tr class="even">
 <td>Gate</td>
@@ -649,15 +660,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td>Govern</td>
-<td>Availability %, call setup success rate (CSSR), drop call rate (DCR), traffic, QoS-compliant site share, complaints per 1,000 subscribers</td>
+<td>Availability %, call setup success rate (CSSR), drop call rate (DCR), traffic, <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a>-compliant site share, complaints per 1,000 subscribers</td>
 </tr>
 <tr class="even">
 <td>Serve</td>
-<td>NOC dashboard (refreshed often); regional engineering league tables; certified QoS returns; vector search over customer reviews</td>
+<td>Network operations centre (NOC) dashboard (refreshed often); regional engineering league tables; certified <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> returns; vector search over customer reviews</td>
 </tr>
 <tr class="odd">
 <td>Plane</td>
-<td>Subscriber data (MSISDN, location) is highly sensitive and subject to NCC and NDPA rules; network topology is security-sensitive</td>
+<td>Subscriber data (Mobile Station International Subscriber Directory Number (MSISDN), location) is highly sensitive and subject to <a class="abbr-ref" href="e-abbreviations.html#abbr-ncc"><abbr title="Nigerian Communications Commission">NCC</abbr></a> and Nigeria Data Protection Act (NDPA) rules; network topology is security-sensitive</td>
 </tr>
 </tbody>
 </table>
@@ -821,7 +832,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>In Nigeria, <strong>site power is often the root cause of network quality problems</strong>. This platform makes the case for hybrid-solar conversion in naira and in QoS terms, from the same governed numbers.</p>
+<p>In Nigeria, <strong>site power is often the root cause of network quality problems</strong>. This platform makes the case for hybrid-solar conversion in naira and in <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> terms, from the same governed numbers.</p>
 </section>
 <section id="customer-voice-about-the-network" class="level2" data-number="25.6">
 <h2 data-number="25.6" class="anchored" data-anchor-id="customer-voice-about-the-network"><span class="header-section-number">25.6</span> Customer voice about the network</h2>
@@ -895,25 +906,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Join complaint locations (where the CRM records them) to clusters, and the NOC can see whether a QoS dip in Lekki shows up in customer voice within days.</p>
+<p>Join complaint locations (where the <a class="abbr-ref" href="e-abbreviations.html#abbr-crm"><abbr title="customer relationship management">CRM</abbr></a> records them) to clusters, and the <a class="abbr-ref" href="e-abbreviations.html#abbr-noc"><abbr title="network operations centre">NOC</abbr></a> can see whether a <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> dip in Lekki shows up in customer voice within days.</p>
 </section>
 <section id="deploying-in-an-operator" class="level2" data-number="25.7">
 <h2 data-number="25.7" class="anchored" data-anchor-id="deploying-in-an-operator"><span class="header-section-number">25.7</span> Deploying in an operator</h2>
 <ul>
-<li><strong>Owners:</strong> the CTO or Network Operations (counters, site master, QoS definitions), Customer Experience (complaints), Regulatory Affairs (certified QoS returns).</li>
-<li><strong>First 90 days:</strong> a daily site-day QoS mart from the OSS with the gate; a worst-50-sites league table for regional engineers; then a power-to-QoS business case for hybrid conversion.</li>
-<li><strong>Regulatory:</strong> NCC QoS regulations define the KPIs, thresholds and measurement rules. Encode the current thresholds as parameters owned by Regulatory Affairs, and certify the QoS mart.</li>
+<li><strong>Owners:</strong> the chief technology officer (CTO) or Network Operations (counters, site master, <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> definitions), Customer Experience (complaints), Regulatory Affairs (certified <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> returns).</li>
+<li><strong>First 90 days:</strong> a daily site-day <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> mart from the <a class="abbr-ref" href="e-abbreviations.html#abbr-oss"><abbr title="operations support system">OSS</abbr></a> with the gate; a worst-50-sites league table for regional engineers; then a power-to-<a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> business case for hybrid conversion.</li>
+<li><strong>Regulatory:</strong> <a class="abbr-ref" href="e-abbreviations.html#abbr-ncc"><abbr title="Nigerian Communications Commission">NCC</abbr></a> <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> regulations define the <a class="abbr-ref" href="e-abbreviations.html#abbr-kpi"><abbr title="key performance indicator">KPIs</abbr></a>, thresholds and measurement rules. Encode the current thresholds as parameters owned by Regulatory Affairs, and certify the <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> mart.</li>
 <li><strong>Scale:</strong> 15-minute counters for thousands of cells quickly reach billions of rows. Aggregate to site-hour in bronze/silver with partitioned Parquet; DuckDB handles surprisingly large volumes, and Chapter 1’s graduation triggers apply.</li>
 </ul>
 </section>
 <section id="exercises" class="level2" data-number="25.8">
 <h2 data-number="25.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">25.8</span> 🏋️ Exercises</h2>
-<p><strong>E25.1 🟢</strong> Which cluster has the lowest QoS-compliant share? <strong>E25.2 🟡</strong> Build a “worst 10 sites last 30 days” table, ranked by days out of compliance, with each site’s power type. <strong>E25.3 🔴</strong> Estimate how many QoS-compliant site-days per quarter converting all gen-only sites to hybrid-solar would add, and the diesel cost saved (state your assumptions).</p>
+<p><strong>E25.1 🟢</strong> Which cluster has the lowest <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a>-compliant share? <strong>E25.2 🟡</strong> Build a “worst 10 sites last 30 days” table, ranked by days out of compliance, with each site’s power type. <strong>E25.3 🔴</strong> Estimate how many <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a>-compliant site-days per quarter converting all gen-only sites to hybrid-solar would add, and the diesel cost saved (state your assumptions).</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1348,7 +1371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

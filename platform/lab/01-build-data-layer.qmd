@@ -16,6 +16,9 @@ format:
     theme: [cosmo, theme.scss]
     fig-width: 9
     fig-height: 4.5
+filters:
+  - mastery/abbreviations.lua
+abbreviations-link: "https://markanalytics.online/tdbg/platform/book/e-abbreviations.html"
 execute:
   warning: false
   message: false

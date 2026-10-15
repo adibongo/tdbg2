@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -611,8 +622,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>Retention:</strong> which customers are drifting away, early enough for a relationship manager to act?</li>
 <li><strong>Digital adoption:</strong> does digital engagement reduce churn and cost-to-serve?</li>
-<li><strong>Complaints and NPS:</strong> which experiences drive detractors?</li>
-<li><strong>Regulatory and risk reporting:</strong> consistent, reconciled numbers for CBN returns and internal risk.</li>
+<li><strong>Complaints and Net Promoter Score (NPS):</strong> which experiences drive detractors?</li>
+<li><strong>Regulatory and risk reporting:</strong> consistent, reconciled numbers for Central Bank of Nigeria (CBN) returns and internal risk.</li>
 </ul>
 </section>
 <section id="architecture-mapped-to-a-bank" class="level2" data-number="23.2">
@@ -631,31 +642,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>Sources</td>
-<td>Core banking (Finacle, Flexcube, T24), card and channel switches, mobile/internet banking logs, CRM, complaints system, NPS surveys, the BVN-linked customer master</td>
+<td>Core banking (Finacle, Flexcube, T24), card and channel switches, mobile/internet banking logs, customer relationship management (CRM), complaints system, <a class="abbr-ref" href="e-abbreviations.html#abbr-nps"><abbr title="Net Promoter Score">NPS</abbr></a> surveys, the Bank Verification Number (BVN)-linked customer master</td>
 </tr>
 <tr class="even">
 <td>Silver</td>
-<td>One customer per real person (BVN-linked, <strong>pseudonymised</strong>); accounts and transactions typed; segments conformed; <strong>outcome-leaking fields isolated</strong></td>
+<td>One customer per real person (<a class="abbr-ref" href="e-abbreviations.html#abbr-bvn"><abbr title="Bank Verification Number">BVN</abbr></a>-linked, <strong>pseudonymised</strong>); accounts and transactions typed; segments conformed; <strong>outcome-leaking fields isolated</strong></td>
 </tr>
 <tr class="odd">
 <td>Gold</td>
-<td><code>fct_customer_month</code> (customer × month snapshot), <code>fct_transaction</code>, <code>dim_customer</code> (SCD2 on segment), <code>dim_branch</code>; marts: churn risk, product holding, NPS drivers</td>
+<td><code>fct_customer_month</code> (customer × month snapshot), <code>fct_transaction</code>, <code>dim_customer</code> (slowly changing dimension, type 2 (SCD2) on segment), <code>dim_branch</code>; marts: churn risk, product holding, <a class="abbr-ref" href="e-abbreviations.html#abbr-nps"><abbr title="Net Promoter Score">NPS</abbr></a> drivers</td>
 </tr>
 <tr class="even">
 <td>Gate</td>
-<td>Unique customer per month; balances reconcile to the general ledger; no raw BVN/NIN in gold; segment codes valid</td>
+<td>Unique customer per month; balances reconcile to the general ledger; no raw <a class="abbr-ref" href="e-abbreviations.html#abbr-bvn"><abbr title="Bank Verification Number">BVN</abbr></a>/National Identification Number (NIN) in gold; segment codes valid</td>
 </tr>
 <tr class="odd">
 <td>Govern</td>
-<td>Churn rate, active-customer definition (agreed with Finance and Risk), products per customer, digital-active %, NPS</td>
+<td>Churn rate, active-customer definition (agreed with Finance and Risk), products per customer, digital-active %, <a class="abbr-ref" href="e-abbreviations.html#abbr-nps"><abbr title="Net Promoter Score">NPS</abbr></a></td>
 </tr>
 <tr class="even">
 <td>Serve</td>
-<td>Relationship-manager retention lists (CRM write-back via Dataverse/Dynamics); executive dashboards; certified regulatory marts</td>
+<td>Relationship-manager retention lists (<a class="abbr-ref" href="e-abbreviations.html#abbr-crm"><abbr title="customer relationship management">CRM</abbr></a> write-back via Dataverse/Dynamics); executive dashboards; certified regulatory marts</td>
 </tr>
 <tr class="odd">
 <td>Plane</td>
-<td>Highest sensitivity: personal and financial data; CBN and NDPA obligations; strict roles; model risk management for any scoring model</td>
+<td>Highest sensitivity: personal and financial data; <a class="abbr-ref" href="e-abbreviations.html#abbr-cbn"><abbr title="Central Bank of Nigeria">CBN</abbr></a> and Nigeria Data Protection Act (NDPA) obligations; strict roles; model risk management for any scoring model</td>
 </tr>
 </tbody>
 </table>
@@ -795,7 +806,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <ul>
 <li><strong>Every churned customer is also flagged dormant.</strong> Either churn is <em>defined</em> through dormancy, or dormancy is recorded at the same time as churn. Either way, <code>dormant</code> cannot be used to predict churn: it is part of the outcome. The steward must document how “churn”, “dormant” and “active” relate. In most banks this is the most contested definition of all.</li>
-<li><strong><code>nps_last_survey</code> ranges from −100 to +100 per customer.</strong> An individual answers 0–10; NPS is a <em>group</em> score. This column is probably a branch or segment score copied onto each customer. Averaging it again would be meaningless. Ask the source owner before anyone builds a chart on it.</li>
+<li><strong><code>nps_last_survey</code> ranges from −100 to +100 per customer.</strong> An individual answers 0–10; <a class="abbr-ref" href="e-abbreviations.html#abbr-nps"><abbr title="Net Promoter Score">NPS</abbr></a> is a <em>group</em> score. This column is probably a branch or segment score copied onto each customer. Averaging it again would be meaningless. Ask the source owner before anyone builds a chart on it.</li>
 </ul>
 </section>
 <section id="insight-what-keeps-customers" class="level2" data-number="23.4">
@@ -831,20 +842,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="deploying-in-a-bank" class="level2" data-number="23.5">
 <h2 data-number="23.5" class="anchored" data-anchor-id="deploying-in-a-bank"><span class="header-section-number">23.5</span> Deploying in a bank</h2>
 <ul>
-<li><strong>Owners:</strong> Retail Banking (churn and active-customer definitions), Finance (balances reconciled to the GL), Risk (model risk management), and the DPO.</li>
-<li><strong>First 90 days:</strong> an agreed definition of <em>active customer</em> (the most contested number in most banks), a monthly churn dashboard reconciled to the GL, then a pilot retention list for one region’s RMs, with outcomes tracked.</li>
-<li><strong>Regulatory:</strong> CBN data and risk-management expectations; NDPA for personal data; consumer-protection rules for how retention offers are made. Customer scoring models need documentation, validation and monitoring under model risk governance.</li>
-<li><strong>Pitfall:</strong> BVN and account numbers leaking into analyst extracts. Pseudonymise in silver (Chapter 15), and test that no raw identifiers reach gold.</li>
+<li><strong>Owners:</strong> Retail Banking (churn and active-customer definitions), Finance (balances reconciled to the general ledger (GL)), Risk (model risk management), and the data protection officer (DPO).</li>
+<li><strong>First 90 days:</strong> an agreed definition of <em>active customer</em> (the most contested number in most banks), a monthly churn dashboard reconciled to the <a class="abbr-ref" href="e-abbreviations.html#abbr-gl"><abbr title="general ledger">GL</abbr></a>, then a pilot retention list for one region’s relationship managers (RMs), with outcomes tracked.</li>
+<li><strong>Regulatory:</strong> <a class="abbr-ref" href="e-abbreviations.html#abbr-cbn"><abbr title="Central Bank of Nigeria">CBN</abbr></a> data and risk-management expectations; <a class="abbr-ref" href="e-abbreviations.html#abbr-ndpa"><abbr title="Nigeria Data Protection Act">NDPA</abbr></a> for personal data; consumer-protection rules for how retention offers are made. Customer scoring models need documentation, validation and monitoring under model risk governance.</li>
+<li><strong>Pitfall:</strong> <a class="abbr-ref" href="e-abbreviations.html#abbr-bvn"><abbr title="Bank Verification Number">BVN</abbr></a> and account numbers leaking into analyst extracts. Pseudonymise in silver (Chapter 15), and test that no raw identifiers reach gold.</li>
 </ul>
 </section>
 <section id="exercises" class="level2" data-number="23.6">
 <h2 data-number="23.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">23.6</span> 🏋️ Exercises</h2>
-<p><strong>E23.1 🟢</strong> Which branch state has the highest churn among Mass-segment customers? <strong>E23.2 🟡</strong> Add a test that no column in gold contains values matching an 11-digit identifier pattern (Chapter 15’s scanner, as a gate test). <strong>E23.3 🔴</strong> Design a randomised retention experiment: an offer vs control for the top-risk decile. Write the hypothesis, sample size, primary metric, guardrail metrics and the SRM check.</p>
+<p><strong>E23.1 🟢</strong> Which branch state has the highest churn among Mass-segment customers? <strong>E23.2 🟡</strong> Add a test that no column in gold contains values matching an 11-digit identifier pattern (Chapter 15’s scanner, as a gate test). <strong>E23.3 🔴</strong> Design a randomised retention experiment: an offer vs control for the top-risk decile. Write the hypothesis, sample size, primary metric, guardrail metrics and the sample-ratio mismatch (SRM) check.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1279,7 +1302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

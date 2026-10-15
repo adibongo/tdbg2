@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./e-abbreviations.html" rel="next">
 <link href="./c-troubleshooting.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -42,9 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,6 +73,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -525,6 +531,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -589,69 +601,69 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><strong>World Bank</strong></td>
-<td>World Development Indicators (WDI), Doing Business archive, Enterprise Surveys, Global Findex, WITS trade</td>
+<td>World Development Indicators (WDI), Doing Business archive, Enterprise Surveys, Global Findex, World Integrated Trade Solution (WITS) trade</td>
 <td>Growth, inflation, poverty, financial inclusion, peer benchmarks</td>
 <td><code>api.worldbank.org/v2</code> · R: <code>WDI</code>, <code>wbstats</code> · no key</td>
 <td>All; banking (Findex), retail (consumption)</td>
 </tr>
 <tr class="even">
-<td><strong>IMF</strong></td>
-<td>World Economic Outlook (WEO, incl.&nbsp;projections), International Financial Statistics (IFS), Direction of Trade (DOTS), Fiscal Monitor</td>
-<td>Macro outlook, FX, reserves, debt, trade partners</td>
-<td>DataMapper API (WEO); SDMX (IFS, DOTS) · R: <code>imfr</code> · no key</td>
+<td><strong>International Monetary Fund (IMF)</strong></td>
+<td>World Economic Outlook (WEO, incl.&nbsp;projections), International Financial Statistics (IFS), Direction of Trade (Direction of Trade Statistics (DOTS)), Fiscal Monitor</td>
+<td>Macro outlook, foreign exchange (FX), reserves, debt, trade partners</td>
+<td>DataMapper application programming interface (API) (<a class="abbr-ref" href="e-abbreviations.html#abbr-weo"><abbr title="World Economic Outlook">WEO</abbr></a>); Statistical Data and Metadata eXchange (SDMX) (<a class="abbr-ref" href="e-abbreviations.html#abbr-ifs"><abbr title="International Financial Statistics">IFS</abbr></a>, <a class="abbr-ref" href="e-abbreviations.html#abbr-dots"><abbr title="Direction of Trade Statistics">DOTS</abbr></a>) · R: <code>imfr</code> · no key</td>
 <td>Banking, pensions (investment outlook), retail (demand)</td>
 </tr>
 <tr class="odd">
-<td><strong>UNCTAD</strong> (UNCTADstat)</td>
-<td>FDI flows and stocks, trade in services, maritime and port data, commodity prices, digital economy</td>
+<td><strong>United Nations Conference on Trade and Development (UNCTAD)</strong> (UNCTADstat)</td>
+<td>Foreign direct investment (FDI) flows and stocks, trade in services, maritime and port data, commodity prices, digital economy</td>
 <td>Investment trends, shipping and logistics costs, commodity exposure</td>
 <td><code>unctadstat-user-api</code> · free registration (client id + secret)</td>
 <td>Supply chain, oil and gas, telecoms (digital economy)</td>
 </tr>
 <tr class="even">
-<td><strong>UN Comtrade</strong></td>
-<td>Goods trade by partner and HS product</td>
+<td><strong>United Nations (UN) Comtrade</strong></td>
+<td>Goods trade by partner and Harmonized System (HS) product</td>
 <td>Import dependence, supplier-country risk, export markets</td>
 <td><code>comtradeapi.un.org</code> · preview without key; free key for bulk · R: <code>comtradr</code></td>
 <td>Supply chain, retail, oil and gas</td>
 </tr>
 <tr class="odd">
-<td><strong>ILO</strong> (ILOSTAT)</td>
+<td><strong>International Labour Organization (ILO)</strong> (ILOSTAT)</td>
 <td>Employment, unemployment, wages, informality</td>
-<td>Labour-market context for HR and pay</td>
-<td><code>rplumber.ilo.org</code> SDMX / bulk CSV</td>
-<td>HR, education</td>
+<td>Labour-market context for human resources (HR) and pay</td>
+<td><code>rplumber.ilo.org</code> <a class="abbr-ref" href="e-abbreviations.html#abbr-sdmx"><abbr title="Statistical Data and Metadata eXchange">SDMX</abbr></a> / bulk comma-separated values (CSV)</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-hr"><abbr title="human resources">HR</abbr></a>, education</td>
 </tr>
 <tr class="even">
-<td><strong>FAO</strong> (FAOSTAT)</td>
+<td><strong>Food and Agriculture Organization of the United Nations (FAO)</strong> (FAOSTAT)</td>
 <td>Food production, prices, trade</td>
 <td>Food inflation drivers, input costs</td>
-<td>Bulk CSV / API · R: <code>FAOSTAT</code></td>
-<td>Retail and FMCG, supply chain</td>
+<td>Bulk <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> / <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> · R: <code>FAOSTAT</code></td>
+<td>Retail and fast-moving consumer goods (FMCG), supply chain</td>
 </tr>
 <tr class="odd">
-<td><strong>AfDB</strong> Data Portal</td>
+<td><strong>African Development Bank (AfDB)</strong> Data Portal</td>
 <td>African Economic Outlook, infrastructure, energy access</td>
 <td>Africa-specific comparisons</td>
-<td>Web portal / CSV</td>
+<td>Web portal / <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a></td>
 <td>Power, telecoms, all</td>
 </tr>
 <tr class="even">
-<td><strong>OECD</strong></td>
-<td>Prices, trade in value added, PISA (education)</td>
+<td><strong>Organisation for Economic Co-operation and Development (OECD)</strong></td>
+<td>Prices, trade in value added, Programme for International Student Assessment (PISA) (education)</td>
 <td>Benchmarks against advanced economies</td>
-<td>SDMX API · R: <code>OECD</code></td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-sdmx"><abbr title="Statistical Data and Metadata eXchange">SDMX</abbr></a> <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> · R: <code>OECD</code></td>
 <td>Education, retail</td>
 </tr>
 <tr class="odd">
-<td><strong>ITU</strong></td>
-<td>ICT indicators: mobile subscriptions, broadband, internet use</td>
+<td><strong>International Telecommunication Union (ITU)</strong></td>
+<td>Information and communications technology (ICT) indicators: mobile subscriptions, broadband, internet use</td>
 <td>Telecoms market sizing and benchmarks</td>
 <td>DataHub downloads</td>
 <td>Telecoms</td>
 </tr>
 <tr class="even">
-<td><strong>IEA / IRENA</strong></td>
+<td><strong>International Energy Agency (IEA) / International Renewable Energy Agency (IRENA)</strong></td>
 <td>Energy balances, electricity access, renewables capacity</td>
 <td>Power-sector context</td>
 <td>Downloads (some free)</td>
@@ -659,16 +671,16 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><strong>Harvard Dataverse</strong></td>
-<td>Research and replication datasets with DOIs</td>
+<td>Research and replication datasets with digital object identifiers (DOIs)</td>
 <td>Academic evidence, published datasets</td>
-<td>API · R: <code>dataverse</code> · no key for public data</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> · R: <code>dataverse</code> · no key for public data</td>
 <td>All (Chapters 6 and Lab)</td>
 </tr>
 <tr class="even">
-<td><strong>HDX</strong> (Humanitarian Data Exchange)</td>
+<td><strong>Humanitarian Data Exchange (HDX)</strong></td>
 <td>Population, displacement, health-facility locations</td>
 <td>Geography, catchment and risk mapping</td>
-<td>CKAN API</td>
+<td>Comprehensive Knowledge Archive Network (CKAN) <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a></td>
 <td>Education, power, telecoms</td>
 </tr>
 </tbody>
@@ -696,55 +708,55 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><strong>National Bureau of Statistics (NBS)</strong></td>
-<td>CPI and inflation (rebased in 2025), GDP, labour force, trade, NLSS household survey</td>
+<td>Consumer price index (CPI) and inflation (rebased in 2025), gross domestic product (GDP), labour force, trade, Nigeria Living Standards Survey (NLSS) household survey</td>
 <td>The official national numbers</td>
-<td>Publications portal (Excel/PDF), microdata catalogue</td>
+<td>Publications portal (Excel/Portable Document Format (PDF)), microdata catalogue</td>
 <td>All</td>
 </tr>
 <tr class="even">
 <td><strong>Central Bank of Nigeria (CBN)</strong></td>
-<td>Statistical Bulletin, exchange rates, MPR, money and credit, payments statistics</td>
-<td>FX, interest rates, credit conditions</td>
+<td>Statistical Bulletin, exchange rates, Monetary Policy Rate (MPR), money and credit, payments statistics</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-fx"><abbr title="foreign exchange">FX</abbr></a>, interest rates, credit conditions</td>
 <td>Excel downloads; rates pages</td>
-<td>Banking, retail (FX costs), pensions</td>
+<td>Banking, retail (<a class="abbr-ref" href="e-abbreviations.html#abbr-fx"><abbr title="foreign exchange">FX</abbr></a> costs), pensions</td>
 </tr>
 <tr class="odd">
 <td><strong>Debt Management Office (DMO)</strong></td>
 <td>Public debt stock, bond yields</td>
 <td>Sovereign risk, fixed-income benchmarks</td>
-<td>Excel/PDF</td>
+<td>Excel/<a class="abbr-ref" href="e-abbreviations.html#abbr-pdf"><abbr title="Portable Document Format">PDF</abbr></a></td>
 <td>Pensions (investment), banking</td>
 </tr>
 <tr class="even">
-<td><strong>PenCom</strong></td>
-<td>Industry statistics: RSA registrations, fund assets by type</td>
+<td><strong>National Pension Commission (PenCom)</strong></td>
+<td>Industry statistics: Retirement Savings Account (RSA) registrations, fund assets by type</td>
 <td>Market size, benchmarking</td>
 <td>Quarterly/monthly reports</td>
 <td>Pensions</td>
 </tr>
 <tr class="odd">
-<td><strong>NCC</strong></td>
+<td><strong>Nigerian Communications Commission (NCC)</strong></td>
 <td>Subscriber data, teledensity, quality-of-service reports</td>
-<td>Telecoms market and QoS benchmarks</td>
+<td>Telecoms market and quality of service (QoS) benchmarks</td>
 <td>Industry statistics pages</td>
 <td>Telecoms</td>
 </tr>
 <tr class="even">
-<td><strong>NERC / NBET / TCN</strong></td>
+<td><strong>Nigerian Electricity Regulatory Commission (NERC) / Nigerian Bulk Electricity Trading (NBET) / Transmission Company of Nigeria (TCN)</strong></td>
 <td>DisCo performance, tariffs and bands, energy delivered</td>
 <td>Power-sector benchmarks</td>
 <td>Quarterly reports</td>
 <td>Power</td>
 </tr>
 <tr class="odd">
-<td><strong>NUPRC / NMDPRA</strong></td>
+<td><strong>Nigerian Upstream Petroleum Regulatory Commission (NUPRC) / Nigerian Midstream and Downstream Petroleum Regulatory Authority (NMDPRA)</strong></td>
 <td>Crude oil production, terminal output, downstream supply</td>
 <td>Upstream and downstream benchmarks</td>
 <td>Monthly reports</td>
 <td>Oil and gas</td>
 </tr>
 <tr class="even">
-<td><strong>NUC / UBEC / WAEC (published results)</strong></td>
+<td><strong>National Universities Commission (NUC) / Universal Basic Education Commission (UBEC) / West African Examinations Council (WAEC) (published results)</strong></td>
 <td>Enrolment, institutions, examination statistics</td>
 <td>Education benchmarks</td>
 <td>Reports</td>
@@ -754,7 +766,7 @@ ul.task-list li input[type="checkbox"] {
 <td><strong>Nigeria Open Data / state portals</strong></td>
 <td>Budgets, facilities, geography</td>
 <td>Public-sector and location analytics</td>
-<td>CKAN / CSV</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-ckan"><abbr title="Comprehensive Knowledge Archive Network">CKAN</abbr></a> / <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a></td>
 <td>Education, power</td>
 </tr>
 </tbody>
@@ -763,12 +775,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="rules-of-the-road-for-external-data" class="level2" data-number="D.3">
 <h2 data-number="D.3" class="anchored" data-anchor-id="rules-of-the-road-for-external-data"><span class="header-section-number">D.3</span> Rules of the road for external data</h2>
 <ol type="1">
-<li><strong>Name the source on every chart and table.</strong> “₦/US$ (CBN official)” is a different number from a parallel-market rate.</li>
+<li><strong>Name the source on every chart and table.</strong> “₦/US$ (<a class="abbr-ref" href="e-abbreviations.html#abbr-cbn"><abbr title="Central Bank of Nigeria">CBN</abbr></a> official)” is a different number from a parallel-market rate.</li>
 <li><strong>Keep vintages.</strong> Official figures are revised. Store the pull date with the data, so a board pack can be reproduced exactly as it was presented.</li>
-<li><strong>Separate actuals from projections.</strong> IMF WEO mixes both; keep a flag, and let the semantic layer enforce it.</li>
-<li><strong>Mind breaks in series.</strong> Rebasings (Nigeria’s GDP in 2014, CPI in 2025) mean a chart can show a jump that is a methodology change, not an event.</li>
-<li><strong>Check the licence.</strong> Most multilateral data is open (CC BY 4.0 for the World Bank). Some datasets restrict redistribution. Record the licence in the catalogue.</li>
-<li><strong>Cache, then test freshness.</strong> APIs change and go down. The Lab’s <code>with_cache()</code> keeps the last good pull, and a freshness test tells you when it is too old.</li>
+<li><strong>Separate actuals from projections.</strong> <a class="abbr-ref" href="e-abbreviations.html#abbr-imf"><abbr title="International Monetary Fund">IMF</abbr></a> <a class="abbr-ref" href="e-abbreviations.html#abbr-weo"><abbr title="World Economic Outlook">WEO</abbr></a> mixes both; keep a flag, and let the semantic layer enforce it.</li>
+<li><strong>Mind breaks in series.</strong> Rebasings (Nigeria’s <a class="abbr-ref" href="e-abbreviations.html#abbr-gdp"><abbr title="gross domestic product">GDP</abbr></a> in 2014, <a class="abbr-ref" href="e-abbreviations.html#abbr-cpi"><abbr title="consumer price index">CPI</abbr></a> in 2025) mean a chart can show a jump that is a methodology change, not an event.</li>
+<li><strong>Check the licence.</strong> Most multilateral data is open (Creative Commons (CC) BY 4.0 for the World Bank). Some datasets restrict redistribution. Record the licence in the catalogue.</li>
+<li><strong>Cache, then test freshness.</strong> <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">APIs</abbr></a> change and go down. The Lab’s <code>with_cache()</code> keeps the last good pull, and a freshness test tells you when it is too old.</li>
 </ol>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -781,7 +793,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>I want to add [provider] data on [indicator] for [countries, years] to my warehouse. Write a function in the style of R/open_data.R that returns the standard tidy columns (source, dataset, indicator, indicator_name, iso3, country, year, value), caches each pull to data/open/, and falls back to the cache when the API fails. Then write two data tests for it: a freshness test and a plausibility range for the values.</p>
+<p>I want to add [provider] data on [indicator] for [countries, years] to my warehouse. Write a function in the style of R/open_data.R that returns the standard tidy columns (source, dataset, indicator, indicator_name, iso3, country, year, value), caches each pull to data/open/, and falls back to the cache when the <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> fails. Then write two data tests for it: a freshness test and a plausibility range for the values.</p>
 </blockquote>
 </div>
 </div>
@@ -790,6 +802,18 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1209,6 +1233,9 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./e-abbreviations.html" class="pagination-link" aria-label="Abbreviations">
+        <span class="nav-page-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -1221,7 +1248,7 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

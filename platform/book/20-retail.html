@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -606,7 +617,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><span class="level-badge">Sector</span> <em>Store and depot performance, promotions, baskets, experiments</em></p>
-<p>The running example (Chapters 6–13) <em>is</em> a retail and FMCG platform. This playbook adds the three analyses retail leaders ask for next: <strong>promotion effectiveness</strong>, <strong>basket economics</strong> and <strong>trustworthy A/B tests</strong>.</p>
+<p>The running example (Chapters 6–13) <em>is</em> a retail and fast-moving consumer goods (FMCG) platform. This playbook adds the three analyses retail leaders ask for next: <strong>promotion effectiveness</strong>, <strong>basket economics</strong> and <strong>trustworthy A/B tests</strong>.</p>
 <section id="architecture-mapped-to-retail" class="level2" data-number="20.1">
 <h2 data-number="20.1" class="anchored" data-anchor-id="architecture-mapped-to-retail"><span class="header-section-number">20.1</span> Architecture mapped to retail</h2>
 <table class="caption-top table">
@@ -617,21 +628,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th>Layer</th>
-<th>In retail and FMCG</th>
+<th>In retail and <a class="abbr-ref" href="e-abbreviations.html#abbr-fmcg"><abbr title="fast-moving consumer goods">FMCG</abbr></a></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Sources</td>
-<td>POS and e-commerce transactions, distributor sell-out, ERP (stock, cost), loyalty/CRM, promotions calendar, A/B testing tool, marketing spend, reviews</td>
+<td>Point of sale (POS) and e-commerce transactions, distributor sell-out, enterprise resource planning (ERP) (stock, cost), loyalty/customer relationship management (CRM), promotions calendar, A/B testing tool, marketing spend, reviews</td>
 </tr>
 <tr class="even">
 <td>Silver</td>
-<td>De-duplicated sell-out; stockout blanks interpreted; depot and store history (SCD2); conformed product hierarchy</td>
+<td>De-duplicated sell-out; stockout blanks interpreted; depot and store history (slowly changing dimension, type 2 (SCD2)); conformed product hierarchy</td>
 </tr>
 <tr class="odd">
 <td>Gold</td>
-<td><code>fct_sales</code> (week × depot × SKU), <code>fct_basket</code> (receipt), <code>fct_experiment_user</code>; dims: store/depot, product, week, customer segment</td>
+<td><code>fct_sales</code> (week × depot × stock-keeping unit (SKU)), <code>fct_basket</code> (receipt), <code>fct_experiment_user</code>; dims: store/depot, product, week, customer segment</td>
 </tr>
 <tr class="even">
 <td>Gate</td>
@@ -639,7 +650,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td>Govern</td>
-<td>Revenue, gross margin, ASP, promo share, uplift, basket size, conversion, revenue per user</td>
+<td>Revenue, gross margin, average selling price (ASP), promo share, uplift, basket size, conversion, revenue per user</td>
 </tr>
 <tr class="even">
 <td>Serve</td>
@@ -661,7 +672,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Using gold.v_sales, estimate promotion uplift: for each category, compare average units per depot-SKU-week on promotion vs off promotion, <em>within the same depot and SKU</em>, so that big depots don’t bias the result. Then compute the incremental gross profit after discount. Which categories’ promotions pay for themselves?</p>
+<p>Using gold.v_sales, estimate promotion uplift: for each category, compare average units per depot-<a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a>-week on promotion vs off promotion, <em>within the same depot and <a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a></em>, so that big depots don’t bias the result. Then compute the incremental gross profit after discount. Which categories’ promotions pay for themselves?</p>
 </blockquote>
 </div>
 </div>
@@ -762,7 +773,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">POS</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-pos"><abbr title="point of sale">POS</abbr></a></td>
 <td style="text-align: right;">143</td>
 <td style="text-align: right;">8688</td>
 <td style="text-align: right;">750</td>
@@ -804,7 +815,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Analyse ab_test_checkout.csv (arm, device, converted, revenue_ngn). First check for sample-ratio mismatch (SRM) against the intended 50/50 split, overall and by device, with a chi-square test. Only then compare conversion and revenue per user between arms with confidence intervals. Explain why SRM invalidates the naive result.</p>
+<p>Analyse ab_test_checkout.csv (arm, device, converted, revenue_ngn). First check for sample-ratio mismatch (SRM) against the intended 50/50 split, overall and by device, with a chi-square test. Only then compare conversion and revenue per user between arms with confidence intervals. Explain why <a class="abbr-ref" href="e-abbreviations.html#abbr-srm"><abbr title="sample-ratio mismatch">SRM</abbr></a> invalidates the naive result.</p>
 </blockquote>
 </div>
 </div>
@@ -858,7 +869,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p><strong>Stop.</strong> The overall split is 52/48, and the chi-square p-value is effectively zero. The imbalance comes almost entirely from <strong>Android</strong>. Something (an app-version bug, a redirect, a crash in the treatment flow) dropped Android treatment users. They are <em>not missing at random</em>, so the naive comparison is biased. SRM is a <strong>data test</strong> like any other: it belongs in the gate for experiment data.</p>
+<p><strong>Stop.</strong> The overall split is 52/48, and the chi-square p-value is effectively zero. The imbalance comes almost entirely from <strong>Android</strong>. Something (an app-version bug, a redirect, a crash in the treatment flow) dropped Android treatment users. They are <em>not missing at random</em>, so the naive comparison is biased. <a class="abbr-ref" href="e-abbreviations.html#abbr-srm"><abbr title="sample-ratio mismatch">SRM</abbr></a> is a <strong>data test</strong> like any other: it belongs in the gate for experiment data.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ab <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(con, <span class="st">"SELECT arm, COUNT(*) n, SUM(converted) conv, AVG(revenue_ngn) rpu</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="st">                       FROM gold.fct_experiment_user WHERE device &lt;&gt; 'Android' GROUP BY 1 ORDER BY 1"</span>)</span>
@@ -887,7 +898,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">iOS + Web only (SRM-clean)</td>
+<td style="text-align: left;">iOS + Web only (<a class="abbr-ref" href="e-abbreviations.html#abbr-srm"><abbr title="sample-ratio mismatch">SRM</abbr></a>-clean)</td>
 <td style="text-align: right;">0.0443</td>
 <td style="text-align: right;">0.0476</td>
 <td style="text-align: right;">7.4</td>
@@ -904,18 +915,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="20.5" class="anchored" data-anchor-id="deploying-in-a-retail-or-fmcg-business"><span class="header-section-number">20.5</span> Deploying in a retail or FMCG business</h2>
 <ul>
 <li><strong>Owners:</strong> the Commercial Director (revenue, margin, promotion rules) and the Head of Trade Marketing (promo calendar, uplift method).</li>
-<li><strong>First 90 days:</strong> a weekly depot and category pack (the Lab dashboard); a promo post-mortem template; an experiment gate (SRM + minimum sample size) before any test is read out.</li>
+<li><strong>First 90 days:</strong> a weekly depot and category pack (the Lab dashboard); a promo post-mortem template; an experiment gate (<a class="abbr-ref" href="e-abbreviations.html#abbr-srm"><abbr title="sample-ratio mismatch">SRM</abbr></a> + minimum sample size) before any test is read out.</li>
 <li><strong>Pitfall:</strong> distributor sell-out often arrives late and is restated. Use the incremental-merge load (Chapter 6) and mark weeks as <em>provisional</em> until closed.</li>
 </ul>
 </section>
 <section id="exercises" class="level2" data-number="20.6">
 <h2 data-number="20.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">20.6</span> 🏋️ Exercises</h2>
-<p><strong>E20.1 🟢</strong> Which day of the week has the largest average basket? <strong>E20.2 🟡</strong> Add an SRM test to the kit as <code>t_srm(table, arm_col, expected = c(.5, .5), alpha = .001)</code>, and make it close the gate. <strong>E20.3 🔴</strong> Estimate the post-promotion dip: for depot-SKUs, compare the units in the two weeks <em>after</em> a promotion with the non-promo baseline. Net it off the uplift.</p>
+<p><strong>E20.1 🟢</strong> Which day of the week has the largest average basket? <strong>E20.2 🟡</strong> Add an <a class="abbr-ref" href="e-abbreviations.html#abbr-srm"><abbr title="sample-ratio mismatch">SRM</abbr></a> test to the kit as <code>t_srm(table, arm_col, expected = c(.5, .5), alpha = .001)</code>, and make it close the gate. <strong>E20.3 🔴</strong> Estimate the post-promotion dip: for depot-<a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKUs</abbr></a>, compare the units in the two weeks <em>after</em> a promotion with the non-promo baseline. Net it off the uplift.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1350,7 +1373,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

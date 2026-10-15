@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,6 +74,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -527,6 +532,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -589,7 +600,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="welcome" class="level1 unnumbered">
 <h1 class="unnumbered">Welcome</h1>
 <p><img src="images/architecture.svg" class="img-fluid" alt="Reference architecture: sources, ingest, DuckDB bronze-silver-gold warehouse, test gate, governed access, serving, operations and security plane"></p>
-<p>This tutorial takes you from <strong>“I have some CSV and Excel files”</strong> to <strong>“I run a governed analytics platform that an organisation trusts with its decisions.”</strong> It is built around one architecture, shown above. You build every layer yourself, with real data, on a laptop, using free tools. You then learn to deploy the same pattern in HR, education, supply chain, retail, oil and gas, power, banking, pensions and telecoms.</p>
+<p>This tutorial takes you from <strong>“I have some comma-separated values (CSV) and Excel files”</strong> to <strong>“I run a governed analytics platform that an organisation trusts with its decisions.”</strong> It is built around one architecture, shown above. You build every layer yourself, with real data, on a laptop, using free tools. You then learn to deploy the same pattern in human resources (HR), education, supply chain, retail, oil and gas, power, banking, pensions and telecoms.</p>
 <section id="who-it-is-for" class="level2">
 <h2 class="anchored" data-anchor-id="who-it-is-for">Who it is for</h2>
 <table class="caption-top table">
@@ -607,7 +618,7 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>A manager or MBA participant who has never written code</td>
+<td>A manager or Master of Business Administration (MBA) participant who has never written code</td>
 <td>Chapter 1</td>
 <td>Read the architecture, ask the right questions of a data team, and tell when a number can be trusted</td>
 </tr>
@@ -617,14 +628,14 @@ ul.task-list li input[type="checkbox"] {
 <td>Build a reproducible warehouse and dashboard that replaces the monthly spreadsheet scramble</td>
 </tr>
 <tr class="odd">
-<td>An analyst who knows some R, Python or SQL</td>
+<td>An analyst who knows some R, Python or Structured Query Language (SQL)</td>
 <td>Chapter 5</td>
 <td>Model data properly, test it, govern metrics and serve them to every tool in the organisation</td>
 </tr>
 <tr class="even">
 <td>A data lead or head of analytics</td>
 <td>Chapter 14</td>
-<td>Run it in production, secure it, comply with the NDPA, and roll it out across business units</td>
+<td>Run it in production, secure it, comply with the Nigeria Data Protection Act (NDPA), and roll it out across business units</td>
 </tr>
 </tbody>
 </table>
@@ -636,10 +647,10 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>🟢 Level 1 · Novice</strong><br>Chapters 1–4. See the whole system. Read files of every shape. Profile data and find what’s wrong with it.</p>
 </div>
 <div class="g-col-12 g-col-md-3">
-<p><strong>🔵 Level 2 · Practitioner</strong><br>Chapters 5–9. SQL. Bronze, silver, gold. Dimensional modelling. Data tests and the publish gate.</p>
+<p><strong>🔵 Level 2 · Practitioner</strong><br>Chapters 5–9. <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>. Bronze, silver, gold. Dimensional modelling. Data tests and the publish gate.</p>
 </div>
 <div class="g-col-12 g-col-md-3">
-<p><strong>🟣 Level 3 · Advanced</strong><br>Chapters 10–13. The semantic layer. Vector search and AI. Serving to SQLite, PostgreSQL and Dataverse. Shiny dashboards.</p>
+<p><strong>🟣 Level 3 · Advanced</strong><br>Chapters 10–13. The semantic layer. Vector search and artificial intelligence (AI). Serving to SQLite, PostgreSQL and Dataverse. Shiny dashboards.</p>
 </div>
 <div class="g-col-12 g-col-md-3">
 <p><strong>⚫ Level 4 · Master</strong><br>Chapters 14–16. Orchestration and monitoring. Security and privacy. Deploying in an organisation and growing it.</p>
@@ -653,7 +664,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><strong>What · Why · When · Who.</strong> A four-line orientation, so you know where the chapter sits in the architecture before you start.</li>
 <li><strong>Concepts.</strong> Plain-English explanation with a business example.</li>
-<li><strong>🧠 Prompts.</strong> The exact prompt that produced each block of code. Paste it into Claude, Positron Assistant or Copilot, compare what you get with the reviewed version here, and notice the differences. <em>You are the reviewer. The AI is the junior analyst.</em></li>
+<li><strong>🧠 Prompts.</strong> The exact prompt that produced each block of code. Paste it into Claude, Positron Assistant or Copilot, compare what you get with the reviewed version here, and notice the differences. <em>You are the reviewer. The <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> is the junior analyst.</em></li>
 <li><strong>Code you run.</strong> Every code block in this book is executed when the book is built. If you can read it here, it works.</li>
 <li><strong>🏋️ Exercises</strong> in three tiers: 🟢 warm-up (10 min), 🟡 core (30 min), 🔴 stretch (open-ended). Solutions are folded underneath. Try first.</li>
 <li><strong>✅ Mastery check.</strong> Questions you should be able to answer aloud, without notes, before moving on.</li>
@@ -662,7 +673,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-running-example" class="level2">
 <h2 class="anchored" data-anchor-id="the-running-example">The running example</h2>
-<p>The main thread of the book is <strong>Trans-Sahel Distribution</strong>, an FMCG distributor with 12 depots, 40 SKUs and two years of weekly sell-out data. The data is synthetic but deliberately realistic, and it contains the problems real data has:</p>
+<p>The main thread of the book is <strong>Trans-Sahel Distribution</strong>, an fast-moving consumer goods (FMCG) distributor with 12 depots, 40 stock-keeping units (SKUs) and two years of weekly sell-out data. The data is synthetic but deliberately realistic, and it contains the problems real data has:</p>
 <ul>
 <li>duplicate rows</li>
 <li>stockouts recorded as blanks</li>
@@ -675,7 +686,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="what-you-need">What you need</h2>
 <ul>
 <li>A laptop (Windows, macOS or Linux) with <strong>R ≥ 4.3</strong>, <strong>Quarto ≥ 1.5</strong> and <strong>Positron</strong> or <strong>RStudio</strong></li>
-<li>About 2 GB of free disk space</li>
+<li>About 2 gigabytes (GB) of free disk space</li>
 <li>No server, no cloud account and no licence. Everything runs locally on DuckDB. Chapter 16 covers when and how to move to the cloud.</li>
 </ul>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -714,7 +725,7 @@ A note on the data
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>All datasets are synthetic, built for teaching. Where a chapter cites a regulation (NDPA 2023, the Pension Reform Act 2014, NERC tariff bands, NCC quality-of-service rules), it describes the principle. <strong>Always check the current text of the regulation</strong> before relying on a threshold in production.</p>
+<p>All datasets are synthetic, built for teaching. Where a chapter cites a regulation (<a class="abbr-ref" href="e-abbreviations.html#abbr-ndpa"><abbr title="Nigeria Data Protection Act">NDPA</abbr></a> 2023, the Pension Reform Act 2014, Nigerian Electricity Regulatory Commission (NERC) tariff bands, Nigerian Communications Commission (NCC) quality-of-service rules), it describes the principle. <strong>Always check the current text of the regulation</strong> before relying on a threshold in production.</p>
 </div>
 </div>
 
@@ -723,6 +734,18 @@ A note on the data
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1154,7 +1177,7 @@ A note on the data
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

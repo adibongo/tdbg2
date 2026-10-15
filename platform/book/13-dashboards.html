@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -111,6 +111,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -564,6 +569,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -633,7 +644,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><strong>Who</strong></td>
-<td>Analysts build. Business users co-design. Owners sign off the KPIs shown</td>
+<td>Analysts build. Business users co-design. Owners sign off the key performance indicators (KPIs) shown</td>
 </tr>
 </tbody>
 </table>
@@ -660,7 +671,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><strong>Static</strong> (<code>format: dashboard</code>)</td>
-<td>Rendered once to HTML</td>
+<td>Rendered once to HyperText Markup Language (HTML)</td>
 <td>Hover, zoom, client-side filters (plotly, DT, Observable)</td>
 <td>Any web host, email, SharePoint</td>
 <td>Daily or weekly snapshots; no server allowed</td>
@@ -684,7 +695,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The Lab ships the same dashboard in two editions, both built from this book’s warehouse:</p>
 <ul>
 <li><strong><a href="../dashboard/index.html">Static edition</a></strong> (open it now). It runs entirely in your browser from small aggregated “cubes” exported from DuckDB, so it can sit on any web host behind a password. Its source is <code>static-dashboard/index.qmd</code>.</li>
-<li><strong>Shiny edition</strong> (<code>02-dashboard.qmd</code>). A live R session can switch between six data sources, re-query the warehouse, run the AI SQL assistant and refresh itself when the warehouse is rebuilt. Run it locally with <code>quarto serve 02-dashboard.qmd</code>, or see the <a href="../index.html">platform page</a> for the hosted version.</li>
+<li><strong>Shiny edition</strong> (<code>02-dashboard.qmd</code>). A live R session can switch between six data sources, re-query the warehouse, run the artificial intelligence (AI) Structured Query Language (SQL) assistant and refresh itself when the warehouse is rebuilt. Run it locally with <code>quarto serve 02-dashboard.qmd</code>, or see the <a href="../index.html">platform page</a> for the hosted version.</li>
 </ul>
 <p>The anatomy of the Shiny edition:</p>
 </section>
@@ -747,7 +758,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>Performance rules that follow from the graph:</strong></p>
 <ol type="1">
-<li><strong>Filter in the database, not in R.</strong> <code>get_sales()</code> pushes the filters down as a SQL <code>WHERE</code> clause.</li>
+<li><strong>Filter in the database, not in R.</strong> <code>get_sales()</code> pushes the filters down as a <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> <code>WHERE</code> clause.</li>
 <li><strong>Debounce fast-changing inputs</strong> (<code>debounce(400)</code>), so dragging a date slider doesn’t fire twenty queries.</li>
 <li><strong>Compute each expensive thing once</strong> in a <code>reactive()</code> and share it. Never re-query inside each output.</li>
 <li><strong>Cache identical requests</strong> with <code>bindCache(input$source, filters())</code>.</li>
@@ -760,13 +771,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Overview</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Semantic layer</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Ask your data</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Customer voice</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Connections</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p><img src="images/screens/1-Overview.png" class="img-fluid"> KPIs come from the semantic layer, so they mean the same thing whichever source is selected in the sidebar.</p>
+<p><img src="images/screens/1-Overview.png" class="img-fluid"> <a class="abbr-ref" href="e-abbreviations.html#abbr-kpi"><abbr title="key performance indicator">KPIs</abbr></a> come from the semantic layer, so they mean the same thing whichever source is selected in the sidebar.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p><img src="images/screens/2-Semantic_layer.png" class="img-fluid"> Users pick governed metrics and dimensions; the compiled SQL is shown alongside the chart.</p>
+<p><img src="images/screens/2-Semantic_layer.png" class="img-fluid"> Users pick governed metrics and dimensions; the compiled <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> is shown alongside the chart.</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p><img src="images/screens/3-Ask_your_data.png" class="img-fluid"> Text-to-SQL with guardrails (Chapter 11): AI drafts, a human reviews, the query runs read-only.</p>
+<p><img src="images/screens/3-Ask_your_data.png" class="img-fluid"> Text-to-<a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> with guardrails (Chapter 11): <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> drafts, a human reviews, the query runs read-only.</p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <p><img src="images/screens/4-Customer_voice.png" class="img-fluid"> Vector search over reviews, inside DuckDB.</p>
@@ -781,8 +792,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="13.5" class="anchored" data-anchor-id="design-principles-for-decision-dashboards"><span class="header-section-number">13.5</span> Design principles for decision dashboards</h2>
 <ol type="1">
 <li><strong>One page, one decision.</strong> Name the decision at the top: “Where should we restock this week?”</li>
-<li><strong>Read in a Z-pattern:</strong> KPIs (<em>how are we doing?</em>) → trend (<em>which way?</em>) → breakdown (<em>where?</em>) → detail (<em>which ones?</em>).</li>
-<li><strong>Every KPI has a comparison:</strong> target, last period or last year. A number alone is trivia.</li>
+<li><strong>Read in a Z-pattern:</strong> <a class="abbr-ref" href="e-abbreviations.html#abbr-kpi"><abbr title="key performance indicator">KPIs</abbr></a> (<em>how are we doing?</em>) → trend (<em>which way?</em>) → breakdown (<em>where?</em>) → detail (<em>which ones?</em>).</li>
+<li><strong>Every <a class="abbr-ref" href="e-abbreviations.html#abbr-kpi"><abbr title="key performance indicator">KPI</abbr></a> has a comparison:</strong> target, last period or last year. A number alone is trivia.</li>
 <li><strong>Show definitions on hover,</strong> pulled from the semantic layer’s descriptions.</li>
 <li><strong>Show freshness and test status.</strong> “Data to 30 Mar 2026 · 12/12 tests passed” builds more trust than any colour scheme.</li>
 <li><strong>Accessible colour.</strong> Never rely on red and green alone; check contrast, and add labels.</li>
@@ -799,7 +810,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Here is a screenshot of my dashboard [attach]. Critique it against these principles: one decision per page, Z-pattern reading order, comparisons on every KPI, definitions on hover, visible freshness and test status, accessible colour, and speed. Give the five highest-impact changes in priority order.</p>
+<p>Here is a screenshot of my dashboard [attach]. Critique it against these principles: one decision per page, Z-pattern reading order, comparisons on every <a class="abbr-ref" href="e-abbreviations.html#abbr-kpi"><abbr title="key performance indicator">KPI</abbr></a>, definitions on hover, visible freshness and test status, accessible colour, and speed. Give the five highest-impact changes in priority order.</p>
 </blockquote>
 </div>
 </div>
@@ -831,12 +842,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co">#| title: Revenue by depot</span></span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>plotly<span class="sc">::</span><span class="fu">plot_ly</span>(DBI<span class="sc">::</span><span class="fu">dbGetQuery</span>(con, <span class="st">"SELECT depot_name, SUM(revenue_ngn) r FROM gold.v_sales GROUP BY 1 ORDER BY 2"</span>), <span class="at">x =</span> <span class="sc">~</span>r, <span class="at">y =</span> <span class="sc">~</span>depot_name, <span class="at">type =</span> <span class="st">"bar"</span>)</span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Schedule <code>quarto render weekly_pack.qmd</code> after <code>refresh.R</code>, and publish the HTML to SharePoint or Posit Connect.</p>
+<p>Schedule <code>quarto render weekly_pack.qmd</code> after <code>refresh.R</code>, and publish the <a class="abbr-ref" href="e-abbreviations.html#abbr-html"><abbr title="HyperText Markup Language">HTML</abbr></a> to SharePoint or Posit Connect.</p>
 </section>
 <section id="exercises" class="level2" data-number="13.7">
 <h2 data-number="13.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">13.7</span> 🏋️ Exercises</h2>
-<p><strong>E13.1 🟢</strong> Run the Lab dashboard (<code>quarto serve 02-dashboard.qmd</code>). Switch the source between CSV, SQLite and DuckDB. What changes, and what doesn’t? Why?</p>
-<p><strong>E13.2 🟡</strong> Add a “vs last year” delta to each KPI value box in the Lab dashboard, computed through the semantic layer.</p>
+<p><strong>E13.1 🟢</strong> Run the Lab dashboard (<code>quarto serve 02-dashboard.qmd</code>). Switch the source between comma-separated values (CSV), SQLite and DuckDB. What changes, and what doesn’t? Why?</p>
+<p><strong>E13.2 🟡</strong> Add a “vs last year” delta to each <a class="abbr-ref" href="e-abbreviations.html#abbr-kpi"><abbr title="key performance indicator">KPI</abbr></a> value box in the Lab dashboard, computed through the semantic layer.</p>
 <p><strong>E13.3 🔴</strong> Add a write-back feature: a table where regional managers enter next quarter’s revenue targets, saved to a <code>targets</code> table in PostgreSQL (or SQLite if no server), and shown as a target line on the trend chart. Where does that table sit in the architecture?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -850,7 +861,7 @@ Solutions
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>E13.1.</strong> The row counts and load times change. The KPIs don’t, because every source is cleaned by the same rules and measured through the same semantic layer. (Parquet is the exception to watch: it was cleaned elsewhere, earlier.)</p>
+<p><strong>E13.1.</strong> The row counts and load times change. The <a class="abbr-ref" href="e-abbreviations.html#abbr-kpi"><abbr title="key performance indicator">KPIs</abbr></a> don’t, because every source is cleaned by the same rules and measured through the same semantic layer. (Parquet is the exception to watch: it was cleaned elsewhere, earlier.)</p>
 <p><strong>E13.2 sketch.</strong> Compute <code>sf(metrics)</code> for the selected dates and for the same dates shifted by 52 weeks, then pass <code>p(sprintf("%+.1f%% vs LY", 100*(cur/ly-1)))</code> into <code>value_box()</code>.</p>
 <p><strong>E13.3.</strong> The targets table is a <strong>source</strong>: the write-back loop in <a href="01-architecture.html#fig-arch" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>. The next pipeline run lands it in bronze, validates it in silver (one target per region per quarter, numeric, positive), and joins it in gold. The dashboard reads targets from gold, never directly from the form’s table.</p>
 </div>
@@ -860,7 +871,7 @@ Solutions
 <section id="mastery-check" class="level2" data-number="13.8">
 <h2 data-number="13.8" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">13.8</span> ✅ Mastery check</h2>
 <ul>
-<li>Static, Shiny or Shinylive? Pick one for a public teaching demo, a CEO’s daily cockpit, and a monthly emailed pack.</li>
+<li>Static, Shiny or Shinylive? Pick one for a public teaching demo, a chief executive officer (CEO)’s daily cockpit, and a monthly emailed pack.</li>
 <li>What does <code>reactivePoll</code> watch in the Lab dashboard, and why?</li>
 <li>Name three performance rules and the problem each prevents.</li>
 </ul>
@@ -873,6 +884,18 @@ Solutions
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1307,7 +1330,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -618,7 +629,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><strong>What</strong></td>
-<td>A version-controlled catalogue of business metrics and dimensions, each with SQL, meaning and an owner, from which every report, dashboard and AI query compiles its SQL</td>
+<td>A version-controlled catalogue of business metrics and dimensions, each with Structured Query Language (SQL), meaning and an owner, from which every report, dashboard and artificial intelligence (AI) query compiles its <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a></td>
 </tr>
 <tr class="even">
 <td><strong>Why</strong></td>
@@ -626,11 +637,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><strong>When</strong></td>
-<td>As soon as a second tool or team consumes gold. Before you introduce an AI assistant, always</td>
+<td>As soon as a second tool or team consumes gold. Before you introduce an <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> assistant, always</td>
 </tr>
 <tr class="even">
 <td><strong>Who</strong></td>
-<td><strong>Metric owners</strong> (CFO for revenue, CHRO for attrition) approve definitions. Analytics engineers encode them. Everyone consumes</td>
+<td><strong>Metric owners</strong> (chief financial officer (CFO) for revenue, chief human resources officer (CHRO) for attrition) approve definitions. Analytics engineers encode them. Everyone consumes</td>
 </tr>
 </tbody>
 </table>
@@ -663,7 +674,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>What humans see</td>
 </tr>
 <tr class="odd">
-<td><strong>SQL</strong></td>
+<td><strong><a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a></strong></td>
 <td><code>100 * SUM(gross_profit_ngn) / NULLIF(SUM(revenue_ngn), 0)</code></td>
 <td>The <em>only</em> implementation</td>
 </tr>
@@ -798,7 +809,7 @@ Ratio metrics: sum first, divide last
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Using my metrics.yml and the metric_sql() compiler in kit.R, generate SQL for revenue, gross margin % and stockout rate by region and by quarter for 2025. Print the SQL, run it, and chart revenue by region over quarters.</p>
+<p>Using my metrics.yml and the metric_sql() compiler in kit.R, generate <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> for revenue, gross margin % and stockout rate by region and by quarter for 2025. Print the <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>, run it, and chart revenue by region over quarters.</p>
 </blockquote>
 </div>
 </div>
@@ -992,7 +1003,7 @@ ORDER BY period</code></pre>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">active_skus</td>
-<td style="text-align: left;">Active SKUs</td>
+<td style="text-align: left;">Active stock-keeping units (SKUs)</td>
 <td style="text-align: left;">certified</td>
 <td style="text-align: left;">1.2</td>
 </tr>
@@ -1020,12 +1031,12 @@ ORDER BY period</code></pre>
 <tbody>
 <tr class="odd">
 <td>Power BI / Fabric</td>
-<td>DAX measures in a semantic model</td>
-<td><code>metrics.yml</code> → SQL</td>
+<td>Data Analysis Expressions (DAX) measures in a semantic model</td>
+<td><code>metrics.yml</code> → <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a></td>
 </tr>
 <tr class="even">
 <td>dbt</td>
-<td><code>semantic_models</code> + <code>metrics</code> in YAML (MetricFlow)</td>
+<td><code>semantic_models</code> + <code>metrics</code> in YAML Ain't Markup Language (YAML) (MetricFlow)</td>
 <td><code>metrics.yml</code></td>
 </tr>
 <tr class="odd">
@@ -1040,7 +1051,7 @@ ORDER BY period</code></pre>
 </tr>
 </tbody>
 </table>
-<p>When the organisation also uses Power BI, keep <strong>one source of truth</strong>. Either generate DAX from <code>metrics.yml</code>, or treat the Power BI model as the master and export its definitions. Never maintain two by hand.</p>
+<p>When the organisation also uses Power BI, keep <strong>one source of truth</strong>. Either generate <a class="abbr-ref" href="e-abbreviations.html#abbr-dax"><abbr title="Data Analysis Expressions">DAX</abbr></a> from <code>metrics.yml</code>, or treat the Power BI model as the master and export its definitions. Never maintain two by hand.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate DAX measure definitions from metrics.yml (simple aggregates only)</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>to_dax <span class="ot">&lt;-</span> <span class="cf">function</span>(m) {</span>
@@ -1075,7 +1086,7 @@ Gross profit (₦) = SUM(v_sales[gross_profit_ngn])
 <h2 data-number="10.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">10.7</span> 🏋️ Exercises</h2>
 <p><strong>E10.1 🟢</strong> Add a metric <code>revenue_per_depot_week</code> to a copy of the layer and compile it by region.</p>
 <p><strong>E10.2 🟡</strong> Add a <code>status</code> field (<code>certified</code> or <code>exploratory</code>) to each metric. Make the compiler refuse exploratory metrics when called with <code>board_pack = TRUE</code>.</p>
-<p><strong>E10.3 🔴</strong> Write a function that checks every metric in the YAML compiles and runs against gold, and returns a pass/fail table. Wire it into the Chapter 9 test suite, so a broken definition closes the gate.</p>
+<p><strong>E10.3 🔴</strong> Write a function that checks every metric in the <a class="abbr-ref" href="e-abbreviations.html#abbr-yaml"><abbr title="YAML Ain't Markup Language (a configuration file format)">YAML</abbr></a> compiles and runs against gold, and returns a pass/fail table. Wire it into the Chapter 9 test suite, so a broken definition closes the gate.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1194,7 +1205,7 @@ Solutions
 <section id="mastery-check" class="level2" data-number="10.8">
 <h2 data-number="10.8" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">10.8</span> ✅ Mastery check</h2>
 <ul>
-<li>Why is the semantic layer the prerequisite for a trustworthy AI assistant?</li>
+<li>Why is the semantic layer the prerequisite for a trustworthy <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> assistant?</li>
 <li>Explain “sum first, divide last” to a non-analyst.</li>
 <li>What is the difference between a certified and an exploratory metric?</li>
 </ul>
@@ -1207,6 +1218,18 @@ Solutions
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1641,7 +1664,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

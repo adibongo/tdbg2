@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -627,7 +638,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><strong>When</strong></td>
-<td>Every time data arrives, whether a file drop, an API pull or a database extract</td>
+<td>Every time data arrives, whether a file drop, an application programming interface (API) pull or a database extract</td>
 </tr>
 <tr class="even">
 <td><strong>Who</strong></td>
@@ -659,7 +670,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Create a DuckDB warehouse with schemas bronze, silver, gold and ops. Write a function that loads a CSV into bronze.<name> with every column as VARCHAR, and adds _source_file, _source_system and _loaded_at. Log each load (layer, table, row count) into ops.run_log. Load fmcg_sell_out.csv and show the lineage columns.</name></p>
+<p>Create a DuckDB warehouse with schemas bronze, silver, gold and ops. Write a function that loads a comma-separated values (CSV) into bronze.<name> with every column as VARCHAR, and adds _source_file, _source_system and _loaded_at. Log each load (layer, table, row count) into ops.run_log. Load fmcg_sell_out.csv and show the lineage columns.</name></p>
 </blockquote>
 </div>
 </div>
@@ -714,26 +725,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td style="text-align: left;">2025-02-17</td>
 <td style="text-align: left;">DP07</td>
-<td style="text-align: left;">SKU-1017</td>
+<td style="text-align: left;">Stock-keeping unit (SKU)-1017</td>
 <td style="text-align: left;">345.0</td>
 <td style="text-align: left;">fmcg_sell_out.csv</td>
-<td style="text-align: left;">2026-10-15 11:33:21</td>
+<td style="text-align: left;">2026-10-15 12:23:47</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2024-04-15</td>
 <td style="text-align: left;">DP11</td>
-<td style="text-align: left;">SKU-1015</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a>-1015</td>
 <td style="text-align: left;">128.0</td>
 <td style="text-align: left;">fmcg_sell_out.csv</td>
-<td style="text-align: left;">2026-10-15 11:33:21</td>
+<td style="text-align: left;">2026-10-15 12:23:47</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">2025-01-20</td>
 <td style="text-align: left;">DP11</td>
-<td style="text-align: left;">SKU-1017</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a>-1017</td>
 <td style="text-align: left;">57.0</td>
 <td style="text-align: left;">fmcg_sell_out.csv</td>
-<td style="text-align: left;">2026-10-15 11:33:21</td>
+<td style="text-align: left;">2026-10-15 12:23:47</td>
 </tr>
 </tbody>
 </table>
@@ -780,7 +791,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="incremental-idempotent-loading" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="incremental-idempotent-loading"><span class="header-section-number">6.3</span> Incremental, idempotent loading</h2>
-<p>Real sources arrive in instalments: a file every week, an extract every night. Reloading everything every time is wasteful, and appending blindly creates duplicates. The pattern is a <strong>load manifest</strong>: remember the fingerprint (MD5 hash) of every file you have loaded, and skip the ones you’ve seen.</p>
+<p>Real sources arrive in instalments: a file every week, an extract every night. Reloading everything every time is wasteful, and appending blindly creates duplicates. The pattern is a <strong>load manifest</strong>: remember the fingerprint (Message-Digest Algorithm 5 (MD5) hash) of every file you have loaded, and skip the ones you’ve seen.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -792,7 +803,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Write ingest_increment(con, path, table) that (1) computes the file’s MD5, (2) skips it if ops.load_manifest already has that hash, (3) otherwise creates the bronze table on first load or appends with INSERT … BY NAME so new or re-ordered columns don’t break it, and (4) records the hash, file, rows and time in the manifest. Demonstrate with two deliveries of sell-out data, re-running the first to prove idempotency, and make the second delivery contain an extra column.</p>
+<p>Write ingest_increment(con, path, table) that (1) computes the file’s <a class="abbr-ref" href="e-abbreviations.html#abbr-md5"><abbr title="Message-Digest Algorithm 5 (a file fingerprint)">MD5</abbr></a>, (2) skips it if ops.load_manifest already has that hash, (3) otherwise creates the bronze table on first load or appends with INSERT … BY NAME so new or re-ordered columns don’t break it, and (4) records the hash, file, rows and time in the manifest. Demonstrate with two deliveries of sell-out data, re-running the first to prove idempotency, and make the second delivery contain an extra column.</p>
 </blockquote>
 </div>
 </div>
@@ -1003,7 +1014,7 @@ Three load strategies
 </div>
 <section id="official-statistics-world-bank-imf-unctad-un-comtrade" class="level3" data-number="6.4.1">
 <h3 data-number="6.4.1" class="anchored" data-anchor-id="official-statistics-world-bank-imf-unctad-un-comtrade"><span class="header-section-number">6.4.1</span> Official statistics: World Bank, IMF, UNCTAD, UN Comtrade</h3>
-<p>Almost every business case in Nigeria needs a macro frame: inflation for real growth, the exchange rate for import costs, peer-country growth for market sizing, trade partners for supply risk. The official providers publish this through free APIs. Treat them exactly like internal sources: pull, cache, land with lineage, test. The Lab’s <code>R/open_data.R</code> gives every provider the same tidy shape (<code>source, dataset, indicator, iso3, country, year, value</code>).</p>
+<p>Almost every business case in Nigeria needs a macro frame: inflation for real growth, the exchange rate for import costs, peer-country growth for market sizing, trade partners for supply risk. The official providers publish this through free <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">APIs</abbr></a>. Treat them exactly like internal sources: pull, cache, land with lineage, test. The Lab’s <code>R/open_data.R</code> gives every provider the same tidy shape (<code>source, dataset, indicator, iso3, country, year, value</code>).</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1015,7 +1026,7 @@ Three load strategies
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Using R/open_data.R, pull World Bank WDI indicators (GDP growth, inflation, GDP per capita, unemployment, remittances as % of GDP) and IMF World Economic Outlook series (real GDP growth, inflation, government debt) for Nigeria, Ghana, Kenya, South Africa, Egypt and Côte d’Ivoire, plus Nigeria’s 2023 exports by partner from UN Comtrade. Land them in bronze with their source as lineage. Then show where the World Bank and the IMF disagree about Nigeria’s inflation, and which IMF years are projections.</p>
+<p>Using R/open_data.R, pull World Bank World Development Indicators (WDI) indicators (gross domestic product (GDP) growth, inflation, <a class="abbr-ref" href="e-abbreviations.html#abbr-gdp"><abbr title="gross domestic product">GDP</abbr></a> per capita, unemployment, remittances as % of <a class="abbr-ref" href="e-abbreviations.html#abbr-gdp"><abbr title="gross domestic product">GDP</abbr></a>) and International Monetary Fund (IMF) World Economic Outlook series (real <a class="abbr-ref" href="e-abbreviations.html#abbr-gdp"><abbr title="gross domestic product">GDP</abbr></a> growth, inflation, government debt) for Nigeria, Ghana, Kenya, South Africa, Egypt and Côte d’Ivoire, plus Nigeria’s 2023 exports by partner from United Nations (UN) Comtrade. Land them in bronze with their source as lineage. Then show where the World Bank and the <a class="abbr-ref" href="e-abbreviations.html#abbr-imf"><abbr title="International Monetary Fund">IMF</abbr></a> disagree about Nigeria’s inflation, and which <a class="abbr-ref" href="e-abbreviations.html#abbr-imf"><abbr title="International Monetary Fund">IMF</abbr></a> years are projections.</p>
 </blockquote>
 </div>
 </div>
@@ -1040,22 +1051,22 @@ Three load strategies
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">IMF</td>
-<td style="text-align: left;">WEO</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-imf"><abbr title="International Monetary Fund">IMF</abbr></a></td>
+<td style="text-align: left;">World Economic Outlook (WEO)</td>
 <td style="text-align: right;">816</td>
 <td style="text-align: right;">1980</td>
 <td style="text-align: right;">2031</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">UN Comtrade</td>
-<td style="text-align: left;">HS annual</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-un"><abbr title="United Nations">UN</abbr></a> Comtrade</td>
+<td style="text-align: left;">Harmonized System (HS) annual</td>
 <td style="text-align: right;">125</td>
 <td style="text-align: right;">2023</td>
 <td style="text-align: right;">2023</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">World Bank</td>
-<td style="text-align: left;">WDI</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-wdi"><abbr title="World Development Indicators">WDI</abbr></a></td>
 <td style="text-align: right;">779</td>
 <td style="text-align: right;">2000</td>
 <td style="text-align: right;">2025</td>
@@ -1176,9 +1187,9 @@ Three load strategies
 </div>
 <p>Three lessons hide in that table:</p>
 <ol type="1">
-<li><strong>Two official sources rarely agree to the decimal.</strong> They differ in base years, revision dates and methods (Nigeria rebased its CPI in 2025). Store both, and always label the source.</li>
-<li><strong>The IMF publishes projections alongside actuals.</strong> A chart that splices them together without marking the boundary is misleading. Keep a <code>is_projection</code> flag in silver, and make the semantic layer refuse to sum or average across it.</li>
-<li><strong>APIs change and go down.</strong> <code>with_cache()</code> falls back to the last good pull, and the freshness test (Chapter 9) tells you when that cache is getting old.</li>
+<li><strong>Two official sources rarely agree to the decimal.</strong> They differ in base years, revision dates and methods (Nigeria rebased its consumer price index (CPI) in 2025). Store both, and always label the source.</li>
+<li><strong>The <a class="abbr-ref" href="e-abbreviations.html#abbr-imf"><abbr title="International Monetary Fund">IMF</abbr></a> publishes projections alongside actuals.</strong> A chart that splices them together without marking the boundary is misleading. Keep a <code>is_projection</code> flag in silver, and make the semantic layer refuse to sum or average across it.</li>
+<li><strong><a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">APIs</abbr></a> change and go down.</strong> <code>with_cache()</code> falls back to the last good pull, and the freshness test (Chapter 9) tells you when that cache is getting old.</li>
 </ol>
 <table class="caption-top table">
 <colgroup>
@@ -1195,17 +1206,17 @@ Three load strategies
 </thead>
 <tbody>
 <tr class="odd">
-<td>World Bank WDI</td>
+<td>World Bank <a class="abbr-ref" href="e-abbreviations.html#abbr-wdi"><abbr title="World Development Indicators">WDI</abbr></a></td>
 <td><code>api.worldbank.org/v2</code> (or the <code>WDI</code> / <code>wbstats</code> packages)</td>
 <td>No</td>
 </tr>
 <tr class="even">
-<td>IMF WEO, IFS, DOTS</td>
-<td>DataMapper API for WEO; SDMX for IFS and DOTS (<code>imfr</code> package)</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-imf"><abbr title="International Monetary Fund">IMF</abbr></a> <a class="abbr-ref" href="e-abbreviations.html#abbr-weo"><abbr title="World Economic Outlook">WEO</abbr></a>, International Financial Statistics (IFS), Direction of Trade Statistics (DOTS)</td>
+<td>DataMapper <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> for <a class="abbr-ref" href="e-abbreviations.html#abbr-weo"><abbr title="World Economic Outlook">WEO</abbr></a>; Statistical Data and Metadata eXchange (SDMX) for <a class="abbr-ref" href="e-abbreviations.html#abbr-ifs"><abbr title="International Financial Statistics">IFS</abbr></a> and <a class="abbr-ref" href="e-abbreviations.html#abbr-dots"><abbr title="Direction of Trade Statistics">DOTS</abbr></a> (<code>imfr</code> package)</td>
 <td>No</td>
 </tr>
 <tr class="odd">
-<td>UN Comtrade</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-un"><abbr title="United Nations">UN</abbr></a> Comtrade</td>
 <td><code>comtradeapi.un.org</code> (preview without a key; free key for bulk)</td>
 <td>Optional</td>
 </tr>
@@ -1216,7 +1227,7 @@ Three load strategies
 </tr>
 <tr class="odd">
 <td>More providers</td>
-<td>See Appendix D</td>
+<td>See <a href="d-open-data.html" class="quarto-xref"><span>Appendix D</span></a></td>
 <td>Varies</td>
 </tr>
 </tbody>
@@ -1281,7 +1292,7 @@ Three load strategies
 <td style="text-align: left;">bronze</td>
 <td style="text-align: left;">official_statistics</td>
 <td style="text-align: right;">1720</td>
-<td style="text-align: left;">World Bank WDI · IMF WEO · UN Comtrade</td>
+<td style="text-align: left;">World Bank <a class="abbr-ref" href="e-abbreviations.html#abbr-wdi"><abbr title="World Development Indicators">WDI</abbr></a> · <a class="abbr-ref" href="e-abbreviations.html#abbr-imf"><abbr title="International Monetary Fund">IMF</abbr></a> <a class="abbr-ref" href="e-abbreviations.html#abbr-weo"><abbr title="World Economic Outlook">WEO</abbr></a> · <a class="abbr-ref" href="e-abbreviations.html#abbr-un"><abbr title="United Nations">UN</abbr></a> Comtrade</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">bronze</td>
@@ -1399,12 +1410,24 @@ run to 2026-03 : loaded 2880 rows after watermark 2026-01 </code></pre>
 </section>
 <section id="in-the-organisation" class="level2" data-number="6.7">
 <h2 data-number="6.7" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">6.7</span> 🏢 In the organisation</h2>
-<p>Agree a <strong>delivery contract</strong> with every source owner, covering file name pattern, schedule, format, columns and who to call. Store bronze for at least as long as your audit and retention policy requires. The NDPA requires that personal data is not kept longer than necessary, so bronze tables holding personal data need a documented retention period and a purge job (Chapter 15).</p>
+<p>Agree a <strong>delivery contract</strong> with every source owner, covering file name pattern, schedule, format, columns and who to call. Store bronze for at least as long as your audit and retention policy requires. The Nigeria Data Protection Act (NDPA) requires that personal data is not kept longer than necessary, so bronze tables holding personal data need a documented retention period and a purge job (Chapter 15).</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1839,7 +1862,7 @@ run to 2026-03 : loaded 2880 rows after watermark 2026-01 </code></pre>
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

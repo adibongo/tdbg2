@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -111,6 +111,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -564,6 +569,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -638,7 +649,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><strong>Who</strong></td>
-<td>The head of data or analytics, with an executive sponsor, IT, the DPO and business owners</td>
+<td>The head of data or analytics, with an executive sponsor, information technology (IT), the data protection officer (DPO) and business owners</td>
 </tr>
 </tbody>
 </table>
@@ -671,7 +682,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><strong>Test / staging</strong></td>
 <td>Prove a change before release</td>
 <td>Production-like, masked</td>
-<td>CI pipeline only</td>
+<td>Continuous integration (CI) pipeline only</td>
 </tr>
 <tr class="odd">
 <td><strong>Production</strong></td>
@@ -753,15 +764,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><strong>Posit Connect (self-hosted)</strong></td>
-<td>Dashboards, APIs, schedules, SSO</td>
+<td>Dashboards, application programming interfaces (APIs), schedules, single sign-on (SSO)</td>
 <td>enterprise licence</td>
-<td>SSO, groups, row-level access, audit</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-sso"><abbr title="single sign-on">SSO</abbr></a>, groups, row-level access, audit</td>
 <td>Licence and admin effort</td>
 </tr>
 <tr class="even">
-<td><strong>A Linux VM</strong> (Azure, AWS, local data centre)</td>
+<td><strong>A Linux virtual machine (VM)</strong> (Azure, Amazon Web Services (AWS), local data centre)</td>
 <td>Pipeline + Shiny Server + PostgreSQL</td>
-<td>a VM plus admin time</td>
+<td>a <a class="abbr-ref" href="e-abbreviations.html#abbr-vm"><abbr title="virtual machine">VM</abbr></a> plus admin time</td>
 <td>Full control; data stays in-country if needed</td>
 <td>You patch and secure it</td>
 </tr>
@@ -776,13 +787,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><strong>MotherDuck</strong></td>
 <td>DuckDB in the cloud</td>
 <td>usage-based</td>
-<td>Same SQL; share one warehouse</td>
+<td>Same Structured Query Language (SQL); share one warehouse</td>
 <td>Newer; review data residency</td>
 </tr>
 </tbody>
 </table>
-<p>*Check current pricing. It changes often, and Naira-denominated budgets need FX-risk allowances.</p>
-<p><strong>Data residency:</strong> some regulators expect certain data to stay in Nigeria, or require approval to move it. Check with the DPO and your sector regulator before choosing a cloud region.</p>
+<p>*Check current pricing. It changes often, and Naira-denominated budgets need foreign exchange (FX)-risk allowances.</p>
+<p><strong>Data residency:</strong> some regulators expect certain data to stay in Nigeria, or require approval to move it. Check with the <a class="abbr-ref" href="e-abbreviations.html#abbr-dpo"><abbr title="data protection officer">DPO</abbr></a> and your sector regulator before choosing a cloud region.</p>
 </section>
 <section id="people-the-operating-model" class="level2" data-number="16.4">
 <h2 data-number="16.4" class="anchored" data-anchor-id="people-the-operating-model"><span class="header-section-number">16.4</span> People: the operating model</h2>
@@ -836,13 +847,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th>Business owner</th>
 <th>Steward</th>
 <th>Data team</th>
-<th>IT</th>
-<th>DPO</th>
+<th><a class="abbr-ref" href="e-abbreviations.html#abbr-it"><abbr title="information technology">IT</abbr></a></th>
+<th><a class="abbr-ref" href="e-abbreviations.html#abbr-dpo"><abbr title="data protection officer">DPO</abbr></a></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Define a KPI</td>
+<td>Define a key performance indicator (KPI)</td>
 <td>I</td>
 <td><strong>A</strong></td>
 <td>R</td>
@@ -887,7 +898,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>C</td>
 </tr>
 <tr class="even">
-<td>Personal-data processing and DPIA</td>
+<td>Personal-data processing and data protection impact assessment (DPIA)</td>
 <td></td>
 <td>C</td>
 <td>C</td>
@@ -945,8 +956,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td><strong>Days 31–60: Harden</strong></td>
 <td>Make it a service</td>
-<td>Gate + alerts; runbook; roles and masking; DPIA if personal data; staging environment; CI</td>
-<td>One month at the SLA; the first failure caught by the gate, not by a director</td>
+<td>Gate + alerts; runbook; roles and masking; <a class="abbr-ref" href="e-abbreviations.html#abbr-dpia"><abbr title="data protection impact assessment">DPIA</abbr></a> if personal data; staging environment; <a class="abbr-ref" href="e-abbreviations.html#abbr-ci"><abbr title="continuous integration">CI</abbr></a></td>
+<td>One month at the service-level agreement (SLA); the first failure caught by the gate, not by a director</td>
 </tr>
 <tr class="odd">
 <td><strong>Days 61–90: Expand</strong></td>
@@ -960,7 +971,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="change-management" class="level2" data-number="16.6">
 <h2 data-number="16.6" class="anchored" data-anchor-id="change-management"><span class="header-section-number">16.6</span> Change management</h2>
 <ul>
-<li><strong>Pick the first use case for pain, not glamour.</strong> The monthly report that eats three analysts’ week beats an AI demo.</li>
+<li><strong>Pick the first use case for pain, not glamour.</strong> The monthly report that eats three analysts’ week beats an artificial intelligence (AI) demo.</li>
 <li><strong>Find a champion in each business unit,</strong> someone respected, who presents <em>their</em> numbers from the platform.</li>
 <li><strong>Retire the old way on purpose.</strong> Announce the date the emailed spreadsheet stops.</li>
 <li><strong>Teach the reading skill,</strong> not just the tool: what a test result means, what “certified” means, how to read a definition.</li>
@@ -976,13 +987,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </colgroup>
 <thead>
 <tr class="header">
-<th>Platform KPI</th>
+<th>Platform <a class="abbr-ref" href="e-abbreviations.html#abbr-kpi"><abbr title="key performance indicator">KPI</abbr></a></th>
 <th>Target (year 1)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Refreshes meeting SLA</td>
+<td>Refreshes meeting <a class="abbr-ref" href="e-abbreviations.html#abbr-sla"><abbr title="service-level agreement">SLA</abbr></a></td>
 <td>≥ 95% of days</td>
 </tr>
 <tr class="even">
@@ -1035,7 +1046,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>No owner</td>
-<td>“IT’s numbers are wrong”</td>
+<td>“<a class="abbr-ref" href="e-abbreviations.html#abbr-it"><abbr title="information technology">IT</abbr></a>’s numbers are wrong”</td>
 <td>Every gold table and metric has a business owner</td>
 </tr>
 <tr class="odd">
@@ -1054,7 +1065,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Controls as code: tests, roles, purge jobs</td>
 </tr>
 <tr class="even">
-<td>AI before data</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> before data</td>
 <td>A confident chatbot with wrong answers</td>
 <td>Gate + semantic layer + golden-question tests first</td>
 </tr>
@@ -1063,7 +1074,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="exercises" class="level2" data-number="16.9">
 <h2 data-number="16.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">16.9</span> 🏋️ Exercises</h2>
-<p><strong>E16.1 🟢</strong> Fill in the RACI for one KPI in your organisation, using real names or roles.</p>
+<p><strong>E16.1 🟢</strong> Fill in the responsible, accountable, consulted, informed (RACI) for one <a class="abbr-ref" href="e-abbreviations.html#abbr-kpi"><abbr title="key performance indicator">KPI</abbr></a> in your organisation, using real names or roles.</p>
 <p><strong>E16.2 🟡</strong> Write a one-page 30-60-90 plan for your organisation’s most painful recurring report, using the template above.</p>
 <p><strong>E16.3 🔴</strong> Prepare a 10-slide pitch to your executive committee for the platform: the problem (with a cost), the architecture (one slide), the 90-day plan, the risks and the ask. Use the sector playbook closest to your industry for examples.</p>
 </section>
@@ -1077,12 +1088,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="in-the-organisation" class="level2" data-number="16.11">
 <h2 data-number="16.11" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">16.11</span> 🏢 In the organisation</h2>
-<p>The architecture is easy to copy; the operating model is not. Organisations that succeed treat data as a <strong>product</strong>, with owners, users, a service level and a roadmap, rather than as a by-product of IT systems.</p>
+<p>The architecture is easy to copy; the operating model is not. Organisations that succeed treat data as a <strong>product</strong>, with owners, users, a service level and a roadmap, rather than as a by-product of <a class="abbr-ref" href="e-abbreviations.html#abbr-it"><abbr title="information technology">IT</abbr></a> systems.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1517,7 +1540,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

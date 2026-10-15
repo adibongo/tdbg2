@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -619,7 +630,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><strong>What</strong></td>
-<td>Publishing gold (only after the gate) to the targets each audience uses: portable marts, shared databases, Power Platform, APIs and reports</td>
+<td>Publishing gold (only after the gate) to the targets each audience uses: portable marts, shared databases, Power Platform, application programming interfaces (APIs) and reports</td>
 </tr>
 <tr class="even">
 <td><strong>Why</strong></td>
@@ -631,7 +642,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><strong>Who</strong></td>
-<td>Analytics engineers publish. IT manages the shared servers. Owners decide who may see what</td>
+<td>Analytics engineers publish. Information technology (IT) manages the shared servers. Owners decide who may see what</td>
 </tr>
 </tbody>
 </table>
@@ -660,7 +671,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><strong>SQLite mart</strong></td>
-<td>Excel (ODBC), Power BI, Python, any app</td>
+<td>Excel (Open Database Connectivity (ODBC)), Power BI, Python, any app</td>
 <td>none (read-only copy)</td>
 <td>One file, offline, universal</td>
 <td>Single writer; not for many concurrent users</td>
@@ -678,16 +689,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><strong>PostgreSQL</strong></td>
 <td>Many users and apps at once</td>
 <td>yes</td>
-<td>Real permissions, row-level security, APIs</td>
-<td>Needs a server and a DBA</td>
-<td>Multi-user apps, write-back forms, APIs</td>
+<td>Real permissions, row-level security, <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">APIs</abbr></a></td>
+<td>Needs a server and a database administrator (DBA)</td>
+<td>Multi-user apps, write-back forms, <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">APIs</abbr></a></td>
 </tr>
 <tr class="even">
 <td><strong>Microsoft Dataverse</strong></td>
 <td>Power Apps, Power Automate, Dynamics, Power BI</td>
 <td>yes</td>
 <td>Security roles, Microsoft-native</td>
-<td>API limits; licence costs per user</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> limits; licence costs per user</td>
 <td>Microsoft-first organisations, field apps</td>
 </tr>
 <tr class="odd">
@@ -699,15 +710,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Executive and operational dashboards</td>
 </tr>
 <tr class="even">
-<td><strong>REST API</strong></td>
+<td><strong>Representational State Transfer (REST) <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a></strong></td>
 <td>Other systems</td>
 <td>—</td>
 <td>Integration</td>
 <td>Engineering effort</td>
-<td>Feeding the CRM, mobile apps, partners</td>
+<td>Feeding the customer relationship management (CRM), mobile apps, partners</td>
 </tr>
 <tr class="odd">
-<td><strong>Quarto report (PDF/HTML)</strong></td>
+<td><strong>Quarto report (Portable Document Format (PDF)/HyperText Markup Language (HTML))</strong></td>
 <td>Board, regulator</td>
 <td>—</td>
 <td>Reproducible, signed-off, archived</td>
@@ -790,7 +801,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>_serving/retail_mart.sqlite: 3.2 MB</code></pre>
 </div>
 </div>
-<p><strong>Connecting Excel:</strong> install the SQLite ODBC driver, then <em>Data → Get Data → From Other Sources → From ODBC</em> and pick the DSN. Excel now <em>refreshes</em> from the mart instead of storing a pasted copy. <strong>Power BI:</strong> <em>Get Data → ODBC</em>, or connect to the DuckDB file directly with the DuckDB ODBC driver or Power Query connector.</p>
+<p><strong>Connecting Excel:</strong> install the SQLite <a class="abbr-ref" href="e-abbreviations.html#abbr-odbc"><abbr title="Open Database Connectivity">ODBC</abbr></a> driver, then <em>Data → Get Data → From Other Sources → From <a class="abbr-ref" href="e-abbreviations.html#abbr-odbc"><abbr title="Open Database Connectivity">ODBC</abbr></a></em> and pick the data source name (DSN). Excel now <em>refreshes</em> from the mart instead of storing a pasted copy. <strong>Power BI:</strong> <em>Get Data → <a class="abbr-ref" href="e-abbreviations.html#abbr-odbc"><abbr title="Open Database Connectivity">ODBC</abbr></a></em>, or connect to the DuckDB file directly with the DuckDB <a class="abbr-ref" href="e-abbreviations.html#abbr-odbc"><abbr title="Open Database Connectivity">ODBC</abbr></a> driver or Power Query connector.</p>
 </section>
 <section id="parquet-for-the-lake-and-the-data-scientists" class="level2" data-number="12.3">
 <h2 data-number="12.3" class="anchored" data-anchor-id="parquet-for-the-lake-and-the-data-scientists"><span class="header-section-number">12.3</span> Parquet: for the lake and the data scientists</h2>
@@ -868,7 +879,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="the-serving-contract" class="level2" data-number="12.7">
 <h2 data-number="12.7" class="anchored" data-anchor-id="the-serving-contract"><span class="header-section-number">12.7</span> The serving contract</h2>
-<p>Treat each serving object like an API:</p>
+<p>Treat each serving object like an <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a>:</p>
 <ul>
 <li><strong>Stable names and columns.</strong> Breaking changes get a new version (<code>v_sales_v2</code>) and a retirement date for the old one.</li>
 <li><strong>Documented freshness.</strong> “Refreshed daily by 07:00 with data to last Sunday.”</li>
@@ -879,7 +890,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exercises" class="level2" data-number="12.8">
 <h2 data-number="12.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">12.8</span> 🏋️ Exercises</h2>
 <p><strong>E12.1 🟢</strong> Open <code>_serving/retail_mart.sqlite</code> with any SQLite browser (or R) and list its tables and views.</p>
-<p><strong>E12.2 🟡</strong> Publish <code>gold.mart_depot_month</code> as a CSV <em>and</em> as Parquet. Compare sizes. Which would you send to (a) a partner’s data scientist, and (b) a regional manager?</p>
+<p><strong>E12.2 🟡</strong> Publish <code>gold.mart_depot_month</code> as a comma-separated values (CSV) <em>and</em> as Parquet. Compare sizes. Which would you send to (a) a partner’s data scientist, and (b) a regional manager?</p>
 <p><strong>E12.3 🔴</strong> Write <code>publish_all(con, results)</code> that publishes to every configured target (SQLite, Parquet, plus PostgreSQL and Dataverse only if their credentials exist) and writes one row per target to <code>ops.run_log</code>. Make it refuse to run if the gate is closed.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -920,7 +931,7 @@ Solutions
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="fu">publish_all</span>(con, results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>E12.2.</strong> Send the partner’s data scientist Parquet (typed, compact, fast). Send the regional manager the SQLite mart behind an Excel connection, or the dashboard. Never an emailed CSV, because it is a copy that goes stale.</p>
+<p><strong>E12.2.</strong> Send the partner’s data scientist Parquet (typed, compact, fast). Send the regional manager the SQLite mart behind an Excel connection, or the dashboard. Never an emailed <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a>, because it is a copy that goes stale.</p>
 </div>
 </div>
 </div>
@@ -941,6 +952,18 @@ Solutions
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1375,7 +1398,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>
