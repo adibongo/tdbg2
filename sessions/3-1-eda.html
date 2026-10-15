@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>What is odd here? – Turning Data into Business Growth</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../sessions/3-2-charts-that-survive.html" rel="next">
+<link href="../day3.html" rel="prev">
+<link href="../assets/logo/bongo_ai_hex_mark.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9908bc53731faaa15d8cc2b050a77c2b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-952bed39d3075112a2180a9e1d19fd40.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": true,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/extra.css">
+<meta property="og:title" content="What is odd here? – Turning Data into Business Growth">
+<meta property="og:description" content="Exploratory data analysis, properly — Session 3.1, 60 minutes">
+<meta property="og:image" content="https://bongoadi.github.io/turning-data-into-business-growth/assets/logo/bongo_ai_hex.svg">
+<meta property="og:site_name" content="Turning Data into Business Growth">
+<meta property="og:image:alt" content="bongo.ai">
+<meta name="twitter:title" content="What is odd here? – Turning Data into Business Growth">
+<meta name="twitter:description" content="Exploratory data analysis, properly — Session 3.1, 60 minutes">
+<meta name="twitter:image" content="https://bongoadi.github.io/turning-data-into-business-growth/assets/logo/bongo_ai_hex.svg">
+<meta name="twitter:image:alt" content="bongo.ai">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/logo/bongo_ai_hex_mark.svg" alt="bongo.ai" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">TDBG</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-the-programme" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">The programme</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-the-programme">    
+        <li>
+    <a class="dropdown-item" href="../index.html">
+ <span class="dropdown-text">The week at a glance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how-this-works.html">
+ <span class="dropdown-text">How this programme works</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../setup.html">
+ <span class="dropdown-text">Before Monday — setup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../datasets.html">
+ <span class="dropdown-text">The data room</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../capstone.html">
+ <span class="dropdown-text">Capstone brief and rubric</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../after.html">
+ <span class="dropdown-text">After Friday — 30 / 60 / 90</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../faculty.html">
+ <span class="dropdown-text">Faculty</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-the-five-days" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">The five days</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-the-five-days">    
+        <li>
+    <a class="dropdown-item" href="../day1.html">
+ <span class="dropdown-text">Day 1 · Frame — strategy, value and what AI changed</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../day2.html">
+ <span class="dropdown-text">Day 2 · Get — data you can trust</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../day3.html">
+ <span class="dropdown-text">Day 3 · See &amp; Model — seeing, forecasting, segmenting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../day4.html">
+ <span class="dropdown-text">Day 4 · Publish — text and the executive narrative</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../day5.html">
+ <span class="dropdown-text">Day 5 · Guard — proof, governance, capstone</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-practice" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Practice</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-practice">    
+        <li>
+    <a class="dropdown-item" href="../gallery.html">
+ <span class="dropdown-text">The brief gallery</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../prompts.html">
+ <span class="dropdown-text">Prompt patterns</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../glossary.html">
+ <span class="dropdown-text">Glossary</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../platform/index.html"> 
+<span class="menu-text">Platform</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../slides.html" aria-current="page"> 
+<span class="menu-text">Slides</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../guide.html"> 
+<span class="menu-text">Guide</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bongoadi/turning-data-into-business-growth"> <i class="bi bi-github" role="img" aria-label="Source on GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../day3.html">Day 3 — Seeing, forecasting, segmenting</a></li><li class="breadcrumb-item"><a href="../sessions/3-1-eda.html">What is odd here?</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">The programme</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Turning Data into Business Growth</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../how-this-works.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How this programme works</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Before Monday — setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datasets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The data room</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capstone brief and rubric</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../after.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">After Friday — 30 / 60 / 90</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../faculty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Faculty</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../day1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 1 — Strategy, value and what AI actually changed</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/1-1-competing-on-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Competing on analytics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/1-2-kpi-tree.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The KPI tree</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/1-3-sizing-the-prize.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sizing the prize</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/1-4-what-ai-changed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What AI actually changed</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/1-5-where-data-lives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Where the data lives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/1-6-lab-charter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 1 · The use-case charter</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../day2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 2 — Getting data you can trust</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/2-1-sql-lingua-franca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SQL as the lingua franca</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/2-2-laptop-warehouse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The laptop warehouse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/2-3-excel-bridge.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Excel as the bridge</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/2-4-joins-that-lie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Joins that lie</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/2-5-data-quality-contract.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data quality as a contract</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/2-6-lab-pipeline.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 2 · The pipeline that reruns</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../day3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 3 — Seeing, forecasting, segmenting</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/3-1-eda.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">What is odd here?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/3-2-charts-that-survive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Charts that survive a board room</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/3-3-forecasting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forecasting with intervals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/3-4-segmentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Segmentation you can act on</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/3-5-propensity-and-leakage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propensity and the leak</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/3-6-lab-forecast-market.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 3 · The forecast market</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../day4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 4 — Unstructured data and the executive narrative</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/4-1-text-as-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Text as data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/4-2-dashboards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboards that get used</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/4-3-reproducible-reporting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">One source, five outputs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/4-4-typesetting-engine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The engine under the PDF</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/4-5-executive-narrative.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The executive narrative</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/4-6-lab-one-number-brief.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 4 · The one-number brief</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../day5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 5 — Proof, governance and capstone</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/5-1-correlation-contribution-cause.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Correlation, contribution, cause</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/5-2-experiments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Experiments that settle arguments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/5-3-quasi-experiments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">When you cannot randomise</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/5-4-governance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Governance you can actually run</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/5-5-operating-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The operating model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/5-6-capstone-defence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capstone · Defence</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Practice and reference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gallery.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The brief gallery</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prompts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prompt patterns</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../readings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Participant guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-question-is-not-what-is-the-average" id="toc-the-question-is-not-what-is-the-average" class="nav-link active" data-scroll-target="#the-question-is-not-what-is-the-average">The question is not “what is the average?”</a></li>
+  <li><a href="#five-things-in-this-order" id="toc-five-things-in-this-order" class="nav-link" data-scroll-target="#five-things-in-this-order">Five things, in this order</a>
+  <ul class="collapse">
+  <li><a href="#the-shape-of-the-file" id="toc-the-shape-of-the-file" class="nav-link" data-scroll-target="#the-shape-of-the-file">1 · The shape of the file</a></li>
+  <li><a href="#the-calendar" id="toc-the-calendar" class="nav-link" data-scroll-target="#the-calendar">2 · The calendar</a></li>
+  <li><a href="#the-distribution-not-the-average" id="toc-the-distribution-not-the-average" class="nav-link" data-scroll-target="#the-distribution-not-the-average">3 · The distribution, not the average</a></li>
+  <li><a href="#missingness-as-a-pattern" id="toc-missingness-as-a-pattern" class="nav-link" data-scroll-target="#missingness-as-a-pattern">4 · Missingness, as a pattern</a></li>
+  <li><a href="#time-plotted" id="toc-time-plotted" class="nav-link" data-scroll-target="#time-plotted">5 · Time, plotted</a></li>
+  </ul></li>
+  <li><a href="#the-four-questions-applied-to-a-new-dataset" id="toc-the-four-questions-applied-to-a-new-dataset" class="nav-link" data-scroll-target="#the-four-questions-applied-to-a-new-dataset">The four questions applied to a new dataset</a></li>
+  <li><a href="#takeaways" id="toc-takeaways" class="nav-link" data-scroll-target="#takeaways">Takeaways</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../day3.html">Day 3 — Seeing, forecasting, segmenting</a></li><li class="breadcrumb-item"><a href="../sessions/3-1-eda.html">What is odd here?</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">What is odd here?</h1>
+<p class="subtitle lead">Exploratory data analysis, properly — Session 3.1, 60 minutes</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<script>document.body.setAttribute("data-tdbg-session","3.1");</script>
+<div class="hex-pair">
+  <img src="../assets/logo/bongo_ai_hex.svg" alt="bongo.ai">
+  <img src="../assets/logo/move_see.svg" alt="See it">
+</div>
+<div class="tdbg-box tdbg-aim">
+<p><span class="lbl">Aim</span></p>
+<p>By the end of this session, looking at data before summarising it will have started to feel like a reflex rather than a discipline. You will have a short, ordered list of the five things worth looking at first, in the order that finds problems soonest. And you will have found at least three things in the course data that no summary table would ever have shown you — which is the part that tends to change how people work afterwards.</p>
+</div>
+<section id="the-question-is-not-what-is-the-average" class="level2">
+<h2 class="anchored" data-anchor-id="the-question-is-not-what-is-the-average">The question is not “what is the average?”</h2>
+<p>There are two quite different things people mean when they say they are analysing data, and keeping them apart is most of this session.</p>
+<p>The first is checking an idea you already have. You suspect the Lagos depots are carrying the network, so you go and see whether the numbers agree. That is <strong>confirmatory analysis</strong>, and it asks <em>“is this true?”</em> It is valuable, it is what most reporting consists of, and it has one structural limitation: it can only ever inspect the thing you already suspected. Anything you did not think to suspect passes underneath it untouched.</p>
+<p>The second is going and looking with no particular hypothesis, on the assumption that the data will contain something you did not expect. That is <strong>exploratory data analysis</strong>, usually shortened to EDA, and its question is <strong>“what is odd here?”</strong> John Tukey, the statistician who gave the field its name and most of its tools in the 1970s, described its purpose about as well as anyone has since: it exists to force you to notice what you were not expecting.</p>
+<p>Both are necessary and they run in that order: explore first, so that you discover what the data actually contains; confirm second, so that you test the idea you have arrived at. Trouble arrives when an organisation does only the second, because a confirmatory analysis built on a file nobody has looked at is a careful answer to a question about a world that may not exist.</p>
+<p>There is a reason this has become more valuable rather than less. An assistant will produce a mean, a median, a correlation and a chart of anything you point it at, in seconds, and it will usually get the arithmetic right. What it cannot do is be surprised. Surprise requires an expectation, and an expectation requires having spent years in a business — which is something you have and it does not. As the mechanical part of analysis gets cheaper, the scarce input becomes the person who looks at a number and thinks <em>that cannot be right</em>.</p>
+</section>
+<section id="five-things-in-this-order" class="level2">
+<h2 class="anchored" data-anchor-id="five-things-in-this-order">Five things, in this order</h2>
+<p>The order matters. Each step catches a class of problem that would otherwise contaminate every step after it, so working the list in sequence saves you from discovering at step five that step one had already invalidated the exercise.</p>
+<section id="the-shape-of-the-file" class="level3">
+<h3 class="anchored" data-anchor-id="the-shape-of-the-file">1 · The shape of the file</h3>
+<p>Before any statistic at all, establish the basic facts of the object in front of you. How many rows, covering what period, at what grain — that is, what one row represents — and with what missing. In DuckDB there is a single command that does most of this for you.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>SUMMARIZE <span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> <span class="st">'data/fmcg_sell_out.csv'</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>SUMMARIZE</code> returns one row per column, with its type, its minimum and maximum, its count of nulls and its count of distinct values. It repays the second it takes, provided you know what you are reading it for. Four things are worth looking for specifically.</p>
+<p><strong>Null counts that differ wildly between columns.</strong> If one column is largely blank and its neighbours are complete, something happened to that column in particular, and finding out what is usually more informative than filling the gaps.</p>
+<p><strong>A distinct count of 1.</strong> A column with exactly one value in it is a constant, and a constant column in a transactional file is nearly always the residue of something upstream — a flag that stopped being populated, a filter applied at extraction, a default never overwritten.</p>
+<p><strong>A distinct count equal to the row count on something that should repeat.</strong> If <code>depot_code</code> has as many distinct values as there are rows, it is not a depot code any more: it has been concatenated with something, or the grain is not what you were told.</p>
+<p><strong>Minimum or maximum values that cannot be true.</strong> Negative quantities, dates in 1900, percentages above one hundred. These are the cheapest defects to find, and none of the four requires any knowledge of the business — they are available to you in the first minute with a file you have never seen before.</p>
+</section>
+<section id="the-calendar" class="level3">
+<h3 class="anchored" data-anchor-id="the-calendar">2 · The calendar</h3>
+<p>Almost every disaster on this list turns out, on inspection, to be a calendar problem. Time is the dimension people are least careful with, partly because everybody feels they already understand it.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">EXTRACT</span>(<span class="dt">year</span> <span class="kw">FROM</span> week_starting) <span class="kw">AS</span> yr,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> week_starting)    <span class="kw">AS</span> weeks,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COUNT</span>(<span class="op">*</span>)                         <span class="kw">AS</span> <span class="kw">rows</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">ROUND</span>(<span class="fu">SUM</span>(revenue_ngn)<span class="op">/</span><span class="fl">1e9</span>, <span class="dv">2</span>)   <span class="kw">AS</span> revenue_bn</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="st">'data/fmcg_sell_out.csv'</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dv">1</span> <span class="kw">ORDER</span> <span class="kw">BY</span> <span class="dv">1</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The query does one thing worth noticing: alongside the revenue it counts the <em>periods</em>. That second column is the one almost nobody asks for, and it is the one that saves you.</p>
+<details class="tdbg-sol">
+<summary>
+What this shows, and why your first chart of the week is wrong
+</summary>
+<div class="body">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Weeks</th>
+<th>Revenue</th>
+<th>Revenue per week</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2024</td>
+<td><strong>53</strong></td>
+<td>₦16.44bn</td>
+<td>₦310m</td>
+</tr>
+<tr class="even">
+<td>2025</td>
+<td>52</td>
+<td>₦23.48bn</td>
+<td>₦452m</td>
+</tr>
+<tr class="odd">
+<td>2026</td>
+<td><strong>13</strong></td>
+<td>₦7.13bn</td>
+<td>₦549m</td>
+</tr>
+</tbody>
+</table>
+<p>The fourth column is not in the file; it is the third divided by the second, and it is where the interesting part lives. ₦16.44bn spread over 53 weeks is about ₦310m a week. ₦23.48bn over 52 weeks is about ₦452m a week. ₦7.13bn over 13 weeks is about ₦549m a week.</p>
+<p>Now consider what happens without that fourth column. Ask an assistant for “revenue by year” and you will get three bars, correctly computed and correctly labelled. The third bar is ₦7.13bn against ₦23.48bn, which is <strong>70% below</strong> the year before, and the deck more or less writes itself: <em>the business has collapsed</em>. Somebody will commission a recovery plan, and everyone in the room will have behaved reasonably.</p>
+<p><strong>2026 has thirteen weeks in it.</strong> The file simply stops partway through the year. Measured per week, 2026 is the strongest period in the file — not a collapse at all, but the best trading the business has done.</p>
+<p>A second calendar problem sits behind the first, and it is subtler because both years look complete. <strong>2024 has fifty-three Mondays and 2025 has fifty-two.</strong> Weekly data indexed on Monday therefore gives 2024 one extra week for free. So even the “clean” 2024-to-2025 comparison — the one that produces the +42.8% headline everybody quotes, being ₦23.48bn against ₦16.44bn — is comparing fifty-three weeks against fifty-two. Put both years on the same footing, ₦310m a week against ₦452m a week, and the growth is +45.6%. The headline was understating the business, which is the direction nobody thinks to check.</p>
+<p>Neither of these is a subtle statistical point, and neither reflects badly on anyone caught by them. They survive review precisely because everything downstream is correct: the query is right, the chart is right, the arithmetic is right. Only the comparison is wrong, and comparisons are not what a reviewer’s eye is trained on.</p>
+<p><strong>Always count the periods before you compare them.</strong> One extra column, and it costs nothing.</p>
+</div>
+</details>
+</section>
+<section id="the-distribution-not-the-average" class="level3">
+<h3 class="anchored" data-anchor-id="the-distribution-not-the-average">3 · The distribution, not the average</h3>
+<p>An average is a one-number summary of a shape you have not looked at. Sometimes the shape is such that the average describes it well. Frequently it is not, and there is no way to tell which case you are in without looking.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../assets/img/eda_distributions.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Weekly units per depot-SKU. The mean sits 17% above the median, dragged there by a long right tail."><img src="../assets/img/eda_distributions.png" class="img-fluid figure-img" alt="Four views of the same weekly revenue distribution: histogram, box plot, violin and raw points. Long right tail; the mean sits well above the median."></a></p>
+<figcaption>Weekly units per depot-SKU. The mean sits 17% above the median, dragged there by a long right tail.</figcaption>
+</figure>
+</div>
+<p>Two words are worth fixing before we go on, because the rest of the session leans on them. The <strong>mean</strong> is the total divided by the number of observations — what most people say when they say “average”. The <strong>median</strong> is the middle value: line every observation up in order and take the one in the centre, so that half are above and half below. When a distribution is symmetrical the two are near enough identical. When it is not, the gap between them is itself a finding, and in the figure above the mean sits 17% above the median.</p>
+<p>Four things a distribution tells you that a mean cannot.</p>
+<p><strong>Is it symmetric?</strong> Most business quantities are not. Revenue, order size, customer tenure, account balance and supplier lead time are all <strong>right-skewed</strong> — many ordinary cases bunched at the low end, and a thin tail of very large ones stretching away to the right. The tail pulls the mean upwards, so the mean ends up above the median and above the typical case. Quote a mean revenue per customer in a retail bank and you will overstate the customer you are actually likely to meet by a wide margin, without having made a single arithmetic error.</p>
+<p><strong>Is it bimodal?</strong> Two humps mean two populations have been mixed together and described as one — almost always two products, two channels, two periods either side of a change, or one definition that quietly became another. The mean lands in the valley between the humps, describing a case that barely occurs.</p>
+<p><strong>Where is the mass?</strong> “There is a long tail” is a description; it becomes a fact when you attach a number to it. A tail holding 40% of revenue and a tail holding 4% look similar on a chart and are entirely different businesses.</p>
+<p><strong>Are there impossible values?</strong> Negative lead times. Ages over 120. Discounts over 100%. These sit in the extremes of the distribution, which is exactly where a mean hides them and a plot exposes them.</p>
+</section>
+<section id="missingness-as-a-pattern" class="level3">
+<h3 class="anchored" data-anchor-id="missingness-as-a-pattern">4 · Missingness, as a pattern</h3>
+<p>Blank cells feel like an absence of data. They are usually the opposite: something happened, and the blank is the record of it. The useful question is therefore never “how much is missing?” but <strong>“what do the missing rows have in common?”</strong></p>
+<p>The way to answer it is to split the file into the rows where the value is present and the rows where it is not, and then compare the two groups on everything <em>else</em> you know about them.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>sales <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/fmcg_sell_out.csv"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>sales <span class="sc">|&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">is_missing =</span> <span class="fu">is.na</span>(units_sold)) <span class="sc">|&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(is_missing) <span class="sc">|&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">stockout_rate =</span> <span class="fu">mean</span>(stockout_flag),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">promo_rate    =</span> <span class="fu">mean</span>(on_promotion))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Read the output as a comparison between two rows. If values went missing for reasons unrelated to the business — a flaky export, a truncated file, a network drop — then the missing rows would look like a random sample of the file, and the stockout and promotion rates would come back roughly equal in both. They do not. Essentially every row with a missing <code>units_sold</code> is also flagged as a stockout.</p>
+<p>Once you see that, the interpretation follows on its own. “Missing” here does not mean <em>we do not know what was sold</em>; it means <em>nothing was sold, because there was nothing on the shelf</em>. The two readings lead to opposite handling. Treat those rows as unknown and drop them, as most default cleaning code does, and you delete precisely the weeks when the business could not serve its customers — the weeks you most needed to see, and whose removal makes availability look better than it was.</p>
+<p>This is the distinction between data <strong>missing at random</strong>, which is annoying but survivable because what remains is still representative, and data <strong>missing for a reason</strong>, which biases everything downstream in a direction you can usually predict once you know the reason. The words are worth having: they are what a statistician will use when you ask whether it is safe to drop the blanks.</p>
+</section>
+<section id="time-plotted" class="level3">
+<h3 class="anchored" data-anchor-id="time-plotted">5 · Time, plotted</h3>
+<p>Plot every important series against time before you model it, summarise it or quote it. Not a summary of the series — the series itself, one point per period, in order.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../assets/img/eda_break.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Weekly units by region, each indexed to its own first 26 weeks. Something happens in the North in November 2025."><img src="../assets/img/eda_break.png" class="img-fluid figure-img" alt="Weekly units by region, each indexed to its own first 26 weeks. Two gold lines step down sharply at a dashed line marked 3 November 2025 and stay down; three grey lines continue."></a></p>
+<figcaption>Weekly units by region, each indexed to its own first 26 weeks. Something happens in the North in November 2025.</figcaption>
+</figure>
+</div>
+<p>Each line in that chart is set to 100 in its own first 26 weeks, so that regions of very different sizes can be compared on how much they have <em>changed</em> rather than on how big they are. Three of them wander along in the ordinary way. Two step down together, on one specific week, and stay down.</p>
+<p>That is a <strong>level shift</strong>, or <strong>structural break</strong>: the series does not drift to a new level over a quarter, it moves in a single week and then carries on with the same shape from a different starting point. Here it begins in the week of 3 November 2025, and weekly volume in the affected regions drops <strong>29% in a single week</strong> without recovering.</p>
+<p>In the course file the cause is a distributor re-segmentation. In your own business, a shape like this is a lost customer, a depot closure, a competitor opening, a change in policy or pricing, or — very often — a systems migration that changed what got recorded rather than what happened. The last of those is worth watching for, because it produces exactly the same picture while nothing in the real world has moved at all.</p>
+<p>This belongs in the <em>exploratory</em> list rather than the modelling one because no forecasting tool will tell you about it. Fit a model across a break and it will average the two regimes and predict a level that neither the past nor the future ever occupies — confident, well-formed, and wrong in the same direction every week. <a href="../sessions/3-3-forecasting.html">Session 3.3</a> takes that up in detail. What matters here is that the break is found by eye, in twenty seconds, before any model exists.</p>
+<div class="tdbg-box tdbg-exec">
+<p><span class="lbl">The one habit from this session</span></p>
+<p><strong>Plot it before you model it. Plot it before you summarise it. Plot it before you send it.</strong></p>
+<p>Twenty seconds each time, and often less. Between them, those twenty seconds catch the partial year, the structural break, the two populations wearing one name, the impossible value and the outlier that turns out to be a data entry error rather than a customer.</p>
+<p>Those are five of the most expensive mistakes available in commercial analysis, and the thing they have in common is that no summary statistic reveals any of them. Each one is a property of the <em>shape</em> of the data, and a summary is what you get when you throw the shape away.</p>
+</div>
+</section>
+</section>
+<section id="the-four-questions-applied-to-a-new-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="the-four-questions-applied-to-a-new-dataset">The four questions applied to a new dataset</h2>
+<p>Reading about a checklist is not the same as running one, so take a file you have not opened yet — <code>supply_chain_pos.csv</code>, the purchase order history — and work the list on it: what shape is it, what cannot be true, what does the distribution look like, and how many real-world things are in it.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- shape</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>SUMMARIZE <span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> <span class="st">'data/supply_chain_pos.csv'</span>;</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- the impossible value check</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> receipts_before_orders</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="st">'data/supply_chain_pos.csv'</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="fu">CAST</span>(received_date <span class="kw">AS</span> <span class="dt">DATE</span>) <span class="op">&lt;</span> <span class="fu">CAST</span>(po_date <span class="kw">AS</span> <span class="dt">DATE</span>);</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">-- the distribution of the thing you care about</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> supplier_id,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COUNT</span>(<span class="op">*</span>)                       <span class="kw">AS</span> orders,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>       <span class="fu">ROUND</span>(<span class="fu">AVG</span>(actual_lead_days),<span class="dv">1</span>) <span class="kw">AS</span> mean_lead,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>       <span class="fu">MEDIAN</span>(actual_lead_days)       <span class="kw">AS</span> median_lead,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>       <span class="fu">MAX</span>(actual_lead_days)          <span class="kw">AS</span> worst_lead</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="st">'data/supply_chain_pos.csv'</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dv">1</span> <span class="kw">ORDER</span> <span class="kw">BY</span> mean_lead;</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co">-- the entity count</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> supplier_id) <span class="kw">AS</span> supplier_ids <span class="kw">FROM</span> <span class="st">'data/supply_chain_pos.csv'</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Notice the third query in particular. It asks for the mean and the median of the same column side by side, which costs nothing extra and turns a table of averages into a table that tells you about shape. Try to predict what you will see before you run it, then open the panel.</p>
+<details class="tdbg-sol">
+<summary>
+Three findings in four queries
+</summary>
+<div class="body">
+<ol type="1">
+<li><strong>126 receipts precede their orders</strong> (1.4% of rows). Goods appear to have arrived before they were ordered, which cannot have happened; the cause is a timezone bug in the export. Those rows carry a negative lead time, negative lead times do not exist, and so the mean lead time computed from this file is pulled below the truth by a tail that describes nothing real.</li>
+<li><strong>Mean lead time exceeds median for every supplier</strong>, sometimes substantially — the right-skew from step three, showing up in an operational measure. Most orders arrive roughly when they should and a few are catastrophically late, and the late ones drag the mean up. The planning implication is the useful part: set your safety stock to the mean and you are by construction late on every order in the upper tail, which is exactly where stockouts come from. Plan to a percentile instead — a lead time you beat the great majority of the time is a number you can promise against.</li>
+<li><strong>Nine supplier IDs.</strong> The business has eight suppliers; the ninth identifier is the rename from <a href="../sessions/2-4-joins-that-lie.html">2.4</a> still sitting in the file. No summary statistic would have told you, because a count of distinct identifiers only means something to somebody who knows how many suppliers there are supposed to be.</li>
+</ol>
+<p>Four queries. Three findings. About ninety seconds, and none of it required a model.</p>
+</div>
+</details>
+<div class="tdbg-box tdbg-lab">
+<p><span class="lbl">Core lab · 30 minutes</span></p>
+<ul class="tdbg-check" data-key="3.1core">
+<li>
+Work the five-step list on <code>bank_customers.csv</code>. Shape, calendar (there isn’t one — note that), distributions, missingness, entity counts.
+</li>
+<li>
+Find the variable that is bimodal. Explain the two populations.
+</li>
+<li>
+Find the two columns that measure nearly the same thing and disagree.
+</li>
+<li>
+Plot <code>avg_balance_ngn</code>. Then plot its logarithm. Note which one you can actually read, and why that is a property of the data rather than of the chart.
+</li>
+<li>
+Now do all five steps on your own capstone data, or on its shape if you cannot bring it.
+</li>
+<li>
+Failure logbook: what did the assistant summarise without looking?
+</li>
+</ul>
+<p>The second item is the one people abandon first, so it is worth saying that the difficulty is the point: two humps are easy to see and hard to explain, and naming the two populations correctly requires thinking about how the business works rather than about the column. Take your guess to your table and argue about it.</p>
+</div>
+<div class="tdbg-box tdbg-lab">
+<p><span class="lbl">Stretch</span></p>
+<p>Write a reusable <strong>EDA report</strong> — one script that takes any CSV and produces: row count, grain candidates, per-column nulls and distinct counts, distributions for every numeric column, a time plot for every date column, and a list of every value that violates a basic plausibility rule.</p>
+<p>Ask the assistant to write it. It will do a good job, because this is exactly the kind of task assistants are strongest at: well specified, repetitive, and entirely determined by the input rather than by any knowledge of your business. Then use it on every dataset for the rest of the week, and on everything that lands on your desk afterwards.</p>
+<p>Of everything built during the programme, this is the artefact people report still using a year later. It costs an hour once, and it changes what happens in the first ten minutes with every new file you are ever sent.</p>
+</div>
+<div class="tdbg-box tdbg-sceptic">
+<p><span class="lbl">Copilot check</span></p>
+<p>Ask: <em>“Summarise this dataset for me.”</em></p>
+<p>You will get a competent paragraph containing means, ranges and a note about missing values. It will be accurate, and there will be nothing in it you can point at and call wrong.</p>
+<p>It will also not tell you that 2026 is a single quarter, that the northern regions broke in November, that missingness is concentrated on stockouts, or that there are nine identifiers for eight suppliers. That is less a failure of the model than a consequence of the question: none of those four is a property of the <em>summary</em>, they are all properties of the <em>shape</em>, and a summary is what you get by discarding the shape.</p>
+<p>Then ask the better question: <em>“What in this dataset would surprise a domain expert? Give me five specific things to check, as queries.”</em></p>
+<p>Same file, same assistant, an entirely different quality of answer — because the second prompt asks for candidate oddities rather than a description, and checking a candidate takes seconds. The distance between those two answers is the whole session.</p>
+</div>
+</section>
+<section id="takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="takeaways">Takeaways</h2>
+<ol type="1">
+<li>The question is “what is odd here?”, not “what is the average?”</li>
+<li>Count the periods before you compare them.</li>
+<li>Look at the distribution. Business quantities are right-skewed and the mean misleads.</li>
+<li>Missingness is a pattern. Ask what the missing rows have in common.</li>
+<li>Plot the series against time before you model it.</li>
+</ol>
+<hr>
+<p><strong>Next:</strong> <a href="../sessions/3-2-charts-that-survive.html">3.2 Charts that survive a board room →</a></p>
+<div class="tdbg-box tdbg-read">
+<p><span class="lbl">Further reading — all free</span></p>
+<p><strong>Start here</strong> · <a href="https://r4ds.hadley.nz/EDA.html">Exploratory data analysis</a> — Wickham, Çetinkaya-Rundel &amp; Grolemund, <em>R for Data Science, 2nd ed., ch.&nbsp;10</em>. ~30 min.<br>
+Variation, unusual values, covariation. ‘EDA is not a formal process with a strict set of rules. More than anything, EDA is a state of mind.’</p>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<!-- ==========================================================================
+     Turning Data into Business Growth — the small webapp layer.
+
+     Three jobs, no dependencies:
+       1. Track which sessions and labs a participant has completed, in their
+          own browser, and show it back to them as a week progress bar.
+       2. Give every lab checklist a persistent tick box.
+       3. Keep the "what did I actually do this week" view honest, because on
+          Friday people have to say what they finished.
+
+     Nothing leaves the browser. There is no analytics call anywhere in this
+     file, which is deliberate on a programme that spends a day on data
+     governance.
+     ========================================================================== -->
+<style>
+  .tdbg-progress {
+    position: sticky; top: 0; z-index: 900;
+    height: 3px; background: rgba(11,28,63,.08); margin: 0 0 .2rem;
+  }
+  .tdbg-progress > i {
+    display: block; height: 100%; width: 0;
+    background: linear-gradient(90deg,#2E3A6E,#16549B,#00AFEF,#009F8B,#C4A060);
+    transition: width .5s ease;
+  }
+  .tdbg-done-bar {
+    display: flex; align-items: center; gap: .8rem; flex-wrap: wrap;
+    border: 1px solid #DFE3EC; border-left: 4px solid #009F8B;
+    border-radius: 8px; padding: .75rem 1rem; margin: 2.2rem 0 1rem;
+    background: #FBFDFC;
+  }
+  .tdbg-done-bar button {
+    font: 600 .82rem/1 "Inter", system-ui, sans-serif;
+    border: 1px solid #009F8B; background: #009F8B; color: #fff;
+    border-radius: 6px; padding: .52rem .9rem; cursor: pointer;
+  }
+  .tdbg-done-bar button[aria-pressed="true"] { background: #fff; color: #00695C; }
+  .tdbg-done-bar button:focus-visible { outline: 3px solid #00AFEF; outline-offset: 2px; }
+  .tdbg-done-bar .msg { font-size: .84rem; color: #55627A; }
+
+  .tdbg-check { list-style: none; padding-left: 0; }
+  .tdbg-check li {
+    display: flex; gap: .6rem; align-items: flex-start;
+    padding: .35rem 0; border-bottom: 1px dashed #EAEEF5;
+  }
+  .tdbg-check input[type=checkbox] {
+    margin-top: .32rem; width: 1.02rem; height: 1.02rem; accent-color: #009F8B; flex: none;
+  }
+  .tdbg-check li.on > span { color: #55627A; text-decoration: line-through; }
+
+  .tdbg-tracker { border-collapse: collapse; width: 100%; font-size: .87rem; }
+  .tdbg-tracker td, .tdbg-tracker th { padding: .38rem .5rem; border-bottom: 1px solid #EAEEF5; text-align: left; }
+  .tdbg-tracker thead th { font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: #66707F; }
+  .tdbg-tracker th.n { font-family: "IBM Plex Mono", monospace; font-size: .76rem; color: #55627A; width: 4.4rem; font-weight: 500; }
+  .tdbg-tracker td.n { font-family: "IBM Plex Mono", monospace; font-size: .76rem; color: #55627A; width: 4.4rem; }
+  .tdbg-tracker td.s { text-align: right; width: 6rem; font-size: .78rem; color: #55627A; }
+  .tdbg-tracker tr.on td.s { color: #00695C; font-weight: 600; }
+  .tdbg-reset {
+    font: 500 .78rem/1 "Inter", system-ui, sans-serif; background: none;
+    border: 1px solid #DFE3EC; border-radius: 6px; padding: .4rem .7rem;
+    color: #55627A; cursor: pointer;
+  }
+  details.tdbg-sol > summary {
+    cursor: pointer; font: 600 .84rem/1.4 "Inter", system-ui, sans-serif;
+    color: #16549B; padding: .55rem .8rem; border: 1px solid #DFE3EC;
+    border-radius: 7px; background: #F7F9FC; list-style: none;
+  }
+  details.tdbg-sol > summary::before { content: "▸  "; }
+  details.tdbg-sol[open] > summary::before { content: "▾  "; }
+  details.tdbg-sol[open] > summary { border-radius: 7px 7px 0 0; border-bottom: 0; }
+  details.tdbg-sol > div.body {
+    border: 1px solid #DFE3EC; border-top: 0; border-radius: 0 0 7px 7px;
+    padding: .3rem 1rem .1rem;
+  }
+  details.tdbg-sol { margin: 1.1rem 0; }
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  var KEY = "tdbg.progress.v1";
+
+  // Every trackable unit on the site, in week order. Keep in sync with
+  // _quarto.yml — the tracker page renders straight from this list.
+  var UNITS = [
+    ["1.1", "Competing on analytics",            "sessions/1-1-competing-on-analytics.html"],
+    ["1.2", "The KPI tree",                      "sessions/1-2-kpi-tree.html"],
+    ["1.3", "Sizing the prize",                  "sessions/1-3-sizing-the-prize.html"],
+    ["1.4", "What AI actually changed",          "sessions/1-4-what-ai-changed.html"],
+    ["1.5", "Where the data lives",              "sessions/1-5-where-data-lives.html"],
+    ["1.6", "Lab 1 · Use-case charter",          "sessions/1-6-lab-charter.html"],
+    ["2.1", "SQL as the lingua franca",          "sessions/2-1-sql-lingua-franca.html"],
+    ["2.2", "The laptop warehouse",              "sessions/2-2-laptop-warehouse.html"],
+    ["2.3", "Excel as the bridge",               "sessions/2-3-excel-bridge.html"],
+    ["2.4", "Joins that lie",                    "sessions/2-4-joins-that-lie.html"],
+    ["2.5", "Data quality as a contract",        "sessions/2-5-data-quality-contract.html"],
+    ["2.6", "Lab 2 · The pipeline that reruns",  "sessions/2-6-lab-pipeline.html"],
+    ["3.1", "What is odd here?",                 "sessions/3-1-eda.html"],
+    ["3.2", "Charts that survive a board",       "sessions/3-2-charts-that-survive.html"],
+    ["3.3", "Forecasting with intervals",        "sessions/3-3-forecasting.html"],
+    ["3.4", "Segmentation you can act on",       "sessions/3-4-segmentation.html"],
+    ["3.5", "Propensity and the leak",           "sessions/3-5-propensity-and-leakage.html"],
+    ["3.6", "Lab 3 · The forecast market",       "sessions/3-6-lab-forecast-market.html"],
+    ["4.1", "Text as data",                      "sessions/4-1-text-as-data.html"],
+    ["4.2", "LLM classification at scale",       "sessions/4-2-llm-classification.html"],
+    ["4.3", "Dashboards that get used",          "sessions/4-3-dashboards.html"],
+    ["4.4", "One source, five outputs",          "sessions/4-4-reproducible-reporting.html"],
+    ["4.5", "The executive narrative",           "sessions/4-5-executive-narrative.html"],
+    ["4.6", "Lab 4 · The one-number brief",      "sessions/4-6-lab-one-number-brief.html"],
+    ["5.1", "Correlation, contribution, cause",  "sessions/5-1-correlation-contribution-cause.html"],
+    ["5.2", "Experiments that settle arguments", "sessions/5-2-experiments.html"],
+    ["5.3", "When you cannot randomise",         "sessions/5-3-quasi-experiments.html"],
+    ["5.4", "Governance you can actually run",   "sessions/5-4-governance.html"],
+    ["5.5", "The operating model",               "sessions/5-5-operating-model.html"],
+    ["5.6", "Capstone · Defence",                "sessions/5-6-capstone-defence.html"]
+  ];
+
+  // localStorage can throw outright in a private window or with site data
+  // blocked, so every read and write is guarded and the page renders fine
+  // with nothing stored.
+  function load() {
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      return raw ? (JSON.parse(raw) || {}) : {};
+    } catch (e) { return {}; }
+  }
+  function save(state) {
+    try { window.localStorage.setItem(KEY, JSON.stringify(state)); }
+    catch (e) { /* nothing to do; the page still works */ }
+  }
+
+  var state = load();
+
+  function pctDone() {
+    var n = 0;
+    for (var i = 0; i < UNITS.length; i++) if (state["s:" + UNITS[i][0]]) n++;
+    return { done: n, total: UNITS.length, pct: Math.round(100 * n / UNITS.length) };
+  }
+
+  // ------------------------------------------------------- progress ribbon
+  function ribbon() {
+    var host = document.querySelector("#quarto-content") || document.body;
+    var bar = document.createElement("div");
+    bar.className = "tdbg-progress";
+    bar.setAttribute("role", "progressbar");
+    bar.setAttribute("aria-label", "Programme progress");
+    bar.innerHTML = "<i></i>";
+    host.insertBefore(bar, host.firstChild);
+    paintRibbon();
+  }
+  function paintRibbon() {
+    var p = pctDone();
+    document.querySelectorAll(".tdbg-progress > i").forEach(function (el) {
+      el.style.width = p.pct + "%";
+    });
+    document.querySelectorAll(".tdbg-progress").forEach(function (el) {
+      el.setAttribute("aria-valuenow", String(p.pct));
+      el.setAttribute("aria-valuemin", "0");
+      el.setAttribute("aria-valuemax", "100");
+      el.title = p.done + " of " + p.total + " sessions marked complete";
+    });
+  }
+
+  // ------------------------------------------- "mark this session complete"
+  function doneBar() {
+    var id = document.body.getAttribute("data-tdbg-session");
+    if (!id) return;
+    var main = document.querySelector("main.content");
+    if (!main) return;
+
+    var wrap = document.createElement("div");
+    wrap.className = "tdbg-done-bar";
+    var btn = document.createElement("button");
+    var msg = document.createElement("span");
+    msg.className = "msg";
+    wrap.appendChild(btn);
+    wrap.appendChild(msg);
+    main.appendChild(wrap);
+
+    function paint() {
+      var on = !!state["s:" + id];
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.textContent = on ? "✓ Marked complete" : "Mark session " + id + " complete";
+      var p = pctDone();
+      msg.textContent = p.done + " of " + p.total + " sessions done · " + p.pct + "% of the week";
+    }
+    btn.addEventListener("click", function () {
+      state["s:" + id] = !state["s:" + id];
+      save(state); paint(); paintRibbon();
+    });
+    paint();
+  }
+
+  // --------------------------------------------- persistent lab checklists
+  //
+  // Two things here are deliberate and were both got wrong first time.
+  //
+  // 1. The storage key is a hash of the item's *text*, not its index in the
+  //    list. Index keys look fine until somebody edits a lab — insert one step
+  //    at the top of a six-step checklist and every tick silently shifts down
+  //    to the wrong line, which is worse than losing them. Hashing the text
+  //    means an edited step loses its own tick (correct: it is a different
+  //    step now) and leaves its neighbours alone.
+  //
+  // 2. The checkbox is labelled with aria-labelledby pointing at the step's
+  //    own text, not an aria-label of "Mark step 3 complete". A screen reader
+  //    user tabbing a checklist should hear the step, exactly as a sighted
+  //    user reads it — "step 3" tells them nothing about what they are
+  //    ticking.
+  function hash32(s) {
+    // FNV-1a. Not cryptographic; it only has to be stable and collision-shy
+    // across a few hundred short strings in one page.
+    var h = 0x811c9dc5;
+    for (var i = 0; i < s.length; i++) {
+      h ^= s.charCodeAt(i);
+      h = (h + (h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24)) >>> 0;
+    }
+    return h.toString(36);
+  }
+
+  function checklists() {
+    document.querySelectorAll("ul.tdbg-check").forEach(function (ul, ui) {
+      var scope = ul.getAttribute("data-key") ||
+                  (document.body.getAttribute("data-tdbg-session") || "page") + ":" + ui;
+      var seen = {};
+      ul.querySelectorAll("li").forEach(function (li, li_i) {
+        var text = (li.textContent || "").replace(/\s+/g, " ").trim();
+
+        // Two genuinely identical steps in one list would collide, so the
+        // second occurrence gets a suffix. Rare, but silent if unhandled.
+        // Two identical steps in one list would collide. Disambiguate with the
+        // item's index only for the duplicates themselves, so a unique step's
+        // key never depends on its position -- which is the whole point of
+        // hashing the text in the first place.
+        var base = hash32(text);
+        seen[base] = (seen[base] || 0) + 1;
+        var sig = seen[base] > 1 ? base + "." + li_i : base;
+        var k = "c:" + scope + ":" + sig;
+
+        var span = document.createElement("span");
+        span.id = "tdbg-ck-" + scope.replace(/[^A-Za-z0-9_.-]/g, "_") + "-" + sig;
+        while (li.firstChild) span.appendChild(li.firstChild);
+
+        var box = document.createElement("input");
+        box.type = "checkbox";
+        box.checked = !!state[k];
+        box.setAttribute("aria-labelledby", span.id);
+
+        li.appendChild(box);
+        li.appendChild(span);
+        if (box.checked) li.classList.add("on");
+        box.addEventListener("change", function () {
+          state[k] = box.checked;
+          li.classList.toggle("on", box.checked);
+          save(state);
+        });
+      });
+    });
+  }
+
+  // ------------------------------------------------------- tracker table
+  function tracker() {
+    var host = document.getElementById("tdbg-tracker");
+    if (!host) return;
+    var depth = (location.pathname.indexOf("/sessions/") > -1) ? "../" : "";
+    var t = document.createElement("table");
+    t.className = "tdbg-tracker";
+    // A data table needs a caption and real column headers, or a screen reader
+    // announces thirty rows of three unlabelled cells.
+    var cap = document.createElement("caption");
+    cap.textContent = "Your progress through the thirty sessions";
+    cap.style.cssText = "text-align:left;font-weight:600;color:#55627A;" +
+                        "font-size:.84rem;padding:.2rem 0 .5rem";
+    t.appendChild(cap);
+    var thead = document.createElement("thead");
+    thead.innerHTML = '<tr>' +
+      '<th scope="col" class="n">Session</th>' +
+      '<th scope="col">Title</th>' +
+      '<th scope="col" class="s">Status</th></tr>';
+    t.appendChild(thead);
+    var tbody = document.createElement("tbody");
+    UNITS.forEach(function (u) {
+      var tr = document.createElement("tr");
+      var on = !!state["s:" + u[0]];
+      if (on) tr.className = "on";
+      var th = document.createElement("th");
+      th.scope = "row"; th.className = "n"; th.textContent = u[0];
+      tr.appendChild(th);
+      var td = document.createElement("td");
+      var a = document.createElement("a");
+      a.href = depth + u[2]; a.textContent = u[1];
+      td.appendChild(a); tr.appendChild(td);
+      var st = document.createElement("td");
+      st.className = "s"; st.textContent = on ? "complete" : "\u2014";
+      tr.appendChild(st);
+      tbody.appendChild(tr);
+    });
+    t.appendChild(tbody);
+    host.appendChild(t);
+
+    var p = pctDone();
+    var sum = document.createElement("p");
+    sum.style.marginTop = "1rem";
+    sum.innerHTML = "<strong>" + p.done + " of " + p.total + "</strong> sessions marked " +
+      "complete (" + p.pct + "%). This is stored in this browser only — it is not sent " +
+      "anywhere, and it will not follow you to another machine.";
+    host.appendChild(sum);
+
+    // Two-step, because one stray click used to wipe a week of ticks with no
+    // way back. The button becomes its own confirmation and reverts after
+    // five seconds if the person walks away from it.
+    var reset = document.createElement("button");
+    reset.className = "tdbg-reset";
+    reset.textContent = "Clear my progress";
+    var armed = false, timer = null;
+    reset.addEventListener("click", function () {
+      if (!armed) {
+        armed = true;
+        reset.textContent = "Clear everything? Click again to confirm";
+        reset.style.borderColor = "#B4443A";
+        reset.style.color = "#B4443A";
+        timer = window.setTimeout(function () {
+          armed = false;
+          reset.textContent = "Clear my progress";
+          reset.style.borderColor = "";
+          reset.style.color = "";
+        }, 5000);
+        return;
+      }
+      window.clearTimeout(timer);
+      state = {};
+      save(state);
+      location.reload();
+    });
+    host.appendChild(reset);
+  }
+
+  function boot() {
+    try { ribbon(); } catch (e) {}
+    try { doneBar(); } catch (e) {}
+    try { checklists(); } catch (e) {}
+    try { tracker(); } catch (e) {}
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+<!-- ==========================================================================
+     bongo.ai — the assistant that sits on every page of the site.
+
+     Two files make this work and they are deliberately separated:
+
+       this one   the widget. Static HTML/CSS/JS, no dependencies, no key.
+       chat-api/  a Cloudflare Worker that holds the API key and talks to
+                  Anthropic on the browser's behalf.
+
+     WHY THEY ARE SEPARATE
+
+     This site is static HTML hosted on GitHub Pages, so everything in this
+     file is delivered to the visitor's browser exactly as written. Anyone can
+     read it through View Source. That makes it the wrong place for an API key:
+     keys published this way are found by automated scanners within days and
+     spent by strangers, and no amount of encoding or obfuscation prevents it,
+     because the browser has to be able to undo whatever you did.
+
+     So the key lives on a small server instead, and this file simply asks that
+     server questions. The Worker in chat-api/ is that server.
+
+     GETTING IT RUNNING
+
+     Set ENDPOINT below to your deployed Worker's URL. Until you do, the widget
+     opens into a friendly panel explaining that it has not been configured
+     yet, rather than showing errors. That matters because this repository is
+     public, and many people who clone it will want to read the course without
+     ever setting up a backend of their own.
+     ========================================================================== -->
+<script>
+window.BONGO_CHAT_CONFIG = {
+  // The deployed Worker URL. Empty string = not configured; the widget says so.
+  //   e.g. "https://tdbg-chat.your-subdomain.workers.dev/chat"
+  ENDPOINT: "https://tdbg-chat.badi-933.workers.dev/chat",
+
+  // Cohort gate. The passphrase itself is NOT here — it is a secret on the
+  // Worker. This only decides whether to ask for one.
+  REQUIRE_PASSPHRASE: true,
+
+  // What the panel says before anyone types.
+  GREETING: "I can help with the statistics, the code, and the business " +
+            "judgement around both — including anything on this page. " +
+            "What are you working on?"
+};
+</script>
+
+<style>
+  :root {
+    --bongo-navy: #0E2A47;
+    --bongo-navy-lit: #173E63;
+    --bongo-gold: #C69B3E;
+    --bongo-cream: #FBF7EC;
+    --bongo-teal: #3E8C93;
+    --bongo-ink: #14202E;
+    --bongo-slate: #55627A;
+    --bongo-line: #DFE3EC;
+  }
+
+  /* ---------------------------------------------------------- the button -- */
+  .bongo-fab {
+    position: fixed; right: 20px; bottom: 20px; z-index: 2000;
+    width: 60px; height: 60px; padding: 0;
+    border: none; border-radius: 50%; cursor: pointer;
+    background: var(--bongo-navy);
+    box-shadow: 0 6px 22px rgba(11, 28, 63, .30), 0 2px 6px rgba(11, 28, 63, .22);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform .16s ease, box-shadow .16s ease;
+  }
+  .bongo-fab:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(11,28,63,.34); }
+  .bongo-fab:focus-visible { outline: 3px solid var(--bongo-gold); outline-offset: 3px; }
+  .bongo-fab img { width: 40px; height: 40px; display: block; }
+  .bongo-fab .x { display: none; color: #fff; font-size: 26px; line-height: 1; }
+  .bongo-fab[aria-expanded="true"] .x { display: block; }
+  .bongo-fab[aria-expanded="true"] img { display: none; }
+
+  /* A one-time nudge so people notice it exists. Shown once per browser. */
+  .bongo-nudge {
+    position: fixed; right: 90px; bottom: 34px; z-index: 2000;
+    background: var(--bongo-navy); color: #fff; border-radius: 8px;
+    padding: .5rem .75rem; font: 500 .82rem/1.35 "Inter", system-ui, sans-serif;
+    max-width: 210px; box-shadow: 0 6px 18px rgba(11,28,63,.28);
+  }
+  .bongo-nudge::after {
+    content: ""; position: absolute; right: -6px; bottom: 16px;
+    border: 6px solid transparent; border-left-color: var(--bongo-navy);
+    border-right: 0;
+  }
+  .bongo-nudge button {
+    background: none; border: 0; color: #9FC6EA; cursor: pointer;
+    font: 500 .76rem/1 "Inter", system-ui, sans-serif; padding: .3rem 0 0; display: block;
+  }
+
+  /* ----------------------------------------------------------- the panel -- */
+  .bongo-panel {
+    position: fixed; right: 20px; bottom: 92px; z-index: 2001;
+    width: min(420px, calc(100vw - 40px));
+    height: min(620px, calc(100vh - 130px));
+    background: #fff; border: 1px solid var(--bongo-line);
+    border-radius: 14px; overflow: hidden;
+    box-shadow: 0 18px 50px rgba(11, 28, 63, .26);
+    display: none; flex-direction: column;
+  }
+  .bongo-panel[data-open="true"] { display: flex; }
+
+  .bongo-head {
+    background: var(--bongo-navy); color: #fff;
+    padding: .8rem 1rem; display: flex; align-items: center; gap: .6rem;
+    border-bottom: 3px solid var(--bongo-gold);
+  }
+  .bongo-head img { width: 30px; height: 30px; }
+  .bongo-head .t { font: 600 .95rem/1.2 "Inter", system-ui, sans-serif; }
+  .bongo-head .s { font: 400 .74rem/1.3 "Inter", system-ui, sans-serif; color: #A9C4E2; }
+
+  .bongo-log {
+    flex: 1; overflow-y: auto; padding: 1rem;
+    background: var(--bongo-cream);
+    font: 400 .88rem/1.55 "Inter", system-ui, sans-serif; color: var(--bongo-ink);
+  }
+  .bongo-msg { margin: 0 0 .9rem; display: flex; }
+  .bongo-msg .b {
+    padding: .6rem .8rem; border-radius: 11px; max-width: 88%;
+    overflow-wrap: anywhere;
+  }
+  .bongo-msg.me { justify-content: flex-end; }
+  .bongo-msg.me .b { background: var(--bongo-navy); color: #fff; border-bottom-right-radius: 3px; }
+  .bongo-msg.ai .b { background: #fff; border: 1px solid var(--bongo-line); border-bottom-left-radius: 3px; }
+  .bongo-msg.sys .b { background: #FBE9E5; border: 1px solid #E0A79B; color: #7A2E1E; font-size: .84rem; }
+  .bongo-msg .b > *:first-child { margin-top: 0; }
+  .bongo-msg .b > *:last-child { margin-bottom: 0; }
+  .bongo-msg .b p { margin: 0 0 .55rem; }
+  .bongo-msg .b ul, .bongo-msg .b ol { margin: 0 0 .55rem; padding-left: 1.15rem; }
+  .bongo-msg .b code {
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .84em;
+    background: #EEF1F7; padding: .1em .32em; border-radius: 4px;
+  }
+  .bongo-msg.me .b code { background: rgba(255,255,255,.18); }
+  .bongo-msg .b pre {
+    background: #10233B; color: #E8EEF6; padding: .65rem .75rem;
+    border-radius: 8px; overflow-x: auto; margin: 0 0 .55rem;
+  }
+  .bongo-msg .b pre code { background: none; padding: 0; font-size: .82em; color: inherit; }
+  .bongo-msg .b a { color: #16549B; }
+  .bongo-msg.me .b a { color: #BEE0FF; }
+
+  .bongo-dots span {
+    display: inline-block; width: 6px; height: 6px; margin-right: 3px;
+    border-radius: 50%; background: var(--bongo-slate);
+    animation: bongo-blink 1.3s infinite both;
+  }
+  .bongo-dots span:nth-child(2) { animation-delay: .18s; }
+  .bongo-dots span:nth-child(3) { animation-delay: .36s; }
+  @keyframes bongo-blink { 0%, 80%, 100% { opacity: .25 } 40% { opacity: 1 } }
+
+  .bongo-foot { border-top: 1px solid var(--bongo-line); padding: .65rem; background: #fff; }
+  .bongo-row { display: flex; gap: .5rem; align-items: flex-end; }
+  .bongo-foot textarea {
+    flex: 1; resize: none; border: 1px solid var(--bongo-line); border-radius: 9px;
+    padding: .55rem .7rem; font: 400 .88rem/1.4 "Inter", system-ui, sans-serif;
+    max-height: 140px; color: var(--bongo-ink); background: #fff;
+  }
+  .bongo-foot textarea:focus-visible { outline: 2px solid var(--bongo-gold); outline-offset: 0; border-color: var(--bongo-gold); }
+  .bongo-send {
+    border: 0; border-radius: 9px; background: var(--bongo-navy); color: #fff;
+    padding: .58rem .85rem; cursor: pointer;
+    font: 600 .84rem/1 "Inter", system-ui, sans-serif;
+  }
+  .bongo-send:disabled { opacity: .45; cursor: not-allowed; }
+  .bongo-send:focus-visible { outline: 3px solid var(--bongo-gold); outline-offset: 2px; }
+  .bongo-note {
+    margin: .45rem .15rem 0; font: 400 .7rem/1.35 "Inter", system-ui, sans-serif;
+    color: var(--bongo-slate); display: flex; justify-content: space-between; gap: .5rem;
+  }
+  .bongo-note button {
+    background: none; border: 0; color: var(--bongo-slate); cursor: pointer;
+    text-decoration: underline; font: inherit; padding: 0;
+  }
+
+  .bongo-gate { padding: 1.1rem; font: 400 .86rem/1.5 "Inter", system-ui, sans-serif; }
+  .bongo-gate h4 { font: 600 .95rem/1.3 "Inter", system-ui, sans-serif; margin: 0 0 .5rem; }
+  .bongo-gate input {
+    width: 100%; border: 1px solid var(--bongo-line); border-radius: 9px;
+    padding: .55rem .7rem; margin: .6rem 0; font: inherit;
+  }
+  .bongo-gate input:focus-visible { outline: 2px solid var(--bongo-gold); border-color: var(--bongo-gold); }
+  .bongo-gate .err { color: #A3341F; margin: .3rem 0 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bongo-fab, .bongo-dots span { transition: none; animation: none; }
+  }
+  @media print { .bongo-fab, .bongo-panel, .bongo-nudge { display: none !important; } }
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  var CFG = window.BONGO_CHAT_CONFIG || {};
+  var KEY_LOG = "bongo.chat.log.v1";
+  var KEY_PASS = "bongo.chat.pass.v1";
+  var KEY_NUDGE = "bongo.chat.nudged.v1";
+  var MAX_TURNS = 24;          // trimmed before sending; the Worker caps too
+  var MAX_CHARS = 4000;
+
+  // Reading and writing localStorage is wrapped in try/catch throughout. In a
+  // private window, or with site data blocked, the browser throws on the
+  // accessor itself rather than politely returning null — so an unguarded call
+  // would stop the whole widget from loading.
+  function get(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } }
+  function set(k, v) { try { window.localStorage.setItem(k, v); } catch (e) {} }
+  function del(k) { try { window.localStorage.removeItem(k); } catch (e) {} }
+
+  var log = [];
+  try { log = JSON.parse(get(KEY_LOG) || "[]") || []; } catch (e) { log = []; }
+  var busy = false, panel, logEl, ta, sendBtn, fab, lastFocus;
+
+  var depth = (location.pathname.indexOf("/sessions/") > -1) ? "../" : "";
+
+  // ------------------------------------------------------------ markdown --
+  //
+  // A small Markdown renderer, written escape-first on purpose.
+  //
+  // The order of operations here is the security-relevant part. Everything the
+  // model sends is first escaped completely, so that any HTML in it becomes
+  // visible text and can no longer do anything. Only afterwards do we turn a
+  // fixed, known list of patterns — bold, code, lists, links — back into real
+  // markup.
+  //
+  // The tempting alternative is to convert Markdown to HTML and then sanitise
+  // the result, and it is how cross-site scripting tends to find its way into
+  // chat widgets: a sanitiser has to anticipate every possible attack, whereas
+  // an escaper only has to handle five characters correctly.
+  function esc(s) {
+    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function md(src) {
+    var blocks = [];
+    // Pull fenced code out first so nothing inside it gets marked up.
+    var s = src.replace(/```(\w*)\n([\s\S]*?)```/g, function (_, lang, code) {
+      blocks.push('<pre><code>' + esc(code.replace(/\n$/, "")) + '</code></pre>');
+      return "@@TDBGBLOCK" + (blocks.length - 1) + "@@";
+    });
+
+    s = esc(s);
+    s = s.replace(/`([^`\n]+)`/g, "<code>$1</code>");
+    s = s.replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>");
+    s = s.replace(/(^|[\s(])\*([^*\n]+)\*/g, "$1<em>$2</em>");
+    // Links: only http(s) and relative paths. No javascript:, no data:.
+    s = s.replace(/\[([^\]\n]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]*|[\w./-]+\.html[^)\s]*)\)/g,
+                  '<a href="$2" rel="noopener">$1</a>');
+
+    var out = [], list = null;
+    s.split("\n").forEach(function (line) {
+      var li = line.match(/^\s*[-*]\s+(.*)$/);
+      var ol = line.match(/^\s*(\d+)[.)]\s+(.*)$/);
+      if (li) {
+        if (list !== "ul") { if (list) out.push("</" + list + ">"); out.push("<ul>"); list = "ul"; }
+        out.push("<li>" + li[1] + "</li>");
+      } else if (ol) {
+        if (list !== "ol") { if (list) out.push("</" + list + ">"); out.push("<ol>"); list = "ol"; }
+        out.push("<li>" + ol[2] + "</li>");
+      } else {
+        if (list) { out.push("</" + list + ">"); list = null; }
+        if (line.trim() === "") out.push("");
+        else out.push("<p>" + line + "</p>");
+      }
+    });
+    if (list) out.push("</" + list + ">");
+
+    return out.join("\n").replace(/@@TDBGBLOCK(\d+)@@/g, function (whole, i) {
+      // If a reply happens to contain this placeholder as literal text --
+      // which is not far-fetched on a course where somebody may ask the
+      // assistant about the widget's own source -- there is no block to put
+      // back. Return the text unchanged rather than the string "undefined".
+      var block = blocks[+i];
+      return block === undefined ? whole : block;
+    });
+  }
+
+  // -------------------------------------------------------------- render --
+  function bubble(role, html, cls) {
+    var d = document.createElement("div");
+    d.className = "bongo-msg " + (cls || (role === "user" ? "me" : "ai"));
+    var b = document.createElement("div");
+    b.className = "b";
+    b.innerHTML = html;
+    d.appendChild(b);
+    logEl.appendChild(d);
+    logEl.scrollTop = logEl.scrollHeight;
+    return b;
+  }
+
+  function paint() {
+    logEl.innerHTML = "";
+    if (!log.length) {
+      bubble("assistant", md(CFG.GREETING || "How can I help?"));
+      return;
+    }
+    log.forEach(function (m) { bubble(m.role, md(m.content)); });
+  }
+
+  function save() {
+    try { set(KEY_LOG, JSON.stringify(log.slice(-MAX_TURNS))); } catch (e) {}
+  }
+
+  // What page are we on? Sent with each turn so answers can be about the thing
+  // in front of the reader rather than the course in the abstract.
+  function pageContext() {
+    var h1 = document.querySelector("main h1, h1");
+    return {
+      title: (document.title || "").slice(0, 200),
+      heading: h1 ? (h1.textContent || "").trim().slice(0, 200) : "",
+      session: document.body.getAttribute("data-tdbg-session") || "",
+      path: location.pathname.split("/").slice(-1)[0] || "index.html"
+    };
+  }
+
+  // ---------------------------------------------------------------- send --
+  function send(text) {
+    if (busy || !text.trim()) return;
+    if (text.length > MAX_CHARS) {
+      bubble("system", md("That message is longer than " + MAX_CHARS +
+                          " characters. Trim it and try again."), "sys");
+      return;
+    }
+    busy = true;
+    sendBtn.disabled = true;
+    ta.value = "";
+    ta.style.height = "auto";
+
+    log.push({ role: "user", content: text });
+    bubble("user", md(text));
+    save();
+
+    var b = bubble("assistant", '<span class="bongo-dots"><span></span><span></span><span></span></span>');
+    b.setAttribute("aria-live", "polite");
+    var acc = "";
+
+    var headers = { "Content-Type": "application/json" };
+    var pass = get(KEY_PASS);
+    if (pass) headers["X-Bongo-Pass"] = pass;
+
+    fetch(CFG.ENDPOINT, {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify({ messages: log.slice(-MAX_TURNS), page: pageContext() })
+    }).then(function (r) {
+      if (r.status === 401) {
+        // Take the message back out of the transcript before showing the gate
+        // again. It was added optimistically so it would appear the instant it
+        // was sent, but the send did not actually happen -- and leaving it in
+        // means the question is duplicated when the person retypes their
+        // passphrase and asks again.
+        del(KEY_PASS);
+        if (log.length && log[log.length - 1].role === "user") log.pop();
+        save();
+        gate("That passphrase was not accepted. Please check it and try again.");
+        throw new Error("gate");
+      }
+      if (r.status === 429) throw new Error("You have reached the usage limit for now. Try again later.");
+      if (!r.ok) throw new Error("The assistant is unavailable (HTTP " + r.status + ").");
+      if (!r.body) throw new Error("Streaming is not supported in this browser.");
+
+      var reader = r.body.getReader(), dec = new TextDecoder(), buf = "";
+      function pump() {
+        return reader.read().then(function (res) {
+          if (res.done) return;
+          buf += dec.decode(res.value, { stream: true });
+          var lines = buf.split("\n");
+          buf = lines.pop();
+          lines.forEach(function (line) {
+            if (line.indexOf("data: ") !== 0) return;
+            var payload = line.slice(6);
+            if (payload === "[DONE]") return;
+            try {
+              var ev = JSON.parse(payload);
+              if (ev.type === "content_block_delta" && ev.delta && ev.delta.text) {
+                acc += ev.delta.text;
+                b.innerHTML = md(acc);
+                logEl.scrollTop = logEl.scrollHeight;
+              } else if (ev.type === "error") {
+                acc += "\n\n_" + (ev.error && ev.error.message || "stream error") + "_";
+                b.innerHTML = md(acc);
+              }
+            } catch (e) { /* keep-alive or partial frame; ignore */ }
+          });
+          return pump();
+        });
+      }
+      return pump();
+    }).then(function () {
+      if (acc) { log.push({ role: "assistant", content: acc }); save(); }
+      else b.innerHTML = md("_No reply came back. Try again._");
+    }).catch(function (e) {
+      if (e && e.message === "gate") return;
+      b.parentNode.className = "bongo-msg sys";
+      b.innerHTML = md(e && e.message ? e.message : "Something went wrong.");
+    }).then(function () {
+      busy = false;
+      sendBtn.disabled = false;
+      ta.focus();
+    });
+  }
+
+  // ---------------------------------------------------------------- gate --
+  function gate(err) {
+    var body = panel.querySelector(".bongo-body");
+    body.innerHTML =
+      '<div class="bongo-gate">' +
+      '<h4>Cohort access</h4>' +
+      '<p>bongo.ai is available to participants on the programme. Enter the ' +
+      'passphrase from your joining instructions — this browser will ' +
+      'remember it.</p>' +
+      '<input type="password" autocomplete="off" aria-label="Cohort passphrase">' +
+      (err ? '<p class="err">' + esc(err) + "</p>" : "") +
+      '<button class="bongo-send" type="button">Continue</button>' +
+      "</div>";
+    var input = body.querySelector("input");
+    var go = function () {
+      var v = input.value.trim();
+      if (!v) return;
+      set(KEY_PASS, v);
+      mount();
+    };
+    body.querySelector("button").addEventListener("click", go);
+    input.addEventListener("keydown", function (e) { if (e.key === "Enter") go(); });
+    input.focus();
+  }
+
+  // --------------------------------------------------------------- mount --
+  function mount() {
+    var body = panel.querySelector(".bongo-body");
+    body.innerHTML =
+      '<div class="bongo-log" role="log" aria-label="Conversation"></div>' +
+      '<div class="bongo-foot">' +
+      '<div class="bongo-row">' +
+      '<textarea rows="1" placeholder="Ask about anything on this page…" ' +
+      'aria-label="Your question"></textarea>' +
+      '<button class="bongo-send" type="button">Send</button>' +
+      "</div>" +
+      '<p class="bongo-note"><span>Claude can be wrong. Check anything that matters.</span>' +
+      '<button type="button">Clear</button></p>' +
+      "</div>";
+
+    logEl = body.querySelector(".bongo-log");
+    ta = body.querySelector("textarea");
+    sendBtn = body.querySelector(".bongo-send");
+
+    ta.addEventListener("input", function () {
+      ta.style.height = "auto";
+      ta.style.height = Math.min(ta.scrollHeight, 140) + "px";
+    });
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(ta.value); }
+    });
+    sendBtn.addEventListener("click", function () { send(ta.value); });
+    body.querySelector(".bongo-note button").addEventListener("click", function () {
+      log = []; del(KEY_LOG); paint(); ta.focus();
+    });
+
+    paint();
+    ta.focus();
+  }
+
+  function unconfigured() {
+    panel.querySelector(".bongo-body").innerHTML =
+      '<div class="bongo-gate">' +
+      "<h4>Not configured yet</h4>" +
+      "<p>This build of the site has no chat endpoint set, so bongo.ai " +
+      "cannot answer anything.</p>" +
+      "<p>If you are running this course: deploy the Worker in " +
+      "<code>chat-api/</code> and put its URL in <code>ENDPOINT</code> at the " +
+      "top of <code>assets/js/bongo-chat.html</code>. It takes about five " +
+      "minutes and the instructions are in <code>chat-api/README.md</code>.</p>" +
+      "</div>";
+  }
+
+  // ---------------------------------------------------------------- open --
+  function open() {
+    lastFocus = document.activeElement;
+    panel.setAttribute("data-open", "true");
+    fab.setAttribute("aria-expanded", "true");
+    var n = document.querySelector(".bongo-nudge");
+    if (n) n.remove();
+    set(KEY_NUDGE, "1");
+
+    if (!CFG.ENDPOINT) unconfigured();
+    else if (CFG.REQUIRE_PASSPHRASE && !get(KEY_PASS)) gate("");
+    else mount();
+  }
+
+  function close() {
+    panel.setAttribute("data-open", "false");
+    fab.setAttribute("aria-expanded", "false");
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  function boot() {
+    fab = document.createElement("button");
+    fab.className = "bongo-fab";
+    fab.type = "button";
+    fab.setAttribute("aria-expanded", "false");
+    fab.setAttribute("aria-label", "Ask bongo.ai");
+    fab.innerHTML = '<img src="' + depth + 'assets/logo/bongo_ai_hex_mark.svg" alt="">' +
+                    '<span class="x" aria-hidden="true">×</span>';
+
+    panel = document.createElement("div");
+    panel.className = "bongo-panel";
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-label", "bongo.ai assistant");
+    panel.setAttribute("data-open", "false");
+    panel.innerHTML =
+      '<div class="bongo-head">' +
+      '<img src="' + depth + 'assets/logo/bongo_ai_hex_mark.svg" alt="">' +
+      "<div><div class=\"t\">bongo.ai</div>" +
+      '<div class="s">Data, statistics and the judgement around them</div></div>' +
+      "</div><div class=\"bongo-body\" style=\"flex:1;display:flex;flex-direction:column;overflow:hidden\"></div>";
+
+    document.body.appendChild(panel);
+    document.body.appendChild(fab);
+
+    fab.addEventListener("click", function () {
+      panel.getAttribute("data-open") === "true" ? close() : open();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && panel.getAttribute("data-open") === "true") close();
+    });
+
+    // A single nudge, once per browser, so the button is not invisible
+    // furniture. It never comes back after it is dismissed or used.
+    if (!get(KEY_NUDGE)) {
+      var n = document.createElement("div");
+      n.className = "bongo-nudge";
+      n.innerHTML = "Stuck on something? Ask bongo.ai." +
+                    '<button type="button">Dismiss</button>';
+      document.body.appendChild(n);
+      n.querySelector("button").addEventListener("click", function () {
+        n.remove(); set(KEY_NUDGE, "1");
+      });
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else { boot(); }
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/bongoadi\.github\.io\/turning-data-into-business-growth\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../day3.html" class="pagination-link" aria-label="Day 3 — Seeing, forecasting, segmenting">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Day 3 — Seeing, forecasting, segmenting</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../sessions/3-2-charts-that-survive.html" class="pagination-link" aria-label="Charts that survive a board room">
+        <span class="nav-page-text">Charts that survive a board room</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><strong>Turning Data into Business Growth</strong> · Lagos Business School, Pan-Atlantic University<br> Academic Director: Prof.&nbsp;Bongo Adi · <a href="mailto:execedsales@lbs.edu.ng">execedsales@lbs.edu.ng</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p>Course materials CC BY-NC-SA 4.0 · code MIT · data synthetic<br> Built with Quarto. Every figure and dataset in this site regenerates from source.</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../datasets.html">
+<p>Data room</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../setup.html">
+<p>Setup</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../capstone.html">
+<p>Capstone</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bongoadi/turning-data-into-business-growth">
+      <i class="bi bi-github" role="img" aria-label="Source on GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

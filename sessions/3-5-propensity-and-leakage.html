@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Propensity and the leak – Turning Data into Business Growth</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../sessions/3-6-lab-forecast-market.html" rel="next">
+<link href="../sessions/3-4-segmentation.html" rel="prev">
+<link href="../assets/logo/bongo_ai_hex_mark.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9908bc53731faaa15d8cc2b050a77c2b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-952bed39d3075112a2180a9e1d19fd40.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": true,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/extra.css">
+<meta property="og:title" content="Propensity and the leak – Turning Data into Business Growth">
+<meta property="og:description" content="The churn model that scored 0.98, and why that should have frightened you — Session 3.5, 45 minutes">
+<meta property="og:image" content="https://bongoadi.github.io/turning-data-into-business-growth/assets/logo/bongo_ai_hex.svg">
+<meta property="og:site_name" content="Turning Data into Business Growth">
+<meta property="og:image:alt" content="bongo.ai">
+<meta name="twitter:title" content="Propensity and the leak – Turning Data into Business Growth">
+<meta name="twitter:description" content="The churn model that scored 0.98, and why that should have frightened you — Session 3.5, 45 minutes">
+<meta name="twitter:image" content="https://bongoadi.github.io/turning-data-into-business-growth/assets/logo/bongo_ai_hex.svg">
+<meta name="twitter:image:alt" content="bongo.ai">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/logo/bongo_ai_hex_mark.svg" alt="bongo.ai" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">TDBG</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-the-programme" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">The programme</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-the-programme">    
+        <li>
+    <a class="dropdown-item" href="../index.html">
+ <span class="dropdown-text">The week at a glance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how-this-works.html">
+ <span class="dropdown-text">How this programme works</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../setup.html">
+ <span class="dropdown-text">Before Monday — setup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../datasets.html">
+ <span class="dropdown-text">The data room</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../capstone.html">
+ <span class="dropdown-text">Capstone brief and rubric</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../after.html">
+ <span class="dropdown-text">After Friday — 30 / 60 / 90</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../faculty.html">
+ <span class="dropdown-text">Faculty</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-the-five-days" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">The five days</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-the-five-days">    
+        <li>
+    <a class="dropdown-item" href="../day1.html">
+ <span class="dropdown-text">Day 1 · Frame — strategy, value and what AI changed</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../day2.html">
+ <span class="dropdown-text">Day 2 · Get — data you can trust</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../day3.html">
+ <span class="dropdown-text">Day 3 · See &amp; Model — seeing, forecasting, segmenting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../day4.html">
+ <span class="dropdown-text">Day 4 · Publish — text and the executive narrative</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../day5.html">
+ <span class="dropdown-text">Day 5 · Guard — proof, governance, capstone</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-practice" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Practice</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-practice">    
+        <li>
+    <a class="dropdown-item" href="../gallery.html">
+ <span class="dropdown-text">The brief gallery</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../prompts.html">
+ <span class="dropdown-text">Prompt patterns</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../glossary.html">
+ <span class="dropdown-text">Glossary</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../platform/index.html"> 
+<span class="menu-text">Platform</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../slides.html" aria-current="page"> 
+<span class="menu-text">Slides</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../guide.html"> 
+<span class="menu-text">Guide</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bongoadi/turning-data-into-business-growth"> <i class="bi bi-github" role="img" aria-label="Source on GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../day3.html">Day 3 — Seeing, forecasting, segmenting</a></li><li class="breadcrumb-item"><a href="../sessions/3-5-propensity-and-leakage.html">Propensity and the leak</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">The programme</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Turning Data into Business Growth</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../how-this-works.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How this programme works</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Before Monday — setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datasets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The data room</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capstone brief and rubric</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../after.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">After Friday — 30 / 60 / 90</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../faculty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Faculty</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../day1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 1 — Strategy, value and what AI actually changed</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/1-1-competing-on-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Competing on analytics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/1-2-kpi-tree.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The KPI tree</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/1-3-sizing-the-prize.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sizing the prize</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/1-4-what-ai-changed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What AI actually changed</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/1-5-where-data-lives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Where the data lives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/1-6-lab-charter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 1 · The use-case charter</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../day2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 2 — Getting data you can trust</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/2-1-sql-lingua-franca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SQL as the lingua franca</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/2-2-laptop-warehouse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The laptop warehouse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/2-3-excel-bridge.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Excel as the bridge</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/2-4-joins-that-lie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Joins that lie</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/2-5-data-quality-contract.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data quality as a contract</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/2-6-lab-pipeline.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 2 · The pipeline that reruns</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../day3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 3 — Seeing, forecasting, segmenting</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/3-1-eda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What is odd here?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/3-2-charts-that-survive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Charts that survive a board room</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/3-3-forecasting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forecasting with intervals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/3-4-segmentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Segmentation you can act on</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/3-5-propensity-and-leakage.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Propensity and the leak</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/3-6-lab-forecast-market.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 3 · The forecast market</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../day4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 4 — Unstructured data and the executive narrative</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/4-1-text-as-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Text as data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/4-2-dashboards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboards that get used</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/4-3-reproducible-reporting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">One source, five outputs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/4-4-typesetting-engine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The engine under the PDF</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/4-5-executive-narrative.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The executive narrative</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/4-6-lab-one-number-brief.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 4 · The one-number brief</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../day5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 5 — Proof, governance and capstone</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/5-1-correlation-contribution-cause.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Correlation, contribution, cause</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/5-2-experiments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Experiments that settle arguments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/5-3-quasi-experiments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">When you cannot randomise</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/5-4-governance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Governance you can actually run</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/5-5-operating-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The operating model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/5-6-capstone-defence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capstone · Defence</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Practice and reference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gallery.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The brief gallery</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prompts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prompt patterns</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../readings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Participant guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#build-it-first-and-let-it-be-too-good" id="toc-build-it-first-and-let-it-be-too-good" class="nav-link active" data-scroll-target="#build-it-first-and-let-it-be-too-good">Build it first, and let it be too good</a></li>
+  <li><a href="#before-anything-else-run-the-leakage-test" id="toc-before-anything-else-run-the-leakage-test" class="nav-link" data-scroll-target="#before-anything-else-run-the-leakage-test">Before anything else, run the leakage test</a></li>
+  <li><a href="#evaluate-in-business-terms" id="toc-evaluate-in-business-terms" class="nav-link" data-scroll-target="#evaluate-in-business-terms">Evaluate in business terms</a></li>
+  <li><a href="#choosing-the-threshold" id="toc-choosing-the-threshold" class="nav-link" data-scroll-target="#choosing-the-threshold">Choosing the threshold</a></li>
+  <li><a href="#the-survivorship-trap-next-door" id="toc-the-survivorship-trap-next-door" class="nav-link" data-scroll-target="#the-survivorship-trap-next-door">The survivorship trap next door</a></li>
+  <li><a href="#takeaways" id="toc-takeaways" class="nav-link" data-scroll-target="#takeaways">Takeaways</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../day3.html">Day 3 — Seeing, forecasting, segmenting</a></li><li class="breadcrumb-item"><a href="../sessions/3-5-propensity-and-leakage.html">Propensity and the leak</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Propensity and the leak</h1>
+<p class="subtitle lead">The churn model that scored 0.98, and why that should have frightened you — Session 3.5, 45 minutes</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<script>document.body.setAttribute("data-tdbg-session","3.5");</script>
+<div class="hex-pair">
+  <img src="../assets/logo/bongo_ai_hex.svg" alt="bongo.ai">
+  <img src="../assets/logo/move_model.svg" alt="Model it">
+</div>
+<div class="tdbg-box tdbg-aim">
+<p><span class="lbl">Aim</span></p>
+<p>By the end of this session you can build a propensity model, evaluate it in business terms rather than statistical ones, choose an action threshold from capacity and economics, and — above all — detect target leakage, which is the single most common reason a model that performed brilliantly in development performs terribly in production.</p>
+</div>
+<section id="build-it-first-and-let-it-be-too-good" class="level2">
+<h2 class="anchored" data-anchor-id="build-it-first-and-let-it-be-too-good">Build it first, and let it be too good</h2>
+<p>A <strong>propensity model</strong> is simply a model that estimates, for each customer, the probability that something will happen — that they will leave, buy, default or respond. It produces a number between 0 and 1 for every row, and the whole commercial value of it lies in what you do with that ranking afterwards.</p>
+<p>Build one now, before reading further. It matters that you see the result before you see the explanation.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>bank <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/bank_customers.csv"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">churned =</span> <span class="fu">factor</span>(churned_90d, <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"yes"</span>, <span class="st">"no"</span>)))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>split <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(bank, <span class="at">prop =</span> <span class="fl">0.75</span>, <span class="at">strata =</span> churned)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> <span class="fu">training</span>(split); test <span class="ot">&lt;-</span> <span class="fu">testing</span>(split)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(churned <span class="sc">~</span> tenure_months <span class="sc">+</span> age <span class="sc">+</span> products_held <span class="sc">+</span> avg_balance_ngn <span class="sc">+</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                digital_engagement_score <span class="sc">+</span> txns_last_90d <span class="sc">+</span> complaints_last_12m <span class="sc">+</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                salary_domiciled <span class="sc">+</span> nps_last_survey <span class="sc">+</span> segment <span class="sc">+</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                closure_form_started,                 <span class="co"># &lt;- everything available</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> train) <span class="sc">|&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_log</span>(avg_balance_ngn, <span class="at">base =</span> <span class="dv">10</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_dummy</span>(<span class="fu">all_nominal_predictors</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>())</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">|&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_recipe</span>(rec) <span class="sc">|&gt;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(<span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"glm"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(train)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">augment</span>(fit, test) <span class="sc">|&gt;</span> <span class="fu">roc_auc</span>(churned, .pred_yes)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 0.984</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The number at the bottom is the <strong>AUC</strong>, or area under the ROC curve. In plain terms it answers one question: if you pick a customer who churned and a customer who did not, entirely at random, how often does the model give the churner the higher score? An AUC of 0.5 means the model is doing no better than a coin, and 1.0 means it never gets that comparison wrong.</p>
+<p><strong>0.984</strong>, then, means the model wins that comparison roughly ninety-eight times in a hundred. In a churn context that is extraordinary. Most production churn models in retail banking live between 0.70 and 0.80, and a team that moved from 0.74 to 0.79 would reasonably regard it as a good quarter’s work.</p>
+<p>Which is the moment to slow down rather than to write the email. A result that far outside the normal range is telling you something, and the something is usually about the data rather than the modelling.</p>
+</section>
+<section id="before-anything-else-run-the-leakage-test" class="level2">
+<h2 class="anchored" data-anchor-id="before-anything-else-run-the-leakage-test">Before anything else, run the leakage test</h2>
+<div class="tdbg-box tdbg-exec">
+<p><span class="lbl">The only leakage test you need</span></p>
+<p>Take the list of features, go down it one at a time, and ask a single question of each:</p>
+<blockquote class="blockquote">
+<p><strong>Would I have known this at the moment I needed to act?</strong></p>
+</blockquote>
+<p>Note what the question is <em>not</em>. It is not “is this correlated with the outcome” — you hope everything is. It is not “is this statistically significant”. It is a question about <strong>time</strong>: at the moment you would score the customer and decide whether to call them, does this value exist yet, in the system, in the form the model saw it?</p>
+<p>Going down the column list one at a time takes about two minutes, and it is the highest return on two minutes anywhere in this course.</p>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Known at scoring time?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>tenure_months</code></td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td><code>age</code>, <code>segment</code>, <code>branch_state</code></td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td><code>products_held</code>, <code>avg_balance_ngn</code></td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td><code>digital_engagement_score</code>, <code>txns_last_90d</code></td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td><code>complaints_last_12m</code></td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td><code>salary_domiciled</code></td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td><code>nps_last_survey</code></td>
+<td>Yes, if the survey predates the scoring date — <strong>check</strong></td>
+</tr>
+<tr class="even">
+<td><code>closure_form_started</code></td>
+<td><strong>No.</strong> The form is filled the week they leave.</td>
+</tr>
+</tbody>
+</table>
+<p>The last row is the one that matters. A closure form is not a <em>predictor</em> of leaving; it is part of the act of leaving. Its presence in the training table is not evidence of carelessness by whoever built the extract — they were asked for the customer record and they supplied it, complete. The column belongs in the warehouse. It simply does not belong in a model that has to run before the customer has decided anything.</p>
+<p>This is what <strong>target leakage</strong> means: information about the outcome has leaked backwards into the features, so the model is partly being told the answer rather than predicting it.</p>
+<p>Drop the column and refit.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rec_clean <span class="ot">&lt;-</span> rec <span class="sc">|&gt;</span> <span class="fu">step_rm</span>(closure_form_started)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ... refit ...</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; roc_auc 0.766</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The AUC falls from <strong>0.984 to 0.766</strong> — from a result nobody in retail banking achieves to a result that is entirely ordinary. And the ordinary one is the real one. A model at 0.766 is useful, deployable, and roughly what the published literature on retail churn would lead you to expect. Nothing has been lost by removing the column, because the performance it was providing was never available at the moment you needed it.</p>
+<p>Now do the thing that almost nobody does, and that turns this from an anecdote into a discipline. <strong>Simulate production.</strong> At the moment of scoring, nobody has started a closure form yet — so set that column to zero for everybody, re-score the held-out customers, and see what the leaked model would actually have done in service.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>test_prod <span class="ot">&lt;-</span> test <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">closure_form_started =</span> <span class="dv">0</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">augment</span>(fit, test_prod) <span class="sc">|&gt;</span> <span class="fu">roc_auc</span>(churned, .pred_yes)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 0.768</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">augment</span>(fit, test_prod) <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">mean_predicted =</span> <span class="fu">mean</span>(.pred_yes))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 0.009      &lt;- against a true base rate of 0.106</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="tdbg-box tdbg-salt">
+<p><span class="lbl">What actually breaks is not what you expect</span></p>
+<p>Look carefully at the first of those two numbers, because it is the counter-intuitive one. The leaked model’s <strong>ranking survives</strong>: AUC 0.768 in simulated production, essentially the same as the clean model’s 0.766. The order it puts customers in is still broadly right. If all you ever do with the scores is sort them and call the top 600, you might run this model for a year and never notice anything was wrong.</p>
+<p>What collapses is <strong>calibration</strong> — the correspondence between a predicted probability and the real-world frequency it claims to describe. The model learned, quite correctly given its training data, that almost nobody churns unless a closure form has been started. Strip the form away and every predicted probability falls to the floor. Mean predicted risk comes out at <strong>0.9%</strong> against a true base rate of <strong>10.6%</strong>, so the model is understating the risk in the book by better than a factor of ten.</p>
+<p>That is invisible until somebody multiplies the probability by something else — and sooner or later somebody always does. Expected value at risk, provisioning, a retention budget, an economic threshold: every one of those is a probability multiplied by a naira figure, and every one of them is now out by an order of magnitude while the model still looks fine on the metric everybody checks.</p>
+<p>The general point is worth carrying away from the specific example. <strong>Discrimination and calibration are different properties of a model, and leakage can destroy one while leaving the other intact.</strong> If your model feeds a ranking, discrimination is what you need. If it feeds an arithmetic decision, calibration is what you need — and it is the one nobody reports.</p>
+</div>
+<div class="tdbg-box tdbg-salt">
+<p><span class="lbl">Leakage does not announce itself as an error</span></p>
+<p>It announces itself as <strong>success</strong>, and that is precisely what makes it so durable.</p>
+<p>An error that produces a bad result gets investigated. Nobody investigates a result that exceeded expectations — there is no meeting scheduled for “the model worked better than we hoped”, and the natural response to 0.98 is congratulation rather than suspicion. That is not a failing of individual reviewers; it is how review processes are built, and it is why leakage survives them so reliably.</p>
+<p>The habit worth installing, in yourself and in your team, is a small reversal of that instinct: <strong>an unexpectedly good result is a bug report until proven otherwise.</strong> It costs an hour when you are right and saves a deployment when you are not.</p>
+<p>Four forms of leakage turn up often enough in real organisations to be worth recognising by shape:</p>
+<ol type="1">
+<li><strong>Post-outcome fields.</strong> Closure forms, exit interviews, cancellation reason codes, write-off flags. These are populated <em>because</em> the outcome happened, which is exactly the direction of causation you are trying to model.</li>
+<li><strong>Updated-in-place fields.</strong> A <code>customer_status</code> column that gets overwritten each time it changes. Your historical training data then contains today’s status rather than the status as at the training date, and today’s status knows how the story ended.</li>
+<li><strong>Aggregates computed over the whole period</strong>, including the future. An “average spend” figure that silently includes the months after the customer churned — during which they spent nothing — is a very effective churn predictor and a completely useless one.</li>
+<li><strong>The identifier that encodes the answer.</strong> Account numbers issued in blocks, where a prefix happens to correspond to a closure batch. This sounds far-fetched until it happens to you.</li>
+</ol>
+</div>
+</section>
+<section id="evaluate-in-business-terms" class="level2">
+<h2 class="anchored" data-anchor-id="evaluate-in-business-terms">Evaluate in business terms</h2>
+<p>AUC is a technical summary, and it belongs in the appendix. It is not a business case, and it is not the number you present, because nobody in the room can convert it into a decision.</p>
+<p><strong>Lift</strong> is the number that can be converted. If your retention team has capacity to call 600 customers a month, the only question that matters is: <em>how many more churners do I reach in the top 600 by score than I would by calling 600 people at random?</em></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>scored <span class="ot">&lt;-</span> <span class="fu">augment</span>(fit_clean, test) <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(.pred_yes)) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rank =</span> <span class="fu">row_number</span>(),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">decile =</span> <span class="fu">ntile</span>(rank, <span class="dv">10</span>),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">churner =</span> churned <span class="sc">==</span> <span class="st">"yes"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>base_rate <span class="ot">&lt;-</span> <span class="fu">mean</span>(scored<span class="sc">$</span>churner)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>scored <span class="sc">|&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(decile) <span class="sc">|&gt;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">customers =</span> <span class="fu">n</span>(),</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">churners  =</span> <span class="fu">sum</span>(churner),</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">rate      =</span> <span class="fu">mean</span>(churner),</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">lift      =</span> <span class="fu">mean</span>(churner) <span class="sc">/</span> base_rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>That block sorts everybody by score, cuts the sorted list into ten equal groups, and reports the churn rate in each. Dividing each group’s rate by the overall base rate gives the lift: a lift of 1.0 means the group is no better than random, and a lift of 3.0 means you are finding three times as many churners there as chance would give you.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../assets/img/leakage_lift.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Cumulative gains. Contact the top three deciles and you reach roughly 66% of the churners."><img src="../assets/img/leakage_lift.png" class="img-fluid figure-img" alt="Left: two bars of held-out AUC — 0.984 for the model with the leaking column, 0.766 for the same model without it. Right: a cumulative gains curve for the honest model, reaching about 66 percent of churners in the top three deciles."></a></p>
+<figcaption>Cumulative gains. Contact the top three deciles and you reach roughly 66% of the churners.</figcaption>
+</figure>
+</div>
+<p>The right-hand panel is the <strong>cumulative gains curve</strong>, which answers the same question cumulatively: work down the ranked list and, at each point, what share of all the churners have you covered? Reaching roughly 66% of the churners in the top three deciles means that contacting 30% of the book finds two thirds of the people who were going to leave.</p>
+<p>The top decile has a churn rate around 3.0 times the base rate. Translated out of the jargon: <em>calling the top 10% by score finds three times as many at-risk customers as calling 10% at random.</em> That sentence is what goes in the memo, because a reader can act on it without knowing what a model is. The AUC stays in the appendix, where somebody technical can check it.</p>
+</section>
+<section id="choosing-the-threshold" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-the-threshold">Choosing the threshold</h2>
+<p>At some point the ranking has to become a rule: call this customer, do not call that one. The threshold that gets used by default is 0.5 — call anybody the model thinks is more likely than not to leave — and it is worth being clear that this number has no business content whatsoever. It is a mathematical midpoint, inherited from the way classification is taught, and it survives because nothing in the tooling prompts anybody to change it.</p>
+<p>A defensible threshold comes from three things instead:</p>
+<ol type="1">
+<li><strong>Capacity.</strong> Six hundred calls a month is six hundred calls a month. If capacity is the binding constraint, the threshold is simply “the top 600 by score” and the probability attached to the 600th customer is incidental.</li>
+<li><strong>Economics.</strong> What a call costs, fully loaded, against what a successful save is worth.</li>
+<li><strong>Asymmetry.</strong> Missing a valuable churner costs far more than making an unnecessary call, and the ratio between those two is usually large.</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Threshold from economics rather than from convention.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>cost_of_call        <span class="ot">&lt;-</span> <span class="dv">2500</span>          <span class="co"># ₦, fully loaded</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>value_of_save       <span class="ot">&lt;-</span> <span class="dv">180000</span>        <span class="co"># ₦, annual contribution</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>prob_call_works     <span class="ot">&lt;-</span> <span class="fl">0.30</span>          <span class="co"># measure this. Do not assume it.</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Call is worth it when:  p(churn) * value * effectiveness &gt; cost</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>threshold <span class="ot">&lt;-</span> cost_of_call <span class="sc">/</span> (value_of_save <span class="sc">*</span> prob_call_works)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(threshold, <span class="dv">4</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 0.0463   -&gt; call anyone above a 4.6% churn probability</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The arithmetic is worth doing by hand once, because it is the kind of calculation a board can follow. A call costs ₦2,500. A save is worth ₦180,000 of annual contribution, but only 30% of calls actually save anybody, so the <em>expected</em> return on a call to a customer who is certain to leave is 180,000 × 0.30 = ₦54,000. Dividing the ₦2,500 cost by that ₦54,000 expected benefit gives 0.0463 — meaning the call breaks even at a churn probability of about 4.6%, and is profitable above it. Not 50%, and not by a small margin: an order of magnitude lower.</p>
+<div class="tdbg-box tdbg-exec">
+<p><span class="lbl">And now notice that the threshold does not bind</span></p>
+<p>Apply that 4.6% cut-off to the book and something awkward emerges. <strong>64% of the book scores above 4.6%</strong> — roughly 7,700 customers, against a stated capacity of 600 calls a month. The economic threshold selects nearly thirteen times more people than anyone can ring.</p>
+<p>So the economic threshold is not really the cut-off. <strong>Capacity is.</strong> What the 4.6% figure actually tells you is the <em>shadow price of capacity</em>: every customer sitting between the 600th-ranked name and the 4.6% line is somebody it would have been profitable to call and you could not. Multiply that gap by the expected value per call and you have a costed business case for a larger retention team — which is a considerably more interesting number than the threshold, and one almost nobody computes because the threshold question feels like where the analysis ends.</p>
+<p>Two rules follow, and they are worth settling before the argument starts:</p>
+<ul>
+<li><strong>When capacity binds</strong>, rank and take the top N. The probability is a sorting key and nothing more.</li>
+<li><strong>When capacity does not bind</strong>, the economic threshold is the cut-off — and you should be asking why you have idle retention capacity in the first place.</li>
+</ul>
+<p>Work out which case you are in before you argue about where the line goes.</p>
+</div>
+<div class="tdbg-box tdbg-exec">
+<p><span class="lbl">Three numbers, three different things</span></p>
+<p>Deciding who to call actually requires three quantities, and it is easy to build only the first:</p>
+<ul>
+<li><strong>Probability of the event</strong> — will they leave?</li>
+<li><strong>Value at stake</strong> — does it matter to us if they do?</li>
+<li><strong>Probability the intervention works</strong> — can we do anything about it?</li>
+</ul>
+<p>Most propensity models compute the first and are then deployed as though they had computed all three. The consequence is specific and predictable: a customer who is certain to leave and cannot be persuaded scores at the very top of a probability-ranked list, and is precisely the person least worth spending a call on. A naive high-probability-first targeting rule fills the call list with exactly those people, which is one reason retention programmes so often report disappointing effectiveness against a model that was working perfectly well.</p>
+<p>Rank by the <strong>product</strong> of the three, not by the probability alone. The third term is the hardest to obtain, because it has to be measured with a holdout rather than assumed — which is Friday’s subject, in <a href="../sessions/5-2-experiments.html">5.2</a>.</p>
+</div>
+</section>
+<section id="the-survivorship-trap-next-door" class="level2">
+<h2 class="anchored" data-anchor-id="the-survivorship-trap-next-door">The survivorship trap next door</h2>
+<p>Leakage is about <em>time</em>. Its close relative is about <em>membership</em>: which rows made it into the file at all. Open <code>b2b_funnel.csv</code> and try to find what drives a win.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>funnel <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/b2b_funnel.csv"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>funnel <span class="sc">|&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(sales_touchpoints)) <span class="sc">|&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">cor =</span> <span class="fu">cor</span>(sales_touchpoints, closed_won))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>More touchpoints, more wins. The correlation is clear, and the conclusion looks obvious: <strong>tell the sales team to do more touchpoints.</strong> Before you do, work out what had to be true for a row to appear in that calculation at all.</p>
+<details class="tdbg-sol">
+<summary>
+Why that conclusion is worthless
+</summary>
+<div class="body">
+<p><code>sales_touchpoints</code> is blank on <strong>86%</strong> of rows. It was back-filled from the CRM only for opportunities that reached SQL stage.</p>
+<p>The <code>filter()</code> in that first block therefore did more than drop some missing values. It restricted the analysis to a population defined by <em>having already qualified</em>. Of course those opportunities convert more often — qualification is what the filter selected on.</p>
+<p>The question to ask of every dataset is this: <strong>what had to be true for a row to exist in this file?</strong> If the answer involves having already succeeded partway through the process, then every conclusion you draw is a conclusion about survivors.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>funnel <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="at">has_touchpoints =</span> <span class="sc">!</span><span class="fu">is.na</span>(sales_touchpoints)) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(), <span class="at">win_rate =</span> <span class="fu">mean</span>(closed_won))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The win rate among rows <em>with</em> touchpoints recorded is <strong>31%</strong>. Among rows without them it is <strong>0%</strong> — not low, but exactly zero — because a lead that never reached SQL stage could not be won at all.</p>
+<p>So the correlation is real, and it is real <em>within a population defined by having already qualified</em>. Both of those statements are true simultaneously, and that is what makes survivorship harder to spot than an ordinary error: nothing in the arithmetic is wrong, no assumption has been violated, and no diagnostic will flag it.</p>
+<p>The question that finds it is not a statistical one. It is: <strong>what had to be true for a row to have this column filled in?</strong></p>
+</div>
+</details>
+<div class="tdbg-box tdbg-lab">
+<p><span class="lbl">Core lab · 20 minutes</span></p>
+<ul class="tdbg-check" data-key="3.5core">
+<li>
+Build the churn model with everything. Record the AUC.
+</li>
+<li>
+Run the leakage test on every column, refit clean, and note the size of the drop.
+</li>
+<li>
+Build the decile lift table, and compute your threshold from capacity and economics rather than from 0.5.
+</li>
+<li>
+Rank by probability × value × effectiveness and compare the top 600 to the probability-only top 600. How many names differ?
+</li>
+</ul>
+<p>That final comparison is the one worth reporting back to the room. The two lists usually overlap much less than people expect, and the difference between them is the difference between a model that ranks risk and a model that ranks <em>opportunity</em>.</p>
+</div>
+<div class="tdbg-box tdbg-lab">
+<p><span class="lbl">Stretch</span></p>
+<p>Run the same exercise on <code>hr_attrition.csv</code> and find <strong>both</strong> traps:</p>
+<ul>
+<li>the post-outcome column (<code>exit_interview_booked</code>, correlation 0.88 with the outcome), and</li>
+<li>the strong, legitimate-looking predictor that is a proxy for a protected characteristic.</li>
+</ul>
+<p>The second is the harder and more consequential of the two, because it does not fail any technical test at all — the feature is genuinely predictive, genuinely available at scoring time, and genuinely improves the model.</p>
+<p>Then write the two-sentence answer you would give a risk officer who asks whether you would deploy it. Bring that answer to <a href="../sessions/5-4-governance.html">5.4</a>. We will read some of them out.</p>
+</div>
+<div class="tdbg-box tdbg-sceptic">
+<p><span class="lbl">Copilot check</span></p>
+<p>An assistant will build this model competently and will not detect the leak. That is not a weakness in the model; it is a boundary. Detecting the leak requires knowing <em>when a business process fills a field</em>, which is knowledge about how your operations run rather than knowledge about the shape of your data — and nothing in the file records it.</p>
+<p>What it <em>will</em> do, if you supply that missing piece:</p>
+<blockquote class="blockquote">
+<p>Here are the columns in my training data and a one-line description of what each one means and when it is populated in the business process. Identify any feature that could only be known after the outcome occurred, or that is a proxy for a protected characteristic. Explain your reasoning for each flag.</p>
+</blockquote>
+<p>The load-bearing phrase there is <strong>“and when it is populated in the business process”</strong>. Supply it and the assistant becomes genuinely good at this, often catching columns a person would skim past. Withhold it and no amount of prompting will help, because the information simply is not present.</p>
+<p>That generalises well beyond leakage: an assistant’s usefulness on any given task is roughly proportional to how much of the surrounding business context you were willing to type.</p>
+</div>
+</section>
+<section id="takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="takeaways">Takeaways</h2>
+<ol type="1">
+<li>An unexpectedly good result is a bug report until proven otherwise.</li>
+<li>The leakage test is one question about time: would I have known this in time?</li>
+<li>Report lift and gains, not AUC. Lift is a sentence a board understands.</li>
+<li>The threshold comes from capacity and economics. It is never 0.5.</li>
+<li>Rank by probability × value × effectiveness.</li>
+<li>Ask what had to be true for a row to exist in the file.</li>
+</ol>
+<hr>
+<div class="tdbg-box tdbg-read">
+<p><span class="lbl">Further reading — all free</span></p>
+<p><strong>Go deeper</strong> · <a href="https://developers.google.com/machine-learning/guides/rules-of-ml">Rules of Machine Learning: Best Practices for ML Engineering</a> — Zinkevich, <em>Google Developers</em>. ~40 min.<br>
+Rules 29 to 37 on training–serving skew are the industrial version of the leakage problem this session dramatises.</p>
+</div>
+<p><strong>Previous:</strong> <a href="../sessions/3-4-segmentation.html">← 3.4 Segmentation you can act on</a> · <strong>Next:</strong> <a href="../sessions/3-6-lab-forecast-market.html">Lab 3 · The forecast market →</a></p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<!-- ==========================================================================
+     Turning Data into Business Growth — the small webapp layer.
+
+     Three jobs, no dependencies:
+       1. Track which sessions and labs a participant has completed, in their
+          own browser, and show it back to them as a week progress bar.
+       2. Give every lab checklist a persistent tick box.
+       3. Keep the "what did I actually do this week" view honest, because on
+          Friday people have to say what they finished.
+
+     Nothing leaves the browser. There is no analytics call anywhere in this
+     file, which is deliberate on a programme that spends a day on data
+     governance.
+     ========================================================================== -->
+<style>
+  .tdbg-progress {
+    position: sticky; top: 0; z-index: 900;
+    height: 3px; background: rgba(11,28,63,.08); margin: 0 0 .2rem;
+  }
+  .tdbg-progress > i {
+    display: block; height: 100%; width: 0;
+    background: linear-gradient(90deg,#2E3A6E,#16549B,#00AFEF,#009F8B,#C4A060);
+    transition: width .5s ease;
+  }
+  .tdbg-done-bar {
+    display: flex; align-items: center; gap: .8rem; flex-wrap: wrap;
+    border: 1px solid #DFE3EC; border-left: 4px solid #009F8B;
+    border-radius: 8px; padding: .75rem 1rem; margin: 2.2rem 0 1rem;
+    background: #FBFDFC;
+  }
+  .tdbg-done-bar button {
+    font: 600 .82rem/1 "Inter", system-ui, sans-serif;
+    border: 1px solid #009F8B; background: #009F8B; color: #fff;
+    border-radius: 6px; padding: .52rem .9rem; cursor: pointer;
+  }
+  .tdbg-done-bar button[aria-pressed="true"] { background: #fff; color: #00695C; }
+  .tdbg-done-bar button:focus-visible { outline: 3px solid #00AFEF; outline-offset: 2px; }
+  .tdbg-done-bar .msg { font-size: .84rem; color: #55627A; }
+
+  .tdbg-check { list-style: none; padding-left: 0; }
+  .tdbg-check li {
+    display: flex; gap: .6rem; align-items: flex-start;
+    padding: .35rem 0; border-bottom: 1px dashed #EAEEF5;
+  }
+  .tdbg-check input[type=checkbox] {
+    margin-top: .32rem; width: 1.02rem; height: 1.02rem; accent-color: #009F8B; flex: none;
+  }
+  .tdbg-check li.on > span { color: #55627A; text-decoration: line-through; }
+
+  .tdbg-tracker { border-collapse: collapse; width: 100%; font-size: .87rem; }
+  .tdbg-tracker td, .tdbg-tracker th { padding: .38rem .5rem; border-bottom: 1px solid #EAEEF5; text-align: left; }
+  .tdbg-tracker thead th { font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: #66707F; }
+  .tdbg-tracker th.n { font-family: "IBM Plex Mono", monospace; font-size: .76rem; color: #55627A; width: 4.4rem; font-weight: 500; }
+  .tdbg-tracker td.n { font-family: "IBM Plex Mono", monospace; font-size: .76rem; color: #55627A; width: 4.4rem; }
+  .tdbg-tracker td.s { text-align: right; width: 6rem; font-size: .78rem; color: #55627A; }
+  .tdbg-tracker tr.on td.s { color: #00695C; font-weight: 600; }
+  .tdbg-reset {
+    font: 500 .78rem/1 "Inter", system-ui, sans-serif; background: none;
+    border: 1px solid #DFE3EC; border-radius: 6px; padding: .4rem .7rem;
+    color: #55627A; cursor: pointer;
+  }
+  details.tdbg-sol > summary {
+    cursor: pointer; font: 600 .84rem/1.4 "Inter", system-ui, sans-serif;
+    color: #16549B; padding: .55rem .8rem; border: 1px solid #DFE3EC;
+    border-radius: 7px; background: #F7F9FC; list-style: none;
+  }
+  details.tdbg-sol > summary::before { content: "▸  "; }
+  details.tdbg-sol[open] > summary::before { content: "▾  "; }
+  details.tdbg-sol[open] > summary { border-radius: 7px 7px 0 0; border-bottom: 0; }
+  details.tdbg-sol > div.body {
+    border: 1px solid #DFE3EC; border-top: 0; border-radius: 0 0 7px 7px;
+    padding: .3rem 1rem .1rem;
+  }
+  details.tdbg-sol { margin: 1.1rem 0; }
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  var KEY = "tdbg.progress.v1";
+
+  // Every trackable unit on the site, in week order. Keep in sync with
+  // _quarto.yml — the tracker page renders straight from this list.
+  var UNITS = [
+    ["1.1", "Competing on analytics",            "sessions/1-1-competing-on-analytics.html"],
+    ["1.2", "The KPI tree",                      "sessions/1-2-kpi-tree.html"],
+    ["1.3", "Sizing the prize",                  "sessions/1-3-sizing-the-prize.html"],
+    ["1.4", "What AI actually changed",          "sessions/1-4-what-ai-changed.html"],
+    ["1.5", "Where the data lives",              "sessions/1-5-where-data-lives.html"],
+    ["1.6", "Lab 1 · Use-case charter",          "sessions/1-6-lab-charter.html"],
+    ["2.1", "SQL as the lingua franca",          "sessions/2-1-sql-lingua-franca.html"],
+    ["2.2", "The laptop warehouse",              "sessions/2-2-laptop-warehouse.html"],
+    ["2.3", "Excel as the bridge",               "sessions/2-3-excel-bridge.html"],
+    ["2.4", "Joins that lie",                    "sessions/2-4-joins-that-lie.html"],
+    ["2.5", "Data quality as a contract",        "sessions/2-5-data-quality-contract.html"],
+    ["2.6", "Lab 2 · The pipeline that reruns",  "sessions/2-6-lab-pipeline.html"],
+    ["3.1", "What is odd here?",                 "sessions/3-1-eda.html"],
+    ["3.2", "Charts that survive a board",       "sessions/3-2-charts-that-survive.html"],
+    ["3.3", "Forecasting with intervals",        "sessions/3-3-forecasting.html"],
+    ["3.4", "Segmentation you can act on",       "sessions/3-4-segmentation.html"],
+    ["3.5", "Propensity and the leak",           "sessions/3-5-propensity-and-leakage.html"],
+    ["3.6", "Lab 3 · The forecast market",       "sessions/3-6-lab-forecast-market.html"],
+    ["4.1", "Text as data",                      "sessions/4-1-text-as-data.html"],
+    ["4.2", "LLM classification at scale",       "sessions/4-2-llm-classification.html"],
+    ["4.3", "Dashboards that get used",          "sessions/4-3-dashboards.html"],
+    ["4.4", "One source, five outputs",          "sessions/4-4-reproducible-reporting.html"],
+    ["4.5", "The executive narrative",           "sessions/4-5-executive-narrative.html"],
+    ["4.6", "Lab 4 · The one-number brief",      "sessions/4-6-lab-one-number-brief.html"],
+    ["5.1", "Correlation, contribution, cause",  "sessions/5-1-correlation-contribution-cause.html"],
+    ["5.2", "Experiments that settle arguments", "sessions/5-2-experiments.html"],
+    ["5.3", "When you cannot randomise",         "sessions/5-3-quasi-experiments.html"],
+    ["5.4", "Governance you can actually run",   "sessions/5-4-governance.html"],
+    ["5.5", "The operating model",               "sessions/5-5-operating-model.html"],
+    ["5.6", "Capstone · Defence",                "sessions/5-6-capstone-defence.html"]
+  ];
+
+  // localStorage can throw outright in a private window or with site data
+  // blocked, so every read and write is guarded and the page renders fine
+  // with nothing stored.
+  function load() {
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      return raw ? (JSON.parse(raw) || {}) : {};
+    } catch (e) { return {}; }
+  }
+  function save(state) {
+    try { window.localStorage.setItem(KEY, JSON.stringify(state)); }
+    catch (e) { /* nothing to do; the page still works */ }
+  }
+
+  var state = load();
+
+  function pctDone() {
+    var n = 0;
+    for (var i = 0; i < UNITS.length; i++) if (state["s:" + UNITS[i][0]]) n++;
+    return { done: n, total: UNITS.length, pct: Math.round(100 * n / UNITS.length) };
+  }
+
+  // ------------------------------------------------------- progress ribbon
+  function ribbon() {
+    var host = document.querySelector("#quarto-content") || document.body;
+    var bar = document.createElement("div");
+    bar.className = "tdbg-progress";
+    bar.setAttribute("role", "progressbar");
+    bar.setAttribute("aria-label", "Programme progress");
+    bar.innerHTML = "<i></i>";
+    host.insertBefore(bar, host.firstChild);
+    paintRibbon();
+  }
+  function paintRibbon() {
+    var p = pctDone();
+    document.querySelectorAll(".tdbg-progress > i").forEach(function (el) {
+      el.style.width = p.pct + "%";
+    });
+    document.querySelectorAll(".tdbg-progress").forEach(function (el) {
+      el.setAttribute("aria-valuenow", String(p.pct));
+      el.setAttribute("aria-valuemin", "0");
+      el.setAttribute("aria-valuemax", "100");
+      el.title = p.done + " of " + p.total + " sessions marked complete";
+    });
+  }
+
+  // ------------------------------------------- "mark this session complete"
+  function doneBar() {
+    var id = document.body.getAttribute("data-tdbg-session");
+    if (!id) return;
+    var main = document.querySelector("main.content");
+    if (!main) return;
+
+    var wrap = document.createElement("div");
+    wrap.className = "tdbg-done-bar";
+    var btn = document.createElement("button");
+    var msg = document.createElement("span");
+    msg.className = "msg";
+    wrap.appendChild(btn);
+    wrap.appendChild(msg);
+    main.appendChild(wrap);
+
+    function paint() {
+      var on = !!state["s:" + id];
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.textContent = on ? "✓ Marked complete" : "Mark session " + id + " complete";
+      var p = pctDone();
+      msg.textContent = p.done + " of " + p.total + " sessions done · " + p.pct + "% of the week";
+    }
+    btn.addEventListener("click", function () {
+      state["s:" + id] = !state["s:" + id];
+      save(state); paint(); paintRibbon();
+    });
+    paint();
+  }
+
+  // --------------------------------------------- persistent lab checklists
+  //
+  // Two things here are deliberate and were both got wrong first time.
+  //
+  // 1. The storage key is a hash of the item's *text*, not its index in the
+  //    list. Index keys look fine until somebody edits a lab — insert one step
+  //    at the top of a six-step checklist and every tick silently shifts down
+  //    to the wrong line, which is worse than losing them. Hashing the text
+  //    means an edited step loses its own tick (correct: it is a different
+  //    step now) and leaves its neighbours alone.
+  //
+  // 2. The checkbox is labelled with aria-labelledby pointing at the step's
+  //    own text, not an aria-label of "Mark step 3 complete". A screen reader
+  //    user tabbing a checklist should hear the step, exactly as a sighted
+  //    user reads it — "step 3" tells them nothing about what they are
+  //    ticking.
+  function hash32(s) {
+    // FNV-1a. Not cryptographic; it only has to be stable and collision-shy
+    // across a few hundred short strings in one page.
+    var h = 0x811c9dc5;
+    for (var i = 0; i < s.length; i++) {
+      h ^= s.charCodeAt(i);
+      h = (h + (h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24)) >>> 0;
+    }
+    return h.toString(36);
+  }
+
+  function checklists() {
+    document.querySelectorAll("ul.tdbg-check").forEach(function (ul, ui) {
+      var scope = ul.getAttribute("data-key") ||
+                  (document.body.getAttribute("data-tdbg-session") || "page") + ":" + ui;
+      var seen = {};
+      ul.querySelectorAll("li").forEach(function (li, li_i) {
+        var text = (li.textContent || "").replace(/\s+/g, " ").trim();
+
+        // Two genuinely identical steps in one list would collide, so the
+        // second occurrence gets a suffix. Rare, but silent if unhandled.
+        // Two identical steps in one list would collide. Disambiguate with the
+        // item's index only for the duplicates themselves, so a unique step's
+        // key never depends on its position -- which is the whole point of
+        // hashing the text in the first place.
+        var base = hash32(text);
+        seen[base] = (seen[base] || 0) + 1;
+        var sig = seen[base] > 1 ? base + "." + li_i : base;
+        var k = "c:" + scope + ":" + sig;
+
+        var span = document.createElement("span");
+        span.id = "tdbg-ck-" + scope.replace(/[^A-Za-z0-9_.-]/g, "_") + "-" + sig;
+        while (li.firstChild) span.appendChild(li.firstChild);
+
+        var box = document.createElement("input");
+        box.type = "checkbox";
+        box.checked = !!state[k];
+        box.setAttribute("aria-labelledby", span.id);
+
+        li.appendChild(box);
+        li.appendChild(span);
+        if (box.checked) li.classList.add("on");
+        box.addEventListener("change", function () {
+          state[k] = box.checked;
+          li.classList.toggle("on", box.checked);
+          save(state);
+        });
+      });
+    });
+  }
+
+  // ------------------------------------------------------- tracker table
+  function tracker() {
+    var host = document.getElementById("tdbg-tracker");
+    if (!host) return;
+    var depth = (location.pathname.indexOf("/sessions/") > -1) ? "../" : "";
+    var t = document.createElement("table");
+    t.className = "tdbg-tracker";
+    // A data table needs a caption and real column headers, or a screen reader
+    // announces thirty rows of three unlabelled cells.
+    var cap = document.createElement("caption");
+    cap.textContent = "Your progress through the thirty sessions";
+    cap.style.cssText = "text-align:left;font-weight:600;color:#55627A;" +
+                        "font-size:.84rem;padding:.2rem 0 .5rem";
+    t.appendChild(cap);
+    var thead = document.createElement("thead");
+    thead.innerHTML = '<tr>' +
+      '<th scope="col" class="n">Session</th>' +
+      '<th scope="col">Title</th>' +
+      '<th scope="col" class="s">Status</th></tr>';
+    t.appendChild(thead);
+    var tbody = document.createElement("tbody");
+    UNITS.forEach(function (u) {
+      var tr = document.createElement("tr");
+      var on = !!state["s:" + u[0]];
+      if (on) tr.className = "on";
+      var th = document.createElement("th");
+      th.scope = "row"; th.className = "n"; th.textContent = u[0];
+      tr.appendChild(th);
+      var td = document.createElement("td");
+      var a = document.createElement("a");
+      a.href = depth + u[2]; a.textContent = u[1];
+      td.appendChild(a); tr.appendChild(td);
+      var st = document.createElement("td");
+      st.className = "s"; st.textContent = on ? "complete" : "\u2014";
+      tr.appendChild(st);
+      tbody.appendChild(tr);
+    });
+    t.appendChild(tbody);
+    host.appendChild(t);
+
+    var p = pctDone();
+    var sum = document.createElement("p");
+    sum.style.marginTop = "1rem";
+    sum.innerHTML = "<strong>" + p.done + " of " + p.total + "</strong> sessions marked " +
+      "complete (" + p.pct + "%). This is stored in this browser only — it is not sent " +
+      "anywhere, and it will not follow you to another machine.";
+    host.appendChild(sum);
+
+    // Two-step, because one stray click used to wipe a week of ticks with no
+    // way back. The button becomes its own confirmation and reverts after
+    // five seconds if the person walks away from it.
+    var reset = document.createElement("button");
+    reset.className = "tdbg-reset";
+    reset.textContent = "Clear my progress";
+    var armed = false, timer = null;
+    reset.addEventListener("click", function () {
+      if (!armed) {
+        armed = true;
+        reset.textContent = "Clear everything? Click again to confirm";
+        reset.style.borderColor = "#B4443A";
+        reset.style.color = "#B4443A";
+        timer = window.setTimeout(function () {
+          armed = false;
+          reset.textContent = "Clear my progress";
+          reset.style.borderColor = "";
+          reset.style.color = "";
+        }, 5000);
+        return;
+      }
+      window.clearTimeout(timer);
+      state = {};
+      save(state);
+      location.reload();
+    });
+    host.appendChild(reset);
+  }
+
+  function boot() {
+    try { ribbon(); } catch (e) {}
+    try { doneBar(); } catch (e) {}
+    try { checklists(); } catch (e) {}
+    try { tracker(); } catch (e) {}
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+<!-- ==========================================================================
+     bongo.ai — the assistant that sits on every page of the site.
+
+     Two files make this work and they are deliberately separated:
+
+       this one   the widget. Static HTML/CSS/JS, no dependencies, no key.
+       chat-api/  a Cloudflare Worker that holds the API key and talks to
+                  Anthropic on the browser's behalf.
+
+     WHY THEY ARE SEPARATE
+
+     This site is static HTML hosted on GitHub Pages, so everything in this
+     file is delivered to the visitor's browser exactly as written. Anyone can
+     read it through View Source. That makes it the wrong place for an API key:
+     keys published this way are found by automated scanners within days and
+     spent by strangers, and no amount of encoding or obfuscation prevents it,
+     because the browser has to be able to undo whatever you did.
+
+     So the key lives on a small server instead, and this file simply asks that
+     server questions. The Worker in chat-api/ is that server.
+
+     GETTING IT RUNNING
+
+     Set ENDPOINT below to your deployed Worker's URL. Until you do, the widget
+     opens into a friendly panel explaining that it has not been configured
+     yet, rather than showing errors. That matters because this repository is
+     public, and many people who clone it will want to read the course without
+     ever setting up a backend of their own.
+     ========================================================================== -->
+<script>
+window.BONGO_CHAT_CONFIG = {
+  // The deployed Worker URL. Empty string = not configured; the widget says so.
+  //   e.g. "https://tdbg-chat.your-subdomain.workers.dev/chat"
+  ENDPOINT: "https://tdbg-chat.badi-933.workers.dev/chat",
+
+  // Cohort gate. The passphrase itself is NOT here — it is a secret on the
+  // Worker. This only decides whether to ask for one.
+  REQUIRE_PASSPHRASE: true,
+
+  // What the panel says before anyone types.
+  GREETING: "I can help with the statistics, the code, and the business " +
+            "judgement around both — including anything on this page. " +
+            "What are you working on?"
+};
+</script>
+
+<style>
+  :root {
+    --bongo-navy: #0E2A47;
+    --bongo-navy-lit: #173E63;
+    --bongo-gold: #C69B3E;
+    --bongo-cream: #FBF7EC;
+    --bongo-teal: #3E8C93;
+    --bongo-ink: #14202E;
+    --bongo-slate: #55627A;
+    --bongo-line: #DFE3EC;
+  }
+
+  /* ---------------------------------------------------------- the button -- */
+  .bongo-fab {
+    position: fixed; right: 20px; bottom: 20px; z-index: 2000;
+    width: 60px; height: 60px; padding: 0;
+    border: none; border-radius: 50%; cursor: pointer;
+    background: var(--bongo-navy);
+    box-shadow: 0 6px 22px rgba(11, 28, 63, .30), 0 2px 6px rgba(11, 28, 63, .22);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform .16s ease, box-shadow .16s ease;
+  }
+  .bongo-fab:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(11,28,63,.34); }
+  .bongo-fab:focus-visible { outline: 3px solid var(--bongo-gold); outline-offset: 3px; }
+  .bongo-fab img { width: 40px; height: 40px; display: block; }
+  .bongo-fab .x { display: none; color: #fff; font-size: 26px; line-height: 1; }
+  .bongo-fab[aria-expanded="true"] .x { display: block; }
+  .bongo-fab[aria-expanded="true"] img { display: none; }
+
+  /* A one-time nudge so people notice it exists. Shown once per browser. */
+  .bongo-nudge {
+    position: fixed; right: 90px; bottom: 34px; z-index: 2000;
+    background: var(--bongo-navy); color: #fff; border-radius: 8px;
+    padding: .5rem .75rem; font: 500 .82rem/1.35 "Inter", system-ui, sans-serif;
+    max-width: 210px; box-shadow: 0 6px 18px rgba(11,28,63,.28);
+  }
+  .bongo-nudge::after {
+    content: ""; position: absolute; right: -6px; bottom: 16px;
+    border: 6px solid transparent; border-left-color: var(--bongo-navy);
+    border-right: 0;
+  }
+  .bongo-nudge button {
+    background: none; border: 0; color: #9FC6EA; cursor: pointer;
+    font: 500 .76rem/1 "Inter", system-ui, sans-serif; padding: .3rem 0 0; display: block;
+  }
+
+  /* ----------------------------------------------------------- the panel -- */
+  .bongo-panel {
+    position: fixed; right: 20px; bottom: 92px; z-index: 2001;
+    width: min(420px, calc(100vw - 40px));
+    height: min(620px, calc(100vh - 130px));
+    background: #fff; border: 1px solid var(--bongo-line);
+    border-radius: 14px; overflow: hidden;
+    box-shadow: 0 18px 50px rgba(11, 28, 63, .26);
+    display: none; flex-direction: column;
+  }
+  .bongo-panel[data-open="true"] { display: flex; }
+
+  .bongo-head {
+    background: var(--bongo-navy); color: #fff;
+    padding: .8rem 1rem; display: flex; align-items: center; gap: .6rem;
+    border-bottom: 3px solid var(--bongo-gold);
+  }
+  .bongo-head img { width: 30px; height: 30px; }
+  .bongo-head .t { font: 600 .95rem/1.2 "Inter", system-ui, sans-serif; }
+  .bongo-head .s { font: 400 .74rem/1.3 "Inter", system-ui, sans-serif; color: #A9C4E2; }
+
+  .bongo-log {
+    flex: 1; overflow-y: auto; padding: 1rem;
+    background: var(--bongo-cream);
+    font: 400 .88rem/1.55 "Inter", system-ui, sans-serif; color: var(--bongo-ink);
+  }
+  .bongo-msg { margin: 0 0 .9rem; display: flex; }
+  .bongo-msg .b {
+    padding: .6rem .8rem; border-radius: 11px; max-width: 88%;
+    overflow-wrap: anywhere;
+  }
+  .bongo-msg.me { justify-content: flex-end; }
+  .bongo-msg.me .b { background: var(--bongo-navy); color: #fff; border-bottom-right-radius: 3px; }
+  .bongo-msg.ai .b { background: #fff; border: 1px solid var(--bongo-line); border-bottom-left-radius: 3px; }
+  .bongo-msg.sys .b { background: #FBE9E5; border: 1px solid #E0A79B; color: #7A2E1E; font-size: .84rem; }
+  .bongo-msg .b > *:first-child { margin-top: 0; }
+  .bongo-msg .b > *:last-child { margin-bottom: 0; }
+  .bongo-msg .b p { margin: 0 0 .55rem; }
+  .bongo-msg .b ul, .bongo-msg .b ol { margin: 0 0 .55rem; padding-left: 1.15rem; }
+  .bongo-msg .b code {
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .84em;
+    background: #EEF1F7; padding: .1em .32em; border-radius: 4px;
+  }
+  .bongo-msg.me .b code { background: rgba(255,255,255,.18); }
+  .bongo-msg .b pre {
+    background: #10233B; color: #E8EEF6; padding: .65rem .75rem;
+    border-radius: 8px; overflow-x: auto; margin: 0 0 .55rem;
+  }
+  .bongo-msg .b pre code { background: none; padding: 0; font-size: .82em; color: inherit; }
+  .bongo-msg .b a { color: #16549B; }
+  .bongo-msg.me .b a { color: #BEE0FF; }
+
+  .bongo-dots span {
+    display: inline-block; width: 6px; height: 6px; margin-right: 3px;
+    border-radius: 50%; background: var(--bongo-slate);
+    animation: bongo-blink 1.3s infinite both;
+  }
+  .bongo-dots span:nth-child(2) { animation-delay: .18s; }
+  .bongo-dots span:nth-child(3) { animation-delay: .36s; }
+  @keyframes bongo-blink { 0%, 80%, 100% { opacity: .25 } 40% { opacity: 1 } }
+
+  .bongo-foot { border-top: 1px solid var(--bongo-line); padding: .65rem; background: #fff; }
+  .bongo-row { display: flex; gap: .5rem; align-items: flex-end; }
+  .bongo-foot textarea {
+    flex: 1; resize: none; border: 1px solid var(--bongo-line); border-radius: 9px;
+    padding: .55rem .7rem; font: 400 .88rem/1.4 "Inter", system-ui, sans-serif;
+    max-height: 140px; color: var(--bongo-ink); background: #fff;
+  }
+  .bongo-foot textarea:focus-visible { outline: 2px solid var(--bongo-gold); outline-offset: 0; border-color: var(--bongo-gold); }
+  .bongo-send {
+    border: 0; border-radius: 9px; background: var(--bongo-navy); color: #fff;
+    padding: .58rem .85rem; cursor: pointer;
+    font: 600 .84rem/1 "Inter", system-ui, sans-serif;
+  }
+  .bongo-send:disabled { opacity: .45; cursor: not-allowed; }
+  .bongo-send:focus-visible { outline: 3px solid var(--bongo-gold); outline-offset: 2px; }
+  .bongo-note {
+    margin: .45rem .15rem 0; font: 400 .7rem/1.35 "Inter", system-ui, sans-serif;
+    color: var(--bongo-slate); display: flex; justify-content: space-between; gap: .5rem;
+  }
+  .bongo-note button {
+    background: none; border: 0; color: var(--bongo-slate); cursor: pointer;
+    text-decoration: underline; font: inherit; padding: 0;
+  }
+
+  .bongo-gate { padding: 1.1rem; font: 400 .86rem/1.5 "Inter", system-ui, sans-serif; }
+  .bongo-gate h4 { font: 600 .95rem/1.3 "Inter", system-ui, sans-serif; margin: 0 0 .5rem; }
+  .bongo-gate input {
+    width: 100%; border: 1px solid var(--bongo-line); border-radius: 9px;
+    padding: .55rem .7rem; margin: .6rem 0; font: inherit;
+  }
+  .bongo-gate input:focus-visible { outline: 2px solid var(--bongo-gold); border-color: var(--bongo-gold); }
+  .bongo-gate .err { color: #A3341F; margin: .3rem 0 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bongo-fab, .bongo-dots span { transition: none; animation: none; }
+  }
+  @media print { .bongo-fab, .bongo-panel, .bongo-nudge { display: none !important; } }
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  var CFG = window.BONGO_CHAT_CONFIG || {};
+  var KEY_LOG = "bongo.chat.log.v1";
+  var KEY_PASS = "bongo.chat.pass.v1";
+  var KEY_NUDGE = "bongo.chat.nudged.v1";
+  var MAX_TURNS = 24;          // trimmed before sending; the Worker caps too
+  var MAX_CHARS = 4000;
+
+  // Reading and writing localStorage is wrapped in try/catch throughout. In a
+  // private window, or with site data blocked, the browser throws on the
+  // accessor itself rather than politely returning null — so an unguarded call
+  // would stop the whole widget from loading.
+  function get(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } }
+  function set(k, v) { try { window.localStorage.setItem(k, v); } catch (e) {} }
+  function del(k) { try { window.localStorage.removeItem(k); } catch (e) {} }
+
+  var log = [];
+  try { log = JSON.parse(get(KEY_LOG) || "[]") || []; } catch (e) { log = []; }
+  var busy = false, panel, logEl, ta, sendBtn, fab, lastFocus;
+
+  var depth = (location.pathname.indexOf("/sessions/") > -1) ? "../" : "";
+
+  // ------------------------------------------------------------ markdown --
+  //
+  // A small Markdown renderer, written escape-first on purpose.
+  //
+  // The order of operations here is the security-relevant part. Everything the
+  // model sends is first escaped completely, so that any HTML in it becomes
+  // visible text and can no longer do anything. Only afterwards do we turn a
+  // fixed, known list of patterns — bold, code, lists, links — back into real
+  // markup.
+  //
+  // The tempting alternative is to convert Markdown to HTML and then sanitise
+  // the result, and it is how cross-site scripting tends to find its way into
+  // chat widgets: a sanitiser has to anticipate every possible attack, whereas
+  // an escaper only has to handle five characters correctly.
+  function esc(s) {
+    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function md(src) {
+    var blocks = [];
+    // Pull fenced code out first so nothing inside it gets marked up.
+    var s = src.replace(/```(\w*)\n([\s\S]*?)```/g, function (_, lang, code) {
+      blocks.push('<pre><code>' + esc(code.replace(/\n$/, "")) + '</code></pre>');
+      return "@@TDBGBLOCK" + (blocks.length - 1) + "@@";
+    });
+
+    s = esc(s);
+    s = s.replace(/`([^`\n]+)`/g, "<code>$1</code>");
+    s = s.replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>");
+    s = s.replace(/(^|[\s(])\*([^*\n]+)\*/g, "$1<em>$2</em>");
+    // Links: only http(s) and relative paths. No javascript:, no data:.
+    s = s.replace(/\[([^\]\n]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]*|[\w./-]+\.html[^)\s]*)\)/g,
+                  '<a href="$2" rel="noopener">$1</a>');
+
+    var out = [], list = null;
+    s.split("\n").forEach(function (line) {
+      var li = line.match(/^\s*[-*]\s+(.*)$/);
+      var ol = line.match(/^\s*(\d+)[.)]\s+(.*)$/);
+      if (li) {
+        if (list !== "ul") { if (list) out.push("</" + list + ">"); out.push("<ul>"); list = "ul"; }
+        out.push("<li>" + li[1] + "</li>");
+      } else if (ol) {
+        if (list !== "ol") { if (list) out.push("</" + list + ">"); out.push("<ol>"); list = "ol"; }
+        out.push("<li>" + ol[2] + "</li>");
+      } else {
+        if (list) { out.push("</" + list + ">"); list = null; }
+        if (line.trim() === "") out.push("");
+        else out.push("<p>" + line + "</p>");
+      }
+    });
+    if (list) out.push("</" + list + ">");
+
+    return out.join("\n").replace(/@@TDBGBLOCK(\d+)@@/g, function (whole, i) {
+      // If a reply happens to contain this placeholder as literal text --
+      // which is not far-fetched on a course where somebody may ask the
+      // assistant about the widget's own source -- there is no block to put
+      // back. Return the text unchanged rather than the string "undefined".
+      var block = blocks[+i];
+      return block === undefined ? whole : block;
+    });
+  }
+
+  // -------------------------------------------------------------- render --
+  function bubble(role, html, cls) {
+    var d = document.createElement("div");
+    d.className = "bongo-msg " + (cls || (role === "user" ? "me" : "ai"));
+    var b = document.createElement("div");
+    b.className = "b";
+    b.innerHTML = html;
+    d.appendChild(b);
+    logEl.appendChild(d);
+    logEl.scrollTop = logEl.scrollHeight;
+    return b;
+  }
+
+  function paint() {
+    logEl.innerHTML = "";
+    if (!log.length) {
+      bubble("assistant", md(CFG.GREETING || "How can I help?"));
+      return;
+    }
+    log.forEach(function (m) { bubble(m.role, md(m.content)); });
+  }
+
+  function save() {
+    try { set(KEY_LOG, JSON.stringify(log.slice(-MAX_TURNS))); } catch (e) {}
+  }
+
+  // What page are we on? Sent with each turn so answers can be about the thing
+  // in front of the reader rather than the course in the abstract.
+  function pageContext() {
+    var h1 = document.querySelector("main h1, h1");
+    return {
+      title: (document.title || "").slice(0, 200),
+      heading: h1 ? (h1.textContent || "").trim().slice(0, 200) : "",
+      session: document.body.getAttribute("data-tdbg-session") || "",
+      path: location.pathname.split("/").slice(-1)[0] || "index.html"
+    };
+  }
+
+  // ---------------------------------------------------------------- send --
+  function send(text) {
+    if (busy || !text.trim()) return;
+    if (text.length > MAX_CHARS) {
+      bubble("system", md("That message is longer than " + MAX_CHARS +
+                          " characters. Trim it and try again."), "sys");
+      return;
+    }
+    busy = true;
+    sendBtn.disabled = true;
+    ta.value = "";
+    ta.style.height = "auto";
+
+    log.push({ role: "user", content: text });
+    bubble("user", md(text));
+    save();
+
+    var b = bubble("assistant", '<span class="bongo-dots"><span></span><span></span><span></span></span>');
+    b.setAttribute("aria-live", "polite");
+    var acc = "";
+
+    var headers = { "Content-Type": "application/json" };
+    var pass = get(KEY_PASS);
+    if (pass) headers["X-Bongo-Pass"] = pass;
+
+    fetch(CFG.ENDPOINT, {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify({ messages: log.slice(-MAX_TURNS), page: pageContext() })
+    }).then(function (r) {
+      if (r.status === 401) {
+        // Take the message back out of the transcript before showing the gate
+        // again. It was added optimistically so it would appear the instant it
+        // was sent, but the send did not actually happen -- and leaving it in
+        // means the question is duplicated when the person retypes their
+        // passphrase and asks again.
+        del(KEY_PASS);
+        if (log.length && log[log.length - 1].role === "user") log.pop();
+        save();
+        gate("That passphrase was not accepted. Please check it and try again.");
+        throw new Error("gate");
+      }
+      if (r.status === 429) throw new Error("You have reached the usage limit for now. Try again later.");
+      if (!r.ok) throw new Error("The assistant is unavailable (HTTP " + r.status + ").");
+      if (!r.body) throw new Error("Streaming is not supported in this browser.");
+
+      var reader = r.body.getReader(), dec = new TextDecoder(), buf = "";
+      function pump() {
+        return reader.read().then(function (res) {
+          if (res.done) return;
+          buf += dec.decode(res.value, { stream: true });
+          var lines = buf.split("\n");
+          buf = lines.pop();
+          lines.forEach(function (line) {
+            if (line.indexOf("data: ") !== 0) return;
+            var payload = line.slice(6);
+            if (payload === "[DONE]") return;
+            try {
+              var ev = JSON.parse(payload);
+              if (ev.type === "content_block_delta" && ev.delta && ev.delta.text) {
+                acc += ev.delta.text;
+                b.innerHTML = md(acc);
+                logEl.scrollTop = logEl.scrollHeight;
+              } else if (ev.type === "error") {
+                acc += "\n\n_" + (ev.error && ev.error.message || "stream error") + "_";
+                b.innerHTML = md(acc);
+              }
+            } catch (e) { /* keep-alive or partial frame; ignore */ }
+          });
+          return pump();
+        });
+      }
+      return pump();
+    }).then(function () {
+      if (acc) { log.push({ role: "assistant", content: acc }); save(); }
+      else b.innerHTML = md("_No reply came back. Try again._");
+    }).catch(function (e) {
+      if (e && e.message === "gate") return;
+      b.parentNode.className = "bongo-msg sys";
+      b.innerHTML = md(e && e.message ? e.message : "Something went wrong.");
+    }).then(function () {
+      busy = false;
+      sendBtn.disabled = false;
+      ta.focus();
+    });
+  }
+
+  // ---------------------------------------------------------------- gate --
+  function gate(err) {
+    var body = panel.querySelector(".bongo-body");
+    body.innerHTML =
+      '<div class="bongo-gate">' +
+      '<h4>Cohort access</h4>' +
+      '<p>bongo.ai is available to participants on the programme. Enter the ' +
+      'passphrase from your joining instructions — this browser will ' +
+      'remember it.</p>' +
+      '<input type="password" autocomplete="off" aria-label="Cohort passphrase">' +
+      (err ? '<p class="err">' + esc(err) + "</p>" : "") +
+      '<button class="bongo-send" type="button">Continue</button>' +
+      "</div>";
+    var input = body.querySelector("input");
+    var go = function () {
+      var v = input.value.trim();
+      if (!v) return;
+      set(KEY_PASS, v);
+      mount();
+    };
+    body.querySelector("button").addEventListener("click", go);
+    input.addEventListener("keydown", function (e) { if (e.key === "Enter") go(); });
+    input.focus();
+  }
+
+  // --------------------------------------------------------------- mount --
+  function mount() {
+    var body = panel.querySelector(".bongo-body");
+    body.innerHTML =
+      '<div class="bongo-log" role="log" aria-label="Conversation"></div>' +
+      '<div class="bongo-foot">' +
+      '<div class="bongo-row">' +
+      '<textarea rows="1" placeholder="Ask about anything on this page…" ' +
+      'aria-label="Your question"></textarea>' +
+      '<button class="bongo-send" type="button">Send</button>' +
+      "</div>" +
+      '<p class="bongo-note"><span>Claude can be wrong. Check anything that matters.</span>' +
+      '<button type="button">Clear</button></p>' +
+      "</div>";
+
+    logEl = body.querySelector(".bongo-log");
+    ta = body.querySelector("textarea");
+    sendBtn = body.querySelector(".bongo-send");
+
+    ta.addEventListener("input", function () {
+      ta.style.height = "auto";
+      ta.style.height = Math.min(ta.scrollHeight, 140) + "px";
+    });
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(ta.value); }
+    });
+    sendBtn.addEventListener("click", function () { send(ta.value); });
+    body.querySelector(".bongo-note button").addEventListener("click", function () {
+      log = []; del(KEY_LOG); paint(); ta.focus();
+    });
+
+    paint();
+    ta.focus();
+  }
+
+  function unconfigured() {
+    panel.querySelector(".bongo-body").innerHTML =
+      '<div class="bongo-gate">' +
+      "<h4>Not configured yet</h4>" +
+      "<p>This build of the site has no chat endpoint set, so bongo.ai " +
+      "cannot answer anything.</p>" +
+      "<p>If you are running this course: deploy the Worker in " +
+      "<code>chat-api/</code> and put its URL in <code>ENDPOINT</code> at the " +
+      "top of <code>assets/js/bongo-chat.html</code>. It takes about five " +
+      "minutes and the instructions are in <code>chat-api/README.md</code>.</p>" +
+      "</div>";
+  }
+
+  // ---------------------------------------------------------------- open --
+  function open() {
+    lastFocus = document.activeElement;
+    panel.setAttribute("data-open", "true");
+    fab.setAttribute("aria-expanded", "true");
+    var n = document.querySelector(".bongo-nudge");
+    if (n) n.remove();
+    set(KEY_NUDGE, "1");
+
+    if (!CFG.ENDPOINT) unconfigured();
+    else if (CFG.REQUIRE_PASSPHRASE && !get(KEY_PASS)) gate("");
+    else mount();
+  }
+
+  function close() {
+    panel.setAttribute("data-open", "false");
+    fab.setAttribute("aria-expanded", "false");
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  function boot() {
+    fab = document.createElement("button");
+    fab.className = "bongo-fab";
+    fab.type = "button";
+    fab.setAttribute("aria-expanded", "false");
+    fab.setAttribute("aria-label", "Ask bongo.ai");
+    fab.innerHTML = '<img src="' + depth + 'assets/logo/bongo_ai_hex_mark.svg" alt="">' +
+                    '<span class="x" aria-hidden="true">×</span>';
+
+    panel = document.createElement("div");
+    panel.className = "bongo-panel";
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-label", "bongo.ai assistant");
+    panel.setAttribute("data-open", "false");
+    panel.innerHTML =
+      '<div class="bongo-head">' +
+      '<img src="' + depth + 'assets/logo/bongo_ai_hex_mark.svg" alt="">' +
+      "<div><div class=\"t\">bongo.ai</div>" +
+      '<div class="s">Data, statistics and the judgement around them</div></div>' +
+      "</div><div class=\"bongo-body\" style=\"flex:1;display:flex;flex-direction:column;overflow:hidden\"></div>";
+
+    document.body.appendChild(panel);
+    document.body.appendChild(fab);
+
+    fab.addEventListener("click", function () {
+      panel.getAttribute("data-open") === "true" ? close() : open();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && panel.getAttribute("data-open") === "true") close();
+    });
+
+    // A single nudge, once per browser, so the button is not invisible
+    // furniture. It never comes back after it is dismissed or used.
+    if (!get(KEY_NUDGE)) {
+      var n = document.createElement("div");
+      n.className = "bongo-nudge";
+      n.innerHTML = "Stuck on something? Ask bongo.ai." +
+                    '<button type="button">Dismiss</button>';
+      document.body.appendChild(n);
+      n.querySelector("button").addEventListener("click", function () {
+        n.remove(); set(KEY_NUDGE, "1");
+      });
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else { boot(); }
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/bongoadi\.github\.io\/turning-data-into-business-growth\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../sessions/3-4-segmentation.html" class="pagination-link" aria-label="Segmentation you can act on">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Segmentation you can act on</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../sessions/3-6-lab-forecast-market.html" class="pagination-link" aria-label="Lab 3 · The forecast market">
+        <span class="nav-page-text">Lab 3 · The forecast market</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><strong>Turning Data into Business Growth</strong> · Lagos Business School, Pan-Atlantic University<br> Academic Director: Prof.&nbsp;Bongo Adi · <a href="mailto:execedsales@lbs.edu.ng">execedsales@lbs.edu.ng</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p>Course materials CC BY-NC-SA 4.0 · code MIT · data synthetic<br> Built with Quarto. Every figure and dataset in this site regenerates from source.</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../datasets.html">
+<p>Data room</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../setup.html">
+<p>Setup</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../capstone.html">
+<p>Capstone</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bongoadi/turning-data-into-business-growth">
+      <i class="bi bi-github" role="img" aria-label="Source on GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

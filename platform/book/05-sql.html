@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; SQL: the language of the warehouse – The Governed Analytics Platform</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./06-bronze.html" rel="next">
+<link href="./04-profiling.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-187f5191076cea0c25736ba820c9c5fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-sql.html">Level 2 · Practitioner — Build the warehouse</a></li><li class="breadcrumb-item"><a href="./05-sql.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">SQL: the language of the warehouse</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Governed Analytics Platform</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 1 · Novice — See the whole, touch the data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The architecture, end to end</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Your workbench</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data comes in many shapes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-profiling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Profile before you trust</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 2 · Practitioner — Build the warehouse</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-sql.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">SQL: the language of the warehouse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-bronze.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bronze: land everything, change nothing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-silver.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Silver: clean, conform, remember</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-gold.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Gold: model for decisions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tests and the publish gate</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 3 · Advanced — Govern and serve</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-semantic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The semantic layer: one definition of every KPI</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-vector-ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Vector search and AI on governed data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-serving.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Serving: trusted data where people work</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-dashboards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Dashboards with Quarto and Shiny</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 4 · Master — Run it in production</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Operations: run it every day without you</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Security, privacy and governance</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-deploy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Deploying in an organisation</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Sector playbooks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./17-hr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Playbook: Human resources</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./18-education.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Playbook: Education</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./19-supply-chain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Playbook: Supply chain and procurement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-retail.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Playbook: Retail chains and FMCG</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./21-oil-gas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Playbook: Oil and gas (upstream)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./22-power.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Playbook: Power and utilities</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./23-banking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Playbook: Financial services (banking)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./24-pensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Playbook: Pensions (PenCom-regulated)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./25-telecoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Playbook: Telecommunications</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./26-capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Capstone: prove mastery</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./a-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Glossary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./b-prompts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Prompt library</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./c-troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./d-open-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#reading-select-where-order-by-limit" id="toc-reading-select-where-order-by-limit" class="nav-link active" data-scroll-target="#reading-select-where-order-by-limit"><span class="header-section-number">5.1</span> Reading: SELECT, WHERE, ORDER BY, LIMIT</a></li>
+  <li><a href="#summarising-group-by-and-aggregates" id="toc-summarising-group-by-and-aggregates" class="nav-link" data-scroll-target="#summarising-group-by-and-aggregates"><span class="header-section-number">5.2</span> Summarising: GROUP BY and aggregates</a></li>
+  <li><a href="#combining-joins" id="toc-combining-joins" class="nav-link" data-scroll-target="#combining-joins"><span class="header-section-number">5.3</span> Combining: JOINs</a></li>
+  <li><a href="#building-in-steps-ctes-with" id="toc-building-in-steps-ctes-with" class="nav-link" data-scroll-target="#building-in-steps-ctes-with"><span class="header-section-number">5.4</span> Building in steps: CTEs (<code>WITH</code>)</a></li>
+  <li><a href="#window-functions-the-analysts-superpower" id="toc-window-functions-the-analysts-superpower" class="nav-link" data-scroll-target="#window-functions-the-analysts-superpower"><span class="header-section-number">5.5</span> Window functions: the analyst’s superpower</a></li>
+  <li><a href="#dates-and-conditional-logic" id="toc-dates-and-conditional-logic" class="nav-link" data-scroll-target="#dates-and-conditional-logic"><span class="header-section-number">5.6</span> Dates and conditional logic</a></li>
+  <li><a href="#r-and-sql-together" id="toc-r-and-sql-together" class="nav-link" data-scroll-target="#r-and-sql-together"><span class="header-section-number">5.7</span> R and SQL together</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">5.8</span> 🏋️ Exercises</a></li>
+  <li><a href="#mastery-check" id="toc-mastery-check" class="nav-link" data-scroll-target="#mastery-check"><span class="header-section-number">5.9</span> ✅ Mastery check</a></li>
+  <li><a href="#in-the-organisation" id="toc-in-the-organisation" class="nav-link" data-scroll-target="#in-the-organisation"><span class="header-section-number">5.10</span> 🏢 In the organisation</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-sql.html">Level 2 · Practitioner — Build the warehouse</a></li><li class="breadcrumb-item"><a href="./05-sql.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">SQL: the language of the warehouse</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-sql" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">SQL: the language of the warehouse</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span class="level-badge">🔵 Practitioner</span></p>
+<div class="wwww">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>What</strong></td>
+<td>The ~20 SQL ideas that cover 95% of analytics work, practised in DuckDB</td>
+</tr>
+<tr class="even">
+<td><strong>Why</strong></td>
+<td>Every layer from silver onward is written in SQL. It is the one language every database, BI tool and AI assistant shares</td>
+</tr>
+<tr class="odd">
+<td><strong>When</strong></td>
+<td>From now on, whenever you transform or question data in the warehouse</td>
+</tr>
+<tr class="even">
+<td><strong>Who</strong></td>
+<td>Analysts write it. Reviewers read it. AI drafts it, and <em>you</em> must be able to check it</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This chapter uses a pre-built copy of the running example. Chapters 6–8 show how it was built. Every block below is a <strong>SQL chunk</strong>: Quarto runs it directly against DuckDB.</p>
+<section id="reading-select-where-order-by-limit" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="reading-select-where-order-by-limit"><span class="header-section-number">5.1</span> Reading: SELECT, WHERE, ORDER BY, LIMIT</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> depot_name, region, opened</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> gold.dim_depot</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> region <span class="op">=</span> <span class="st">'South West'</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> opened</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>4 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">depot_name</th>
+<th style="text-align: left;">region</th>
+<th style="text-align: left;">opened</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Lagos Mainland</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: left;">2016-03-01</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lagos Island</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: left;">2017-08-14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ibadan</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: left;">2018-01-09</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Abeokuta</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: left;">2023-07-03</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="summarising-group-by-and-aggregates" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="summarising-group-by-and-aggregates"><span class="header-section-number">5.2</span> Summarising: GROUP BY and aggregates</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> region,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COUNT</span>(<span class="op">*</span>)                       <span class="kw">AS</span> <span class="kw">rows</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(revenue_ngn) <span class="op">/</span> <span class="fl">1e9</span>, <span class="dv">2</span>) <span class="kw">AS</span> revenue_bn,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">AVG</span>(stockout_flag) <span class="op">*</span> <span class="dv">100</span>, <span class="dv">1</span>) <span class="kw">AS</span> stockout_pct</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> gold.v_sales</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> region</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> revenue_bn <span class="kw">DESC</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>5 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">region</th>
+<th style="text-align: right;">rows</th>
+<th style="text-align: right;">revenue_bn</th>
+<th style="text-align: right;">stockout_pct</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">South West</td>
+<td style="text-align: right;">18420</td>
+<td style="text-align: right;">18.86</td>
+<td style="text-align: right;">3.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">South East</td>
+<td style="text-align: right;">9210</td>
+<td style="text-align: right;">7.71</td>
+<td style="text-align: right;">3.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">South South</td>
+<td style="text-align: right;">9210</td>
+<td style="text-align: right;">7.60</td>
+<td style="text-align: right;">3.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">North Central</td>
+<td style="text-align: right;">9210</td>
+<td style="text-align: right;">6.43</td>
+<td style="text-align: right;">3.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">North West</td>
+<td style="text-align: right;">9210</td>
+<td style="text-align: right;">6.26</td>
+<td style="text-align: right;">3.4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><code>GROUP BY ALL</code> (DuckDB, Snowflake and BigQuery) groups by every non-aggregated column, which saves typing and prevents mistakes. Use <code>HAVING</code> to filter <em>after</em> aggregating:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">category</span>, product_name, <span class="fu">SUM</span>(units_sold) <span class="kw">AS</span> units</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> gold.v_sales</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> <span class="kw">ALL</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">HAVING</span> <span class="fu">SUM</span>(units_sold) <span class="op">&gt;</span> <span class="dv">400000</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> units <span class="kw">DESC</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">category</th>
+<th style="text-align: left;">product_name</th>
+<th style="text-align: right;">units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Foods</td>
+<td style="text-align: left;">Foods Line 02</td>
+<td style="text-align: right;">563122</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Foods</td>
+<td style="text-align: left;">Foods Line 04</td>
+<td style="text-align: right;">559704</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Beverages</td>
+<td style="text-align: left;">Beverages Line 05</td>
+<td style="text-align: right;">497625</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Beverages</td>
+<td style="text-align: left;">Beverages Line 07</td>
+<td style="text-align: right;">470548</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Foods</td>
+<td style="text-align: left;">Foods Line 05</td>
+<td style="text-align: right;">465577</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Beverages</td>
+<td style="text-align: left;">Beverages Line 01</td>
+<td style="text-align: right;">439903</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Foods</td>
+<td style="text-align: left;">Foods Line 07</td>
+<td style="text-align: right;">437373</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Foods</td>
+<td style="text-align: left;">Foods Line 06</td>
+<td style="text-align: right;">434262</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Foods</td>
+<td style="text-align: left;">Foods Line 01</td>
+<td style="text-align: right;">430505</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Foods</td>
+<td style="text-align: left;">Foods Line 08</td>
+<td style="text-align: right;">426340</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="combining-joins" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="combining-joins"><span class="header-section-number">5.3</span> Combining: JOINs</h2>
+<p>A join answers <em>“for each row here, find the matching row(s) there.”</em> Four types matter:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Join</th>
+<th>Keeps</th>
+<th>Business use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>INNER JOIN</code></td>
+<td>only matches</td>
+<td>facts that have a valid dimension</td>
+</tr>
+<tr class="even">
+<td><code>LEFT JOIN</code></td>
+<td>all left rows, matched or not</td>
+<td>“all depots, with sales if any”</td>
+</tr>
+<tr class="odd">
+<td><code>ANTI JOIN</code> / <code>NOT EXISTS</code></td>
+<td>left rows with <strong>no</strong> match</td>
+<td>orphans and data-quality checks</td>
+</tr>
+<tr class="even">
+<td><code>FULL JOIN</code></td>
+<td>everything from both sides</td>
+<td>reconciliation between two sources</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Reconcile the Excel regional report to the warehouse, depot by depot (FULL JOIN shows gaps on both sides)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> xl <span class="kw">AS</span> (<span class="kw">SELECT</span> depot_name, <span class="fu">SUM</span>(revenue_ngn) <span class="kw">AS</span> excel_ngn <span class="kw">FROM</span> silver.regional_report <span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dv">1</span>),</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>     wh <span class="kw">AS</span> (<span class="kw">SELECT</span> d.depot_name, <span class="fu">SUM</span>(f.revenue_ngn) <span class="kw">AS</span> warehouse_ngn</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="kw">FROM</span> gold.fct_sales f <span class="kw">JOIN</span> silver.depot_history d</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>              <span class="kw">ON</span> f.depot_code <span class="op">=</span> d.depot_code <span class="kw">AND</span> d.version <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="kw">WHERE</span> <span class="dt">year</span>(f.week_starting) <span class="op">=</span> <span class="dv">2025</span> <span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dv">1</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COALESCE</span>(xl.depot_name, wh.depot_name) <span class="kw">AS</span> depot,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(excel_ngn <span class="op">/</span> <span class="fl">1e6</span>, <span class="dv">1</span>)     <span class="kw">AS</span> excel_m,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(warehouse_ngn <span class="op">/</span> <span class="fl">1e6</span>, <span class="dv">1</span>) <span class="kw">AS</span> warehouse_m,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> (excel_ngn <span class="op">/</span> warehouse_ngn <span class="op">-</span> <span class="dv">1</span>), <span class="dv">2</span>) <span class="kw">AS</span> gap_pct</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> xl <span class="kw">FULL</span> <span class="kw">JOIN</span> wh <span class="kw">ON</span> xl.depot_name <span class="op">=</span> wh.depot_name</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="fu">abs</span>(gap_pct) <span class="kw">DESC</span> <span class="kw">NULLS</span> <span class="fu">FIRST</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">depot</th>
+<th style="text-align: right;">excel_m</th>
+<th style="text-align: right;">warehouse_m</th>
+<th style="text-align: right;">gap_pct</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Benin City</td>
+<td style="text-align: right;">1602.1</td>
+<td style="text-align: right;">1589.7</td>
+<td style="text-align: right;">0.78</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lagos Island</td>
+<td style="text-align: right;">2971.3</td>
+<td style="text-align: right;">2949.7</td>
+<td style="text-align: right;">0.73</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Enugu</td>
+<td style="text-align: right;">1354.2</td>
+<td style="text-align: right;">1346.6</td>
+<td style="text-align: right;">0.57</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kano</td>
+<td style="text-align: right;">1886.8</td>
+<td style="text-align: right;">1876.3</td>
+<td style="text-align: right;">0.56</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Abeokuta</td>
+<td style="text-align: right;">1326.0</td>
+<td style="text-align: right;">1319.8</td>
+<td style="text-align: right;">0.47</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jos</td>
+<td style="text-align: right;">983.7</td>
+<td style="text-align: right;">979.3</td>
+<td style="text-align: right;">0.44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ibadan</td>
+<td style="text-align: right;">1985.6</td>
+<td style="text-align: right;">1977.0</td>
+<td style="text-align: right;">0.43</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kaduna</td>
+<td style="text-align: right;">1286.0</td>
+<td style="text-align: right;">1281.6</td>
+<td style="text-align: right;">0.35</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Port Harcourt</td>
+<td style="text-align: right;">2170.0</td>
+<td style="text-align: right;">2162.7</td>
+<td style="text-align: right;">0.34</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lagos Mainland</td>
+<td style="text-align: right;">3121.4</td>
+<td style="text-align: right;">3110.8</td>
+<td style="text-align: right;">0.34</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The fan-out trap
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the right-hand table has duplicate keys, a join <strong>multiplies</strong> rows. The duplicated <code>DP04</code> in the raw depot file would double every Abuja sale. Before trusting a join, check the key is unique on the “one” side (Chapter 9 automates this).</p>
+</div>
+</div>
+</section>
+<section id="building-in-steps-ctes-with" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="building-in-steps-ctes-with"><span class="header-section-number">5.4</span> Building in steps: CTEs (<code>WITH</code>)</h2>
+<p>Common table expressions name each step. They make long queries readable and reviewable, which matters when AI wrote the first draft:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> monthly <span class="kw">AS</span> (</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">SELECT</span> year_month, region, <span class="fu">SUM</span>(revenue_ngn) <span class="kw">AS</span> revenue</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> gold.v_sales <span class="kw">GROUP</span> <span class="kw">BY</span> <span class="kw">ALL</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>ranked <span class="kw">AS</span> (</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">SELECT</span> <span class="op">*</span>, <span class="fu">rank</span>() <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> year_month <span class="kw">ORDER</span> <span class="kw">BY</span> revenue <span class="kw">DESC</span>) <span class="kw">AS</span> rnk</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> monthly</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> year_month, region, <span class="fu">round</span>(revenue <span class="op">/</span> <span class="fl">1e9</span>, <span class="dv">2</span>) <span class="kw">AS</span> revenue_bn</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> ranked <span class="kw">WHERE</span> rnk <span class="op">=</span> <span class="dv">1</span> <span class="kw">AND</span> year_month <span class="op">&gt;=</span> <span class="st">'2025-07'</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> year_month</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>9 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">year_month</th>
+<th style="text-align: left;">region</th>
+<th style="text-align: right;">revenue_bn</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2025-07</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: right;">0.73</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025-08</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: right;">0.67</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2025-09</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: right;">0.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025-10</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: right;">0.65</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2025-11</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: right;">0.74</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025-12</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: right;">1.08</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-01</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: right;">0.85</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-02</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: right;">0.92</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-03</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: right;">1.34</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="window-functions-the-analysts-superpower" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="window-functions-the-analysts-superpower"><span class="header-section-number">5.5</span> Window functions: the analyst’s superpower</h2>
+<p>A window function calculates across related rows <em>without collapsing them</em>. You need them for running totals, period-on-period growth, ranks, moving averages and de-duplication.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> m <span class="kw">AS</span> (<span class="kw">SELECT</span> year_month, <span class="fu">SUM</span>(revenue_ngn) <span class="kw">AS</span> revenue <span class="kw">FROM</span> gold.v_sales <span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dv">1</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> year_month,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(revenue <span class="op">/</span> <span class="fl">1e9</span>, <span class="dv">2</span>)                                                   <span class="kw">AS</span> revenue_bn,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> (revenue <span class="op">/</span> <span class="fu">lag</span>(revenue, <span class="dv">12</span>) <span class="kw">OVER</span> (<span class="kw">ORDER</span> <span class="kw">BY</span> year_month) <span class="op">-</span> <span class="dv">1</span>), <span class="dv">1</span>) <span class="kw">AS</span> yoy_growth_pct,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">AVG</span>(revenue) <span class="kw">OVER</span> (<span class="kw">ORDER</span> <span class="kw">BY</span> year_month <span class="kw">ROWS</span> <span class="dv">2</span> <span class="kw">PRECEDING</span>) <span class="op">/</span> <span class="fl">1e9</span>, <span class="dv">2</span>)   <span class="kw">AS</span> moving_avg_3m_bn,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(revenue) <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> <span class="kw">left</span>(year_month, <span class="dv">4</span>) <span class="kw">ORDER</span> <span class="kw">BY</span> year_month) <span class="op">/</span> <span class="fl">1e9</span>, <span class="dv">2</span>) <span class="kw">AS</span> ytd_bn</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> m <span class="kw">ORDER</span> <span class="kw">BY</span> year_month <span class="kw">DESC</span> <span class="kw">LIMIT</span> <span class="dv">8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>8 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">year_month</th>
+<th style="text-align: right;">revenue_bn</th>
+<th style="text-align: right;">yoy_growth_pct</th>
+<th style="text-align: right;">moving_avg_3m_bn</th>
+<th style="text-align: right;">ytd_bn</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2026-03</td>
+<td style="text-align: right;">3.08</td>
+<td style="text-align: right;">33.6</td>
+<td style="text-align: right;">2.37</td>
+<td style="text-align: right;">7.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-02</td>
+<td style="text-align: right;">2.09</td>
+<td style="text-align: right;">33.2</td>
+<td style="text-align: right;">2.15</td>
+<td style="text-align: right;">4.02</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-01</td>
+<td style="text-align: right;">1.93</td>
+<td style="text-align: right;">33.6</td>
+<td style="text-align: right;">2.02</td>
+<td style="text-align: right;">1.93</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025-12</td>
+<td style="text-align: right;">2.44</td>
+<td style="text-align: right;">33.8</td>
+<td style="text-align: right;">1.92</td>
+<td style="text-align: right;">23.38</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2025-11</td>
+<td style="text-align: right;">1.69</td>
+<td style="text-align: right;">32.2</td>
+<td style="text-align: right;">1.80</td>
+<td style="text-align: right;">20.94</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025-10</td>
+<td style="text-align: right;">1.64</td>
+<td style="text-align: right;">48.7</td>
+<td style="text-align: right;">1.81</td>
+<td style="text-align: right;">19.25</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2025-09</td>
+<td style="text-align: right;">2.06</td>
+<td style="text-align: right;">47.7</td>
+<td style="text-align: right;">1.89</td>
+<td style="text-align: right;">17.61</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025-08</td>
+<td style="text-align: right;">1.74</td>
+<td style="text-align: right;">49.8</td>
+<td style="text-align: right;">2.04</td>
+<td style="text-align: right;">15.55</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><code>QUALIFY</code> filters on a window result. It is the cleanest way to keep the latest or first row per key, and you will use it in silver:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Best-selling SKU in each category</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">category</span>, product_name, <span class="fu">SUM</span>(revenue_ngn) <span class="kw">AS</span> revenue</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> gold.v_sales <span class="kw">GROUP</span> <span class="kw">BY</span> <span class="kw">category</span>, product_name</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>QUALIFY <span class="fu">row_number</span>() <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> <span class="kw">category</span> <span class="kw">ORDER</span> <span class="kw">BY</span> revenue <span class="kw">DESC</span>) <span class="op">=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>5 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">category</th>
+<th style="text-align: left;">product_name</th>
+<th style="text-align: right;">revenue</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Personal Care</td>
+<td style="text-align: left;">Personal Line 04</td>
+<td style="text-align: right;">1333552674</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Foods</td>
+<td style="text-align: left;">Foods Line 04</td>
+<td style="text-align: right;">3425003633</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Beverages</td>
+<td style="text-align: left;">Beverages Line 03</td>
+<td style="text-align: right;">2631829554</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Snacks</td>
+<td style="text-align: left;">Snacks Line 08</td>
+<td style="text-align: right;">1318766386</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Home Care</td>
+<td style="text-align: left;">Home Line 03</td>
+<td style="text-align: right;">2167176899</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="dates-and-conditional-logic" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="dates-and-conditional-logic"><span class="header-section-number">5.6</span> Dates and conditional logic</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> date_trunc(<span class="st">'quarter'</span>, week_starting)                         <span class="kw">AS</span> quarter,</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">SUM</span>(<span class="cf">CASE</span> <span class="cf">WHEN</span> on_promotion <span class="op">=</span> <span class="dv">1</span> <span class="cf">THEN</span> revenue_ngn <span class="cf">ELSE</span> <span class="dv">0</span> <span class="cf">END</span>) <span class="op">/</span> <span class="fu">SUM</span>(revenue_ngn) <span class="kw">AS</span> promo_share,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> week_starting)                                 <span class="kw">AS</span> weeks</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> gold.fct_sales</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dv">1</span> <span class="kw">ORDER</span> <span class="kw">BY</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>9 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">quarter</th>
+<th style="text-align: right;">promo_share</th>
+<th style="text-align: right;">weeks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2024-01-01</td>
+<td style="text-align: right;">0.1900010</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024-04-01</td>
+<td style="text-align: right;">0.1805026</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024-07-01</td>
+<td style="text-align: right;">0.1803854</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024-10-01</td>
+<td style="text-align: right;">0.1778494</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2025-01-01</td>
+<td style="text-align: right;">0.1968977</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025-04-01</td>
+<td style="text-align: right;">0.1813744</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2025-07-01</td>
+<td style="text-align: right;">0.1822555</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025-10-01</td>
+<td style="text-align: right;">0.1922088</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-01-01</td>
+<td style="text-align: right;">0.1797016</td>
+<td style="text-align: right;">13</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="r-and-sql-together" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="r-and-sql-together"><span class="header-section-number">5.7</span> R and SQL together</h2>
+<p>You don’t have to choose. Write SQL in SQL chunks, then pick results up in R with <code>output.var</code>, or use dplyr on a lazy table and let it write the SQL:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">tbl</span>(con, <span class="fu">I</span>(<span class="st">"gold.v_sales"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2025</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(category) <span class="sc">|&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">revenue_bn =</span> <span class="fu">sum</span>(revenue_ngn) <span class="sc">/</span> <span class="fl">1e9</span>, <span class="at">margin =</span> <span class="fu">sum</span>(gross_profit_ngn) <span class="sc">/</span> <span class="fu">sum</span>(revenue_ngn)) <span class="sc">|&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(revenue_bn))</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">show_query</span>(q)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;SQL&gt;
+SELECT
+  category,
+  SUM(revenue_ngn) / 1000000000.0 AS revenue_bn,
+  SUM(gross_profit_ngn) / SUM(revenue_ngn) AS margin
+FROM (FROM gold.v_sales) AS q01
+WHERE ("year" = 2025.0)
+GROUP BY category
+ORDER BY revenue_bn DESC</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">collect</span>(q)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">category</th>
+<th style="text-align: right;">revenue_bn</th>
+<th style="text-align: right;">margin</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Foods</td>
+<td style="text-align: right;">7.392963</td>
+<td style="text-align: right;">0.6168727</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Beverages</td>
+<td style="text-align: right;">6.682526</td>
+<td style="text-align: right;">0.5692770</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Home Care</td>
+<td style="text-align: right;">4.409337</td>
+<td style="text-align: right;">0.6151824</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Personal Care</td>
+<td style="text-align: right;">2.485454</td>
+<td style="text-align: right;">0.5690357</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Snacks</td>
+<td style="text-align: right;">2.409133</td>
+<td style="text-align: right;">0.5885083</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt 5.1 — have AI write SQL, then check it
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Using DuckDB SQL on table gold.v_sales (columns: week_starting, depot_code, sku, units_sold, revenue_ngn, gross_profit_ngn, on_promotion, discount_pct, stockout_flag, depot_name, region, state, product_name, category, pack_size, year, quarter, year_month), write a query for “gross margin % by category and region for 2025, ranked within each region”. Use a CTE and a window function. Then list the assumptions you made.</p>
+</blockquote>
+</div>
+</div>
+<p><strong>Review checklist for AI-written SQL.</strong> Run it every time:</p>
+<ol type="1">
+<li>Is the <strong>grain</strong> right? (one row per what?)</li>
+<li>Do the <strong>filters</strong> match the question? (year, status, test accounts)</li>
+<li>Can any <strong>join fan out</strong>?</li>
+<li>Are <strong>nulls</strong> handled? (<code>SUM</code> ignores them; <code>COUNT(*)</code> doesn’t)</li>
+<li>Is any <strong>ratio</strong> computed as a ratio of sums, not an average of ratios?</li>
+<li>Does a <strong>sanity total</strong> match a known number?</li>
+</ol>
+</section>
+<section id="exercises" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">5.8</span> 🏋️ Exercises</h2>
+<p><strong>E5.1 🟢</strong> List the five SKUs with the highest stockout rate in 2025.</p>
+<p><strong>E5.2 🟡</strong> For each depot, compute revenue in Q4 2025 vs Q4 2024 and the growth %. Which depots shrank?</p>
+<p><strong>E5.3 🔴</strong> Write one query that returns, for each region and month, revenue, its share of national revenue that month, and its rank. Use window functions only, with no self-joins.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> product_name, <span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> <span class="fu">AVG</span>(stockout_flag), <span class="dv">2</span>) <span class="kw">AS</span> stockout_pct</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> gold.v_sales <span class="kw">WHERE</span> <span class="dt">year</span> <span class="op">=</span> <span class="dv">2025</span> <span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dv">1</span> <span class="kw">ORDER</span> <span class="kw">BY</span> <span class="dv">2</span> <span class="kw">DESC</span> <span class="kw">LIMIT</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>5 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">product_name</th>
+<th style="text-align: right;">stockout_pct</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Foods Line 05</td>
+<td style="text-align: right;">5.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Home Line 06</td>
+<td style="text-align: right;">4.97</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Personal Line 08</td>
+<td style="text-align: right;">4.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Beverages Line 01</td>
+<td style="text-align: right;">4.65</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Beverages Line 06</td>
+<td style="text-align: right;">4.65</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> q <span class="kw">AS</span> (</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">SELECT</span> depot_name,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>         <span class="fu">SUM</span>(revenue_ngn) <span class="kw">FILTER</span> (<span class="kw">WHERE</span> <span class="dt">year</span> <span class="op">=</span> <span class="dv">2025</span> <span class="kw">AND</span> quarter <span class="op">=</span> <span class="dv">4</span>) <span class="kw">AS</span> q4_25,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>         <span class="fu">SUM</span>(revenue_ngn) <span class="kw">FILTER</span> (<span class="kw">WHERE</span> <span class="dt">year</span> <span class="op">=</span> <span class="dv">2024</span> <span class="kw">AND</span> quarter <span class="op">=</span> <span class="dv">4</span>) <span class="kw">AS</span> q4_24</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> gold.v_sales <span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dv">1</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span>, <span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> (q4_25 <span class="op">/</span> q4_24 <span class="op">-</span> <span class="dv">1</span>), <span class="dv">1</span>) <span class="kw">AS</span> growth_pct <span class="kw">FROM</span> q <span class="kw">ORDER</span> <span class="kw">BY</span> growth_pct</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">depot_name</th>
+<th style="text-align: right;">q4_25</th>
+<th style="text-align: right;">q4_24</th>
+<th style="text-align: right;">growth_pct</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Kano</td>
+<td style="text-align: right;">380658975</td>
+<td style="text-align: right;">375112531</td>
+<td style="text-align: right;">1.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jos</td>
+<td style="text-align: right;">200636028</td>
+<td style="text-align: right;">190430851</td>
+<td style="text-align: right;">5.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Abuja Central (Wuse II)</td>
+<td style="text-align: right;">462647942</td>
+<td style="text-align: right;">432415681</td>
+<td style="text-align: right;">7.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kaduna</td>
+<td style="text-align: right;">266002184</td>
+<td style="text-align: right;">241218752</td>
+<td style="text-align: right;">10.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ibadan</td>
+<td style="text-align: right;">515702075</td>
+<td style="text-align: right;">352937150</td>
+<td style="text-align: right;">46.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Onitsha</td>
+<td style="text-align: right;">638511050</td>
+<td style="text-align: right;">436502068</td>
+<td style="text-align: right;">46.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Port Harcourt</td>
+<td style="text-align: right;">575000392</td>
+<td style="text-align: right;">387304252</td>
+<td style="text-align: right;">48.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Enugu</td>
+<td style="text-align: right;">357899259</td>
+<td style="text-align: right;">240767150</td>
+<td style="text-align: right;">48.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Benin City</td>
+<td style="text-align: right;">422449672</td>
+<td style="text-align: right;">279884329</td>
+<td style="text-align: right;">50.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Abeokuta</td>
+<td style="text-align: right;">348450559</td>
+<td style="text-align: right;">230293716</td>
+<td style="text-align: right;">51.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> year_month, region, <span class="fu">SUM</span>(revenue_ngn) <span class="kw">AS</span> revenue,</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(revenue_ngn) <span class="op">/</span> <span class="fu">SUM</span>(<span class="fu">SUM</span>(revenue_ngn)) <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> year_month), <span class="dv">3</span>) <span class="kw">AS</span> <span class="kw">share</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">rank</span>() <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> year_month <span class="kw">ORDER</span> <span class="kw">BY</span> <span class="fu">SUM</span>(revenue_ngn) <span class="kw">DESC</span>) <span class="kw">AS</span> rnk</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> gold.v_sales <span class="kw">GROUP</span> <span class="kw">BY</span> year_month, region <span class="kw">ORDER</span> <span class="kw">BY</span> year_month <span class="kw">DESC</span>, rnk <span class="kw">LIMIT</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">year_month</th>
+<th style="text-align: left;">region</th>
+<th style="text-align: right;">revenue</th>
+<th style="text-align: right;">share</th>
+<th style="text-align: right;">rnk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2026-03</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: right;">1344799356</td>
+<td style="text-align: right;">0.436</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-03</td>
+<td style="text-align: left;">South East</td>
+<td style="text-align: right;">559301922</td>
+<td style="text-align: right;">0.182</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-03</td>
+<td style="text-align: left;">South South</td>
+<td style="text-align: right;">535484788</td>
+<td style="text-align: right;">0.174</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-03</td>
+<td style="text-align: left;">North West</td>
+<td style="text-align: right;">322150333</td>
+<td style="text-align: right;">0.105</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-03</td>
+<td style="text-align: left;">North Central</td>
+<td style="text-align: right;">319558109</td>
+<td style="text-align: right;">0.104</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-02</td>
+<td style="text-align: left;">South West</td>
+<td style="text-align: right;">919428113</td>
+<td style="text-align: right;">0.440</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-02</td>
+<td style="text-align: left;">South East</td>
+<td style="text-align: right;">386293990</td>
+<td style="text-align: right;">0.185</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-02</td>
+<td style="text-align: left;">South South</td>
+<td style="text-align: right;">357793898</td>
+<td style="text-align: right;">0.171</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-02</td>
+<td style="text-align: left;">North Central</td>
+<td style="text-align: right;">214273557</td>
+<td style="text-align: right;">0.103</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-02</td>
+<td style="text-align: left;">North West</td>
+<td style="text-align: right;">209745912</td>
+<td style="text-align: right;">0.100</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="mastery-check" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">5.9</span> ✅ Mastery check</h2>
+<ul>
+<li>When do you use <code>HAVING</code> rather than <code>WHERE</code>?</li>
+<li>What does <code>QUALIFY row_number() OVER (PARTITION BY k ORDER BY t DESC) = 1</code> do?</li>
+<li>Why is “average of ratios” usually wrong for margin?</li>
+</ul>
+</section>
+<section id="in-the-organisation" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">5.10</span> 🏢 In the organisation</h2>
+<p>Make SQL review part of the culture. No query feeds a board number without a second pair of eyes, and AI-written SQL gets the same review as a junior analyst’s. Keep a shared, Git-versioned folder of “certified queries”. Over time it becomes the seed of your semantic layer.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./04-profiling.html" class="pagination-link" aria-label="Profile before you trust">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Profile before you trust</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./06-bronze.html" class="pagination-link" aria-label="Bronze: land everything, change nothing">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bronze: land everything, change nothing</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Turning Data into Business Growth · Lagos Business School</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

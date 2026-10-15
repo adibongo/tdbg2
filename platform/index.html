@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Governed Analytics Platform · TDBG</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Source+Serif+4:wght@600..700&family=IBM+Plex+Mono&display=swap">
+<style>
+/* Layout: a field-guide index. Architecture first, then the four things you can open, then the tutorial ladder and sector playbooks */
+:root{
+  --bg:#F5F7FA; --surface:#FFFFFF; --ink:#0B2C55; --text:#1E293B; --muted:#5B6B80; --line:#D7DEE8; --accent:#E8A33D; --accent-ink:#7A4E0B;
+  --l1:#3F8F7E; --l2:#2F6DB5; --l3:#6B5BA8; --l4:#0B2C55;
+  --display:"Source Serif 4", Georgia, serif; --body:"Inter", system-ui, -apple-system, sans-serif; --mono:"IBM Plex Mono", ui-monospace, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0E1726; --surface:#152236; --ink:#E6ECF5; --text:#D5DDE8; --muted:#94A3B8; --line:#26364F; --accent:#F2B655; --accent-ink:#F2B655;
+  --l1:#6FBFAE; --l2:#7FA8D4; --l3:#A99BDA; --l4:#C7D7EA; color-scheme:dark }}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.6}
+.topbar{background:#0B2C55;border-bottom:3px solid #E8A33D}
+.topbar .in{max-width:1080px;margin:0 auto;padding:12px max(16px,env(safe-area-inset-left,0px));display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.topbar a{color:#fff;text-decoration:none;font-size:.92rem}
+.topbar .brand{font-family:var(--display);font-weight:700;font-size:1.1rem;margin-right:auto}
+.wrap{max-width:1080px;margin:0 auto;padding-block:36px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink)}
+h1{font-family:var(--display);font-size:clamp(2rem,5vw,3rem);line-height:1.1;color:var(--ink);margin:.3em 0 .25em;text-wrap:balance}
+h2{font-family:var(--display);font-size:1.55rem;color:var(--ink);margin:0 0 .5em;text-wrap:balance}
+.lede{max-width:68ch;font-size:1.06rem;margin:0}
+figure{margin:28px 0 6px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;overflow-x:auto}
+figure img{display:block;min-width:720px;width:100%}
+figcaption{font-size:.85rem;color:var(--muted)}
+section{margin-top:52px}
+.open{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;text-decoration:none;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile:hover{border-color:var(--accent)}
+.tile b{font-size:1.05rem;color:var(--ink)}
+.tile span{font-size:.9rem;color:var(--muted)}
+.tile .go{margin-top:auto;font-family:var(--mono);font-size:.8rem;color:var(--accent-ink)}
+.tile.primary{background:#0B2C55;border-color:#0B2C55}
+.tile.primary b,.tile.primary span,.tile.primary .go{color:#fff}
+.ladder{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.level{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:8px;padding:16px;min-width:0}
+.level .tag{font-family:var(--mono);font-size:.74rem;color:var(--c);letter-spacing:.05em;text-transform:uppercase}
+.level h3{margin:.1em 0 .4em;font-size:1rem;color:var(--ink)}
+ol.ch{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:.92rem}
+ol.ch li{display:grid;grid-template-columns:2.2em 1fr;align-items:baseline}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--muted);font-size:.8rem}
+.sectors{display:flex;flex-wrap:wrap;gap:8px}
+.sectors a{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;text-decoration:none;font-size:.92rem}
+.sectors a:hover{border-color:var(--accent)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:10px;max-width:75ch}
+.steps li{counter-increment:s;display:grid;grid-template-columns:2em 1fr;gap:6px}
+.steps li::before{content:counter(s);font-family:var(--mono);color:var(--accent-ink);font-weight:700}
+code{font-family:var(--mono);font-size:.88em;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+.note{border-left:3px solid var(--accent);padding:6px 0 6px 14px;color:var(--muted);font-size:.93rem;max-width:75ch}
+footer{margin-top:52px;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+@media (prefers-reduced-motion:no-preference){.tile,.sectors a{transition:border-color .15s}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="in">
+  <a class="brand" href="../index.html">TDBG · LBS Exec Ed</a>
+  <a href="book/index.html">Tutorial</a>
+  <a href="dashboard/index.html">Dashboard</a>
+  <a href="notebook.html">Build notebook</a>
+  <a href="#shiny">Shiny edition</a>
+  <a href="../index.html">← Course site</a>
+</div></div>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Turning Data into Business Growth · the platform</div>
+    <h1>The Governed Analytics Platform</h1>
+    <p class="lede">One architecture, built end to end on the course data. Files, spreadsheets, databases and official statistics flow into a DuckDB warehouse. Tests decide what gets published. A semantic layer keeps every KPI to one definition. Dashboards, marts and an AI assistant serve the result. The tutorial teaches every layer, and the dashboard shows it working.</p>
+  </header>
+
+  <figure><img src="book/images/architecture.svg" alt="Architecture: sources (files, databases, Dataverse, APIs, official statistics from the World Bank, IMF, UNCTAD and UN Comtrade, text) flow through ingest into DuckDB bronze, silver and gold layers, through a data-test gate, into governed access and out to serving targets, with an operations and security plane underneath"></figure>
+  <figcaption>Data flows one way. Nothing reaches the serving layer unless it passes the test gate.</figcaption>
+
+  <section>
+    <h2>Open</h2>
+    <div class="open">
+      <a class="tile primary" href="book/index.html"><b>Master tutorial</b><span>26 chapters, from novice to master, with nine sector playbooks, exercises, a capstone and every prompt.</span><span class="go">book →</span></a>
+      <a class="tile" href="dashboard/index.html"><b>Dashboard</b><span>The serving layer, live on the course data. Runs in your browser: KPIs, semantic layer, review search, macro and data quality.</span><span class="go">static edition →</span></a>
+      <a class="tile" href="notebook.html"><b>Build notebook</b><span>Every database built step by step: CSV, Excel, Parquet, SQLite, DuckDB, World Bank, IMF, Comtrade, Dataverse, tests.</span><span class="go">notebook →</span></a>
+      <a class="tile" href="#shiny"><b>Shiny edition and source</b><span>The live R version: switch between six data sources, AI SQL assistant, auto-refresh. Download or deploy it.</span><span class="go">how to run it ↓</span></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>The tutorial, level by level</h2>
+    <div class="ladder">
+      <div class="level" style="--c:var(--l1)"><span class="tag">Level 1 · Novice</span><h3>See the whole, touch the data</h3>
+        <ol class="ch"><li><span class="num">01</span><a href="book/01-architecture.html">The architecture</a></li><li><span class="num">02</span><a href="book/02-setup.html">Your workbench</a></li><li><span class="num">03</span><a href="book/03-files.html">File formats</a></li><li><span class="num">04</span><a href="book/04-profiling.html">Profiling</a></li></ol></div>
+      <div class="level" style="--c:var(--l2)"><span class="tag">Level 2 · Practitioner</span><h3>Build the warehouse</h3>
+        <ol class="ch"><li><span class="num">05</span><a href="book/05-sql.html">SQL</a></li><li><span class="num">06</span><a href="book/06-bronze.html">Bronze and official statistics</a></li><li><span class="num">07</span><a href="book/07-silver.html">Silver</a></li><li><span class="num">08</span><a href="book/08-gold.html">Gold</a></li><li><span class="num">09</span><a href="book/09-tests.html">Tests and the gate</a></li></ol></div>
+      <div class="level" style="--c:var(--l3)"><span class="tag">Level 3 · Advanced</span><h3>Govern and serve</h3>
+        <ol class="ch"><li><span class="num">10</span><a href="book/10-semantic.html">Semantic layer</a></li><li><span class="num">11</span><a href="book/11-vector-ai.html">Vector search and AI</a></li><li><span class="num">12</span><a href="book/12-serving.html">Serving</a></li><li><span class="num">13</span><a href="book/13-dashboards.html">Dashboards</a></li></ol></div>
+      <div class="level" style="--c:var(--l4)"><span class="tag">Level 4 · Master</span><h3>Run it in production</h3>
+        <ol class="ch"><li><span class="num">14</span><a href="book/14-operations.html">Operations</a></li><li><span class="num">15</span><a href="book/15-security.html">Security and NDPA</a></li><li><span class="num">16</span><a href="book/16-deploy.html">Deploying in an organisation</a></li></ol></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sector playbooks</h2>
+    <div class="sectors">
+      <a href="book/17-hr.html">HR</a><a href="book/18-education.html">Education</a><a href="book/19-supply-chain.html">Supply chain</a>
+      <a href="book/20-retail.html">Retail and FMCG</a><a href="book/21-oil-gas.html">Oil and gas</a><a href="book/22-power.html">Power</a>
+      <a href="book/23-banking.html">Banking</a><a href="book/24-pensions.html">Pensions</a><a href="book/25-telecoms.html">Telecoms</a>
+      <a href="book/26-capstone.html">Capstone</a><a href="book/d-open-data.html">Official and open data catalogue</a>
+    </div>
+  </section>
+
+  <section id="shiny">
+    <h2>The Shiny edition</h2>
+    <p class="lede" style="margin-bottom:14px">The dashboard above is the static edition: it runs in your browser, so it can live on this password-protected site. The Shiny edition runs a live R session behind the page. It can switch between CSV, Excel, Parquet, SQLite, DuckDB and PostgreSQL, re-query the warehouse, draft SQL with AI, and refresh itself when the warehouse is rebuilt. It needs a server, so run it on your laptop or deploy it.</p>
+    <h3 style="font-size:1.05rem;color:var(--ink)">Run it on your laptop</h3>
+    <ol class="steps">
+      <li><span>Get the code: the <code>platform/lab</code> folder of the course repository on GitHub, at <a href="https://github.com/adibongo/tdbg2/tree/main/platform/lab">github.com/adibongo/tdbg2</a>. It has the data and the warehouse already built.</span></li>
+      <li><span>Open the folder in Positron or RStudio. In the console, run <code>quarto::quarto_serve("02-dashboard.qmd")</code>.</span></li>
+      <li><span>To rebuild every database from the raw files first, render <code>01-build-data-layer.qmd</code>. It takes about a minute.</span></li>
+    </ol>
+    <h3 style="font-size:1.05rem;color:var(--ink);margin-top:18px">Deploy it to the web (Posit Connect Cloud, free tier)</h3>
+    <ol class="steps">
+      <li><span>Sign in at <code>connect.posit.cloud</code> with GitHub.</span></li>
+      <li><span>Choose <b>Publish → Shiny</b>, then pick the repository <code>adibongo/tdbg2</code>, branch <code>main</code>, and the primary file <code>platform/lab/02-dashboard.qmd</code>. The <code>manifest.json</code> beside it lists every package.</span></li>
+      <li><span>Optional: add <code>ANTHROPIC_API_KEY</code> under <b>Secrets</b> to switch on the AI SQL assistant.</span></li>
+    </ol>
+    <p class="note">A Connect Cloud app sits outside this site's password. The course data is synthetic, but if you would rather keep the live app private, choose a private deployment, or run it on a laptop in class.</p>
+  </section>
+
+  <footer>Turning Data into Business Growth · Lagos Business School · Prof. Bongo Adi. All datasets are synthetic, built for teaching. Official statistics are © their providers (World Bank, IMF, UN Comtrade) and are used under their open-data terms.</footer>
+</div>
+</body>
+</html>

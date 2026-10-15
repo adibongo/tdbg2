@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>11&nbsp; Vector search and AI on governed data – The Governed Analytics Platform</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./12-serving.html" rel="next">
+<link href="./10-semantic.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-187f5191076cea0c25736ba820c9c5fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./10-semantic.html">Level 3 · Advanced — Govern and serve</a></li><li class="breadcrumb-item"><a href="./11-vector-ai.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Vector search and AI on governed data</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Governed Analytics Platform</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 1 · Novice — See the whole, touch the data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The architecture, end to end</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Your workbench</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data comes in many shapes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-profiling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Profile before you trust</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 2 · Practitioner — Build the warehouse</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-sql.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">SQL: the language of the warehouse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-bronze.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bronze: land everything, change nothing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-silver.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Silver: clean, conform, remember</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-gold.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Gold: model for decisions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tests and the publish gate</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 3 · Advanced — Govern and serve</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-semantic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The semantic layer: one definition of every KPI</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-vector-ai.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Vector search and AI on governed data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-serving.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Serving: trusted data where people work</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-dashboards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Dashboards with Quarto and Shiny</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 4 · Master — Run it in production</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Operations: run it every day without you</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Security, privacy and governance</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-deploy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Deploying in an organisation</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Sector playbooks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./17-hr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Playbook: Human resources</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./18-education.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Playbook: Education</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./19-supply-chain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Playbook: Supply chain and procurement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-retail.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Playbook: Retail chains and FMCG</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./21-oil-gas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Playbook: Oil and gas (upstream)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./22-power.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Playbook: Power and utilities</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./23-banking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Playbook: Financial services (banking)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./24-pensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Playbook: Pensions (PenCom-regulated)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./25-telecoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Playbook: Telecommunications</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./26-capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Capstone: prove mastery</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./a-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Glossary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./b-prompts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Prompt library</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./c-troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./d-open-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#embeddings-in-one-picture" id="toc-embeddings-in-one-picture" class="nav-link active" data-scroll-target="#embeddings-in-one-picture"><span class="header-section-number">11.1</span> Embeddings in one picture</a></li>
+  <li><a href="#build-a-complaint-search-engine" id="toc-build-a-complaint-search-engine" class="nav-link" data-scroll-target="#build-a-complaint-search-engine"><span class="header-section-number">11.2</span> Build a complaint search engine</a></li>
+  <li><a href="#from-search-to-themes-clustering" id="toc-from-search-to-themes-clustering" class="nav-link" data-scroll-target="#from-search-to-themes-clustering"><span class="header-section-number">11.3</span> From search to themes: clustering</a></li>
+  <li><a href="#retrieval-augmented-generation-rag" id="toc-retrieval-augmented-generation-rag" class="nav-link" data-scroll-target="#retrieval-augmented-generation-rag"><span class="header-section-number">11.4</span> Retrieval-augmented generation (RAG)</a></li>
+  <li><a href="#text-to-sql-with-guardrails" id="toc-text-to-sql-with-guardrails" class="nav-link" data-scroll-target="#text-to-sql-with-guardrails"><span class="header-section-number">11.5</span> Text-to-SQL, with guardrails</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">11.6</span> 🏋️ Exercises</a></li>
+  <li><a href="#mastery-check" id="toc-mastery-check" class="nav-link" data-scroll-target="#mastery-check"><span class="header-section-number">11.7</span> ✅ Mastery check</a></li>
+  <li><a href="#in-the-organisation" id="toc-in-the-organisation" class="nav-link" data-scroll-target="#in-the-organisation"><span class="header-section-number">11.8</span> 🏢 In the organisation</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./10-semantic.html">Level 3 · Advanced — Govern and serve</a></li><li class="breadcrumb-item"><a href="./11-vector-ai.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Vector search and AI on governed data</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-vector" class="quarto-section-identifier"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Vector search and AI on governed data</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span class="level-badge">🟣 Advanced</span></p>
+<div class="wwww">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>What</strong></td>
+<td>Turning text into vectors (“embeddings”) for search-by-meaning, and connecting large language models to the warehouse safely: retrieval-augmented generation (RAG) and text-to-SQL</td>
+</tr>
+<tr class="even">
+<td><strong>Why</strong></td>
+<td>Most of an organisation’s knowledge is text: complaints, reviews, call notes, incident reports. And most users would rather ask a question than build a query</td>
+</tr>
+<tr class="odd">
+<td><strong>When</strong></td>
+<td>After the semantic layer exists. AI without governed definitions just invents confident wrong answers faster</td>
+</tr>
+<tr class="even">
+<td><strong>Who</strong></td>
+<td>Analytics engineers build the index. The DPO approves what data may reach which model. Users ask questions, and <em>review</em> the SQL</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="embeddings-in-one-picture" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="embeddings-in-one-picture"><span class="header-section-number">11.1</span> Embeddings in one picture</h2>
+<p>An <strong>embedding</strong> turns a piece of text into a list of numbers, a point in space, so that texts with similar meaning land close together. <strong>Cosine similarity</strong> measures closeness: 1 means the same direction, 0 means unrelated. A <strong>vector index</strong> stores these points and finds the nearest neighbours of a query quickly.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Embedding method</th>
+<th>How it works</th>
+<th>Strengths</th>
+<th>Weaknesses</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>TF-IDF</strong> (in kit.R)</td>
+<td>Counts words, weights rare words up</td>
+<td>Free, offline, explainable, instant</td>
+<td>Matches <em>words</em>, not meaning; no synonyms; one language at a time</td>
+</tr>
+<tr class="even">
+<td><strong>Neural sentence embeddings</strong> (e.g.&nbsp;all-MiniLM, multilingual-e5, OpenAI, Voyage)</td>
+<td>A trained model maps meaning to ~384–3072 dimensions</td>
+<td>Synonyms, paraphrase, cross-lingual (English ↔︎ Pidgin)</td>
+<td>Needs a model or API; costs; data-protection review</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="build-a-complaint-search-engine" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="build-a-complaint-search-engine"><span class="header-section-number">11.2</span> Build a complaint search engine</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt 11.1 — vector index for complaints
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Build a vector index over silver.complaints.complaint_text using the kit’s vector_index() (TF-IDF), storing vectors as DOUBLE[] in DuckDB. Then search for “I can’t see my RSA balance online” and “my employer did not remit my contribution”, and show the top five matches with similarity scores.</p>
+</blockquote>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>idx <span class="ot">&lt;-</span> <span class="fu">vector_index</span>(con, <span class="st">"silver.complaints"</span>, <span class="st">"complaint_id"</span>, <span class="st">"complaint_text"</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">extra_cols =</span> <span class="fu">c</span>(<span class="st">"channel"</span>, <span class="st">"language"</span>, <span class="st">"status"</span>), <span class="at">out =</span> <span class="st">"complaints_vec"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">nrow</span>(idx<span class="sc">$</span>vocab), <span class="st">"terms in the vocabulary</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>94 terms in the vocabulary</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vector_search</span>(con, idx, <span class="st">"I can't see my RSA balance online"</span>, <span class="at">k =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 14%">
+<col style="width: 41%">
+<col style="width: 14%">
+<col style="width: 10%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">similarity</th>
+<th style="text-align: left;">complaint_id</th>
+<th style="text-align: left;">complaint_text</th>
+<th style="text-align: left;">channel</th>
+<th style="text-align: left;">language</th>
+<th style="text-align: left;">status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.55</td>
+<td style="text-align: left;">PC500001</td>
+<td style="text-align: left;">Online portal not showing my balance</td>
+<td style="text-align: left;">Web form</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.55</td>
+<td style="text-align: left;">PC500006</td>
+<td style="text-align: left;">Online portal not showing my balance</td>
+<td style="text-align: left;">Email</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.55</td>
+<td style="text-align: left;">PC500064</td>
+<td style="text-align: left;">Online portal not showing my balance</td>
+<td style="text-align: left;">Walk-in</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.55</td>
+<td style="text-align: left;">PC500102</td>
+<td style="text-align: left;">Online portal not showing my balance</td>
+<td style="text-align: left;">Social media</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.55</td>
+<td style="text-align: left;">PC500113</td>
+<td style="text-align: left;">Online portal not showing my balance</td>
+<td style="text-align: left;">Web form</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vector_search</span>(con, idx, <span class="st">"my employer did not remit my contribution"</span>, <span class="at">k =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 13%">
+<col style="width: 47%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">similarity</th>
+<th style="text-align: left;">complaint_id</th>
+<th style="text-align: left;">complaint_text</th>
+<th style="text-align: left;">channel</th>
+<th style="text-align: left;">language</th>
+<th style="text-align: left;">status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.549</td>
+<td style="text-align: left;">PC500002</td>
+<td style="text-align: left;">My employer deducts pension but does not remit</td>
+<td style="text-align: left;">Social media</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.549</td>
+<td style="text-align: left;">PC500015</td>
+<td style="text-align: left;">My employer deducts pension but does not remit</td>
+<td style="text-align: left;">Web form</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.549</td>
+<td style="text-align: left;">PC500022</td>
+<td style="text-align: left;">My employer deducts pension but does not remit</td>
+<td style="text-align: left;">Walk-in</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.549</td>
+<td style="text-align: left;">PC500031</td>
+<td style="text-align: left;">My employer deducts pension but does not remit</td>
+<td style="text-align: left;">Web form</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.549</td>
+<td style="text-align: left;">PC500038</td>
+<td style="text-align: left;">My employer deducts pension but does not remit</td>
+<td style="text-align: left;">Web form</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Now test the hardest case: the <strong>same need in two languages</strong>. About a quarter of these complaints are in Nigerian Pidgin. Does an English question find them?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>english_q <span class="ot">&lt;-</span> <span class="fu">vector_search</span>(con, idx, <span class="st">"employer deducts pension from salary but does not remit"</span>, <span class="at">k =</span> <span class="dv">20</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>pidgin_q  <span class="ot">&lt;-</span> <span class="fu">vector_search</span>(con, idx, <span class="st">"oga dey remove pension but e no enter"</span>, <span class="at">k =</span> <span class="dv">20</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">query =</span> <span class="fu">c</span>(<span class="st">"English wording"</span>, <span class="st">"Pidgin wording"</span>),</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">pidgin_complaints_in_top_20 =</span> <span class="fu">c</span>(<span class="fu">sum</span>(english_q<span class="sc">$</span>language <span class="sc">==</span> <span class="st">"Pidgin"</span>), <span class="fu">sum</span>(pidgin_q<span class="sc">$</span>language <span class="sc">==</span> <span class="st">"Pidgin"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">query</th>
+<th style="text-align: right;">pidgin_complaints_in_top_20</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">English wording</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pidgin wording</td>
+<td style="text-align: right;">20</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(pidgin_q[, <span class="fu">c</span>(<span class="st">"similarity"</span>, <span class="st">"complaint_text"</span>, <span class="st">"language"</span>)], <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 76%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">similarity</th>
+<th style="text-align: left;">complaint_text</th>
+<th style="text-align: left;">language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.826</td>
+<td style="text-align: left;">Oga dey remove pension from salary but e no dey enter my account</td>
+<td style="text-align: left;">Pidgin</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.826</td>
+<td style="text-align: left;">Oga dey remove pension from salary but e no dey enter my account</td>
+<td style="text-align: left;">Pidgin</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.826</td>
+<td style="text-align: left;">Oga dey remove pension from salary but e no dey enter my account</td>
+<td style="text-align: left;">Pidgin</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The English query finds the English complaints about non-remittance and <strong>misses the Pidgin complaints describing exactly the same problem</strong>. The Pidgin query finds them, because it shares the words “oga”, “pension” and “enter”. TF-IDF matches <em>words</em>, so it cannot know that <em>“oga dey remove pension but e no enter”</em> means <em>“my employer deducts but does not remit”</em>. A regulator relying on it would under-count the problem among Pidgin speakers. That is a fairness issue, not just a technical one.</p>
+<p>The fix is a <strong>multilingual neural embedding model</strong>, and the swap touches one function, <code>embed()</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>hf_embed <span class="ot">&lt;-</span> <span class="cf">function</span>(texts, <span class="at">model =</span> <span class="st">"intfloat/multilingual-e5-small"</span>) {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">request</span>(<span class="fu">paste0</span>(<span class="st">"https://router.huggingface.co/hf-inference/models/"</span>, model, <span class="st">"/pipeline/feature-extraction"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    httr2<span class="sc">::</span><span class="fu">req_auth_bearer_token</span>(<span class="fu">Sys.getenv</span>(<span class="st">"HF_TOKEN"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    httr2<span class="sc">::</span><span class="fu">req_body_json</span>(<span class="fu">list</span>(<span class="at">inputs =</span> texts)) <span class="sc">|&gt;</span> httr2<span class="sc">::</span><span class="fu">req_perform</span>() <span class="sc">|&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    httr2<span class="sc">::</span><span class="fu">resp_body_json</span>(<span class="at">simplifyVector =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Embed in batches, store as FLOAT[384], build an HNSW index (DuckDB 'vss' extension) for millions of rows:</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   INSTALL vss; LOAD vss; CREATE INDEX ... USING HNSW (vec) WITH (metric = 'cosine');</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="from-search-to-themes-clustering" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="from-search-to-themes-clustering"><span class="header-section-number">11.3</span> From search to themes: clustering</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt 11.2 — discover complaint themes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Cluster the complaint vectors into 8 themes with k-means. For each cluster, show its size, its most characteristic words, its share of Pidgin complaints and its average days to resolve. Name each theme in plain English.</p>
+</blockquote>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>vecs <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(con, <span class="st">"SELECT complaint_id, vec FROM gold.complaints_vec"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, vecs<span class="sc">$</span>vec)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>); km <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(m, <span class="at">centers =</span> <span class="dv">8</span>, <span class="at">nstart =</span> <span class="dv">5</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>top_terms <span class="ot">&lt;-</span> <span class="fu">apply</span>(km<span class="sc">$</span>centers, <span class="dv">1</span>, <span class="cf">function</span>(c) <span class="fu">paste</span>(idx<span class="sc">$</span>vocab<span class="sc">$</span>term[<span class="fu">order</span>(<span class="sc">-</span>c)][<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">collapse =</span> <span class="st">", "</span>))</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>themes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">complaint_id =</span> vecs<span class="sc">$</span>complaint_id, <span class="at">cluster =</span> km<span class="sc">$</span>cluster)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(con, DBI<span class="sc">::</span><span class="fu">Id</span>(<span class="at">schema =</span> <span class="st">"gold"</span>, <span class="at">table =</span> <span class="st">"complaint_themes"</span>), themes, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(con, <span class="st">"SELECT t.cluster, COUNT(*) n, round(AVG((c.language = 'Pidgin')::INT), 2) pidgin_share,</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="st">                        round(AVG(c.days_to_resolve), 1) avg_days_closed, SUM((c.status = 'open')::INT) still_open</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="st">                 FROM gold.complaint_themes t JOIN silver.complaints c USING (complaint_id)</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="st">                 GROUP BY 1 ORDER BY n DESC"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">top_words =</span> top_terms[cluster])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 4%">
+<col style="width: 15%">
+<col style="width: 18%">
+<col style="width: 12%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">cluster</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">pidgin_share</th>
+<th style="text-align: right;">avg_days_closed</th>
+<th style="text-align: right;">still_open</th>
+<th style="text-align: left;">top_words</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">643</td>
+<td style="text-align: right;">0.29</td>
+<td style="text-align: right;">38.9</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: left;">benefit, never, pay, dem</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">576</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">25.7</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: left;">for, months, statement, have</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">533</td>
+<td style="text-align: right;">0.40</td>
+<td style="text-align: right;">17.4</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: left;">the, app, show, rsa</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">341</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">17.3</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: left;">record, birth, correction, date</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">322</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">17.2</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">deducts, does, employer, remit</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">281</td>
+<td style="text-align: right;">0.51</td>
+<td style="text-align: right;">17.5</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: left;">request, transfer, don, hang</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">204</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">17.6</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">dey, enter, from, oga</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">183</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">18.3</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">online, portal, showing, balance</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Clusters are a <em>starting point</em> for human labelling, not the answer. A customer-experience analyst names them, merges near-duplicates, and the names become an <code>accepted_values</code> list for the next stage: a supervised classifier.</p>
+</section>
+<section id="retrieval-augmented-generation-rag" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="retrieval-augmented-generation-rag"><span class="header-section-number">11.4</span> Retrieval-augmented generation (RAG)</h2>
+<p>An LLM knows nothing about <em>your</em> complaints. RAG fixes that in three steps:</p>
+<ol type="1">
+<li><strong>Retrieve</strong> the most relevant records from the vector index.</li>
+<li><strong>Augment</strong> the prompt with them.</li>
+<li>Let the model <strong>generate</strong> an answer that cites them.</li>
+</ol>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt 11.3 — a governed RAG prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Build a function that, for a question, retrieves the 8 most similar complaints and assembles a prompt instructing the model to answer only from those complaints, cite complaint IDs, say “not enough evidence” if they don’t answer it, and never output personal data. Show the assembled prompt; call Claude only if ANTHROPIC_API_KEY is set.</p>
+</blockquote>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>rag_prompt <span class="ot">&lt;-</span> <span class="cf">function</span>(question, <span class="at">k =</span> <span class="dv">8</span>) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  hits <span class="ot">&lt;-</span> <span class="fu">vector_search</span>(con, idx, question, <span class="at">k =</span> k)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  context <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="fu">sprintf</span>(<span class="st">"[%s | %s | %s] %s"</span>, hits<span class="sc">$</span>complaint_id, hits<span class="sc">$</span>channel, hits<span class="sc">$</span>language, hits<span class="sc">$</span>complaint_text), <span class="at">collapse =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(<span class="st">"You are a pensions customer-experience analyst.</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>         <span class="st">"Answer ONLY from the complaints below. Cite complaint IDs in brackets. "</span>,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>         <span class="st">"If they do not answer the question, say 'not enough evidence'. Never reveal personal data.</span><span class="sc">\n\n</span><span class="st">"</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>         <span class="st">"COMPLAINTS:</span><span class="sc">\n</span><span class="st">"</span>, context, <span class="st">"</span><span class="sc">\n\n</span><span class="st">QUESTION: "</span>, question)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">rag_prompt</span>(<span class="st">"What are customers saying about updating their contact details?"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>You are a pensions customer-experience analyst.
+Answer ONLY from the complaints below. Cite complaint IDs in brackets. If they do not answer the question, say 'not enough evidence'. Never reveal personal data.
+
+COMPLAINTS:
+[PC500000 | Call centre | English] Cannot update my phone number on the RSA
+[PC500001 | Web form | English] Online portal not showing my balance
+[PC500002 | Social media | English] My employer deducts pension but does not remit
+[PC500003 | Web form | Pidgin] the app no dey show my balance
+[PC500004 | Call centre | English] Name mismatch between NIN and RSA record
+[PC500005 | Email | English] Customer service was very helpful today
+[PC500006 | Email | English] Online portal not showing my balance
+[PC500007 | Email | English] Statement shows no contribution for 12 months even though salary was deducted
+
+QUESTION: What are customers saying about updating their contact details?</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ask_claude <span class="ot">&lt;-</span> <span class="cf">function</span>(prompt, <span class="at">model =</span> <span class="st">"claude-sonnet-5-5"</span>) {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://api.anthropic.com/v1/messages"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    httr2<span class="sc">::</span><span class="fu">req_headers</span>(<span class="st">`</span><span class="at">x-api-key</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">Sys.getenv</span>(<span class="st">"ANTHROPIC_API_KEY"</span>), <span class="st">`</span><span class="at">anthropic-version</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"2023-06-01"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    httr2<span class="sc">::</span><span class="fu">req_body_json</span>(<span class="fu">list</span>(<span class="at">model =</span> model, <span class="at">max_tokens =</span> <span class="dv">600</span>, <span class="at">messages =</span> <span class="fu">list</span>(<span class="fu">list</span>(<span class="at">role =</span> <span class="st">"user"</span>, <span class="at">content =</span> prompt)))) <span class="sc">|&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    httr2<span class="sc">::</span><span class="fu">req_perform</span>() <span class="sc">|&gt;</span> httr2<span class="sc">::</span><span class="fu">resp_body_json</span>() <span class="sc">|&gt;</span> (\(r) r<span class="sc">$</span>content[[<span class="dv">1</span>]]<span class="sc">$</span>text)()</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">ask_claude</span>(<span class="fu">rag_prompt</span>(<span class="st">"What are customers saying about updating their contact details?"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="text-to-sql-with-guardrails" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="text-to-sql-with-guardrails"><span class="header-section-number">11.5</span> Text-to-SQL, with guardrails</h2>
+<p>The Lab dashboard’s <em>Ask your data</em> page sends a question, plus the <strong>schema and the semantic-layer definitions</strong> (never the data rows), to a model that writes SQL. A human reviews the SQL, then it runs read-only. Each guardrail closes one specific risk:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Guardrail</th>
+<th>Risk it closes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Semantic layer in the system prompt</td>
+<td>The model inventing its own definition of “revenue”</td>
+</tr>
+<tr class="even">
+<td>Read-only connection + <code>SELECT</code>-only check</td>
+<td>Prompt injection that tries to <code>DROP TABLE</code></td>
+</tr>
+<tr class="odd">
+<td>Row cap (<code>LIMIT 5000</code>)</td>
+<td>Exfiltrating whole tables</td>
+</tr>
+<tr class="even">
+<td>SQL shown to the user before running</td>
+<td>Silent wrong answers</td>
+</tr>
+<tr class="odd">
+<td>Only schema + definitions sent, not rows</td>
+<td>Personal data leaving the organisation (NDPA)</td>
+</tr>
+<tr class="even">
+<td>Local model option (Ollama)</td>
+<td>Any data leaving the laptop at all</td>
+</tr>
+<tr class="odd">
+<td>Question → SQL → result logging</td>
+<td>No audit trail</td>
+</tr>
+<tr class="even">
+<td>A <strong>golden-question test set</strong></td>
+<td>Quality drifting when the model or prompt changes</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt 11.4 — evaluate text-to-SQL
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Build a small evaluation harness: a table of golden questions, each with a reference SQL. For each candidate SQL (from any model), run both, compare the results (same rows and values within 0.1%), and report accuracy. Include one deliberately wrong candidate to prove the harness catches it.</p>
+</blockquote>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>golden <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="fu">c</span>(<span class="st">"How many complaints are still open?"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Which channel receives the most complaints?"</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Average days to resolve complaints received in 2025"</span>),</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">reference =</span> <span class="fu">c</span>(<span class="st">"SELECT COUNT(*) AS n FROM silver.complaints WHERE status = 'open'"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>                <span class="st">"SELECT channel FROM silver.complaints GROUP BY 1 ORDER BY COUNT(*) DESC LIMIT 1"</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>                <span class="st">"SELECT round(AVG(days_to_resolve),1) AS d FROM silver.complaints WHERE year(received_date) = 2025"</span>),</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">candidate =</span> <span class="fu">c</span>(<span class="st">"SELECT COUNT(*) FROM silver.complaints WHERE status = 'open'"</span>,</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>                <span class="st">"SELECT channel FROM silver.complaints GROUP BY channel ORDER BY COUNT(*) DESC LIMIT 1"</span>,</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>                <span class="st">"SELECT round(AVG(days_to_resolve),1) FROM silver.complaints WHERE received_date &gt;= DATE '2025-01-01'"</span>))   <span class="co"># wrong: no upper bound, so 2026 is included</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>same <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) <span class="fu">isTRUE</span>(<span class="fu">all.equal</span>(<span class="fu">unname</span>(<span class="fu">as.list</span>(a)), <span class="fu">unname</span>(<span class="fu">as.list</span>(b)), <span class="at">tolerance =</span> <span class="fl">1e-3</span>, <span class="at">check.attributes =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>golden<span class="sc">$</span>correct <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(r, c) <span class="fu">same</span>(<span class="fu">dbGetQuery</span>(con, r), <span class="fu">dbGetQuery</span>(con, c)), golden<span class="sc">$</span>reference, golden<span class="sc">$</span>candidate)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>golden[, <span class="fu">c</span>(<span class="st">"question"</span>, <span class="st">"correct"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">question</th>
+<th style="text-align: left;">correct</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">How many complaints are still open?</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Which channel receives the most complaints?</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Average days to resolve complaints received in 2025</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Accuracy:"</span>, <span class="fu">mean</span>(golden<span class="sc">$</span>correct))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Accuracy: 0.6666667</code></pre>
+</div>
+</div>
+<p>The harness caught the subtle error. The candidate’s date filter has no upper bound, so it quietly includes 2026 complaints. This is exactly the kind of mistake that looks fine to a busy manager. Note also what the harness <em>did not</em> flag: both versions of the first question return the same count, even though one names its column <code>n</code> and the other doesn’t. The harness compares <strong>results</strong>, not wording.</p>
+</section>
+<section id="exercises" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">11.6</span> 🏋️ Exercises</h2>
+<p><strong>E11.1 🟢</strong> Search the complaints for “portal password reset”. What is the top similarity score? Why is it not 1.0?</p>
+<p><strong>E11.2 🟡</strong> Build a vector index over <code>customer_reviews.csv</code> and compare the top results for “debited twice” and “double charge”. Explain the difference using what you know about TF-IDF.</p>
+<p><strong>E11.3 🔴</strong> Extend the golden set to 10 questions on the retail gold layer. If you have an API key, generate candidates with the Lab’s <code>ask_llm_for_sql()</code> and report accuracy. Which kinds of question fail most?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vector_search</span>(con, idx, <span class="st">"portal password reset"</span>, <span class="at">k =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 15%">
+<col style="width: 43%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">similarity</th>
+<th style="text-align: left;">complaint_id</th>
+<th style="text-align: left;">complaint_text</th>
+<th style="text-align: left;">channel</th>
+<th style="text-align: left;">language</th>
+<th style="text-align: left;">status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.497</td>
+<td style="text-align: left;">PC500001</td>
+<td style="text-align: left;">Online portal not showing my balance</td>
+<td style="text-align: left;">Web form</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.497</td>
+<td style="text-align: left;">PC500006</td>
+<td style="text-align: left;">Online portal not showing my balance</td>
+<td style="text-align: left;">Email</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.497</td>
+<td style="text-align: left;">PC500064</td>
+<td style="text-align: left;">Online portal not showing my balance</td>
+<td style="text-align: left;">Walk-in</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">closed</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bronze_ingest</span>(con, <span class="st">"customer_reviews.csv"</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>ridx <span class="ot">&lt;-</span> <span class="fu">vector_index</span>(con, <span class="st">"bronze.customer_reviews"</span>, <span class="st">"review_id"</span>, <span class="st">"review_text"</span>, <span class="at">out =</span> <span class="st">"reviews_vec"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">vector_search</span>(con, ridx, <span class="st">"debited twice"</span>, <span class="at">k =</span> <span class="dv">3</span>); <span class="fu">vector_search</span>(con, ridx, <span class="st">"double charge"</span>, <span class="at">k =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">similarity</th>
+<th style="text-align: left;">review_id</th>
+<th style="text-align: left;">review_text</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.558</td>
+<td style="text-align: left;">R700520</td>
+<td style="text-align: left;">debited twice and no reversal after five days. used it twice so far</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.558</td>
+<td style="text-align: left;">R702204</td>
+<td style="text-align: left;">debited twice and no reversal after five days. used it twice so far</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.558</td>
+<td style="text-align: left;">R703978</td>
+<td style="text-align: left;">debited twice and no reversal after five days. used it twice so far</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">similarity</th>
+<th style="text-align: left;">review_id</th>
+<th style="text-align: left;">review_text</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">-1</td>
+<td style="text-align: left;">R700000</td>
+<td style="text-align: left;">nothing to complain about really. pricing is fair for what you get</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">-1</td>
+<td style="text-align: left;">R700002</td>
+<td style="text-align: left;">pricing is fair for what you get</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">-1</td>
+<td style="text-align: left;">R700003</td>
+<td style="text-align: left;">dem debit me two times, e never reverse. it works</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>E11.1.</strong> It is below 1 because the query’s words and weights don’t exactly match any complaint. Cosine similarity is 1 only for identical direction.</p>
+<p><strong>E11.2.</strong> “Debited twice” matches strongly because those exact words appear in reviews. “Double charge” shares no vocabulary with them, so TF-IDF finds weak or irrelevant matches. A neural model would place both phrases close together.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="mastery-check" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">11.7</span> ✅ Mastery check</h2>
+<ul>
+<li>Explain an embedding and cosine similarity to a board member in three sentences.</li>
+<li>Name four guardrails for text-to-SQL and the risk each removes.</li>
+<li>Why is a golden-question test set necessary even if the model “seems good”?</li>
+</ul>
+</section>
+<section id="in-the-organisation" class="level2" data-number="11.8">
+<h2 data-number="11.8" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">11.8</span> 🏢 In the organisation</h2>
+<p>Before any AI feature goes live:</p>
+<ul>
+<li>run a <strong>Data Protection Impact Assessment</strong> (NDPA 2023);</li>
+<li>decide which data classes may reach which model (public API, enterprise API with no training on your data, or local model);</li>
+<li>log every prompt and response;</li>
+<li>name a human accountable for each AI-assisted decision.</li>
+</ul>
+<p>The value is real (minutes instead of days to read 3,000 complaints), and so is the governance work it requires.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./10-semantic.html" class="pagination-link" aria-label="The semantic layer: one definition of every KPI">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The semantic layer: one definition of every KPI</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./12-serving.html" class="pagination-link" aria-label="Serving: trusted data where people work">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Serving: trusted data where people work</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Turning Data into Business Growth · Lagos Business School</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
