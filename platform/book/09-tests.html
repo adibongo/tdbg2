@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -921,7 +932,7 @@ Why an <code>as_of</code> date?
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">2026-10-15 11:33:42</td>
+<td style="text-align: left;">2026-10-15 12:24:12</td>
 <td style="text-align: left;">gate</td>
 <td style="text-align: left;">serving</td>
 <td style="text-align: left;">published retail_serving.sqlite</td>
@@ -974,7 +985,7 @@ Why an <code>as_of</code> date?
 <section id="exercises" class="level2" data-number="9.7">
 <h2 data-number="9.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">9.7</span> 🏋️ Exercises</h2>
 <p><strong>E9.1 🟢</strong> Add a test that <code>gold.dim_depot</code> has exactly 12 depots. Which kit function do you use?</p>
-<p><strong>E9.2 🟡</strong> Write a test that compares the source’s <code>on_time</code> flag with the recomputed <code>delivery_status</code> in <code>gold.fct_po_lifecycle</code>, failing if they disagree on more than 2% of POs. Should it be <code>error</code> or <code>warn</code>?</p>
+<p><strong>E9.2 🟡</strong> Write a test that compares the source’s <code>on_time</code> flag with the recomputed <code>delivery_status</code> in <code>gold.fct_po_lifecycle</code>, failing if they disagree on more than 2% of purchase orders (POs). Should it be <code>error</code> or <code>warn</code>?</p>
 <p><strong>E9.3 🔴</strong> Write an <strong>anomaly test</strong>: fail if any depot’s revenue in the latest week is more than 3 standard deviations from its trailing 12-week mean. What are the risks of this kind of test?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -1053,6 +1064,18 @@ Solutions
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1487,7 +1510,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

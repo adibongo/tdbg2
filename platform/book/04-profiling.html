@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -658,7 +669,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td><strong>Uniqueness</strong></td>
 <td>Is each real-world thing recorded once?</td>
-<td>duplicate (week, depot, SKU)</td>
+<td>duplicate (week, depot, stock-keeping unit (SKU))</td>
 </tr>
 <tr class="odd">
 <td><strong>Validity</strong></td>
@@ -668,7 +679,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td><strong>Consistency</strong></td>
 <td>Do related fields and tables agree?</td>
-<td><code>received_date ≥ po_date</code>; every SKU exists in the product master</td>
+<td><code>received_date ≥ po_date</code>; every <a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a> exists in the product master</td>
 </tr>
 <tr class="odd">
 <td><strong>Timeliness</strong></td>
@@ -745,8 +756,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td style="text-align: left;">sku</td>
 <td style="text-align: left;">VARCHAR</td>
-<td style="text-align: left;">SKU-1001</td>
-<td style="text-align: left;">SKU-1040</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a>-1001</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a>-1040</td>
 <td style="text-align: right;">37</td>
 <td style="text-align: right;">0.00</td>
 </tr>
@@ -806,7 +817,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Read it like a detective:</p>
 <ul>
 <li><code>units_sold</code> and <code>revenue_ngn</code> have about 1.4% nulls.</li>
-<li>The key columns span about 118 weeks × 12 depots × 40 SKUs, so the file is close to a complete grid. Any key that appears twice is therefore suspicious, and worth counting (next section).</li>
+<li>The key columns span about 118 weeks × 12 depots × 40 <a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKUs</abbr></a>, so the file is close to a complete grid. Any key that appears twice is therefore suspicious, and worth counting (next section).</li>
 <li><code>discount_pct</code> maxes out at 0.25, so it is a fraction, not a percentage. Note that before someone multiplies it by 100 twice.</li>
 </ul>
 </section>
@@ -973,7 +984,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>Impossible uptime.</strong> 37 well-days log more than 24 hours, so production per hour is overstated on exactly the days engineers investigate.</li>
 <li><strong>A duplicated well.</strong> One well appears twice in the master list, which double-counts it in any join.</li>
-<li><strong>Negative lead times.</strong> 126 purchase orders were “received” before they were raised. That is a date-entry error, and it flatters supplier lead-time KPIs.</li>
+<li><strong>Negative lead times.</strong> 126 purchase orders were “received” before they were raised. That is a date-entry error, and it flatters supplier lead-time key performance indicators (KPIs).</li>
 <li><strong>One supplier, two codes.</strong> <code>SUP-CEDAR</code> and <code>SUP-CEDAR-NG</code> are almost certainly the same supplier (the Nigerian subsidiary), which splits its spend and performance across two rows.</li>
 </ul>
 <div class="cell">
@@ -1145,7 +1156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">142</td>
 <td style="text-align: left;">5.0</td>
 <td style="text-align: left;">206.0</td>
-<td style="text-align: left;">5.0 | 19.0 | 15.0</td>
+<td style="text-align: left;">5.0 | 15.0 | 19.0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">engagement_score</td>
@@ -1163,7 +1174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">112</td>
 <td style="text-align: left;">0.0</td>
 <td style="text-align: left;">12.0</td>
-<td style="text-align: left;">1.5 | 1.2 | 0.8</td>
+<td style="text-align: left;">1.5 | 1.2 | 0.9</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">training_hours_12m</td>
@@ -1290,12 +1301,12 @@ Solutions
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.0080291</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">0.9208689</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0080291</td>
 </tr>
 </tbody>
 </table>
@@ -1339,12 +1350,24 @@ Solutions
 </section>
 <section id="in-the-organisation" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">4.8</span> 🏢 In the organisation</h2>
-<p>Publish a <strong>data quality scorecard</strong> per source every month, owned by the source system’s business owner, not by IT. When the HR director sees that HR data scores 71/100 next to Finance’s 96, the fix gets prioritised without a single meeting.</p>
+<p>Publish a <strong>data quality scorecard</strong> per source every month, owned by the source system’s business owner, not by information technology (IT). When the human resources (HR) director sees that <a class="abbr-ref" href="e-abbreviations.html#abbr-hr"><abbr title="human resources">HR</abbr></a> data scores 71/100 next to Finance’s 96, the fix gets prioritised without a single meeting.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1779,7 +1802,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -618,7 +629,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><strong>What</strong></td>
-<td>Reading CSV, Excel, Parquet and JSON correctly, including messy, human-made files</td>
+<td>Reading comma-separated values (CSV), Excel, Parquet and JavaScript Object Notation (JSON) correctly, including messy, human-made files</td>
 </tr>
 <tr class="even">
 <td><strong>Why</strong></td>
@@ -656,7 +667,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>CSV / TSV</strong></td>
+<td><strong><a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> / tab-separated values (TSV)</strong></td>
 <td>Plain text, one row per line</td>
 <td>Universal; diff-able in Git</td>
 <td>No types; delimiter, quote, encoding and date-format guessing; “1,234” vs 1234</td>
@@ -677,9 +688,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>DuckDB <code>read_parquet</code>, <code>arrow</code></td>
 </tr>
 <tr class="even">
-<td><strong>JSON</strong></td>
+<td><strong><a class="abbr-ref" href="e-abbreviations.html#abbr-json"><abbr title="JavaScript Object Notation">JSON</abbr></a></strong></td>
 <td>Nested objects</td>
-<td>APIs and web apps</td>
+<td>Application programming interfaces (APIs) and web apps</td>
 <td>Nesting must be flattened</td>
 <td>DuckDB <code>read_json_auto</code>, <code>jsonlite</code></td>
 </tr>
@@ -701,7 +712,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Prompt 3.1 — read a CSV safely
+🧠 Prompt 3.1 — read a <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> safely
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -762,7 +773,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">NA</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Revenue by depot and month, FY2025 (NGN)</td>
+<td style="text-align: left;">Revenue by depot and month, FY2025 (Nigerian naira (NGN))</td>
 <td style="text-align: left;">NA</td>
 <td style="text-align: left;">NA</td>
 <td style="text-align: left;">NA</td>
@@ -912,21 +923,21 @@ attr(,"class")
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">CSV</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a></td>
 <td style="text-align: right;">3.14</td>
-<td style="text-align: right;">0.669</td>
+<td style="text-align: right;">0.664</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Parquet</td>
 <td style="text-align: right;">0.75</td>
-<td style="text-align: right;">0.022</td>
+<td style="text-align: right;">0.031</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
-<p>A query that needs two columns reads <strong>only those two columns</strong> from Parquet. From a CSV, it must parse every character of every row.</p>
+<p>A query that needs two columns reads <strong>only those two columns</strong> from Parquet. From a <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a>, it must parse every character of every row.</p>
 </section>
 <section id="json-data-from-apis" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="json-data-from-apis"><span class="header-section-number">3.5</span> JSON: data from APIs</h2>
@@ -986,7 +997,7 @@ attr(,"class")
 </div>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbDisconnect</span>(con, <span class="at">shutdown =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>DuckDB can also read JSON files directly with <code>read_json_auto()</code>, once its <code>json</code> extension is installed. It installs automatically the first time you use it, if your network allows.</p>
+<p>DuckDB can also read <a class="abbr-ref" href="e-abbreviations.html#abbr-json"><abbr title="JavaScript Object Notation">JSON</abbr></a> files directly with <code>read_json_auto()</code>, once its <code>json</code> extension is installed. It installs automatically the first time you use it, if your network allows.</p>
 </section>
 <section id="inventory-know-what-you-have" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="inventory-know-what-you-have"><span class="header-section-number">3.6</span> Inventory: know what you have</h2>
@@ -1001,7 +1012,7 @@ attr(,"class")
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>List every data file in data/raw with its size, modified date, row count (for CSVs) and an MD5 hash. Flag exact duplicates. Explain why hashing beats comparing file names.</p>
+<p>List every data file in data/raw with its size, modified date, row count (for <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSVs</abbr></a>) and an Message-Digest Algorithm 5 (MD5) hash. Flag exact duplicates. Explain why hashing beats comparing file names.</p>
 </blockquote>
 </div>
 </div>
@@ -1196,7 +1207,7 @@ attr(,"class")
 <h2 data-number="3.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">3.7</span> 🏋️ Exercises</h2>
 <p><strong>E3.1 🟢</strong> Read <code>board_pack.xlsx</code>. List its sheets, and read the <em>Sales</em> sheet so the header row is correct. How many rows of data does it have?</p>
 <p><strong>E3.2 🟡</strong> In the tidy regional report, which depot has the largest gap between its best and worst month? Plot monthly revenue for the top three depots.</p>
-<p><strong>E3.3 🔴</strong> <code>customer_reviews.csv</code> contains Nigerian Pidgin. Read it, count reviews by language, and show three Pidgin examples. What could go wrong with encoding if this file had been saved from Excel on Windows as “CSV (Comma delimited)” rather than “CSV UTF-8”?</p>
+<p><strong>E3.3 🔴</strong> <code>customer_reviews.csv</code> contains Nigerian Pidgin. Read it, count reviews by language, and show three Pidgin examples. What could go wrong with encoding if this file had been saved from Excel on Windows as “<a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> (Comma delimited)” rather than “<a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> UTF-8”?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1275,7 +1286,7 @@ Solutions
 [3] "dem debit me two times, e never reverse. delivery was faster than promised"</code></pre>
 </div>
 </div>
-<p><strong>E3.3.</strong> “CSV (Comma delimited)” on Windows uses the Windows-1252 code page. Characters outside it, such as ₦ or the accented letters in names, become <code>?</code> or garbled text. Always ask for <strong>CSV UTF-8</strong>, or read with <code>locale(encoding = "latin1")</code> and convert.</p>
+<p><strong>E3.3.</strong> “<a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> (Comma delimited)” on Windows uses the Windows-1252 code page. Characters outside it, such as ₦ or the accented letters in names, become <code>?</code> or garbled text. Always ask for <strong><a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> UTF-8</strong>, or read with <code>locale(encoding = "latin1")</code> and convert.</p>
 </div>
 </div>
 </div>
@@ -1283,19 +1294,31 @@ Solutions
 <section id="mastery-check" class="level2" data-number="3.8">
 <h2 data-number="3.8" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">3.8</span> ✅ Mastery check</h2>
 <ul>
-<li>Why does bronze read CSVs as text?</li>
+<li>Why does bronze read <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSVs</abbr></a> as text?</li>
 <li>Name four things in a “presentation” spreadsheet that must be removed before analysis.</li>
-<li>Why is Parquet faster for analytics than CSV?</li>
+<li>Why is Parquet faster for analytics than <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a>?</li>
 </ul>
 </section>
 <section id="in-the-organisation" class="level2" data-number="3.9">
 <h2 data-number="3.9" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">3.9</span> 🏢 In the organisation</h2>
-<p>The cheapest data-quality fix is upstream. Once you have tidied a monthly Excel report twice, meet its author. Agree a <strong>data contract</strong>: a fixed template, no merged cells, no totals, UTF-8, and named on a schedule. One meeting saves twelve months of cleaning code.</p>
+<p>The cheapest data-quality fix is upstream. Once you have tidied a monthly Excel report twice, meet its author. Agree a <strong>data contract</strong>: a fixed template, no merged cells, no totals, Unicode Transformation Format, 8-bit (UTF-8), and named on a schedule. One meeting saves twelve months of cleaning code.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1730,7 +1753,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

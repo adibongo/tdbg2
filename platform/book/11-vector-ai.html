@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -561,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -617,7 +628,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><strong>What</strong></td>
-<td>Turning text into vectors (“embeddings”) for search-by-meaning, and connecting large language models to the warehouse safely: retrieval-augmented generation (RAG) and text-to-SQL</td>
+<td>Turning text into vectors (“embeddings”) for search-by-meaning, and connecting large language models to the warehouse safely: retrieval-augmented generation (RAG) and text-to-Structured Query Language (SQL)</td>
 </tr>
 <tr class="even">
 <td><strong>Why</strong></td>
@@ -625,11 +636,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><strong>When</strong></td>
-<td>After the semantic layer exists. AI without governed definitions just invents confident wrong answers faster</td>
+<td>After the semantic layer exists. Artificial intelligence (AI) without governed definitions just invents confident wrong answers faster</td>
 </tr>
 <tr class="even">
 <td><strong>Who</strong></td>
-<td>Analytics engineers build the index. The DPO approves what data may reach which model. Users ask questions, and <em>review</em> the SQL</td>
+<td>Analytics engineers build the index. The data protection officer (DPO) approves what data may reach which model. Users ask questions, and <em>review</em> the <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a></td>
 </tr>
 </tbody>
 </table>
@@ -654,7 +665,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>TF-IDF</strong> (in kit.R)</td>
+<td><strong>Term frequency–inverse document frequency (TF-IDF)</strong> (in kit.R)</td>
 <td>Counts words, weights rare words up</td>
 <td>Free, offline, explainable, instant</td>
 <td>Matches <em>words</em>, not meaning; no synonyms; one language at a time</td>
@@ -663,7 +674,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><strong>Neural sentence embeddings</strong> (e.g.&nbsp;all-MiniLM, multilingual-e5, OpenAI, Voyage)</td>
 <td>A trained model maps meaning to ~384–3072 dimensions</td>
 <td>Synonyms, paraphrase, cross-lingual (English ↔︎ Pidgin)</td>
-<td>Needs a model or API; costs; data-protection review</td>
+<td>Needs a model or application programming interface (API); costs; data-protection review</td>
 </tr>
 </tbody>
 </table>
@@ -681,7 +692,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Build a vector index over silver.complaints.complaint_text using the kit’s vector_index() (TF-IDF), storing vectors as DOUBLE[] in DuckDB. Then search for “I can’t see my RSA balance online” and “my employer did not remit my contribution”, and show the top five matches with similarity scores.</p>
+<p>Build a vector index over silver.complaints.complaint_text using the kit’s vector_index() (<a class="abbr-ref" href="e-abbreviations.html#abbr-tf-idf"><abbr title="term frequency–inverse document frequency">TF-IDF</abbr></a>), storing vectors as DOUBLE[] in DuckDB. Then search for “I can’t see my Retirement Savings Account (RSA) balance online” and “my employer did not remit my contribution”, and show the top five matches with similarity scores.</p>
 </blockquote>
 </div>
 </div>
@@ -892,7 +903,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>The English query finds the English complaints about non-remittance and <strong>misses the Pidgin complaints describing exactly the same problem</strong>. The Pidgin query finds them, because it shares the words “oga”, “pension” and “enter”. TF-IDF matches <em>words</em>, so it cannot know that <em>“oga dey remove pension but e no enter”</em> means <em>“my employer deducts but does not remit”</em>. A regulator relying on it would under-count the problem among Pidgin speakers. That is a fairness issue, not just a technical one.</p>
+<p>The English query finds the English complaints about non-remittance and <strong>misses the Pidgin complaints describing exactly the same problem</strong>. The Pidgin query finds them, because it shares the words “oga”, “pension” and “enter”. <a class="abbr-ref" href="e-abbreviations.html#abbr-tf-idf"><abbr title="term frequency–inverse document frequency">TF-IDF</abbr></a> matches <em>words</em>, so it cannot know that <em>“oga dey remove pension but e no enter”</em> means <em>“my employer deducts but does not remit”</em>. A regulator relying on it would under-count the problem among Pidgin speakers. That is a fairness issue, not just a technical one.</p>
 <p>The fix is a <strong>multilingual neural embedding model</strong>, and the swap touches one function, <code>embed()</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>hf_embed <span class="ot">&lt;-</span> <span class="cf">function</span>(texts, <span class="at">model =</span> <span class="st">"intfloat/multilingual-e5-small"</span>) {</span>
@@ -1029,7 +1040,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="retrieval-augmented-generation-rag" class="level2" data-number="11.4">
 <h2 data-number="11.4" class="anchored" data-anchor-id="retrieval-augmented-generation-rag"><span class="header-section-number">11.4</span> Retrieval-augmented generation (RAG)</h2>
-<p>An LLM knows nothing about <em>your</em> complaints. RAG fixes that in three steps:</p>
+<p>An large language model (LLM) knows nothing about <em>your</em> complaints. <a class="abbr-ref" href="e-abbreviations.html#abbr-rag"><abbr title="retrieval-augmented generation">RAG</abbr></a> fixes that in three steps:</p>
 <ol type="1">
 <li><strong>Retrieve</strong> the most relevant records from the vector index.</li>
 <li><strong>Augment</strong> the prompt with them.</li>
@@ -1041,12 +1052,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Prompt 11.3 — a governed RAG prompt
+🧠 Prompt 11.3 — a governed <a class="abbr-ref" href="e-abbreviations.html#abbr-rag"><abbr title="retrieval-augmented generation">RAG</abbr></a> prompt
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Build a function that, for a question, retrieves the 8 most similar complaints and assembles a prompt instructing the model to answer only from those complaints, cite complaint IDs, say “not enough evidence” if they don’t answer it, and never output personal data. Show the assembled prompt; call Claude only if ANTHROPIC_API_KEY is set.</p>
+<p>Build a function that, for a question, retrieves the 8 most similar complaints and assembles a prompt instructing the model to answer only from those complaints, cite complaint identifiers (IDs), say “not enough evidence” if they don’t answer it, and never output personal data. Show the assembled prompt; call Claude only if ANTHROPIC_<a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a>_KEY is set.</p>
 </blockquote>
 </div>
 </div>
@@ -1089,7 +1100,7 @@ QUESTION: What are customers saying about updating their contact details?</code>
 </section>
 <section id="text-to-sql-with-guardrails" class="level2" data-number="11.5">
 <h2 data-number="11.5" class="anchored" data-anchor-id="text-to-sql-with-guardrails"><span class="header-section-number">11.5</span> Text-to-SQL, with guardrails</h2>
-<p>The Lab dashboard’s <em>Ask your data</em> page sends a question, plus the <strong>schema and the semantic-layer definitions</strong> (never the data rows), to a model that writes SQL. A human reviews the SQL, then it runs read-only. Each guardrail closes one specific risk:</p>
+<p>The Lab dashboard’s <em>Ask your data</em> page sends a question, plus the <strong>schema and the semantic-layer definitions</strong> (never the data rows), to a model that writes <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>. A human reviews the <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>, then it runs read-only. Each guardrail closes one specific risk:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -1115,19 +1126,19 @@ QUESTION: What are customers saying about updating their contact details?</code>
 <td>Exfiltrating whole tables</td>
 </tr>
 <tr class="even">
-<td>SQL shown to the user before running</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> shown to the user before running</td>
 <td>Silent wrong answers</td>
 </tr>
 <tr class="odd">
 <td>Only schema + definitions sent, not rows</td>
-<td>Personal data leaving the organisation (NDPA)</td>
+<td>Personal data leaving the organisation (Nigeria Data Protection Act (NDPA))</td>
 </tr>
 <tr class="even">
 <td>Local model option (Ollama)</td>
 <td>Any data leaving the laptop at all</td>
 </tr>
 <tr class="odd">
-<td>Question → SQL → result logging</td>
+<td>Question → <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> → result logging</td>
 <td>No audit trail</td>
 </tr>
 <tr class="even">
@@ -1142,12 +1153,12 @@ QUESTION: What are customers saying about updating their contact details?</code>
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Prompt 11.4 — evaluate text-to-SQL
+🧠 Prompt 11.4 — evaluate text-to-<a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Build a small evaluation harness: a table of golden questions, each with a reference SQL. For each candidate SQL (from any model), run both, compare the results (same rows and values within 0.1%), and report accuracy. Include one deliberately wrong candidate to prove the harness catches it.</p>
+<p>Build a small evaluation harness: a table of golden questions, each with a reference <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>. For each candidate <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> (from any model), run both, compare the results (same rows and values within 0.1%), and report accuracy. Include one deliberately wrong candidate to prove the harness catches it.</p>
 </blockquote>
 </div>
 </div>
@@ -1201,8 +1212,8 @@ QUESTION: What are customers saying about updating their contact details?</code>
 <section id="exercises" class="level2" data-number="11.6">
 <h2 data-number="11.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">11.6</span> 🏋️ Exercises</h2>
 <p><strong>E11.1 🟢</strong> Search the complaints for “portal password reset”. What is the top similarity score? Why is it not 1.0?</p>
-<p><strong>E11.2 🟡</strong> Build a vector index over <code>customer_reviews.csv</code> and compare the top results for “debited twice” and “double charge”. Explain the difference using what you know about TF-IDF.</p>
-<p><strong>E11.3 🔴</strong> Extend the golden set to 10 questions on the retail gold layer. If you have an API key, generate candidates with the Lab’s <code>ask_llm_for_sql()</code> and report accuracy. Which kinds of question fail most?</p>
+<p><strong>E11.2 🟡</strong> Build a vector index over <code>customer_reviews.csv</code> and compare the top results for “debited twice” and “double charge”. Explain the difference using what you know about <a class="abbr-ref" href="e-abbreviations.html#abbr-tf-idf"><abbr title="term frequency–inverse document frequency">TF-IDF</abbr></a>.</p>
+<p><strong>E11.3 🔴</strong> Extend the golden set to 10 questions on the retail gold layer. If you have an <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> key, generate candidates with the Lab’s <code>ask_llm_for_sql()</code> and report accuracy. Which kinds of question fail most?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1342,7 +1353,7 @@ Solutions
 </div>
 </div>
 <p><strong>E11.1.</strong> It is below 1 because the query’s words and weights don’t exactly match any complaint. Cosine similarity is 1 only for identical direction.</p>
-<p><strong>E11.2.</strong> “Debited twice” matches strongly because those exact words appear in reviews. “Double charge” shares no vocabulary with them, so TF-IDF finds weak or irrelevant matches. A neural model would place both phrases close together.</p>
+<p><strong>E11.2.</strong> “Debited twice” matches strongly because those exact words appear in reviews. “Double charge” shares no vocabulary with them, so <a class="abbr-ref" href="e-abbreviations.html#abbr-tf-idf"><abbr title="term frequency–inverse document frequency">TF-IDF</abbr></a> finds weak or irrelevant matches. A neural model would place both phrases close together.</p>
 </div>
 </div>
 </div>
@@ -1351,18 +1362,18 @@ Solutions
 <h2 data-number="11.7" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">11.7</span> ✅ Mastery check</h2>
 <ul>
 <li>Explain an embedding and cosine similarity to a board member in three sentences.</li>
-<li>Name four guardrails for text-to-SQL and the risk each removes.</li>
+<li>Name four guardrails for text-to-<a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> and the risk each removes.</li>
 <li>Why is a golden-question test set necessary even if the model “seems good”?</li>
 </ul>
 </section>
 <section id="in-the-organisation" class="level2" data-number="11.8">
 <h2 data-number="11.8" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">11.8</span> 🏢 In the organisation</h2>
-<p>Before any AI feature goes live:</p>
+<p>Before any <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> feature goes live:</p>
 <ul>
-<li>run a <strong>Data Protection Impact Assessment</strong> (NDPA 2023);</li>
-<li>decide which data classes may reach which model (public API, enterprise API with no training on your data, or local model);</li>
+<li>run a <strong>Data Protection Impact Assessment</strong> (<a class="abbr-ref" href="e-abbreviations.html#abbr-ndpa"><abbr title="Nigeria Data Protection Act">NDPA</abbr></a> 2023);</li>
+<li>decide which data classes may reach which model (public <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a>, enterprise <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> with no training on your data, or local model);</li>
 <li>log every prompt and response;</li>
-<li>name a human accountable for each AI-assisted decision.</li>
+<li>name a human accountable for each <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a>-assisted decision.</li>
 </ul>
 <p>The value is real (minutes instead of days to read 3,000 complaints), and so is the governance work it requires.</p>
 
@@ -1370,6 +1381,18 @@ Solutions
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1804,7 +1827,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

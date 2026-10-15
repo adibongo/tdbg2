@@ -43,9 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -73,6 +73,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -526,6 +531,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -590,13 +601,13 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>₦ or accented letters show as <code>?</code> or <code>â‚¦</code></td>
-<td>File saved in a non-UTF-8 encoding (Windows “CSV (Comma delimited)”)</td>
-<td>Ask for “CSV UTF-8”; or <code>readr::read_csv(f, locale = locale(encoding = "latin1"))</code></td>
+<td>File saved in an encoding other than Unicode Transformation Format, 8-bit (UTF-8) (Excel’s <code>CSV (Comma delimited)</code> option)</td>
+<td>Save as <code>CSV UTF-8</code> instead; or <code>readr::read_csv(f, locale = locale(encoding = "latin1"))</code></td>
 </tr>
 <tr class="odd">
 <td>Numbers read as text in Excel imports</td>
 <td>Values stored as text, with commas or currency symbols</td>
-<td><code>readr::parse_number()</code> in R or <code>regexp_replace</code> + <code>CAST</code> in SQL (Chapter 7)</td>
+<td><code>readr::parse_number()</code> in R or <code>regexp_replace</code> + <code>CAST</code> in Structured Query Language (SQL) (Chapter 7)</td>
 </tr>
 <tr class="even">
 <td>Totals are higher than Finance’s</td>
@@ -619,9 +630,9 @@ ul.task-list li input[type="checkbox"] {
 <td>Use project-relative paths and <code>config.yml</code>; record packages with <code>renv</code>; set environment variables in the host’s settings</td>
 </tr>
 <tr class="even">
-<td>SQL works in DuckDB but fails on PostgreSQL</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> works in DuckDB but fails on PostgreSQL</td>
 <td>Dialect differences (<code>QUALIFY</code>, <code>GROUP BY ALL</code>, <code>date_trunc</code> arguments)</td>
-<td>Use a CTE + <code>row_number()</code> instead of <code>QUALIFY</code>; list the <code>GROUP BY</code> columns; check the function docs</td>
+<td>Use a common table expression (CTE) + <code>row_number()</code> instead of <code>QUALIFY</code>; list the <code>GROUP BY</code> columns; check the function docs</td>
 </tr>
 <tr class="odd">
 <td>Test passes, but the number is still wrong</td>
@@ -629,12 +640,12 @@ ul.task-list li input[type="checkbox"] {
 <td>Add a reconciliation test against an external source; ask “what would have caught this?” after every incident</td>
 </tr>
 <tr class="even">
-<td>AI-written SQL returns plausible but wrong results</td>
+<td>Artificial intelligence (AI)-written <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> returns plausible but wrong results</td>
 <td>Wrong grain, missing filter, average of ratios, unbounded dates</td>
 <td>Review with the Chapter 5 checklist; add the case to your golden-question set (Chapter 11)</td>
 </tr>
 <tr class="odd">
-<td>Git wants to commit a 200 MB file</td>
+<td>Git wants to commit a 200 megabytes (MB) file</td>
 <td>Data or databases in the repository</td>
 <td>Add <code>data/db/</code>, <code>*.duckdb</code> and <code>*.sqlite</code> to <code>.gitignore</code>; remove them from the index with <code>git rm --cached</code></td>
 </tr>
@@ -644,6 +655,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1078,7 +1101,7 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

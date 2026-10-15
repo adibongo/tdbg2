@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -111,6 +111,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
 
 </head>
@@ -564,6 +569,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -633,7 +644,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><strong>Who</strong></td>
-<td>Data engineer or analytics engineer (on-call), with IT for servers and schedulers</td>
+<td>Data engineer or analytics engineer (on-call), with information technology (IT) for servers and schedulers</td>
 </tr>
 </tbody>
 </table>
@@ -711,7 +722,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">run_platform</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-10-15 12:33 | PUBLISHED | 12/12 tests passed | 1.3s"</code></pre>
+<pre><code>[1] "2026-10-15 13:24 | PUBLISHED | 12/12 tests passed | 1.3s"</code></pre>
 </div>
 </div>
 <p>Check the step timings from the log:</p>
@@ -783,12 +794,12 @@ Five properties of a production pipeline
 </thead>
 <tbody>
 <tr class="odd">
-<td>A laptop or office PC</td>
+<td>A laptop or office personal computer (PC)</td>
 <td>macOS launchd, Linux cron, Windows Task Scheduler</td>
 <td>Pilots. It breaks when the laptop sleeps</td>
 </tr>
 <tr class="even">
-<td>A small VM or server</td>
+<td>A small virtual machine (VM) or server</td>
 <td>cron + <code>Rscript refresh.R</code></td>
 <td>Small teams; cheapest always-on option</td>
 </tr>
@@ -852,7 +863,7 @@ Five properties of a production pipeline
 <tr class="even">
 <td>Freshness</td>
 <td><code>t_fresh()</code></td>
-<td>latest data older than the SLA</td>
+<td>latest data older than the service-level agreement (SLA)</td>
 </tr>
 <tr class="odd">
 <td>Duration</td>
@@ -876,7 +887,7 @@ Five properties of a production pipeline
 </tr>
 </tbody>
 </table>
-<p>Alerts go where people already are: email, Microsoft Teams or Slack webhooks, or SMS for critical regulatory feeds. <strong>Every alert names an owner and links to a runbook.</strong></p>
+<p>Alerts go where people already are: email, Microsoft Teams or Slack webhooks, or Short Message Service (SMS) for critical regulatory feeds. <strong>Every alert names an owner and links to a runbook.</strong></p>
 </section>
 <section id="the-runbook" class="level2" data-number="14.5">
 <h2 data-number="14.5" class="anchored" data-anchor-id="the-runbook"><span class="header-section-number">14.5</span> The runbook</h2>
@@ -891,7 +902,7 @@ Five properties of a production pipeline
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Write a one-page runbook for the nightly retail platform refresh: what it does, schedule and SLA, how to tell it failed, the five most likely failures with diagnosis and fix steps (source file late, schema drift, test failure, disk full, lock left behind), how to re-run safely, how to backfill a past week, and who to escalate to.</p>
+<p>Write a one-page runbook for the nightly retail platform refresh: what it does, schedule and <a class="abbr-ref" href="e-abbreviations.html#abbr-sla"><abbr title="service-level agreement">SLA</abbr></a>, how to tell it failed, the five most likely failures with diagnosis and fix steps (source file late, schema drift, test failure, disk full, lock left behind), how to re-run safely, how to backfill a past week, and who to escalate to.</p>
 </blockquote>
 </div>
 </div>
@@ -914,7 +925,7 @@ Five properties of a production pipeline
 <section id="exercises" class="level2" data-number="14.7">
 <h2 data-number="14.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">14.7</span> 🏋️ Exercises</h2>
 <p><strong>E14.1 🟢</strong> Run <code>run_platform()</code> twice in quick succession from two R sessions. What happens to the second?</p>
-<p><strong>E14.2 🟡</strong> Add a Microsoft Teams (or Slack) webhook alert to <code>run_platform()</code>, reading the URL from <code>.Renviron</code>. Test it with a deliberately failing test.</p>
+<p><strong>E14.2 🟡</strong> Add a Microsoft Teams (or Slack) webhook alert to <code>run_platform()</code>, reading the uniform resource locator (URL) from <code>.Renviron</code>. Test it with a deliberately failing test.</p>
 <p><strong>E14.3 🔴</strong> Write <code>duration_watch()</code>, which reads <code>ops.run_log</code> across many runs and flags any step whose latest duration exceeds twice its median. Simulate ten runs with random delays to test it.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
@@ -995,12 +1006,24 @@ Solutions
 </section>
 <section id="in-the-organisation" class="level2" data-number="14.9">
 <h2 data-number="14.9" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">14.9</span> 🏢 In the organisation</h2>
-<p>Publish the platform’s <strong>SLA</strong> and its monthly record (“refresh met SLA on 29 of 30 days; one failure caught by the gate, no wrong data published”). It is the most persuasive slide you can show an executive committee, because it reframes analytics from “the reports team” to “a service we can rely on”.</p>
+<p>Publish the platform’s <strong><a class="abbr-ref" href="e-abbreviations.html#abbr-sla"><abbr title="service-level agreement">SLA</abbr></a></strong> and its monthly record (“refresh met <a class="abbr-ref" href="e-abbreviations.html#abbr-sla"><abbr title="service-level agreement">SLA</abbr></a> on 29 of 30 days; one failure caught by the gate, no wrong data published”). It is the most persuasive slide you can show an executive committee, because it reframes analytics from “the reports team” to “a service we can rely on”.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1435,7 +1458,7 @@ Solutions
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>

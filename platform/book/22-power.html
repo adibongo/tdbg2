@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,6 +108,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -590,6 +595,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -662,7 +673,7 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td>Sources</td>
-<td>Feeder and transformer meters (AMI/MDM, SCADA), billing system, prepaid vending, collections and bank files, customer enumeration, outage logs, field-work orders</td>
+<td>Feeder and transformer meters (advanced metering infrastructure (AMI)/meter data management (MDM), supervisory control and data acquisition (SCADA)), billing system, prepaid vending, collections and bank files, customer enumeration, outage logs, field-work orders</td>
 </tr>
 <tr class="even">
 <td>Silver</td>
@@ -670,15 +681,15 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td>Gold</td>
-<td><code>fct_feeder_day</code> (feeder × day: energy received, billed, collected, supply hours); <code>dim_feeder</code> (band, business unit); marts: ATC&amp;C losses, band compliance</td>
+<td><code>fct_feeder_day</code> (feeder × day: energy received, billed, collected, supply hours); <code>dim_feeder</code> (band, business unit); marts: aggregate technical, commercial and collection (ATC&amp;C) losses, band compliance</td>
 </tr>
 <tr class="even">
 <td>Gate</td>
-<td>Supply hours 0–24; energy ≥ 0; billed ≤ received × tolerance; feeder in master; energy received reconciles to the TCN/market-operator settlement</td>
+<td>Supply hours 0–24; energy ≥ 0; billed ≤ received × tolerance; feeder in master; energy received reconciles to the Transmission Company of Nigeria (TCN)/market-operator settlement</td>
 </tr>
 <tr class="odd">
 <td>Govern</td>
-<td>ATC&amp;C loss %, billing efficiency, collection efficiency, average daily supply hours, band compliance %</td>
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-atc-c"><abbr title="aggregate technical, commercial and collection (losses)">ATC&amp;C</abbr></a> loss %, billing efficiency, collection efficiency, average daily supply hours, band compliance %</td>
 </tr>
 <tr class="even">
 <td>Serve</td>
@@ -693,7 +704,7 @@ window.Quarto = {
 </section>
 <section id="the-key-metric-atcc-loss" class="level2" data-number="22.3">
 <h2 data-number="22.3" class="anchored" data-anchor-id="the-key-metric-atcc-loss"><span class="header-section-number">22.3</span> The key metric: ATC&amp;C loss</h2>
-<p><strong>Aggregate Technical, Commercial and Collection (ATC&amp;C) loss</strong> measures how much of the energy a distributor receives never turns into cash:</p>
+<p><strong>Aggregate Technical, Commercial and Collection (<a class="abbr-ref" href="e-abbreviations.html#abbr-atc-c"><abbr title="aggregate technical, commercial and collection (losses)">ATC&amp;C</abbr></a>) loss</strong> measures how much of the energy a distributor receives never turns into cash:</p>
 <p><span class="math display">\[\text{ATC\&amp;C} = 1 - \underbrace{\frac{\text{energy billed}}{\text{energy received}}}_{\text{billing efficiency}} \times \underbrace{\frac{\text{naira collected}}{\text{naira billed}}}_{\text{collection efficiency}}\]</span></p>
 </section>
 <section id="data-synthetic-generated-reproducibly" class="level2" data-number="22.4">
@@ -901,19 +912,31 @@ window.Quarto = {
 <h2 data-number="22.7" class="anchored" data-anchor-id="deploying-in-a-distribution-company"><span class="header-section-number">22.7</span> Deploying in a distribution company</h2>
 <ul>
 <li><strong>Owners:</strong> the Chief Commercial Officer (billing, collection definitions) and the Chief Technical Officer (energy received, supply hours, the feeder master).</li>
-<li><strong>First 90 days:</strong> daily feeder readings from the MDM into the warehouse, a band-compliance league table, and an ATC&amp;C dashboard by business unit that reconciles monthly to the market settlement.</li>
-<li><strong>Regulatory:</strong> NERC tariff-band commitments and performance reporting. Confirm current band definitions and minimum hours in the latest NERC orders, and certify the compliance mart.</li>
+<li><strong>First 90 days:</strong> daily feeder readings from the <a class="abbr-ref" href="e-abbreviations.html#abbr-mdm"><abbr title="meter data management">MDM</abbr></a> into the warehouse, a band-compliance league table, and an <a class="abbr-ref" href="e-abbreviations.html#abbr-atc-c"><abbr title="aggregate technical, commercial and collection (losses)">ATC&amp;C</abbr></a> dashboard by business unit that reconciles monthly to the market settlement.</li>
+<li><strong>Regulatory:</strong> Nigerian Electricity Regulatory Commission (NERC) tariff-band commitments and performance reporting. Confirm current band definitions and minimum hours in the latest <a class="abbr-ref" href="e-abbreviations.html#abbr-nerc"><abbr title="Nigerian Electricity Regulatory Commission">NERC</abbr></a> orders, and certify the compliance mart.</li>
 <li><strong>Pitfall:</strong> estimated billing for unmetered customers inflates billing efficiency. Tag estimated bills in silver and report metered and unmetered separately.</li>
 </ul>
 </section>
 <section id="exercises" class="level2" data-number="22.8">
 <h2 data-number="22.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">22.8</span> 🏋️ Exercises</h2>
-<p><strong>E22.1 🟢</strong> Which business unit has the highest ATC&amp;C loss? <strong>E22.2 🟡</strong> List feeders that are Band A on the tariff but averaged under 20 hours in three or more months: candidates for re-banding or investment. <strong>E22.3 🔴</strong> Estimate the naira value of reducing ATC&amp;C by 5 points in the worst business unit, and present it as a one-page Quarto memo with a sensitivity table.</p>
+<p><strong>E22.1 🟢</strong> Which business unit has the highest <a class="abbr-ref" href="e-abbreviations.html#abbr-atc-c"><abbr title="aggregate technical, commercial and collection (losses)">ATC&amp;C</abbr></a> loss? <strong>E22.2 🟡</strong> List feeders that are Band A on the tariff but averaged under 20 hours in three or more months: candidates for re-banding or investment. <strong>E22.3 🔴</strong> Estimate the naira value of reducing <a class="abbr-ref" href="e-abbreviations.html#abbr-atc-c"><abbr title="aggregate technical, commercial and collection (losses)">ATC&amp;C</abbr></a> by 5 points in the worst business unit, and present it as a one-page Quarto memo with a sensitivity table.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1348,7 +1371,7 @@ window.Quarto = {
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
 </div>
   </div>
 </footer>
