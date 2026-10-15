@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -590,6 +596,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
   <li><a href="#experiments-you-can-trust" id="toc-experiments-you-can-trust" class="nav-link" data-scroll-target="#experiments-you-can-trust"><span class="header-section-number">20.4</span> Experiments you can trust</a></li>
   <li><a href="#deploying-in-a-retail-or-fmcg-business" id="toc-deploying-in-a-retail-or-fmcg-business" class="nav-link" data-scroll-target="#deploying-in-a-retail-or-fmcg-business"><span class="header-section-number">20.5</span> Deploying in a retail or FMCG business</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">20.6</span> 🏋️ Exercises</a></li>
+  <li><a href="#mastery-check" id="toc-mastery-check" class="nav-link" data-scroll-target="#mastery-check"><span class="header-section-number">20.7</span> ✅ Mastery check</a></li>
   </ul>
 </nav>
     </div>
@@ -922,6 +929,35 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <section id="exercises" class="level2" data-number="20.6">
 <h2 data-number="20.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">20.6</span> 🏋️ Exercises</h2>
 <p><strong>E20.1 🟢</strong> Which day of the week has the largest average basket? <strong>E20.2 🟡</strong> Add an <a class="abbr-ref" href="e-abbreviations.html#abbr-srm"><abbr title="sample-ratio mismatch">SRM</abbr></a> test to the kit as <code>t_srm(table, arm_col, expected = c(.5, .5), alpha = .001)</code>, and make it close the gate. <strong>E20.3 🔴</strong> Estimate the post-promotion dip: for depot-<a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKUs</abbr></a>, compare the units in the two weeks <em>after</em> a promotion with the non-promo baseline. Net it off the uplift.</p>
+</section>
+<section id="mastery-check" class="level2" data-number="20.7">
+<h2 data-number="20.7" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">20.7</span> ✅ Mastery check</h2>
+<ul>
+<li>Why is volume uplift not the same as profit uplift for a promotion?</li>
+<li>What is a sample-ratio mismatch (<a class="abbr-ref" href="e-abbreviations.html#abbr-srm"><abbr title="sample-ratio mismatch">SRM</abbr></a>), what caused it in the checkout test, and what should the business do?</li>
+<li>How do you handle distributor sell-out that arrives late and is later restated?</li>
+</ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>The discount gives margin away on every unit, including units customers would have bought anyway. In this data, Foods promotions sell about a third more units but gross profit barely moves. Judge promotions on <strong>gross profit uplift</strong>, and in a full analysis control for seasonality and the post-promotion dip.</li>
+<li>An <a class="abbr-ref" href="e-abbreviations.html#abbr-srm"><abbr title="sample-ratio mismatch">SRM</abbr></a> means the arms are not the size the randomisation intended (here <strong>52/48</strong> instead of 50/50, p ≈ 0). It came almost entirely from <strong>Android</strong>: treatment users were dropped, so they are not missing at random and the naive comparison is biased. Report the clean subset with caveats (about 7% relative lift, p ≈ 0.09, not significant), fix the bug, and re-run with a sample size planned in advance before any roll-out.</li>
+<li>Load it with the <strong>incremental-merge</strong> pattern (Chapter 6), so restated weeks replace earlier versions instead of duplicating them, and mark recent weeks <strong>provisional</strong> until the period is closed.</li>
+</ul>
+</div>
+</div>
+</div>
 
 
 </section>

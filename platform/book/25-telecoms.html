@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -592,6 +598,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
   <li><a href="#customer-voice-about-the-network" id="toc-customer-voice-about-the-network" class="nav-link" data-scroll-target="#customer-voice-about-the-network"><span class="header-section-number">25.6</span> Customer voice about the network</a></li>
   <li><a href="#deploying-in-an-operator" id="toc-deploying-in-an-operator" class="nav-link" data-scroll-target="#deploying-in-an-operator"><span class="header-section-number">25.7</span> Deploying in an operator</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">25.8</span> 🏋️ Exercises</a></li>
+  <li><a href="#mastery-check" id="toc-mastery-check" class="nav-link" data-scroll-target="#mastery-check"><span class="header-section-number">25.9</span> ✅ Mastery check</a></li>
   </ul>
 </nav>
     </div>
@@ -920,6 +927,35 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <section id="exercises" class="level2" data-number="25.8">
 <h2 data-number="25.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">25.8</span> 🏋️ Exercises</h2>
 <p><strong>E25.1 🟢</strong> Which cluster has the lowest <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a>-compliant share? <strong>E25.2 🟡</strong> Build a “worst 10 sites last 30 days” table, ranked by days out of compliance, with each site’s power type. <strong>E25.3 🔴</strong> Estimate how many <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a>-compliant site-days per quarter converting all gen-only sites to hybrid-solar would add, and the diesel cost saved (state your assumptions).</p>
+</section>
+<section id="mastery-check" class="level2" data-number="25.9">
+<h2 data-number="25.9" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">25.9</span> ✅ Mastery check</h2>
+<ul>
+<li>Why is site power a quality-of-service problem, and how does the platform make the case for fixing it?</li>
+<li>What tests belong in the gate for site-day network data?</li>
+<li>How do you cope with 15-minute counters from thousands of cells?</li>
+</ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>When grid and generator power fail, the site goes down: availability drops and calls fail or drop. Joining power telemetry to the <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> mart shows how much each power type costs in availability, so hybrid-solar conversion can be argued <strong>in naira and in <a class="abbr-ref" href="e-abbreviations.html#abbr-qos"><abbr title="quality of service">QoS</abbr></a> terms, from the same governed numbers</strong>.</li>
+<li>Rates within 0–100% (availability capped and impossible values quarantined), one row per site-day, every site in the site master, and national traffic that <strong>reconciles to billing mediation volumes</strong>.</li>
+<li>Aggregate to <strong>site-hour</strong> early (in bronze and silver) and store the data as <strong>partitioned Parquet</strong>. DuckDB handles large volumes; when it no longer does, Chapter 1’s graduation triggers say when to move to a cloud warehouse.</li>
+</ul>
+</div>
+</div>
+</div>
 
 
 </section>

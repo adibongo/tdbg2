@@ -575,6 +575,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -875,6 +881,27 @@ Solutions
 <li>What does <code>reactivePoll</code> watch in the Lab dashboard, and why?</li>
 <li>Name three performance rules and the problem each prevents.</li>
 </ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Public teaching demo:</strong> Shinylive (or a static dashboard), because it runs in the browser on any static host with no server. <strong><a class="abbr-ref" href="e-abbreviations.html#abbr-ceo"><abbr title="chief executive officer">CEO</abbr></a>’s daily cockpit:</strong> Shiny, because it is live, interactive and can be secured. <strong>Monthly emailed pack:</strong> static, rendered once to <a class="abbr-ref" href="e-abbreviations.html#abbr-html"><abbr title="HyperText Markup Language">HTML</abbr></a> by the scheduler and sent as a file.</li>
+<li>It watches the <strong>modified time of the DuckDB warehouse file</strong>. When the nightly pipeline swaps in a new warehouse, every open dashboard notices and refreshes its data, without anyone reloading the page and without polling the database itself.</li>
+<li>Any three of: <strong>filter in the database</strong>, so the app doesn’t pull whole tables into R; <strong>debounce fast inputs</strong>, so a dragged slider doesn’t fire twenty queries; <strong>compute once in a <code>reactive()</code></strong>, so the same query doesn’t run for every chart; <strong>cache identical requests</strong> (<code>bindCache</code>), so repeat questions aren’t recomputed; <strong>short-lived read-only connections</strong>, so a lock doesn’t stop the nightly rebuild from swapping the file.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="in-the-organisation" class="level2" data-number="13.9">
 <h2 data-number="13.9" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">13.9</span> 🏢 In the organisation</h2>

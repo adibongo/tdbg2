@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -590,6 +596,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
   <li><a href="#insight-what-keeps-customers" id="toc-insight-what-keeps-customers" class="nav-link" data-scroll-target="#insight-what-keeps-customers"><span class="header-section-number">23.4</span> Insight: what keeps customers?</a></li>
   <li><a href="#deploying-in-a-bank" id="toc-deploying-in-a-bank" class="nav-link" data-scroll-target="#deploying-in-a-bank"><span class="header-section-number">23.5</span> Deploying in a bank</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">23.6</span> 🏋️ Exercises</a></li>
+  <li><a href="#mastery-check" id="toc-mastery-check" class="nav-link" data-scroll-target="#mastery-check"><span class="header-section-number">23.7</span> ✅ Mastery check</a></li>
   </ul>
 </nav>
     </div>
@@ -851,6 +858,35 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <section id="exercises" class="level2" data-number="23.6">
 <h2 data-number="23.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">23.6</span> 🏋️ Exercises</h2>
 <p><strong>E23.1 🟢</strong> Which branch state has the highest churn among Mass-segment customers? <strong>E23.2 🟡</strong> Add a test that no column in gold contains values matching an 11-digit identifier pattern (Chapter 15’s scanner, as a gate test). <strong>E23.3 🔴</strong> Design a randomised retention experiment: an offer vs control for the top-risk decile. Write the hypothesis, sample size, primary metric, guardrail metrics and the sample-ratio mismatch (SRM) check.</p>
+</section>
+<section id="mastery-check" class="level2" data-number="23.7">
+<h2 data-number="23.7" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">23.7</span> ✅ Mastery check</h2>
+<ul>
+<li>Why can’t the <code>dormant</code> flag be used to predict churn in this data?</li>
+<li>What is wrong with an <code>nps_last_survey</code> column that ranges from −100 to +100 for each customer?</li>
+<li>Customers who domicile their salary churn less (odds ratio below 1). Does domiciling salary <em>cause</em> retention?</li>
+</ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Every churned customer is also dormant.</strong> Dormancy is either part of how churn is defined or recorded at the same moment, so it is part of the outcome: the same leakage as the human resources (HR) exit-interview flag. The data steward must document how “churn”, “dormant” and “active” relate.</li>
+<li>An individual answers 0–10; <strong><a class="abbr-ref" href="e-abbreviations.html#abbr-nps"><abbr title="Net Promoter Score">NPS</abbr></a> is a group score</strong> (% promoters − % detractors). A −100..100 value on each customer is probably a branch or segment score copied onto every row. Averaging it again is meaningless. Ask the source owner before anyone charts it.</li>
+<li><strong>Not proven.</strong> It is an association: salary-domiciled customers differ in many ways. To learn what causes retention, run a randomised test of a retention offer, as in the retail and pensions playbooks.</li>
+</ul>
+</div>
+</div>
+</div>
 
 
 </section>

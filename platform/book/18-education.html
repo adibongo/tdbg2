@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -591,6 +597,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
   <li><a href="#insight-attendance-is-the-early-warning-signal" id="toc-insight-attendance-is-the-early-warning-signal" class="nav-link" data-scroll-target="#insight-attendance-is-the-early-warning-signal"><span class="header-section-number">18.5</span> Insight: attendance is the early-warning signal</a></li>
   <li><a href="#deploying-in-an-institution" id="toc-deploying-in-an-institution" class="nav-link" data-scroll-target="#deploying-in-an-institution"><span class="header-section-number">18.6</span> Deploying in an institution</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">18.7</span> 🏋️ Exercises</a></li>
+  <li><a href="#mastery-check" id="toc-mastery-check" class="nav-link" data-scroll-target="#mastery-check"><span class="header-section-number">18.8</span> ✅ Mastery check</a></li>
   </ul>
 </nav>
     </div>
@@ -881,6 +888,35 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <section id="exercises" class="level2" data-number="18.7">
 <h2 data-number="18.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">18.7</span> 🏋️ Exercises</h2>
 <p><strong>E18.1 🟢</strong> Which campus has the highest share of at-risk learners? <strong>E18.2 🟡</strong> Add a course-level mart with pass rate, mean score and score standard deviation. Flag courses whose pass rate is more than 2 standard deviations from the mean of all courses. <strong>E18.3 🔴</strong> Make the early-warning rule <em>weekly</em>: simulate 12 weeks of attendance, and find the earliest week at which the rule identifies 80% of eventual failures.</p>
+</section>
+<section id="mastery-check" class="level2" data-number="18.8">
+<h2 data-number="18.8" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">18.8</span> ✅ Mastery check</h2>
+<ul>
+<li>Why is attendance a better early-warning signal than exam scores?</li>
+<li>What does “conforming” learner <a class="abbr-ref" href="e-abbreviations.html#abbr-id"><abbr title="identifier">IDs</abbr></a> mean, and what problem did it fix in this playbook?</li>
+<li>What extra controls apply when some learners are under 18?</li>
+</ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Attendance is known <strong>weeks before</strong> exam results. An adviser can call a learner in week 4 and still change the outcome; an exam score only says what has already happened.</li>
+<li>Bringing every spelling of the same <a class="abbr-ref" href="e-abbreviations.html#abbr-id"><abbr title="identifier">ID</abbr></a> to one standard form (here <code>upper(trim())</code>, and mapping old and new matric formats) so each real learner has one <a class="abbr-ref" href="e-abbreviations.html#abbr-id"><abbr title="identifier">ID</abbr></a>. It <strong>merged learners who had been recorded twice</strong>, which would otherwise have been counted as two people.</li>
+<li>Stricter roles and retention, minimal fields, respect for guardians’ rights, <strong>no external <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> on identifiable records</strong>, and the <a class="abbr-ref" href="e-abbreviations.html#abbr-dpo"><abbr title="data protection officer">DPO</abbr></a> involved before any analytics beyond statutory reporting. “At risk” labels are used for support, never for sanctions, and the criteria are explained to learners.</li>
+</ul>
+</div>
+</div>
+</div>
 
 
 </section>

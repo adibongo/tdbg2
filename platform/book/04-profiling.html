@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -1156,7 +1162,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <td style="text-align: right;">142</td>
 <td style="text-align: left;">5.0</td>
 <td style="text-align: left;">206.0</td>
-<td style="text-align: left;">5.0 | 15.0 | 19.0</td>
+<td style="text-align: left;">5.0 | 19.0 | 15.0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">engagement_score</td>
@@ -1301,12 +1307,12 @@ Solutions
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0.9208689</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.0080291</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.9208689</td>
 </tr>
 </tbody>
 </table>
@@ -1347,6 +1353,27 @@ Solutions
 <li>What is target leakage, and what question exposes it?</li>
 <li>Why does excluding open complaints bias the average resolution time?</li>
 </ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Completeness</strong> (<code>units_sold IS NULL</code>), <strong>uniqueness</strong> (duplicate week × depot × <a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a>), <strong>validity</strong> (<code>uptime_hrs</code> between 0 and 24), <strong>consistency</strong> (<code>received_date ≥ po_date</code>; every <a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a> exists in the product master), <strong>timeliness</strong> (latest week no more than 21 days old) and <strong>accuracy</strong> (reconciles to Finance’s report within 1%).</li>
+<li><strong>Target leakage</strong> is a predictor that is only known <em>after</em> the outcome happens, like <code>exit_interview_booked</code> for attrition. It makes a model look brilliant in testing and useless in production. The question that exposes it: <em>“Could I have known this value at the moment I need to make the prediction?”</em></li>
+<li>Open complaints have <strong>no resolution time yet</strong>, and they are usually the slowest ones. Averaging only the closed complaints leaves out the hardest cases, so the average looks better than reality. This is called right-censoring. Report both numbers, or use survival analysis.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="in-the-organisation" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">4.8</span> 🏢 In the organisation</h2>

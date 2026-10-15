@@ -1,0 +1,2417 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Appendix F — DIY prompt book: from your raw data to a live dashboard – The Governed Analytics Platform</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./e-abbreviations.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-187f5191076cea0c25736ba820c9c5fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d40a2d6d02bd6933a3842c270e459411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bf3953d87442e0aef65467655d73dfaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<style>
+a.abbr-ref{color:inherit;text-decoration:none}
+a.abbr-ref abbr{text-decoration:underline dotted;text-underline-offset:2px;cursor:help}
+a.abbr-ref:hover abbr{text-decoration-style:solid}
+</style>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./a-glossary.html">Appendices</a></li><li class="breadcrumb-item"><a href="./f-diy-prompt-book.html"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Governed Analytics Platform</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 1 · Novice — See the whole, touch the data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The architecture, end to end</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Your workbench</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data comes in many shapes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-profiling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Profile before you trust</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 2 · Practitioner — Build the warehouse</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-sql.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">SQL: the language of the warehouse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-bronze.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bronze: land everything, change nothing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-silver.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Silver: clean, conform, remember</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-gold.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Gold: model for decisions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tests and the publish gate</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 3 · Advanced — Govern and serve</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-semantic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The semantic layer: one definition of every KPI</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-vector-ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Vector search and AI on governed data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-serving.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Serving: trusted data where people work</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-dashboards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Dashboards with Quarto and Shiny</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 4 · Master — Run it in production</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Operations: run it every day without you</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Security, privacy and governance</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-deploy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Deploying in an organisation</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Sector playbooks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./17-hr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Playbook: Human resources</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./18-education.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Playbook: Education</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./19-supply-chain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Playbook: Supply chain and procurement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-retail.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Playbook: Retail chains and FMCG</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./21-oil-gas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Playbook: Oil and gas (upstream)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./22-power.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Playbook: Power and utilities</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./23-banking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Playbook: Financial services (banking)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./24-pensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Playbook: Pensions (PenCom-regulated)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./25-telecoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Playbook: Telecommunications</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./26-capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Capstone: prove mastery</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./a-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Glossary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./b-prompts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Prompt library</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./c-troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./d-open-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e-abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#how-to-use-this-prompt-book" id="toc-how-to-use-this-prompt-book" class="nav-link active" data-scroll-target="#how-to-use-this-prompt-book"><span class="header-section-number">F.1</span> How to use this prompt book</a>
+  <ul class="collapse">
+  <li><a href="#the-loop-at-every-stage" id="toc-the-loop-at-every-stage" class="nav-link" data-scroll-target="#the-loop-at-every-stage"><span class="header-section-number">F.1.1</span> The loop at every stage</a></li>
+  <li><a href="#rehearse-on-the-practice-organisation-first" id="toc-rehearse-on-the-practice-organisation-first" class="nav-link" data-scroll-target="#rehearse-on-the-practice-organisation-first"><span class="header-section-number">F.1.2</span> Rehearse on the practice organisation first</a></li>
+  <li><a href="#the-stages-at-a-glance" id="toc-the-stages-at-a-glance" class="nav-link" data-scroll-target="#the-stages-at-a-glance"><span class="header-section-number">F.1.3</span> The stages at a glance</a></li>
+  </ul></li>
+  <li><a href="#sec-diy-primer" id="toc-sec-diy-primer" class="nav-link" data-scroll-target="#sec-diy-primer"><span class="header-section-number">F.2</span> The session primer (paste at the start of every AI session)</a></li>
+  <li><a href="#stage-0-install-your-workbench" id="toc-stage-0-install-your-workbench" class="nav-link" data-scroll-target="#stage-0-install-your-workbench"><span class="header-section-number">F.3</span> Stage 0 · Install your workbench</a></li>
+  <li><a href="#stage-1-create-the-project-and-write-the-brief" id="toc-stage-1-create-the-project-and-write-the-brief" class="nav-link" data-scroll-target="#stage-1-create-the-project-and-write-the-brief"><span class="header-section-number">F.4</span> Stage 1 · Create the project and write the brief</a></li>
+  <li><a href="#stage-2-land-your-files-in-bronze" id="toc-stage-2-land-your-files-in-bronze" class="nav-link" data-scroll-target="#stage-2-land-your-files-in-bronze"><span class="header-section-number">F.5</span> Stage 2 · Land your files in bronze</a></li>
+  <li><a href="#stage-3-connect-databases-and-web-apis" id="toc-stage-3-connect-databases-and-web-apis" class="nav-link" data-scroll-target="#stage-3-connect-databases-and-web-apis"><span class="header-section-number">F.6</span> Stage 3 · Connect databases and web APIs</a></li>
+  <li><a href="#stage-4-profile-before-you-trust" id="toc-stage-4-profile-before-you-trust" class="nav-link" data-scroll-target="#stage-4-profile-before-you-trust"><span class="header-section-number">F.7</span> Stage 4 · Profile before you trust</a></li>
+  <li><a href="#stage-5-silver-clean-type-and-conform" id="toc-stage-5-silver-clean-type-and-conform" class="nav-link" data-scroll-target="#stage-5-silver-clean-type-and-conform"><span class="header-section-number">F.8</span> Stage 5 · Silver: clean, type and conform</a></li>
+  <li><a href="#stage-6-gold-model-for-decisions" id="toc-stage-6-gold-model-for-decisions" class="nav-link" data-scroll-target="#stage-6-gold-model-for-decisions"><span class="header-section-number">F.9</span> Stage 6 · Gold: model for decisions</a></li>
+  <li><a href="#stage-7-the-publish-gate" id="toc-stage-7-the-publish-gate" class="nav-link" data-scroll-target="#stage-7-the-publish-gate"><span class="header-section-number">F.10</span> Stage 7 · The publish gate</a></li>
+  <li><a href="#stage-8-the-semantic-layer" id="toc-stage-8-the-semantic-layer" class="nav-link" data-scroll-target="#stage-8-the-semantic-layer"><span class="header-section-number">F.11</span> Stage 8 · The semantic layer</a></li>
+  <li><a href="#stage-9-one-command-run-the-whole-pipeline" id="toc-stage-9-one-command-run-the-whole-pipeline" class="nav-link" data-scroll-target="#stage-9-one-command-run-the-whole-pipeline"><span class="header-section-number">F.12</span> Stage 9 · One command: run the whole pipeline</a></li>
+  <li><a href="#stage-10-the-live-dashboard" id="toc-stage-10-the-live-dashboard" class="nav-link" data-scroll-target="#stage-10-the-live-dashboard"><span class="header-section-number">F.13</span> Stage 10 · The live dashboard</a></li>
+  <li><a href="#stage-11-publish-it-for-colleagues" id="toc-stage-11-publish-it-for-colleagues" class="nav-link" data-scroll-target="#stage-11-publish-it-for-colleagues"><span class="header-section-number">F.14</span> Stage 11 · Publish it for colleagues</a></li>
+  <li><a href="#stage-12-schedule-monitor-and-alert" id="toc-stage-12-schedule-monitor-and-alert" class="nav-link" data-scroll-target="#stage-12-schedule-monitor-and-alert"><span class="header-section-number">F.15</span> Stage 12 · Schedule, monitor and alert</a></li>
+  <li><a href="#stage-13-secure-and-govern" id="toc-stage-13-secure-and-govern" class="nav-link" data-scroll-target="#stage-13-secure-and-govern"><span class="header-section-number">F.16</span> Stage 13 · Secure and govern</a></li>
+  <li><a href="#stage-14-extensions-optional" id="toc-stage-14-extensions-optional" class="nav-link" data-scroll-target="#stage-14-extensions-optional"><span class="header-section-number">F.17</span> Stage 14 · Extensions (optional)</a></li>
+  <li><a href="#definition-of-done" id="toc-definition-of-done" class="nav-link" data-scroll-target="#definition-of-done"><span class="header-section-number">F.18</span> Definition of done</a></li>
+  <li><a href="#troubleshooting-by-stage" id="toc-troubleshooting-by-stage" class="nav-link" data-scroll-target="#troubleshooting-by-stage"><span class="header-section-number">F.19</span> Troubleshooting by stage</a></li>
+  <li><a href="#the-whole-prompt-chain-on-one-page" id="toc-the-whole-prompt-chain-on-one-page" class="nav-link" data-scroll-target="#the-whole-prompt-chain-on-one-page"><span class="header-section-number">F.20</span> The whole prompt chain on one page</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./a-glossary.html">Appendices</a></li><li class="breadcrumb-item"><a href="./f-diy-prompt-book.html"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-diy" class="quarto-section-identifier">Appendix F — DIY prompt book: from your raw data to a live dashboard</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This appendix is a <strong>hands-on, do-it-yourself guide</strong>. You have data of all sorts in your organisation: spreadsheets on shared drives, exports from an enterprise resource planning (ERP) system, a customer relationship management (CRM) database, a web service or two. You want a live, interactive dashboard that people trust. This prompt book takes you there in fourteen stages. Each stage gives you:</p>
+<ul>
+<li><strong>🎯 the goal</strong>, in one sentence;</li>
+<li><strong>🧠 the prompt</strong> to paste into your artificial intelligence (AI) assistant, with <code>[[placeholders]]</code> for your details;</li>
+<li><strong>▶ the command</strong> to run;</li>
+<li><strong>✔ the check</strong>: what you should see, and how to tell it worked;</li>
+<li><strong>📗 the reference answer</strong> for a practice organisation, folded so you try first;</li>
+<li><strong>💾 the commit</strong>: the point at which to save your work in Git.</li>
+</ul>
+<p>It is built on a <strong>starter kit</strong>: a ready-made project folder in which every layer of the architecture already works. You don’t write a pipeline engine or a dashboard from scratch. You write the parts that are specific to your organisation: what the data means, how to clean it, what to measure. Those are exactly the parts an <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> assistant can help with, and that a person must check.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Download the starter kit first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><a href="downloads/diy-starter-kit.zip">⬇ diy-starter-kit.zip</a></strong>, about one megabyte. Unzip it, rename the <code>my-analytics</code> folder to your project’s name, and open that folder in Positron or RStudio. It contains the engine, the dashboard, templates for every file you will write, and a complete <strong>practice organisation</strong> with its data and reference answers.</p>
+</div>
+</div>
+<div id="fig-diy-end" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diy-end-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/diy/diy-split.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diy-end-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;F.1: Where you end up: the starter kit’s dashboard on the practice organisation’s data. Every number comes from <code>semantic/metrics.yml</code>, every filter from the gold layer, and the page refreshes itself when the nightly pipeline publishes.
+</figcaption>
+</figure>
+</div>
+<section id="how-to-use-this-prompt-book" class="level2" data-number="F.1">
+<h2 data-number="F.1" class="anchored" data-anchor-id="how-to-use-this-prompt-book"><span class="header-section-number">F.1</span> How to use this prompt book</h2>
+<section id="the-loop-at-every-stage" class="level3" data-number="F.1.1">
+<h3 data-number="F.1.1" class="anchored" data-anchor-id="the-loop-at-every-stage"><span class="header-section-number">F.1.1</span> The loop at every stage</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A["🧠 Prompt&lt;br/&gt;(attach ai_context.md)"] --&gt; B["Paste the answer&lt;br/&gt;into the named file"]
+  B --&gt; C["▶ Run&lt;br/&gt;run_pipeline.R --to=stage"]
+  C --&gt; D{"✔ Check"}
+  D -- "wrong" --&gt; A
+  D -- "right" --&gt; E["💾 Commit"]
+  E --&gt; F["Next stage"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ol type="1">
+<li><strong>Prompt.</strong> Start every <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> session with the <strong>session primer</strong> (below), then the stage’s prompt. Attach <code>ai_context.md</code>, which the kit rewrites on every run. It describes every table (columns, types, null %, ranges) without sending a single full record.</li>
+<li><strong>Paste</strong> the answer into the file the prompt names. The <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> writes files; you place them.</li>
+<li><strong>Run</strong> the stage. Every run starts again from the raw data, so you can run as often as you like.</li>
+<li><strong>Check</strong> against the stage’s ✔ list. If something is wrong, paste the error or the surprising number back to the <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> with <em>“this is what I got; what is wrong?”</em>.</li>
+<li><strong>Commit</strong> when the check passes, so you can always go back.</li>
+</ol>
+</section>
+<section id="rehearse-on-the-practice-organisation-first" class="level3" data-number="F.1.2">
+<h3 data-number="F.1.2" class="anchored" data-anchor-id="rehearse-on-the-practice-organisation-first"><span class="header-section-number">F.1.2</span> Rehearse on the practice organisation first</h3>
+<p>The kit includes <strong>Trans-Sahel Distribution Ltd</strong>, the book’s running example. It has sources in every shape you will meet: a comma-separated values (CSV) sell-out file with re-sent rows, a “presentation” Excel report, a JavaScript Object Notation (JSON) export, a database and a web application programming interface (API) (see <code>practice/README.md</code>).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> use_practice.R answers   <span class="co"># load the practice data AND the reference answers</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> run_pipeline.R           <span class="co"># build it</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> serve dashboard.qmd       <span class="co"># see the finished dashboard (10 minutes, start to finish)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then start again in a fresh copy of the kit with <code>Rscript use_practice.R</code> (data only), and work through the stages yourself. Compare with the folded reference answers as you go. When that feels routine, do it with your own data.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Practice organisation</th>
+<th>Your organisation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Time</td>
+<td>One day</td>
+<td>One to three weeks, mostly waiting for access and agreeing definitions</td>
+</tr>
+<tr class="even">
+<td>Data</td>
+<td>Supplied in the kit</td>
+<td>Exports and read-only connections you request (Stages 2–3)</td>
+</tr>
+<tr class="odd">
+<td>Rules</td>
+<td>Written for you in the reference answers</td>
+<td>Agreed with the data owners (Stage 4)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-stages-at-a-glance" class="level3" data-number="F.1.3">
+<h3 data-number="F.1.3" class="anchored" data-anchor-id="the-stages-at-a-glance"><span class="header-section-number">F.1.3</span> The stages at a glance</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>You build</th>
+<th>You edit</th>
+<th>Run</th>
+<th>Book chapter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Your workbench</td>
+<td>—</td>
+<td><code>Rscript 00_setup.R</code></td>
+<td><a href="02-setup.html" class="quarto-xref"><span>Chapter 2</span></a></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>The project and its brief</td>
+<td><code>brief.md</code>, <code>config.yml</code></td>
+<td>—</td>
+<td><a href="01-architecture.html" class="quarto-xref"><span>Chapter 1</span></a></td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Bronze from files</td>
+<td><code>data/raw/</code>, <code>sources.yml</code></td>
+<td><code>--to=bronze</code></td>
+<td><a href="03-files.html" class="quarto-xref"><span>Chapter 3</span></a>, <a href="06-bronze.html" class="quarto-xref"><span>Chapter 6</span></a></td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Bronze from databases and <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">APIs</abbr></a></td>
+<td><code>sources.yml</code>, <code>.Renviron</code></td>
+<td><code>--to=bronze</code></td>
+<td><a href="06-bronze.html" class="quarto-xref"><span>Chapter 6</span></a>, <a href="d-open-data.html" class="quarto-xref"><span>Appendix D</span></a></td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>A profile and an issues log</td>
+<td><code>docs/issues.md</code></td>
+<td>—</td>
+<td><a href="04-profiling.html" class="quarto-xref"><span>Chapter 4</span></a></td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Silver: clean, typed, conformed</td>
+<td><code>sql/silver/*.sql</code></td>
+<td><code>--to=silver</code></td>
+<td><a href="07-silver.html" class="quarto-xref"><span>Chapter 7</span></a></td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Gold: facts, dimensions, one dashboard view</td>
+<td><code>sql/gold/*.sql</code></td>
+<td><code>--to=gold</code></td>
+<td><a href="08-gold.html" class="quarto-xref"><span>Chapter 8</span></a></td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>The publish gate</td>
+<td><code>tests/tests.yml</code></td>
+<td><code>--to=test</code></td>
+<td><a href="09-tests.html" class="quarto-xref"><span>Chapter 9</span></a></td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>The semantic layer</td>
+<td><code>semantic/metrics.yml</code></td>
+<td>full run</td>
+<td><a href="10-semantic.html" class="quarto-xref"><span>Chapter 10</span></a></td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>One-command pipeline</td>
+<td>—</td>
+<td><code>Rscript run_pipeline.R</code></td>
+<td><a href="14-operations.html" class="quarto-xref"><span>Chapter 14</span></a></td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>The live dashboard</td>
+<td><code>dashboard.qmd</code> (title, extras), <code>theme.scss</code></td>
+<td><code>quarto serve</code></td>
+<td><a href="13-dashboards.html" class="quarto-xref"><span>Chapter 13</span></a></td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>Publishing</td>
+<td><code>deploy.R</code></td>
+<td><code>Rscript deploy.R …</code></td>
+<td><a href="12-serving.html" class="quarto-xref"><span>Chapter 12</span></a>, <a href="16-deploy.html" class="quarto-xref"><span>Chapter 16</span></a></td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>Schedule and alerts</td>
+<td><code>schedule/</code>, <code>.Renviron</code></td>
+<td>your scheduler</td>
+<td><a href="14-operations.html" class="quarto-xref"><span>Chapter 14</span></a></td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>Security and governance</td>
+<td>review</td>
+<td>—</td>
+<td><a href="15-security.html" class="quarto-xref"><span>Chapter 15</span></a></td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>Extensions (optional)</td>
+<td>—</td>
+<td>—</td>
+<td><a href="11-vector-ai.html" class="quarto-xref"><span>Chapter 11</span></a></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="sec-diy-primer" class="level2" data-number="F.2">
+<h2 data-number="F.2" class="anchored" data-anchor-id="sec-diy-primer"><span class="header-section-number">F.2</span> The session primer (paste at the start of every AI session)</h2>
+<p><a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> assistants forget everything between sessions. This primer tells the assistant what the kit is, what it may assume and how to answer. Paste it first, every time, then attach <code>ai_context.md</code>.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F0 — session primer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>I am building a governed analytics platform with a starter kit. Data flows one way: files and systems land in <strong>bronze</strong> (DuckDB, every column as delivered, with lineage columns <code>_source_file</code>, <code>_row</code> and <code>_loaded_at</code>); Structured Query Language (SQL) files in <code>sql/silver/</code> clean and type them; <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> files in <code>sql/gold/</code> model them for decisions; <code>tests/tests.yml</code> holds data tests that must pass before anything is published; <code>semantic/metrics.yml</code> defines every metric once, and a Quarto + Shiny dashboard reads only those definitions.</p>
+<p>The attached <code>ai_context.md</code> describes every table: columns, types, null %, approximate distinct counts and ranges. It is all you know about the data. <strong>Never invent a table or a column that is not in it</strong>; if you need one, say so.</p>
+<p>When you write code: use DuckDB <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>; return <strong>complete files</strong>, each starting with a comment giving its path (for example <code>-- sql/silver/03_sell_out.sql</code>); use <code>CREATE OR REPLACE TABLE</code> (or <code>VIEW</code>); comment every business rule in plain English; and finish with <strong>the assumptions you made and the questions I should ask a data owner</strong>. If my request is ambiguous, ask me before writing code. My organisation: [[one line: who you are and what the dashboard is for]].</p>
+</blockquote>
+</div>
+</div>
+</section>
+<section id="stage-0-install-your-workbench" class="level2" data-number="F.3">
+<h2 data-number="F.3" class="anchored" data-anchor-id="stage-0-install-your-workbench"><span class="header-section-number">F.3</span> Stage 0 · Install your workbench</h2>
+<p>🎯 <strong>Goal:</strong> R, Quarto, an editor and Git installed, and the kit’s checks all OK.</p>
+<ol type="1">
+<li>Install <strong>R</strong> (4.3 or newer) from cran.r-project.org, <strong>Quarto</strong> from quarto.org, and <strong>Git</strong> from git-scm.com.</li>
+<li>Install an editor: <strong>Positron</strong> (positron.posit.co) or RStudio. Positron includes an <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> assistant pane; any assistant you are allowed to use works.</li>
+<li>Unzip the starter kit, rename the folder, open it in the editor and, in its terminal, run:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> 00_setup.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F0.1 — fix an installation problem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>I am setting up R and Quarto on [[Windows 11 / macOS 14 / Ubuntu 24.04]], on a [[company-managed / personal]] laptop [[behind a proxy / without admin rights]]. Running <code>Rscript 00_setup.R</code> gave this output: [[paste the output]]. Explain what is wrong in plain language and give me the exact steps to fix it, one at a time, without needing admin rights if possible.</p>
+</blockquote>
+</div>
+</div>
+<p>✔ <strong>Check.</strong> Every line of the <code>--- checks ---</code> block says <code>OK</code>. (The optional database drivers matter only if you will pull from PostgreSQL, <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> Server or Oracle.)</p>
+<p>💾 <strong>Commit.</strong> <code>git init</code>, then <code>git add -A</code> and <code>git commit -m "Start from the DIY starter kit"</code>. The kit’s <code>.gitignore</code> already keeps data, secrets and generated files out of Git.</p>
+</section>
+<section id="stage-1-create-the-project-and-write-the-brief" class="level2" data-number="F.4">
+<h2 data-number="F.4" class="anchored" data-anchor-id="stage-1-create-the-project-and-write-the-brief"><span class="header-section-number">F.4</span> Stage 1 · Create the project and write the brief</h2>
+<p>🎯 <strong>Goal:</strong> one page that says who the dashboard is for, which decisions it supports, and which numbers matter.</p>
+<p>Most dashboard projects fail here, not in the code. A clear brief tells you which sources you need, what “correct” means, and when you are done. The kit copies <code>brief.md</code> to the top of <code>ai_context.md</code>, so every later prompt knows your situation.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F1 — interview me for the brief
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Interview me to fill in <code>brief.md</code> for a dashboard project. Ask me <strong>one question at a time</strong> and wait for my answer: the organisation and unit; the decisions the dashboard must support (and how often they are made); the audience; the three to six numbers that matter, each with the person who owns its definition; the breakdowns people ask for; the time grain; the authoritative totals the numbers must reconcile to (for example a finance report); and whether any personal data is involved. Push back if a “number that matters” has no owner or no decision attached to it. At the end, write the complete <code>brief.md</code> in the same bullet format as the template I paste below. [[paste the brief.md template]]</p>
+</blockquote>
+</div>
+</div>
+<p>Then set your project’s name in <code>config.yml</code> (<code>project:</code>) and the title at the top of <code>dashboard.qmd</code>.</p>
+<p>✔ <strong>Check.</strong> Every line of <code>brief.md</code> is filled in. Each key number has an owner and a decision. You can name the report you will reconcile to. If personal data is involved, set <code>ai_context_samples: false</code> in <code>config.yml</code> now (Stage 13 explains why).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📗 Reference answer (practice organisation)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice/brief.md</strong></pre>
+</div>
+<div class="sourceCode" id="cb3" data-filename="practice/brief.md"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Organisation and unit:** Trans-Sahel Distribution Ltd (practice organisation), Commercial Finance</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The decisions this dashboard supports:** the weekly depot performance review; promotion planning; stockout follow-up</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Audience:** regional managers (weekly), CFO and Commercial Director (monthly)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The 3–6 numbers that matter (with owners):** revenue (CFO), gross margin % (CFO), units sold (Commercial Director), stockout rate (Head of Supply Chain), promotion share of revenue (Head of Trade Marketing)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Breakdowns people ask for:** region, depot, product category, product</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Time grain:** weekly (sell-out arrives weekly), reviewed monthly</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Authoritative totals to reconcile to:** Commercial Finance's FY2025 regional report (revenue by depot and month)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data protection notes:** no personal data in scope (depot- and product-level sales only)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>💾 <strong>Commit:</strong> <code>"Brief and project settings"</code>.</p>
+</section>
+<section id="stage-2-land-your-files-in-bronze" class="level2" data-number="F.5">
+<h2 data-number="F.5" class="anchored" data-anchor-id="stage-2-land-your-files-in-bronze"><span class="header-section-number">F.5</span> Stage 2 · Land your files in bronze</h2>
+<p>🎯 <strong>Goal:</strong> every file the dashboard needs, loaded into bronze exactly as delivered, with lineage.</p>
+<ol type="1">
+<li><strong>Collect exports, don’t edit them.</strong> Ask each owner for the regular export (the one that could be produced again next month), not a hand-tidied copy. Keep originals as they arrive.</li>
+<li><strong>Drop them into <code>data/raw/</code></strong>, one sub-folder per source (for example <code>data/raw/sales/</code>, <code>data/raw/finance/</code>). The kit reads <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a>, tab-separated values (TSV), Excel (every sheet), Parquet and <a class="abbr-ref" href="e-abbreviations.html#abbr-json"><abbr title="JavaScript Object Notation">JSON</abbr></a>.</li>
+<li><strong>Only what the brief needs.</strong> If a file holds personal data the brief doesn’t need, ask for an export without those columns. That is data minimisation, and it is easier than deleting later.</li>
+<li>Run:</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> run_pipeline.R <span class="at">--to</span><span class="op">=</span>bronze</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Each file becomes one table, <code>bronze.&lt;file name&gt;</code> (an Excel workbook with several sheets gives one table per sheet, <code>bronze.&lt;file&gt;__&lt;sheet&gt;</code>), and the run lists each with its row count. Open <code>ai_context.md</code> to see what landed.</p>
+<p>Spreadsheets made for printing usually land wrongly the first time: title rows become the header, so columns are called <code>...2</code> and <code>...3</code>. Fix that with <strong>read options</strong> in <code>sources.yml</code>, not by editing the file.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F2 — fix how files were read
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[[Session primer, then attach ai_context.md.]] Look at every bronze table. Which ones look as if they were read wrongly: a title row used as the header (columns named like <code>...2</code>), the wrong delimiter (everything in one column), a broken encoding (<code>â‚¦</code> instead of <code>₦</code>), several tables on one sheet, or notes rows mixed with data? For each, write the <code>files:</code> entry for <code>sources.yml</code> that fixes it (options: <code>skip</code>, <code>header</code>, <code>delim</code>, <code>encoding</code>, <code>sheets</code>, <code>table</code>, <code>skip_file</code>), and tell me what to ask the owner if the file cannot be fixed by read options alone.</p>
+</blockquote>
+</div>
+</div>
+<p>✔ <strong>Check.</strong></p>
+<ul>
+<li>Every file you dropped in appears in the run output with a sensible row count. (Compare with the row count you see when you open the file.)</li>
+<li>Column names in <code>ai_context.md</code> match the files’ real headers.</li>
+<li><code>ERROR</code> lines name a file and a reason: fix the read option or ask for a cleaner export.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📗 Reference answer (practice organisation)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Finance’s regional report has four title rows above the header, so it needs <code>skip: 4</code>. The other files land correctly as they are. The <code>files:</code> section of <code>sources.yml</code> (full file in Stage 3):</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">files</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">"finance/regional_report.xlsx"</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">skip</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>💾 <strong>Commit:</strong> <code>"Land raw files in bronze"</code> (the data itself stays out of Git; the read options go in).</p>
+</section>
+<section id="stage-3-connect-databases-and-web-apis" class="level2" data-number="F.6">
+<h2 data-number="F.6" class="anchored" data-anchor-id="stage-3-connect-databases-and-web-apis"><span class="header-section-number">F.6</span> Stage 3 · Connect databases and web APIs</h2>
+<p>🎯 <strong>Goal:</strong> system data pulled straight from the source, on every run, with no manual exports.</p>
+<p><code>sources.yml</code> lists <strong>databases</strong> (SQLite, DuckDB, PostgreSQL, and <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> Server, Oracle or others through Open Database Connectivity (ODBC)) and <strong>web <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">APIs</abbr></a></strong> (<a class="abbr-ref" href="e-abbreviations.html#abbr-json"><abbr title="JavaScript Object Notation">JSON</abbr></a> or <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a>). Passwords and tokens go in <code>.Renviron</code>; <code>sources.yml</code> only holds the <em>names</em> of those variables. <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> responses are cached, so a failed call falls back to the last good copy.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Asking information technology (IT) for access: what to request
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A <strong>read-only</strong> account; access to a <strong>view</strong> or a reporting replica rather than live production tables; the <strong>host, port, database name and driver</strong>; and the time window when queries are allowed. Ask for exactly the tables in your brief. You are much more likely to get a quick yes.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F3 — write the source entries
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[[Session primer.]] Write <code>sources.yml</code> entries for these sources. Database: [[system name, e.g.&nbsp;our <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> Server <a class="abbr-ref" href="e-abbreviations.html#abbr-erp"><abbr title="enterprise resource planning">ERP</abbr></a>]], driver [[sqlite / postgres / odbc]], connection facts [[host, port, database, data source name (DSN), without any password]], and I need [[tables or a query: e.g.&nbsp;invoices since 2024 with these columns…]]. Web <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a>: [[uniform resource locator (URL) and documentation link]], authentication [[none / <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> key in a header / bearer token]], response format [[<a class="abbr-ref" href="e-abbreviations.html#abbr-json"><abbr title="JavaScript Object Notation">JSON</abbr></a> / <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a>]]. Reference every secret by a variable name for <code>.Renviron</code> and show me the <code>.Renviron</code> lines with empty values. If a query could pull millions of rows, add a date filter and tell me why.</p>
+</blockquote>
+</div>
+</div>
+<p>Then fill in <code>.Renviron</code> (restart R after editing) and run <code>Rscript run_pipeline.R --to=bronze</code> again.</p>
+<p>✔ <strong>Check.</strong> Each source appears as <code>bronze.&lt;name&gt;_&lt;table&gt;</code> with a row count you can confirm with the system owner. Re-run it: the counts are the same, because every run rebuilds from the sources. No password appears in any file you would commit (<code>git status</code> should not list <code>.Renviron</code>).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📗 Reference answer (practice organisation)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The depot master comes from the <a class="abbr-ref" href="e-abbreviations.html#abbr-erp"><abbr title="enterprise resource planning">ERP</abbr></a> database, and Nigeria’s inflation comes from the World Bank’s open <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> (see <a href="d-open-data.html" class="quarto-xref"><span>Appendix D</span></a> for International Monetary Fund (IMF), United Nations (UN) Comtrade, United Nations Conference on Trade and Development (UNCTAD) and Nigerian sources):</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice/sources.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb6" data-filename="practice/sources.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Practice organisation: Trans-Sahel Distribution Ltd (reference answer for Stage 3)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">files</span><span class="kw">:</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">"finance/regional_report.xlsx"</span><span class="kw">:</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">skip</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span><span class="co">                    # four title rows above the header (Chapter 3)</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">databases</span><span class="kw">:</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> erp</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">driver</span><span class="kw">:</span><span class="at"> sqlite</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">path</span><span class="kw">:</span><span class="at"> data/systems/erp.sqlite</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">tables</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">depots</span><span class="kw">]</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">apis</span><span class="kw">:</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> wb_inflation_nga</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://api.worldbank.org/v2/country/NGA/indicator/FP.CPI.TOTL.ZG?format=json&amp;per_page=100"</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">format</span><span class="kw">:</span><span class="at"> json</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">pick</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span><span class="co">                    # World Bank returns [metadata, data]: keep the data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>💾 <strong>Commit:</strong> <code>"Pull from ERP and World Bank"</code>.</p>
+</section>
+<section id="stage-4-profile-before-you-trust" class="level2" data-number="F.7">
+<h2 data-number="F.7" class="anchored" data-anchor-id="stage-4-profile-before-you-trust"><span class="header-section-number">F.7</span> Stage 4 · Profile before you trust</h2>
+<p>🎯 <strong>Goal:</strong> a written list of every data problem, with the rule that fixes it and the person who must agree to that rule.</p>
+<p>This stage writes no code. It’s the conversation that makes silver possible. The <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> spots patterns in <code>ai_context.md</code>; the data owners decide what they mean.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F4 — the issues log
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[[Session primer, then attach ai_context.md.]] Profile every bronze table against the six quality dimensions: completeness, uniqueness, validity, consistency, timeliness and accuracy. Look especially for: likely duplicate keys; blanks that might <em>mean</em> something (zero, not applicable, still open); numbers or dates stored with symbols or in mixed formats; codes that differ between tables for the same thing; one entity appearing twice (a rename, a merger, two spellings); periods that don’t overlap between sources; and columns that could leak an outcome. Write <code>docs/issues.md</code> as a table: table, column, issue, evidence from ai_context.md, proposed rule, who must confirm it. Then list the <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> checks I should run to confirm each suspicion.</p>
+</blockquote>
+</div>
+</div>
+<p>Run the suggested checks (in Positron, open <code>data/db/dev.duckdb</code> with the database pane, or in R <code>DBI::dbGetQuery()</code>), then <strong>take the issues log to the owners</strong>. Their answers become the comments in your silver <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>.</p>
+<p>✔ <strong>Check.</strong> Every issue has evidence and an owner. Every rule that changes a number (for example “blank units mean a stockout, so 0”) has been confirmed by that owner, in writing.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📗 Reference answer (practice organisation)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Table</th>
+<th>Issue</th>
+<th>Evidence</th>
+<th>Rule</th>
+<th>Confirmed by</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>fmcg_sell_out</code></td>
+<td>Re-sent rows: 214 keys (week × depot × stock-keeping unit (SKU)) appear twice</td>
+<td><code>GROUP BY</code> key <code>HAVING COUNT(*) &gt; 1</code></td>
+<td>keep the first row loaded</td>
+<td>Commercial Finance</td>
+</tr>
+<tr class="even">
+<td><code>fmcg_sell_out</code></td>
+<td><code>units_sold</code> and <code>revenue_ngn</code> blank in about 1.4% of rows</td>
+<td>null % in ai_context.md</td>
+<td>blank means stockout: units and revenue = 0, keep a flag</td>
+<td>board pack Notes sheet</td>
+</tr>
+<tr class="odd">
+<td><code>fmcg_sell_out</code>, <code>fmcg_products</code></td>
+<td>every number stored as text</td>
+<td>type <code>VARCHAR</code></td>
+<td>cast in silver; <code>TRY_CAST</code> where values may be dirty</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><code>erp_depots</code></td>
+<td>DP04 listed twice: “Abuja Central” renamed “Abuja Central (Wuse II)”</td>
+<td>13 rows, 12 codes</td>
+<td>keep both versions (slowly changing dimension, type 2); the rename took effect 2025-10-01</td>
+<td>Commercial</td>
+</tr>
+<tr class="odd">
+<td><code>regional_report</code></td>
+<td>merged region cells, <code>₦</code> text values, an “All depots” total row and a footnote</td>
+<td>example values</td>
+<td>fill down, parse numbers, drop total and footnote</td>
+<td>Commercial Finance</td>
+</tr>
+<tr class="even">
+<td><code>marketing_spend</code></td>
+<td>runs three months past the last sales week</td>
+<td>max <code>week_starting</code> differs</td>
+<td>compare only overlapping weeks</td>
+<td>Marketing</td>
+</tr>
+<tr class="odd">
+<td>all</td>
+<td>Financial year 2025 (FY2025) sales should match Finance’s regional report</td>
+<td>brief</td>
+<td>reconcile within 1% per depot (a test, Stage 7)</td>
+<td>Chief financial officer (CFO)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>💾 <strong>Commit:</strong> <code>"Issues log agreed with owners"</code>.</p>
+</section>
+<section id="stage-5-silver-clean-type-and-conform" class="level2" data-number="F.8">
+<h2 data-number="F.8" class="anchored" data-anchor-id="stage-5-silver-clean-type-and-conform"><span class="header-section-number">F.8</span> Stage 5 · Silver: clean, type and conform</h2>
+<p>🎯 <strong>Goal:</strong> one silver table per real-world thing, typed and cleaned by written, agreed rules.</p>
+<p>Write <strong>one <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> file per silver table</strong>, numbered in the order they must run (<code>01_depots.sql</code>, <code>02_products.sql</code>, …). Each file reads only bronze (or earlier silver) tables.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F5 — a silver table
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[[Session primer, then attach ai_context.md and docs/issues.md.]] Write <code>sql/silver/[[NN]]_[[name]].sql</code> that creates <code>silver.[[name]]</code> from <code>bronze.[[table]]</code>. Rules: cast every column to its proper type (use <code>TRY_CAST</code> where values may be dirty and say what becomes null); trim text and standardise codes; apply these agreed rules from the issues log: [[list them]]; keep exactly one row per [[business key]], preferring the first row loaded (<code>QUALIFY row_number() OVER (PARTITION BY ... ORDER BY _row) = 1</code>); keep an evidence flag wherever a rule changes a value; [[if history matters: build a type 2 history with valid_from, valid_to, is_current]]; [[if some rows can’t be fixed: put them in silver.[[name]]_rejects with a reason column, instead of dropping them]]. Comment each rule with who agreed it. Afterwards, give me two <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> queries that prove the rules worked.</p>
+</blockquote>
+</div>
+</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> run_pipeline.R <span class="at">--to</span><span class="op">=</span>silver</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>✔ <strong>Check.</strong></p>
+<ul>
+<li>Each file runs (<code>ok</code>) and the run lists the silver table it created with a row count.</li>
+<li><strong>Row counts make sense</strong>: silver = bronze − duplicates − quarantined rows. Write the arithmetic down.</li>
+<li>The two proof queries from the prompt return what you expect (for example, zero duplicate keys).</li>
+<li>An error stops the run and names the file and line. Paste it back to the <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a>.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📗 Reference answer (practice organisation)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Five files. The sell-out table shows the typical pattern:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice/sql/silver/03_sell_out.sql</strong></pre>
+</div>
+<div class="sourceCode" id="cb8" data-filename="practice/sql/silver/03_sell_out.sql"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- silver.sell_out: typed weekly sell-out, one row per week x depot x SKU.</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- Rule (board pack Notes sheet): a blank units_sold means a stockout week -&gt; 0, and we keep the evidence flag.</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- Rule: re-sent rows for the same key collapse to the first one loaded (214 duplicate keys in the source).</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TABLE</span> silver.sell_out <span class="kw">AS</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">CAST</span>(week_starting <span class="kw">AS</span> <span class="dt">DATE</span>)                  <span class="kw">AS</span> week_starting,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">trim</span>(depot_code)                             <span class="kw">AS</span> depot_code,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>       <span class="fu">trim</span>(sku)                                    <span class="kw">AS</span> sku,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COALESCE</span>(TRY_CAST(units_sold  <span class="kw">AS</span> <span class="dt">DOUBLE</span>), <span class="dv">0</span>) <span class="kw">AS</span> units_sold,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>       TRY_CAST(unit_price_ngn <span class="kw">AS</span> <span class="dt">DOUBLE</span>)           <span class="kw">AS</span> unit_price_ngn,</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>       <span class="fu">CAST</span>(on_promotion  <span class="kw">AS</span> <span class="dt">INTEGER</span>)               <span class="kw">AS</span> on_promotion,</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>       <span class="fu">CAST</span>(discount_pct  <span class="kw">AS</span> <span class="dt">DOUBLE</span>)                <span class="kw">AS</span> discount_pct,</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>       <span class="fu">CAST</span>(stockout_flag <span class="kw">AS</span> <span class="dt">INTEGER</span>)               <span class="kw">AS</span> stockout_flag,</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COALESCE</span>(TRY_CAST(revenue_ngn <span class="kw">AS</span> <span class="dt">DOUBLE</span>), <span class="dv">0</span>) <span class="kw">AS</span> revenue_ngn,</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>       units_sold <span class="kw">IS</span> <span class="kw">NULL</span>                           <span class="kw">AS</span> units_was_blank</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> bronze.fmcg_sell_out</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>QUALIFY <span class="fu">row_number</span>() <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> week_starting, depot_code, sku <span class="kw">ORDER</span> <span class="kw">BY</span> _row) <span class="op">=</span> <span class="dv">1</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice/sql/silver/04_regional_report.sql</strong></pre>
+</div>
+<div class="sourceCode" id="cb9" data-filename="practice/sql/silver/04_regional_report.sql"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- silver.regional_report: Finance's printed FY2025 Excel report made tidy, for reconciliation.</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- Fill the merged region cells down, drop the "All depots" total and the footnote, unpivot the</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- twelve month columns, and turn "₦149,023,348" into a number.</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TABLE</span> silver.regional_report <span class="kw">AS</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> filled <span class="kw">AS</span> (</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">SELECT</span> <span class="fu">last_value</span>(region IGNORE <span class="kw">NULLS</span>) <span class="kw">OVER</span> (<span class="kw">ORDER</span> <span class="kw">BY</span> _row) <span class="kw">AS</span> region, depot,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>         Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, <span class="dt">Dec</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> bronze.regional_report</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">WHERE</span> depot <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> depot <span class="op">&lt;&gt;</span> <span class="st">'All depots'</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>), <span class="dt">long</span> <span class="kw">AS</span> (</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  UNPIVOT filled <span class="kw">ON</span> Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, <span class="dt">Dec</span> <span class="kw">INTO</span> NAME mon <span class="fu">VALUE</span> revenue_txt</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> region, depot <span class="kw">AS</span> depot_name,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>       strptime(<span class="st">'2025 '</span> <span class="op">||</span> mon <span class="op">||</span> <span class="st">' 01'</span>, <span class="st">'%Y %b %d'</span>):<span class="ch">:DATE</span>            <span class="kw">AS</span> <span class="dt">month</span>,</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>       <span class="fu">CAST</span>(<span class="fu">regexp_replace</span>(revenue_txt, <span class="st">'[^0-9.]'</span>, <span class="st">''</span>, <span class="st">'g'</span>) <span class="kw">AS</span> <span class="dt">DOUBLE</span>) <span class="kw">AS</span> revenue_ngn</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="dt">long</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The other three (<code>01_depots.sql</code>, <code>02_products.sql</code>, <code>05_marketing_and_macro.sql</code>) are in <code>practice/sql/silver/</code> in the kit.</p>
+</div>
+</div>
+</div>
+<p>💾 <strong>Commit:</strong> <code>"Silver layer"</code>.</p>
+</section>
+<section id="stage-6-gold-model-for-decisions" class="level2" data-number="F.9">
+<h2 data-number="F.9" class="anchored" data-anchor-id="stage-6-gold-model-for-decisions"><span class="header-section-number">F.9</span> Stage 6 · Gold: model for decisions</h2>
+<p>🎯 <strong>Goal:</strong> facts and dimensions at a declared grain, small marts for spreadsheet users, and <strong>one wide view</strong> for the dashboard.</p>
+<p>First decide the shape; then write it.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F6a — design the gold layer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[[Session primer, then attach ai_context.md and brief.md.]] Propose a gold layer for the decisions in my brief. For each fact table, write its <strong>grain</strong> in one sentence (“one row per … per …”). List the dimensions and which facts use them (a bus matrix). Propose marts for people who will use Excel or Power BI. Finally, define one wide view, <code>gold.v_dashboard</code>, that the dashboard will read: exactly <strong>one date column</strong>, the breakdown columns from my brief (as text), and the measure columns needed for my key numbers. Warn me about any join that could multiply rows (fan-out). Don’t write <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> yet.</p>
+</blockquote>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F6b — write the gold <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Good. Now write the files <code>sql/gold/01_dimensions.sql</code>, <code>02_[[fact]].sql</code>, <code>03_v_dashboard.sql</code> and <code>04_marts.sql</code> for that design, reading only silver tables. Use <code>CREATE OR REPLACE TABLE</code> for facts, dimensions and marts and <code>CREATE OR REPLACE VIEW</code> for <code>gold.v_dashboard</code>. Put the grain sentence as a comment at the top of each fact. Then give me a query that proves <code>gold.v_dashboard</code> has exactly as many rows as the fact table.</p>
+</blockquote>
+</div>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> run_pipeline.R <span class="at">--to</span><span class="op">=</span>gold</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>✔ <strong>Check.</strong> <code>gold.v_dashboard</code> has the same row count as its fact table (no fan-out). Its date column really is a date. Its breakdown columns hold the values people use in meetings (names, not codes).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📗 Reference answer (practice organisation)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice/sql/gold/02_fct_sales.sql</strong></pre>
+</div>
+<div class="sourceCode" id="cb11" data-filename="practice/sql/gold/02_fct_sales.sql"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Grain: one row per week x depot x SKU (a periodic snapshot fact).</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TABLE</span> gold.fct_sales <span class="kw">AS</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> s.week_starting, s.depot_code, s.sku,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>       s.units_sold, s.revenue_ngn,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>       s.revenue_ngn <span class="op">-</span> s.units_sold <span class="op">*</span> p.unit_cost_ngn <span class="kw">AS</span> gross_profit_ngn,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>       s.on_promotion, s.discount_pct, s.stockout_flag, s.units_was_blank</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> silver.sell_out s</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> silver.products p <span class="kw">USING</span> (sku);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice/sql/gold/03_v_dashboard.sql</strong></pre>
+</div>
+<div class="sourceCode" id="cb12" data-filename="practice/sql/gold/03_v_dashboard.sql"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- The one wide view the dashboard and the semantic layer read: the star, pre-joined.</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">VIEW</span> gold.v_dashboard <span class="kw">AS</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> f.week_starting, d.region, d.depot_name, p.<span class="kw">category</span>, p.product_name,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>       f.units_sold, f.revenue_ngn, f.gross_profit_ngn, f.on_promotion, f.discount_pct, f.stockout_flag</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> gold.fct_sales f</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> gold.dim_depot   d <span class="kw">USING</span> (depot_code)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> gold.dim_product p <span class="kw">USING</span> (sku);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The dimensions and marts are in <code>practice/sql/gold/</code> in the kit.</p>
+</div>
+</div>
+</div>
+<p>💾 <strong>Commit:</strong> <code>"Gold layer"</code>.</p>
+</section>
+<section id="stage-7-the-publish-gate" class="level2" data-number="F.10">
+<h2 data-number="F.10" class="anchored" data-anchor-id="stage-7-the-publish-gate"><span class="header-section-number">F.10</span> Stage 7 · The publish gate</h2>
+<p>🎯 <strong>Goal:</strong> automated tests that stop wrong numbers from ever reaching the dashboard.</p>
+<p>Each test in <code>tests/tests.yml</code> counts the rows that break a rule. Zero means <strong>PASS</strong>. With <code>severity: error</code> (the default), any failure keeps the previous good warehouse live; <code>severity: warn</code> reports but still publishes. The eight types are the ones in <a href="09-tests.html" class="quarto-xref"><span>Chapter 9</span></a>: <code>unique</code>, <code>not_null</code>, <code>accepted</code>, <code>range</code>, <code>relationship</code>, <code>fresh</code>, <code>rowcount</code> and <code>custom</code> (any <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> that returns a count).</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F7 — write the gate
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[[Session primer, then attach ai_context.md and brief.md.]] Write <code>tests/tests.yml</code> for my gold layer, using the kit’s test types (unique, not_null, accepted, range, relationship, fresh, rowcount, custom). I need: uniqueness at every fact’s grain and of every dimension key; not-null key measures; plausible ranges ([[e.g.&nbsp;discount 0–50%, quantities ≥ 0]]); accepted codes for [[columns]]; every fact key present in its dimension; a minimum row count; freshness of [[N]] days as a <strong>warning</strong>; and a <code>custom</code> reconciliation: [[measure]] for [[period]] must match [[authoritative report]] within [[1%]] per [[unit]]. For each test, add a comment saying which failure it catches.</p>
+</blockquote>
+</div>
+</div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> run_pipeline.R <span class="at">--to</span><span class="op">=</span>test</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>✔ <strong>Check.</strong></p>
+<ul>
+<li>Every test runs and says <code>PASS</code> (or <code>WARN</code> for freshness on old data).</li>
+<li><strong>Prove the gate works.</strong> Copy a raw file, break one value on purpose (a negative quantity, a duplicated line), run the full pipeline, and watch it refuse to publish: <code>FAIL</code>, an <code>ALERT</code> line, and <code>warehouse.failed.duckdb</code> kept for inspection. Restore the file and run again.</li>
+<li>If the reconciliation fails on real data, don’t loosen it. Find out why. It is the most valuable test you have.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📗 Reference answer (practice organisation)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice/tests/tests.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb14" data-filename="practice/tests/tests.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Practice organisation: the publish gate (reference answer for Stage 7)</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="fu">type</span><span class="kw">:</span><span class="at"> unique</span><span class="kw">,</span><span class="at">       </span><span class="fu">table</span><span class="kw">:</span><span class="at"> gold.fct_sales</span><span class="kw">,</span><span class="at">   </span><span class="fu">columns</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">week_starting</span><span class="kw">,</span><span class="at"> depot_code</span><span class="kw">,</span><span class="at"> sku</span><span class="kw">]}</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="fu">type</span><span class="kw">:</span><span class="at"> unique</span><span class="kw">,</span><span class="at">       </span><span class="fu">table</span><span class="kw">:</span><span class="at"> gold.dim_depot</span><span class="kw">,</span><span class="at">   </span><span class="fu">columns</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">depot_code</span><span class="kw">]}</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="fu">type</span><span class="kw">:</span><span class="at"> unique</span><span class="kw">,</span><span class="at">       </span><span class="fu">table</span><span class="kw">:</span><span class="at"> gold.dim_product</span><span class="kw">,</span><span class="at"> </span><span class="fu">columns</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">sku</span><span class="kw">]}</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="fu">type</span><span class="kw">:</span><span class="at"> not_null</span><span class="kw">,</span><span class="at">     </span><span class="fu">table</span><span class="kw">:</span><span class="at"> gold.fct_sales</span><span class="kw">,</span><span class="at">   </span><span class="fu">column</span><span class="kw">:</span><span class="at"> revenue_ngn</span><span class="kw">}</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="fu">type</span><span class="kw">:</span><span class="at"> range</span><span class="kw">,</span><span class="at">        </span><span class="fu">table</span><span class="kw">:</span><span class="at"> gold.fct_sales</span><span class="kw">,</span><span class="at">   </span><span class="fu">column</span><span class="kw">:</span><span class="at"> units_sold</span><span class="kw">,</span><span class="at">   </span><span class="fu">min</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span><span class="kw">}</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="fu">type</span><span class="kw">:</span><span class="at"> range</span><span class="kw">,</span><span class="at">        </span><span class="fu">table</span><span class="kw">:</span><span class="at"> gold.fct_sales</span><span class="kw">,</span><span class="at">   </span><span class="fu">column</span><span class="kw">:</span><span class="at"> discount_pct</span><span class="kw">,</span><span class="at"> </span><span class="fu">min</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span><span class="kw">,</span><span class="at"> </span><span class="fu">max</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.5</span><span class="kw">}</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="fu">type</span><span class="kw">:</span><span class="at"> accepted</span><span class="kw">,</span><span class="at">     </span><span class="fu">table</span><span class="kw">:</span><span class="at"> gold.fct_sales</span><span class="kw">,</span><span class="at">   </span><span class="fu">column</span><span class="kw">:</span><span class="at"> on_promotion</span><span class="kw">,</span><span class="at"> </span><span class="fu">values</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"0"</span><span class="kw">,</span><span class="at"> </span><span class="st">"1"</span><span class="kw">]}</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="fu">type</span><span class="kw">:</span><span class="at"> relationship</span><span class="kw">,</span><span class="at"> </span><span class="fu">table</span><span class="kw">:</span><span class="at"> gold.fct_sales</span><span class="kw">,</span><span class="at">   </span><span class="fu">column</span><span class="kw">:</span><span class="at"> depot_code</span><span class="kw">,</span><span class="at"> </span><span class="fu">ref_table</span><span class="kw">:</span><span class="at"> gold.dim_depot</span><span class="kw">}</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="fu">type</span><span class="kw">:</span><span class="at"> relationship</span><span class="kw">,</span><span class="at"> </span><span class="fu">table</span><span class="kw">:</span><span class="at"> gold.fct_sales</span><span class="kw">,</span><span class="at">   </span><span class="fu">column</span><span class="kw">:</span><span class="at"> sku</span><span class="kw">,</span><span class="at">        </span><span class="fu">ref_table</span><span class="kw">:</span><span class="at"> gold.dim_product</span><span class="kw">}</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="fu">type</span><span class="kw">:</span><span class="at"> rowcount</span><span class="kw">,</span><span class="at">     </span><span class="fu">table</span><span class="kw">:</span><span class="at"> gold.fct_sales</span><span class="kw">,</span><span class="at">   </span><span class="fu">min</span><span class="kw">:</span><span class="at"> </span><span class="dv">50000</span><span class="kw">}</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co"># The practice data ends in March 2026, so freshness is measured against a fixed date.</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co"># With your own data, delete the as_of line so it is measured against today.</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="fu">type</span><span class="kw">:</span><span class="at"> fresh</span><span class="kw">,</span><span class="at"> </span><span class="fu">table</span><span class="kw">:</span><span class="at"> gold.fct_sales</span><span class="kw">,</span><span class="at"> </span><span class="fu">column</span><span class="kw">:</span><span class="at"> week_starting</span><span class="kw">,</span><span class="at"> </span><span class="fu">max_days</span><span class="kw">:</span><span class="at"> </span><span class="dv">21</span><span class="kw">,</span><span class="at"> </span><span class="fu">as_of</span><span class="kw">:</span><span class="at"> </span><span class="st">"2026-04-14"</span><span class="kw">,</span><span class="at"> </span><span class="fu">severity</span><span class="kw">:</span><span class="at"> warn</span><span class="kw">}</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">type</span><span class="kw">:</span><span class="at"> custom</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"reconcile: FY2025 revenue by depot vs Finance's regional report (within 1%)"</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="fu">  sql</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    WITH xl AS (SELECT h.depot_code, SUM(r.revenue_ngn) AS xl</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>                FROM silver.regional_report r</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>                JOIN (SELECT DISTINCT depot_code, depot_name FROM silver.depot_history) h USING (depot_name)</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>                GROUP BY 1),</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>         wh AS (SELECT depot_code, SUM(revenue_ngn) AS wh FROM gold.fct_sales</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>                WHERE year(week_starting) = 2025 GROUP BY 1)</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    SELECT COUNT(*) FROM xl JOIN wh USING (depot_code) WHERE abs(xl / wh - 1) &gt; 0.01</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>💾 <strong>Commit:</strong> <code>"Publish gate"</code>.</p>
+</section>
+<section id="stage-8-the-semantic-layer" class="level2" data-number="F.11">
+<h2 data-number="F.11" class="anchored" data-anchor-id="stage-8-the-semantic-layer"><span class="header-section-number">F.11</span> Stage 8 · The semantic layer</h2>
+<p>🎯 <strong>Goal:</strong> every number on the dashboard defined once, with an owner, in <code>semantic/metrics.yml</code>.</p>
+<p>The dashboard has no formulas of its own. It reads the <code>model</code> section (which view, which date column, which breakdowns) and the <code>metrics</code> section (one <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> expression per number). Change a definition here and every page, every filter and every export changes with it.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F8 — define the metrics
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[[Session primer, then attach ai_context.md and brief.md.]] Write <code>semantic/metrics.yml</code> for the kit. In <code>model</code>, set <code>table: gold.v_dashboard</code>, its date column as <code>time</code>, a default <code>grain</code>, and the breakdown columns as <code>dimensions</code>. In <code>metrics</code>, define each key number in my brief as one <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> aggregate over <code>gold.v_dashboard</code>, with <code>label</code>, <code>sql</code>, <code>format</code> (currency, number or pct), <code>owner</code>, <code>status</code> (certified or exploratory) and a one-sentence <code>description</code>. Ratios must be <strong>sum first, divide last</strong>, with <code>NULLIF</code> to avoid dividing by zero. Mark up to four headline metrics with <code>kpi: true</code>. Then give me one <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> query per metric that recomputes it for [[one month]] directly from the silver tables, so I can check it by hand.</p>
+</blockquote>
+</div>
+</div>
+<p>✔ <strong>Check.</strong> For one month, each metric matches your hand calculation and, for the certified ones, the owner’s own figure. Only metrics the owner has approved are marked <code>certified</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📗 Reference answer (practice organisation)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice/semantic/metrics.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb15" data-filename="practice/semantic/metrics.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Practice organisation: the semantic layer (reference answer for Stage 8)</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span><span class="kw">:</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">table</span><span class="kw">:</span><span class="at"> gold.v_dashboard</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">time</span><span class="kw">:</span><span class="at"> week_starting</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">grain</span><span class="kw">:</span><span class="at"> month</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">dimensions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">region</span><span class="kw">,</span><span class="at"> depot_name</span><span class="kw">,</span><span class="at"> category</span><span class="kw">,</span><span class="at"> product_name</span><span class="kw">]</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="fu">metrics</span><span class="kw">:</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">revenue</span><span class="kw">:</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">label</span><span class="kw">:</span><span class="at"> Revenue</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sql</span><span class="kw">:</span><span class="at"> SUM(revenue_ngn)</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">format</span><span class="kw">:</span><span class="at"> currency</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">kpi</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">owner</span><span class="kw">:</span><span class="at"> CFO</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">status</span><span class="kw">:</span><span class="at"> certified</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> Sell-out revenue in naira after promotional discounts. Reconciles to Finance's regional report within 1%.</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">gross_margin_pct</span><span class="kw">:</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">label</span><span class="kw">:</span><span class="at"> Gross margin</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sql</span><span class="kw">:</span><span class="at"> 100 * SUM(gross_profit_ngn) / NULLIF(SUM(revenue_ngn), 0)</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">format</span><span class="kw">:</span><span class="at"> pct</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">kpi</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">owner</span><span class="kw">:</span><span class="at"> CFO</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">status</span><span class="kw">:</span><span class="at"> certified</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> Gross profit as a share of revenue. Sum first, divide last.</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">units</span><span class="kw">:</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">label</span><span class="kw">:</span><span class="at"> Units sold</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sql</span><span class="kw">:</span><span class="at"> SUM(units_sold)</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">format</span><span class="kw">:</span><span class="at"> number</span></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">kpi</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">owner</span><span class="kw">:</span><span class="at"> Commercial Director</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">status</span><span class="kw">:</span><span class="at"> certified</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> Units sold. A blank in the source means a stockout week and counts as 0.</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">stockout_rate_pct</span><span class="kw">:</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">label</span><span class="kw">:</span><span class="at"> Stockout rate</span></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sql</span><span class="kw">:</span><span class="at"> 100 * AVG(stockout_flag)</span></span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">format</span><span class="kw">:</span><span class="at"> pct</span></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">kpi</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">owner</span><span class="kw">:</span><span class="at"> Head of Supply Chain</span></span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">status</span><span class="kw">:</span><span class="at"> certified</span></span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> Share of depot-SKU-weeks flagged as out of stock.</span></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">promo_share_pct</span><span class="kw">:</span></span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">label</span><span class="kw">:</span><span class="at"> Promotion share of revenue</span></span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sql</span><span class="kw">:</span><span class="at"> 100 * SUM(CASE WHEN on_promotion = 1 THEN revenue_ngn END) / NULLIF(SUM(revenue_ngn), 0)</span></span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">format</span><span class="kw">:</span><span class="at"> pct</span></span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">owner</span><span class="kw">:</span><span class="at"> Head of Trade Marketing</span></span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">status</span><span class="kw">:</span><span class="at"> exploratory</span></span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> Revenue earned on promotion as a share of all revenue.</span></span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">avg_selling_price</span><span class="kw">:</span></span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">label</span><span class="kw">:</span><span class="at"> Average selling price</span></span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sql</span><span class="kw">:</span><span class="at"> SUM(revenue_ngn) / NULLIF(SUM(units_sold), 0)</span></span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">format</span><span class="kw">:</span><span class="at"> currency</span></span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">owner</span><span class="kw">:</span><span class="at"> Commercial Director</span></span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">status</span><span class="kw">:</span><span class="at"> exploratory</span></span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> Revenue per unit sold (weighted, not an average of prices).</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>💾 <strong>Commit:</strong> <code>"Semantic layer"</code>.</p>
+</section>
+<section id="stage-9-one-command-run-the-whole-pipeline" class="level2" data-number="F.12">
+<h2 data-number="F.12" class="anchored" data-anchor-id="stage-9-one-command-run-the-whole-pipeline"><span class="header-section-number">F.12</span> Stage 9 · One command: run the whole pipeline</h2>
+<p>🎯 <strong>Goal:</strong> raw data to a tested, published warehouse with one command, safe to run at any time.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> run_pipeline.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>What happens, in order:</p>
+<ol type="1">
+<li>A fresh copy of the warehouse is built from the raw data: bronze, silver, gold.</li>
+<li>The tests run. Results are stored in the warehouse and appended to <code>logs/test_history.csv</code>.</li>
+<li><strong>Gate open:</strong> the new warehouse replaces the live one in a single rename (the <em>atomic swap</em>), and every gold table is copied to <code>data/serve/mart.sqlite</code> for Excel and Power BI users.</li>
+<li><strong>Gate closed:</strong> nothing changes for users. The failed build is kept as <code>warehouse.failed.duckdb</code>, and an alert goes to <code>logs/alerts.log</code> (and to Teams or Slack, if you set <code>ALERT_WEBHOOK_URL</code>).</li>
+<li>A lock file stops two runs overlapping, and <code>logs/run_history.csv</code> records every run.</li>
+</ol>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F9 — diagnose a failed run
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[[Session primer.]] My pipeline run failed. Here is the console output: [[paste]], the last lines of <code>logs/run_history.csv</code>: [[paste]], and the failing test’s definition from <code>tests/tests.yml</code>: [[paste]]. Tell me whether this is a <strong>data problem</strong> (the source changed or delivered something wrong), a <strong>rule problem</strong> (my <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> or test is wrong) or an <strong>environment problem</strong> (files, permissions, connections). Give me the <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> to run against <code>data/db/warehouse.failed.duckdb</code> to confirm, and the message I should send to the data owner if it is their data.</p>
+</blockquote>
+</div>
+</div>
+<p>✔ <strong>Check.</strong> The run ends with <code>PUBLISHED</code>. <code>data/db/warehouse.duckdb</code> and <code>data/serve/mart.sqlite</code> exist. Running it twice in a row gives the same numbers. Open <code>mart.sqlite</code> from Excel (Data → Get Data → From <a class="abbr-ref" href="e-abbreviations.html#abbr-odbc"><abbr title="Open Database Connectivity">ODBC</abbr></a>, with the SQLite <a class="abbr-ref" href="e-abbreviations.html#abbr-odbc"><abbr title="Open Database Connectivity">ODBC</abbr></a> driver) or Power BI to confirm the marts are usable.</p>
+<p>💾 <strong>Commit:</strong> <code>"First full run"</code>.</p>
+</section>
+<section id="stage-10-the-live-dashboard" class="level2" data-number="F.13">
+<h2 data-number="F.13" class="anchored" data-anchor-id="stage-10-the-live-dashboard"><span class="header-section-number">F.13</span> Stage 10 · The live dashboard</h2>
+<p>🎯 <strong>Goal:</strong> the interactive dashboard running on your own gold layer.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> serve dashboard.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Your browser opens the dashboard. Nothing in it was written for your organisation: it builds its controls, filters, key performance indicator (KPI) cards and pages from <code>semantic/metrics.yml</code> and the warehouse.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Page</th>
+<th>What it shows</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Overview</strong></td>
+<td>Up to four <a class="abbr-ref" href="e-abbreviations.html#abbr-kpi"><abbr title="key performance indicator">KPI</abbr></a> cards with the change against the previous period; a trend at the chosen grain (optionally split by the breakdown); a ranked breakdown</td>
+</tr>
+<tr class="even">
+<td><strong>Explore</strong></td>
+<td>Every metric by the chosen breakdown, sortable, with <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> download</td>
+</tr>
+<tr class="odd">
+<td><strong>Data quality</strong></td>
+<td>The last run, the data on screen and when it was published, the latest test results, and what was loaded from where</td>
+</tr>
+<tr class="even">
+<td><strong>Definitions</strong></td>
+<td>The metric definitions, owners and status, straight from <code>metrics.yml</code></td>
+</tr>
+</tbody>
+</table>
+<p>The sidebar holds the metric, the period, the time grain, the breakdown and a filter for every dimension. While the page is open it watches the warehouse file, and updates itself within <code>refresh_seconds</code> of a new publish.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/diy/diy-quality.png" class="img-fluid figure-img"></p>
+<figcaption>Data quality: the gate’s results and the lineage, on the dashboard itself</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/diy/diy-definitions.png" class="img-fluid figure-img"></p>
+<figcaption>Definitions: one definition per number, with its owner</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Then make it yours:</p>
+<ul>
+<li><strong>Brand:</strong> change the colours and font in <code>theme.scss</code>, and the title in <code>dashboard.qmd</code>.</li>
+<li><strong>A page of your own:</strong> the generic pages cover most needs. For something specific, such as a marketing page from a mart, use this prompt.</li>
+</ul>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F10 — add a page
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[[Session primer, then attach ai_context.md and paste dashboard.qmd.]] Add a page called “[[name]]” to <code>dashboard.qmd</code>, after the Explore page, showing [[what, e.g.&nbsp;weekly spend and cost per conversion by channel from gold.mart_marketing_week]]. Follow the file’s conventions: query only through the existing <code>q()</code> helper (short-lived, read-only connections); call <code>stamp()</code> inside every render function so the page refreshes when the warehouse is republished; use the <code>BRAND</code> colours; take any metric definitions from <code>M()</code> rather than writing new formulas. Give me only the new page’s markdown and code, and say exactly where to paste it.</p>
+</blockquote>
+</div>
+</div>
+<p>✔ <strong>Check.</strong> All pages load without error boxes. Filters change every chart and the <a class="abbr-ref" href="e-abbreviations.html#abbr-kpi"><abbr title="key performance indicator">KPI</abbr></a> cards. The <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> download matches the table. The Data quality page shows the run you just made.</p>
+<p>💾 <strong>Commit:</strong> <code>"Dashboard customised"</code>.</p>
+</section>
+<section id="stage-11-publish-it-for-colleagues" class="level2" data-number="F.14">
+<h2 data-number="F.14" class="anchored" data-anchor-id="stage-11-publish-it-for-colleagues"><span class="header-section-number">F.14</span> Stage 11 · Publish it for colleagues</h2>
+<p>🎯 <strong>Goal:</strong> the people in your brief can open the dashboard in a browser, and nobody else can.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Option</th>
+<th>When to choose it</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Posit Connect</strong> (your organisation’s server)</td>
+<td>Data must stay inside the organisation; sign-in with company accounts; scheduled refresh on the server</td>
+<td><code>Rscript deploy.R connect</code>, then schedule <code>run_pipeline.R</code> on the server (Stage 12)</td>
+</tr>
+<tr class="even">
+<td><strong>Posit Connect Cloud</strong></td>
+<td>A quick, managed start; small teams</td>
+<td><code>Rscript deploy.R connect</code>, or <code>Rscript deploy.R manifest</code> and deploy from GitHub (only for data you may store in GitHub)</td>
+</tr>
+<tr class="odd">
+<td><strong>shinyapps.io</strong></td>
+<td>Demos and teaching</td>
+<td><code>Rscript deploy.R shinyapps</code></td>
+</tr>
+<tr class="even">
+<td><strong>A static version</strong></td>
+<td>No server allowed; an emailed or SharePoint pack</td>
+<td>Export small cubes and render a static Quarto dashboard (<a href="13-dashboards.html" class="quarto-xref"><span>Chapter 13</span></a>)</td>
+</tr>
+<tr class="odd">
+<td><strong>The SQLite mart</strong></td>
+<td>Users live in Excel or Power BI</td>
+<td>Share <code>data/serve/mart.sqlite</code> through the <a class="abbr-ref" href="e-abbreviations.html#abbr-odbc"><abbr title="Open Database Connectivity">ODBC</abbr></a> driver, or schedule a copy to a shared drive (<a href="12-serving.html" class="quarto-xref"><span>Chapter 12</span></a>)</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F11 — choose and set up hosting
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[[Session primer.]] Help me publish the dashboard. Constraints: [[who must see it; whether data may leave our network; what <a class="abbr-ref" href="e-abbreviations.html#abbr-it"><abbr title="information technology">IT</abbr></a> already runs (Posit Connect? Azure? a Linux server?); budget; sign-in requirements]]. Recommend one option from: Posit Connect, Posit Connect Cloud, shinyapps.io, a static dashboard, or the SQLite mart for Excel and Power BI users. Explain why, then give me numbered steps: one-time account setup, the <code>deploy.R</code> command, how to restrict access to named people, and how the data will be refreshed after publishing.</p>
+</blockquote>
+</div>
+</div>
+<p>✔ <strong>Check.</strong> A colleague named in the brief can open the address and sees the same numbers as you. Someone not on the list cannot. The “Warehouse built” time at the bottom of the sidebar changes after the next scheduled run.</p>
+<p>💾 <strong>Commit:</strong> <code>"Deployment settings"</code> (never commit account tokens; <code>rsconnect/</code> is already in <code>.gitignore</code>).</p>
+</section>
+<section id="stage-12-schedule-monitor-and-alert" class="level2" data-number="F.15">
+<h2 data-number="F.15" class="anchored" data-anchor-id="stage-12-schedule-monitor-and-alert"><span class="header-section-number">F.15</span> Stage 12 · Schedule, monitor and alert</h2>
+<p>🎯 <strong>Goal:</strong> the pipeline runs itself, and people hear about failures before anyone sees a wrong number.</p>
+<p><code>schedule/README.md</code> gives ready-made entries for cron (macOS and Linux), Windows Task Scheduler, GitHub Actions and Posit Connect. For alerts, create an incoming webhook in a Microsoft Teams or Slack channel and put its address in <code>.Renviron</code> as <code>ALERT_WEBHOOK_URL</code>.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F12 — schedule it on my machine
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[[Session primer.]] I want <code>run_pipeline.R</code> to run every [[weekday at 06:15 Lagos time]] on [[a Windows server / a Mac / a Linux virtual machine / Posit Connect]]. My project folder is [[path]] and R is installed at [[path, if known]]. Give me the exact steps and the scheduler entry, how to make sure it runs when nobody is logged in, where its output will be logged, and how to test it today without waiting until tomorrow.</p>
+</blockquote>
+</div>
+</div>
+<p>✔ <strong>Check.</strong> The next morning, <code>logs/run_history.csv</code> has a new line with <code>published</code> = <code>TRUE</code>. Break a raw file on purpose once: the alert reaches the channel, and the dashboard keeps showing the last good data, stamped with its publish time.</p>
+<p>💾 <strong>Commit:</strong> <code>"Scheduled"</code>.</p>
+</section>
+<section id="stage-13-secure-and-govern" class="level2" data-number="F.16">
+<h2 data-number="F.16" class="anchored" data-anchor-id="stage-13-secure-and-govern"><span class="header-section-number">F.16</span> Stage 13 · Secure and govern</h2>
+<p>🎯 <strong>Goal:</strong> the platform meets your data-protection duties, and the numbers have owners.</p>
+<p>Work through this list with your data protection officer (DPO) and the metric owners. The detail is in <a href="15-security.html" class="quarto-xref"><span>Chapter 15</span></a>.</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Classify</strong> each source as public, internal, confidential or restricted/personal, and record it next to the source in <code>sources.yml</code> as a comment.</label></li>
+<li><label><input type="checkbox"><strong>Minimise</strong>: silver drops every column the brief doesn’t need. Personal identifiers are <strong>pseudonymised</strong> in silver (a consistent token, such as a hash with a secret salt kept in <code>.Renviron</code>), so gold has no names, phone numbers, Bank Verification Numbers (BVNs) or National Identification Numbers (NINs).</label></li>
+<li><label><input type="checkbox"><strong><a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> context</strong>: if raw data is personal, <code>ai_context_samples: false</code> in <code>config.yml</code>, so no example values leave your machine. Only use <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> tools your organisation has approved.</label></li>
+<li><label><input type="checkbox"><strong>Secrets</strong> are only in <code>.Renviron</code> (or the server’s secret store). <code>git log -p | grep -i password</code> finds nothing.</label></li>
+<li><label><input type="checkbox"><strong>Access</strong>: the dashboard is restricted to named people or groups; the raw folder and the warehouse file sit on storage only the platform’s service account can read.</label></li>
+<li><label><input type="checkbox"><strong>Retention</strong>: decide how long raw files are kept, and delete older ones on a schedule.</label></li>
+<li><label><input type="checkbox"><strong>Accountability</strong>: a data protection impact assessment (DPIA) exists if the data is personal and the use is high-risk (profiling, scoring individuals). Each certified metric has an owner who has signed it off.</label></li>
+</ul>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt F13 — review my project for data-protection risk
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[[Session primer, then attach ai_context.md, config.yml and sources.yml, with no secrets.]] Review this project against the Nigeria Data Protection Act 2023 principles (lawful basis and purpose, minimisation, accuracy, storage limitation, integrity and confidentiality, accountability). List every table or column that is likely personal or sensitive; say whether it should be dropped, pseudonymised or masked, and in which layer; and list what I must confirm with our <a class="abbr-ref" href="e-abbreviations.html#abbr-dpo"><abbr title="data protection officer">DPO</abbr></a>. Don’t give legal conclusions; give me the questions to ask.</p>
+</blockquote>
+</div>
+</div>
+<p>✔ <strong>Check.</strong> Every box above is ticked or has a named person and a date next to it.</p>
+</section>
+<section id="stage-14-extensions-optional" class="level2" data-number="F.17">
+<h2 data-number="F.17" class="anchored" data-anchor-id="stage-14-extensions-optional"><span class="header-section-number">F.17</span> Stage 14 · Extensions (optional)</h2>
+<p>Once the core is running, each of these is one more stage of the same loop:</p>
+<ul>
+<li><strong>Ask your data.</strong> Add a page where people type a question, an <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> writes <a class="abbr-ref" href="e-abbreviations.html#abbr-sql"><abbr title="Structured Query Language">SQL</abbr></a> against <code>gold.v_dashboard</code> and the metric definitions, a person reviews it, and it runs read-only with a row cap. The guardrails are in <a href="11-vector-ai.html" class="quarto-xref"><span>Chapter 11</span></a>; ask the <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a> to build it using the kit’s <code>q()</code> and <code>M()</code>.</li>
+<li><strong>Search text by meaning.</strong> Complaints, reviews or exit-interview comments become a vector index next to the gold layer (<a href="11-vector-ai.html" class="quarto-xref"><span>Chapter 11</span></a>).</li>
+<li><strong>Write-back.</strong> Targets or corrections entered in a Power Apps form (Dataverse) or a PostgreSQL app become a new source in <code>sources.yml</code>. Data still flows one way (<a href="12-serving.html" class="quarto-xref"><span>Chapter 12</span></a>).</li>
+<li><strong>More official data.</strong> World Bank, <a class="abbr-ref" href="e-abbreviations.html#abbr-imf"><abbr title="International Monetary Fund">IMF</abbr></a>, <a class="abbr-ref" href="e-abbreviations.html#abbr-un"><abbr title="United Nations">UN</abbr></a> Comtrade, <a class="abbr-ref" href="e-abbreviations.html#abbr-unctad"><abbr title="United Nations Conference on Trade and Development (now UN Trade and Development)">UNCTAD</abbr></a> and Nigerian sources, as <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">APIs</abbr></a> in <code>sources.yml</code> (<a href="d-open-data.html" class="quarto-xref"><span>Appendix D</span></a>).</li>
+<li><strong>A second subject area.</strong> Add facts that share your dimensions (a bus matrix), and a second view and <code>metrics.yml</code> model for another dashboard.</li>
+</ul>
+</section>
+<section id="definition-of-done" class="level2" data-number="F.18">
+<h2 data-number="F.18" class="anchored" data-anchor-id="definition-of-done"><span class="header-section-number">F.18</span> Definition of done</h2>
+<ul class="task-list">
+<li><label><input type="checkbox"><code>Rscript run_pipeline.R</code> runs unattended on a schedule, and ends in <code>PUBLISHED</code>.</label></li>
+<li><label><input type="checkbox">Every certified metric reconciles to its authoritative source, and that reconciliation is a test in the gate.</label></li>
+<li><label><input type="checkbox">A broken delivery is caught by the gate, alerts a named person, and never reaches the dashboard.</label></li>
+<li><label><input type="checkbox">The people in the brief use the dashboard, and the numbers they quote in meetings come from it.</label></li>
+<li><label><input type="checkbox">Definitions, owners and data protection decisions are written down, in <code>metrics.yml</code>, <code>docs/issues.md</code> and the <a class="abbr-ref" href="e-abbreviations.html#abbr-dpia"><abbr title="data protection impact assessment">DPIA</abbr></a>.</label></li>
+<li><label><input type="checkbox">Everything except data and secrets is in Git, and a colleague could rebuild the platform from it on a new machine with <code>00_setup.R</code>, the raw files, <code>.Renviron</code> and one run.</label></li>
+</ul>
+</section>
+<section id="troubleshooting-by-stage" class="level2" data-number="F.19">
+<h2 data-number="F.19" class="anchored" data-anchor-id="troubleshooting-by-stage"><span class="header-section-number">F.19</span> Troubleshooting by stage</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symptom</th>
+<th>Likely cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>there is no package called …</code></td>
+<td>Setup incomplete</td>
+<td>Re-run <code>Rscript 00_setup.R</code>; read the first error</td>
+</tr>
+<tr class="even">
+<td>A file is missing from bronze</td>
+<td>Unsupported extension, or a hidden or temporary file (a name starting with <code>~$</code> or <code>.</code>)</td>
+<td>Save as <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> or Excel workbook (XLSX); close the file in Excel; rename it</td>
+</tr>
+<tr class="odd">
+<td>Columns called <code>...2</code>, <code>...3</code></td>
+<td>Title rows above the header</td>
+<td><code>skip:</code> in <code>sources.yml</code> (Stage 2)</td>
+</tr>
+<tr class="even">
+<td><code>â‚¦</code> instead of <code>₦</code></td>
+<td>File saved in a legacy encoding</td>
+<td><code>encoding: latin1</code> in <code>sources.yml</code>, or save as “<a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> UTF-8”</td>
+</tr>
+<tr class="odd">
+<td><code>ERROR</code> for a database source</td>
+<td>Driver, network or credentials</td>
+<td>Check <code>.Renviron</code> names match <code>sources.yml</code>; test the connection in R; ask <a class="abbr-ref" href="e-abbreviations.html#abbr-it"><abbr title="information technology">IT</abbr></a> about firewalls</td>
+</tr>
+<tr class="even">
+<td><a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> source says <code>ok (cached copy)</code></td>
+<td>The <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> was unreachable; last good copy used</td>
+<td>Fine for a day; check the <a class="abbr-ref" href="e-abbreviations.html#abbr-url"><abbr title="uniform resource locator (a web address)">URL</abbr></a>, key or quota if it persists</td>
+</tr>
+<tr class="odd">
+<td><code>Conversion Error</code> in silver</td>
+<td>A value that won’t cast</td>
+<td>Use <code>TRY_CAST</code> and quarantine; find the value with the <a class="abbr-ref" href="e-abbreviations.html#abbr-ai"><abbr title="artificial intelligence">AI</abbr></a>’s proof query</td>
+</tr>
+<tr class="even">
+<td>Gold has more rows than expected</td>
+<td>Fan-out: joining on a key that isn’t unique</td>
+<td>Check dimension uniqueness tests; aggregate before joining</td>
+</tr>
+<tr class="odd">
+<td>Reconciliation test fails</td>
+<td>Real difference, period mismatch, or a rule not applied</td>
+<td>Compare month by month; don’t loosen the tolerance without the owner</td>
+</tr>
+<tr class="even">
+<td><code>Another run is in progress</code></td>
+<td>A previous run was interrupted</td>
+<td>Make sure no run is active, then delete <code>data/db/.lock</code></td>
+</tr>
+<tr class="odd">
+<td>Dashboard says “No dashboard data yet”</td>
+<td>No published warehouse, or <code>metrics.yml</code> points at a missing view</td>
+<td>Run the full pipeline; check <code>model.table</code></td>
+</tr>
+<tr class="even">
+<td>Dashboard numbers didn’t change after a run</td>
+<td>The gate closed, so the old data is still live</td>
+<td>Check the Data quality page and <code>logs/alerts.log</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-whole-prompt-chain-on-one-page" class="level2" data-number="F.20">
+<h2 data-number="F.20" class="anchored" data-anchor-id="the-whole-prompt-chain-on-one-page"><span class="header-section-number">F.20</span> The whole prompt chain on one page</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Prompt</th>
+<th>Stage</th>
+<th>You get</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>F0</td>
+<td>Every session</td>
+<td>An assistant that knows the kit, the rules and your data’s shape</td>
+</tr>
+<tr class="even">
+<td>F0.1</td>
+<td>0</td>
+<td>A working installation</td>
+</tr>
+<tr class="odd">
+<td>F1</td>
+<td>1</td>
+<td><code>brief.md</code></td>
+</tr>
+<tr class="even">
+<td>F2</td>
+<td>2</td>
+<td>Read options for awkward files</td>
+</tr>
+<tr class="odd">
+<td>F3</td>
+<td>3</td>
+<td>Database and <a class="abbr-ref" href="e-abbreviations.html#abbr-api"><abbr title="application programming interface">API</abbr></a> entries for <code>sources.yml</code> and <code>.Renviron</code></td>
+</tr>
+<tr class="even">
+<td>F4</td>
+<td>4</td>
+<td><code>docs/issues.md</code>: problems, rules and owners</td>
+</tr>
+<tr class="odd">
+<td>F5</td>
+<td>5</td>
+<td><code>sql/silver/NN_*.sql</code>, one per table, with proof queries</td>
+</tr>
+<tr class="even">
+<td>F6a, F6b</td>
+<td>6</td>
+<td>A gold design with grains, then <code>sql/gold/*.sql</code> and <code>gold.v_dashboard</code></td>
+</tr>
+<tr class="odd">
+<td>F7</td>
+<td>7</td>
+<td><code>tests/tests.yml</code>, including reconciliation</td>
+</tr>
+<tr class="even">
+<td>F8</td>
+<td>8</td>
+<td><code>semantic/metrics.yml</code>, with hand-check queries</td>
+</tr>
+<tr class="odd">
+<td>F9</td>
+<td>9</td>
+<td>A diagnosis of any failed run</td>
+</tr>
+<tr class="even">
+<td>F10</td>
+<td>10</td>
+<td>A custom dashboard page</td>
+</tr>
+<tr class="odd">
+<td>F11</td>
+<td>11</td>
+<td>A hosting choice and the steps to publish</td>
+</tr>
+<tr class="even">
+<td>F12</td>
+<td>12</td>
+<td>A schedule on your own infrastructure</td>
+</tr>
+<tr class="odd">
+<td>F13</td>
+<td>13</td>
+<td>A data-protection review and the questions for your <a class="abbr-ref" href="e-abbreviations.html#abbr-dpo"><abbr title="data protection officer">DPO</abbr></a></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+// Wide tables: scroll sideways inside the text column instead of spilling under the contents pane.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("main table").forEach(t => {
+    if (t.parentElement.classList.contains("table-scroll")) return;
+    const w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./e-abbreviations.html" class="pagination-link" aria-label="Abbreviations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Turning Data into Business Growth · Lagos Business School</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><a href="e-abbreviations.html">Abbreviations</a> · <a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

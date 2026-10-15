@@ -537,6 +537,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -1017,6 +1023,28 @@ Solutions
 <li>What happens when the gate fails, and why is “keep yesterday’s version live” better than “publish with a warning”?</li>
 <li>Name the serving target you would choose for (a) a finance team in Excel, and (b) a Power Apps field app, and say why.</li>
 </ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>One-way flow.</strong> Each layer reads only from the layer to its left, so every number in a dashboard can be traced back through gold, silver and bronze to the file it came from. If people could write back into the warehouse, that lineage would break, and nobody could say which version of a number is true. Data entry happens in an app (on PostgreSQL or Dataverse) that becomes a <em>source</em> on the next run.</li>
+<li><strong>Silver vs gold.</strong> Silver answers <em>“what is true?”</em>: typed, de-duplicated, conformed, with history (e.g.&nbsp;<code>silver.sell_out</code>, <code>silver.depot_history</code>). Gold answers <em>“what do we decide on?”</em>: tables shaped for decisions, such as star schemas and marts (e.g.&nbsp;<code>gold.fct_sales</code>, <code>gold.mart_depot_month</code>).</li>
+<li><strong>When the gate fails</strong>, nothing is published, people are alerted, and yesterday’s good version stays live. A warning on a published number is ignored the moment it reaches a slide or a board pack. A stale but correct number is labelled with its date; a wrong number does damage and destroys trust in the whole platform.</li>
+<li><strong>Serving targets.</strong> (a) Finance in Excel: the <strong>SQLite serving mart</strong> (or Parquet), one portable file Excel reads through Open Database Connectivity (ODBC), offline. (b) A Power Apps field app: <strong>Microsoft Dataverse</strong>, which is native to the Power Platform and has security roles.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="in-the-organisation" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">1.7</span> 🏢 In the organisation</h2>

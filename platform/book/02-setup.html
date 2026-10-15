@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -858,7 +864,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  $ raw_dir     : chr "data/raw"
  $ refresh_cron: chr "30 5 * * *"
  - attr(*, "config")= chr "default"
- - attr(*, "file")= chr "/tmp/Rtmprr4v6Y/file41066b9599ea.yml"
+ - attr(*, "file")= chr "/tmp/Rtmp6qpwXD/file112e3280a8fa.yml"
  - attr(*, "class")= chr "config"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(config<span class="sc">::</span><span class="fu">get</span>(<span class="at">file =</span> f, <span class="at">config =</span> <span class="st">"production"</span>))           <span class="co"># same file, production profile</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -868,7 +874,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  $ refresh_cron: chr "30 5 * * *"
  $ warehouse   : chr "/srv/platform/platform.duckdb"
  - attr(*, "config")= chr "production"
- - attr(*, "file")= chr "/tmp/Rtmprr4v6Y/file41066b9599ea.yml"
+ - attr(*, "file")= chr "/tmp/Rtmp6qpwXD/file112e3280a8fa.yml"
  - attr(*, "class")= chr "config"</code></pre>
 </div>
 </div>
@@ -1082,6 +1088,27 @@ Solutions
 <li>Why can DuckDB query a <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> “without importing it”?</li>
 <li>Name three things that must never be committed to Git.</li>
 </ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><code>config.yml</code> says <strong>where</strong>: paths, server names, schedules, refresh intervals. It is safe to share and commit. <code>.Renviron</code> says <strong>who</strong>: passwords, application programming interface (API) keys, client secrets. It is never shared or committed.</li>
+<li>DuckDB reads the file <strong>in place</strong>. Its <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a> reader scans the file at query time, works out the columns and types, and only reads the columns the query needs, so there is no separate load step.</li>
+<li>Never commit: <code>.Renviron</code> (secrets), <code>data/db/</code> and any <code>*.duckdb</code> file (generated data, an <a class="abbr-ref" href="e-abbreviations.html#abbr-ndpa"><abbr title="Nigeria Data Protection Act">NDPA</abbr></a> risk once in Git history), and raw personal data files. Commit code, configuration and definitions instead.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="in-the-organisation" class="level2" data-number="2.8">
 <h2 data-number="2.8" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">2.8</span> 🏢 In the organisation</h2>

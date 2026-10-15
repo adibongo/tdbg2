@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -594,6 +600,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
   <li><a href="#metrics-for-the-semantic-layer" id="toc-metrics-for-the-semantic-layer" class="nav-link" data-scroll-target="#metrics-for-the-semantic-layer"><span class="header-section-number">17.5</span> Metrics for the semantic layer</a></li>
   <li><a href="#deploying-in-an-hr-function" id="toc-deploying-in-an-hr-function" class="nav-link" data-scroll-target="#deploying-in-an-hr-function"><span class="header-section-number">17.6</span> Deploying in an HR function</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">17.7</span> 🏋️ Exercises</a></li>
+  <li><a href="#mastery-check" id="toc-mastery-check" class="nav-link" data-scroll-target="#mastery-check"><span class="header-section-number">17.8</span> ✅ Mastery check</a></li>
   </ul>
 </nav>
     </div>
@@ -961,6 +968,35 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <section id="exercises" class="level2" data-number="17.7">
 <h2 data-number="17.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">17.7</span> 🏋️ Exercises</h2>
 <p><strong>E17.1 🟢</strong> Which department has the highest attrition, and what is its median pay relative to the company? <strong>E17.2 🟡</strong> Add a test that fails if any grade’s compa-ratio spread (max ÷ min) exceeds 3. Investigate any failure: data error or pay-equity issue? <strong>E17.3 🔴</strong> Build a “manager pack”: for each department, the five employees with the highest honest-model risk, their top driver, and a suggested action. What access controls must this output have?</p>
+</section>
+<section id="mastery-check" class="level2" data-number="17.8">
+<h2 data-number="17.8" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">17.8</span> ✅ Mastery check</h2>
+<ul>
+<li>Why must <code>exit_interview_booked</code> be kept out of the analytical tables, and how would you prove the harm to an <a class="abbr-ref" href="e-abbreviations.html#abbr-hr"><abbr title="human resources">HR</abbr></a> director?</li>
+<li>What is a compa-ratio, and what might a very wide spread within one grade mean?</li>
+<li>What safeguards must a flight-risk list have before human resources business partners see it?</li>
+</ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>An exit interview is booked only <strong>after</strong> someone resigns, so the field leaks the outcome. Prove it with two models scored on the same hold-out: the leaky one reaches an <a class="abbr-ref" href="e-abbreviations.html#abbr-auc"><abbr title="area under the curve">AUC</abbr></a> of about 0.97, the honest one about 0.73. The “better” model only recognises people who have already left; it can never warn a manager in time.</li>
+<li><strong>Pay ÷ the median pay for the grade.</strong> 1.0 means paid at the grade median. A very wide spread (e.g.&nbsp;max ÷ min above 3) is either a <strong>data error</strong> (a wrong grade, monthly vs annual pay) or a <strong>pay-equity issue</strong>. The test flags it, and a person investigates which.</li>
+<li>A <strong><a class="abbr-ref" href="e-abbreviations.html#abbr-dpia"><abbr title="data protection impact assessment">DPIA</abbr></a></strong> and a lawful basis; access limited to the employee’s own <a class="abbr-ref" href="e-abbreviations.html#abbr-hrbp"><abbr title="human resources business partner">HRBP</abbr></a> and manager (row-level security by department); <strong>reasons, not just scores</strong>; <strong>no automated decisions</strong>, because the list prompts a conversation, never a dismissal; and no protected characteristics as model inputs.</li>
+</ul>
+</div>
+</div>
+</div>
 
 
 </section>

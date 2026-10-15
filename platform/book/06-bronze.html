@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -728,7 +734,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <td style="text-align: left;">Stock-keeping unit (SKU)-1017</td>
 <td style="text-align: left;">345.0</td>
 <td style="text-align: left;">fmcg_sell_out.csv</td>
-<td style="text-align: left;">2026-10-15 12:23:47</td>
+<td style="text-align: left;">2026-10-15 16:17:26</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2024-04-15</td>
@@ -736,7 +742,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a>-1015</td>
 <td style="text-align: left;">128.0</td>
 <td style="text-align: left;">fmcg_sell_out.csv</td>
-<td style="text-align: left;">2026-10-15 12:23:47</td>
+<td style="text-align: left;">2026-10-15 16:17:26</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">2025-01-20</td>
@@ -744,7 +750,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-sku"><abbr title="stock-keeping unit">SKU</abbr></a>-1017</td>
 <td style="text-align: left;">57.0</td>
 <td style="text-align: left;">fmcg_sell_out.csv</td>
-<td style="text-align: left;">2026-10-15 12:23:47</td>
+<td style="text-align: left;">2026-10-15 16:17:26</td>
 </tr>
 </tbody>
 </table>
@@ -1407,6 +1413,27 @@ run to 2026-03 : loaded 2880 rows after watermark 2026-01 </code></pre>
 <li>What makes a load idempotent, and why does that matter at 3 a.m.?</li>
 <li>What should happen when a source adds a column?</li>
 </ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>So that bronze is <strong>faithful</strong>: it stores exactly what arrived, and no information is lost to type guessing. Bronze is the evidence. Silver does the typing, and it can always be rebuilt from bronze.</li>
+<li>A load is <strong>idempotent</strong> when running it twice gives the same result as running it once. The load manifest does this: it records each file’s <a class="abbr-ref" href="e-abbreviations.html#abbr-md5"><abbr title="Message-Digest Algorithm 5 (a file fingerprint)">MD5</abbr></a> fingerprint and skips files already loaded. At 3 a.m., after a failure, anyone (or the scheduler) can simply re-run the pipeline without creating duplicates.</li>
+<li>It should be <strong>tolerant</strong>: record and flag the new column (schema drift), add it to the bronze table (<code>INSERT ... BY NAME</code>), and leave older rows empty in it. It must not crash the run, and the column must not be silently dropped.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="in-the-organisation" class="level2" data-number="6.7">
 <h2 data-number="6.7" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">6.7</span> 🏢 In the organisation</h2>
