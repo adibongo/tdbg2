@@ -1,0 +1,18 @@
+# .github/workflows/pipeline.yml: run the pipeline every weekday at 05:15 UTC (06:15 Lagos)
+# Only for data you are allowed to keep in GitHub. Secrets go in Settings -> Secrets and variables -> Actions.
+name: pipeline
+on:
+  schedule: [{cron: "15 5 * * 1-5"}]
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+      - run: Rscript 00_setup.R
+      - run: Rscript run_pipeline.R
+        env:
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
+      - uses: actions/upload-artifact@v4
+        with: {name: serving-mart, path: data/serve/mart.sqlite}

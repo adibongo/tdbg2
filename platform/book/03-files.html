@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -773,7 +779,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <td style="text-align: left;">NA</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Revenue by depot and month, FY2025 (Nigerian naira (NGN))</td>
+<td style="text-align: left;">Revenue by depot and month, financial year 2025 (FY2025) (Nigerian naira (NGN))</td>
 <td style="text-align: left;">NA</td>
 <td style="text-align: left;">NA</td>
 <td style="text-align: left;">NA</td>
@@ -925,12 +931,12 @@ attr(,"class")
 <tr class="odd">
 <td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a></td>
 <td style="text-align: right;">3.14</td>
-<td style="text-align: right;">0.664</td>
+<td style="text-align: right;">0.654</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Parquet</td>
 <td style="text-align: right;">0.75</td>
-<td style="text-align: right;">0.031</td>
+<td style="text-align: right;">0.036</td>
 </tr>
 </tbody>
 </table>
@@ -1298,6 +1304,27 @@ Solutions
 <li>Name four things in a “presentation” spreadsheet that must be removed before analysis.</li>
 <li>Why is Parquet faster for analytics than <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a>?</li>
 </ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>So <strong>bronze never loses information</strong>. Type guessing turns a value like <code>"12O"</code> (letter O) into a silent <code>NA</code>. Kept as text, it survives, so silver can find it, flag it and fix it with a documented rule.</li>
+<li>Any four of: title rows above the header; merged cells (e.g.&nbsp;a region typed once per block); subtotal and “All depots” total rows; footnotes; numbers stored as text with currency symbols and commas (<code>"₦149,023,348"</code>); one column per month (wide, not tidy); hidden sheets.</li>
+<li>Parquet is <strong>columnar, typed and compressed</strong>. A query reads only the columns it needs, types don’t have to be guessed every time, and files are far smaller than the same data as <a class="abbr-ref" href="e-abbreviations.html#abbr-csv"><abbr title="comma-separated values (file)">CSV</abbr></a>.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="in-the-organisation" class="level2" data-number="3.9">
 <h2 data-number="3.9" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">3.9</span> 🏢 In the organisation</h2>

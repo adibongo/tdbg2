@@ -1,0 +1,53 @@
+# Practice organisation: the semantic layer (reference answer for Stage 8)
+model:
+  table: gold.v_dashboard
+  time: week_starting
+  grain: month
+  dimensions: [region, depot_name, category, product_name]
+metrics:
+  revenue:
+    label: Revenue
+    sql: SUM(revenue_ngn)
+    format: currency
+    kpi: true
+    owner: CFO
+    status: certified
+    description: Sell-out revenue in naira after promotional discounts. Reconciles to Finance's regional report within 1%.
+  gross_margin_pct:
+    label: Gross margin
+    sql: 100 * SUM(gross_profit_ngn) / NULLIF(SUM(revenue_ngn), 0)
+    format: pct
+    kpi: true
+    owner: CFO
+    status: certified
+    description: Gross profit as a share of revenue. Sum first, divide last.
+  units:
+    label: Units sold
+    sql: SUM(units_sold)
+    format: number
+    kpi: true
+    owner: Commercial Director
+    status: certified
+    description: Units sold. A blank in the source means a stockout week and counts as 0.
+  stockout_rate_pct:
+    label: Stockout rate
+    sql: 100 * AVG(stockout_flag)
+    format: pct
+    kpi: true
+    owner: Head of Supply Chain
+    status: certified
+    description: Share of depot-SKU-weeks flagged as out of stock.
+  promo_share_pct:
+    label: Promotion share of revenue
+    sql: 100 * SUM(CASE WHEN on_promotion = 1 THEN revenue_ngn END) / NULLIF(SUM(revenue_ngn), 0)
+    format: pct
+    owner: Head of Trade Marketing
+    status: exploratory
+    description: Revenue earned on promotion as a share of all revenue.
+  avg_selling_price:
+    label: Average selling price
+    sql: SUM(revenue_ngn) / NULLIF(SUM(units_sold), 0)
+    format: currency
+    owner: Commercial Director
+    status: exploratory
+    description: Revenue per unit sold (weighted, not an average of prices).

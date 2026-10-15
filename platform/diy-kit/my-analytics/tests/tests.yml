@@ -1,0 +1,12 @@
+# tests/tests.yml: the publish gate. Each test counts rows that break a rule; 0 = PASS.
+# severity: error (default) blocks publishing; warn reports but publishes.
+# Types: unique, not_null, accepted, range, relationship, fresh, rowcount, custom
+[]
+# - {type: unique,       table: gold.fct_sales, columns: [week_starting, depot_code, sku]}
+# - {type: not_null,     table: gold.fct_sales, column: revenue}
+# - {type: range,        table: gold.fct_sales, column: units, min: 0}
+# - {type: accepted,     table: gold.dim_depot, column: region, values: [North Central, North West, South West]}
+# - {type: relationship, table: gold.fct_sales, column: sku, ref_table: gold.dim_product}
+# - {type: fresh,        table: gold.fct_sales, column: week_starting, max_days: 21, severity: warn}
+# - {type: rowcount,     table: gold.fct_sales, min: 1000}
+# - {type: custom, name: "revenue reconciles to Finance within 1%", sql: "SELECT COUNT(*) FROM ... WHERE abs(diff) > 0.01"}

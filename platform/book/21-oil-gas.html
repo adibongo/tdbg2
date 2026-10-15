@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -592,6 +598,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
   <li><a href="#crude-quality" id="toc-crude-quality" class="nav-link" data-scroll-target="#crude-quality"><span class="header-section-number">21.6</span> Crude quality</a></li>
   <li><a href="#deploying-in-an-upstream-operator" id="toc-deploying-in-an-upstream-operator" class="nav-link" data-scroll-target="#deploying-in-an-upstream-operator"><span class="header-section-number">21.7</span> Deploying in an upstream operator</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">21.8</span> 🏋️ Exercises</a></li>
+  <li><a href="#mastery-check" id="toc-mastery-check" class="nav-link" data-scroll-target="#mastery-check"><span class="header-section-number">21.9</span> ✅ Mastery check</a></li>
   </ul>
 </nav>
     </div>
@@ -904,18 +911,18 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <td style="text-align: right;">21</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Salt PTB</td>
-<td style="text-align: left;">SWO-B</td>
-<td style="text-align: right;">209</td>
-<td style="text-align: right;">94.7</td>
-<td style="text-align: right;">7</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Oil-in-water ppm</td>
 <td style="text-align: left;">SWO-B</td>
 <td style="text-align: right;">206</td>
 <td style="text-align: right;">94.7</td>
 <td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Salt PTB</td>
+<td style="text-align: left;">SWO-B</td>
+<td style="text-align: right;">209</td>
+<td style="text-align: right;">94.7</td>
+<td style="text-align: right;">7</td>
 </tr>
 </tbody>
 </table>
@@ -935,6 +942,35 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <section id="exercises" class="level2" data-number="21.8">
 <h2 data-number="21.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">21.8</span> 🏋️ Exercises</h2>
 <p><strong>E21.1 🟢</strong> Which asset has the lowest average uptime? <strong>E21.2 🟡</strong> Compare W-007’s average daily oil rate in the six months before and after its April 2025 recompletion. Did the intervention pay off? <strong>E21.3 🔴</strong> Build a 06:00 “Daily Production Report” as a Quarto document with yesterday’s production by asset vs a 30-day average, top deferment causes, and a list of quarantined records for the engineers.</p>
+</section>
+<section id="mastery-check" class="level2" data-number="21.9">
+<h2 data-number="21.9" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">21.9</span> ✅ Mastery check</h2>
+<ul>
+<li><code>W-007</code> appears twice in the well master. Should you delete one row?</li>
+<li>What belongs in the gate for daily well data?</li>
+<li>How should the analytics platform connect to <a class="abbr-ref" href="e-abbreviations.html#abbr-scada"><abbr title="supervisory control and data acquisition">SCADA</abbr></a> and process historians?</li>
+</ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>No.</strong> The well was <strong>recompleted</strong> in April 2025, so this is history, not duplication. Keep both versions as a slowly changing dimension type 2 (valid-from and valid-to dates); analyses of rates before and after the recompletion need both.</li>
+<li>Uptime between 0 and 24 hours (impossible values quarantined), non-negative volumes, one row per well-day, every well in the well master, and asset totals that <strong>reconcile to fiscal metering and allocation</strong>.</li>
+<li><strong>One way, read only</strong>: through a one-way interface or a replica in a demilitarised zone. The platform must never be able to write to control systems; operational technology and <a class="abbr-ref" href="e-abbreviations.html#abbr-it"><abbr title="information technology">IT</abbr></a> networks stay separate.</li>
+</ul>
+</div>
+</div>
+</div>
 
 
 </section>

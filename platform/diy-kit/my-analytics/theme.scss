@@ -1,0 +1,14 @@
+/*-- scss:defaults --*/
+// Change these to your organisation's colours and fonts.
+$primary: #0B2C55;
+$secondary: #E8A33D;
+$body-bg: #F7F4ED;
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+$navbar-bg: #0B2C55;
+
+/*-- scss:rules --*/
+.bslib-value-box .value-box-title { font-size: 0.85rem; }
+.sidebar { background: #ffffff; }
+.bslib-value-box .value-box-value { font-size: clamp(1.2rem, 2vw, 1.9rem); }
+.bslib-value-box .value-box-showcase .bi { font-size: 2rem; }
+.bslib-value-box p { font-size: 0.8rem; margin-bottom: 0; }

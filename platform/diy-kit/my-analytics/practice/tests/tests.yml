@@ -1,0 +1,24 @@
+# Practice organisation: the publish gate (reference answer for Stage 7)
+- {type: unique,       table: gold.fct_sales,   columns: [week_starting, depot_code, sku]}
+- {type: unique,       table: gold.dim_depot,   columns: [depot_code]}
+- {type: unique,       table: gold.dim_product, columns: [sku]}
+- {type: not_null,     table: gold.fct_sales,   column: revenue_ngn}
+- {type: range,        table: gold.fct_sales,   column: units_sold,   min: 0}
+- {type: range,        table: gold.fct_sales,   column: discount_pct, min: 0, max: 0.5}
+- {type: accepted,     table: gold.fct_sales,   column: on_promotion, values: ["0", "1"]}
+- {type: relationship, table: gold.fct_sales,   column: depot_code, ref_table: gold.dim_depot}
+- {type: relationship, table: gold.fct_sales,   column: sku,        ref_table: gold.dim_product}
+- {type: rowcount,     table: gold.fct_sales,   min: 50000}
+# The practice data ends in March 2026, so freshness is measured against a fixed date.
+# With your own data, delete the as_of line so it is measured against today.
+- {type: fresh, table: gold.fct_sales, column: week_starting, max_days: 21, as_of: "2026-04-14", severity: warn}
+- type: custom
+  name: "reconcile: FY2025 revenue by depot vs Finance's regional report (within 1%)"
+  sql: |
+    WITH xl AS (SELECT h.depot_code, SUM(r.revenue_ngn) AS xl
+                FROM silver.regional_report r
+                JOIN (SELECT DISTINCT depot_code, depot_name FROM silver.depot_history) h USING (depot_name)
+                GROUP BY 1),
+         wh AS (SELECT depot_code, SUM(revenue_ngn) AS wh FROM gold.fct_sales
+                WHERE year(week_starting) = 2025 GROUP BY 1)
+    SELECT COUNT(*) FROM xl JOIN wh USING (depot_code) WHERE abs(xl / wh - 1) > 0.01

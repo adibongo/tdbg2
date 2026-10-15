@@ -1,0 +1,2 @@
+# Every day at 06:15 (server time). Change the path to your project folder.
+15 6 * * * cd /path/to/my-analytics && /usr/bin/Rscript run_pipeline.R >> logs/cron.log 2>&1

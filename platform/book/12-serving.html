@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -943,6 +949,27 @@ Solutions
 <li>Why must serving targets be refreshed by the pipeline rather than by people?</li>
 <li>What belongs in a serving contract?</li>
 </ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Microsoft Dataverse</strong> (or PostgreSQL, if the organisation isn’t Microsoft-first). Field forms need write-back and permissions. Dataverse is native to Power Apps, with security roles, and the form’s data becomes a source on the next pipeline run.</li>
+<li>Hand-copying creates <strong>shadow versions</strong>: copies that skip the gate, go stale, and differ from each other. Refreshing from gold, after the gate and on a schedule, guarantees that every target shows the same tested numbers.</li>
+<li><strong>Stable names and columns</strong> (breaking changes get a new version and a retirement date), <strong>documented freshness</strong> (“refreshed daily by 07:00 with data to last Sunday”), <strong>an owner and a support route</strong> in the catalogue, and <strong>access defined by role, not by person</strong>.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="in-the-organisation" class="level2" data-number="12.10">
 <h2 data-number="12.10" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">12.10</span> 🏢 In the organisation</h2>

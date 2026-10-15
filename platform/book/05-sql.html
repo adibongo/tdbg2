@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -1369,7 +1375,7 @@ Solutions
 <td style="text-align: right;">4.81</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Beverages Line 01</td>
+<td style="text-align: left;">Foods Line 08</td>
 <td style="text-align: right;">4.65</td>
 </tr>
 <tr class="odd">
@@ -1566,6 +1572,27 @@ Solutions
 <li>What does <code>QUALIFY row_number() OVER (PARTITION BY k ORDER BY t DESC) = 1</code> do?</li>
 <li>Why is “average of ratios” usually wrong for margin?</li>
 </ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><code>WHERE</code> filters <strong>rows before</strong> grouping; <code>HAVING</code> filters <strong>groups after</strong> aggregation. “Depots with revenue over ₦1bn” needs <code>HAVING SUM(revenue_ngn) &gt; 1e9</code>.</li>
+<li>It keeps <strong>one row per key <code>k</code></strong>: the latest by <code>t</code>. Rows are numbered within each <code>k</code>, newest first, and only number 1 survives. It is the standard way to de-duplicate or take the current version.</li>
+<li>Averaging ratios gives every row the same weight, so a tiny depot counts as much as Lagos Mainland. Margin must be <strong>sum first, divide last</strong>: <code>SUM(gross_profit) / SUM(revenue)</code>.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="in-the-organisation" class="level2" data-number="5.10">
 <h2 data-number="5.10" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">5.10</span> 🏢 In the organisation</h2>

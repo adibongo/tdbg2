@@ -1,0 +1,45 @@
+# sources.yml: everything that is NOT a plain file dropped into data/raw.
+# Plain files need no entry here unless they need special read options.
+
+# Per-file read options. Keys are paths relative to data/raw (wildcards allowed).
+files: {}
+#  "finance/regional_report.xlsx":
+#    skip: 4                 # title rows above the header
+#  "exports/*.csv":
+#    delim: ";"              # semicolon-separated
+#    encoding: latin1        # saved by Excel as "CSV (Comma delimited)"
+#  "old/*.csv":
+#    skip_file: true         # ignore
+
+# Databases: each table or query becomes bronze.<name>_<table>
+databases: []
+#  - name: erp
+#    driver: sqlite          # sqlite | duckdb | postgres | odbc
+#    path: data/systems/erp.sqlite
+#    tables: [customers, invoices]
+#  - name: crm
+#    driver: postgres
+#    host: crm.mycompany.local
+#    dbname: crm
+#    user_env: ERP_DB_USER          # names of variables in .Renviron, never the values
+#    password_env: ERP_DB_PASSWORD
+#    queries:
+#      open_cases: "SELECT case_id, opened_at, status, region FROM cases WHERE opened_at >= DATE '2024-01-01'"
+#  - name: finance
+#    driver: odbc            # SQL Server, Oracle, Sage, etc. through an ODBC DSN
+#    dsn: FinanceDW
+#    user_env: ERP_DB_USER
+#    password_env: ERP_DB_PASSWORD
+#    tables: [dbo.gl_balances]
+
+# Web APIs: the response is cached in data/raw/_api_cache, so a failed call falls back to the last good copy
+apis: []
+#  - name: wb_inflation_nga
+#    url: "https://api.worldbank.org/v2/country/NGA/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100"
+#    format: json
+#    pick: 2                 # World Bank returns [metadata, data]: keep the data part
+#  - name: my_saas_export
+#    url: "https://api.example.com/v1/orders.csv"
+#    format: csv
+#    headers:
+#      Authorization: MY_API_TOKEN   # value read from .Renviron

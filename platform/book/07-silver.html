@@ -572,6 +572,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -1191,6 +1197,27 @@ Solutions
 <li>When is <a class="abbr-ref" href="e-abbreviations.html#abbr-scd"><abbr title="slowly changing dimension">SCD</abbr></a> type 1 the right choice? When is type 2?</li>
 <li>Why quarantine rather than delete?</li>
 </ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Examples: a blank <code>units_sold</code> that means <strong>a stockout week</strong> (zero sales, per the board pack’s Notes sheet), not a missing figure. A blank resolution date that means <strong>the complaint is still open</strong>. A blank “date left” that means <strong>the employee still works here</strong>. Each needs a documented rule and, ideally, an evidence flag such as <code>units_was_blank</code>.</li>
+<li><strong>Type 1</strong> (overwrite) when history isn’t meaningful: typos and corrections. <strong>Type 2</strong> (a new row with <code>valid_from</code>, <code>valid_to</code>, <code>is_current</code>) when history matters: renames and reorganisations, price lists, an employee’s grade.</li>
+<li>Deleting destroys evidence and hides a problem in the source. Letting the row through corrupts the numbers. <strong>Quarantine</strong> keeps the row in a <code>_rejects</code> table with a reason, a test watches the reject count, and the source owner can fix it at source.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="in-the-organisation" class="level2" data-number="7.9">
 <h2 data-number="7.9" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">7.9</span> 🏢 In the organisation</h2>

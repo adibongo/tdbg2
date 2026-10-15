@@ -64,7 +64,7 @@ end
 local function cap(s) return (s:gsub("^%l", string.upper)) end
 
 -- Build the inline(s) for one occurrence of `tok` (key `key`).
-local function render(tok, key, plural, in_link, before, after)
+local function render(tok, key, plural, in_link, before, after, num)
   local d = DICT[key]
   local ctx = buffer .. before .. tok .. after
   for _, ph in ipairs(PROTECT) do
@@ -87,6 +87,7 @@ local function render(tok, key, plural, in_link, before, after)
       if prior:gsub("%s+$", ""):sub(-#want) == want then return { pandoc.Str(tok) } end
     end
     local full = plural and d.plural or d.main
+    if num then full = full .. " " .. num end   -- a code like FY2025 -> "financial year 2025 (FY2025)"
     if sentence_start() and before == "" then full = cap(full) end
     return { pandoc.Str(full .. " (" .. tok .. ")") }
   end
@@ -105,8 +106,11 @@ local function process_str(s, in_link)
     local pre = tok:match("^(%l+%-)%u")             -- "non-UTF-8", "re-API"
     local k3, pl3
     if not key and pre then k3, pl3 = lookup(tok:sub(#pre + 1)) end
+    local pfx, num = tok:match("^(%u%u+)(%d+)$")      -- "FY2025" -> financial year 2025 (FY2025)
     if key then
       pieces = { { tok = tok, off = 0, key = key, plural = plural } }
+    elseif pfx and DICT[pfx] then
+      pieces = { { tok = tok, off = 0, key = pfx, plural = false, num = num } }
     elseif k3 then
       pieces = { { tok = tok:sub(#pre + 1), off = #pre, key = k3, plural = pl3 } }
     else  -- try the parts of "Fivetran/ADF", "OT/IT", "TF-IDF"
@@ -119,7 +123,7 @@ local function process_str(s, in_link)
       local a = start + p.off
       local before = text:sub(pos, a - 1)
       if before ~= "" then out[#out + 1] = pandoc.Str(before) end
-      for _, il in ipairs(render(p.tok, p.key, p.plural, in_link, text:sub(1, a - 1), text:sub(a + #p.tok))) do
+      for _, il in ipairs(render(p.tok, p.key, p.plural, in_link, text:sub(1, a - 1), text:sub(a + #p.tok), p.num)) do
         out[#out + 1] = il
       end
       pos = a + #p.tok

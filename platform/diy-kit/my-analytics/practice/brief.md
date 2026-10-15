@@ -1,0 +1,8 @@
+- **Organisation and unit:** Trans-Sahel Distribution Ltd (practice organisation), Commercial Finance
+- **The decisions this dashboard supports:** the weekly depot performance review; promotion planning; stockout follow-up
+- **Audience:** regional managers (weekly), CFO and Commercial Director (monthly)
+- **The 3–6 numbers that matter (with owners):** revenue (CFO), gross margin % (CFO), units sold (Commercial Director), stockout rate (Head of Supply Chain), promotion share of revenue (Head of Trade Marketing)
+- **Breakdowns people ask for:** region, depot, product category, product
+- **Time grain:** weekly (sell-out arrives weekly), reviewed monthly
+- **Authoritative totals to reconcile to:** Commercial Finance's FY2025 regional report (revenue by depot and month)
+- **Data protection notes:** no personal data in scope (depot- and product-level sales only)

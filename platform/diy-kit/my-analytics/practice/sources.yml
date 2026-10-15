@@ -1,0 +1,16 @@
+# Practice organisation: Trans-Sahel Distribution Ltd (reference answer for Stage 3)
+files:
+  "finance/regional_report.xlsx":
+    skip: 4                    # four title rows above the header (Chapter 3)
+
+databases:
+  - name: erp
+    driver: sqlite
+    path: data/systems/erp.sqlite
+    tables: [depots]
+
+apis:
+  - name: wb_inflation_nga
+    url: "https://api.worldbank.org/v2/country/NGA/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100"
+    format: json
+    pick: 2                    # World Bank returns [metadata, data]: keep the data

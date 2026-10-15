@@ -601,6 +601,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -621,6 +627,7 @@ window.Quarto = {
   <li><a href="#insight-3-ports-and-incoterms" id="toc-insight-3-ports-and-incoterms" class="nav-link" data-scroll-target="#insight-3-ports-and-incoterms"><span class="header-section-number">19.6</span> Insight 3: ports and incoterms</a></li>
   <li><a href="#deploying-in-a-supply-chain-function" id="toc-deploying-in-a-supply-chain-function" class="nav-link" data-scroll-target="#deploying-in-a-supply-chain-function"><span class="header-section-number">19.7</span> Deploying in a supply-chain function</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">19.8</span> 🏋️ Exercises</a></li>
+  <li><a href="#mastery-check" id="toc-mastery-check" class="nav-link" data-scroll-target="#mastery-check"><span class="header-section-number">19.9</span> ✅ Mastery check</a></li>
   </ul>
 </nav>
     </div>
@@ -918,16 +925,16 @@ window.Quarto = {
 <td style="text-align: right;">35.0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Apapa</td>
+<td style="text-align: left;">Onne</td>
 <td style="text-align: left;">Free on board (FOB)</td>
-<td style="text-align: right;">1258</td>
+<td style="text-align: right;">660</td>
 <td style="text-align: right;">17.7</td>
 <td style="text-align: right;">33.0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Onne</td>
+<td style="text-align: left;">Apapa</td>
 <td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-fob"><abbr title="free on board (an Incoterm)">FOB</abbr></a></td>
-<td style="text-align: right;">660</td>
+<td style="text-align: right;">1258</td>
 <td style="text-align: right;">17.7</td>
 <td style="text-align: right;">33.0</td>
 </tr>
@@ -939,31 +946,31 @@ window.Quarto = {
 <td style="text-align: right;">32.2</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Lekki Deep Sea</td>
+<td style="text-align: left;">Onne</td>
 <td style="text-align: left;">Cost, insurance and freight (CIF)</td>
+<td style="text-align: right;">486</td>
+<td style="text-align: right;">17.3</td>
+<td style="text-align: right;">32.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lekki Deep Sea</td>
+<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-cif"><abbr title="cost, insurance and freight (an Incoterm)">CIF</abbr></a></td>
 <td style="text-align: right;">406</td>
 <td style="text-align: right;">17.7</td>
 <td style="text-align: right;">32.0</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Tin Can</td>
 <td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-exw"><abbr title="ex works (an Incoterm)">EXW</abbr></a></td>
 <td style="text-align: right;">551</td>
 <td style="text-align: right;">17.3</td>
 <td style="text-align: right;">32.0</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Lekki Deep Sea</td>
 <td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-exw"><abbr title="ex works (an Incoterm)">EXW</abbr></a></td>
 <td style="text-align: right;">295</td>
 <td style="text-align: right;">16.9</td>
-<td style="text-align: right;">32.0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Onne</td>
-<td style="text-align: left;"><a class="abbr-ref" href="e-abbreviations.html#abbr-cif"><abbr title="cost, insurance and freight (an Incoterm)">CIF</abbr></a></td>
-<td style="text-align: right;">486</td>
-<td style="text-align: right;">17.3</td>
 <td style="text-align: right;">32.0</td>
 </tr>
 <tr class="even">
@@ -1019,6 +1026,35 @@ window.Quarto = {
 <section id="exercises" class="level2" data-number="19.8">
 <h2 data-number="19.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">19.8</span> 🏋️ Exercises</h2>
 <p><strong>E19.1 🟢</strong> What share of total spend goes to the top three suppliers? Is that a concentration risk? <strong>E19.2 🟡</strong> Join late <a class="abbr-ref" href="e-abbreviations.html#abbr-po"><abbr title="purchase order">POs</abbr></a> to retail stockouts: for weeks with more late <code>Raw Material</code> <a class="abbr-ref" href="e-abbreviations.html#abbr-po"><abbr title="purchase order">POs</abbr></a>, is the stockout rate higher? What would you need to make this causal? <strong>E19.3 🔴</strong> Build a quarterly supplier review as a parameterised Quarto <a class="abbr-ref" href="e-abbreviations.html#abbr-pdf"><abbr title="Portable Document Format">PDF</abbr></a> (<code>params: supplier</code>) and render it for every supplier in one loop.</p>
+</section>
+<section id="mastery-check" class="level2" data-number="19.9">
+<h2 data-number="19.9" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">19.9</span> ✅ Mastery check</h2>
+<ul>
+<li>What does <a class="abbr-ref" href="e-abbreviations.html#abbr-otif"><abbr title="on time in full">OTIF</abbr></a> measure, and why must the supplier master be conformed before you calculate it?</li>
+<li>Why does safety stock depend on lead-time <em>variability</em> rather than the average lead time?</li>
+<li>Why report the 90th-percentile lead time next to the mean?</li>
+</ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>On time in full</strong>: the share of orders delivered by the promised date <em>and</em> in the full quantity. If <code>SUP-CEDAR</code> and <code>SUP-CEDAR-NG</code> stay separate, one supplier’s record is split in two, its scorecard is wrong, and spend concentration is understated.</li>
+<li>Safety stock protects against <strong>surprises</strong>. Using <span class="math inline">\(SS = z\sqrt{\bar{L}\sigma_d^2 + \bar{d}^2\sigma_L^2}\)</span>, two suppliers with the same average lead time but different spread need very different buffers. Moving a material to a predictable supplier releases working capital, which is the business case for the scorecard.</li>
+<li>Planners are hurt by the <strong>slow tail</strong>, not the average. The 90th percentile says “one shipment in ten takes longer than this”, which is what a buffer and a promise to customers must cover.</li>
+</ul>
+</div>
+</div>
+</div>
 
 
 </section>

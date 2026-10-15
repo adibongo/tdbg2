@@ -1,0 +1,20 @@
+# semantic/metrics.yml: ONE definition per number. The dashboard reads only this.
+model:
+  table: gold.v_dashboard        # one wide gold view: a date column, breakdown columns, measures
+  time: date                     # the date column used for trends and the date filter
+  grain: month                   # default time grain: day | week | month | quarter | year
+  dimensions: []                 # breakdown columns, e.g. [region, branch, product_category]
+metrics: {}
+#  revenue:
+#    label: Revenue
+#    sql: SUM(revenue)
+#    format: currency            # currency | number | pct
+#    owner: CFO
+#    status: certified           # certified | exploratory
+#    description: Net invoiced revenue after discounts, excluding VAT.
+#  gross_margin_pct:
+#    label: Gross margin
+#    sql: 100 * SUM(gross_profit) / NULLIF(SUM(revenue), 0)    # sum first, divide last
+#    format: pct
+#    owner: CFO
+#    status: certified

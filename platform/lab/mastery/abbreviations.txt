@@ -35,6 +35,7 @@ DBA | database administrator
 DBI | Database Interface (the R package for talking to databases)
 DCR | drop call rate
 DMO | Debt Management Office
+DIY | do it yourself
 DMZ | demilitarised zone (a buffer network)
 DOI | digital object identifier | digital object identifiers
 DOTS | Direction of Trade Statistics
@@ -47,6 +48,7 @@ FAO | Food and Agriculture Organization of the United Nations
 FDI | foreign direct investment
 FMCG | fast-moving consumer goods
 FX | foreign exchange
+FY | financial year
 GAID | General Application and Implementation Directive
 GB | gigabyte
 GDP | gross domestic product
@@ -149,6 +151,7 @@ WDI | World Development Indicators
 WEO | World Economic Outlook
 WITS | World Integrated Trade Solution
 WMS | warehouse management system
+XLSX | Excel workbook (Office Open XML file format)
 YAML | YAML Ain't Markup Language (a configuration file format)
 
 BS&W | basic sediment and water

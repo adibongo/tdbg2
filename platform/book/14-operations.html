@@ -575,6 +575,12 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f-diy-prompt-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">DIY prompt book: from your raw data to a live dashboard</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -722,7 +728,7 @@ a.abbr-ref:hover abbr{text-decoration-style:solid}
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">run_platform</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-10-15 13:24 | PUBLISHED | 12/12 tests passed | 1.3s"</code></pre>
+<pre><code>[1] "2026-10-15 17:18 | PUBLISHED | 12/12 tests passed | 1.4s"</code></pre>
 </div>
 </div>
 <p>Check the step timings from the log:</p>
@@ -1003,6 +1009,27 @@ Solutions
 <li>Why does building into a temporary file and swapping matter to dashboard users?</li>
 <li>How does keeping bronze make a backfill trivial?</li>
 </ul>
+<!-- mastery-solutions -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Atomic</strong> (users see the old version or the new one, never half of each), <strong>idempotent</strong> (re-running after a failure is safe), <strong>observable</strong> (every step logs what it did and how long it took), <strong>guarded</strong> (tests decide whether to publish, not people), <strong>exclusive</strong> (a lock stops two runs colliding).</li>
+<li>The pipeline builds the new warehouse in a temporary file and renames it into place only after the gate passes. Users never see a half-built warehouse, and a failed run leaves the live file untouched.</li>
+<li>Bronze keeps every delivery exactly as it arrived. When a silver or gold rule changes, or a bug is fixed, you rebuild silver and gold from bronze. There is no need to go back to the source systems for months of old extracts.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="in-the-organisation" class="level2" data-number="14.9">
 <h2 data-number="14.9" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">14.9</span> 🏢 In the organisation</h2>

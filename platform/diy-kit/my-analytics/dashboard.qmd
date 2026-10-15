@@ -1,0 +1,254 @@
+---
+title: "Analytics cockpit"
+format:
+  dashboard:
+    theme: [cosmo, theme.scss]
+    orientation: rows
+    nav-buttons:
+      - icon: database-check
+        href: "#data-quality"
+        aria-label: Data quality
+server: shiny
+---
+
+```{r}
+#| context: setup
+# Everything on this dashboard comes from semantic/metrics.yml and the live warehouse.
+# You should not need to edit this file: change metrics.yml, the gold SQL or config.yml instead.
+suppressPackageStartupMessages({ library(shiny); library(bslib); library(bsicons); library(plotly); library(DT) })
+source("R/platform.R")
+cfg  <- kit_config()
+live <- file.path(cfg$db_dir, "warehouse.duckdb")
+q <- function(sql) {                         # short-lived, read-only: the nightly swap is never blocked
+  con <- connect(live, read_only = TRUE); on.exit(disconnect(con)); dbGetQuery(con, sql)
+}
+fmt <- function(x, f = "number") {
+  if (length(x) == 0 || is.na(x)) return("–")
+  compact <- function(v) { a <- abs(v)
+    if (a >= 1e9) sprintf("%.2fbn", v / 1e9) else if (a >= 1e6) sprintf("%.1fm", v / 1e6)
+    else if (a >= 1e4) sprintf("%.1fk", v / 1e3) else formatC(v, format = "f", digits = ifelse(a < 10, 2, 0), big.mark = ",") }
+  switch(f %||% "number", currency = paste0(cfg$currency %||% "", compact(x)), pct = sprintf("%.1f%%", x), compact(x))
+}
+qid  <- function(x) paste0('"', gsub('"', '""', x), '"')            # quote an identifier
+BRAND <- c("#0B2C55", "#E8A33D", "#7FA8D4", "#6FBFAE", "#9B8EC4", "#A9C86B", "#F2C14E", "#E58B3C")
+```
+
+# {.sidebar}
+
+```{r}
+uiOutput("notice")
+selectInput("metric", "Metric", choices = NULL)
+dateInput("from", "From", value = NULL, format = "d M yyyy")
+dateInput("to", "To", value = NULL, format = "d M yyyy")
+selectInput("grain", "Time grain", c("day", "week", "month", "quarter", "year"), selected = "month")
+selectInput("by", "Breakdown", choices = NULL)
+checkboxInput("split", "Split the trend by the breakdown (top 6)", FALSE)
+hr()
+uiOutput("filters")
+hr()
+uiOutput("freshness")
+```
+
+# Overview
+
+## Row {height=27%}
+
+```{r}
+uiOutput("kpis")
+```
+
+## Row {height=73%}
+
+```{r}
+#| title: Trend
+plotlyOutput("trend")
+```
+
+```{r}
+#| title: Breakdown
+plotlyOutput("breakdown")
+```
+
+# Explore
+
+```{r}
+#| title: All metrics by the chosen breakdown (download as CSV)
+tagList(downloadButton("download", "Download CSV", class = "btn-sm mb-2"), DTOutput("table"))
+```
+
+# Data quality {#data-quality}
+
+## Row {height=36%}
+
+```{r}
+uiOutput("run_status")
+```
+
+## Row {height=64%}
+
+```{r}
+#| title: Latest data tests (the publish gate)
+DTOutput("tests")
+```
+
+```{r}
+#| title: What was loaded (lineage)
+DTOutput("manifest")
+```
+
+# Definitions
+
+```{r}
+#| title: Metric definitions from semantic/metrics.yml (one definition per number)
+DTOutput("definitions")
+```
+
+```{r}
+#| context: server
+# ---- refresh: watch the warehouse file; when the pipeline swaps in a new one, everything updates
+stamp <- reactivePoll(cfg$refresh_seconds * 1000, session,
+                      checkFunc = function() if (file.exists(live)) file.mtime(live) else 0,
+                      valueFunc = function() if (file.exists(live)) file.mtime(live) else NA)
+M <- reactive({ stamp(); read_metrics(cfg$metrics) })
+ready <- reactive({ stamp(); file.exists(live) && length(M()$metrics) > 0 &&
+                    !inherits(try(q(sprintf("SELECT 1 FROM %s LIMIT 1", M()$model$table)), silent = TRUE), "try-error") })
+labels <- reactive(setNames(names(M()$metrics), vapply(names(M()$metrics), function(m) M()$metrics[[m]]$label %||% m, "")))
+
+meta <- reactive({
+  req(ready()); m <- M()
+  rng <- q(sprintf("SELECT MIN(CAST(%s AS DATE)) lo, MAX(CAST(%s AS DATE)) hi FROM %s", m$model$time, m$model$time, m$model$table))
+  vals <- lapply(m$model$dimensions, function(d)
+    q(sprintf("SELECT DISTINCT CAST(%s AS VARCHAR) v FROM %s WHERE %s IS NOT NULL ORDER BY 1 LIMIT 500", qid(d), m$model$table, qid(d)))$v)
+  list(lo = as.Date(rng$lo), hi = as.Date(rng$hi), vals = setNames(vals, m$model$dimensions))
+})
+
+output$notice <- renderUI({
+  if (ready()) return(NULL)
+  div(class = "alert alert-warning small", "No dashboard data yet. Finish the gold layer and semantic/metrics.yml, then run: Rscript run_pipeline.R")
+})
+first_fill <- reactiveVal(TRUE)
+observe({                                     # fill and refresh the controls from metrics.yml and the warehouse
+  req(ready()); m <- M(); mt <- meta()
+  cur <- isolate(input$metric)
+  updateSelectInput(session, "metric", choices = labels(), selected = if (isTRUE(cur %in% labels())) cur else unname(labels()[1]))
+  start <- as.Date(format(mt$hi - 365, "%Y-%m-01")); start <- max(start, mt$lo)
+  first <- isolate(first_fill())                # first time: last 12 full months; later: keep the user's choice
+  updateDateInput(session, "from", value = if (first) start else isolate(input$from), min = mt$lo, max = mt$hi)
+  updateDateInput(session, "to", value = if (first) mt$hi else isolate(input$to), min = mt$lo, max = mt$hi)
+  if (first) updateSelectInput(session, "grain", selected = m$model$grain %||% "month")
+  dims <- unlist(m$model$dimensions)
+  updateSelectInput(session, "by", choices = dims, selected = if (isTRUE(isolate(input$by) %in% dims)) isolate(input$by) else dims[1])
+  first_fill(FALSE)
+})
+dates <- reactive({ req(input$from, input$to); sort(c(input$from, input$to)) })
+output$filters <- renderUI({
+  req(ready()); mt <- meta()
+  tagList(lapply(names(mt$vals), function(d)
+    selectizeInput(paste0("f_", d), d, mt$vals[[d]], multiple = TRUE, options = list(placeholder = "All"))))
+})
+
+where <- reactive({
+  d <- dates(); m <- M()
+  w <- sprintf("CAST(%s AS DATE) BETWEEN DATE %s AND DATE %s", m$model$time, sq(format(d[1])), sq(format(d[2])))
+  for (d in m$model$dimensions) { v <- input[[paste0("f_", d)]]
+    if (length(v)) w <- c(w, sprintf("CAST(%s AS VARCHAR) IN (%s)", qid(d), paste(sq(v), collapse = ", "))) }
+  w
+}) |> debounce(400)
+
+period_value <- function(metrics, from, to) {
+  m <- M(); w <- where()[-1]
+  w <- c(sprintf("CAST(%s AS DATE) BETWEEN DATE %s AND DATE %s", m$model$time, sq(format(from)), sq(format(to))), w)
+  q(metric_sql(m, metrics, where = w))
+}
+
+output$kpis <- renderUI({
+  req(ready()); d <- dates(); m <- M()
+  ks <- names(m$metrics)[vapply(m$metrics, function(x) isTRUE(x$kpi), TRUE)]
+  if (!length(ks)) ks <- head(names(m$metrics), 4)
+  span <- as.numeric(diff(d)) + 1
+  now  <- period_value(ks, d[1], d[2])
+  prev <- period_value(ks, d[1] - span, d[1] - 1)
+  boxes <- lapply(ks, function(k) {
+    v <- now[[k]]; p <- prev[[k]]
+    ch <- if (is.null(p) || is.na(p) || p == 0) "no comparison period"
+          else if ((m$metrics[[k]]$format %||% "") == "pct") sprintf("%+.1f points vs previous %d days", v - p, span)  # a % changes in points
+          else sprintf("%+.1f%% vs previous %d days", 100 * (v / p - 1), span)
+    value_box(title = m$metrics[[k]]$label %||% k, value = fmt(v, m$metrics[[k]]$format), p(ch),
+              theme = value_box_theme(bg = "#0B2C55", fg = "#FFFFFF"))
+  })
+  do.call(layout_column_wrap, c(list(width = 1 / length(boxes)), boxes))
+})
+
+output$trend <- renderPlotly({
+  req(ready(), input$metric, input$grain); m <- M(); k <- input$metric
+  if (isTRUE(input$split) && !is.null(input$by)) {
+    top <- q(metric_sql(m, k, dims = qid(input$by), where = where()))
+    top <- head(top[order(-top[[k]]), 1], 6)
+    d <- q(metric_sql(m, k, dims = qid(input$by), grain = input$grain,
+                      where = c(where(), sprintf("CAST(%s AS VARCHAR) IN (%s)", qid(input$by), paste(sq(top), collapse = ", ")))))
+    names(d)[2] <- "group"
+    plot_ly(d, x = ~period, y = d[[k]], color = ~group, colors = BRAND, type = "scatter", mode = "lines") |>
+      layout(yaxis = list(title = names(labels())[labels() == k]), xaxis = list(title = ""), legend = list(orientation = "h"))
+  } else {
+    d <- q(metric_sql(m, k, grain = input$grain, where = where()))
+    plot_ly(d, x = ~period, y = d[[k]], type = "scatter", mode = "lines+markers", line = list(color = BRAND[1]),
+            marker = list(color = BRAND[1])) |>
+      layout(yaxis = list(title = names(labels())[labels() == k]), xaxis = list(title = ""))
+  }
+})
+
+output$breakdown <- renderPlotly({
+  req(ready(), input$metric, input$by); m <- M(); k <- input$metric
+  d <- q(metric_sql(m, k, dims = qid(input$by), where = where()))
+  d <- head(d[order(-d[[k]]), ], 15); names(d)[1] <- "group"
+  plot_ly(d, y = ~reorder(group, d[[k]]), x = d[[k]], type = "bar", orientation = "h", marker = list(color = BRAND[2])) |>
+    layout(xaxis = list(title = names(labels())[labels() == k]), yaxis = list(title = ""))
+})
+
+explore <- reactive({
+  req(ready(), input$by); m <- M()
+  d <- q(metric_sql(m, names(m$metrics), dims = qid(input$by), where = where()))
+  names(d) <- c(input$by, names(labels())[match(names(m$metrics), labels())])
+  d
+})
+output$table <- renderDT(datatable(explore(), rownames = FALSE, options = list(pageLength = 15, scrollX = TRUE)) |>
+                           formatRound(-1, 2))
+output$download <- downloadHandler(filename = function() paste0("export-", Sys.Date(), ".csv"),
+                                   content = function(f) utils::write.csv(explore(), f, row.names = FALSE))
+
+read_log <- function(f) { p <- file.path(cfg$log_dir, f); if (file.exists(p)) utils::read.csv(p) else NULL }
+output$run_status <- renderUI({
+  stamp(); rh <- read_log("run_history.csv")
+  if (is.null(rh)) return(p("No runs recorded yet."))
+  last <- tail(rh, 1); pub <- tail(rh[rh$published %in% c(TRUE, "TRUE"), ], 1)
+  layout_column_wrap(width = 1 / 3,
+    value_box("Last run", format(as.POSIXct(last$finished_at), "%d %b %H:%M"), p(last$status), showcase = bs_icon(if (last$status == "ok") "check-circle" else "x-octagon"),
+              theme = if (last$status == "ok") "success" else "danger"),
+    value_box("Data on screen published", if (nrow(pub)) format(as.POSIXct(pub$finished_at), "%d %b %H:%M") else "never", p("only gate-passed runs are published"),
+              showcase = bs_icon("shield-check")),
+    value_box("Runs recorded", nrow(rh), p(sprintf("%d published", sum(rh$published %in% c(TRUE, "TRUE")))), showcase = bs_icon("clock-history")))
+})
+output$tests <- renderDT({
+  stamp(); th <- read_log("test_history.csv"); req(th)
+  th <- th[th$run_id == tail(th$run_id, 1), c("status", "test", "failures", "severity")]
+  datatable(th, rownames = FALSE, options = list(pageLength = 25, dom = "tip", scrollX = TRUE)) |>
+    formatStyle("status", backgroundColor = styleEqual(c("PASS", "WARN", "FAIL", "ERROR"), c("#DDF0E6", "#FCEBC8", "#F8D3CC", "#F8D3CC")))
+})
+output$manifest <- renderDT({
+  req(ready())
+  datatable(q("SELECT source, tbl AS bronze_table, rows, loaded_at FROM ops.load_manifest ORDER BY source"),
+            rownames = FALSE, options = list(pageLength = 25, dom = "tip"))
+})
+output$freshness <- renderUI({
+  req(ready()); mt <- meta()
+  p(class = "small text-muted", sprintf("Data from %s to %s. Warehouse built %s.", mt$lo, mt$hi,
+                                        format(file.mtime(live), "%d %b %Y %H:%M")))
+})
+output$definitions <- renderDT({
+  m <- M()
+  d <- do.call(rbind, lapply(names(m$metrics), function(k) { x <- m$metrics[[k]]
+    data.frame(metric = x$label %||% k, definition = x$description %||% "", sql = x$sql, owner = x$owner %||% "",
+               status = x$status %||% "exploratory") }))
+  datatable(d, rownames = FALSE, options = list(dom = "t", pageLength = 50))
+})
+```

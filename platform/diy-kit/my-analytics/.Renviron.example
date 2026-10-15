@@ -1,0 +1,11 @@
+# .Renviron: WHO you are. Copy to .Renviron, fill in, never commit or share.
+# Restart R after editing.
+# Database credentials (names are referenced from sources.yml)
+ERP_DB_USER=
+ERP_DB_PASSWORD=
+# API keys or tokens (referenced from sources.yml headers), e.g. "Bearer abc123"
+MY_API_TOKEN=
+# Optional: Microsoft Teams or Slack incoming-webhook URL for failure alerts
+ALERT_WEBHOOK_URL=
+# Optional: AI assistant key for the "ask your data" extension (Stage 12)
+ANTHROPIC_API_KEY=

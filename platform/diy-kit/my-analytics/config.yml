@@ -1,0 +1,17 @@
+# config.yml: WHERE things are and HOW the platform behaves. Safe to share and commit.
+# Secrets (passwords, keys, tokens) never go here; they go in .Renviron.
+default:
+  project: "My organisation: analytics cockpit"
+  raw_dir: data/raw              # drop files here (sub-folders are fine)
+  db_dir: data/db                # the DuckDB warehouse (generated; never commit)
+  serve_dir: data/serve          # serving mart for Excel / Power BI (generated)
+  log_dir: logs
+  sources: sources.yml           # databases, APIs and per-file read options
+  tests: tests/tests.yml         # the publish gate
+  metrics: semantic/metrics.yml  # what the dashboard measures
+  refresh_seconds: 30            # how often an open dashboard checks for a new warehouse
+  currency: "₦"
+  ai_context_samples: true       # set to false if your raw data holds personal data
+  alert_webhook_env: ALERT_WEBHOOK_URL   # name of the .Renviron variable holding a Teams/Slack webhook
+production:
+  ai_context_samples: false

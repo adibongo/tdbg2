@@ -1,0 +1,18 @@
+# secrets
+.Renviron
+# generated data: rebuilt by run_pipeline.R
+data/db/
+data/serve/
+data/raw/_api_cache/
+logs/
+ai_context.md
+# raw data stays out of Git by default (remove this line only for non-personal sample data)
+data/raw/
+# tools
+.Rhistory
+.RData
+.Rproj.user/
+.quarto/
+*_files/
+/.luarc.json
+rsconnect/
