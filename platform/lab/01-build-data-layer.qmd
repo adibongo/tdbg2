@@ -462,7 +462,7 @@ dbExecute(dk, "CREATE INDEX hnsw_reviews ON review_docs_hf USING HNSW (vec) WITH
 
 ::: {.callout-tip icon=false}
 ## 🧠 Prompt 13 — data from a DOI
-> Using the `dataverse` R package, download gdp.tab from Harvard Dataverse dataset doi:10.7910/DVN/8M7FUY (World Bank GDP, current US$). Keep Nigeria, Ghana, Kenya, South Africa, Egypt and Côte d'Ivoire, turn ".." into missing values, convert GDP to US$ billions, and save a local CSV cache so the dashboard still works offline. If the download fails, fall back to the cache. Load the result into DuckDB as `dv_gdp`.
+> Using the `dataverse` R package, download gdp.tab from Harvard Dataverse dataset doi:10.7910/DVN/8M7FUY (World Bank GDP, current US\$). Keep Nigeria, Ghana, Kenya, South Africa, Egypt and Côte d'Ivoire, turn ".." into missing values, convert GDP to US\$ billions, and save a local CSV cache so the dashboard still works offline. If the download fails, fall back to the cache. Load the result into DuckDB as `dv_gdp`.
 :::
 
 ```{r}
