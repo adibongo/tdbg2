@@ -11,6 +11,9 @@ format:
     theme: [cosmo, theme.scss]
     orientation: rows
     nav-buttons:
+      - icon: house
+        href: ../index.html
+        aria-label: Platform home
       - icon: book
         href: ../book/index.html
         aria-label: Master tutorial

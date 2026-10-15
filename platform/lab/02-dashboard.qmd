@@ -10,6 +10,9 @@ format:
     orientation: rows
     scrolling: false
     nav-buttons:
+      - icon: house
+        href: https://markanalytics.online/tdbg/platform/index.html
+        aria-label: Platform home
       - icon: book
         href: https://markanalytics.online/tdbg/platform/book/index.html
         aria-label: Master tutorial

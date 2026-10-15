@@ -16,6 +16,7 @@ format:
     theme: [cosmo, theme.scss]
     fig-width: 9
     fig-height: 4.5
+    include-before-body: www/platform-nav.html
 filters:
   - mastery/abbreviations.lua
 abbreviations-link: "https://markanalytics.online/tdbg/platform/book/e-abbreviations.html"
@@ -817,6 +818,14 @@ These screenshots come from `02-dashboard.qmd` running on this data.
 - **Agentic analysis.** Extend *Ask your data* into a tool-using agent (`ellmer` + tools that call `compile_metric_sql()`), so it can only answer through governed metrics.
 - **Private AI.** Set `llm.provider: ollama` in `config.yml`, and no data leaves the laptop (NDPA 2023).
 - **Python twin.** The same dashboard exists in Shiny for Python (`server: shiny` with `{python}` chunks and the `duckdb` and `shiny` Python packages).
+
+# Where to next
+
+- **[Master tutorial](https://markanalytics.online/tdbg/platform/book/index.html)**: every layer of this notebook explained from novice to master, with exercises, sector playbooks and a capstone.
+- **[Dashboard](https://markanalytics.online/tdbg/platform/dashboard/index.html)**: the warehouse you just built, served as a dashboard that runs in the browser.
+- **[DIY prompt book](https://markanalytics.online/tdbg/platform/book/f-diy-prompt-book.html)**: do the same with your own organisation's data, with a downloadable starter kit.
+- **[Shiny edition](https://markanalytics.online/tdbg/platform/index.html#shiny)**: Part 2 (`02-dashboard.qmd`), the live version, and how to deploy it.
+- **[Platform home](https://markanalytics.online/tdbg/platform/index.html)** · **[Course home](https://markanalytics.online/tdbg/index.html)**
 
 # Reproducibility
 
