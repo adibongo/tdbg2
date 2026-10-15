@@ -1,0 +1,817 @@
+"source","dataset","indicator","indicator_name","iso3","country","year","value"
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1980,5.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1981,3.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1982,0.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1983,-2.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1984,-2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1985,3.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1986,4.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1987,-0.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1988,1.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1989,2.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1990,-1.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1991,0
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1992,-0.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1993,-0.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1994,0.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1995,5.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1996,8.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1997,5.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1998,4.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",1999,1.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2000,-2.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2001,0.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2002,-1.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2003,-1.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2004,1.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2005,1.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2006,1.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2007,1.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2008,2.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2009,3.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2010,2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2011,-4.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2012,10.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2013,9.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2014,8.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2015,8.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2016,7.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2017,7.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2018,4.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2019,6.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2020,0.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2021,7.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2022,6.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2023,6.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2024,6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2025,6.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2026,6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2027,6.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2028,6.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2029,7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2030,6.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","CIV","CIV",2031,6.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1980,3.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1981,2.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1982,7.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1983,8.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1984,8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1985,7.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1986,4.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1987,4.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1988,4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1989,3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1990,2.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1991,2.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1992,0.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1993,2.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1994,4.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1995,4.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1996,4.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1997,5.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1998,7.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",1999,6.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2000,5.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2001,3.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2002,3.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2003,3.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2004,4.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2005,4.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2006,6.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2007,7.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2008,7.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2009,4.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2010,5.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2011,1.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2012,2.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2013,3.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2014,2.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2015,4.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2016,4.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2017,4.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2018,5.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2019,5.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2020,3.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2021,3.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2022,6.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2023,3.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2024,2.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2025,4.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2026,5.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2027,4.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2028,5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2029,5.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2030,4.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","EGY","EGY",2031,4.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1980,0.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1981,-3.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1982,-8.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1983,-6.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1984,9.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1985,6.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1986,6.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1987,6.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1988,6.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1989,4.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1990,3.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1991,4.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1992,4.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1993,4.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1994,3.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1995,4.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1996,4.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1997,5.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1998,5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",1999,4.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2000,3.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2001,3.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2002,4.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2003,5.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2004,5.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2005,6.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2006,5.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2007,4.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2008,9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2009,5.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2010,7.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2011,14
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2012,8.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2013,7.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2014,2.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2015,2.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2016,3.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2017,8.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2018,6.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2019,6.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2020,0.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2021,5.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2022,3.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2023,3.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2024,5.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2025,6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2026,5.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2027,5.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2028,5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2029,5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2030,5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","GHA","GHA",2031,5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1980,5.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1981,4.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1982,5.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1983,1.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1984,1.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1985,4.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1986,7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1987,5.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1988,6.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1989,4.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1990,4.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1991,1.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1992,-1.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1993,-0.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1994,2.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1995,4.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1996,4.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1997,0.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1998,3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",1999,2.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2000,0.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2001,4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2002,0.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2003,2.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2004,4.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2005,5.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2006,5.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2007,6.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2008,0.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2009,3.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2010,8.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2011,5.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2012,4.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2013,3.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2014,5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2015,5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2016,4.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2017,3.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2018,5.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2019,5.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2020,-0.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2021,7.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2022,4.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2023,5.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2024,4.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2025,4.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2026,4.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2027,4.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2028,4.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2029,5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2030,5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","KEN","KEN",2031,5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",1991,-0.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",1992,2.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",1993,1.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",1994,0.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",1995,1.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",1996,4.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",1997,2.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",1998,2.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",1999,0.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2000,5.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2001,6.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2002,14.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2003,9.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2004,10.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2005,7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2006,6.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2007,7.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2008,7.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2009,8.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2010,11.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2011,4.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2012,4.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2013,5.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2014,6.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2015,2.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2016,-1.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2017,0.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2018,1.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2019,2.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2020,-6.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2021,1.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2022,4.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2023,3.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2024,4.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2025,4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2026,4.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2027,4.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2028,4.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2029,4.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2030,4.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","NGA","NGA",2031,4.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1980,6.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1981,5.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1982,-0.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1983,-1.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1984,5.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1985,-1.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1986,0
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1987,2.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1988,4.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1989,2.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1990,-0.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1991,-1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1992,-2.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1993,1.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1994,3.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1995,3.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1996,4.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1997,2.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1998,0.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",1999,2.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2000,4.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2001,2.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2002,3.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2003,2.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2004,4.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2005,5.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2006,5.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2007,5.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2008,3.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2009,-1.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2010,3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2011,3.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2012,2.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2013,2.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2014,1.4
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2015,1.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2016,0.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2017,1.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2018,1.6
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2019,0.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2020,-6.2
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2021,4.9
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2022,2.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2023,0.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2024,0.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2025,1.1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2026,1
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2027,1.3
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2028,1.5
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2029,1.7
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2030,1.8
+"IMF","WEO","NGDP_RPCH","Real GDP growth","ZAF","ZAF",2031,1.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1980,8.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1981,8.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1982,7.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1983,5.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1984,4.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1985,1.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1986,6.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1987,7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1988,6.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1989,1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1990,-0.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1991,1.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1992,4.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1993,2.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1994,26
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1995,14.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1996,2.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1997,6.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1998,4.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",1999,0.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2000,2.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2001,4.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2002,3.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2003,3.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2004,1.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2005,3.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2006,2.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2007,1.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2008,1.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2009,0.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2010,1.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2011,4.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2012,1.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2013,2.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2014,0.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2015,1.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2016,0.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2017,0.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2018,0.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2019,0.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2020,2.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2021,4.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2022,5.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2023,4.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2024,3.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2025,0.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2026,2.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2027,2.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2028,1.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2029,2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2030,2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","CIV","CIV",2031,2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1980,20.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1981,10.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1982,14.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1983,16
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1984,17.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1985,12.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1986,23.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1987,25.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1988,15.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1989,20.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1990,21.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1991,14.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1992,21.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1993,11
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1994,9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1995,9.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1996,7.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1997,6.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1998,5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",1999,3.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2000,2.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2001,2.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2002,2.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2003,3.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2004,8.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2005,8.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2006,4.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2007,10.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2008,11.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2009,16.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2010,11.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2011,11.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2012,8.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2013,6.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2014,10.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2015,11
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2016,10.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2017,23.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2018,20.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2019,13.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2020,5.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2021,4.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2022,8.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2023,24.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2024,33.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2025,20.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2026,13.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2027,14.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2028,8.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2029,6.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2030,5.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","EGY","EGY",2031,5.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1980,50
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1981,116.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1982,22.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1983,122.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1984,40
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1985,10.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1986,24.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1987,39.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1988,31.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1989,25.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1990,37.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1991,18.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1992,10
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1993,24.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1994,24.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1995,59.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1996,44.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1997,24.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1998,19.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",1999,12.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2000,25.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2001,32.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2002,14.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2003,26.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2004,12.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2005,15.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2006,11.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2007,10.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2008,16.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2009,13.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2010,6.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2011,7.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2012,7.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2013,11.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2014,15.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2015,17.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2016,17.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2017,12.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2018,9.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2019,7.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2020,9.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2021,10
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2022,31.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2023,39.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2024,22.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2025,14.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2026,4.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2027,7.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2028,8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2029,8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2030,8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","GHA","GHA",2031,8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1980,13.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1981,11.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1982,20.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1983,11.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1984,10.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1985,13
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1986,2.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1987,8.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1988,12.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1989,13.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1990,17.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1991,20.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1992,27.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1993,46
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1994,28.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1995,1.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1996,6.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1997,11.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1998,5.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",1999,5.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2000,10
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2001,5.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2002,2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2003,9.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2004,11.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2005,9.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2006,6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2007,4.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2008,15.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2009,10.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2010,4.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2011,14
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2012,9.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2013,5.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2014,6.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2015,6.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2016,6.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2017,8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2018,4.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2019,5.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2020,5.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2021,6.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2022,7.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2023,7.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2024,4.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2025,4.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2026,6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2027,5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2028,5.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2029,5.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2030,5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","KEN","KEN",2031,5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",1996,29.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",1997,10.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",1998,7.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",1999,6.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2000,6.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2001,18.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2002,12.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2003,14
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2004,15
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2005,17.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2006,8.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2007,5.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2008,11.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2009,12.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2010,13.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2011,10.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2012,12.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2013,8.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2014,8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2015,9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2016,15.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2017,16.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2018,12.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2019,11.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2020,13.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2021,17
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2022,18.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2023,24.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2024,33.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2025,23
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2026,15.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2027,14.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2028,13.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2029,11.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2030,10.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","NGA","NGA",2031,10
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1980,14.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1981,15.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1982,14
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1983,12.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1984,11.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1985,16.5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1986,18.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1987,16.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1988,12.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1989,14.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1990,14.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1991,15.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1992,14
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1993,9.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1994,8.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1995,8.8
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1996,7.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1997,8.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1998,7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",1999,5.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2000,5.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2001,5.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2002,9.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2003,5.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2004,1.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2005,3.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2006,4.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2007,7.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2008,10.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2009,7.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2010,4.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2011,5
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2012,5.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2013,5.7
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2014,6.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2015,4.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2016,6.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2017,5.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2018,4.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2019,4.1
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2020,3.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2021,4.6
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2022,6.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2023,5.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2024,4.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2025,3.2
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2026,4.4
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2027,3.9
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2028,3.3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2029,3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2030,3
+"IMF","WEO","PCPIPCH","Inflation rate, average consumer prices","ZAF","ZAF",2031,3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",1997,84.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",1998,75.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",1999,78
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2000,74
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2001,71.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2002,63
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2003,56.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2004,56.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2005,58.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2006,57.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2007,53.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2008,51.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2009,46.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2010,45.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2011,50
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2012,24.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2013,24.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2014,26.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2015,29.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2016,31.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2017,32.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2018,35.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2019,37.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2020,46.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2021,50.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2022,56
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2023,56.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2024,59.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2025,57.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2026,57.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2027,56.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2028,55.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2029,53.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2030,52.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","CIV","CIV",2031,50.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",1998,73.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",1999,72.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2000,71.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2001,79.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2002,85.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2003,97.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2004,96.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2005,98.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2006,85.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2007,76.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2008,66.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2009,69.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2010,69.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2011,72.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2012,69.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2013,79.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2014,80.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2015,83.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2016,91.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2017,97.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2018,87.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2019,80.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2020,86.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2021,89.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2022,88.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2023,95.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2024,90.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2025,86.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2026,84
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2027,82.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2028,81.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2029,78
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2030,75
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","EGY","EGY",2031,71.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",1990,17.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",1991,17.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",1992,21.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",1993,34.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",1994,50.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",1995,47.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",1996,42.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",1997,45.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",1998,37.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",1999,51.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2000,74.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2001,57.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2002,54.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2003,49.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2004,38.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2005,31.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2006,17.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2007,21.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2008,23.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2009,25.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2010,32.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2011,31.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2012,35.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2013,42.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2014,50.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2015,53.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2016,55.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2017,57
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2018,62
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2019,62.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2020,79.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2021,86.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2022,92.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2023,79.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2024,70.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2025,48.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2026,51.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2027,50.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2028,49.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2029,49
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2030,48.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","GHA","GHA",2031,47.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",1998,38.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",1999,38.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2000,43.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2001,41.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2002,42
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2003,43.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2004,40.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2005,37.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2006,37.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2007,34.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2008,34.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2009,36
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2010,36.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2011,35.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2012,37.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2013,39.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2014,41.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2015,45.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2016,50.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2017,53.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2018,56.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2019,59.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2020,68
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2021,68.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2022,67.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2023,73.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2024,67.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2025,71.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2026,72.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2027,73.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2028,74.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2029,74.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2030,74.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","KEN","KEN",2031,74
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",1990,50.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",1991,53.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",1992,49.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",1993,50.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",1994,39.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",1995,24.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",1996,17.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",1997,17.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",1998,15.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",1999,46.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2000,40.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2001,37.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2002,30.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2003,29.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2004,25.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2005,13.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2006,6.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2007,5.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2008,5.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2009,6.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2010,6.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2011,12.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2012,12.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2013,13
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2014,15.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2015,14.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2016,17.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2017,18
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2018,20.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2019,21.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2020,25.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2021,26.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2022,29.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2023,36.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2024,39.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2025,36.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2026,34.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2027,32.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2028,32.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2029,32.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2030,32.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","NGA","NGA",2031,31.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2000,37.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2001,38
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2002,31.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2003,31.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2004,30.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2005,29.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2006,28
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2007,24.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2008,24
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2009,27
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2010,31.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2011,34.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2012,37.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2013,40.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2014,43.3
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2015,45.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2016,47.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2017,48.6
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2018,51.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2019,56.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2020,68.9
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2021,68.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2022,70.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2023,73.2
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2024,76
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2025,78.4
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2026,78
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2027,78.1
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2028,78.8
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2029,79.5
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2030,79.7
+"IMF","WEO","GGXWDG_NGDP","General government gross debt","ZAF","ZAF",2031,79.8

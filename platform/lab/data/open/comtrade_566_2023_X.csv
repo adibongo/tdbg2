@@ -1,0 +1,126 @@
+"source","dataset","indicator","indicator_name","iso3","country","year","value"
+"UN Comtrade","HS annual","trade_X","Exports, US$","ALB","Albania",2023,23952.542
+"UN Comtrade","HS annual","trade_X","Exports, US$","DZA","Algeria",2023,3284210.014
+"UN Comtrade","HS annual","trade_X","Exports, US$","AGO","Angola",2023,5391796.89
+"UN Comtrade","HS annual","trade_X","Exports, US$","AZE","Azerbaijan",2023,7622.061
+"UN Comtrade","HS annual","trade_X","Exports, US$","ARG","Argentina",2023,108354288.043
+"UN Comtrade","HS annual","trade_X","Exports, US$","AUS","Australia",2023,123600819.506
+"UN Comtrade","HS annual","trade_X","Exports, US$","AUT","Austria",2023,19860404.323
+"UN Comtrade","HS annual","trade_X","Exports, US$","BHR","Bahrain",2023,5525.892
+"UN Comtrade","HS annual","trade_X","Exports, US$","BGD","Bangladesh",2023,56793170.729
+"UN Comtrade","HS annual","trade_X","Exports, US$","BEL","Belgium",2023,291528177.828
+"UN Comtrade","HS annual","trade_X","Exports, US$","BRA","Brazil",2023,835792907.865
+"UN Comtrade","HS annual","trade_X","Exports, US$","BLZ","Belize",2023,17917.327
+"UN Comtrade","HS annual","trade_X","Exports, US$","BGR","Bulgaria",2023,4278005.812
+"UN Comtrade","HS annual","trade_X","Exports, US$","MMR","Myanmar",2023,103509.723
+"UN Comtrade","HS annual","trade_X","Exports, US$","BDI","Burundi",2023,740815.257
+"UN Comtrade","HS annual","trade_X","Exports, US$","CMR","Cameroon",2023,169449586.764
+"UN Comtrade","HS annual","trade_X","Exports, US$","CAN","Canada",2023,3869285798.78
+"UN Comtrade","HS annual","trade_X","Exports, US$","LKA","Sri Lanka",2023,1751044.557
+"UN Comtrade","HS annual","trade_X","Exports, US$","TCD","Chad",2023,719439.956
+"UN Comtrade","HS annual","trade_X","Exports, US$","CHL","Chile",2023,169722.41
+"UN Comtrade","HS annual","trade_X","Exports, US$","CHN","China",2023,1614309617.505
+"UN Comtrade","HS annual","trade_X","Exports, US$","COL","Colombia",2023,215293599.72
+"UN Comtrade","HS annual","trade_X","Exports, US$","COG","Congo",2023,5379769.178
+"UN Comtrade","HS annual","trade_X","Exports, US$","CRI","Costa Rica",2023,194578.208
+"UN Comtrade","HS annual","trade_X","Exports, US$","HRV","Croatia",2023,68804493.848
+"UN Comtrade","HS annual","trade_X","Exports, US$","CYP","Cyprus",2023,1668242.791
+"UN Comtrade","HS annual","trade_X","Exports, US$","CZE","Czechia",2023,16474498.959
+"UN Comtrade","HS annual","trade_X","Exports, US$","BEN","Benin",2023,145123609.235
+"UN Comtrade","HS annual","trade_X","Exports, US$","DNK","Denmark",2023,578071.133
+"UN Comtrade","HS annual","trade_X","Exports, US$","DOM","Dominican Rep.",2023,13260675.821
+"UN Comtrade","HS annual","trade_X","Exports, US$","ECU","Ecuador",2023,190523.433
+"UN Comtrade","HS annual","trade_X","Exports, US$","SLV","El Salvador",2023,4373097.006
+"UN Comtrade","HS annual","trade_X","Exports, US$","GNQ","Equatorial Guinea",2023,12766532.588
+"UN Comtrade","HS annual","trade_X","Exports, US$","ETH","Ethiopia",2023,24097696.445
+"UN Comtrade","HS annual","trade_X","Exports, US$","EST","Estonia",2023,22196490.561
+"UN Comtrade","HS annual","trade_X","Exports, US$","FIN","Finland",2023,954891.833
+"UN Comtrade","HS annual","trade_X","Exports, US$","FRA","France",2023,4257507042.958
+"UN Comtrade","HS annual","trade_X","Exports, US$","GAB","Gabon",2023,22620455.183
+"UN Comtrade","HS annual","trade_X","Exports, US$","GEO","Georgia",2023,417907.401
+"UN Comtrade","HS annual","trade_X","Exports, US$","GMB","Gambia",2023,2131838.698
+"UN Comtrade","HS annual","trade_X","Exports, US$","DEU","Germany",2023,952732628.104
+"UN Comtrade","HS annual","trade_X","Exports, US$","GHA","Ghana",2023,124370128.055
+"UN Comtrade","HS annual","trade_X","Exports, US$","GIB","Gibraltar",2023,477551491.823
+"UN Comtrade","HS annual","trade_X","Exports, US$","GRC","Greece",2023,341135382.52
+"UN Comtrade","HS annual","trade_X","Exports, US$","GTM","Guatemala",2023,388043.65
+"UN Comtrade","HS annual","trade_X","Exports, US$","GIN","Guinea",2023,3308201.666
+"UN Comtrade","HS annual","trade_X","Exports, US$","HND","Honduras",2023,1062075.881
+"UN Comtrade","HS annual","trade_X","Exports, US$","HKG","China, Hong Kong SAR",2023,902638.365
+"UN Comtrade","HS annual","trade_X","Exports, US$","HUN","Hungary",2023,24497.353
+"UN Comtrade","HS annual","trade_X","Exports, US$","IDN","Indonesia",2023,4262213389.25
+"UN Comtrade","HS annual","trade_X","Exports, US$","IRQ","Iraq",2023,1015640.343
+"UN Comtrade","HS annual","trade_X","Exports, US$","IRL","Ireland",2023,591093.177
+"UN Comtrade","HS annual","trade_X","Exports, US$","ISR","Israel",2023,552793281.448
+"UN Comtrade","HS annual","trade_X","Exports, US$","ITA","Italy",2023,2524921389.986
+"UN Comtrade","HS annual","trade_X","Exports, US$","CIV","Côte d'Ivoire",2023,2616161050.231
+"UN Comtrade","HS annual","trade_X","Exports, US$","JAM","Jamaica",2023,256507640.768
+"UN Comtrade","HS annual","trade_X","Exports, US$","JPN","Japan",2023,511225115.299
+"UN Comtrade","HS annual","trade_X","Exports, US$","KAZ","Kazakhstan",2023,184443.56
+"UN Comtrade","HS annual","trade_X","Exports, US$","JOR","Jordan",2023,1737590.331
+"UN Comtrade","HS annual","trade_X","Exports, US$","KEN","Kenya",2023,337570.926
+"UN Comtrade","HS annual","trade_X","Exports, US$","PRK","Dem. People's Rep. of Korea",2023,1331710.856
+"UN Comtrade","HS annual","trade_X","Exports, US$","KOR","Rep. of Korea",2023,717464202.986
+"UN Comtrade","HS annual","trade_X","Exports, US$","KWT","Kuwait",2023,232094218.649
+"UN Comtrade","HS annual","trade_X","Exports, US$","LBN","Lebanon",2023,1484052.425
+"UN Comtrade","HS annual","trade_X","Exports, US$","LVA","Latvia",2023,768051.961
+"UN Comtrade","HS annual","trade_X","Exports, US$","LBR","Liberia",2023,6854776.235
+"UN Comtrade","HS annual","trade_X","Exports, US$","LBY","Libya",2023,1049148.746
+"UN Comtrade","HS annual","trade_X","Exports, US$","LTU","Lithuania",2023,1263203.281
+"UN Comtrade","HS annual","trade_X","Exports, US$","MDG","Madagascar",2023,40883.903
+"UN Comtrade","HS annual","trade_X","Exports, US$","MYS","Malaysia",2023,572240139.569
+"UN Comtrade","HS annual","trade_X","Exports, US$","MLI","Mali",2023,22283855.125
+"UN Comtrade","HS annual","trade_X","Exports, US$","MRT","Mauritania",2023,298678.371
+"UN Comtrade","HS annual","trade_X","Exports, US$","MUS","Mauritius",2023,406813.792
+"UN Comtrade","HS annual","trade_X","Exports, US$","MEX","Mexico",2023,49709892.006
+"UN Comtrade","HS annual","trade_X","Exports, US$","S19","Other Asia, nes",2023,85209698.775
+"UN Comtrade","HS annual","trade_X","Exports, US$","MAR","Morocco",2023,21718569.103
+"UN Comtrade","HS annual","trade_X","Exports, US$","MOZ","Mozambique",2023,2128002.562
+"UN Comtrade","HS annual","trade_X","Exports, US$","OMN","Oman",2023,172246.256
+"UN Comtrade","HS annual","trade_X","Exports, US$","NAM","Namibia",2023,1753212.455
+"UN Comtrade","HS annual","trade_X","Exports, US$","NPL","Nepal",2023,9028194.636
+"UN Comtrade","HS annual","trade_X","Exports, US$","NLD","Netherlands",2023,8179142520.709
+"UN Comtrade","HS annual","trade_X","Exports, US$","NIC","Nicaragua",2023,4395459.471
+"UN Comtrade","HS annual","trade_X","Exports, US$","NER","Niger",2023,84222655.735
+"UN Comtrade","HS annual","trade_X","Exports, US$","NOR","Norway",2023,202889366.262
+"UN Comtrade","HS annual","trade_X","Exports, US$","PAK","Pakistan",2023,381759380.391
+"UN Comtrade","HS annual","trade_X","Exports, US$","PER","Peru",2023,619360887.982
+"UN Comtrade","HS annual","trade_X","Exports, US$","PHL","Philippines",2023,53008948.992
+"UN Comtrade","HS annual","trade_X","Exports, US$","POL","Poland",2023,748165350.791
+"UN Comtrade","HS annual","trade_X","Exports, US$","PRT","Portugal",2023,1716880620.206
+"UN Comtrade","HS annual","trade_X","Exports, US$","QAT","Qatar",2023,793611.016
+"UN Comtrade","HS annual","trade_X","Exports, US$","ROU","Romania",2023,1069597.315
+"UN Comtrade","HS annual","trade_X","Exports, US$","RUS","Russian Federation",2023,10018097.017
+"UN Comtrade","HS annual","trade_X","Exports, US$","RWA","Rwanda",2023,12745.004
+"UN Comtrade","HS annual","trade_X","Exports, US$","SAU","Saudi Arabia",2023,76290370.224
+"UN Comtrade","HS annual","trade_X","Exports, US$","SEN","Senegal",2023,904930531.713
+"UN Comtrade","HS annual","trade_X","Exports, US$","SRB","Serbia",2023,107868.715
+"UN Comtrade","HS annual","trade_X","Exports, US$","SLE","Sierra Leone",2023,5547204.979
+"UN Comtrade","HS annual","trade_X","Exports, US$","IND","India",2023,5446923883.087
+"UN Comtrade","HS annual","trade_X","Exports, US$","SGP","Singapore",2023,312919920.855
+"UN Comtrade","HS annual","trade_X","Exports, US$","VNM","Viet Nam",2023,525340673.228
+"UN Comtrade","HS annual","trade_X","Exports, US$","SVN","Slovenia",2023,14387.662
+"UN Comtrade","HS annual","trade_X","Exports, US$","ZAF","South Africa",2023,2351193345.593
+"UN Comtrade","HS annual","trade_X","Exports, US$","ZWE","Zimbabwe",2023,2904.303
+"UN Comtrade","HS annual","trade_X","Exports, US$","ESP","Spain",2023,6132983735.625
+"UN Comtrade","HS annual","trade_X","Exports, US$","SDN","Sudan",2023,4749363.281
+"UN Comtrade","HS annual","trade_X","Exports, US$","SWE","Sweden",2023,789858896.568
+"UN Comtrade","HS annual","trade_X","Exports, US$","CHE","Switzerland",2023,148159880.322
+"UN Comtrade","HS annual","trade_X","Exports, US$","SYR","Syria",2023,422301.946
+"UN Comtrade","HS annual","trade_X","Exports, US$","THA","Thailand",2023,585142043.416
+"UN Comtrade","HS annual","trade_X","Exports, US$","TGO","Togo",2023,111112102.292
+"UN Comtrade","HS annual","trade_X","Exports, US$","TTO","Trinidad and Tobago",2023,9645.243
+"UN Comtrade","HS annual","trade_X","Exports, US$","ARE","United Arab Emirates",2023,57476967.03
+"UN Comtrade","HS annual","trade_X","Exports, US$","TUN","Tunisia",2023,35716579.316
+"UN Comtrade","HS annual","trade_X","Exports, US$","TUR","Türkiye",2023,1263240170.605
+"UN Comtrade","HS annual","trade_X","Exports, US$","UGA","Uganda",2023,564969.216
+"UN Comtrade","HS annual","trade_X","Exports, US$","UKR","Ukraine",2023,689260.281
+"UN Comtrade","HS annual","trade_X","Exports, US$","EGY","Egypt",2023,5923284.039
+"UN Comtrade","HS annual","trade_X","Exports, US$","GBR","United Kingdom",2023,2551921692.023
+"UN Comtrade","HS annual","trade_X","Exports, US$","TZA","United Rep. of Tanzania",2023,2403145.152
+"UN Comtrade","HS annual","trade_X","Exports, US$","USA","USA",2023,4860249603.019
+"UN Comtrade","HS annual","trade_X","Exports, US$","BFA","Burkina Faso",2023,23396286.981
+"UN Comtrade","HS annual","trade_X","Exports, US$","URY","Uruguay",2023,321578618.016
+"UN Comtrade","HS annual","trade_X","Exports, US$","VEN","Venezuela",2023,157737.12
+"UN Comtrade","HS annual","trade_X","Exports, US$","YEM","Yemen",2023,136334.542
+"UN Comtrade","HS annual","trade_X","Exports, US$","_X ","Areas, nes",2023,332159407.376

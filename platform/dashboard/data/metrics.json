@@ -1,0 +1,92 @@
+{
+  "model": "fmcg_sales",
+  "table": "v_sales",
+  "time_dimension": "week_starting",
+  "owner": "Commercial Finance",
+  "dimensions": {
+    "region": {
+      "column": "region",
+      "label": "Region"
+    },
+    "state": {
+      "column": "state",
+      "label": "State"
+    },
+    "depot_name": {
+      "column": "depot_name",
+      "label": "Depot"
+    },
+    "category": {
+      "column": "category",
+      "label": "Category"
+    },
+    "product_name": {
+      "column": "product_name",
+      "label": "Product"
+    },
+    "pack_size": {
+      "column": "pack_size",
+      "label": "Pack size"
+    },
+    "on_promotion": {
+      "column": "on_promotion",
+      "label": "On promotion (1 = yes)"
+    }
+  },
+  "metrics": {
+    "revenue": {
+      "label": "Revenue (₦)",
+      "sql": "SUM(revenue_ngn)",
+      "format": "naira",
+      "description": "Net of trade discount, excludes VAT."
+    },
+    "units": {
+      "label": "Units sold",
+      "sql": "SUM(units_sold)",
+      "format": "number",
+      "description": "Excludes samples and damages."
+    },
+    "gross_profit": {
+      "label": "Gross profit (₦)",
+      "sql": "SUM(gross_profit_ngn)",
+      "format": "naira",
+      "description": "Revenue minus units × standard unit cost."
+    },
+    "gross_margin_pct": {
+      "label": "Gross margin (%)",
+      "sql": "100.0 * SUM(gross_profit_ngn) / NULLIF(SUM(revenue_ngn), 0)",
+      "format": "pct",
+      "description": "Gross profit as a share of revenue."
+    },
+    "avg_selling_price": {
+      "label": "Average selling price (₦)",
+      "sql": "SUM(revenue_ngn) / NULLIF(SUM(units_sold), 0)",
+      "format": "naira",
+      "description": "Revenue per unit actually achieved."
+    },
+    "stockout_rate_pct": {
+      "label": "Stockout rate (%)",
+      "sql": "100.0 * AVG(stockout_flag)",
+      "format": "pct",
+      "description": "Share of depot-SKU-weeks flagged as stocked out."
+    },
+    "promo_share_pct": {
+      "label": "Promo revenue share (%)",
+      "sql": "100.0 * SUM(CASE WHEN on_promotion = 1 THEN revenue_ngn ELSE 0 END) / NULLIF(SUM(revenue_ngn), 0)",
+      "format": "pct",
+      "description": "Share of revenue sold on promotion."
+    },
+    "avg_discount_pct": {
+      "label": "Average promo discount (%)",
+      "sql": "100.0 * AVG(CASE WHEN on_promotion = 1 THEN discount_pct END)",
+      "format": "pct",
+      "description": "Mean discount on promoted lines."
+    },
+    "active_skus": {
+      "label": "Active SKUs",
+      "sql": "COUNT(DISTINCT sku)",
+      "format": "number",
+      "description": "SKUs with at least one sale record."
+    }
+  }
+}

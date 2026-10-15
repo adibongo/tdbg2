@@ -1,0 +1,26 @@
+well_id,asset,asset_type,spud_year,completion,initial_rate_bopd,artificial_lift
+W-001,ONS-A,Onshore swamp,2014,original,945.0,ESP
+W-002,ONS-A,Onshore swamp,1995,original,978.0,Gas lift
+W-003,ONS-A,Onshore swamp,2008,original,1062.0,ESP
+W-004,ONS-A,Onshore swamp,1996,original,563.0,Natural flow
+W-005,ONS-A,Onshore swamp,1994,original,1212.0,Natural flow
+W-006,ONS-A,Onshore swamp,1984,original,1142.0,Gas lift
+W-007,ONS-A,Onshore swamp,2005,original,617.0,Natural flow
+W-008,ONS-A,Onshore swamp,2019,original,947.0,Natural flow
+W-009,ONS-A,Onshore swamp,1990,original,905.0,Natural flow
+W-010,ONS-A,Onshore swamp,2008,original,939.0,ESP
+W-011,SWO-B,Shallow offshore,2009,original,1205.0,Natural flow
+W-012,SWO-B,Shallow offshore,2014,original,2223.0,ESP
+W-013,SWO-B,Shallow offshore,2015,original,940.0,Natural flow
+W-014,SWO-B,Shallow offshore,2019,original,871.0,Natural flow
+W-015,SWO-B,Shallow offshore,2014,original,2230.0,Natural flow
+W-016,SWO-B,Shallow offshore,2002,original,1814.0,ESP
+W-017,SWO-B,Shallow offshore,1997,original,915.0,Natural flow
+W-018,SWO-B,Shallow offshore,2000,original,858.0,Gas lift
+W-019,DW-C,Deepwater FPSO,2014,original,5022.0,Natural flow
+W-020,DW-C,Deepwater FPSO,2014,original,6819.0,Natural flow
+W-021,DW-C,Deepwater FPSO,2011,original,6173.0,Gas lift
+W-022,DW-C,Deepwater FPSO,2018,original,7968.0,Natural flow
+W-023,DW-C,Deepwater FPSO,2014,original,7922.0,Natural flow
+W-024,DW-C,Deepwater FPSO,2008,original,4738.0,Natural flow
+W-007,ONS-A,Onshore swamp,2005,recompleted 2025-04,617.0,Natural flow

@@ -1,0 +1,41 @@
+sku,product_name,category,pack_size,unit_cost_ngn,list_price_ngn,launch_week
+SKU-1001,Beverages Line 01,Beverages,6x1,2109.76,3060.0,0
+SKU-1002,Beverages Line 02,Beverages,250g,2030.81,3060.0,0
+SKU-1003,Beverages Line 03,Beverages,500g,2581.1,4770.0,0
+SKU-1004,Beverages Line 04,Beverages,50cl,617.12,1010.0,0
+SKU-1005,Beverages Line 05,Beverages,6x1,2442.0,3470.0,0
+SKU-1006,Beverages Line 06,Beverages,1L,1811.45,3070.0,0
+SKU-1007,Beverages Line 07,Beverages,250g,2234.09,3520.0,0
+SKU-1008,Beverages Line 08,Beverages,1L,1046.32,1580.0,0
+SKU-1009,Home Line 01,Home Care,500g,2557.85,4750.0,0
+SKU-1010,Home Line 02,Home Care,6x1,275.3,520.0,0
+SKU-1011,Home Line 03,Home Care,12x1,2589.62,4770.0,0
+SKU-1012,Home Line 04,Home Care,1L,2098.05,3920.0,0
+SKU-1013,Home Line 05,Home Care,12x1,894.08,1390.0,0
+SKU-1014,Home Line 06,Home Care,50cl,1534.27,2690.0,0
+SKU-1015,Home Line 07,Home Care,12x1,1306.55,1930.0,0
+SKU-1016,Home Line 08,Home Care,250g,2410.41,3930.0,0
+SKU-1017,Personal Line 01,Personal Care,6x1,352.37,620.0,0
+SKU-1018,Personal Line 02,Personal Care,1L,1321.92,1980.0,0
+SKU-1019,Personal Line 03,Personal Care,250g,1245.38,2050.0,0
+SKU-1020,Personal Line 04,Personal Care,6x1,2649.49,4180.0,0
+SKU-1021,Personal Line 05,Personal Care,12x1,517.1,820.0,0
+SKU-1022,Personal Line 06,Personal Care,6x1,1031.98,1470.0,0
+SKU-1023,Personal Line 07,Personal Care,12x1,1682.13,2590.0,0
+SKU-1024,Personal Line 08,Personal Care,12x1,1028.5,1670.0,0
+SKU-1025,Foods Line 01,Foods,12x1,1933.03,3560.0,0
+SKU-1026,Foods Line 02,Foods,6x1,2234.22,4170.0,0
+SKU-1027,Foods Line 03,Foods,500g,783.64,1200.0,79
+SKU-1028,Foods Line 04,Foods,1L,2431.56,4460.0,0
+SKU-1029,Foods Line 05,Foods,250g,1196.57,2160.0,0
+SKU-1030,Foods Line 06,Foods,1L,832.75,1450.0,0
+SKU-1031,Foods Line 07,Foods,1L,990.99,1560.0,0
+SKU-1032,Foods Line 08,Foods,1L,2971.42,4610.0,0
+SKU-1033,Snacks Line 01,Snacks,6x1,435.74,620.0,0
+SKU-1034,Snacks Line 02,Snacks,250g,1154.26,2040.0,0
+SKU-1035,Snacks Line 03,Snacks,12x1,716.96,1220.0,36
+SKU-1036,Snacks Line 04,Snacks,6x1,854.67,1390.0,0
+SKU-1037,Snacks Line 05,Snacks,1L,1762.94,2990.0,0
+SKU-1038,Snacks Line 06,Snacks,12x1,805.8,1390.0,0
+SKU-1039,Snacks Line 07,Snacks,1L,550.66,840.0,0
+SKU-1040,Snacks Line 08,Snacks,500g,2355.94,3820.0,0

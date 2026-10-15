@@ -1,0 +1,23 @@
+# Copy this file to .Renviron (same folder), fill in what you have, restart R.
+# NEVER commit .Renviron to Git or share it. Leave a line blank to switch that source off.
+
+# --- PostgreSQL / Supabase / Neon / Azure Postgres --------------------------
+PGHOST=
+PGPORT=5432
+PGDATABASE=
+PGUSER=
+PGPASSWORD=
+
+# --- Microsoft Dataverse (Power Platform) -----------------------------------
+# DATAVERSE_URL looks like https://yourorg.crm4.dynamics.com
+DATAVERSE_URL=
+AZURE_TENANT_ID=
+AZURE_CLIENT_ID=
+AZURE_CLIENT_SECRET=
+
+# --- Harvard Dataverse (only needed for private/draft datasets) -------------
+DATAVERSE_KEY=
+
+# --- "Ask your data" assistant ----------------------------------------------
+ANTHROPIC_API_KEY=
+# HF_TOKEN=   # optional: real sentence embeddings for semantic search

@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Static edition · runs in your browser">
+
+<title>TDBG Growth Cockpit</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-187f5191076cea0c25736ba820c9c5fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap-e15ceefefa4f58e1ae7034515200ad9e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-dark-e15ceefefa4f58e1ae7034515200ad9e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-e15ceefefa4f58e1ae7034515200ad9e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="index_files/libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="index_files/libs/quarto-dashboard/stickythead.js"></script>
+
+
+
+<script src="index_files/libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="index_files/libs/quarto-dashboard/components.js"></script>
+
+<script type="module" src="index_files/libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="index_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+</head>
+
+<body class="quarto-dashboard dashboard-fill dashboard-sidebar fullcontent quarto-light">
+
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">       
+
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">TDBG Growth Cockpit</a></div>
+        
+        <div class="navbar-author">Static edition · runs in your browser</div>
+      </div>
+    </div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-overview" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#overview" data-scrolling="false" href="#overview" aria-controls="overview" aria-selected="true"><span class="nav-link-text">Overview</span></a></li><li class="nav-item" role="presentation"><a id="tab-semantic-layer" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#semantic-layer" data-scrolling="false" href="#semantic-layer" aria-controls="semantic-layer" aria-selected="false"><span class="nav-link-text">Semantic layer</span></a></li><li class="nav-item" role="presentation"><a id="tab-customer-voice" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#customer-voice" data-scrolling="false" href="#customer-voice" aria-controls="customer-voice" aria-selected="false"><span class="nav-link-text">Customer voice</span></a></li><li class="nav-item" role="presentation"><a id="tab-marketing-macro" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#marketing-macro" data-scrolling="false" href="#marketing-macro" aria-controls="marketing-macro" aria-selected="false"><span class="nav-link-text">Marketing &amp; macro</span></a></li><li class="nav-item" role="presentation"><a id="tab-data-quality" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#data-quality" data-scrolling="false" href="#data-quality" aria-controls="data-quality" aria-selected="false"><span class="nav-link-text">Data quality</span></a></li></ul><div class="quarto-dashboard-links"><a class="quarto-dashboard-link" href="../book/index.html" aria-label="Master tutorial"><i class="bi bi-book"></i></a><a class="quarto-dashboard-link" href="../notebook.html" aria-label="Build notebook"><i class="bi bi-journal-code"></i></a><a class="quarto-dashboard-link" href="https://github.com/adibongo/tdbg2/tree/main/platform/lab" aria-label="Source code"><i class="bi bi-github"></i></a></div></div></div>
+</nav>
+</header>
+<div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages dashboard-sidebar-container">  
+
+<div class="bslib-sidebar-layout html-fill-item html-fill-container" data-bslib-sidebar-open="desktop" data-bslib-sidebar-init="true" data-bslib-sidebar-border="false" data-bslib-sidebar-border-radius="false"><div class="main html-fill-container html-fill-item"><div class="sidebar-content html-fill-item html-fill-container">
+<div class="tab-content bslib-grid html-fill-item html-fill-container" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div id="overview" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-overview">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 22fr) minmax(3em, 42fr) minmax(3em, 36fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb5" data-startfrom="120" data-source-offset="-94"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 119;"><span id="cb5-120"><a href="#cb5-120" aria-hidden="true" tabindex="-1"></a>kp <span class="op">=</span> <span class="fu">agg</span>(fcube)</span>
+<span id="cb5-121"><a href="#cb5-121" aria-hidden="true" tabindex="-1"></a>card <span class="op">=</span> (m<span class="op">,</span> bg<span class="op">,</span> fg) <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;div title="</span><span class="sc">${</span>layer<span class="op">.</span><span class="at">metrics</span>[m]<span class="op">.</span><span class="at">description</span><span class="sc">}</span><span class="vs">" style="background:</span><span class="sc">${</span>bg<span class="sc">}</span><span class="vs">;color:</span><span class="sc">${</span>fg<span class="sc">}</span><span class="vs">;border-radius:8px;padding:12px 14px;height:100%"&gt;</span></span>
+<span id="cb5-122"><a href="#cb5-122" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;div style="font-size:.78rem;opacity:.85"&gt;</span><span class="sc">${</span>layer<span class="op">.</span><span class="at">metrics</span>[m]<span class="op">.</span><span class="at">label</span><span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb5-123"><a href="#cb5-123" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.65rem;font-weight:700"&gt;</span><span class="sc">${</span><span class="fu">fmt</span>(METRIC[m](kp)<span class="op">,</span> layer<span class="op">.</span><span class="at">metrics</span>[m]<span class="op">.</span><span class="at">format</span>)<span class="sc">}</span><span class="vs">&lt;/div&gt;&lt;/div&gt;`</span></span>
+<span id="cb5-124"><a href="#cb5-124" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;height:100%"&gt;</span></span>
+<span id="cb5-125"><a href="#cb5-125" aria-hidden="true" tabindex="-1"></a><span class="vs">  </span><span class="sc">${</span><span class="fu">card</span>(<span class="st">"revenue"</span><span class="op">,</span> NAVY<span class="op">,</span> <span class="st">"#fff"</span>)<span class="sc">}${</span><span class="fu">card</span>(<span class="st">"gross_margin_pct"</span><span class="op">,</span> <span class="st">"#F7F4ED"</span><span class="op">,</span> NAVY)<span class="sc">}${</span><span class="fu">card</span>(<span class="st">"units"</span><span class="op">,</span> <span class="st">"#F7F4ED"</span><span class="op">,</span> NAVY)<span class="sc">}</span></span>
+<span id="cb5-126"><a href="#cb5-126" aria-hidden="true" tabindex="-1"></a><span class="vs">  </span><span class="sc">${</span><span class="fu">card</span>(<span class="st">"stockout_rate_pct"</span><span class="op">,</span> <span class="st">"#FCEBD7"</span><span class="op">,</span> <span class="st">"#8A4B0F"</span>)<span class="sc">}${</span><span class="fu">card</span>(<span class="st">"promo_share_pct"</span><span class="op">,</span> GOLD<span class="op">,</span> NAVY)<span class="sc">}</span><span class="vs">&lt;/div&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-5-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-5-2" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-5-3" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Weekly revenue (₦m) with 4-week moving average" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Weekly revenue (₦m) with 4-week moving average
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb6" data-startfrom="133" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 132;"><span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a>weekly <span class="op">=</span> d3<span class="op">.</span><span class="fu">rollups</span>(fcube<span class="op">,</span> v <span class="kw">=&gt;</span> <span class="fu">agg</span>(v)<span class="op">.</span><span class="at">rev</span> <span class="op">/</span> <span class="fl">1e6</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="fu">wkStr</span>(d<span class="op">.</span><span class="at">wk</span>))<span class="op">.</span><span class="fu">map</span>(([w<span class="op">,</span> r]) <span class="kw">=&gt;</span> ({<span class="dt">w</span><span class="op">:</span> <span class="kw">new</span> <span class="bu">Date</span>(w)<span class="op">,</span> r}))<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">w</span> <span class="op">-</span> b<span class="op">.</span><span class="at">w</span>)</span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"₦m"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span> <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span>}<span class="op">,</span></span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">lineY</span>(weekly<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"w"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"r"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#7FA8D4"</span>})<span class="op">,</span></span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a>          Plot<span class="op">.</span><span class="fu">lineY</span>(weekly<span class="op">,</span> Plot<span class="op">.</span><span class="fu">windowY</span>(<span class="dv">4</span><span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"w"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"r"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> NAVY<span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="fl">2.5</span>}))<span class="op">,</span></span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a>          Plot<span class="op">.</span><span class="fu">tip</span>(weekly<span class="op">,</span> Plot<span class="op">.</span><span class="fu">pointerX</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"w"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"r"</span><span class="op">,</span> <span class="dt">title</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">w</span><span class="op">.</span><span class="fu">toISOString</span>()<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span><span class="dv">10</span>)<span class="sc">}</span><span class="vs">: ₦</span><span class="sc">${</span>d<span class="op">.</span><span class="at">r</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">m`</span>}))]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-6-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-6-2" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Revenue and gross margin by region" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Revenue and gross margin by region
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb7" data-startfrom="142" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 141;"><span id="cb7-142"><a href="#cb7-142" aria-hidden="true" tabindex="-1"></a>byRegion <span class="op">=</span> d3<span class="op">.</span><span class="fu">rollups</span>(fcube<span class="op">,</span> v <span class="kw">=&gt;</span> <span class="fu">agg</span>(v)<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">region</span>)<span class="op">.</span><span class="fu">map</span>(([region<span class="op">,</span> s]) <span class="kw">=&gt;</span> ({region<span class="op">,</span> <span class="dt">rev</span><span class="op">:</span> s<span class="op">.</span><span class="at">rev</span> <span class="op">/</span> <span class="fl">1e9</span><span class="op">,</span> <span class="dt">gm</span><span class="op">:</span> <span class="dv">100</span> <span class="op">*</span> s<span class="op">.</span><span class="at">gp</span> <span class="op">/</span> s<span class="op">.</span><span class="at">rev</span>}))</span>
+<span id="cb7-143"><a href="#cb7-143" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span> <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"₦ billions"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span>}<span class="op">,</span></span>
+<span id="cb7-144"><a href="#cb7-144" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">barX</span>(byRegion<span class="op">,</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"region"</span><span class="op">,</span> <span class="dt">x</span><span class="op">:</span> <span class="st">"rev"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> NAVY<span class="op">,</span> <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span>}})<span class="op">,</span></span>
+<span id="cb7-145"><a href="#cb7-145" aria-hidden="true" tabindex="-1"></a>          Plot<span class="op">.</span><span class="fu">text</span>(byRegion<span class="op">,</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"region"</span><span class="op">,</span> <span class="dt">x</span><span class="op">:</span> <span class="st">"rev"</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">gm</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">% GM`</span><span class="op">,</span> <span class="dt">dx</span><span class="op">:</span> <span class="op">-</span><span class="dv">6</span><span class="op">,</span> <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"end"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"white"</span>})]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-7-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-7-2" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Category × region (₦m)" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Category × region (₦m)
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb8" data-startfrom="152" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 151;"><span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a>heat <span class="op">=</span> d3<span class="op">.</span><span class="fu">rollups</span>(fcube<span class="op">,</span> v <span class="kw">=&gt;</span> <span class="fu">agg</span>(v)<span class="op">.</span><span class="at">rev</span> <span class="op">/</span> <span class="fl">1e6</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">category</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">region</span>)<span class="op">.</span><span class="fu">flatMap</span>(([c<span class="op">,</span> rs]) <span class="kw">=&gt;</span> rs<span class="op">.</span><span class="fu">map</span>(([r<span class="op">,</span> v]) <span class="kw">=&gt;</span> ({c<span class="op">,</span> r<span class="op">,</span> v})))</span>
+<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">240</span><span class="op">,</span> <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> {<span class="dt">scheme</span><span class="op">:</span> <span class="st">"blues"</span><span class="op">,</span> <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"₦m"</span>}<span class="op">,</span> <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span>}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span>}<span class="op">,</span></span>
+<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">cell</span>(heat<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"r"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"c"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"v"</span><span class="op">,</span> <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span> Plot<span class="op">.</span><span class="fu">text</span>(heat<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"r"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"c"</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">v</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">0</span>)<span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">v</span> <span class="op">&gt;</span> d3<span class="op">.</span><span class="fu">max</span>(heat<span class="op">,</span> h <span class="kw">=&gt;</span> h<span class="op">.</span><span class="at">v</span>) <span class="op">*</span> <span class="op">.</span><span class="dv">6</span> <span class="op">?</span> <span class="st">"white"</span> <span class="op">:</span> NAVY})]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-8-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-8-2" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Top 15 products" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Top 15 products
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb9" data-startfrom="159" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 158;"><span id="cb9-159"><a href="#cb9-159" aria-hidden="true" tabindex="-1"></a>topProd <span class="op">=</span> d3<span class="op">.</span><span class="fu">rollups</span>(fprod<span class="op">,</span> v <span class="kw">=&gt;</span> <span class="fu">agg</span>(v)<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">product</span>)<span class="op">.</span><span class="fu">map</span>(([product<span class="op">,</span> s]) <span class="kw">=&gt;</span> ({product<span class="op">,</span> <span class="dt">revenue</span><span class="op">:</span> s<span class="op">.</span><span class="at">rev</span><span class="op">,</span> <span class="dt">units</span><span class="op">:</span> s<span class="op">.</span><span class="at">units</span><span class="op">,</span></span>
+<span id="cb9-160"><a href="#cb9-160" aria-hidden="true" tabindex="-1"></a>  <span class="dt">gm_pct</span><span class="op">:</span> <span class="op">+</span>(<span class="dv">100</span> <span class="op">*</span> s<span class="op">.</span><span class="at">gp</span> <span class="op">/</span> s<span class="op">.</span><span class="at">rev</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="op">,</span> <span class="dt">stockout_pct</span><span class="op">:</span> <span class="op">+</span>(<span class="dv">100</span> <span class="op">*</span> s<span class="op">.</span><span class="at">so</span> <span class="op">/</span> s<span class="op">.</span><span class="at">n</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="op">,</span> <span class="dt">promo_pct</span><span class="op">:</span> <span class="op">+</span>(<span class="dv">100</span> <span class="op">*</span> s<span class="op">.</span><span class="at">rev_promo</span> <span class="op">/</span> s<span class="op">.</span><span class="at">rev</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)}))</span>
+<span id="cb9-161"><a href="#cb9-161" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> b<span class="op">.</span><span class="at">revenue</span> <span class="op">-</span> a<span class="op">.</span><span class="at">revenue</span>)<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">15</span>)</span>
+<span id="cb9-162"><a href="#cb9-162" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(topProd<span class="op">,</span> {<span class="dt">format</span><span class="op">:</span> {<span class="dt">revenue</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`₦</span><span class="sc">${</span>(d<span class="op">/</span><span class="fl">1e6</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">m`</span><span class="op">,</span> <span class="dt">units</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="fu">toLocaleString</span>()}<span class="op">,</span> <span class="dt">rows</span><span class="op">:</span> <span class="dv">15</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-9-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-9-2" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div><div id="semantic-layer" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-semantic-layer">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 18fr) minmax(3em, 82fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb10" data-startfrom="172" data-source-offset="-186"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 171;"><span id="cb10-172"><a href="#cb10-172" aria-hidden="true" tabindex="-1"></a>metricKeys <span class="op">=</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">keys</span>(METRIC)</span>
+<span id="cb10-173"><a href="#cb10-173" aria-hidden="true" tabindex="-1"></a>viewof met <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(metricKeys<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Metric"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"revenue"</span><span class="op">,</span> <span class="dt">format</span><span class="op">:</span> k <span class="kw">=&gt;</span> layer<span class="op">.</span><span class="at">metrics</span>[k]<span class="op">.</span><span class="at">label</span>})</span>
+<span id="cb10-174"><a href="#cb10-174" aria-hidden="true" tabindex="-1"></a>viewof dim <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>([<span class="st">"region"</span><span class="op">,</span> <span class="st">"category"</span><span class="op">,</span> <span class="st">"depot"</span><span class="op">,</span> <span class="st">"promo"</span><span class="op">,</span> <span class="st">"(none)"</span>]<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Break down by"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"category"</span>})</span>
+<span id="cb10-175"><a href="#cb10-175" aria-hidden="true" tabindex="-1"></a>viewof grain <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>([<span class="st">"quarter"</span><span class="op">,</span> <span class="st">"month"</span><span class="op">,</span> <span class="st">"week"</span><span class="op">,</span> <span class="st">"year"</span><span class="op">,</span> <span class="st">"(none)"</span>]<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Time grain"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"quarter"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-10-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-10-2" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-10-3" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-10-4" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="The SQL the live app compiles from metrics.yml" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+The SQL the live app compiles from metrics.yml
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb11" data-startfrom="182" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 181;"><span id="cb11-182"><a href="#cb11-182" aria-hidden="true" tabindex="-1"></a>period <span class="op">=</span> (w<span class="op">,</span> g) <span class="kw">=&gt;</span> { <span class="kw">const</span> s <span class="op">=</span> <span class="fu">wkStr</span>(w)<span class="op">;</span> <span class="kw">const</span> y <span class="op">=</span> s<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">4</span>)<span class="op">,</span> m <span class="op">=</span> <span class="op">+</span>s<span class="op">.</span><span class="fu">slice</span>(<span class="dv">5</span><span class="op">,</span> <span class="dv">7</span>)<span class="op">;</span></span>
+<span id="cb11-183"><a href="#cb11-183" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> g <span class="op">===</span> <span class="st">"week"</span> <span class="op">?</span> s <span class="op">:</span> g <span class="op">===</span> <span class="st">"month"</span> <span class="op">?</span> s<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">7</span>) <span class="op">:</span> g <span class="op">===</span> <span class="st">"quarter"</span> <span class="op">?</span> <span class="vs">`</span><span class="sc">${</span>y<span class="sc">}</span><span class="vs">-Q</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">ceil</span>(m <span class="op">/</span> <span class="dv">3</span>)<span class="sc">}</span><span class="vs">`</span> <span class="op">:</span> g <span class="op">===</span> <span class="st">"year"</span> <span class="op">?</span> y <span class="op">:</span> <span class="st">"all"</span> }</span>
+<span id="cb11-184"><a href="#cb11-184" aria-hidden="true" tabindex="-1"></a>sqlText <span class="op">=</span> {</span>
+<span id="cb11-185"><a href="#cb11-185" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sel <span class="op">=</span> []<span class="op">;</span> <span class="kw">const</span> grp <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb11-186"><a href="#cb11-186" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (grain <span class="op">!==</span> <span class="st">"(none)"</span>) { sel<span class="op">.</span><span class="fu">push</span>(<span class="vs">`date_trunc('</span><span class="sc">${</span>grain<span class="sc">}</span><span class="vs">', week_starting) AS period`</span>)<span class="op">;</span> grp<span class="op">.</span><span class="fu">push</span>(<span class="st">"period"</span>) }</span>
+<span id="cb11-187"><a href="#cb11-187" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (dim <span class="op">!==</span> <span class="st">"(none)"</span>) { <span class="kw">const</span> col <span class="op">=</span> dim <span class="op">===</span> <span class="st">"depot"</span> <span class="op">?</span> <span class="st">"depot_name"</span> <span class="op">:</span> dim <span class="op">===</span> <span class="st">"promo"</span> <span class="op">?</span> <span class="st">"on_promotion"</span> <span class="op">:</span> dim<span class="op">;</span> sel<span class="op">.</span><span class="fu">push</span>(<span class="vs">`</span><span class="sc">${</span>col<span class="sc">}</span><span class="vs"> AS </span><span class="sc">${</span>dim<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span> grp<span class="op">.</span><span class="fu">push</span>(dim) }</span>
+<span id="cb11-188"><a href="#cb11-188" aria-hidden="true" tabindex="-1"></a>  sel<span class="op">.</span><span class="fu">push</span>(<span class="vs">`</span><span class="sc">${</span>layer<span class="op">.</span><span class="at">metrics</span>[met]<span class="op">.</span><span class="at">sql</span><span class="sc">}</span><span class="vs"> AS </span><span class="sc">${</span>met<span class="sc">}</span><span class="vs">`</span>)</span>
+<span id="cb11-189"><a href="#cb11-189" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="vs">`SELECT</span><span class="sc">\n</span><span class="vs">  </span><span class="sc">${</span>sel<span class="op">.</span><span class="fu">join</span>(<span class="st">",</span><span class="sc">\n</span><span class="st">  "</span>)<span class="sc">}\n</span><span class="vs">FROM </span><span class="sc">${</span>layer<span class="op">.</span><span class="at">table</span><span class="sc">}</span><span class="vs">`</span> <span class="op">+</span> (grp<span class="op">.</span><span class="at">length</span> <span class="op">?</span> <span class="vs">`</span><span class="sc">\n</span><span class="vs">GROUP BY </span><span class="sc">${</span>grp<span class="op">.</span><span class="fu">join</span>(<span class="st">", "</span>)<span class="sc">}\n</span><span class="vs">ORDER BY </span><span class="sc">${</span>grp[<span class="dv">0</span>]<span class="sc">}</span><span class="vs">`</span> <span class="op">:</span> <span class="st">""</span>)</span>
+<span id="cb11-190"><a href="#cb11-190" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-191"><a href="#cb11-191" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;pre style="background:#0B2C55;color:#F7F4ED;padding:12px;border-radius:6px;font-size:.8rem;white-space:pre-wrap"&gt;</span><span class="sc">${</span>sqlText<span class="sc">}</span><span class="vs">&lt;/pre&gt;</span></span>
+<span id="cb11-192"><a href="#cb11-192" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;p style="font-size:.85rem"&gt;&lt;b&gt;</span><span class="sc">${</span>layer<span class="op">.</span><span class="at">metrics</span>[met]<span class="op">.</span><span class="at">label</span><span class="sc">}</span><span class="vs">:&lt;/b&gt; </span><span class="sc">${</span>layer<span class="op">.</span><span class="at">metrics</span>[met]<span class="op">.</span><span class="at">description</span><span class="sc">}</span><span class="vs">&lt;br&gt;&lt;i&gt;Owner: </span><span class="sc">${</span>layer<span class="op">.</span><span class="at">owner</span><span class="sc">}</span><span class="vs">&lt;/i&gt;&lt;/p&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-11-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-11-2" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-11-3" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Result" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Result
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb12" data-startfrom="197" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 196;"><span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a>semRows <span class="op">=</span> d3<span class="op">.</span><span class="fu">rollups</span>(fcube<span class="op">,</span> v <span class="kw">=&gt;</span> METRIC[met](<span class="fu">agg</span>(v))<span class="op">,</span> d <span class="kw">=&gt;</span> <span class="fu">period</span>(d<span class="op">.</span><span class="at">wk</span><span class="op">,</span> grain)<span class="op">,</span> d <span class="kw">=&gt;</span> dim <span class="op">===</span> <span class="st">"(none)"</span> <span class="op">?</span> <span class="st">"All"</span> <span class="op">:</span> <span class="bu">String</span>(d[dim]))</span>
+<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">flatMap</span>(([p<span class="op">,</span> gs]) <span class="kw">=&gt;</span> gs<span class="op">.</span><span class="fu">map</span>(([g<span class="op">,</span> v]) <span class="kw">=&gt;</span> ({<span class="dt">period</span><span class="op">:</span> p<span class="op">,</span> <span class="dt">group</span><span class="op">:</span> g<span class="op">,</span> <span class="dt">value</span><span class="op">:</span> v})))<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> d3<span class="op">.</span><span class="fu">ascending</span>(a<span class="op">.</span><span class="at">period</span><span class="op">,</span> b<span class="op">.</span><span class="at">period</span>))</span>
+<span id="cb12-199"><a href="#cb12-199" aria-hidden="true" tabindex="-1"></a>grain <span class="op">===</span> <span class="st">"(none)"</span></span>
+<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a>  <span class="op">?</span> Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">380</span><span class="op">,</span> <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">110</span><span class="op">,</span> <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> layer<span class="op">.</span><span class="at">metrics</span>[met]<span class="op">.</span><span class="at">label</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span>}<span class="op">,</span></span>
+<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">barX</span>(semRows<span class="op">,</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"group"</span><span class="op">,</span> <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> NAVY<span class="op">,</span> <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span>}<span class="op">,</span> <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span>})]})</span>
+<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a>  <span class="op">:</span> Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">380</span><span class="op">,</span> <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">range</span><span class="op">:</span> PAL}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> layer<span class="op">.</span><span class="at">metrics</span>[met]<span class="op">.</span><span class="at">label</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span> <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span> <span class="dt">tickRotate</span><span class="op">:</span> <span class="op">-</span><span class="dv">30</span>}<span class="op">,</span></span>
+<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">lineY</span>(semRows<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"period"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"group"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dot</span>(semRows<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"period"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"group"</span><span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="fl">2.5</span>})]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-12-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-12-2" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div><div id="customer-voice" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-customer-voice">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 14fr) minmax(3em, 86fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb13" data-startfrom="210" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 209;"><span id="cb13-210"><a href="#cb13-210" aria-hidden="true" tabindex="-1"></a><span class="co">// PROMPT S6 — "Semantic search over the 4,938 reviews with the same TF-IDF + cosine method as the</span></span>
+<span id="cb13-211"><a href="#cb13-211" aria-hidden="true" tabindex="-1"></a><span class="co">// warehouse, computed in the browser."</span></span>
+<span id="cb13-212"><a href="#cb13-212" aria-hidden="true" tabindex="-1"></a>viewof q <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">text</span>({<span class="dt">label</span><span class="op">:</span> <span class="st">"Search reviews"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"debited twice no reversal"</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="st">"100%"</span><span class="op">,</span> <span class="dt">submit</span><span class="op">:</span> <span class="st">"Search"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-13" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Closest reviews" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Closest reviews
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb14" data-startfrom="220" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 219;"><span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a>index <span class="op">=</span> {</span>
+<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> tok <span class="op">=</span> s <span class="kw">=&gt;</span> s<span class="op">.</span><span class="fu">toLowerCase</span>()<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">[^a-z0-9 ]</span><span class="ss">/g</span><span class="op">,</span> <span class="st">" "</span>)<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\s+</span><span class="ss">/</span>)<span class="op">.</span><span class="fu">filter</span>(w <span class="kw">=&gt;</span> w<span class="op">.</span><span class="at">length</span> <span class="op">&gt;</span> <span class="dv">2</span>)</span>
+<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> docs <span class="op">=</span> reviews<span class="op">.</span><span class="fu">map</span>(r <span class="kw">=&gt;</span> <span class="fu">tok</span>(r<span class="op">.</span><span class="at">txt</span>))<span class="op">;</span> <span class="kw">const</span> df <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>()</span>
+<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">const</span> d <span class="kw">of</span> docs) <span class="cf">for</span> (<span class="kw">const</span> w <span class="kw">of</span> <span class="kw">new</span> <span class="bu">Set</span>(d)) df<span class="op">.</span><span class="fu">set</span>(w<span class="op">,</span> (df<span class="op">.</span><span class="fu">get</span>(w) <span class="op">||</span> <span class="dv">0</span>) <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> idf <span class="op">=</span> w <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">log</span>(reviews<span class="op">.</span><span class="at">length</span> <span class="op">/</span> (df<span class="op">.</span><span class="fu">get</span>(w) <span class="op">||</span> reviews<span class="op">.</span><span class="at">length</span>)) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> vec <span class="op">=</span> d <span class="kw">=&gt;</span> { <span class="kw">const</span> v <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>()<span class="op">;</span> <span class="cf">for</span> (<span class="kw">const</span> w <span class="kw">of</span> d) <span class="cf">if</span> (df<span class="op">.</span><span class="fu">has</span>(w)) v<span class="op">.</span><span class="fu">set</span>(w<span class="op">,</span> (v<span class="op">.</span><span class="fu">get</span>(w) <span class="op">||</span> <span class="dv">0</span>) <span class="op">+</span> <span class="fu">idf</span>(w))<span class="op">;</span></span>
+<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> n <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">hypot</span>(<span class="op">...</span>v<span class="op">.</span><span class="fu">values</span>())<span class="op">;</span> <span class="cf">for</span> (<span class="kw">const</span> [k<span class="op">,</span> x] <span class="kw">of</span> v) v<span class="op">.</span><span class="fu">set</span>(k<span class="op">,</span> x <span class="op">/</span> (n <span class="op">||</span> <span class="dv">1</span>))<span class="op">;</span> <span class="cf">return</span> v }</span>
+<span id="cb14-227"><a href="#cb14-227" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> {tok<span class="op">,</span> vec<span class="op">,</span> <span class="dt">vecs</span><span class="op">:</span> docs<span class="op">.</span><span class="fu">map</span>(vec)}</span>
+<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a>hits <span class="op">=</span> {</span>
+<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> qv <span class="op">=</span> index<span class="op">.</span><span class="fu">vec</span>(index<span class="op">.</span><span class="fu">tok</span>(q))</span>
+<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> reviews<span class="op">.</span><span class="fu">map</span>((r<span class="op">,</span> i) <span class="kw">=&gt;</span> { <span class="kw">let</span> s <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> <span class="cf">for</span> (<span class="kw">const</span> [k<span class="op">,</span> x] <span class="kw">of</span> qv) s <span class="op">+=</span> x <span class="op">*</span> (index<span class="op">.</span><span class="at">vecs</span>[i]<span class="op">.</span><span class="fu">get</span>(k) <span class="op">||</span> <span class="dv">0</span>)<span class="op">;</span> <span class="cf">return</span> {<span class="dt">similarity</span><span class="op">:</span> <span class="op">+</span>s<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="op">,</span> <span class="op">...</span>r} })</span>
+<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">similarity</span> <span class="op">&gt;</span> <span class="dv">0</span>)<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> b<span class="op">.</span><span class="at">similarity</span> <span class="op">-</span> a<span class="op">.</span><span class="at">similarity</span>)<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">25</span>)</span>
+<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a>hits<span class="op">.</span><span class="at">length</span> <span class="op">?</span> Inputs<span class="op">.</span><span class="fu">table</span>(hits<span class="op">,</span> {<span class="dt">columns</span><span class="op">:</span> [<span class="st">"similarity"</span><span class="op">,</span> <span class="st">"txt"</span><span class="op">,</span> <span class="st">"theme"</span><span class="op">,</span> <span class="st">"sentiment"</span><span class="op">,</span> <span class="st">"channel"</span><span class="op">,</span> <span class="st">"stars"</span><span class="op">,</span> <span class="st">"lang"</span>]<span class="op">,</span></span>
+<span id="cb14-235"><a href="#cb14-235" aria-hidden="true" tabindex="-1"></a>  <span class="dt">header</span><span class="op">:</span> {<span class="dt">txt</span><span class="op">:</span> <span class="st">"review"</span><span class="op">,</span> <span class="dt">lang</span><span class="op">:</span> <span class="st">"language"</span>}<span class="op">,</span> <span class="dt">width</span><span class="op">:</span> {<span class="dt">txt</span><span class="op">:</span> <span class="dv">380</span>}<span class="op">,</span> <span class="dt">rows</span><span class="op">:</span> <span class="dv">14</span>})</span>
+<span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a>  <span class="op">:</span> <span class="fu">html</span><span class="vs">`&lt;p&gt;None of those words appear in the reviews. TF-IDF matches words, not meaning; Chapter 11 of the tutorial shows the neural upgrade.&lt;/p&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-14-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-14-2" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-14-3" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Sentiment by theme" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Sentiment by theme
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb15" data-startfrom="240" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 239;"><span id="cb15-240"><a href="#cb15-240" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">330</span><span class="op">,</span> <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">110</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="st">"negative"</span><span class="op">,</span> <span class="st">"neutral"</span><span class="op">,</span> <span class="st">"positive"</span>]<span class="op">,</span> <span class="dt">range</span><span class="op">:</span> [<span class="st">"#E58B3C"</span><span class="op">,</span> <span class="st">"#C9C3B6"</span><span class="op">,</span> <span class="st">"#6FBFAE"</span>]<span class="op">,</span> <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb15-241"><a href="#cb15-241" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"reviews"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span>}<span class="op">,</span></span>
+<span id="cb15-242"><a href="#cb15-242" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">barX</span>(reviews<span class="op">,</span> Plot<span class="op">.</span><span class="fu">groupY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"theme"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"sentiment"</span><span class="op">,</span> <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span>}<span class="op">,</span> <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span>}))]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-15" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div><div id="marketing-macro" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-marketing-macro">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 50fr) minmax(3em, 50fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Spend vs conversions by channel (dot size = cost per acquisition)" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Spend vs conversions by channel (dot size = cost per acquisition)
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb16" data-startfrom="251" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 250;"><span id="cb16-251"><a href="#cb16-251" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span> <span class="dt">inset</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Spend, ₦ millions"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Conversions"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> {<span class="dt">range</span><span class="op">:</span> [<span class="dv">6</span><span class="op">,</span> <span class="dv">30</span>]}<span class="op">,</span></span>
+<span id="cb16-252"><a href="#cb16-252" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">dot</span>(ch<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"spend"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"conv"</span><span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="st">"cpa"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"channel"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="op">.</span><span class="dv">8</span><span class="op">,</span> <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb16-253"><a href="#cb16-253" aria-hidden="true" tabindex="-1"></a>          Plot<span class="op">.</span><span class="fu">text</span>(ch<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"spend"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"conv"</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> <span class="st">"channel"</span><span class="op">,</span> <span class="dt">dy</span><span class="op">:</span> <span class="op">-</span><span class="dv">22</span>})]<span class="op">,</span> <span class="dt">color</span><span class="op">:</span> {<span class="dt">range</span><span class="op">:</span> PAL}})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-16" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Weekly spend by channel (₦m)" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Weekly spend by channel (₦m)
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb17" data-startfrom="258" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 257;"><span id="cb17-258"><a href="#cb17-258" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">range</span><span class="op">:</span> PAL}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"₦m"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span> <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span>}<span class="op">,</span></span>
+<span id="cb17-259"><a href="#cb17-259" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">areaY</span>(fm<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="kw">new</span> <span class="bu">Date</span>(d<span class="op">.</span><span class="at">wk</span>)<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">spend_ngn</span> <span class="op">/</span> <span class="fl">1e6</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"channel"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="op">.</span><span class="dv">85</span>})]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-17" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 50fr) minmax(3em, 50fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Inflation and policy rate (%)" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Inflation and policy rate (%)
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb18" data-startfrom="268" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 267;"><span id="cb18-268"><a href="#cb18-268" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">280</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> [<span class="st">"Headline CPI"</span><span class="op">,</span> <span class="st">"Food CPI"</span><span class="op">,</span> <span class="st">"MPR"</span>]<span class="op">,</span> <span class="dt">range</span><span class="op">:</span> [NAVY<span class="op">,</span> <span class="st">"#7FA8D4"</span><span class="op">,</span> GOLD]}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"%"</span>}<span class="op">,</span> <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span>}<span class="op">,</span></span>
+<span id="cb18-269"><a href="#cb18-269" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">lineY</span>(mac<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"m"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"v"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"s"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span>})]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-18" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div><div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-15"><li class="nav-item" role="presentation"><a href="#card-tabset-15-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="IMF outlook, Nigeria (shaded = projection)" aria-selected="true" class="nav-link active">IMF outlook, Nigeria (shaded = projection)</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-15-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="World Bank WDI" aria-selected="false" class="nav-link">World Bank WDI</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-15-3" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="GDP, US$ bn (Harvard Dataverse)" aria-selected="false" class="nav-link">GDP, US$ bn (Harvard Dataverse)</a></li></ul></div>
+
+
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-15"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-15-1"><div class="card-body html-fill-item html-fill-container" data-title="IMF outlook, Nigeria (shaded = projection)">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb19" data-startfrom="276" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 275;"><span id="cb19-276"><a href="#cb19-276" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">280</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">range</span><span class="op">:</span> [NAVY<span class="op">,</span> GOLD]}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"% y/y"</span>}<span class="op">,</span> <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span> <span class="dt">tickFormat</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"d"</span>)}<span class="op">,</span></span>
+<span id="cb19-277"><a href="#cb19-277" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">rectX</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">x1</span><span class="op">:</span> thisYear <span class="op">-</span> <span class="op">.</span><span class="dv">5</span><span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">max</span>(imfN<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">year</span>) <span class="op">+</span> <span class="op">.</span><span class="dv">5</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> GOLD<span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="op">.</span><span class="dv">12</span>})<span class="op">,</span></span>
+<span id="cb19-278"><a href="#cb19-278" aria-hidden="true" tabindex="-1"></a>          Plot<span class="op">.</span><span class="fu">lineY</span>(imfN<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"year"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"indicator_name"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb19-279"><a href="#cb19-279" aria-hidden="true" tabindex="-1"></a>          Plot<span class="op">.</span><span class="fu">dot</span>(imfN<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"year"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"indicator_name"</span><span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="fl">2.5</span>})]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-19" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-15-2"><div class="card-body html-fill-item html-fill-container" data-title="World Bank WDI">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb20" data-startfrom="285" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 284;"><span id="cb20-285"><a href="#cb20-285" aria-hidden="true" tabindex="-1"></a>viewof wdi <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(<span class="kw">new</span> <span class="bu">Map</span>(wdiInds<span class="op">.</span><span class="fu">map</span>(([k<span class="op">,</span> v]) <span class="kw">=&gt;</span> [v<span class="op">,</span> k]))<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Indicator"</span>})</span>
+<span id="cb20-286"><a href="#cb20-286" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">240</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">range</span><span class="op">:</span> PAL}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span>}<span class="op">,</span> <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span> <span class="dt">tickFormat</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"d"</span>)}<span class="op">,</span></span>
+<span id="cb20-287"><a href="#cb20-287" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">lineY</span>(openm<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">source</span> <span class="op">===</span> <span class="st">"World Bank"</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">indicator</span> <span class="op">===</span> wdi)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"year"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"country"</span><span class="op">,</span> <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span>})]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-20-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-20-2" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-15-3"><div class="card-body html-fill-item html-fill-container" data-title="GDP, US$ bn (Harvard Dataverse)">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb21" data-startfrom="291" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 290;"><span id="cb21-291"><a href="#cb21-291" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">280</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">range</span><span class="op">:</span> PAL}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"US$ bn"</span>}<span class="op">,</span> <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span> <span class="dt">tickFormat</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"d"</span>)}<span class="op">,</span></span>
+<span id="cb21-292"><a href="#cb21-292" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">lineY</span>(gdp<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"year"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"gdp_usd_bn"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"country"</span><span class="op">,</span> <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span>})]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-21" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div><div id="data-quality" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-data-quality">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 48fr) minmax(3em, 52fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Same question, every source (all-time revenue)" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Same question, every source (all-time revenue)
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb22" data-startfrom="301" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 300;"><span id="cb22-301"><a href="#cb22-301" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(srcs<span class="op">,</span> {<span class="dt">columns</span><span class="op">:</span> [<span class="st">"source"</span><span class="op">,</span> <span class="st">"status"</span><span class="op">,</span> <span class="st">"rows"</span><span class="op">,</span> <span class="st">"revenue_bn"</span>]<span class="op">,</span> <span class="dt">header</span><span class="op">:</span> {<span class="dt">revenue_bn</span><span class="op">:</span> <span class="st">"Revenue ₦bn"</span>}})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-22" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Data tests (the publish gate)" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Data tests (the publish gate)
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb23" data-startfrom="307" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 306;"><span id="cb23-307"><a href="#cb23-307" aria-hidden="true" tabindex="-1"></a>chip <span class="op">=</span> s <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;span style="display:inline-block;padding:1px 8px;border-radius:10px;color:#fff;font-weight:700;font-size:.75rem;background:</span><span class="sc">${</span>s <span class="op">===</span> <span class="st">"PASS"</span> <span class="op">?</span> <span class="st">"#6FBFAE"</span> <span class="op">:</span> s <span class="op">===</span> <span class="st">"WARN"</span> <span class="op">?</span> GOLD <span class="op">:</span> <span class="st">"#C2410C"</span><span class="sc">}</span><span class="vs">"&gt;</span><span class="sc">${</span>s<span class="sc">}</span><span class="vs">&lt;/span&gt;`</span></span>
+<span id="cb23-308"><a href="#cb23-308" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;table class="table table-sm" style="font-size:.85rem"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Test&lt;/th&gt;&lt;th&gt;Detail&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;</span></span>
+<span id="cb23-309"><a href="#cb23-309" aria-hidden="true" tabindex="-1"></a><span class="sc">${</span>tests<span class="op">.</span><span class="fu">map</span>(t <span class="kw">=&gt;</span> { <span class="kw">const</span> s <span class="op">=</span> t<span class="op">.</span><span class="at">status</span> <span class="op">===</span> <span class="st">"FAIL"</span> <span class="op">&amp;&amp;</span> t<span class="op">.</span><span class="at">severity</span> <span class="op">===</span> <span class="st">"warn"</span> <span class="op">?</span> <span class="st">"WARN"</span> <span class="op">:</span> t<span class="op">.</span><span class="at">status</span><span class="op">;</span> <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;tr&gt;&lt;td&gt;</span><span class="sc">${</span><span class="fu">chip</span>(s)<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>t<span class="op">.</span><span class="at">test</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>t<span class="op">.</span><span class="at">detail</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;/tr&gt;`</span> })<span class="sc">}</span></span>
+<span id="cb23-310"><a href="#cb23-310" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/tbody&gt;&lt;/table&gt;&lt;p style="font-size:.8rem;color:#475569"&gt;FAIL blocks publishing. WARN reports only. Freshness warns because the course data ends in March 2026.&lt;/p&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-23-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-23-2" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Reconciliation, FY2025 Excel regional report vs warehouse (gap %, tolerance ±1%)" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Reconciliation, FY2025 Excel regional report vs warehouse (gap %, tolerance ±1%)
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb24" data-startfrom="316" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 315;"><span id="cb24-316"><a href="#cb24-316" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">width</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">110</span><span class="op">,</span> <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Excel minus warehouse, %"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span><span class="fl">1.2</span><span class="op">,</span> <span class="fl">1.2</span>]<span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="kw">null</span>}<span class="op">,</span></span>
+<span id="cb24-317"><a href="#cb24-317" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="op">-</span><span class="dv">1</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> {<span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"4,4"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#999"</span>})<span class="op">,</span> Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="dv">0</span>])<span class="op">,</span></span>
+<span id="cb24-318"><a href="#cb24-318" aria-hidden="true" tabindex="-1"></a>          Plot<span class="op">.</span><span class="fu">barX</span>(recon<span class="op">,</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"depot"</span><span class="op">,</span> <span class="dt">x</span><span class="op">:</span> <span class="st">"gap_pct"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(d<span class="op">.</span><span class="at">gap_pct</span>) <span class="op">&gt;</span> <span class="dv">1</span> <span class="op">?</span> <span class="st">"#E58B3C"</span> <span class="op">:</span> <span class="st">"#7FA8D4"</span><span class="op">,</span> <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"x"</span>}<span class="op">,</span> <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span>})]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-24" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Learn how this was built" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+Learn how this was built
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb25" data-startfrom="323" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 322;"><span id="cb25-323"><a href="#cb25-323" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;div style="font-size:.95rem;line-height:1.7"&gt;</span></span>
+<span id="cb25-324"><a href="#cb25-324" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;p&gt;This dashboard is the &lt;b&gt;serving layer&lt;/b&gt; of the governed analytics platform taught in the master tutorial.&lt;/p&gt;</span></span>
+<span id="cb25-325"><a href="#cb25-325" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;ul&gt;</span></span>
+<span id="cb25-326"><a href="#cb25-326" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;li&gt;&lt;a href="../book/09-tests.html"&gt;Chapter 9&lt;/a&gt;: how these data tests and the publish gate work&lt;/li&gt;</span></span>
+<span id="cb25-327"><a href="#cb25-327" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;li&gt;&lt;a href="../book/10-semantic.html"&gt;Chapter 10&lt;/a&gt;: the semantic layer behind every KPI on this page&lt;/li&gt;</span></span>
+<span id="cb25-328"><a href="#cb25-328" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;li&gt;&lt;a href="../book/11-vector-ai.html"&gt;Chapter 11&lt;/a&gt;: the review search, and why it misses Pidgin&lt;/li&gt;</span></span>
+<span id="cb25-329"><a href="#cb25-329" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;li&gt;&lt;a href="../book/13-dashboards.html"&gt;Chapter 13&lt;/a&gt;: static vs Shiny dashboards, and the live version of this one&lt;/li&gt;</span></span>
+<span id="cb25-330"><a href="#cb25-330" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;li&gt;&lt;a href="../notebook.html"&gt;The build notebook&lt;/a&gt;: every database, step by step, with its prompts&lt;/li&gt;</span></span>
+<span id="cb25-331"><a href="#cb25-331" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/ul&gt;&lt;/div&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-25" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div><aside id="bslib-sidebar-1" class="sidebar html-fill-container html-fill-item"><div class="html-fill-container html-fill-item">
+<div style="display:none">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="34" data-source-offset="-178"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 33;"><span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>cube   <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/cube_week.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({<span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>prod   <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/cube_product.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({<span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>layer  <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/metrics.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>tests  <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/tests.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>srcs   <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/sources.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>build  <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/build.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>recon  <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/recon.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({<span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>mkt    <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/marketing.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({<span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>macro  <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/macro.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({<span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>gdp    <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/gdp.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({<span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>reviews <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/reviews.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>NAVY <span class="op">=</span> <span class="st">"#0B2C55"</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>GOLD <span class="op">=</span> <span class="st">"#E8A33D"</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>PAL <span class="op">=</span> [<span class="st">"#0B2C55"</span><span class="op">,</span> <span class="st">"#E8A33D"</span><span class="op">,</span> <span class="st">"#7FA8D4"</span><span class="op">,</span> <span class="st">"#6FBFAE"</span><span class="op">,</span> <span class="st">"#9B8EC4"</span><span class="op">,</span> <span class="st">"#A9C86B"</span><span class="op">,</span> <span class="st">"#F2C14E"</span><span class="op">,</span> <span class="st">"#E58B3C"</span>]</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>wkStr <span class="op">=</span> d <span class="kw">=&gt;</span> (d <span class="kw">instanceof</span> <span class="bu">Date</span> <span class="op">?</span> d<span class="op">.</span><span class="fu">toISOString</span>()<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">10</span>) <span class="op">:</span> <span class="bu">String</span>(d))</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>monthsAll <span class="op">=</span> [<span class="op">...</span><span class="kw">new</span> <span class="bu">Set</span>(cube<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> <span class="fu">wkStr</span>(d<span class="op">.</span><span class="at">wk</span>)<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">7</span>)))]<span class="op">.</span><span class="fu">sort</span>()</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>regionsAll <span class="op">=</span> [<span class="op">...</span><span class="kw">new</span> <span class="bu">Set</span>(cube<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">region</span>))]<span class="op">.</span><span class="fu">sort</span>()</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>catsAll <span class="op">=</span> [<span class="op">...</span><span class="kw">new</span> <span class="bu">Set</span>(cube<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">category</span>))]<span class="op">.</span><span class="fu">sort</span>()</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>agg <span class="op">=</span> rows <span class="kw">=&gt;</span> {</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> s <span class="op">=</span> {<span class="dt">rev</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">gp</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">units</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">n</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">so</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">disc</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">rev_promo</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">n_promo</span><span class="op">:</span> <span class="dv">0</span>}</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">const</span> r <span class="kw">of</span> rows) { s<span class="op">.</span><span class="at">rev</span> <span class="op">+=</span> r<span class="op">.</span><span class="at">rev</span><span class="op">;</span> s<span class="op">.</span><span class="at">gp</span> <span class="op">+=</span> r<span class="op">.</span><span class="at">gp</span><span class="op">;</span> s<span class="op">.</span><span class="at">units</span> <span class="op">+=</span> r<span class="op">.</span><span class="at">units</span><span class="op">;</span> s<span class="op">.</span><span class="at">n</span> <span class="op">+=</span> r<span class="op">.</span><span class="at">n</span><span class="op">;</span> s<span class="op">.</span><span class="at">so</span> <span class="op">+=</span> r<span class="op">.</span><span class="at">so</span><span class="op">;</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (r<span class="op">.</span><span class="at">promo</span> <span class="op">===</span> <span class="dv">1</span>) { s<span class="op">.</span><span class="at">rev_promo</span> <span class="op">+=</span> r<span class="op">.</span><span class="at">rev</span><span class="op">;</span> s<span class="op">.</span><span class="at">n_promo</span> <span class="op">+=</span> r<span class="op">.</span><span class="at">n</span><span class="op">;</span> s<span class="op">.</span><span class="at">disc</span> <span class="op">+=</span> (r<span class="op">.</span><span class="at">disc</span> <span class="op">||</span> <span class="dv">0</span>) } }</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> s</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>METRIC <span class="op">=</span> {</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  <span class="co">// JS mirrors of the SQL in metrics.yml: same names, and sum first, divide last</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> m <span class="op">=</span> {}</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  m<span class="op">.</span><span class="at">revenue</span> <span class="op">=</span> s <span class="kw">=&gt;</span> s<span class="op">.</span><span class="at">rev</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>  m<span class="op">.</span><span class="at">units</span> <span class="op">=</span> s <span class="kw">=&gt;</span> s<span class="op">.</span><span class="at">units</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>  m<span class="op">.</span><span class="at">gross_profit</span> <span class="op">=</span> s <span class="kw">=&gt;</span> s<span class="op">.</span><span class="at">gp</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>  m<span class="op">.</span><span class="at">gross_margin_pct</span> <span class="op">=</span> s <span class="kw">=&gt;</span> <span class="dv">100</span> <span class="op">*</span> s<span class="op">.</span><span class="at">gp</span> <span class="op">/</span> s<span class="op">.</span><span class="at">rev</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>  m<span class="op">.</span><span class="at">avg_selling_price</span> <span class="op">=</span> s <span class="kw">=&gt;</span> s<span class="op">.</span><span class="at">rev</span> <span class="op">/</span> s<span class="op">.</span><span class="at">units</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  m<span class="op">.</span><span class="at">stockout_rate_pct</span> <span class="op">=</span> s <span class="kw">=&gt;</span> <span class="dv">100</span> <span class="op">*</span> s<span class="op">.</span><span class="at">so</span> <span class="op">/</span> s<span class="op">.</span><span class="at">n</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>  m<span class="op">.</span><span class="at">promo_share_pct</span> <span class="op">=</span> s <span class="kw">=&gt;</span> <span class="dv">100</span> <span class="op">*</span> s<span class="op">.</span><span class="at">rev_promo</span> <span class="op">/</span> s<span class="op">.</span><span class="at">rev</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>  m<span class="op">.</span><span class="at">avg_discount_pct</span> <span class="op">=</span> s <span class="kw">=&gt;</span> s<span class="op">.</span><span class="at">n_promo</span> <span class="op">?</span> <span class="dv">100</span> <span class="op">*</span> s<span class="op">.</span><span class="at">disc</span> <span class="op">/</span> s<span class="op">.</span><span class="at">n_promo</span> <span class="op">:</span> <span class="kw">NaN</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> m</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>fmt <span class="op">=</span> (v<span class="op">,</span> f) <span class="kw">=&gt;</span> <span class="op">!</span><span class="pp">isFinite</span>(v) <span class="op">?</span> <span class="st">"—"</span> <span class="op">:</span> f <span class="op">===</span> <span class="st">"naira"</span> <span class="op">?</span> (<span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(v) <span class="op">&gt;=</span> <span class="fl">1e9</span> <span class="op">?</span> <span class="vs">`₦</span><span class="sc">${</span>(v<span class="op">/</span><span class="fl">1e9</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">bn`</span> <span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(v) <span class="op">&gt;=</span> <span class="fl">1e6</span> <span class="op">?</span> <span class="vs">`₦</span><span class="sc">${</span>(v<span class="op">/</span><span class="fl">1e6</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">m`</span> <span class="op">:</span> <span class="vs">`₦</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(v)<span class="op">.</span><span class="fu">toLocaleString</span>()<span class="sc">}</span><span class="vs">`</span>)</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>  <span class="op">:</span> f <span class="op">===</span> <span class="st">"pct"</span> <span class="op">?</span> <span class="vs">`</span><span class="sc">${</span>v<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">%`</span> <span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(v)<span class="op">.</span><span class="fu">toLocaleString</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-9" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-10" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-11" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-12" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-13" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-14" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-15" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-16" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-17" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-18" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-19" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-20" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-21" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div style="display:none">
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="81" data-source-offset="-69"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 80;"><span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>keep <span class="op">=</span> r <span class="kw">=&gt;</span> { <span class="kw">const</span> m <span class="op">=</span> <span class="fu">wkStr</span>(r<span class="op">.</span><span class="at">wk</span> <span class="op">!==</span> <span class="kw">undefined</span> <span class="op">?</span> r<span class="op">.</span><span class="at">wk</span> <span class="op">:</span> r<span class="op">.</span><span class="at">mon</span>)<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">7</span>)<span class="op">;</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> m <span class="op">&gt;=</span> m0 <span class="op">&amp;&amp;</span> m <span class="op">&lt;=</span> m1 <span class="op">&amp;&amp;</span> regions<span class="op">.</span><span class="fu">includes</span>(r<span class="op">.</span><span class="at">region</span>) <span class="op">&amp;&amp;</span> cats<span class="op">.</span><span class="fu">includes</span>(r<span class="op">.</span><span class="at">category</span>) <span class="op">&amp;&amp;</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>         (promo <span class="op">===</span> <span class="st">"All"</span> <span class="op">||</span> (promo <span class="op">===</span> <span class="st">"On promo"</span> <span class="op">?</span> r<span class="op">.</span><span class="at">promo</span> <span class="op">===</span> <span class="dv">1</span> <span class="op">:</span> r<span class="op">.</span><span class="at">promo</span> <span class="op">===</span> <span class="dv">0</span>)) }</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>fcube <span class="op">=</span> cube<span class="op">.</span><span class="fu">filter</span>(keep)</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>fprod <span class="op">=</span> prod<span class="op">.</span><span class="fu">filter</span>(keep)</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>fm <span class="op">=</span> mkt<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> { <span class="kw">const</span> m <span class="op">=</span> <span class="fu">wkStr</span>(d<span class="op">.</span><span class="at">wk</span>)<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">7</span>)<span class="op">;</span> <span class="cf">return</span> m <span class="op">&gt;=</span> m0 <span class="op">&amp;&amp;</span> m <span class="op">&lt;=</span> m1 })</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>ch <span class="op">=</span> d3<span class="op">.</span><span class="fu">rollups</span>(fm<span class="op">,</span> v <span class="kw">=&gt;</span> ({<span class="dt">spend</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">sum</span>(v<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">spend_ngn</span>) <span class="op">/</span> <span class="fl">1e6</span><span class="op">,</span> <span class="dt">conv</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">sum</span>(v<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">conversions</span>)})<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">channel</span>)</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">map</span>(([channel<span class="op">,</span> s]) <span class="kw">=&gt;</span> ({channel<span class="op">,</span> <span class="op">...</span>s<span class="op">,</span> <span class="dt">cpa</span><span class="op">:</span> s<span class="op">.</span><span class="at">spend</span> <span class="op">*</span> <span class="fl">1e6</span> <span class="op">/</span> s<span class="op">.</span><span class="at">conv</span>}))</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>mac <span class="op">=</span> macro<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> { <span class="kw">const</span> m <span class="op">=</span> <span class="fu">wkStr</span>(d<span class="op">.</span><span class="at">mon</span>)<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">7</span>)<span class="op">;</span> <span class="cf">return</span> m <span class="op">&gt;=</span> m0 <span class="op">&amp;&amp;</span> m <span class="op">&lt;=</span> m1 })</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">flatMap</span>(d <span class="kw">=&gt;</span> [[<span class="st">"Headline CPI"</span><span class="op">,</span> d<span class="op">.</span><span class="at">headline</span>]<span class="op">,</span> [<span class="st">"Food CPI"</span><span class="op">,</span> d<span class="op">.</span><span class="at">food</span>]<span class="op">,</span> [<span class="st">"MPR"</span><span class="op">,</span> d<span class="op">.</span><span class="at">mpr</span>]]<span class="op">.</span><span class="fu">map</span>(([s<span class="op">,</span> v]) <span class="kw">=&gt;</span> ({<span class="dt">m</span><span class="op">:</span> <span class="kw">new</span> <span class="bu">Date</span>(d<span class="op">.</span><span class="at">mon</span>)<span class="op">,</span> s<span class="op">,</span> v})))</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>openm <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/open_macro.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({<span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>thisYear <span class="op">=</span> <span class="kw">new</span> <span class="bu">Date</span>()<span class="op">.</span><span class="fu">getFullYear</span>()</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>imfN <span class="op">=</span> openm<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">source</span> <span class="op">===</span> <span class="st">"IMF"</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">iso3</span> <span class="op">===</span> <span class="st">"NGA"</span> <span class="op">&amp;&amp;</span> [<span class="st">"PCPIPCH"</span><span class="op">,</span> <span class="st">"NGDP_RPCH"</span>]<span class="op">.</span><span class="fu">includes</span>(d<span class="op">.</span><span class="at">indicator</span>) <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">year</span> <span class="op">&gt;=</span> <span class="dv">2015</span>)</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>wdiInds <span class="op">=</span> [<span class="op">...</span><span class="kw">new</span> <span class="bu">Map</span>(openm<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">source</span> <span class="op">===</span> <span class="st">"World Bank"</span>)<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> [d<span class="op">.</span><span class="at">indicator</span><span class="op">,</span> d<span class="op">.</span><span class="at">indicator_name</span>]))<span class="op">.</span><span class="fu">entries</span>()]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-9" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-10" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="100" data-source-offset="-104"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 99;"><span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>viewof m0 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(monthsAll<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"From"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> monthsAll[<span class="dv">0</span>]})</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>viewof m1 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(monthsAll<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"To"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> monthsAll[monthsAll<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>]})</span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>viewof regions <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(regionsAll<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Region"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> regionsAll})</span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>viewof cats <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(catsAll<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Category"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> catsAll})</span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>viewof promo <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>([<span class="st">"All"</span><span class="op">,</span> <span class="st">"On promo"</span><span class="op">,</span> <span class="st">"Full price"</span>]<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Promotion"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"All"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="107" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 106;"><span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;div style="font-size:.8rem;line-height:1.5;color:#475569"&gt;</span></span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;b&gt;</span><span class="sc">${</span>fcube<span class="op">.</span><span class="at">length</span><span class="op">.</span><span class="fu">toLocaleString</span>()<span class="sc">}</span><span class="vs">&lt;/b&gt; cube rows in view.&lt;br&gt;</span></span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a><span class="vs">  Warehouse built </span><span class="sc">${</span>build<span class="op">.</span><span class="at">length</span> <span class="op">?</span> <span class="bu">String</span>(build[<span class="dv">0</span>]<span class="op">.</span><span class="at">built_at</span>)<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span><span class="dv">16</span>) <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs"> · </span><span class="sc">${</span>build<span class="op">.</span><span class="at">length</span> <span class="op">?</span> build[<span class="dv">0</span>]<span class="op">.</span><span class="at">fact_rows</span><span class="op">.</span><span class="fu">toLocaleString</span>() <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs"> fact rows.&lt;br&gt;</span></span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a><span class="vs">  Static edition: filters run in your browser. The live Shiny edition can also switch between data sources: see the &lt;a href="../index.html"&gt;platform page&lt;/a&gt;.&lt;/div&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
+
+</div>
+</div>
+</div></aside>
+<button class="collapse-toggle" type="button" title="Toggle sidebar" aria-expanded="true" aria-controls="bslib-sidebar-1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-chevron-left collapse-icon" style="fill:currentColor;" aria-hidden="true" role="img">
+      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+    </svg>
+</button>
+<script data-bslib-sidebar-init="">
+bslib.Sidebar.initCollapsibleAll()
+</script>
+</div>
+
+
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIFBST01QVCBTMiDigJQgXCJMb2FkIHRoZSBjdWJlcyBvbmNlIGFuZCB3cml0ZSBvbmUgYWdncmVnYXRpb24gZnVuY3Rpb24gd2hvc2UgZm9ybXVsYXMgbWlycm9yXG4vLyBzZW1hbnRpYy9tZXRyaWNzLnltbCwgc28gZXZlcnkgbnVtYmVyIG9uIHRoZSBwYWdlIHVzZXMgdGhlIGdvdmVybmVkIGRlZmluaXRpb25zLlwiXG5jdWJlICAgPSBGaWxlQXR0YWNobWVudChcImRhdGEvY3ViZV93ZWVrLmNzdlwiKS5jc3Yoe3R5cGVkOiB0cnVlfSlcbnByb2QgICA9IEZpbGVBdHRhY2htZW50KFwiZGF0YS9jdWJlX3Byb2R1Y3QuY3N2XCIpLmNzdih7dHlwZWQ6IHRydWV9KVxubGF5ZXIgID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL21ldHJpY3MuanNvblwiKS5qc29uKClcbnRlc3RzICA9IEZpbGVBdHRhY2htZW50KFwiZGF0YS90ZXN0cy5qc29uXCIpLmpzb24oKVxuc3JjcyAgID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL3NvdXJjZXMuanNvblwiKS5qc29uKClcbmJ1aWxkICA9IEZpbGVBdHRhY2htZW50KFwiZGF0YS9idWlsZC5qc29uXCIpLmpzb24oKVxucmVjb24gID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL3JlY29uLmNzdlwiKS5jc3Yoe3R5cGVkOiB0cnVlfSlcbm1rdCAgICA9IEZpbGVBdHRhY2htZW50KFwiZGF0YS9tYXJrZXRpbmcuY3N2XCIpLmNzdih7dHlwZWQ6IHRydWV9KVxubWFjcm8gID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL21hY3JvLmNzdlwiKS5jc3Yoe3R5cGVkOiB0cnVlfSlcbmdkcCAgICA9IEZpbGVBdHRhY2htZW50KFwiZGF0YS9nZHAuY3N2XCIpLmNzdih7dHlwZWQ6IHRydWV9KVxucmV2aWV3cyA9IEZpbGVBdHRhY2htZW50KFwiZGF0YS9yZXZpZXdzLmpzb25cIikuanNvbigpXG5cbk5BVlkgPSBcIiMwQjJDNTVcIlxuR09MRCA9IFwiI0U4QTMzRFwiXG5QQUwgPSBbXCIjMEIyQzU1XCIsIFwiI0U4QTMzRFwiLCBcIiM3RkE4RDRcIiwgXCIjNkZCRkFFXCIsIFwiIzlCOEVDNFwiLCBcIiNBOUM4NkJcIiwgXCIjRjJDMTRFXCIsIFwiI0U1OEIzQ1wiXVxud2tTdHIgPSBkID0+IChkIGluc3RhbmNlb2YgRGF0ZSA/IGQudG9JU09TdHJpbmcoKS5zbGljZSgwLCAxMCkgOiBTdHJpbmcoZCkpXG5tb250aHNBbGwgPSBbLi4ubmV3IFNldChjdWJlLm1hcChkID0+IHdrU3RyKGQud2spLnNsaWNlKDAsIDcpKSldLnNvcnQoKVxucmVnaW9uc0FsbCA9IFsuLi5uZXcgU2V0KGN1YmUubWFwKGQgPT4gZC5yZWdpb24pKV0uc29ydCgpXG5jYXRzQWxsID0gWy4uLm5ldyBTZXQoY3ViZS5tYXAoZCA9PiBkLmNhdGVnb3J5KSldLnNvcnQoKVxuXG5hZ2cgPSByb3dzID0+IHtcbiAgY29uc3QgcyA9IHtyZXY6IDAsIGdwOiAwLCB1bml0czogMCwgbjogMCwgc286IDAsIGRpc2M6IDAsIHJldl9wcm9tbzogMCwgbl9wcm9tbzogMH1cbiAgZm9yIChjb25zdCByIG9mIHJvd3MpIHsgcy5yZXYgKz0gci5yZXY7IHMuZ3AgKz0gci5ncDsgcy51bml0cyArPSByLnVuaXRzOyBzLm4gKz0gci5uOyBzLnNvICs9IHIuc287XG4gICAgaWYgKHIucHJvbW8gPT09IDEpIHsgcy5yZXZfcHJvbW8gKz0gci5yZXY7IHMubl9wcm9tbyArPSByLm47IHMuZGlzYyArPSAoci5kaXNjIHx8IDApIH0gfVxuICByZXR1cm4gc1xufVxuTUVUUklDID0ge1xuICAvLyBKUyBtaXJyb3JzIG9mIHRoZSBTUUwgaW4gbWV0cmljcy55bWw6IHNhbWUgbmFtZXMsIGFuZCBzdW0gZmlyc3QsIGRpdmlkZSBsYXN0XG4gIGNvbnN0IG0gPSB7fVxuICBtLnJldmVudWUgPSBzID0+IHMucmV2XG4gIG0udW5pdHMgPSBzID0+IHMudW5pdHNcbiAgbS5ncm9zc19wcm9maXQgPSBzID0+IHMuZ3BcbiAgbS5ncm9zc19tYXJnaW5fcGN0ID0gcyA9PiAxMDAgKiBzLmdwIC8gcy5yZXZcbiAgbS5hdmdfc2VsbGluZ19wcmljZSA9IHMgPT4gcy5yZXYgLyBzLnVuaXRzXG4gIG0uc3RvY2tvdXRfcmF0ZV9wY3QgPSBzID0+IDEwMCAqIHMuc28gLyBzLm5cbiAgbS5wcm9tb19zaGFyZV9wY3QgPSBzID0+IDEwMCAqIHMucmV2X3Byb21vIC8gcy5yZXZcbiAgbS5hdmdfZGlzY291bnRfcGN0ID0gcyA9PiBzLm5fcHJvbW8gPyAxMDAgKiBzLmRpc2MgLyBzLm5fcHJvbW8gOiBOYU5cbiAgcmV0dXJuIG1cbn1cbmZtdCA9ICh2LCBmKSA9PiAhaXNGaW5pdGUodikgPyBcIuKAlFwiIDogZiA9PT0gXCJuYWlyYVwiID8gKE1hdGguYWJzKHYpID49IDFlOSA/IGDigqYkeyh2LzFlOSkudG9GaXhlZCgyKX1ibmAgOiBNYXRoLmFicyh2KSA+PSAxZTYgPyBg4oKmJHsodi8xZTYpLnRvRml4ZWQoMSl9bWAgOiBg4oKmJHtNYXRoLnJvdW5kKHYpLnRvTG9jYWxlU3RyaW5nKCl9YClcbiAgOiBmID09PSBcInBjdFwiID8gYCR7di50b0ZpeGVkKDEpfSVgIDogTWF0aC5yb3VuZCh2KS50b0xvY2FsZVN0cmluZygpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiIvLyBEZXJpdmVkIGRhdGEgKGhpZGRlbik6IGZpbHRlcnMgYXBwbGllZCBvbmNlLCByZXVzZWQgYnkgZXZlcnkgY2FyZFxua2VlcCA9IHIgPT4geyBjb25zdCBtID0gd2tTdHIoci53ayAhPT0gdW5kZWZpbmVkID8gci53ayA6IHIubW9uKS5zbGljZSgwLCA3KTtcbiAgcmV0dXJuIG0gPj0gbTAgJiYgbSA8PSBtMSAmJiByZWdpb25zLmluY2x1ZGVzKHIucmVnaW9uKSAmJiBjYXRzLmluY2x1ZGVzKHIuY2F0ZWdvcnkpICYmXG4gICAgICAgICAocHJvbW8gPT09IFwiQWxsXCIgfHwgKHByb21vID09PSBcIk9uIHByb21vXCIgPyByLnByb21vID09PSAxIDogci5wcm9tbyA9PT0gMCkpIH1cbmZjdWJlID0gY3ViZS5maWx0ZXIoa2VlcClcbmZwcm9kID0gcHJvZC5maWx0ZXIoa2VlcClcbmZtID0gbWt0LmZpbHRlcihkID0+IHsgY29uc3QgbSA9IHdrU3RyKGQud2spLnNsaWNlKDAsIDcpOyByZXR1cm4gbSA+PSBtMCAmJiBtIDw9IG0xIH0pXG5jaCA9IGQzLnJvbGx1cHMoZm0sIHYgPT4gKHtzcGVuZDogZDMuc3VtKHYsIGQgPT4gZC5zcGVuZF9uZ24pIC8gMWU2LCBjb252OiBkMy5zdW0odiwgZCA9PiBkLmNvbnZlcnNpb25zKX0pLCBkID0+IGQuY2hhbm5lbClcbiAgLm1hcCgoW2NoYW5uZWwsIHNdKSA9PiAoe2NoYW5uZWwsIC4uLnMsIGNwYTogcy5zcGVuZCAqIDFlNiAvIHMuY29udn0pKVxubWFjID0gbWFjcm8uZmlsdGVyKGQgPT4geyBjb25zdCBtID0gd2tTdHIoZC5tb24pLnNsaWNlKDAsIDcpOyByZXR1cm4gbSA+PSBtMCAmJiBtIDw9IG0xIH0pXG4gIC5mbGF0TWFwKGQgPT4gW1tcIkhlYWRsaW5lIENQSVwiLCBkLmhlYWRsaW5lXSwgW1wiRm9vZCBDUElcIiwgZC5mb29kXSwgW1wiTVBSXCIsIGQubXByXV0ubWFwKChbcywgdl0pID0+ICh7bTogbmV3IERhdGUoZC5tb24pLCBzLCB2fSkpKVxub3Blbm0gPSBGaWxlQXR0YWNobWVudChcImRhdGEvb3Blbl9tYWNyby5jc3ZcIikuY3N2KHt0eXBlZDogdHJ1ZX0pXG50aGlzWWVhciA9IG5ldyBEYXRlKCkuZ2V0RnVsbFllYXIoKVxuaW1mTiA9IG9wZW5tLmZpbHRlcihkID0+IGQuc291cmNlID09PSBcIklNRlwiICYmIGQuaXNvMyA9PT0gXCJOR0FcIiAmJiBbXCJQQ1BJUENIXCIsIFwiTkdEUF9SUENIXCJdLmluY2x1ZGVzKGQuaW5kaWNhdG9yKSAmJiBkLnllYXIgPj0gMjAxNSlcbndkaUluZHMgPSBbLi4ubmV3IE1hcChvcGVubS5maWx0ZXIoZCA9PiBkLnNvdXJjZSA9PT0gXCJXb3JsZCBCYW5rXCIpLm1hcChkID0+IFtkLmluZGljYXRvciwgZC5pbmRpY2F0b3JfbmFtZV0pKS5lbnRyaWVzKCldXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiIvLyBQUk9NUFQgUzMg4oCUIFwiU2lkZWJhciBmaWx0ZXJzIHRoYXQgZXZlcnkgcGFnZSByZXNwZWN0czogbW9udGggcmFuZ2UsIHJlZ2lvbnMsIGNhdGVnb3JpZXMsIHByb21vdGlvbi5cIlxudmlld29mIG0wID0gSW5wdXRzLnNlbGVjdChtb250aHNBbGwsIHtsYWJlbDogXCJGcm9tXCIsIHZhbHVlOiBtb250aHNBbGxbMF19KVxudmlld29mIG0xID0gSW5wdXRzLnNlbGVjdChtb250aHNBbGwsIHtsYWJlbDogXCJUb1wiLCB2YWx1ZTogbW9udGhzQWxsW21vbnRoc0FsbC5sZW5ndGggLSAxXX0pXG52aWV3b2YgcmVnaW9ucyA9IElucHV0cy5jaGVja2JveChyZWdpb25zQWxsLCB7bGFiZWw6IFwiUmVnaW9uXCIsIHZhbHVlOiByZWdpb25zQWxsfSlcbnZpZXdvZiBjYXRzID0gSW5wdXRzLmNoZWNrYm94KGNhdHNBbGwsIHtsYWJlbDogXCJDYXRlZ29yeVwiLCB2YWx1ZTogY2F0c0FsbH0pXG52aWV3b2YgcHJvbW8gPSBJbnB1dHMucmFkaW8oW1wiQWxsXCIsIFwiT24gcHJvbW9cIiwgXCJGdWxsIHByaWNlXCJdLCB7bGFiZWw6IFwiUHJvbW90aW9uXCIsIHZhbHVlOiBcIkFsbFwifSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Imh0bWxgPGRpdiBzdHlsZT1cImZvbnQtc2l6ZTouOHJlbTtsaW5lLWhlaWdodDoxLjU7Y29sb3I6IzQ3NTU2OVwiPlxuICA8Yj4ke2ZjdWJlLmxlbmd0aC50b0xvY2FsZVN0cmluZygpfTwvYj4gY3ViZSByb3dzIGluIHZpZXcuPGJyPlxuICBXYXJlaG91c2UgYnVpbHQgJHtidWlsZC5sZW5ndGggPyBTdHJpbmcoYnVpbGRbMF0uYnVpbHRfYXQpLnNsaWNlKDAsMTYpIDogXCJcIn0gwrcgJHtidWlsZC5sZW5ndGggPyBidWlsZFswXS5mYWN0X3Jvd3MudG9Mb2NhbGVTdHJpbmcoKSA6IFwiXCJ9IGZhY3Qgcm93cy48YnI+XG4gIFN0YXRpYyBlZGl0aW9uOiBmaWx0ZXJzIHJ1biBpbiB5b3VyIGJyb3dzZXIuIFRoZSBsaXZlIFNoaW55IGVkaXRpb24gY2FuIGFsc28gc3dpdGNoIGJldHdlZW4gZGF0YSBzb3VyY2VzOiBzZWUgdGhlIDxhIGhyZWY9XCIuLi9pbmRleC5odG1sXCI+cGxhdGZvcm0gcGFnZTwvYT4uPC9kaXY+YFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC01IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiLy8gUFJPTVBUIFM0IOKAlCBcIkZpdmUgS1BJIGNhcmRzIGZyb20gdGhlIGdvdmVybmVkIG1ldHJpY3MsIHdpdGggZWFjaCBkZWZpbml0aW9uIGFzIGEgdG9vbHRpcC5cIlxua3AgPSBhZ2coZmN1YmUpXG5jYXJkID0gKG0sIGJnLCBmZykgPT4gaHRtbGA8ZGl2IHRpdGxlPVwiJHtsYXllci5tZXRyaWNzW21dLmRlc2NyaXB0aW9ufVwiIHN0eWxlPVwiYmFja2dyb3VuZDoke2JnfTtjb2xvcjoke2ZnfTtib3JkZXItcmFkaXVzOjhweDtwYWRkaW5nOjEycHggMTRweDtoZWlnaHQ6MTAwJVwiPlxuICA8ZGl2IHN0eWxlPVwiZm9udC1zaXplOi43OHJlbTtvcGFjaXR5Oi44NVwiPiR7bGF5ZXIubWV0cmljc1ttXS5sYWJlbH08L2Rpdj5cbiAgPGRpdiBzdHlsZT1cImZvbnQtZmFtaWx5OidTb3VyY2UgU2VyaWYgNCcsR2VvcmdpYSxzZXJpZjtmb250LXNpemU6MS42NXJlbTtmb250LXdlaWdodDo3MDBcIj4ke2ZtdChNRVRSSUNbbV0oa3ApLCBsYXllci5tZXRyaWNzW21dLmZvcm1hdCl9PC9kaXY+PC9kaXY+YFxuaHRtbGA8ZGl2IHN0eWxlPVwiZGlzcGxheTpncmlkO2dyaWQtdGVtcGxhdGUtY29sdW1uczpyZXBlYXQoYXV0by1maXQsbWlubWF4KDE1MHB4LDFmcikpO2dhcDoxMHB4O2hlaWdodDoxMDAlXCI+XG4gICR7Y2FyZChcInJldmVudWVcIiwgTkFWWSwgXCIjZmZmXCIpfSR7Y2FyZChcImdyb3NzX21hcmdpbl9wY3RcIiwgXCIjRjdGNEVEXCIsIE5BVlkpfSR7Y2FyZChcInVuaXRzXCIsIFwiI0Y3RjRFRFwiLCBOQVZZKX1cbiAgJHtjYXJkKFwic3RvY2tvdXRfcmF0ZV9wY3RcIiwgXCIjRkNFQkQ3XCIsIFwiIzhBNEIwRlwiKX0ke2NhcmQoXCJwcm9tb19zaGFyZV9wY3RcIiwgR09MRCwgTkFWWSl9PC9kaXY+YFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoid2Vla2x5ID0gZDMucm9sbHVwcyhmY3ViZSwgdiA9PiBhZ2codikucmV2IC8gMWU2LCBkID0+IHdrU3RyKGQud2spKS5tYXAoKFt3LCByXSkgPT4gKHt3OiBuZXcgRGF0ZSh3KSwgcn0pKS5zb3J0KChhLCBiKSA9PiBhLncgLSBiLncpXG5QbG90LnBsb3Qoe3dpZHRoOiA2MjAsIGhlaWdodDogMzAwLCBtYXJnaW5MZWZ0OiA1MCwgeToge2xhYmVsOiBcIuKCpm1cIiwgZ3JpZDogdHJ1ZX0sIHg6IHtsYWJlbDogbnVsbH0sXG4gIG1hcmtzOiBbUGxvdC5saW5lWSh3ZWVrbHksIHt4OiBcIndcIiwgeTogXCJyXCIsIHN0cm9rZTogXCIjN0ZBOEQ0XCJ9KSxcbiAgICAgICAgICBQbG90LmxpbmVZKHdlZWtseSwgUGxvdC53aW5kb3dZKDQsIHt4OiBcIndcIiwgeTogXCJyXCIsIHN0cm9rZTogTkFWWSwgc3Ryb2tlV2lkdGg6IDIuNX0pKSxcbiAgICAgICAgICBQbG90LnRpcCh3ZWVrbHksIFBsb3QucG9pbnRlclgoe3g6IFwid1wiLCB5OiBcInJcIiwgdGl0bGU6IGQgPT4gYCR7ZC53LnRvSVNPU3RyaW5nKCkuc2xpY2UoMCwxMCl9OiDigqYke2Quci50b0ZpeGVkKDEpfW1gfSkpXX0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJieVJlZ2lvbiA9IGQzLnJvbGx1cHMoZmN1YmUsIHYgPT4gYWdnKHYpLCBkID0+IGQucmVnaW9uKS5tYXAoKFtyZWdpb24sIHNdKSA9PiAoe3JlZ2lvbiwgcmV2OiBzLnJldiAvIDFlOSwgZ206IDEwMCAqIHMuZ3AgLyBzLnJldn0pKVxuUGxvdC5wbG90KHt3aWR0aDogNjIwLCBoZWlnaHQ6IDMwMCwgbWFyZ2luTGVmdDogMTAwLCB4OiB7bGFiZWw6IFwi4oKmIGJpbGxpb25zXCIsIGdyaWQ6IHRydWV9LCB5OiB7bGFiZWw6IG51bGx9LFxuICBtYXJrczogW1Bsb3QuYmFyWChieVJlZ2lvbiwge3k6IFwicmVnaW9uXCIsIHg6IFwicmV2XCIsIGZpbGw6IE5BVlksIHNvcnQ6IHt5OiBcIi14XCJ9fSksXG4gICAgICAgICAgUGxvdC50ZXh0KGJ5UmVnaW9uLCB7eTogXCJyZWdpb25cIiwgeDogXCJyZXZcIiwgdGV4dDogZCA9PiBgJHtkLmdtLnRvRml4ZWQoMSl9JSBHTWAsIGR4OiAtNiwgdGV4dEFuY2hvcjogXCJlbmRcIiwgZmlsbDogXCJ3aGl0ZVwifSldfSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImhlYXQgPSBkMy5yb2xsdXBzKGZjdWJlLCB2ID0+IGFnZyh2KS5yZXYgLyAxZTYsIGQgPT4gZC5jYXRlZ29yeSwgZCA9PiBkLnJlZ2lvbikuZmxhdE1hcCgoW2MsIHJzXSkgPT4gcnMubWFwKChbciwgdl0pID0+ICh7Yywgciwgdn0pKSlcblBsb3QucGxvdCh7d2lkdGg6IDYyMCwgaGVpZ2h0OiAyNDAsIG1hcmdpbkxlZnQ6IDEwMCwgY29sb3I6IHtzY2hlbWU6IFwiYmx1ZXNcIiwgbGVnZW5kOiB0cnVlLCBsYWJlbDogXCLigqZtXCJ9LCB4OiB7bGFiZWw6IG51bGx9LCB5OiB7bGFiZWw6IG51bGx9LFxuICBtYXJrczogW1Bsb3QuY2VsbChoZWF0LCB7eDogXCJyXCIsIHk6IFwiY1wiLCBmaWxsOiBcInZcIiwgdGlwOiB0cnVlfSksIFBsb3QudGV4dChoZWF0LCB7eDogXCJyXCIsIHk6IFwiY1wiLCB0ZXh0OiBkID0+IGQudi50b0ZpeGVkKDApLCBmaWxsOiBkID0+IGQudiA+IGQzLm1heChoZWF0LCBoID0+IGgudikgKiAuNiA/IFwid2hpdGVcIiA6IE5BVll9KV19KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC05IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidG9wUHJvZCA9IGQzLnJvbGx1cHMoZnByb2QsIHYgPT4gYWdnKHYpLCBkID0+IGQucHJvZHVjdCkubWFwKChbcHJvZHVjdCwgc10pID0+ICh7cHJvZHVjdCwgcmV2ZW51ZTogcy5yZXYsIHVuaXRzOiBzLnVuaXRzLFxuICBnbV9wY3Q6ICsoMTAwICogcy5ncCAvIHMucmV2KS50b0ZpeGVkKDEpLCBzdG9ja291dF9wY3Q6ICsoMTAwICogcy5zbyAvIHMubikudG9GaXhlZCgxKSwgcHJvbW9fcGN0OiArKDEwMCAqIHMucmV2X3Byb21vIC8gcy5yZXYpLnRvRml4ZWQoMSl9KSlcbiAgLnNvcnQoKGEsIGIpID0+IGIucmV2ZW51ZSAtIGEucmV2ZW51ZSkuc2xpY2UoMCwgMTUpXG5JbnB1dHMudGFibGUodG9wUHJvZCwge2Zvcm1hdDoge3JldmVudWU6IGQgPT4gYOKCpiR7KGQvMWU2KS50b0ZpeGVkKDEpfW1gLCB1bml0czogZCA9PiBkLnRvTG9jYWxlU3RyaW5nKCl9LCByb3dzOiAxNX0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEwIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiLy8gUFJPTVBUIFM1IOKAlCBcIkxldCB1c2VycyBwaWNrIGFueSBnb3Zlcm5lZCBtZXRyaWMsIGEgZGltZW5zaW9uIGFuZCBhIHRpbWUgZ3JhaW47IHNob3cgdGhlIFNRTCB0aGVcbi8vIGxpdmUgYXBwIHdvdWxkIGNvbXBpbGUgZnJvbSBtZXRyaWNzLnltbCBuZXh0IHRvIHRoZSBjaGFydCBjb21wdXRlZCBpbiB0aGUgYnJvd3Nlci5cIlxubWV0cmljS2V5cyA9IE9iamVjdC5rZXlzKE1FVFJJQylcbnZpZXdvZiBtZXQgPSBJbnB1dHMuc2VsZWN0KG1ldHJpY0tleXMsIHtsYWJlbDogXCJNZXRyaWNcIiwgdmFsdWU6IFwicmV2ZW51ZVwiLCBmb3JtYXQ6IGsgPT4gbGF5ZXIubWV0cmljc1trXS5sYWJlbH0pXG52aWV3b2YgZGltID0gSW5wdXRzLnNlbGVjdChbXCJyZWdpb25cIiwgXCJjYXRlZ29yeVwiLCBcImRlcG90XCIsIFwicHJvbW9cIiwgXCIobm9uZSlcIl0sIHtsYWJlbDogXCJCcmVhayBkb3duIGJ5XCIsIHZhbHVlOiBcImNhdGVnb3J5XCJ9KVxudmlld29mIGdyYWluID0gSW5wdXRzLnNlbGVjdChbXCJxdWFydGVyXCIsIFwibW9udGhcIiwgXCJ3ZWVrXCIsIFwieWVhclwiLCBcIihub25lKVwiXSwge2xhYmVsOiBcIlRpbWUgZ3JhaW5cIiwgdmFsdWU6IFwicXVhcnRlclwifSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTEiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJwZXJpb2QgPSAodywgZykgPT4geyBjb25zdCBzID0gd2tTdHIodyk7IGNvbnN0IHkgPSBzLnNsaWNlKDAsIDQpLCBtID0gK3Muc2xpY2UoNSwgNyk7XG4gIHJldHVybiBnID09PSBcIndlZWtcIiA/IHMgOiBnID09PSBcIm1vbnRoXCIgPyBzLnNsaWNlKDAsIDcpIDogZyA9PT0gXCJxdWFydGVyXCIgPyBgJHt5fS1RJHtNYXRoLmNlaWwobSAvIDMpfWAgOiBnID09PSBcInllYXJcIiA/IHkgOiBcImFsbFwiIH1cbnNxbFRleHQgPSB7XG4gIGNvbnN0IHNlbCA9IFtdOyBjb25zdCBncnAgPSBbXTtcbiAgaWYgKGdyYWluICE9PSBcIihub25lKVwiKSB7IHNlbC5wdXNoKGBkYXRlX3RydW5jKCcke2dyYWlufScsIHdlZWtfc3RhcnRpbmcpIEFTIHBlcmlvZGApOyBncnAucHVzaChcInBlcmlvZFwiKSB9XG4gIGlmIChkaW0gIT09IFwiKG5vbmUpXCIpIHsgY29uc3QgY29sID0gZGltID09PSBcImRlcG90XCIgPyBcImRlcG90X25hbWVcIiA6IGRpbSA9PT0gXCJwcm9tb1wiID8gXCJvbl9wcm9tb3Rpb25cIiA6IGRpbTsgc2VsLnB1c2goYCR7Y29sfSBBUyAke2RpbX1gKTsgZ3JwLnB1c2goZGltKSB9XG4gIHNlbC5wdXNoKGAke2xheWVyLm1ldHJpY3NbbWV0XS5zcWx9IEFTICR7bWV0fWApXG4gIHJldHVybiBgU0VMRUNUXFxuICAke3NlbC5qb2luKFwiLFxcbiAgXCIpfVxcbkZST00gJHtsYXllci50YWJsZX1gICsgKGdycC5sZW5ndGggPyBgXFxuR1JPVVAgQlkgJHtncnAuam9pbihcIiwgXCIpfVxcbk9SREVSIEJZICR7Z3JwWzBdfWAgOiBcIlwiKVxufVxuaHRtbGA8cHJlIHN0eWxlPVwiYmFja2dyb3VuZDojMEIyQzU1O2NvbG9yOiNGN0Y0RUQ7cGFkZGluZzoxMnB4O2JvcmRlci1yYWRpdXM6NnB4O2ZvbnQtc2l6ZTouOHJlbTt3aGl0ZS1zcGFjZTpwcmUtd3JhcFwiPiR7c3FsVGV4dH08L3ByZT5cbjxwIHN0eWxlPVwiZm9udC1zaXplOi44NXJlbVwiPjxiPiR7bGF5ZXIubWV0cmljc1ttZXRdLmxhYmVsfTo8L2I+ICR7bGF5ZXIubWV0cmljc1ttZXRdLmRlc2NyaXB0aW9ufTxicj48aT5Pd25lcjogJHtsYXllci5vd25lcn08L2k+PC9wPmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJzZW1Sb3dzID0gZDMucm9sbHVwcyhmY3ViZSwgdiA9PiBNRVRSSUNbbWV0XShhZ2codikpLCBkID0+IHBlcmlvZChkLndrLCBncmFpbiksIGQgPT4gZGltID09PSBcIihub25lKVwiID8gXCJBbGxcIiA6IFN0cmluZyhkW2RpbV0pKVxuICAuZmxhdE1hcCgoW3AsIGdzXSkgPT4gZ3MubWFwKChbZywgdl0pID0+ICh7cGVyaW9kOiBwLCBncm91cDogZywgdmFsdWU6IHZ9KSkpLnNvcnQoKGEsIGIpID0+IGQzLmFzY2VuZGluZyhhLnBlcmlvZCwgYi5wZXJpb2QpKVxuZ3JhaW4gPT09IFwiKG5vbmUpXCJcbiAgPyBQbG90LnBsb3Qoe3dpZHRoOiA2MjAsIGhlaWdodDogMzgwLCBtYXJnaW5MZWZ0OiAxMTAsIHg6IHtsYWJlbDogbGF5ZXIubWV0cmljc1ttZXRdLmxhYmVsLCBncmlkOiB0cnVlfSwgeToge2xhYmVsOiBudWxsfSxcbiAgICAgIG1hcmtzOiBbUGxvdC5iYXJYKHNlbVJvd3MsIHt5OiBcImdyb3VwXCIsIHg6IFwidmFsdWVcIiwgZmlsbDogTkFWWSwgc29ydDoge3k6IFwiLXhcIn0sIHRpcDogdHJ1ZX0pXX0pXG4gIDogUGxvdC5wbG90KHt3aWR0aDogNjIwLCBoZWlnaHQ6IDM4MCwgbWFyZ2luTGVmdDogNjAsIGNvbG9yOiB7bGVnZW5kOiB0cnVlLCByYW5nZTogUEFMfSwgeToge2xhYmVsOiBsYXllci5tZXRyaWNzW21ldF0ubGFiZWwsIGdyaWQ6IHRydWV9LCB4OiB7bGFiZWw6IG51bGwsIHRpY2tSb3RhdGU6IC0zMH0sXG4gICAgICBtYXJrczogW1Bsb3QubGluZVkoc2VtUm93cywge3g6IFwicGVyaW9kXCIsIHk6IFwidmFsdWVcIiwgc3Ryb2tlOiBcImdyb3VwXCIsIHN0cm9rZVdpZHRoOiAyLCB0aXA6IHRydWV9KSwgUGxvdC5kb3Qoc2VtUm93cywge3g6IFwicGVyaW9kXCIsIHk6IFwidmFsdWVcIiwgZmlsbDogXCJncm91cFwiLCByOiAyLjV9KV19KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIFBST01QVCBTNiDigJQgXCJTZW1hbnRpYyBzZWFyY2ggb3ZlciB0aGUgNCw5MzggcmV2aWV3cyB3aXRoIHRoZSBzYW1lIFRGLUlERiArIGNvc2luZSBtZXRob2QgYXMgdGhlXG4vLyB3YXJlaG91c2UsIGNvbXB1dGVkIGluIHRoZSBicm93c2VyLlwiXG52aWV3b2YgcSA9IElucHV0cy50ZXh0KHtsYWJlbDogXCJTZWFyY2ggcmV2aWV3c1wiLCB2YWx1ZTogXCJkZWJpdGVkIHR3aWNlIG5vIHJldmVyc2FsXCIsIHdpZHRoOiBcIjEwMCVcIiwgc3VibWl0OiBcIlNlYXJjaFwifSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJpbmRleCA9IHtcbiAgY29uc3QgdG9rID0gcyA9PiBzLnRvTG93ZXJDYXNlKCkucmVwbGFjZSgvW15hLXowLTkgXS9nLCBcIiBcIikuc3BsaXQoL1xccysvKS5maWx0ZXIodyA9PiB3Lmxlbmd0aCA+IDIpXG4gIGNvbnN0IGRvY3MgPSByZXZpZXdzLm1hcChyID0+IHRvayhyLnR4dCkpOyBjb25zdCBkZiA9IG5ldyBNYXAoKVxuICBmb3IgKGNvbnN0IGQgb2YgZG9jcykgZm9yIChjb25zdCB3IG9mIG5ldyBTZXQoZCkpIGRmLnNldCh3LCAoZGYuZ2V0KHcpIHx8IDApICsgMSlcbiAgY29uc3QgaWRmID0gdyA9PiBNYXRoLmxvZyhyZXZpZXdzLmxlbmd0aCAvIChkZi5nZXQodykgfHwgcmV2aWV3cy5sZW5ndGgpKSArIDFcbiAgY29uc3QgdmVjID0gZCA9PiB7IGNvbnN0IHYgPSBuZXcgTWFwKCk7IGZvciAoY29uc3QgdyBvZiBkKSBpZiAoZGYuaGFzKHcpKSB2LnNldCh3LCAodi5nZXQodykgfHwgMCkgKyBpZGYodykpO1xuICAgIGNvbnN0IG4gPSBNYXRoLmh5cG90KC4uLnYudmFsdWVzKCkpOyBmb3IgKGNvbnN0IFtrLCB4XSBvZiB2KSB2LnNldChrLCB4IC8gKG4gfHwgMSkpOyByZXR1cm4gdiB9XG4gIHJldHVybiB7dG9rLCB2ZWMsIHZlY3M6IGRvY3MubWFwKHZlYyl9XG59XG5oaXRzID0ge1xuICBjb25zdCBxdiA9IGluZGV4LnZlYyhpbmRleC50b2socSkpXG4gIHJldHVybiByZXZpZXdzLm1hcCgociwgaSkgPT4geyBsZXQgcyA9IDA7IGZvciAoY29uc3QgW2ssIHhdIG9mIHF2KSBzICs9IHggKiAoaW5kZXgudmVjc1tpXS5nZXQoaykgfHwgMCk7IHJldHVybiB7c2ltaWxhcml0eTogK3MudG9GaXhlZCgzKSwgLi4ucn0gfSlcbiAgICAuZmlsdGVyKGQgPT4gZC5zaW1pbGFyaXR5ID4gMCkuc29ydCgoYSwgYikgPT4gYi5zaW1pbGFyaXR5IC0gYS5zaW1pbGFyaXR5KS5zbGljZSgwLCAyNSlcbn1cbmhpdHMubGVuZ3RoID8gSW5wdXRzLnRhYmxlKGhpdHMsIHtjb2x1bW5zOiBbXCJzaW1pbGFyaXR5XCIsIFwidHh0XCIsIFwidGhlbWVcIiwgXCJzZW50aW1lbnRcIiwgXCJjaGFubmVsXCIsIFwic3RhcnNcIiwgXCJsYW5nXCJdLFxuICBoZWFkZXI6IHt0eHQ6IFwicmV2aWV3XCIsIGxhbmc6IFwibGFuZ3VhZ2VcIn0sIHdpZHRoOiB7dHh0OiAzODB9LCByb3dzOiAxNH0pXG4gIDogaHRtbGA8cD5Ob25lIG9mIHRob3NlIHdvcmRzIGFwcGVhciBpbiB0aGUgcmV2aWV3cy4gVEYtSURGIG1hdGNoZXMgd29yZHMsIG5vdCBtZWFuaW5nOyBDaGFwdGVyIDExIG9mIHRoZSB0dXRvcmlhbCBzaG93cyB0aGUgbmV1cmFsIHVwZ3JhZGUuPC9wPmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe3dpZHRoOiA2MjAsIGhlaWdodDogMzMwLCBtYXJnaW5MZWZ0OiAxMTAsIGNvbG9yOiB7ZG9tYWluOiBbXCJuZWdhdGl2ZVwiLCBcIm5ldXRyYWxcIiwgXCJwb3NpdGl2ZVwiXSwgcmFuZ2U6IFtcIiNFNThCM0NcIiwgXCIjQzlDM0I2XCIsIFwiIzZGQkZBRVwiXSwgbGVnZW5kOiB0cnVlfSxcbiAgeDoge2xhYmVsOiBcInJldmlld3NcIiwgZ3JpZDogdHJ1ZX0sIHk6IHtsYWJlbDogbnVsbH0sXG4gIG1hcmtzOiBbUGxvdC5iYXJYKHJldmlld3MsIFBsb3QuZ3JvdXBZKHt4OiBcImNvdW50XCJ9LCB7eTogXCJ0aGVtZVwiLCBmaWxsOiBcInNlbnRpbWVudFwiLCBzb3J0OiB7eTogXCIteFwifSwgdGlwOiB0cnVlfSkpXX0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE2IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHt3aWR0aDogNjIwLCBoZWlnaHQ6IDMwMCwgbWFyZ2luTGVmdDogNjAsIGluc2V0OiAzMCwgeDoge2xhYmVsOiBcIlNwZW5kLCDigqYgbWlsbGlvbnNcIiwgZ3JpZDogdHJ1ZX0sIHk6IHtsYWJlbDogXCJDb252ZXJzaW9uc1wiLCBncmlkOiB0cnVlfSwgcjoge3JhbmdlOiBbNiwgMzBdfSxcbiAgbWFya3M6IFtQbG90LmRvdChjaCwge3g6IFwic3BlbmRcIiwgeTogXCJjb252XCIsIHI6IFwiY3BhXCIsIGZpbGw6IFwiY2hhbm5lbFwiLCBmaWxsT3BhY2l0eTogLjgsIHRpcDogdHJ1ZX0pLFxuICAgICAgICAgIFBsb3QudGV4dChjaCwge3g6IFwic3BlbmRcIiwgeTogXCJjb252XCIsIHRleHQ6IFwiY2hhbm5lbFwiLCBkeTogLTIyfSldLCBjb2xvcjoge3JhbmdlOiBQQUx9fSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe3dpZHRoOiA2MjAsIGhlaWdodDogMzAwLCBjb2xvcjoge2xlZ2VuZDogdHJ1ZSwgcmFuZ2U6IFBBTH0sIHk6IHtsYWJlbDogXCLigqZtXCIsIGdyaWQ6IHRydWV9LCB4OiB7bGFiZWw6IG51bGx9LFxuICBtYXJrczogW1Bsb3QuYXJlYVkoZm0sIHt4OiBkID0+IG5ldyBEYXRlKGQud2spLCB5OiBkID0+IGQuc3BlbmRfbmduIC8gMWU2LCBmaWxsOiBcImNoYW5uZWxcIiwgZmlsbE9wYWNpdHk6IC44NX0pXX0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE4IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHt3aWR0aDogNjIwLCBoZWlnaHQ6IDI4MCwgY29sb3I6IHtsZWdlbmQ6IHRydWUsIGRvbWFpbjogW1wiSGVhZGxpbmUgQ1BJXCIsIFwiRm9vZCBDUElcIiwgXCJNUFJcIl0sIHJhbmdlOiBbTkFWWSwgXCIjN0ZBOEQ0XCIsIEdPTERdfSwgeToge2dyaWQ6IHRydWUsIGxhYmVsOiBcIiVcIn0sIHg6IHtsYWJlbDogbnVsbH0sXG4gIG1hcmtzOiBbUGxvdC5saW5lWShtYWMsIHt4OiBcIm1cIiwgeTogXCJ2XCIsIHN0cm9rZTogXCJzXCIsIHN0cm9rZVdpZHRoOiAyLCB0aXA6IHRydWV9KV19KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7d2lkdGg6IDYyMCwgaGVpZ2h0OiAyODAsIGNvbG9yOiB7bGVnZW5kOiB0cnVlLCByYW5nZTogW05BVlksIEdPTERdfSwgeToge2dyaWQ6IHRydWUsIGxhYmVsOiBcIiUgeS95XCJ9LCB4OiB7bGFiZWw6IG51bGwsIHRpY2tGb3JtYXQ6IGQzLmZvcm1hdChcImRcIil9LFxuICBtYXJrczogW1Bsb3QucmVjdFgoWzBdLCB7eDE6IHRoaXNZZWFyIC0gLjUsIHgyOiBkMy5tYXgoaW1mTiwgZCA9PiBkLnllYXIpICsgLjUsIGZpbGw6IEdPTEQsIGZpbGxPcGFjaXR5OiAuMTJ9KSxcbiAgICAgICAgICBQbG90LmxpbmVZKGltZk4sIHt4OiBcInllYXJcIiwgeTogXCJ2YWx1ZVwiLCBzdHJva2U6IFwiaW5kaWNhdG9yX25hbWVcIiwgc3Ryb2tlV2lkdGg6IDIsIHRpcDogdHJ1ZX0pLFxuICAgICAgICAgIFBsb3QuZG90KGltZk4sIHt4OiBcInllYXJcIiwgeTogXCJ2YWx1ZVwiLCBmaWxsOiBcImluZGljYXRvcl9uYW1lXCIsIHI6IDIuNX0pXX0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIwIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIHdkaSA9IElucHV0cy5zZWxlY3QobmV3IE1hcCh3ZGlJbmRzLm1hcCgoW2ssIHZdKSA9PiBbdiwga10pKSwge2xhYmVsOiBcIkluZGljYXRvclwifSlcblBsb3QucGxvdCh7d2lkdGg6IDYyMCwgaGVpZ2h0OiAyNDAsIGNvbG9yOiB7bGVnZW5kOiB0cnVlLCByYW5nZTogUEFMfSwgeToge2dyaWQ6IHRydWUsIGxhYmVsOiBudWxsfSwgeDoge2xhYmVsOiBudWxsLCB0aWNrRm9ybWF0OiBkMy5mb3JtYXQoXCJkXCIpfSxcbiAgbWFya3M6IFtQbG90LmxpbmVZKG9wZW5tLmZpbHRlcihkID0+IGQuc291cmNlID09PSBcIldvcmxkIEJhbmtcIiAmJiBkLmluZGljYXRvciA9PT0gd2RpKSwge3g6IFwieWVhclwiLCB5OiBcInZhbHVlXCIsIHN0cm9rZTogXCJjb3VudHJ5XCIsIHRpcDogdHJ1ZX0pXX0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIxIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHt3aWR0aDogNjIwLCBoZWlnaHQ6IDI4MCwgY29sb3I6IHtsZWdlbmQ6IHRydWUsIHJhbmdlOiBQQUx9LCB5OiB7Z3JpZDogdHJ1ZSwgbGFiZWw6IFwiVVMkIGJuXCJ9LCB4OiB7bGFiZWw6IG51bGwsIHRpY2tGb3JtYXQ6IGQzLmZvcm1hdChcImRcIil9LFxuICBtYXJrczogW1Bsb3QubGluZVkoZ2RwLCB7eDogXCJ5ZWFyXCIsIHk6IFwiZ2RwX3VzZF9iblwiLCBzdHJva2U6IFwiY291bnRyeVwiLCB0aXA6IHRydWV9KV19KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IklucHV0cy50YWJsZShzcmNzLCB7Y29sdW1uczogW1wic291cmNlXCIsIFwic3RhdHVzXCIsIFwicm93c1wiLCBcInJldmVudWVfYm5cIl0sIGhlYWRlcjoge3JldmVudWVfYm46IFwiUmV2ZW51ZSDigqZiblwifX0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIzIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiY2hpcCA9IHMgPT4gaHRtbGA8c3BhbiBzdHlsZT1cImRpc3BsYXk6aW5saW5lLWJsb2NrO3BhZGRpbmc6MXB4IDhweDtib3JkZXItcmFkaXVzOjEwcHg7Y29sb3I6I2ZmZjtmb250LXdlaWdodDo3MDA7Zm9udC1zaXplOi43NXJlbTtiYWNrZ3JvdW5kOiR7cyA9PT0gXCJQQVNTXCIgPyBcIiM2RkJGQUVcIiA6IHMgPT09IFwiV0FSTlwiID8gR09MRCA6IFwiI0MyNDEwQ1wifVwiPiR7c308L3NwYW4+YFxuaHRtbGA8dGFibGUgY2xhc3M9XCJ0YWJsZSB0YWJsZS1zbVwiIHN0eWxlPVwiZm9udC1zaXplOi44NXJlbVwiPjx0aGVhZD48dHI+PHRoPlN0YXR1czwvdGg+PHRoPlRlc3Q8L3RoPjx0aD5EZXRhaWw8L3RoPjwvdHI+PC90aGVhZD48dGJvZHk+XG4ke3Rlc3RzLm1hcCh0ID0+IHsgY29uc3QgcyA9IHQuc3RhdHVzID09PSBcIkZBSUxcIiAmJiB0LnNldmVyaXR5ID09PSBcIndhcm5cIiA/IFwiV0FSTlwiIDogdC5zdGF0dXM7IHJldHVybiBodG1sYDx0cj48dGQ+JHtjaGlwKHMpfTwvdGQ+PHRkPiR7dC50ZXN0fTwvdGQ+PHRkPiR7dC5kZXRhaWx9PC90ZD48L3RyPmAgfSl9XG48L3Rib2R5PjwvdGFibGU+PHAgc3R5bGU9XCJmb250LXNpemU6LjhyZW07Y29sb3I6IzQ3NTU2OVwiPkZBSUwgYmxvY2tzIHB1Ymxpc2hpbmcuIFdBUk4gcmVwb3J0cyBvbmx5LiBGcmVzaG5lc3Mgd2FybnMgYmVjYXVzZSB0aGUgY291cnNlIGRhdGEgZW5kcyBpbiBNYXJjaCAyMDI2LjwvcD5gXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTI0IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHt3aWR0aDogNjIwLCBoZWlnaHQ6IDMwMCwgbWFyZ2luTGVmdDogMTEwLCB4OiB7bGFiZWw6IFwiRXhjZWwgbWludXMgd2FyZWhvdXNlLCAlXCIsIGRvbWFpbjogWy0xLjIsIDEuMl0sIGdyaWQ6IHRydWV9LCB5OiB7bGFiZWw6IG51bGx9LFxuICBtYXJrczogW1Bsb3QucnVsZVgoWy0xLCAxXSwge3N0cm9rZURhc2hhcnJheTogXCI0LDRcIiwgc3Ryb2tlOiBcIiM5OTlcIn0pLCBQbG90LnJ1bGVYKFswXSksXG4gICAgICAgICAgUGxvdC5iYXJYKHJlY29uLCB7eTogXCJkZXBvdFwiLCB4OiBcImdhcF9wY3RcIiwgZmlsbDogZCA9PiBNYXRoLmFicyhkLmdhcF9wY3QpID4gMSA/IFwiI0U1OEIzQ1wiIDogXCIjN0ZBOEQ0XCIsIHNvcnQ6IHt5OiBcInhcIn0sIHRpcDogdHJ1ZX0pXX0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTI1IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiaHRtbGA8ZGl2IHN0eWxlPVwiZm9udC1zaXplOi45NXJlbTtsaW5lLWhlaWdodDoxLjdcIj5cbjxwPlRoaXMgZGFzaGJvYXJkIGlzIHRoZSA8Yj5zZXJ2aW5nIGxheWVyPC9iPiBvZiB0aGUgZ292ZXJuZWQgYW5hbHl0aWNzIHBsYXRmb3JtIHRhdWdodCBpbiB0aGUgbWFzdGVyIHR1dG9yaWFsLjwvcD5cbjx1bD5cbjxsaT48YSBocmVmPVwiLi4vYm9vay8wOS10ZXN0cy5odG1sXCI+Q2hhcHRlciA5PC9hPjogaG93IHRoZXNlIGRhdGEgdGVzdHMgYW5kIHRoZSBwdWJsaXNoIGdhdGUgd29yazwvbGk+XG48bGk+PGEgaHJlZj1cIi4uL2Jvb2svMTAtc2VtYW50aWMuaHRtbFwiPkNoYXB0ZXIgMTA8L2E+OiB0aGUgc2VtYW50aWMgbGF5ZXIgYmVoaW5kIGV2ZXJ5IEtQSSBvbiB0aGlzIHBhZ2U8L2xpPlxuPGxpPjxhIGhyZWY9XCIuLi9ib29rLzExLXZlY3Rvci1haS5odG1sXCI+Q2hhcHRlciAxMTwvYT46IHRoZSByZXZpZXcgc2VhcmNoLCBhbmQgd2h5IGl0IG1pc3NlcyBQaWRnaW48L2xpPlxuPGxpPjxhIGhyZWY9XCIuLi9ib29rLzEzLWRhc2hib2FyZHMuaHRtbFwiPkNoYXB0ZXIgMTM8L2E+OiBzdGF0aWMgdnMgU2hpbnkgZGFzaGJvYXJkcywgYW5kIHRoZSBsaXZlIHZlcnNpb24gb2YgdGhpcyBvbmU8L2xpPlxuPGxpPjxhIGhyZWY9XCIuLi9ub3RlYm9vay5odG1sXCI+VGhlIGJ1aWxkIG5vdGVib29rPC9hPjogZXZlcnkgZGF0YWJhc2UsIHN0ZXAgYnkgc3RlcCwgd2l0aCBpdHMgcHJvbXB0czwvbGk+XG48L3VsPjwvZGl2PmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnbTAnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnbTEnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncmVnaW9ucycpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdjYXRzJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3Byb21vJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ21ldCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdkaW0nKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZ3JhaW4nKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncScpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCd3ZGknKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../..";
+window._ojs.paths.runtimeToRoot = "../../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /container fluid -->
+
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
+
+
+
+</body></html>

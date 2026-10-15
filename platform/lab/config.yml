@@ -1,0 +1,56 @@
+# ---------------------------------------------------------------------------
+# config.yml — ONE place that says where every data source lives.
+# The notebook (01) and the dashboard (02) both read this file, so pointing the
+# dashboard at a new database is a config change, not a code change.
+#
+# Secrets NEVER go here. Put them in a .Renviron file next to this one
+# (see .Renviron.example) and they are read with Sys.getenv().
+# ---------------------------------------------------------------------------
+default:
+  project_name: "TDBG Growth Cockpit"
+
+  # Folders scanned for data files (csv, xlsx, xls, parquet, json, tsv).
+  # Every file found is auto-loaded into the DuckDB 'landing' schema.
+  # Folders that don't exist on this machine are skipped silently,
+  # so students can run the same file without editing it.
+  data_roots:
+    - "data/raw"
+    - "~/Documents/Ai-Powered DA 1 - MEMBA 15"
+    - "~/Library/CloudStorage/OneDrive-Personal/Turning Data into Business Growth/TDBG-website-v2/data"
+  max_file_mb: 50
+
+  # Local sources built by 01-build-data-layer.qmd
+  csv_dir:      "data/raw"
+  excel_path:   "data/excel/tdbg_sales_workbook.xlsx"
+  parquet_path: "data/raw/fmcg_weekly.parquet"
+  sqlite_path:  "data/db/tdbg.sqlite"
+  duckdb_path:  "data/db/tdbg.duckdb"
+  semantic_layer: "semantic/metrics.yml"
+
+  # How often (seconds) the dashboard checks whether the warehouse was rebuilt
+  refresh_seconds: 20
+
+  # Harvard Dataverse (public research repository) — no key needed for public data
+  harvard_dataverse:
+    server: "dataverse.harvard.edu"
+    dataset: "doi:10.7910/DVN/8M7FUY"   # World Bank GDP (current US$) by country
+    file: "gdp.tab"
+    countries: ["NGA", "GHA", "KEN", "ZAF", "EGY", "CIV"]
+
+  # Microsoft Dataverse (Power Platform) — needs an Entra ID app registration.
+  # Values come from .Renviron: DATAVERSE_URL, AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET
+  ms_dataverse:
+    api_version: "v9.2"
+    depot_table: "cr123_depots"           # entity-set (plural logical) name after import
+    sales_table: "cr123_monthlysales"
+
+  # Server databases — enabled only when their env vars are set
+  postgres:
+    enabled_if_env: "PGHOST"
+
+  # Optional "Ask your data" assistant (text-to-SQL over the semantic layer)
+  llm:
+    provider: "anthropic"                 # "anthropic" (needs ANTHROPIC_API_KEY) or "ollama" (local, private)
+    anthropic_model: "claude-sonnet-5-5"
+    ollama_model: "llama3.1"
+    ollama_url: "http://localhost:11434"

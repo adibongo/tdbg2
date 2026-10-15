@@ -1,0 +1,673 @@
+---
+# PROMPT D1 — "Create a Quarto dashboard (format: dashboard) that runs on a Shiny
+# server (server: shiny). Use my LBS/TDBG brand theme in theme.scss, row
+# orientation, and a sidebar that is shared by every page."
+title: "TDBG Growth Cockpit"
+author: "Turning Data into Business Growth · Lagos Business School"
+format:
+  dashboard:
+    theme: [cosmo, theme.scss]
+    orientation: rows
+    scrolling: false
+    nav-buttons:
+      - icon: book
+        href: https://markanalytics.online/tdbg/platform/book/index.html
+        aria-label: Master tutorial
+      - icon: speedometer2
+        href: https://markanalytics.online/tdbg/platform/dashboard/index.html
+        aria-label: Static edition
+      - icon: github
+        href: https://github.com/adibongo/tdbg2/tree/main/platform/lab
+        aria-label: Source code
+server: shiny
+---
+
+```{r}
+#| context: setup
+# PROMPT D2 — "Load my shared helpers once per app. Stop with a friendly message
+# if the warehouse hasn't been built yet. Read the semantic layer and get the
+# filter choices (regions, categories, date range) from DuckDB."
+source("R/helpers.R")
+library(shiny); library(bslib); library(bsicons); library(plotly); library(DT)
+
+if (!file.exists(proj_path(cfg$duckdb_path)))
+  stop("Warehouse not found. Render 01-build-data-layer.qmd first (it builds data/db/).")
+
+layer <- read_semantic()
+choices <- with_duck(function(con) list(
+  regions    = dbGetQuery(con, "SELECT DISTINCT region FROM dim_depot ORDER BY 1")[[1]],
+  categories = dbGetQuery(con, "SELECT DISTINCT category FROM dim_product ORDER BY 1")[[1]],
+  dates      = as.Date(unlist(dbGetQuery(con, "SELECT MIN(week_starting), MAX(week_starting) FROM fact_sales"))),
+  tables     = dbGetQuery(con, "SELECT table_schema || '.' || table_name AS t FROM information_schema.tables
+                                WHERE table_schema IN ('main','landing') ORDER BY table_schema, table_name")[[1]]))
+
+PAL  <- c("#0B2C55", "#E8A33D", "#7FA8D4", "#6FBFAE", "#9B8EC4", "#A9C86B", "#F2C14E", "#E58B3C")
+NAVY <- "#0B2C55"; GOLD <- "#E8A33D"
+metric_choices <- setNames(names(layer$metrics), vapply(layer$metrics, `[[`, "", "label"))
+dim_choices    <- setNames(names(layer$dimensions), vapply(layer$dimensions, `[[`, "", "label"))
+plotly_clean   <- function(p) p |> config(displayModeBar = FALSE) |>
+  layout(font = list(family = "Inter"), margin = list(t = 10, r = 10), legend = list(orientation = "h"))
+```
+
+# {.sidebar width="290px"}
+
+```{r}
+# PROMPT D3 — "Sidebar: a source picker (CSV, Excel, Parquet, SQLite, DuckDB,
+# PostgreSQL) that marks sources that aren't available on this machine, a date
+# range, multi-select region and category filters, and a promotion filter.
+# Under the filters, show which source answered and how long it took."
+radioButtons("source", "Data source",
+  choiceNames  = lapply(names(SOURCES), function(n)
+    if (source_available(SOURCES[[n]])) n else tags$span(style = "color:#999", paste(n, "· not configured"))),
+  choiceValues = unname(SOURCES), selected = "duckdb")
+dateRangeInput("dates", "Weeks", start = choices$dates[1], end = choices$dates[2],
+               min = choices$dates[1], max = choices$dates[2])
+selectizeInput("regions", "Region", choices$regions, multiple = TRUE, options = list(placeholder = "All regions"))
+selectizeInput("categories", "Category", choices$categories, multiple = TRUE, options = list(placeholder = "All categories"))
+radioButtons("promo", "Promotion", c("All" = "all", "On promo" = "promo", "Full price" = "nopromo"), inline = TRUE)
+hr()
+uiOutput("source_info")
+```
+
+# Overview
+
+## Row {height=24%}
+
+```{r}
+# PROMPT D4a — "Five KPI value boxes computed through the semantic layer, so
+# they mean the same thing whatever the source: revenue, gross margin %, units,
+# stockout rate and promo revenue share."
+uiOutput("kpis")
+```
+
+## Row {height=42%}
+
+### Column {width=62%}
+
+```{r}
+#| title: Weekly revenue · with 4-week moving average
+# PROMPT D4b — "Weekly revenue line with a 4-week moving average, in ₦ millions."
+plotlyOutput("trend")
+```
+
+### Column {width=38%}
+
+```{r}
+#| title: Revenue and gross margin by region
+plotlyOutput("by_region")
+```
+
+## Row {height=38%}
+
+### Column {width=45%}
+
+```{r}
+#| title: Where the money is · category × region (₦m)
+# PROMPT D4c — "A category × region heat-map of revenue, and a top-15 products
+# table with revenue, units, margin, stockout rate and promo share."
+plotlyOutput("heat")
+```
+
+### Column {width=55%}
+
+```{r}
+#| title: Top 15 products
+DTOutput("top_products")
+```
+
+# Semantic layer
+
+## Row {height=15%}
+
+```{r}
+#| title: Build a governed query — pick from metrics.yml, never hand-write a metric
+# PROMPT D5 — "Let users pick any metrics, dimensions and a time grain from
+# semantic/metrics.yml. Compile the SQL with compile_metric_sql(), show it,
+# run it on the selected source and chart the first metric."
+layout_columns(col_widths = c(4, 4, 2, 2),
+  selectizeInput("sl_metrics", "Metrics", metric_choices, selected = c("revenue", "gross_margin_pct"), multiple = TRUE),
+  selectizeInput("sl_dims", "Break down by", dim_choices, selected = "category", multiple = TRUE),
+  selectInput("sl_grain", "Time grain", c("None" = "none", "Week" = "week", "Month" = "month", "Quarter" = "quarter", "Year" = "year"), "quarter"),
+  selectInput("sl_chart", "Chart", c("Line" = "line", "Bar" = "bar")))
+```
+
+## Row {height=85%}
+
+### Column {width=35%}
+
+```{r}
+#| title: Compiled SQL (what actually runs)
+uiOutput("sl_sql")
+uiOutput("sl_defs")
+```
+
+### Column {.tabset width=65%}
+
+```{r}
+#| title: Chart
+plotlyOutput("sl_plot")
+```
+
+```{r}
+#| title: Table
+DTOutput("sl_table")
+```
+
+# Ask your data
+
+## Row {height=34%}
+
+### Column {width=50%}
+
+```{r}
+#| title: 1 · Ask in plain English
+# PROMPT D6 — "A text box for a business question. When the button is pressed,
+# send the question plus the warehouse schema and the semantic-layer metric
+# definitions to Claude (or a local Ollama model), get back one SQL query, and
+# put it in an editable SQL box. Never run anything except a read-only SELECT."
+textAreaInput("ask_q", NULL, width = "100%", rows = 3,
+  value = "Which five depots had the highest stockout rate in 2025, and what revenue did they make?")
+actionButton("ask_go", "Write the SQL with AI", icon = icon("wand-magic-sparkles"), class = "btn-warning")
+uiOutput("ask_status")
+```
+
+### Column {width=50%}
+
+```{r}
+#| title: 2 · Review, edit and run the SQL (read-only)
+textAreaInput("ask_sql", NULL, width = "100%", rows = 6, value =
+"SELECT depot_name,
+       100.0 * AVG(stockout_flag) AS stockout_rate_pct,
+       SUM(revenue_ngn)            AS revenue
+FROM v_sales
+WHERE year(week_starting) = 2025
+GROUP BY depot_name
+ORDER BY stockout_rate_pct DESC
+LIMIT 5")
+actionButton("ask_run", "Run query", icon = icon("play"), class = "btn-primary")
+```
+
+## Row {height=66%}
+
+### Column {width=55%}
+
+```{r}
+#| title: Result
+DTOutput("ask_table")
+```
+
+### Column {width=45%}
+
+```{r}
+#| title: Auto-chart (first text/date column × first number)
+plotlyOutput("ask_plot")
+```
+
+# Customer voice
+
+## Row {height=13%}
+
+```{r}
+#| title: Semantic search across 4,938 customer reviews (vector similarity inside DuckDB)
+# PROMPT D7 — "A search box that embeds the query and ranks reviews by cosine
+# similarity with semantic_search(). Show the matches with their theme,
+# sentiment and similarity score, plus sentiment by theme and stars by channel."
+layout_columns(col_widths = c(8, 4),
+  textInput("vs_q", NULL, value = "debited twice no reversal", width = "100%",
+            placeholder = "e.g. app keeps logging me out"),
+  tags$small("Try: ", tags$em("waited at the branch"), " · ", tags$em("network drops"), " · ",
+             tags$em("hidden charges"), " · ", tags$em("delivery late")))
+```
+
+## Row {height=87%}
+
+### Column {width=58%}
+
+```{r}
+#| title: Closest reviews
+DTOutput("vs_results")
+```
+
+### Column {width=42%}
+
+```{r}
+#| title: Sentiment by theme
+plotlyOutput("vs_theme")
+```
+
+```{r}
+#| title: Average stars by channel
+plotlyOutput("vs_channel")
+```
+
+# Marketing & macro
+
+## Row {height=50%}
+
+### Column {width=50%}
+
+```{r}
+#| title: Marketing — spend vs conversions by channel (bubble = cost per acquisition)
+# PROMPT D8 — "From marketing_spend: total spend vs conversions by channel as a
+# bubble chart sized by cost per acquisition, plus weekly spend by channel.
+# From ng_macro_monthly: inflation and the policy rate, and USD/NGN. From
+# dv_gdp (Harvard Dataverse): GDP of Nigeria and its peers. Apply the sidebar
+# date range where the data has weeks or months."
+plotlyOutput("mk_bubble")
+```
+
+### Column {width=50%}
+
+```{r}
+#| title: Weekly spend by channel (₦m)
+plotlyOutput("mk_weekly")
+```
+
+## Row {height=50%}
+
+### Column {width=34%}
+
+```{r}
+#| title: Inflation and policy rate (%)
+plotlyOutput("mac_infl")
+```
+
+### Column {width=33%}
+
+```{r}
+#| title: USD/NGN official rate
+plotlyOutput("mac_fx")
+```
+
+### Column {.tabset width=33%}
+
+```{r}
+#| title: IMF outlook
+plotlyOutput("imf_outlook")
+```
+
+```{r}
+#| title: World Bank WDI
+selectInput("wdi_ind", NULL, c("GDP growth (%)" = "NY.GDP.MKTP.KD.ZG", "Inflation (%)" = "FP.CPI.TOTL.ZG",
+                                "GDP per capita (US$)" = "NY.GDP.PCAP.CD", "Unemployment (%)" = "SL.UEM.TOTL.ZS",
+                                "Remittances (% of GDP)" = "BX.TRF.PWKR.DT.GD.ZS"), width = "100%")
+plotlyOutput("wdi_plot", height = "85%")
+```
+
+```{r}
+#| title: GDP (Harvard Dataverse)
+plotlyOutput("dv_gdp")
+```
+
+# Data explorer
+
+## Row {height=13%}
+
+```{r}
+#| title: Every table in the warehouse — including every file auto-loaded from your folders
+# PROMPT D9 — "A picker listing every table in the DuckDB warehouse (main and
+# landing schemas). Show the column schema and the first 500 rows, dropping
+# vector columns that can't be displayed."
+selectInput("ex_table", NULL, choices$tables, selected = "main.v_sales", width = "50%")
+```
+
+## Row {height=87%}
+
+### Column {width=28%}
+
+```{r}
+#| title: Schema
+DTOutput("ex_schema")
+```
+
+### Column {width=72%}
+
+```{r}
+#| title: Preview (first 500 rows)
+DTOutput("ex_preview")
+```
+
+# Connections
+
+## Row {height=48%}
+
+### Column {width=55%}
+
+```{r}
+#| title: Same question, every source — all-time revenue and rows
+# PROMPT D10 — "A Connections page: for every source, whether it's live, its row
+# count and its all-time revenue (so students see that sources agree or don't),
+# the status of Microsoft Dataverse, Harvard Dataverse, PostgreSQL and the AI
+# assistant, when the warehouse was built, the data-test results with PASS/FAIL
+# colours, and the Excel-vs-warehouse reconciliation gap by depot."
+DTOutput("cx_sources")
+```
+
+### Column {width=45%}
+
+```{r}
+#| title: External services
+DTOutput("cx_external")
+uiOutput("cx_build")
+```
+
+## Row {height=52%}
+
+### Column {width=55%}
+
+```{r}
+#| title: Data tests — the publish gate (FAIL blocks, WARN reports)
+DTOutput("cx_tests")
+```
+
+### Column {width=45%}
+
+```{r}
+#| title: Reconciliation · FY2025 Excel regional report vs warehouse (gap %)
+plotlyOutput("cx_recon")
+```
+
+```{r}
+#| context: server
+# PROMPT D11 — "Server logic. Use reactivePoll on the DuckDB file's modified time
+# so every page refreshes itself when refresh.R rebuilds the warehouse, and show
+# a notification when that happens. Debounce the filters. Build one reactive
+# `sales()` from get_sales(source, filters) and drive every Overview output from
+# it through the semantic layer."
+
+# ---- automation: watch the warehouse file -------------------------------
+warehouse_stamp <- reactivePoll(cfg$refresh_seconds * 1000, session,
+  checkFunc = function() file.mtime(proj_path(cfg$duckdb_path)),
+  valueFunc = function() file.mtime(proj_path(cfg$duckdb_path)))
+observeEvent(warehouse_stamp(), ignoreInit = TRUE,
+  showNotification(paste("Warehouse rebuilt at", format(warehouse_stamp(), "%H:%M:%S"), "— dashboard refreshed"),
+                   type = "message", duration = 8))
+
+filters <- reactive(list(dates = input$dates, regions = input$regions,
+                         categories = input$categories, promo = input$promo)) |> debounce(400)
+
+timing <- reactiveVal(NA)
+sales <- reactive({
+  warehouse_stamp()
+  validate(need(source_available(input$source),
+    "This source isn't configured on this machine. See config.yml and .Renviron.example, or pick another source."))
+  t0 <- Sys.time()
+  out <- tryCatch(get_sales(input$source, filters()), error = function(e) validate(need(FALSE, conditionMessage(e))))
+  timing(round(as.numeric(difftime(Sys.time(), t0, units = "secs")) * 1000))
+  validate(need(nrow(out) > 0, "No rows match these filters."))
+  out
+})
+sf <- function(...) semantic_frame(sales(), ..., layer = layer)
+
+output$source_info <- renderUI({
+  d <- sales()
+  tags$small(tags$b(names(SOURCES)[SOURCES == input$source]), " answered with ",
+             format(nrow(d), big.mark = ","), " rows in ", timing(), " ms.", tags$br(),
+             "Warehouse built ", format(warehouse_stamp(), "%d %b %Y %H:%M"), ".", tags$br(),
+             "Auto-refresh every ", cfg$refresh_seconds, " s.")
+})
+
+# ---- Overview -------------------------------------------------------------
+output$kpis <- renderUI({
+  k <- sf(c("revenue", "gross_margin_pct", "units", "stockout_rate_pct", "promo_share_pct"))
+  vb <- function(m, icon, theme) value_box(title = layer$metrics[[m]]$label,
+         value = fmt_metric(k[[m]], layer$metrics[[m]]$format), showcase = bs_icon(icon),
+         showcase_layout = "left center", theme = theme) |>
+         tagAppendAttributes(title = layer$metrics[[m]]$description)
+  layout_column_wrap(width = 1/5, fill = TRUE,
+    vb("revenue", "cash-coin", value_box_theme(bg = NAVY, fg = "#fff")),
+    vb("gross_margin_pct", "percent", value_box_theme(bg = "#F7F4ED", fg = NAVY)),
+    vb("units", "box-seam", value_box_theme(bg = "#F7F4ED", fg = NAVY)),
+    vb("stockout_rate_pct", "exclamation-triangle", value_box_theme(bg = "#FCEBD7", fg = "#8A4B0F")),
+    vb("promo_share_pct", "tags", value_box_theme(bg = GOLD, fg = NAVY)))
+})
+
+output$trend <- renderPlotly({
+  w <- sf("revenue", grain = "week") |> mutate(rev_m = revenue / 1e6,
+        ma4 = as.numeric(stats::filter(rev_m, rep(1/4, 4), sides = 1)))
+  plot_ly(w, x = ~period) |>
+    add_lines(y = ~rev_m, name = "Weekly", line = list(color = "#7FA8D4", width = 1.5)) |>
+    add_lines(y = ~ma4, name = "4-week average", line = list(color = NAVY, width = 3)) |>
+    layout(yaxis = list(title = "₦ millions"), xaxis = list(title = "")) |> plotly_clean()
+})
+
+output$by_region <- renderPlotly({
+  r <- sf(c("revenue", "gross_margin_pct"), "region") |> arrange(revenue)
+  plot_ly(r, y = ~factor(region, region), x = ~revenue / 1e9, type = "bar", orientation = "h",
+          marker = list(color = NAVY), text = ~sprintf("%.1f%% GM", gross_margin_pct),
+          textposition = "inside", insidetextfont = list(color = "#fff"),
+          hovertemplate = "%{y}: ₦%{x:.2f}bn<extra></extra>") |>
+    layout(xaxis = list(title = "₦ billions"), yaxis = list(title = "")) |> plotly_clean()
+})
+
+output$heat <- renderPlotly({
+  h <- sf("revenue", c("category", "region"))
+  plot_ly(h, x = ~region, y = ~category, z = ~revenue / 1e6, type = "heatmap",
+          colors = colorRamp(c("#F7F4ED", "#7FA8D4", NAVY)),
+          colorbar = list(title = "₦m"),
+          hovertemplate = "%{y} · %{x}: ₦%{z:,.0f}m<extra></extra>") |>
+    layout(xaxis = list(title = ""), yaxis = list(title = "")) |> plotly_clean()
+})
+
+output$top_products <- renderDT({
+  sf(c("revenue", "units", "gross_margin_pct", "stockout_rate_pct", "promo_share_pct"),
+     "product_name", limit = 15) |>
+    datatable(rownames = FALSE, colnames = c("Product", "Revenue ₦", "Units", "GM %", "Stockout %", "Promo %"),
+              options = list(dom = "t", pageLength = 15, scrollY = "100%")) |>
+    formatRound(c("revenue", "units"), 0) |>
+    formatRound(c("gross_margin_pct", "stockout_rate_pct", "promo_share_pct"), 1) |>
+    formatStyle("revenue", background = styleColorBar(c(0, 1), "#E8A33D55"), backgroundSize = "95% 70%",
+                backgroundRepeat = "no-repeat", backgroundPosition = "center")
+})
+
+# ---- Semantic layer ---------------------------------------------------------
+sl_sql <- reactive({
+  req(input$sl_metrics)
+  compile_metric_sql(layer, input$sl_metrics, input$sl_dims %||% character(), input$sl_grain)
+})
+sl_data <- reactive(query_frame(sales(), sl_sql()))
+output$sl_sql  <- renderUI(tags$pre(class = "sql-out", sl_sql()))
+output$sl_defs <- renderUI(tags$small(lapply(input$sl_metrics, function(m)
+  tags$p(tags$b(layer$metrics[[m]]$label), ": ", layer$metrics[[m]]$description,
+         tags$br(), tags$em("Owner: ", layer$owner)))))
+output$sl_table <- renderDT(datatable(sl_data(), rownames = FALSE, options = list(pageLength = 12, scrollX = TRUE)) |>
+                              formatRound(input$sl_metrics, 1))
+output$sl_plot <- renderPlotly({
+  d <- sl_data(); m <- input$sl_metrics[1]; dims <- input$sl_dims
+  x <- if (input$sl_grain != "none") "period" else if (length(dims)) dims[1] else NULL
+  validate(need(!is.null(x), "Pick a time grain or a dimension to chart."))
+  colour <- if (input$sl_grain != "none" && length(dims)) dims[1] else if (length(dims) > 1) dims[2] else NULL
+  d$grp <- if (is.null(colour)) "All" else as.character(d[[colour]])
+  p <- plot_ly(d, x = d[[x]], y = d[[m]], color = ~grp, colors = PAL)
+  p <- if (input$sl_chart == "line" && x == "period") add_lines(p) else add_bars(p)
+  p |> layout(yaxis = list(title = layer$metrics[[m]]$label), xaxis = list(title = ""), barmode = "group") |> plotly_clean()
+})
+
+# ---- Ask your data ----------------------------------------------------------
+output$ask_status <- renderUI({
+  if (!llm_available()) tags$small(class = "text-muted",
+    "AI SQL writer is off: add ANTHROPIC_API_KEY to .Renviron, or set llm.provider: ollama in config.yml for a private local model. ",
+    "You can still edit and run SQL by hand →")
+  else tags$small(class = "text-muted", "Provider: ", cfg$llm$provider, ". The schema and governed metric definitions are sent with your question; your data rows are not.")
+})
+observeEvent(input$ask_go, {
+  validate(need(llm_available(), "No LLM configured"))
+  id <- showNotification("Writing SQL…", duration = NULL)
+  on.exit(removeNotification(id))
+  sql <- tryCatch(ask_llm_for_sql(input$ask_q), error = function(e) paste("-- LLM error:", conditionMessage(e)))
+  updateTextAreaInput(session, "ask_sql", value = sql)
+})
+ask_result <- eventReactive(input$ask_run, {
+  warehouse_stamp()
+  tryCatch(run_safe_sql(input$ask_sql), error = function(e) validate(need(FALSE, conditionMessage(e))))
+}, ignoreNULL = FALSE)
+output$ask_table <- renderDT({
+  d <- ask_result(); num <- names(d)[vapply(d, is.double, TRUE)]
+  dt <- datatable(d, rownames = FALSE, options = list(pageLength = 10, scrollX = TRUE))
+  if (length(num)) formatRound(dt, num, 2) else dt
+})
+output$ask_plot <- renderPlotly({
+  d <- ask_result()
+  x <- names(d)[!vapply(d, is.numeric, TRUE)][1]; y <- names(d)[vapply(d, is.numeric, TRUE)][1]
+  validate(need(!is.na(x) && !is.na(y), "Need one text/date column and one numeric column to chart."))
+  p <- plot_ly(d, x = d[[x]], y = d[[y]], marker = list(color = NAVY), line = list(color = NAVY))
+  (if (inherits(d[[x]], c("Date", "POSIXct"))) add_lines(p) else add_bars(p)) |>
+    layout(xaxis = list(title = x, categoryorder = "trace"), yaxis = list(title = y)) |> plotly_clean()
+})
+
+# ---- Customer voice -----------------------------------------------------------
+vs <- reactive({ warehouse_stamp(); req(nchar(input$vs_q) > 2); semantic_search(input$vs_q, k = 25) }) |> debounce(500)
+output$vs_results <- renderDT({
+  d <- vs(); validate(need(!is.null(d), "None of those words appear in the review vocabulary. Try rephrasing (or switch on real embeddings, notebook Step 12)."))
+  datatable(d |> select(similarity, review_text, theme, sentiment, channel, star_rating),
+            rownames = FALSE, options = list(pageLength = 12, dom = "tp")) |>
+    formatStyle("similarity", background = styleColorBar(c(0, 1), "#7FA8D466"), backgroundSize = "95% 70%",
+                backgroundRepeat = "no-repeat", backgroundPosition = "center") |>
+    formatStyle("sentiment", color = styleEqual(c("negative", "neutral", "positive"), c("#B5482A", "#666", "#2E7D6B")))
+})
+output$vs_theme <- renderPlotly({
+  warehouse_stamp()
+  d <- with_duck(function(con) dbGetQuery(con, "SELECT theme, sentiment, COUNT(*) n FROM review_docs GROUP BY 1, 2"))
+  plot_ly(d, y = ~theme, x = ~n, color = ~sentiment, type = "bar", orientation = "h",
+          colors = c(negative = "#E58B3C", neutral = "#C9C3B6", positive = "#6FBFAE")) |>
+    layout(barmode = "stack", xaxis = list(title = "reviews"), yaxis = list(title = "", categoryorder = "total ascending")) |> plotly_clean()
+})
+output$vs_channel <- renderPlotly({
+  warehouse_stamp()
+  d <- with_duck(function(con) dbGetQuery(con, "SELECT channel, AVG(star_rating) stars, COUNT(*) n FROM review_docs GROUP BY 1 ORDER BY 2"))
+  plot_ly(d, x = ~stars, y = ~factor(channel, channel), type = "bar", orientation = "h", marker = list(color = GOLD),
+          hovertemplate = "%{y}: %{x:.2f}★<extra></extra>") |>
+    layout(xaxis = list(title = "average stars", range = c(1, 5)), yaxis = list(title = "")) |> plotly_clean()
+})
+
+# ---- Marketing & macro ----------------------------------------------------------
+date_where <- function(col) sprintf("%s BETWEEN DATE '%s' AND DATE '%s'", col, input$dates[1], input$dates[2])
+output$mk_bubble <- renderPlotly({
+  warehouse_stamp()
+  d <- with_duck(function(con) dbGetQuery(con, paste(
+    "SELECT channel, SUM(spend_ngn)/1e6 AS spend_m, SUM(conversions) AS conversions,
+            SUM(spend_ngn)/NULLIF(SUM(conversions),0) AS cpa
+     FROM marketing_spend WHERE", date_where("week_starting"), "GROUP BY channel")))
+  plot_ly(d, x = ~spend_m, y = ~conversions, text = ~channel, type = "scatter", mode = "markers+text",
+          textposition = "top center", marker = list(size = ~cpa / max(cpa) * 60 + 10, color = PAL[seq_len(nrow(d))], opacity = .8),
+          hovertemplate = "%{text}<br>Spend ₦%{x:,.0f}m · %{y:,} conversions<extra></extra>") |>
+    layout(xaxis = list(title = "Spend, ₦ millions"), yaxis = list(title = "Conversions"), showlegend = FALSE) |> plotly_clean()
+})
+output$mk_weekly <- renderPlotly({
+  warehouse_stamp()
+  d <- with_duck(function(con) dbGetQuery(con, paste(
+    "SELECT week_starting, channel, spend_ngn/1e6 AS spend_m FROM marketing_spend WHERE", date_where("week_starting"), "ORDER BY 1")))
+  plot_ly(d, x = ~week_starting, y = ~spend_m, color = ~channel, colors = PAL, type = "scatter", mode = "lines", stackgroup = "one") |>
+    layout(xaxis = list(title = ""), yaxis = list(title = "₦ millions")) |> plotly_clean()
+})
+macro <- reactive({ warehouse_stamp(); with_duck(function(con) dbGetQuery(con,
+  paste("SELECT * FROM ng_macro_monthly WHERE", date_where("month"), "ORDER BY month"))) })
+output$mac_infl <- renderPlotly({
+  d <- macro(); validate(need(nrow(d) > 0, "No macro data in this date range."))
+  plot_ly(d, x = ~month) |>
+    add_lines(y = ~headline_inflation_yoy_pct, name = "Headline CPI", line = list(color = NAVY, width = 2.5)) |>
+    add_lines(y = ~food_inflation_yoy_pct, name = "Food CPI", line = list(color = "#E58B3C")) |>
+    add_lines(y = ~mpr_pct, name = "MPR", line = list(color = GOLD, dash = "dot")) |>
+    layout(xaxis = list(title = ""), yaxis = list(title = "%")) |> plotly_clean()
+})
+output$mac_fx <- renderPlotly({
+  d <- macro(); validate(need(nrow(d) > 0, "No macro data in this date range."))
+  plot_ly(d, x = ~month, y = ~usd_ngn_official, type = "scatter", mode = "lines", fill = "tozeroy",
+          line = list(color = NAVY), fillcolor = "rgba(127,168,212,.25)") |>
+    layout(xaxis = list(title = ""), yaxis = list(title = "₦ per US$")) |> plotly_clean()
+})
+# PROMPT D8b — "Add official statistics from the warehouse's open_macro table: an IMF WEO
+# inflation and growth outlook for Nigeria with projections shaded, and a World Bank WDI
+# indicator picker comparing Nigeria with its peers."
+open_tbl <- reactive({ warehouse_stamp(); with_duck(function(con)
+  if ("open_macro" %in% dbListTables(con)) dbGetQuery(con, "SELECT * FROM open_macro") else NULL) })
+output$imf_outlook <- renderPlotly({
+  d <- open_tbl(); validate(need(!is.null(d), "Render the build notebook to load IMF and World Bank data."))
+  d <- subset(d, source == "IMF" & iso3 == "NGA" & indicator %in% c("PCPIPCH", "NGDP_RPCH") & year >= 2015)
+  this_year <- as.integer(format(Sys.Date(), "%Y"))
+  plot_ly(d, x = ~year, y = ~value, color = ~indicator_name, colors = c(NAVY, GOLD), type = "scatter", mode = "lines+markers") |>
+    layout(shapes = list(list(type = "rect", x0 = this_year - .5, x1 = max(d$year) + .5, y0 = 0, y1 = 1, yref = "paper",
+                              fillcolor = "rgba(232,163,61,.12)", line = list(width = 0))),
+           annotations = list(list(x = this_year + 1, y = 1, yref = "paper", text = "IMF projection", showarrow = FALSE, font = list(size = 11))),
+           xaxis = list(title = ""), yaxis = list(title = "% y/y")) |> plotly_clean()
+})
+output$wdi_plot <- renderPlotly({
+  d <- open_tbl(); validate(need(!is.null(d), "Render the build notebook to load World Bank data."))
+  d <- subset(d, source == "World Bank" & indicator == input$wdi_ind)
+  plot_ly(d, x = ~year, y = ~value, color = ~country, colors = PAL, type = "scatter", mode = "lines") |>
+    layout(xaxis = list(title = ""), yaxis = list(title = d$indicator_name[1])) |> plotly_clean()
+})
+
+output$dv_gdp <- renderPlotly({
+  warehouse_stamp()
+  d <- with_duck(function(con) dbGetQuery(con, "SELECT * FROM dv_gdp ORDER BY year"))
+  plot_ly(d, x = ~year, y = ~gdp_usd_bn, color = ~country, colors = PAL, type = "scatter", mode = "lines") |>
+    layout(xaxis = list(title = ""), yaxis = list(title = "US$ bn")) |> plotly_clean()
+})
+
+# ---- Data explorer ------------------------------------------------------------------
+output$ex_schema <- renderDT({
+  warehouse_stamp()
+  with_duck(function(con) dbGetQuery(con, sprintf("DESCRIBE %s", input$ex_table)))[, 1:2] |>
+    datatable(rownames = FALSE, options = list(dom = "t", pageLength = 100, scrollY = "100%"))
+})
+output$ex_preview <- renderDT({
+  warehouse_stamp()
+  d <- with_duck(function(con) dbGetQuery(con, sprintf("SELECT * FROM %s LIMIT 500", input$ex_table)))
+  d <- d[, !vapply(d, is.list, TRUE), drop = FALSE]
+  datatable(d, rownames = FALSE, options = list(pageLength = 12, scrollX = TRUE))
+})
+
+# ---- Connections ----------------------------------------------------------------------
+output$cx_sources <- renderDT({
+  warehouse_stamp()
+  rows <- lapply(names(SOURCES), function(n) {
+    s <- SOURCES[[n]]
+    if (!source_available(s)) return(data.frame(source = n, status = "not configured", rows = NA, revenue_bn = NA, ms = NA))
+    t0 <- Sys.time(); d <- tryCatch(get_sales(s), error = function(e) NULL)
+    if (is.null(d)) return(data.frame(source = n, status = "error", rows = NA, revenue_bn = NA, ms = NA))
+    data.frame(source = n, status = "live", rows = nrow(d), revenue_bn = round(sum(d$revenue_ngn) / 1e9, 3),
+               ms = round(as.numeric(difftime(Sys.time(), t0, units = "secs")) * 1000))
+  })
+  datatable(do.call(rbind, rows), rownames = FALSE, colnames = c("Source", "Status", "Rows", "Revenue ₦bn", "Load ms"),
+            options = list(dom = "t")) |>
+    formatStyle("status", fontWeight = "bold", color = styleEqual(c("live", "not configured", "error"), c("#2E7D6B", "#999", "#B5482A")))
+})
+output$cx_external <- renderDT({
+  harvard_cache <- "data/dataverse/harvard_gdp.csv"
+  data.frame(
+    service = c("Harvard Dataverse", "Microsoft Dataverse", "PostgreSQL", "AI SQL assistant"),
+    status  = c(if (file.exists(harvard_cache)) paste("cached", format(file.mtime(harvard_cache), "%d %b %H:%M")) else "not fetched",
+                if (msdv_available()) "credentials found" else "add DATAVERSE_URL + Entra app to .Renviron",
+                if (pg_available()) paste("host", Sys.getenv("PGHOST")) else "add PGHOST etc. to .Renviron",
+                if (llm_available()) cfg$llm$provider else "add ANTHROPIC_API_KEY or use ollama")) |>
+    datatable(rownames = FALSE, colnames = c("Service", "Status"), options = list(dom = "t"))
+})
+output$cx_build <- renderUI({
+  warehouse_stamp()
+  b <- with_duck(function(con) dbGetQuery(con, "SELECT * FROM build_log"))
+  n <- with_duck(function(con) dbGetQuery(con, "SELECT COUNT(*) n FROM landing_catalog"))$n
+  tags$p(tags$small(icon("database"), " Warehouse built ", tags$b(format(b$built_at, "%d %b %Y %H:%M")), " · ",
+                    format(b$fact_rows, big.mark = ","), " fact rows · ", n, " auto-loaded landing tables · ", b$r_version))
+})
+output$cx_tests <- renderDT({
+  warehouse_stamp()
+  with_duck(function(con) dbGetQuery(con, "SELECT CASE WHEN status = 'FAIL' AND severity = 'warn' THEN 'WARN' ELSE status END AS status,
+                                                    test, detail FROM data_tests")) |>
+    datatable(rownames = FALSE, options = list(dom = "t")) |>
+    formatStyle("status", color = "#fff", fontWeight = "bold",
+                backgroundColor = styleEqual(c("PASS", "WARN", "FAIL"), c("#6FBFAE", "#E8A33D", "#C2410C")))
+})
+output$cx_recon <- renderPlotly({
+  warehouse_stamp()
+  d <- with_duck(function(con) dbGetQuery(con, "SELECT depot_name, gap_pct FROM recon_regional ORDER BY gap_pct"))
+  plot_ly(d, x = ~gap_pct, y = ~factor(depot_name, depot_name), type = "bar", orientation = "h",
+          marker = list(color = ifelse(abs(d$gap_pct) > 1, "#E58B3C", "#7FA8D4")),
+          hovertemplate = "%{y}: %{x:.2f}%<extra></extra>") |>
+    layout(xaxis = list(title = "Excel minus warehouse, % (tolerance ±1%)", zeroline = TRUE),
+           yaxis = list(title = ""),
+           shapes = list(list(type = "line", x0 = 1, x1 = 1, y0 = 0, y1 = 1, yref = "paper", line = list(dash = "dot", color = "#999")),
+                         list(type = "line", x0 = -1, x1 = -1, y0 = 0, y1 = 1, yref = "paper", line = list(dash = "dot", color = "#999")))) |>
+    plotly_clean()
+})
+```

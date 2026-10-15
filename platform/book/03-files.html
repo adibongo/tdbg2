@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Data comes in many shapes – The Governed Analytics Platform</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./04-profiling.html" rel="next">
+<link href="./02-setup.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-187f5191076cea0c25736ba820c9c5fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-593ad2558f99b735427c0ae00bb49d27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e1197fe903822f9e7a2bab9fe51fb299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-f6ad433c7453d887ac3f57303c85455f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-architecture.html">Level 1 · Novice — See the whole, touch the data</a></li><li class="breadcrumb-item"><a href="./03-files.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data comes in many shapes</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Governed Analytics Platform</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 1 · Novice — See the whole, touch the data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The architecture, end to end</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Your workbench</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-files.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data comes in many shapes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-profiling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Profile before you trust</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 2 · Practitioner — Build the warehouse</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-sql.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">SQL: the language of the warehouse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-bronze.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bronze: land everything, change nothing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-silver.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Silver: clean, conform, remember</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-gold.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Gold: model for decisions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tests and the publish gate</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 3 · Advanced — Govern and serve</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-semantic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The semantic layer: one definition of every KPI</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-vector-ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Vector search and AI on governed data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-serving.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Serving: trusted data where people work</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-dashboards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Dashboards with Quarto and Shiny</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Level 4 · Master — Run it in production</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Operations: run it every day without you</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Security, privacy and governance</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-deploy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Deploying in an organisation</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Sector playbooks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./17-hr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Playbook: Human resources</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./18-education.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Playbook: Education</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./19-supply-chain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Playbook: Supply chain and procurement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-retail.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Playbook: Retail chains and FMCG</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./21-oil-gas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Playbook: Oil and gas (upstream)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./22-power.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Playbook: Power and utilities</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./23-banking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Playbook: Financial services (banking)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./24-pensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Playbook: Pensions (PenCom-regulated)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./25-telecoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Playbook: Telecommunications</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./26-capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Capstone: prove mastery</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./a-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Glossary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./b-prompts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Prompt library</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./c-troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./d-open-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Official and open data catalogue</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#know-your-formats" id="toc-know-your-formats" class="nav-link active" data-scroll-target="#know-your-formats"><span class="header-section-number">3.1</span> Know your formats</a></li>
+  <li><a href="#csv-the-deceptively-simple-one" id="toc-csv-the-deceptively-simple-one" class="nav-link" data-scroll-target="#csv-the-deceptively-simple-one"><span class="header-section-number">3.2</span> CSV: the deceptively simple one</a></li>
+  <li><a href="#excel-built-for-printing-not-for-analysis" id="toc-excel-built-for-printing-not-for-analysis" class="nav-link" data-scroll-target="#excel-built-for-printing-not-for-analysis"><span class="header-section-number">3.3</span> Excel: built for printing, not for analysis</a></li>
+  <li><a href="#parquet-the-analysts-best-friend" id="toc-parquet-the-analysts-best-friend" class="nav-link" data-scroll-target="#parquet-the-analysts-best-friend"><span class="header-section-number">3.4</span> Parquet: the analyst’s best friend</a></li>
+  <li><a href="#json-data-from-apis" id="toc-json-data-from-apis" class="nav-link" data-scroll-target="#json-data-from-apis"><span class="header-section-number">3.5</span> JSON: data from APIs</a></li>
+  <li><a href="#inventory-know-what-you-have" id="toc-inventory-know-what-you-have" class="nav-link" data-scroll-target="#inventory-know-what-you-have"><span class="header-section-number">3.6</span> Inventory: know what you have</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">3.7</span> 🏋️ Exercises</a></li>
+  <li><a href="#mastery-check" id="toc-mastery-check" class="nav-link" data-scroll-target="#mastery-check"><span class="header-section-number">3.8</span> ✅ Mastery check</a></li>
+  <li><a href="#in-the-organisation" id="toc-in-the-organisation" class="nav-link" data-scroll-target="#in-the-organisation"><span class="header-section-number">3.9</span> 🏢 In the organisation</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-architecture.html">Level 1 · Novice — See the whole, touch the data</a></li><li class="breadcrumb-item"><a href="./03-files.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data comes in many shapes</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-files" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data comes in many shapes</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span class="level-badge">🟢 Novice</span></p>
+<div class="wwww">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>What</strong></td>
+<td>Reading CSV, Excel, Parquet and JSON correctly, including messy, human-made files</td>
+</tr>
+<tr class="even">
+<td><strong>Why</strong></td>
+<td>Most errors in analytics are introduced in the first five minutes, when a file is read with the wrong types, header or encoding</td>
+</tr>
+<tr class="odd">
+<td><strong>When</strong></td>
+<td>Every new source; every time a source’s format changes</td>
+</tr>
+<tr class="even">
+<td><strong>Who</strong></td>
+<td>The analyst who builds ingestion; the business owner who can explain what the file <em>means</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="know-your-formats" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="know-your-formats"><span class="header-section-number">3.1</span> Know your formats</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>Structure</th>
+<th>Strengths</th>
+<th>Traps</th>
+<th>Read with</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>CSV / TSV</strong></td>
+<td>Plain text, one row per line</td>
+<td>Universal; diff-able in Git</td>
+<td>No types; delimiter, quote, encoding and date-format guessing; “1,234” vs 1234</td>
+<td><code>readr::read_csv</code>, DuckDB <code>read_csv_auto</code></td>
+</tr>
+<tr class="even">
+<td><strong>Excel (.xlsx)</strong></td>
+<td>Workbook of sheets, cells with formats</td>
+<td>What business actually uses</td>
+<td>Title rows, merged cells, totals, notes, hidden sheets, formulas, numbers stored as text</td>
+<td><code>readxl::read_excel</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Parquet</strong></td>
+<td>Columnar, typed, compressed</td>
+<td>Small, fast, keeps types; the lingua franca of data lakes</td>
+<td>Not human-readable</td>
+<td>DuckDB <code>read_parquet</code>, <code>arrow</code></td>
+</tr>
+<tr class="even">
+<td><strong>JSON</strong></td>
+<td>Nested objects</td>
+<td>APIs and web apps</td>
+<td>Nesting must be flattened</td>
+<td>DuckDB <code>read_json_auto</code>, <code>jsonlite</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Database tables</strong></td>
+<td>Typed rows in a server</td>
+<td>Live, governed</td>
+<td>Need credentials and network</td>
+<td><code>DBI::dbConnect</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="csv-the-deceptively-simple-one" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="csv-the-deceptively-simple-one"><span class="header-section-number">3.2</span> CSV: the deceptively simple one</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt 3.1 — read a CSV safely
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Read fmcg_sell_out.csv with readr. Show the column types readr guessed. Then read it again forcing every column to text, and explain why a bronze layer might prefer all-text. Show how many values in units_sold are blank, and what blank becomes under each approach.</p>
+</blockquote>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>guessed <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">raw_path</span>(<span class="st">"fmcg_sell_out.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">spec</span>(guessed)<span class="sc">$</span>cols <span class="sc">|&gt;</span> <span class="fu">vapply</span>(<span class="cf">function</span>(x) <span class="fu">class</span>(x)[<span class="dv">1</span>], <span class="st">""</span>) <span class="sc">|&gt;</span> <span class="fu">head</span>(<span class="dv">9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        week_starting            depot_code                   sku 
+     "collector_date" "collector_character" "collector_character" 
+           units_sold        unit_price_ngn          on_promotion 
+   "collector_double"    "collector_double"    "collector_double" 
+         discount_pct         stockout_flag           revenue_ngn 
+   "collector_double"    "collector_double"    "collector_double" </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>as_text <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">raw_path</span>(<span class="st">"fmcg_sell_out.csv"</span>), <span class="at">col_types =</span> <span class="fu">cols</span>(<span class="at">.default =</span> <span class="st">"c"</span>))</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">blank_units_guessed =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(guessed<span class="sc">$</span>units_sold)),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">blank_units_as_text =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(as_text<span class="sc">$</span>units_sold)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>blank_units_guessed blank_units_as_text 
+                789                 789 </code></pre>
+</div>
+</div>
+<p>Reading everything as text means <strong>the bronze layer never loses information</strong>. A value like <code>"12O"</code> (letter O, not zero) would silently become <code>NA</code> under type guessing. As text, it survives, so silver can flag it.</p>
+</section>
+<section id="excel-built-for-printing-not-for-analysis" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="excel-built-for-printing-not-for-analysis"><span class="header-section-number">3.3</span> Excel: built for printing, not for analysis</h2>
+<p>Business Excel files mix data with presentation: title rows, merged cells, subtotal rows, footnotes and currency symbols. <code>regional_report.xlsx</code> has all of them:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="fu">raw_path</span>(<span class="st">"regional_report.xlsx"</span>), <span class="at">col_names =</span> <span class="cn">FALSE</span>, <span class="at">col_types =</span> <span class="st">"text"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) <span class="sc">|&gt;</span> <span class="fu">head</span>(<span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 58%">
+<col style="width: 14%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">…1</th>
+<th style="text-align: left;">…2</th>
+<th style="text-align: left;">…3</th>
+<th style="text-align: left;">…4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">TRANS-SAHEL DISTRIBUTION LIMITED</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Revenue by depot and month, FY2025 (NGN)</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prepared by Commercial Finance - DRAFT, do not circulate</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">region</td>
+<td style="text-align: left;">depot</td>
+<td style="text-align: left;">Jan</td>
+<td style="text-align: left;">Feb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">North Central</td>
+<td style="text-align: left;">Abuja Central</td>
+<td style="text-align: left;">₦149,023,348</td>
+<td style="text-align: left;">₦161,886,920</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Jos</td>
+<td style="text-align: left;">₦64,067,958</td>
+<td style="text-align: left;">₦70,161,201</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">North West</td>
+<td style="text-align: left;">Kaduna</td>
+<td style="text-align: left;">₦80,308,256</td>
+<td style="text-align: left;">₦90,502,265</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt 3.2 — tame a presentation spreadsheet
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>regional_report.xlsx has 4 title rows, region typed once per block (merged cells), one column per month, values as text like “₦149,023,348”, an “All depots” total row and a footnote. Turn it into a tidy table (region, depot, month as a real date in 2025, revenue_ngn as a number). Drop the total and the footnote. Then check: does the sum of depots equal the “All depots” row for January?</p>
+</blockquote>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>raw <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="fu">raw_path</span>(<span class="st">"regional_report.xlsx"</span>), <span class="at">skip =</span> <span class="dv">4</span>, <span class="at">col_types =</span> <span class="st">"text"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>tidy <span class="ot">&lt;-</span> raw <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(depot)) <span class="sc">|&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fill</span>(region) <span class="sc">|&gt;</span>                                           <span class="co"># undo merged cells</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(Jan<span class="sc">:</span>Dec, <span class="at">names_to =</span> <span class="st">"mon"</span>, <span class="at">values_to =</span> <span class="st">"txt"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">as.Date</span>(<span class="fu">paste</span>(<span class="st">"2025"</span>, mon, <span class="st">"1"</span>), <span class="st">"%Y %b %d"</span>),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">revenue_ngn =</span> <span class="fu">parse_number</span>(txt))                   <span class="co"># "₦149,023,348" -&gt; 149023348</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>depots <span class="ot">&lt;-</span> tidy <span class="sc">|&gt;</span> <span class="fu">filter</span>(depot <span class="sc">!=</span> <span class="st">"All depots"</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>check  <span class="ot">&lt;-</span> tidy <span class="sc">|&gt;</span> <span class="fu">filter</span>(mon <span class="sc">==</span> <span class="st">"Jan"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">sum_of_depots =</span> <span class="fu">sum</span>(revenue_ngn[depot <span class="sc">!=</span> <span class="st">"All depots"</span>]),</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">printed_total =</span> revenue_ngn[depot <span class="sc">==</span> <span class="st">"All depots"</span>])</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>check <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">difference =</span> sum_of_depots <span class="sc">-</span> printed_total)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">sum_of_depots</th>
+<th style="text-align: right;">printed_total</th>
+<th style="text-align: right;">difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1450995257</td>
+<td style="text-align: right;">1450995256</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Read the footnote too, because it is data:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>raw <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="fu">is.na</span>(depot) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"^Note"</span>, region)) <span class="sc">|&gt;</span> <span class="fu">pull</span>(region) <span class="sc">|&gt;</span> <span class="fu">na.omit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Note: Abuja Central includes Wuse II from Q3. Kaduna Nov-Dec reflects the northern re-segmentation."
+attr(,"na.action")
+[1] 1
+attr(,"class")
+[1] "omit"</code></pre>
+</div>
+</div>
+<p><em>“Abuja Central includes Wuse II from Q3”</em> is a business rule hiding in a footnote. It explains why the depot master has two Abuja rows, which is your first clue for Chapter 7.</p>
+</section>
+<section id="parquet-the-analysts-best-friend" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="parquet-the-analysts-best-friend"><span class="header-section-number">3.4</span> Parquet: the analyst’s best friend</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt 3.3 — why Parquet?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Convert fmcg_sell_out.csv to Parquet using DuckDB’s COPY command. Compare file sizes and the time to compute total revenue by depot from each. Explain the result in terms of row versus column storage.</p>
+</blockquote>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(<span class="fu">duckdb</span>())</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>pq <span class="ot">&lt;-</span> <span class="fu">tempfile</span>(<span class="at">fileext =</span> <span class="st">".parquet"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(con, <span class="fu">sprintf</span>(<span class="st">"COPY (SELECT * FROM read_csv_auto('%s')) TO '%s' (FORMAT parquet)"</span>, <span class="fu">raw_path</span>(<span class="st">"fmcg_sell_out.csv"</span>), pq))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 55474</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>t_csv <span class="ot">&lt;-</span> <span class="fu">system.time</span>(<span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) <span class="fu">dbGetQuery</span>(con, <span class="fu">sprintf</span>(<span class="st">"SELECT depot_code, SUM(revenue_ngn) FROM read_csv_auto('%s') GROUP BY 1"</span>, <span class="fu">raw_path</span>(<span class="st">"fmcg_sell_out.csv"</span>))))[<span class="dv">3</span>]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>t_pq  <span class="ot">&lt;-</span> <span class="fu">system.time</span>(<span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) <span class="fu">dbGetQuery</span>(con, <span class="fu">sprintf</span>(<span class="st">"SELECT depot_code, SUM(revenue_ngn) FROM read_parquet('%s') GROUP BY 1"</span>, pq)))[<span class="dv">3</span>]</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">format =</span> <span class="fu">c</span>(<span class="st">"CSV"</span>, <span class="st">"Parquet"</span>),</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">size_mb =</span> <span class="fu">round</span>(<span class="fu">c</span>(<span class="fu">file.size</span>(<span class="fu">raw_path</span>(<span class="st">"fmcg_sell_out.csv"</span>)), <span class="fu">file.size</span>(pq)) <span class="sc">/</span> <span class="fl">1e6</span>, <span class="dv">2</span>),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">seconds_for_5_queries =</span> <span class="fu">round</span>(<span class="fu">c</span>(t_csv, t_pq), <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">format</th>
+<th style="text-align: right;">size_mb</th>
+<th style="text-align: right;">seconds_for_5_queries</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CSV</td>
+<td style="text-align: right;">3.14</td>
+<td style="text-align: right;">0.669</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Parquet</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">0.022</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>A query that needs two columns reads <strong>only those two columns</strong> from Parquet. From a CSV, it must parse every character of every row.</p>
+</section>
+<section id="json-data-from-apis" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="json-data-from-apis"><span class="header-section-number">3.5</span> JSON: data from APIs</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>api_response <span class="ot">&lt;-</span> <span class="st">'[{"depot":"DP01","kpis":{"otif":0.94,"fill_rate":0.97}},</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="st">                  {"depot":"DP02","kpis":{"otif":0.89,"fill_rate":0.95}}]'</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>parsed <span class="ot">&lt;-</span> jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(api_response, <span class="at">flatten =</span> <span class="cn">TRUE</span>)   <span class="co"># nested "kpis" becomes kpis.otif, kpis.fill_rate</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>parsed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">depot</th>
+<th style="text-align: right;">kpis.otif</th>
+<th style="text-align: right;">kpis.fill_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">DP01</td>
+<td style="text-align: right;">0.94</td>
+<td style="text-align: right;">0.97</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DP02</td>
+<td style="text-align: right;">0.89</td>
+<td style="text-align: right;">0.95</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(con, <span class="st">"api_kpis"</span>, parsed)                         <span class="co"># now it is a warehouse table like any other</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(con, <span class="st">'SELECT depot, "kpis.otif" AS otif FROM api_kpis'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">depot</th>
+<th style="text-align: right;">otif</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">DP01</td>
+<td style="text-align: right;">0.94</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DP02</td>
+<td style="text-align: right;">0.89</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbDisconnect</span>(con, <span class="at">shutdown =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>DuckDB can also read JSON files directly with <code>read_json_auto()</code>, once its <code>json</code> extension is installed. It installs automatically the first time you use it, if your network allows.</p>
+</section>
+<section id="inventory-know-what-you-have" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="inventory-know-what-you-have"><span class="header-section-number">3.6</span> Inventory: know what you have</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Prompt 3.4 — data inventory
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>List every data file in data/raw with its size, modified date, row count (for CSVs) and an MD5 hash. Flag exact duplicates. Explain why hashing beats comparing file names.</p>
+</blockquote>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">list.files</span>(RAW, <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.(csv|xlsx|parquet)$"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>inv <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">file =</span> <span class="fu">basename</span>(f), <span class="at">kb =</span> <span class="fu">round</span>(<span class="fu">file.size</span>(f) <span class="sc">/</span> <span class="dv">1024</span>), <span class="at">modified =</span> <span class="fu">as.Date</span>(<span class="fu">file.mtime</span>(f)),</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">md5 =</span> <span class="fu">substr</span>(<span class="fu">unname</span>(tools<span class="sc">::</span><span class="fu">md5sum</span>(f)), <span class="dv">1</span>, <span class="dv">10</span>))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>inv<span class="sc">$</span>duplicate <span class="ot">&lt;-</span> <span class="fu">duplicated</span>(inv<span class="sc">$</span>md5)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>inv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 44%">
+<col style="width: 7%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">file</th>
+<th style="text-align: right;">kb</th>
+<th style="text-align: left;">modified</th>
+<th style="text-align: left;">md5</th>
+<th style="text-align: left;">duplicate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ab_test_checkout.csv</td>
+<td style="text-align: right;">5272</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">2106cecddc</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">b2b_funnel.csv</td>
+<td style="text-align: right;">466</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">f1b8e11e99</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">bank_customers.csv</td>
+<td style="text-align: right;">711</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">ca5a77e5c5</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">board_pack.xlsx</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">8205a5afa2</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">customer_reviews_labelled.csv</td>
+<td style="text-align: right;">312</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">b05f1aad5e</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">customer_reviews.csv</td>
+<td style="text-align: right;">439</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">683e2cb7f5</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">energy_lab_qc.csv</td>
+<td style="text-align: right;">223</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">de7605438c</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">energy_production_daily.csv</td>
+<td style="text-align: right;">1066</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">48b9cf485e</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">energy_wells.csv</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">eda8136cfb</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fmcg_depots.csv</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">43daedb346</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fmcg_products.csv</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">e47db0bdc0</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fmcg_sell_out.csv</td>
+<td style="text-align: right;">3062</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">068bd28470</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fmcg_weekly.parquet</td>
+<td style="text-align: right;">1525</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">5202b41965</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">hr_attrition.csv</td>
+<td style="text-align: right;">299</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">7d9d4f8dcd</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">marketing_spend.csv</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">5d0a74c22d</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ng_macro_monthly.csv</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">f7c07e08ca</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pension_complaints.csv</td>
+<td style="text-align: right;">295</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">10dd64b61d</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pension_employers.csv</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">5a3b69984b</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pension_remittances.csv</td>
+<td style="text-align: right;">4594</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">1f64407141</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">regional_report.xlsx</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">a32e1fc487</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">retail_basket_sizes.csv</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">48eb3ed3a0</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">supply_chain_pos.csv</td>
+<td style="text-align: right;">842</td>
+<td style="text-align: left;">2026-10-15</td>
+<td style="text-align: left;">d136c71dcd</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Two files with different names but the same hash are the same data. Two files with the same name but different hashes are <em>different versions</em>, and that is far more dangerous.</p>
+</section>
+<section id="exercises" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">3.7</span> 🏋️ Exercises</h2>
+<p><strong>E3.1 🟢</strong> Read <code>board_pack.xlsx</code>. List its sheets, and read the <em>Sales</em> sheet so the header row is correct. How many rows of data does it have?</p>
+<p><strong>E3.2 🟡</strong> In the tidy regional report, which depot has the largest gap between its best and worst month? Plot monthly revenue for the top three depots.</p>
+<p><strong>E3.3 🔴</strong> <code>customer_reviews.csv</code> contains Nigerian Pidgin. Read it, count reviews by language, and show three Pidgin examples. What could go wrong with encoding if this file had been saved from Excel on Windows as “CSV (Comma delimited)” rather than “CSV UTF-8”?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">excel_sheets</span>(<span class="fu">raw_path</span>(<span class="st">"board_pack.xlsx"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Sales"  "Depots" "Notes" </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>bp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="fu">raw_path</span>(<span class="st">"board_pack.xlsx"</span>), <span class="at">sheet =</span> <span class="st">"Sales"</span>, <span class="at">skip =</span> <span class="dv">3</span>); <span class="fu">nrow</span>(bp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 480</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>depots <span class="sc">|&gt;</span> <span class="fu">group_by</span>(depot) <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">gap =</span> <span class="fu">max</span>(revenue_ngn) <span class="sc">-</span> <span class="fu">min</span>(revenue_ngn)) <span class="sc">|&gt;</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(gap)) <span class="sc">|&gt;</span> <span class="fu">head</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">depot</th>
+<th style="text-align: right;">gap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Lagos Island</td>
+<td style="text-align: right;">167130752</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lagos Mainland</td>
+<td style="text-align: right;">157559438</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Abuja Central</td>
+<td style="text-align: right;">138179182</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>rv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">raw_path</span>(<span class="st">"customer_reviews.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(rv, language); rv <span class="sc">|&gt;</span> <span class="fu">filter</span>(language <span class="sc">!=</span> <span class="st">"English"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(review_text) <span class="sc">|&gt;</span> <span class="fu">head</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">language</th>
+<th style="text-align: right;">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">English</td>
+<td style="text-align: right;">4512</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nigerian Pidgin</td>
+<td style="text-align: right;">426</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "dem debit me two times, e never reverse. it works"                         
+[2] "dem debit me two times, e never reverse"                                   
+[3] "dem debit me two times, e never reverse. delivery was faster than promised"</code></pre>
+</div>
+</div>
+<p><strong>E3.3.</strong> “CSV (Comma delimited)” on Windows uses the Windows-1252 code page. Characters outside it, such as ₦ or the accented letters in names, become <code>?</code> or garbled text. Always ask for <strong>CSV UTF-8</strong>, or read with <code>locale(encoding = "latin1")</code> and convert.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="mastery-check" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="mastery-check"><span class="header-section-number">3.8</span> ✅ Mastery check</h2>
+<ul>
+<li>Why does bronze read CSVs as text?</li>
+<li>Name four things in a “presentation” spreadsheet that must be removed before analysis.</li>
+<li>Why is Parquet faster for analytics than CSV?</li>
+</ul>
+</section>
+<section id="in-the-organisation" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="in-the-organisation"><span class="header-section-number">3.9</span> 🏢 In the organisation</h2>
+<p>The cheapest data-quality fix is upstream. Once you have tidied a monthly Excel report twice, meet its author. Agree a <strong>data contract</strong>: a fixed template, no merged cells, no totals, UTF-8, and named on a schedule. One meeting saves twelve months of cleaning code.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02-setup.html" class="pagination-link" aria-label="Your workbench">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Your workbench</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./04-profiling.html" class="pagination-link" aria-label="Profile before you trust">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Profile before you trust</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Turning Data into Business Growth · Lagos Business School</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><a href="../dashboard/index.html">Dashboard</a> · <a href="../notebook.html">Build notebook</a> · <a href="../index.html">Platform home</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
