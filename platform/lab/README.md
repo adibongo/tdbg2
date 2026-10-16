@@ -4,10 +4,31 @@ A teaching kit for *Turning Data into Business Growth* and *AI-Powered Data Anal
 Every code chunk sits under the prompt that generated it, so students can recreate the work
 with Claude, Positron Assistant or Copilot and then review the output.
 
+## Get it into RStudio (pick one)
+
+**A. One line in the RStudio console** (downloads, unzips and opens it as a project):
+
+```r
+install.packages("usethis")   # once
+usethis::use_course("https://github.com/adibongo/tdbg2/archive/refs/heads/shiny-lab.zip")
+```
+
+**B. Clone it with Git** (so you can pull updates later). In a terminal:
+
+```bash
+git clone --branch shiny-lab --single-branch https://github.com/adibongo/tdbg2.git tdbg-shiny-lab
+```
+
+then in RStudio: *File → Open Project…* → `tdbg-shiny-lab/tdbg-shiny-lab.Rproj`.
+Later, *Git → Pull* (or `git pull`) brings any updates.
+
+**C. Download the ZIP** from
+<https://github.com/adibongo/tdbg2/archive/refs/heads/shiny-lab.zip>, unzip it, and double-click `tdbg-shiny-lab.Rproj`.
+
 ## Run it in 3 steps
 
 ```r
-# 1. Open this folder in Positron/RStudio as a project (or setwd() here)
+# 1. Open tdbg-shiny-lab.Rproj in RStudio (or open this folder in Positron)
 # 2. Build the data layer (installs any missing packages, ~1 minute)
 quarto::quarto_render("01-build-data-layer.qmd")      # or click Render
 # 3. Start the dashboard
