@@ -1,0 +1,336 @@
+---
+# PROMPT S1 — "Rebuild my Quarto + Shiny dashboard as a STATIC Quarto dashboard that runs
+# entirely in the browser (Observable JS), so it can sit on a plain web host behind a
+# password. Load small aggregated 'cubes' exported from the DuckDB warehouse, re-aggregate
+# them client-side for every filter, and keep the same pages: overview, semantic layer,
+# customer voice, marketing & macro, data quality. Link back to the master tutorial."
+title: "TDBG Growth Cockpit"
+author: "Static edition · runs in your browser"
+format:
+  dashboard:
+    theme: [cosmo, theme.scss]
+    orientation: rows
+    nav-buttons:
+      - icon: house
+        href: ../index.html
+        aria-label: Platform home
+      - icon: book
+        href: ../book/index.html
+        aria-label: Master tutorial
+      - icon: journal-code
+        href: ../notebook.html
+        aria-label: Build notebook
+      - icon: github
+        href: https://github.com/adibongo/tdbg2/tree/main/platform/lab
+        aria-label: Source code
+resources:
+  - data/*
+---
+
+
+# {.sidebar}
+
+::: {style="display:none"}
+```{ojs}
+// PROMPT S2 — "Load the cubes once and write one aggregation function whose formulas mirror
+// semantic/metrics.yml, so every number on the page uses the governed definitions."
+cube   = FileAttachment("data/cube_week.csv").csv({typed: true})
+prod   = FileAttachment("data/cube_product.csv").csv({typed: true})
+layer  = FileAttachment("data/metrics.json").json()
+tests  = FileAttachment("data/tests.json").json()
+srcs   = FileAttachment("data/sources.json").json()
+build  = FileAttachment("data/build.json").json()
+recon  = FileAttachment("data/recon.csv").csv({typed: true})
+mkt    = FileAttachment("data/marketing.csv").csv({typed: true})
+macro  = FileAttachment("data/macro.csv").csv({typed: true})
+gdp    = FileAttachment("data/gdp.csv").csv({typed: true})
+reviews = FileAttachment("data/reviews.json").json()
+
+NAVY = "#0B2C55"
+GOLD = "#E8A33D"
+PAL = ["#0B2C55", "#E8A33D", "#7FA8D4", "#6FBFAE", "#9B8EC4", "#A9C86B", "#F2C14E", "#E58B3C"]
+wkStr = d => (d instanceof Date ? d.toISOString().slice(0, 10) : String(d))
+monthsAll = [...new Set(cube.map(d => wkStr(d.wk).slice(0, 7)))].sort()
+regionsAll = [...new Set(cube.map(d => d.region))].sort()
+catsAll = [...new Set(cube.map(d => d.category))].sort()
+
+agg = rows => {
+  const s = {rev: 0, gp: 0, units: 0, n: 0, so: 0, disc: 0, rev_promo: 0, n_promo: 0}
+  for (const r of rows) { s.rev += r.rev; s.gp += r.gp; s.units += r.units; s.n += r.n; s.so += r.so;
+    if (r.promo === 1) { s.rev_promo += r.rev; s.n_promo += r.n; s.disc += (r.disc || 0) } }
+  return s
+}
+METRIC = {
+  // JS mirrors of the SQL in metrics.yml: same names, and sum first, divide last
+  const m = {}
+  m.revenue = s => s.rev
+  m.units = s => s.units
+  m.gross_profit = s => s.gp
+  m.gross_margin_pct = s => 100 * s.gp / s.rev
+  m.avg_selling_price = s => s.rev / s.units
+  m.stockout_rate_pct = s => 100 * s.so / s.n
+  m.promo_share_pct = s => 100 * s.rev_promo / s.rev
+  m.avg_discount_pct = s => s.n_promo ? 100 * s.disc / s.n_promo : NaN
+  return m
+}
+fmt = (v, f) => !isFinite(v) ? "—" : f === "naira" ? (Math.abs(v) >= 1e9 ? `₦${(v/1e9).toFixed(2)}bn` : Math.abs(v) >= 1e6 ? `₦${(v/1e6).toFixed(1)}m` : `₦${Math.round(v).toLocaleString()}`)
+  : f === "pct" ? `${v.toFixed(1)}%` : Math.round(v).toLocaleString()
+```
+:::
+
+::: {style="display:none"}
+```{ojs}
+// Derived data (hidden): filters applied once, reused by every card
+keep = r => { const m = wkStr(r.wk !== undefined ? r.wk : r.mon).slice(0, 7);
+  return m >= m0 && m <= m1 && regions.includes(r.region) && cats.includes(r.category) &&
+         (promo === "All" || (promo === "On promo" ? r.promo === 1 : r.promo === 0)) }
+fcube = cube.filter(keep)
+fprod = prod.filter(keep)
+fm = mkt.filter(d => { const m = wkStr(d.wk).slice(0, 7); return m >= m0 && m <= m1 })
+ch = d3.rollups(fm, v => ({spend: d3.sum(v, d => d.spend_ngn) / 1e6, conv: d3.sum(v, d => d.conversions)}), d => d.channel)
+  .map(([channel, s]) => ({channel, ...s, cpa: s.spend * 1e6 / s.conv}))
+mac = macro.filter(d => { const m = wkStr(d.mon).slice(0, 7); return m >= m0 && m <= m1 })
+  .flatMap(d => [["Headline CPI", d.headline], ["Food CPI", d.food], ["MPR", d.mpr]].map(([s, v]) => ({m: new Date(d.mon), s, v})))
+openm = FileAttachment("data/open_macro.csv").csv({typed: true})
+thisYear = new Date().getFullYear()
+imfN = openm.filter(d => d.source === "IMF" && d.iso3 === "NGA" && ["PCPIPCH", "NGDP_RPCH"].includes(d.indicator) && d.year >= 2015)
+wdiInds = [...new Map(openm.filter(d => d.source === "World Bank").map(d => [d.indicator, d.indicator_name])).entries()]
+```
+:::
+
+```{ojs}
+// PROMPT S3 — "Sidebar filters that every page respects: month range, regions, categories, promotion."
+viewof m0 = Inputs.select(monthsAll, {label: "From", value: monthsAll[0]})
+viewof m1 = Inputs.select(monthsAll, {label: "To", value: monthsAll[monthsAll.length - 1]})
+viewof regions = Inputs.checkbox(regionsAll, {label: "Region", value: regionsAll})
+viewof cats = Inputs.checkbox(catsAll, {label: "Category", value: catsAll})
+viewof promo = Inputs.radio(["All", "On promo", "Full price"], {label: "Promotion", value: "All"})
+```
+
+```{ojs}
+html`<div style="font-size:.8rem;line-height:1.5;color:#475569">
+  <b>${fcube.length.toLocaleString()}</b> cube rows in view.<br>
+  Warehouse built ${build.length ? String(build[0].built_at).slice(0,16) : ""} · ${build.length ? build[0].fact_rows.toLocaleString() : ""} fact rows.<br>
+  Static edition: filters run in your browser. The live Shiny edition can also switch between data sources: see the <a href="../index.html">platform page</a>.</div>`
+```
+
+# Overview
+
+## Row {height=22%}
+
+```{ojs}
+// PROMPT S4 — "Five KPI cards from the governed metrics, with each definition as a tooltip."
+kp = agg(fcube)
+card = (m, bg, fg) => html`<div title="${layer.metrics[m].description}" style="background:${bg};color:${fg};border-radius:8px;padding:12px 14px;height:100%">
+  <div style="font-size:.78rem;opacity:.85">${layer.metrics[m].label}</div>
+  <div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.65rem;font-weight:700">${fmt(METRIC[m](kp), layer.metrics[m].format)}</div></div>`
+html`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;height:100%">
+  ${card("revenue", NAVY, "#fff")}${card("gross_margin_pct", "#F7F4ED", NAVY)}${card("units", "#F7F4ED", NAVY)}
+  ${card("stockout_rate_pct", "#FCEBD7", "#8A4B0F")}${card("promo_share_pct", GOLD, NAVY)}</div>`
+```
+
+## Row {height=42%}
+
+```{ojs}
+//| title: Weekly revenue (₦m) with 4-week moving average
+weekly = d3.rollups(fcube, v => agg(v).rev / 1e6, d => wkStr(d.wk)).map(([w, r]) => ({w: new Date(w), r})).sort((a, b) => a.w - b.w)
+Plot.plot({width: 620, height: 300, marginLeft: 50, y: {label: "₦m", grid: true}, x: {label: null},
+  marks: [Plot.lineY(weekly, {x: "w", y: "r", stroke: "#7FA8D4"}),
+          Plot.lineY(weekly, Plot.windowY(4, {x: "w", y: "r", stroke: NAVY, strokeWidth: 2.5})),
+          Plot.tip(weekly, Plot.pointerX({x: "w", y: "r", title: d => `${d.w.toISOString().slice(0,10)}: ₦${d.r.toFixed(1)}m`}))]})
+```
+
+```{ojs}
+//| title: Revenue and gross margin by region
+byRegion = d3.rollups(fcube, v => agg(v), d => d.region).map(([region, s]) => ({region, rev: s.rev / 1e9, gm: 100 * s.gp / s.rev}))
+Plot.plot({width: 620, height: 300, marginLeft: 100, x: {label: "₦ billions", grid: true}, y: {label: null},
+  marks: [Plot.barX(byRegion, {y: "region", x: "rev", fill: NAVY, sort: {y: "-x"}}),
+          Plot.text(byRegion, {y: "region", x: "rev", text: d => `${d.gm.toFixed(1)}% GM`, dx: -6, textAnchor: "end", fill: "white"})]})
+```
+
+## Row {height=36%}
+
+```{ojs}
+//| title: Category × region (₦m)
+heat = d3.rollups(fcube, v => agg(v).rev / 1e6, d => d.category, d => d.region).flatMap(([c, rs]) => rs.map(([r, v]) => ({c, r, v})))
+Plot.plot({width: 620, height: 240, marginLeft: 100, color: {scheme: "blues", legend: true, label: "₦m"}, x: {label: null}, y: {label: null},
+  marks: [Plot.cell(heat, {x: "r", y: "c", fill: "v", tip: true}), Plot.text(heat, {x: "r", y: "c", text: d => d.v.toFixed(0), fill: d => d.v > d3.max(heat, h => h.v) * .6 ? "white" : NAVY})]})
+```
+
+```{ojs}
+//| title: Top 15 products
+topProd = d3.rollups(fprod, v => agg(v), d => d.product).map(([product, s]) => ({product, revenue: s.rev, units: s.units,
+  gm_pct: +(100 * s.gp / s.rev).toFixed(1), stockout_pct: +(100 * s.so / s.n).toFixed(1), promo_pct: +(100 * s.rev_promo / s.rev).toFixed(1)}))
+  .sort((a, b) => b.revenue - a.revenue).slice(0, 15)
+Inputs.table(topProd, {format: {revenue: d => `₦${(d/1e6).toFixed(1)}m`, units: d => d.toLocaleString()}, rows: 15})
+```
+
+# Semantic layer
+
+## Row {height=18%}
+
+```{ojs}
+// PROMPT S5 — "Let users pick any governed metric, a dimension and a time grain; show the SQL the
+// live app would compile from metrics.yml next to the chart computed in the browser."
+metricKeys = Object.keys(METRIC)
+viewof met = Inputs.select(metricKeys, {label: "Metric", value: "revenue", format: k => layer.metrics[k].label})
+viewof dim = Inputs.select(["region", "category", "depot", "promo", "(none)"], {label: "Break down by", value: "category"})
+viewof grain = Inputs.select(["quarter", "month", "week", "year", "(none)"], {label: "Time grain", value: "quarter"})
+```
+
+## Row {height=82%}
+
+```{ojs}
+//| title: The SQL the live app compiles from metrics.yml
+period = (w, g) => { const s = wkStr(w); const y = s.slice(0, 4), m = +s.slice(5, 7);
+  return g === "week" ? s : g === "month" ? s.slice(0, 7) : g === "quarter" ? `${y}-Q${Math.ceil(m / 3)}` : g === "year" ? y : "all" }
+sqlText = {
+  const sel = []; const grp = [];
+  if (grain !== "(none)") { sel.push(`date_trunc('${grain}', week_starting) AS period`); grp.push("period") }
+  if (dim !== "(none)") { const col = dim === "depot" ? "depot_name" : dim === "promo" ? "on_promotion" : dim; sel.push(`${col} AS ${dim}`); grp.push(dim) }
+  sel.push(`${layer.metrics[met].sql} AS ${met}`)
+  return `SELECT\n  ${sel.join(",\n  ")}\nFROM ${layer.table}` + (grp.length ? `\nGROUP BY ${grp.join(", ")}\nORDER BY ${grp[0]}` : "")
+}
+html`<pre style="background:#0B2C55;color:#F7F4ED;padding:12px;border-radius:6px;font-size:.8rem;white-space:pre-wrap">${sqlText}</pre>
+<p style="font-size:.85rem"><b>${layer.metrics[met].label}:</b> ${layer.metrics[met].description}<br><i>Owner: ${layer.owner}</i></p>`
+```
+
+```{ojs}
+//| title: Result
+semRows = d3.rollups(fcube, v => METRIC[met](agg(v)), d => period(d.wk, grain), d => dim === "(none)" ? "All" : String(d[dim]))
+  .flatMap(([p, gs]) => gs.map(([g, v]) => ({period: p, group: g, value: v}))).sort((a, b) => d3.ascending(a.period, b.period))
+grain === "(none)"
+  ? Plot.plot({width: 620, height: 380, marginLeft: 110, x: {label: layer.metrics[met].label, grid: true}, y: {label: null},
+      marks: [Plot.barX(semRows, {y: "group", x: "value", fill: NAVY, sort: {y: "-x"}, tip: true})]})
+  : Plot.plot({width: 620, height: 380, marginLeft: 60, color: {legend: true, range: PAL}, y: {label: layer.metrics[met].label, grid: true}, x: {label: null, tickRotate: -30},
+      marks: [Plot.lineY(semRows, {x: "period", y: "value", stroke: "group", strokeWidth: 2, tip: true}), Plot.dot(semRows, {x: "period", y: "value", fill: "group", r: 2.5})]})
+```
+
+# Customer voice
+
+## Row {height=14%}
+
+```{ojs}
+// PROMPT S6 — "Semantic search over the 4,938 reviews with the same TF-IDF + cosine method as the
+// warehouse, computed in the browser."
+viewof q = Inputs.text({label: "Search reviews", value: "debited twice no reversal", width: "100%", submit: "Search"})
+```
+
+## Row {height=86%}
+
+```{ojs}
+//| title: Closest reviews
+index = {
+  const tok = s => s.toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter(w => w.length > 2)
+  const docs = reviews.map(r => tok(r.txt)); const df = new Map()
+  for (const d of docs) for (const w of new Set(d)) df.set(w, (df.get(w) || 0) + 1)
+  const idf = w => Math.log(reviews.length / (df.get(w) || reviews.length)) + 1
+  const vec = d => { const v = new Map(); for (const w of d) if (df.has(w)) v.set(w, (v.get(w) || 0) + idf(w));
+    const n = Math.hypot(...v.values()); for (const [k, x] of v) v.set(k, x / (n || 1)); return v }
+  return {tok, vec, vecs: docs.map(vec)}
+}
+hits = {
+  const qv = index.vec(index.tok(q))
+  return reviews.map((r, i) => { let s = 0; for (const [k, x] of qv) s += x * (index.vecs[i].get(k) || 0); return {similarity: +s.toFixed(3), ...r} })
+    .filter(d => d.similarity > 0).sort((a, b) => b.similarity - a.similarity).slice(0, 25)
+}
+hits.length ? Inputs.table(hits, {columns: ["similarity", "txt", "theme", "sentiment", "channel", "stars", "lang"],
+  header: {txt: "review", lang: "language"}, width: {txt: 380}, rows: 14})
+  : html`<p>None of those words appear in the reviews. TF-IDF matches words, not meaning; Chapter 11 of the tutorial shows the neural upgrade.</p>`
+```
+
+```{ojs}
+//| title: Sentiment by theme
+Plot.plot({width: 620, height: 330, marginLeft: 110, color: {domain: ["negative", "neutral", "positive"], range: ["#E58B3C", "#C9C3B6", "#6FBFAE"], legend: true},
+  x: {label: "reviews", grid: true}, y: {label: null},
+  marks: [Plot.barX(reviews, Plot.groupY({x: "count"}, {y: "theme", fill: "sentiment", sort: {y: "-x"}, tip: true}))]})
+```
+
+# Marketing & macro
+
+## Row {height=50%}
+
+```{ojs}
+//| title: Spend vs conversions by channel (dot size = cost per acquisition)
+Plot.plot({width: 620, height: 300, marginLeft: 60, inset: 30, x: {label: "Spend, ₦ millions", grid: true}, y: {label: "Conversions", grid: true}, r: {range: [6, 30]},
+  marks: [Plot.dot(ch, {x: "spend", y: "conv", r: "cpa", fill: "channel", fillOpacity: .8, tip: true}),
+          Plot.text(ch, {x: "spend", y: "conv", text: "channel", dy: -22})], color: {range: PAL}})
+```
+
+```{ojs}
+//| title: Weekly spend by channel (₦m)
+Plot.plot({width: 620, height: 300, color: {legend: true, range: PAL}, y: {label: "₦m", grid: true}, x: {label: null},
+  marks: [Plot.areaY(fm, {x: d => new Date(d.wk), y: d => d.spend_ngn / 1e6, fill: "channel", fillOpacity: .85})]})
+```
+
+## Row {height=50%}
+
+### Column {width=50%}
+
+```{ojs}
+//| title: Inflation and policy rate (%)
+Plot.plot({width: 620, height: 280, color: {legend: true, domain: ["Headline CPI", "Food CPI", "MPR"], range: [NAVY, "#7FA8D4", GOLD]}, y: {grid: true, label: "%"}, x: {label: null},
+  marks: [Plot.lineY(mac, {x: "m", y: "v", stroke: "s", strokeWidth: 2, tip: true})]})
+```
+
+### Column {.tabset width=50%}
+
+```{ojs}
+//| title: IMF outlook, Nigeria (shaded = projection)
+Plot.plot({width: 620, height: 280, color: {legend: true, range: [NAVY, GOLD]}, y: {grid: true, label: "% y/y"}, x: {label: null, tickFormat: d3.format("d")},
+  marks: [Plot.rectX([0], {x1: thisYear - .5, x2: d3.max(imfN, d => d.year) + .5, fill: GOLD, fillOpacity: .12}),
+          Plot.lineY(imfN, {x: "year", y: "value", stroke: "indicator_name", strokeWidth: 2, tip: true}),
+          Plot.dot(imfN, {x: "year", y: "value", fill: "indicator_name", r: 2.5})]})
+```
+
+```{ojs}
+//| title: World Bank WDI
+viewof wdi = Inputs.select(new Map(wdiInds.map(([k, v]) => [v, k])), {label: "Indicator"})
+Plot.plot({width: 620, height: 240, color: {legend: true, range: PAL}, y: {grid: true, label: null}, x: {label: null, tickFormat: d3.format("d")},
+  marks: [Plot.lineY(openm.filter(d => d.source === "World Bank" && d.indicator === wdi), {x: "year", y: "value", stroke: "country", tip: true})]})
+```
+
+```{ojs}
+//| title: GDP, US$ bn (Harvard Dataverse)
+Plot.plot({width: 620, height: 280, color: {legend: true, range: PAL}, y: {grid: true, label: "US$ bn"}, x: {label: null, tickFormat: d3.format("d")},
+  marks: [Plot.lineY(gdp, {x: "year", y: "gdp_usd_bn", stroke: "country", tip: true})]})
+```
+
+# Data quality
+
+## Row {height=48%}
+
+```{ojs}
+//| title: Same question, every source (all-time revenue)
+Inputs.table(srcs, {columns: ["source", "status", "rows", "revenue_bn"], header: {revenue_bn: "Revenue ₦bn"}})
+```
+
+```{ojs}
+//| title: Data tests (the publish gate)
+chip = s => html`<span style="display:inline-block;padding:1px 8px;border-radius:10px;color:#fff;font-weight:700;font-size:.75rem;background:${s === "PASS" ? "#6FBFAE" : s === "WARN" ? GOLD : "#C2410C"}">${s}</span>`
+html`<table class="table table-sm" style="font-size:.85rem"><thead><tr><th>Status</th><th>Test</th><th>Detail</th></tr></thead><tbody>
+${tests.map(t => { const s = t.status === "FAIL" && t.severity === "warn" ? "WARN" : t.status; return html`<tr><td>${chip(s)}</td><td>${t.test}</td><td>${t.detail}</td></tr>` })}
+</tbody></table><p style="font-size:.8rem;color:#475569">FAIL blocks publishing. WARN reports only. Freshness warns because the course data ends in March 2026.</p>`
+```
+
+## Row {height=52%}
+
+```{ojs}
+//| title: Reconciliation, FY2025 Excel regional report vs warehouse (gap %, tolerance ±1%)
+Plot.plot({width: 620, height: 300, marginLeft: 110, x: {label: "Excel minus warehouse, %", domain: [-1.2, 1.2], grid: true}, y: {label: null},
+  marks: [Plot.ruleX([-1, 1], {strokeDasharray: "4,4", stroke: "#999"}), Plot.ruleX([0]),
+          Plot.barX(recon, {y: "depot", x: "gap_pct", fill: d => Math.abs(d.gap_pct) > 1 ? "#E58B3C" : "#7FA8D4", sort: {y: "x"}, tip: true})]})
+```
+
+```{ojs}
+//| title: Learn how this was built
+html`<div style="font-size:.95rem;line-height:1.7">
+<p>This dashboard is the <b>serving layer</b> of the governed analytics platform taught in the master tutorial.</p>
+<ul>
+<li><a href="../book/09-tests.html">Chapter 9</a>: how these data tests and the publish gate work</li>
+<li><a href="../book/10-semantic.html">Chapter 10</a>: the semantic layer behind every KPI on this page</li>
+<li><a href="../book/11-vector-ai.html">Chapter 11</a>: the review search, and why it misses Pidgin</li>
+<li><a href="../book/13-dashboards.html">Chapter 13</a>: static vs Shiny dashboards, and the live version of this one</li>
+<li><a href="../notebook.html">The build notebook</a>: every database, step by step, with its prompts</li>
+</ul></div>`
+```

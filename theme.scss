@@ -1,0 +1,76 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Source+Serif+4:wght@600..700&family=IBM+Plex+Mono&display=swap');
+$navy:  #0B2C55;
+$gold:  #E8A33D;
+$cream: #F7F4ED;
+$primary: $navy;
+$secondary: #7FA8D4;
+$success: #6FBFAE;
+$warning: #F2C14E;
+$danger:  #E58B3C;
+$font-family-sans-serif: "Inter", system-ui, sans-serif;
+$headings-font-family: "Source Serif 4", Georgia, serif;
+$font-family-monospace: "IBM Plex Mono", ui-monospace, monospace;
+$link-color: $navy;
+$navbar-bg: $navy;
+$navbar-fg: #ffffff;
+
+/*-- scss:rules --*/
+.navbar {
+  border-bottom: 3px solid $gold;
+}
+.navbar-title {
+  font-family: $headings-font-family;
+  font-weight: 700;
+}
+.callout-tip .callout-title-container {
+  color: $navy;
+  font-weight: 700;
+}
+.callout.callout-tip {
+  border-left-color: $gold !important;
+}
+.callout-tip blockquote {
+  font-size: .95rem;
+  color: #333;
+  border-left: 0;
+  margin: 0;
+  padding: 0;
+}
+.bslib-value-box .value-box-value {
+  font-family: $headings-font-family;
+}
+.card-header {
+  font-weight: 600;
+  color: $navy;
+}
+.sidebar {
+  background: $cream;
+}
+pre.sql-out {
+  background: #0B2C55;
+  color: #F7F4ED;
+  padding: .75rem;
+  border-radius: 6px;
+  font-size: .8rem;
+  white-space: pre-wrap;
+}
+.quarto-dashboard {
+  font-size: .86rem;
+}
+.quarto-dashboard .dataTables_wrapper {
+  font-size: .8rem;
+}
+.quarto-dashboard table.dataTable td, .quarto-dashboard table.dataTable th {
+  padding: 4px 8px;
+}
+.quarto-dashboard .bslib-value-box .value-box-value {
+  font-size: 1.6rem;
+}
+.quarto-dashboard .bslib-value-box .value-box-title {
+  font-size: .8rem;
+  font-family: "Inter", sans-serif;
+}
+.quarto-dashboard .bslib-value-box .value-box-showcase .bi {
+  font-size: 2rem;
+}

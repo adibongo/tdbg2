@@ -1,0 +1,401 @@
+receipt_id,store_id,region,basket_size_naira,num_items,payment_method,day_of_week
+R00001,STR02,Lagos Mainland,8890,13,Card,Friday
+R00002,STR11,Lekki,6300,9,Card,Saturday
+R00003,STR05,Lagos Mainland,9950,14,Card,Monday
+R00004,STR07,Surulere,10440,12,Cash,Friday
+R00005,STR02,Ikeja,4980,7,Cash,Thursday
+R00006,STR08,Lagos Mainland,5890,8,POS,Sunday
+R00007,STR03,Lagos Mainland,8500,11,Transfer,Thursday
+R00008,STR04,Lagos Mainland,7590,11,POS,Thursday
+R00009,STR09,Ikeja,8190,13,Transfer,Sunday
+R00010,STR01,Lekki,6610,11,Cash,Thursday
+R00011,STR06,Lagos Mainland,10280,15,Cash,Tuesday
+R00012,STR08,Lekki,10020,13,Card,Tuesday
+R00013,STR02,Lagos Mainland,8360,12,POS,Monday
+R00014,STR04,Lekki,10940,15,Card,Monday
+R00015,STR05,Surulere,9260,12,Transfer,Thursday
+R00016,STR08,Lekki,6600,9,POS,Saturday
+R00017,STR12,Lekki,9030,13,POS,Saturday
+R00018,STR11,Lekki,6440,9,Card,Monday
+R00019,STR03,Lagos Mainland,10270,13,Cash,Friday
+R00020,STR01,Lagos Mainland,8120,10,Cash,Tuesday
+R00021,STR01,Lagos Mainland,7850,11,Cash,Sunday
+R00022,STR08,Ikeja,6910,9,Card,Tuesday
+R00023,STR02,Lekki,11200,15,Transfer,Friday
+R00024,STR03,Ikeja,7910,11,POS,Wednesday
+R00025,STR11,Lekki,7370,9,Transfer,Friday
+R00026,STR11,Lagos Mainland,7520,11,Transfer,Thursday
+R00027,STR11,Lekki,9410,13,Card,Saturday
+R00028,STR04,Lagos Mainland,9020,11,POS,Tuesday
+R00029,STR08,Lagos Island,9130,14,Transfer,Sunday
+R00030,STR08,Lekki,9170,12,POS,Friday
+R00031,STR03,Surulere,14110,17,POS,Saturday
+R00032,STR07,Ikeja,7420,9,Card,Saturday
+R00033,STR07,Lagos Mainland,7220,9,Cash,Sunday
+R00034,STR05,Ikeja,6680,9,Card,Tuesday
+R00035,STR10,Lagos Mainland,9610,13,Transfer,Wednesday
+R00036,STR09,Surulere,10940,14,POS,Wednesday
+R00037,STR07,Lekki,7990,11,Card,Wednesday
+R00038,STR09,Lagos Mainland,6640,9,POS,Friday
+R00039,STR10,Lagos Mainland,6660,9,Transfer,Sunday
+R00040,STR07,Lagos Mainland,9700,13,Card,Sunday
+R00041,STR04,Surulere,9930,14,Card,Friday
+R00042,STR10,Ikeja,9440,10,POS,Friday
+R00043,STR09,Lekki,6940,9,POS,Saturday
+R00044,STR12,Ikeja,8720,9,Transfer,Sunday
+R00045,STR02,Ikeja,8470,11,Card,Tuesday
+R00046,STR06,Lagos Mainland,8690,12,POS,Friday
+R00047,STR12,Surulere,10250,15,Cash,Saturday
+R00048,STR07,Lagos Island,8700,13,POS,Wednesday
+R00049,STR12,Ikeja,9770,13,Card,Thursday
+R00050,STR01,Lekki,8370,11,Cash,Sunday
+R00051,STR01,Ikeja,8850,12,Transfer,Sunday
+R00052,STR10,Surulere,9650,12,Transfer,Sunday
+R00053,STR05,Lagos Mainland,5660,8,Transfer,Saturday
+R00054,STR07,Ikeja,7580,11,Transfer,Wednesday
+R00055,STR06,Lagos Island,7300,9,POS,Wednesday
+R00056,STR05,Ikeja,6990,10,Transfer,Friday
+R00057,STR12,Lagos Mainland,7670,11,Transfer,Friday
+R00058,STR02,Lagos Mainland,12000,15,Transfer,Friday
+R00059,STR10,Lagos Island,6590,10,Cash,Friday
+R00060,STR11,Lagos Island,10510,15,Transfer,Thursday
+R00061,STR08,Lagos Island,5340,7,Card,Saturday
+R00062,STR05,Ikeja,7550,9,Transfer,Wednesday
+R00063,STR02,Ikeja,8570,10,Cash,Wednesday
+R00064,STR09,Lagos Island,9540,12,POS,Tuesday
+R00065,STR06,Lagos Island,9850,14,Transfer,Tuesday
+R00066,STR02,Lagos Mainland,10050,12,POS,Saturday
+R00067,STR05,Ikeja,7530,11,Transfer,Thursday
+R00068,STR12,Lagos Island,7310,8,Cash,Tuesday
+R00069,STR04,Lagos Mainland,10220,13,POS,Saturday
+R00070,STR03,Lagos Island,7830,11,Transfer,Friday
+R00071,STR09,Ikeja,5930,11,POS,Monday
+R00072,STR03,Lagos Mainland,6160,7,Transfer,Wednesday
+R00073,STR12,Ikeja,6500,10,Transfer,Tuesday
+R00074,STR11,Ikeja,9330,13,POS,Friday
+R00075,STR12,Lekki,8530,12,Transfer,Wednesday
+R00076,STR11,Ikeja,9800,13,Card,Monday
+R00077,STR03,Ikeja,7380,10,POS,Monday
+R00078,STR03,Lagos Island,8560,11,POS,Friday
+R00079,STR05,Lekki,9640,14,POS,Monday
+R00080,STR06,Ikeja,7600,10,Card,Saturday
+R00081,STR11,Lagos Island,9230,14,Transfer,Tuesday
+R00082,STR09,Ikeja,6950,9,POS,Friday
+R00083,STR08,Lagos Island,7500,10,Transfer,Thursday
+R00084,STR11,Ikeja,7460,9,POS,Thursday
+R00085,STR08,Lekki,6060,9,Transfer,Monday
+R00086,STR05,Surulere,9310,14,Card,Saturday
+R00087,STR05,Surulere,7300,10,POS,Sunday
+R00088,STR07,Ikeja,8250,11,Cash,Monday
+R00089,STR02,Ikeja,9290,11,Card,Tuesday
+R00090,STR09,Lekki,9210,12,Transfer,Sunday
+R00091,STR08,Lagos Island,9730,11,POS,Friday
+R00092,STR09,Lekki,8020,10,POS,Tuesday
+R00093,STR07,Ikeja,7380,10,Card,Tuesday
+R00094,STR10,Lagos Mainland,8060,12,Cash,Friday
+R00095,STR12,Lagos Mainland,5330,10,POS,Saturday
+R00096,STR07,Lekki,5680,7,Cash,Friday
+R00097,STR06,Lagos Mainland,5860,9,Card,Sunday
+R00098,STR02,Lagos Island,6370,9,Card,Thursday
+R00099,STR10,Lagos Island,9100,12,Transfer,Wednesday
+R00100,STR11,Lagos Mainland,6530,9,POS,Thursday
+R00101,STR09,Lagos Island,7470,10,POS,Wednesday
+R00102,STR11,Lekki,11420,15,POS,Tuesday
+R00103,STR11,Lagos Mainland,7510,10,Cash,Monday
+R00104,STR10,Lekki,9910,12,Card,Wednesday
+R00105,STR07,Lekki,6480,7,Transfer,Saturday
+R00106,STR02,Lagos Island,7810,11,Cash,Monday
+R00107,STR01,Lagos Mainland,6450,8,Card,Thursday
+R00108,STR03,Ikeja,7540,9,Card,Friday
+R00109,STR06,Lagos Mainland,10170,14,Cash,Friday
+R00110,STR09,Lagos Island,5280,8,Transfer,Saturday
+R00111,STR06,Surulere,9180,12,POS,Saturday
+R00112,STR01,Surulere,8740,11,Cash,Saturday
+R00113,STR03,Lekki,7070,11,Transfer,Monday
+R00114,STR12,Lagos Island,5680,9,POS,Thursday
+R00115,STR12,Lekki,8380,12,POS,Friday
+R00116,STR05,Lekki,7190,11,POS,Wednesday
+R00117,STR10,Lagos Island,8720,13,Transfer,Monday
+R00118,STR09,Ikeja,8270,12,POS,Tuesday
+R00119,STR12,Lagos Mainland,12320,17,Card,Thursday
+R00120,STR11,Lagos Mainland,7740,11,Card,Thursday
+R00121,STR08,Ikeja,6330,9,Cash,Tuesday
+R00122,STR05,Lagos Mainland,8610,10,Transfer,Saturday
+R00123,STR08,Lagos Mainland,8700,12,Card,Sunday
+R00124,STR04,Lekki,11600,14,Card,Tuesday
+R00125,STR05,Surulere,10160,13,POS,Sunday
+R00126,STR08,Ikeja,9000,13,Card,Monday
+R00127,STR07,Lekki,11900,17,Card,Sunday
+R00128,STR07,Surulere,6070,10,Cash,Sunday
+R00129,STR05,Lagos Mainland,6990,9,Transfer,Monday
+R00130,STR05,Ikeja,6490,7,Card,Saturday
+R00131,STR01,Lagos Island,7450,10,Card,Sunday
+R00132,STR08,Lagos Mainland,5780,8,Card,Sunday
+R00133,STR07,Lekki,9660,13,POS,Sunday
+R00134,STR12,Lagos Island,7770,12,POS,Friday
+R00135,STR07,Ikeja,5640,7,Transfer,Monday
+R00136,STR06,Lagos Mainland,6340,9,Transfer,Saturday
+R00137,STR01,Lagos Mainland,8910,11,POS,Friday
+R00138,STR03,Surulere,10170,14,POS,Friday
+R00139,STR05,Lagos Mainland,13610,18,Transfer,Thursday
+R00140,STR05,Lagos Mainland,17110,22,POS,Friday
+R00141,STR05,Lagos Island,9140,12,POS,Tuesday
+R00142,STR05,Ikeja,6390,8,POS,Saturday
+R00143,STR10,Ikeja,4750,6,Transfer,Monday
+R00144,STR02,Ikeja,8800,14,Cash,Saturday
+R00145,STR04,Lagos Mainland,6680,9,Cash,Saturday
+R00146,STR02,Lagos Island,7400,10,Transfer,Thursday
+R00147,STR04,Lekki,7040,7,Transfer,Friday
+R00148,STR09,Ikeja,7930,10,Transfer,Wednesday
+R00149,STR01,Ikeja,10770,14,Transfer,Sunday
+R00150,STR05,Lekki,8560,11,Transfer,Saturday
+R00151,STR01,Lekki,7900,12,POS,Wednesday
+R00152,STR12,Lagos Mainland,6310,8,Cash,Tuesday
+R00153,STR09,Lagos Island,5350,9,Card,Tuesday
+R00154,STR03,Ikeja,7270,10,POS,Thursday
+R00155,STR03,Lagos Island,8110,11,POS,Sunday
+R00156,STR02,Lekki,12850,17,POS,Saturday
+R00157,STR06,Ikeja,8500,11,POS,Tuesday
+R00158,STR10,Lekki,10550,16,POS,Saturday
+R00159,STR08,Lekki,7240,7,Card,Thursday
+R00160,STR11,Ikeja,6070,6,Transfer,Saturday
+R00161,STR05,Surulere,6430,8,Card,Wednesday
+R00162,STR04,Ikeja,6840,9,Transfer,Friday
+R00163,STR06,Lekki,14060,20,POS,Sunday
+R00164,STR03,Lagos Island,6670,9,Card,Wednesday
+R00165,STR12,Ikeja,10170,13,Transfer,Saturday
+R00166,STR03,Ikeja,6530,10,Card,Sunday
+R00167,STR06,Lagos Mainland,10410,15,Cash,Tuesday
+R00168,STR07,Lagos Island,9070,12,Card,Monday
+R00169,STR01,Surulere,7900,12,Cash,Saturday
+R00170,STR06,Ikeja,8140,11,POS,Wednesday
+R00171,STR06,Lagos Mainland,6960,9,Transfer,Monday
+R00172,STR04,Lagos Island,9210,13,POS,Thursday
+R00173,STR02,Lagos Mainland,7320,10,POS,Saturday
+R00174,STR01,Lagos Mainland,6010,8,Card,Wednesday
+R00175,STR01,Surulere,5930,10,Cash,Wednesday
+R00176,STR06,Ikeja,8590,9,POS,Saturday
+R00177,STR02,Lagos Island,12250,15,Card,Friday
+R00178,STR12,Ikeja,8570,10,POS,Saturday
+R00179,STR03,Lagos Mainland,7980,10,Cash,Thursday
+R00180,STR08,Lagos Island,8840,12,POS,Sunday
+R00181,STR09,Lekki,11440,14,POS,Friday
+R00182,STR06,Ikeja,8700,11,Card,Monday
+R00183,STR11,Surulere,7410,9,Card,Sunday
+R00184,STR02,Ikeja,10880,17,POS,Thursday
+R00185,STR03,Ikeja,9170,14,Card,Tuesday
+R00186,STR04,Lekki,12120,16,Transfer,Tuesday
+R00187,STR02,Surulere,8620,11,Transfer,Saturday
+R00188,STR04,Lekki,6010,7,Card,Monday
+R00189,STR04,Surulere,5790,6,POS,Wednesday
+R00190,STR10,Lekki,12480,17,POS,Tuesday
+R00191,STR04,Surulere,12710,16,Card,Thursday
+R00192,STR11,Lagos Mainland,7860,10,POS,Thursday
+R00193,STR10,Lekki,7460,8,Card,Friday
+R00194,STR11,Ikeja,11900,15,Cash,Wednesday
+R00195,STR02,Ikeja,6200,8,Transfer,Monday
+R00196,STR12,Ikeja,6540,9,POS,Friday
+R00197,STR08,Surulere,9680,13,Cash,Thursday
+R00198,STR12,Surulere,7440,8,Card,Friday
+R00199,STR05,Lagos Island,8210,12,Transfer,Monday
+R00200,STR12,Lekki,7890,10,POS,Monday
+R00201,STR08,Lekki,8960,13,Cash,Wednesday
+R00202,STR01,Lagos Island,11740,16,Card,Thursday
+R00203,STR05,Lagos Mainland,8420,10,POS,Thursday
+R00204,STR02,Lagos Mainland,9680,13,Card,Saturday
+R00205,STR12,Lekki,4850,7,Card,Thursday
+R00206,STR04,Ikeja,8120,12,Card,Friday
+R00207,STR03,Surulere,6630,9,Transfer,Friday
+R00208,STR07,Ikeja,6020,10,Transfer,Monday
+R00209,STR06,Surulere,6570,10,POS,Friday
+R00210,STR02,Lagos Island,7550,10,Transfer,Wednesday
+R00211,STR10,Lekki,10370,15,POS,Thursday
+R00212,STR11,Lagos Mainland,5860,10,POS,Monday
+R00213,STR09,Ikeja,8290,13,Transfer,Saturday
+R00214,STR08,Lekki,7270,8,Transfer,Sunday
+R00215,STR05,Surulere,7570,9,POS,Monday
+R00216,STR07,Lekki,10600,16,Card,Friday
+R00217,STR07,Lagos Mainland,9430,11,POS,Saturday
+R00218,STR02,Lagos Island,11530,14,POS,Wednesday
+R00219,STR01,Lagos Mainland,7910,10,Cash,Saturday
+R00220,STR04,Lagos Mainland,6890,10,Transfer,Friday
+R00221,STR06,Lekki,7770,10,Card,Sunday
+R00222,STR02,Lekki,8750,11,Card,Sunday
+R00223,STR02,Lekki,8600,11,Transfer,Monday
+R00224,STR11,Surulere,6230,8,Card,Thursday
+R00225,STR05,Lekki,8420,10,POS,Friday
+R00226,STR08,Lekki,8710,14,POS,Tuesday
+R00227,STR07,Lagos Mainland,15500,21,POS,Wednesday
+R00228,STR09,Lagos Mainland,13200,19,Card,Sunday
+R00229,STR09,Ikeja,6610,8,Card,Monday
+R00230,STR04,Lekki,7640,10,Card,Thursday
+R00231,STR11,Lagos Mainland,5650,7,Cash,Saturday
+R00232,STR05,Ikeja,7070,7,POS,Wednesday
+R00233,STR11,Lekki,8910,10,Transfer,Thursday
+R00234,STR05,Lagos Mainland,11160,13,Card,Sunday
+R00235,STR02,Lagos Island,6830,7,POS,Thursday
+R00236,STR10,Surulere,6960,8,Card,Tuesday
+R00237,STR01,Lekki,4730,8,Cash,Monday
+R00238,STR10,Lagos Mainland,7890,10,Cash,Sunday
+R00239,STR01,Lekki,6270,10,Transfer,Wednesday
+R00240,STR03,Lagos Island,7190,10,POS,Friday
+R00241,STR08,Lekki,6570,10,Card,Monday
+R00242,STR12,Lagos Island,8030,10,POS,Thursday
+R00243,STR05,Ikeja,5240,8,POS,Sunday
+R00244,STR02,Lagos Island,5650,8,POS,Friday
+R00245,STR03,Lagos Island,14070,18,Card,Sunday
+R00246,STR11,Surulere,5920,9,Cash,Wednesday
+R00247,STR09,Lagos Mainland,6210,9,POS,Friday
+R00248,STR02,Lagos Mainland,13070,17,Card,Saturday
+R00249,STR05,Lagos Island,17070,22,Transfer,Thursday
+R00250,STR04,Lekki,6100,7,POS,Wednesday
+R00251,STR03,Lekki,7490,10,Cash,Saturday
+R00252,STR11,Surulere,8970,12,POS,Thursday
+R00253,STR08,Lagos Island,12720,16,POS,Friday
+R00254,STR03,Lagos Island,6390,9,POS,Sunday
+R00255,STR08,Lagos Mainland,7730,11,Transfer,Tuesday
+R00256,STR05,Ikeja,10010,14,POS,Wednesday
+R00257,STR01,Surulere,9180,14,Transfer,Monday
+R00258,STR06,Lekki,7470,11,POS,Thursday
+R00259,STR03,Ikeja,7950,9,POS,Tuesday
+R00260,STR03,Lagos Island,5780,10,POS,Saturday
+R00261,STR11,Surulere,7740,10,Card,Tuesday
+R00262,STR09,Ikeja,7690,11,Cash,Saturday
+R00263,STR02,Lagos Mainland,8720,12,Card,Wednesday
+R00264,STR11,Lagos Island,7140,9,Transfer,Wednesday
+R00265,STR07,Lagos Mainland,9270,10,Transfer,Wednesday
+R00266,STR11,Lagos Mainland,10630,14,Transfer,Saturday
+R00267,STR09,Lagos Mainland,8560,10,Card,Thursday
+R00268,STR05,Ikeja,8990,13,POS,Wednesday
+R00269,STR07,Ikeja,8340,13,POS,Saturday
+R00270,STR07,Lagos Island,8220,10,Card,Friday
+R00271,STR09,Lagos Island,6840,9,POS,Tuesday
+R00272,STR03,Surulere,8910,11,POS,Sunday
+R00273,STR04,Lekki,8020,10,Transfer,Wednesday
+R00274,STR03,Ikeja,13940,19,Card,Monday
+R00275,STR04,Lagos Island,12240,16,POS,Thursday
+R00276,STR02,Surulere,9070,14,POS,Tuesday
+R00277,STR01,Lagos Mainland,6770,8,POS,Tuesday
+R00278,STR12,Lagos Island,6190,9,POS,Saturday
+R00279,STR01,Surulere,11120,15,POS,Tuesday
+R00280,STR11,Ikeja,8790,13,Card,Saturday
+R00281,STR01,Lekki,9290,12,Transfer,Sunday
+R00282,STR10,Ikeja,5260,7,Transfer,Friday
+R00283,STR04,Ikeja,10400,14,POS,Saturday
+R00284,STR07,Lagos Island,9230,11,Cash,Saturday
+R00285,STR04,Lagos Island,6190,9,Transfer,Sunday
+R00286,STR06,Lagos Island,7290,10,POS,Wednesday
+R00287,STR06,Lagos Mainland,8790,12,Card,Tuesday
+R00288,STR07,Surulere,8330,13,POS,Friday
+R00289,STR05,Lagos Island,7630,12,Card,Friday
+R00290,STR07,Ikeja,8010,10,POS,Tuesday
+R00291,STR10,Lekki,7710,11,POS,Friday
+R00292,STR06,Lekki,8550,11,Card,Monday
+R00293,STR05,Lagos Island,11930,16,POS,Sunday
+R00294,STR02,Ikeja,4240,5,Card,Wednesday
+R00295,STR05,Surulere,7740,12,Transfer,Monday
+R00296,STR02,Lekki,8600,12,POS,Monday
+R00297,STR03,Lekki,8870,12,POS,Wednesday
+R00298,STR12,Surulere,7480,11,Cash,Wednesday
+R00299,STR02,Lekki,5240,5,Card,Monday
+R00300,STR06,Lagos Mainland,8940,10,POS,Wednesday
+R00301,STR11,Ikeja,12720,18,Transfer,Tuesday
+R00302,STR12,Lagos Mainland,5550,7,Transfer,Thursday
+R00303,STR02,Ikeja,10240,14,Cash,Thursday
+R00304,STR02,Surulere,7560,9,Card,Wednesday
+R00305,STR05,Ikeja,8100,11,POS,Wednesday
+R00306,STR07,Lagos Island,6280,11,Cash,Monday
+R00307,STR12,Lagos Mainland,7550,11,Card,Monday
+R00308,STR03,Surulere,11420,15,POS,Tuesday
+R00309,STR02,Lagos Mainland,9530,12,Cash,Saturday
+R00310,STR04,Lagos Mainland,12730,17,POS,Sunday
+R00311,STR11,Lagos Island,11080,12,Card,Sunday
+R00312,STR01,Lagos Mainland,9190,13,POS,Friday
+R00313,STR05,Ikeja,12770,18,POS,Friday
+R00314,STR02,Ikeja,9190,11,POS,Wednesday
+R00315,STR02,Lagos Island,10140,13,Card,Saturday
+R00316,STR12,Lagos Mainland,7630,9,Transfer,Saturday
+R00317,STR01,Lagos Mainland,8360,10,POS,Saturday
+R00318,STR04,Lagos Island,6880,9,Card,Sunday
+R00319,STR11,Lagos Mainland,10570,12,Card,Thursday
+R00320,STR08,Lekki,6080,9,Cash,Saturday
+R00321,STR01,Lagos Mainland,10030,14,POS,Saturday
+R00322,STR06,Lagos Island,7830,10,POS,Wednesday
+R00323,STR12,Lagos Island,11060,12,Transfer,Sunday
+R00324,STR05,Lagos Island,9950,12,POS,Monday
+R00325,STR07,Lagos Mainland,13020,19,Transfer,Sunday
+R00326,STR07,Lagos Mainland,9900,10,Transfer,Saturday
+R00327,STR08,Surulere,5500,7,Transfer,Monday
+R00328,STR03,Lagos Mainland,8090,9,Transfer,Friday
+R00329,STR11,Ikeja,6090,9,Card,Monday
+R00330,STR12,Ikeja,7210,9,POS,Saturday
+R00331,STR02,Lagos Island,12050,17,POS,Saturday
+R00332,STR10,Lagos Island,9670,14,Card,Friday
+R00333,STR10,Lekki,6880,11,Transfer,Saturday
+R00334,STR09,Lekki,6350,8,Cash,Monday
+R00335,STR05,Lagos Island,8290,11,POS,Wednesday
+R00336,STR06,Lagos Island,6020,6,POS,Thursday
+R00337,STR11,Lagos Island,6930,11,POS,Monday
+R00338,STR02,Ikeja,8900,11,Card,Thursday
+R00339,STR10,Lekki,11020,14,Cash,Wednesday
+R00340,STR12,Lagos Mainland,9600,13,Card,Thursday
+R00341,STR09,Lagos Island,4560,4,Cash,Thursday
+R00342,STR05,Surulere,8880,12,Cash,Sunday
+R00343,STR07,Lagos Mainland,8380,12,Cash,Wednesday
+R00344,STR01,Ikeja,9130,12,POS,Sunday
+R00345,STR12,Lekki,12370,15,Cash,Thursday
+R00346,STR05,Lagos Mainland,4840,6,Cash,Wednesday
+R00347,STR01,Lagos Mainland,7070,10,POS,Friday
+R00348,STR10,Lagos Mainland,9550,11,Transfer,Thursday
+R00349,STR08,Surulere,5480,6,POS,Wednesday
+R00350,STR08,Lagos Mainland,11940,17,Transfer,Friday
+R00351,STR01,Lagos Mainland,9030,12,POS,Tuesday
+R00352,STR10,Lagos Mainland,10190,14,Transfer,Wednesday
+R00353,STR08,Lagos Mainland,7110,12,Transfer,Friday
+R00354,STR10,Ikeja,10110,14,POS,Thursday
+R00355,STR10,Lagos Island,10780,15,Transfer,Saturday
+R00356,STR03,Ikeja,8730,15,Card,Wednesday
+R00357,STR03,Ikeja,8730,11,Transfer,Sunday
+R00358,STR12,Lekki,8810,11,Cash,Saturday
+R00359,STR07,Lagos Mainland,6600,9,POS,Sunday
+R00360,STR06,Lekki,7920,11,Card,Saturday
+R00361,STR04,Ikeja,7910,10,Cash,Tuesday
+R00362,STR08,Lagos Mainland,9060,11,Card,Friday
+R00363,STR10,Lekki,10590,17,POS,Tuesday
+R00364,STR01,Lekki,6270,9,Card,Saturday
+R00365,STR07,Lagos Island,7970,10,POS,Friday
+R00366,STR12,Surulere,11960,17,POS,Wednesday
+R00367,STR04,Ikeja,6800,9,Cash,Sunday
+R00368,STR04,Ikeja,6670,9,POS,Monday
+R00369,STR11,Surulere,8660,12,Card,Friday
+R00370,STR01,Lagos Island,10190,12,Card,Saturday
+R00371,STR05,Lekki,8250,11,POS,Monday
+R00372,STR06,Lagos Island,11510,17,POS,Friday
+R00373,STR10,Lekki,10220,14,Card,Saturday
+R00374,STR02,Ikeja,10180,13,Transfer,Monday
+R00375,STR06,Lagos Mainland,9460,12,Card,Friday
+R00376,STR02,Lagos Island,14780,19,Transfer,Wednesday
+R00377,STR10,Lagos Island,7810,10,Transfer,Saturday
+R00378,STR08,Lagos Mainland,4910,6,Transfer,Monday
+R00379,STR06,Lagos Mainland,12330,17,Transfer,Sunday
+R00380,STR05,Lagos Island,7320,8,Cash,Sunday
+R00381,STR02,Lagos Mainland,8450,12,POS,Tuesday
+R00382,STR12,Lagos Mainland,11450,15,POS,Wednesday
+R00383,STR08,Lekki,5450,8,POS,Friday
+R00384,STR04,Lekki,5970,7,Cash,Saturday
+R00385,STR05,Lekki,5450,9,Transfer,Thursday
+R00386,STR09,Lagos Island,6720,10,Transfer,Tuesday
+R00387,STR09,Surulere,9190,13,Cash,Monday
+R00388,STR06,Ikeja,9390,11,Card,Sunday
+R00389,STR04,Lagos Mainland,8820,13,Transfer,Thursday
+R00390,STR08,Lagos Mainland,5730,8,POS,Sunday
+R00391,STR08,Lekki,4540,4,Card,Thursday
+R00392,STR08,Lagos Mainland,8340,11,POS,Sunday
+R00393,STR01,Ikeja,7290,10,Transfer,Monday
+R00394,STR06,Surulere,9240,13,POS,Monday
+R00395,STR08,Lagos Mainland,9830,13,Transfer,Sunday
+R00396,STR12,Lagos Mainland,8520,12,Transfer,Sunday
+R00397,STR07,Surulere,9970,15,Transfer,Wednesday
+R00398,STR05,Ikeja,8720,13,POS,Wednesday
+R00399,STR07,Lagos Mainland,9410,9,Transfer,Thursday
+R00400,STR03,Surulere,6870,9,Transfer,Thursday
